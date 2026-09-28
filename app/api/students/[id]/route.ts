@@ -2,7 +2,8 @@ import { and, desc, eq, isNull, sql } from "drizzle-orm";
 import { getDb } from "@/db";
 import { knowledgePoints, questionKnowledgePoints, questions, students } from "@/db/schema";
 import { apiError } from "@/lib/api-error";
-import type { Classification } from "@/lib/classification";
+import { normalizeClassificationTags, type Classification } from "@/lib/classification";
+import { isMethodCode } from "@/lib/taxonomy";
 
 function parseStudentId(id: string) {
   const studentId = Number(id);
@@ -33,18 +34,29 @@ export async function GET(_request: Request, context: { params: Promise<{ id: st
     const grouped = new Map<number, {
       id: number; extractedQuestion: string; chapterCode: string; chapterName: string; questionType: string;
       difficulty: string; createdAt: string; imageUrl: string; knowledgePoints: { code: string; name: string }[];
+      methods: { code: string; name: string }[];
       aiClassification: Classification | null; classificationSource: string; teacherConfirmedClassification: Classification;
     }>();
     for (const row of rows) {
       if (!grouped.has(row.id)) grouped.set(row.id, {
         id: row.id, extractedQuestion: row.extractedQuestion, chapterCode: row.chapterCode,
         chapterName: row.chapterName, questionType: row.questionType, difficulty: row.difficulty,
-        createdAt: row.createdAt, imageUrl: `/api/images/${encodeURIComponent(row.imageKey)}`, knowledgePoints: [],
+        createdAt: row.createdAt, imageUrl: `/api/images/${encodeURIComponent(row.imageKey)}`, knowledgePoints: [], methods: [],
         aiClassification: JSON.parse(row.aiClassification) as Classification | null,
         classificationSource: row.classificationSource,
         teacherConfirmedClassification: JSON.parse(row.teacherConfirmedClassification) as Classification,
       });
       if (row.knowledgeCode && row.knowledgeName) grouped.get(row.id)!.knowledgePoints.push({ code: row.knowledgeCode, name: row.knowledgeName });
+    }
+    for (const question of grouped.values()) {
+      question.teacherConfirmedClassification = normalizeClassificationTags(question.teacherConfirmedClassification);
+      question.aiClassification = question.aiClassification ? normalizeClassificationTags(question.aiClassification) : null;
+      const stage = question.teacherConfirmedClassification.education_stage;
+      const legacyMethods = question.knowledgePoints.filter(point => isMethodCode(stage, point.code));
+      question.knowledgePoints = question.knowledgePoints.filter(point => !isMethodCode(stage, point.code));
+      question.methods = [...new Map(
+        [...legacyMethods, ...question.teacherConfirmedClassification.methods].map(point => [point.code, point]),
+      ).values()];
     }
     return Response.json({ student, questions: [...grouped.values()] });
   } catch (error) {

@@ -20,7 +20,7 @@ export const juniorTaxonomy = [
   ["EQ-QUADRATIC-SOLVE", "一元二次方程的解法", "EQ-QUADRATIC"], ["EQ-QUADRATIC-DISCRIMINANT", "根的判别式", "EQ-QUADRATIC"], ["EQ-QUADRATIC-VIETA", "根与系数的关系", "EQ-QUADRATIC"], ["EQ-QUADRATIC-APPLICATION", "一元二次方程应用", "EQ-QUADRATIC"],
   ["COORDINATE-POINT", "点的坐标与象限", "COORDINATE"], ["COORDINATE-TRANSFORM", "坐标与图形变换", "COORDINATE"], ["COORDINATE-DISTANCE", "坐标中的距离与面积", "COORDINATE"],
   ["FUNC-VARIABLE", "变量与函数", "FUNC-CONCEPT"], ["FUNC-DOMAIN", "自变量取值范围", "FUNC-CONCEPT"], ["FUNC-REPRESENTATION", "函数的表示方法", "FUNC-CONCEPT"],
-  ["FUNC-PROPORTIONAL", "正比例函数", "FUNC-LINEAR"], ["FUNC-LINEAR-EXPR", "一次函数解析式", "FUNC-LINEAR"], ["FUNC-LINEAR-GRAPH", "一次函数图像与性质", "FUNC-LINEAR"], ["FUNC-LINEAR-APPLICATION", "一次函数应用", "FUNC-LINEAR"], ["FUNC-COEFF-METHOD", "待定系数法", "FUNC-LINEAR"], ["FUNC-LINEAR-EQ-RELATION", "一次函数与方程、不等式", "FUNC-LINEAR"],
+  ["FUNC-PROPORTIONAL", "正比例函数", "FUNC-LINEAR"], ["FUNC-LINEAR-EXPR", "一次函数解析式", "FUNC-LINEAR"], ["FUNC-LINEAR-GRAPH", "一次函数图像与性质", "FUNC-LINEAR"], ["FUNC-LINEAR-APPLICATION", "一次函数应用", "FUNC-LINEAR"], ["FUNC-LINEAR-EQ-RELATION", "一次函数与方程、不等式", "FUNC-LINEAR"],
   ["FUNC-INVERSE-EXPR", "反比例函数解析式", "FUNC-INVERSE"], ["FUNC-INVERSE-GRAPH", "反比例函数图像与性质", "FUNC-INVERSE"], ["FUNC-INVERSE-APPLICATION", "反比例函数应用", "FUNC-INVERSE"],
   ["FUNC-QUADRATIC-EXPR", "二次函数解析式", "FUNC-QUADRATIC"], ["FUNC-QUADRATIC-GRAPH", "二次函数图像与性质", "FUNC-QUADRATIC"], ["FUNC-QUADRATIC-TRANSFORM", "二次函数图像变换", "FUNC-QUADRATIC"], ["FUNC-QUADRATIC-ROOTS", "二次函数与一元二次方程", "FUNC-QUADRATIC"], ["FUNC-QUADRATIC-EXTREMUM", "二次函数最值", "FUNC-QUADRATIC"], ["FUNC-QUADRATIC-APPLICATION", "二次函数应用", "FUNC-QUADRATIC"],
   ["GEO-LINE-RAY-SEGMENT", "直线、射线与线段", "GEO-BASIC"], ["GEO-ANGLE", "角及角的计算", "GEO-BASIC"], ["GEO-PARALLEL", "平行线的性质与判定", "GEO-BASIC"], ["GEO-PROPOSITION", "命题、定理与证明", "GEO-BASIC"],
@@ -32,10 +32,32 @@ export const juniorTaxonomy = [
   ["GEO-TRIG-CONCEPT", "锐角三角函数", "GEO-TRIG"], ["GEO-TRIG-SPECIAL", "特殊角三角函数值", "GEO-TRIG"], ["GEO-TRIG-SOLVE", "解直角三角形", "GEO-TRIG"], ["GEO-TRIG-APPLICATION", "锐角三角函数应用", "GEO-TRIG"], ["GEO-THREE-VIEWS", "三视图", "GEO-PROJECTION"], ["GEO-PROJECTION-BASIC", "投影基础", "GEO-PROJECTION"],
   ["STAT-SURVEY", "调查方式与抽样", "STAT-DATA"], ["STAT-TABLE", "频数分布表", "STAT-DATA"], ["STAT-CHART", "统计图的选择与分析", "STAT-DATA"], ["STAT-CENTER", "平均数、中位数与众数", "STAT-DESCRIPTIVE"], ["STAT-VARIATION", "方差与数据波动", "STAT-DESCRIPTIVE"], ["STAT-ESTIMATION", "用样本估计总体", "STAT-DESCRIPTIVE"],
   ["PROB-EVENT", "随机事件与概率", "PROBABILITY"], ["PROB-ENUMERATION", "列举法求概率", "PROBABILITY"], ["PROB-TREE", "列表法与树状图法", "PROBABILITY"], ["PROB-FREQUENCY", "用频率估计概率", "PROBABILITY"],
-  ["METHOD-CLASSIFICATION", "分类讨论", "METHOD"], ["METHOD-NUMBER-SHAPE", "数形结合", "METHOD"], ["METHOD-EQUATION", "方程思想", "METHOD"], ["METHOD-FUNCTION", "函数思想", "METHOD"], ["METHOD-TRANSFORMATION", "转化与化归", "METHOD"], ["METHOD-MODELING", "数学建模", "METHOD"], ["METHOD-FROM-SPECIAL", "从特殊到一般", "METHOD"], ["METHOD-CONSTRUCTION", "构造辅助线", "METHOD"],
 ] as const;
 
-const methodTaxonomy = juniorTaxonomy.filter(([, , chapter]) => chapter === "METHOD");
+/**
+ * 思想方法与内容知识点平行存储，但不参与知识点频次统计。
+ * 保留 FUNC-COEFF-METHOD 这个历史代码，以兼容已经归档的题目。
+ */
+export const methodTaxonomy = [
+  ["METHOD-CLASSIFICATION", "分类讨论思想", "METHOD"],
+  ["METHOD-NUMBER-SHAPE", "数形结合思想", "METHOD"],
+  ["METHOD-EQUATION", "方程思想", "METHOD"],
+  ["METHOD-FUNCTION", "函数思想", "METHOD"],
+  ["METHOD-TRANSFORMATION", "转化与化归思想", "METHOD"],
+  ["METHOD-MODELING", "数学建模思想", "METHOD"],
+  ["METHOD-FROM-SPECIAL", "特殊与一般思想", "METHOD"],
+  ["METHOD-WHOLE", "整体思想", "METHOD"],
+  ["METHOD-FINITE-INFINITE", "有限与无限思想", "METHOD"],
+  ["METHOD-CONSTRUCTION", "构造法与辅助构造", "METHOD"],
+  ["METHOD-SUBSTITUTION", "换元法", "METHOD"],
+  ["FUNC-COEFF-METHOD", "待定系数法", "METHOD"],
+  ["METHOD-COMPLETING-SQUARE", "配方法", "METHOD"],
+  ["METHOD-ELIMINATION", "消元法", "METHOD"],
+  ["METHOD-PARAMETER-SEPARATION", "分离参数法", "METHOD"],
+  ["METHOD-CONTRADICTION", "反证法", "METHOD"],
+  ["METHOD-INDUCTION", "数学归纳法", "METHOD"],
+  ["METHOD-ENUMERATION", "枚举、列表与树状图法", "METHOD"],
+] as const;
 
 export const chapters = [...juniorChapters, ...seniorChapters] as const;
 export const taxonomy = [...juniorTaxonomy, ...seniorTaxonomy] as const;
@@ -45,7 +67,11 @@ export function chaptersForStage(stage: EducationStage) {
 }
 
 export function taxonomyForStage(stage: EducationStage) {
-  return stage === "高中" ? [...seniorTaxonomy, ...methodTaxonomy] : juniorTaxonomy;
+  return stage === "高中" ? [...seniorTaxonomy, ...methodTaxonomy] : [...juniorTaxonomy, ...methodTaxonomy];
+}
+
+export function isMethodCode(stage: EducationStage, code: string) {
+  return taxonomyForStage(stage).some(([itemCode, , owner]) => itemCode === code && owner === "METHOD");
 }
 
 export function chapterName(code: string) {

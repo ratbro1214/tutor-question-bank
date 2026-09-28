@@ -1,8 +1,10 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {
+  applyDeterministicClassificationHints,
   buildClassificationFromCandidate,
   localizeClassificationNotes,
+  normalizeClassificationTags,
   normalizeExtractedQuestion,
   synchronizeCandidateWithClassificationNotes,
   validateClassificationCandidate,
@@ -54,6 +56,7 @@ test("普通单知识点题目可以通过并由后端映射规范名称", () =>
   const result = buildClassificationFromCandidate("初中", extraction, value);
   assert.deepEqual(result.chapter, { code: "FUNC-LINEAR", name: "一次函数" });
   assert.deepEqual(result.knowledge_points, [{ code: "FUNC-LINEAR-EXPR", name: "一次函数解析式" }]);
+  assert.deepEqual(result.methods, []);
 });
 
 test("教师可读题干会清理常见 LaTeX 源码并保留题目结构", () => {
@@ -95,8 +98,25 @@ test("有依据的跨章节辅助知识点可以通过", () => {
   assert.deepEqual(result.knowledge_points.map(point => point.code), [
     "HS-DERIVATIVE-MONOTONICITY",
     "HS-FUNC-MONOTONICITY",
-    "METHOD-FUNCTION",
   ]);
+  assert.deepEqual(result.methods.map(method => method.code), ["METHOD-FUNCTION"]);
+});
+
+test("历史混合标签会拆成知识点与数学思想方法", () => {
+  const built = buildClassificationFromCandidate("高中", extraction, candidate({
+    chapter_code: "HS-DERIVATIVE",
+    core_knowledge_point_codes: ["HS-DERIVATIVE-MONOTONICITY"],
+    method_codes: [],
+    question_type: "函数性质与图像分析",
+  }));
+  const legacy = {
+    ...built,
+    knowledge_points: [...built.knowledge_points, { code: "METHOD-TRANSFORMATION", name: "转化与化归" }],
+    methods: undefined,
+  };
+  const normalized = normalizeClassificationTags(legacy as unknown as typeof built);
+  assert.deepEqual(normalized.knowledge_points.map(point => point.code), ["HS-DERIVATIVE-MONOTONICITY"]);
+  assert.deepEqual(normalized.methods, [{ code: "METHOD-TRANSFORMATION", name: "转化与化归思想" }]);
 });
 
 test("通用方法不能冒充核心知识点，重复标签也不能通过", () => {
@@ -136,4 +156,51 @@ test("分类依据提到奇偶性和周期性时同步勾选对应知识点", ()
     "HS-FUNC-CONCEPT",
   ]);
   assert.deepEqual(validateClassificationCandidate("高中", synchronized), []);
+});
+
+test("分类依据提到跨章节函数性质时同步为辅助知识点", () => {
+  const value = candidate({
+    chapter_code: "HS-DERIVATIVE",
+    core_knowledge_point_codes: ["HS-DERIVATIVE-MONOTONICITY"],
+    auxiliary_knowledge_point_codes: [],
+    question_type: "函数性质与图像分析",
+    difficulty: "较难",
+    classification_notes: "利用导数研究函数单调性并判断函数零点个数。",
+  });
+  const synchronized = synchronizeCandidateWithClassificationNotes("高中", value);
+  assert.deepEqual(synchronized.auxiliary_knowledge_point_codes, [
+    "HS-FUNC-MONOTONICITY",
+    "HS-FUNC-ZERO",
+  ]);
+  assert.deepEqual(validateClassificationCandidate("高中", synchronized), []);
+});
+
+test("正数定和的分式最值优先识别为基本不等式而不是函数最值", () => {
+  const modelResult = candidate({
+    chapter_code: "HS-FUNCTION",
+    core_knowledge_point_codes: [
+      "HS-FUNC-CONCEPT",
+      "HS-FUNC-RANGE",
+      "HS-FUNC-EXTREMUM",
+    ],
+    method_codes: ["METHOD-FUNCTION"],
+    question_type: "化简与求值",
+    difficulty: "中等",
+    classification_notes: "通过变量替换化为单变量函数求最小值。",
+  });
+  const corrected = applyDeterministicClassificationHints(
+    "高中",
+    "13. 已知 x>-1，y>0 且满足 x+2y=1，则 1/(x+1)+2/y 的最小值为____。",
+    modelResult,
+  );
+
+  assert.equal(corrected.chapter_code, "HS-INEQUALITY");
+  assert.deepEqual(corrected.core_knowledge_point_codes, [
+    "HS-INEQ-BASIC-OPTIMIZATION",
+    "HS-INEQ-BASIC-EQUALITY",
+  ]);
+  assert.deepEqual(corrected.method_codes, ["METHOD-TRANSFORMATION"]);
+  assert.equal(corrected.question_type, "方案设计与最优化");
+  assert.match(corrected.classification_notes, /正数之和为定值.*基本不等式/);
+  assert.deepEqual(validateClassificationCandidate("高中", corrected), []);
 });

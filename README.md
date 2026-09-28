@@ -150,15 +150,17 @@ node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1
 node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --remote --config dist/server/wrangler.json --file drizzle/0006_freezing_iron_lad.sql
 node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --remote --config dist/server/wrangler.json --file drizzle/0007_closed_tag.sql
 node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --remote --config dist/server/wrangler.json --file drizzle/0008_majestic_nextwave.sql
+node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --remote --config dist/server/wrangler.json --file drizzle/0009_chief_krista_starr.sql
 ```
 
-本地开发库也需要应用相同的待执行迁移，参数使用 `--local --persist-to .wrangler/state`。不要重放已经执行的 SQL。当前本机 D1 已完成 0002–0008；0008 应用前的快照保存在 `.wrangler/backups/before-evidence-levels-20260927.sqlite`。迁移 0006–0008 只新增和扩展作答证据结构，不改写既有学习记录。如在其他本地环境补迁移，应按缺失编号依次执行，例如：
+本地开发库也需要应用相同的待执行迁移，参数使用 `--local --persist-to .wrangler/state`。不要重放已经执行的 SQL。当前本机 D1 已完成 0002–0009；0009 应用前的快照保存在 `.wrangler/backups/before-diagnostic-plans-20260928.sqlite`。迁移 0006–0008 只新增和扩展作答证据结构；0009 新增独立的诊断方案草案，不改写既有学习记录。如在其他本地环境补迁移，应按缺失编号依次执行，例如：
 
 ```sh
 node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0005_classification_source.sql
 node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0006_freezing_iron_lad.sql
 node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0007_closed_tag.sql
 node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0008_majestic_nextwave.sql
+node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0009_chief_krista_starr.sql
 ```
 
 学生详情页提供活动时间线、章节/知识点与日期筛选、基于教师记录的错误原因和复查分析，以及仅限当前学生的多工作表 `.xlsx` 导出。所有导出内容以文字单元格写入，不执行用户输入的公式。

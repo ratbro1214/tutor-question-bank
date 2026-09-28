@@ -64,6 +64,13 @@
       "when": 1790520262292,
       "tag": "0008_majestic_nextwave",
       "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "6",
+      "when": 1790591601777,
+      "tag": "0009_chief_krista_starr",
+      "breakpoints": true
     }
   ]
 }

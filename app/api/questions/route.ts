@@ -1,8 +1,52 @@
 import { getD1Binding } from "@/db";
-import { validateClassification } from "@/lib/classification";
+import { normalizeClassificationTags, validateClassification, type Classification } from "@/lib/classification";
 import { rankSimilarQuestions } from "@/lib/question-similarity";
 import { getBucket } from "@/lib/storage";
 import { taxonomyForStage } from "@/lib/taxonomy";
+
+export async function GET() {
+  try {
+    const rows = await getD1Binding().prepare(`
+      SELECT q.id, q.student_id AS studentId, s.name AS studentName, s.grade AS studentGrade,
+        q.image_key AS imageKey, q.extracted_question AS extractedQuestion,
+        q.chapter_code AS chapterCode, q.chapter_name AS chapterName,
+        q.question_type AS questionType, q.difficulty, q.created_at AS createdAt,
+        k.code AS knowledgeCode, k.name AS knowledgeName
+      FROM questions q
+      JOIN students s ON s.id=q.student_id
+      LEFT JOIN question_knowledge_points qkp ON qkp.question_id=q.id
+      LEFT JOIN knowledge_points k ON k.id=qkp.knowledge_point_id
+      WHERE q.deleted_at IS NULL AND s.deleted_at IS NULL
+      ORDER BY q.created_at DESC, q.id DESC
+    `).all<{
+      id: number; studentId: number; studentName: string; studentGrade: string;
+      imageKey: string; extractedQuestion: string; chapterCode: string; chapterName: string;
+      questionType: string; difficulty: string; createdAt: string;
+      knowledgeCode: string | null; knowledgeName: string | null;
+    }>();
+    const questions = new Map<number, {
+      id: number; studentId: number; studentName: string; studentGrade: string;
+      imageUrl: string; extractedQuestion: string; chapterCode: string; chapterName: string;
+      questionType: string; difficulty: string; createdAt: string;
+      knowledgePoints: { code: string; name: string }[];
+    }>();
+    for (const row of rows.results) {
+      if (!questions.has(row.id)) questions.set(row.id, {
+        id: row.id, studentId: row.studentId, studentName: row.studentName, studentGrade: row.studentGrade,
+        imageUrl: `/api/images/${encodeURIComponent(row.imageKey)}`, extractedQuestion: row.extractedQuestion,
+        chapterCode: row.chapterCode, chapterName: row.chapterName, questionType: row.questionType,
+        difficulty: row.difficulty, createdAt: row.createdAt, knowledgePoints: [],
+      });
+      if (row.knowledgeCode && row.knowledgeName) {
+        questions.get(row.id)!.knowledgePoints.push({ code: row.knowledgeCode, name: row.knowledgeName });
+      }
+    }
+    return Response.json({ questions: [...questions.values()] });
+  } catch {
+    return Response.json({ error: "题目库加载失败，请稍后重试。" }, { status: 500 });
+  }
+}
+
 export async function POST(request: Request) {
   let imageKey = "";
   let committed = false;
@@ -12,10 +56,9 @@ export async function POST(request: Request) {
     const studentId = Number(form.get("studentId"));
     const submissionId = String(form.get("submissionId") || "");
     const aiValue = String(form.get("aiClassification") || "");
-    const ai = aiValue ? JSON.parse(aiValue) : null;
-    const confirmed = JSON.parse(
-      String(form.get("teacherConfirmedClassification") || "null"),
-    );
+    const ai = aiValue ? normalizeClassificationTags(JSON.parse(aiValue) as Classification) : null;
+    const confirmedValue = JSON.parse(String(form.get("teacherConfirmedClassification") || "null")) as Classification | null;
+    const confirmed = confirmedValue ? normalizeClassificationTags(confirmedValue) : null;
     const requestedSource = String(form.get("classificationSource") || "");
     const classificationSource = ai === null
       ? "manual"
@@ -34,13 +77,14 @@ export async function POST(request: Request) {
     if (
       (ai !== null && validateClassification(ai).length > 0) ||
       validateClassification(confirmed).length ||
-      confirmed.needs_review ||
-      !confirmed.knowledge_points.length
+      confirmed?.needs_review ||
+      !confirmed?.knowledge_points.length
     )
       return Response.json(
         { error: "请先确认有效的分类及知识点。" },
         { status: 400 },
       );
+    if (!confirmed) return Response.json({ error: "缺少教师确认分类。" }, { status: 400 });
     const db = getD1Binding();
     if (
       !(await db

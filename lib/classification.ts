@@ -81,6 +81,8 @@ export type Classification = {
   extracted_question: string;
   chapter: { code: string; name: string };
   knowledge_points: KnowledgePoint[];
+  /** Mathematical thoughts and solution methods are metadata, not statistical knowledge points. */
+  methods: KnowledgePoint[];
   question_type: string;
   difficulty: Difficulty;
   confidence: number;
@@ -124,7 +126,7 @@ export function classificationCandidateSchemaForStage(stage: EducationStage) {
       chapter_code: { type: "string", enum: chaptersForStage(stage).map(([code]) => code) },
       core_knowledge_point_codes: { type: "array", minItems: 1, maxItems: 3, items: { type: "string", enum: contentCodes } },
       auxiliary_knowledge_point_codes: { type: "array", maxItems: 2, items: { type: "string", enum: contentCodes } },
-      method_codes: { type: "array", maxItems: 1, items: { type: "string", enum: methodCodes } },
+      method_codes: { type: "array", maxItems: 2, items: { type: "string", enum: methodCodes } },
       question_type: { type: "string", enum: questionTypes },
       difficulty: { type: "string", enum: ["基础", "中等", "较难"] },
       confidence: { type: "number", minimum: 0, maximum: 1 },
@@ -144,6 +146,8 @@ export function classificationCandidateSchemaForStage(stage: EducationStage) {
 export function classificationSchemaForStage(stage: EducationStage) {
   const chapters = chaptersForStage(stage);
   const taxonomy = taxonomyForStage(stage);
+  const contentTaxonomy = taxonomy.filter(([, , owner]) => owner !== "METHOD");
+  const methodTaxonomy = taxonomy.filter(([, , owner]) => owner === "METHOD");
   return {
     type: "object", additionalProperties: false,
     properties: {
@@ -161,7 +165,15 @@ export function classificationSchemaForStage(stage: EducationStage) {
         type: "array", minItems: 1, maxItems: 4,
         items: {
           type: "object", additionalProperties: false,
-          properties: { code: { type: "string", enum: taxonomy.map(([code]) => code) }, name: { type: "string", enum: taxonomy.map(([, name]) => name) } },
+          properties: { code: { type: "string", enum: contentTaxonomy.map(([code]) => code) }, name: { type: "string", enum: contentTaxonomy.map(([, name]) => name) } },
+          required: ["code", "name"],
+        },
+      },
+      methods: {
+        type: "array", maxItems: 2,
+        items: {
+          type: "object", additionalProperties: false,
+          properties: { code: { type: "string", enum: methodTaxonomy.map(([code]) => code) }, name: { type: "string", enum: methodTaxonomy.map(([, name]) => name) } },
           required: ["code", "name"],
         },
       },
@@ -172,7 +184,7 @@ export function classificationSchemaForStage(stage: EducationStage) {
       review_reasons: { type: "array", items: { type: "string", enum: reviewReasons } },
       classification_notes: { type: "string" },
     },
-    required: ["schema_version", "taxonomy_version", "subject", "education_stage", "extracted_question", "chapter", "knowledge_points", "question_type", "difficulty", "confidence", "needs_review", "review_reasons", "classification_notes"],
+    required: ["schema_version", "taxonomy_version", "subject", "education_stage", "extracted_question", "chapter", "knowledge_points", "methods", "question_type", "difficulty", "confidence", "needs_review", "review_reasons", "classification_notes"],
   } as const;
 }
 
@@ -241,10 +253,75 @@ export function synchronizeCandidateWithClassificationNotes(
   const mentioned = knowledgePointCodesMentionedInNotes(
     stage,
     candidate.classification_notes || "",
-  ).filter((code) => owners.get(code) === candidate.chapter_code);
-  candidate.core_knowledge_point_codes = [
-    ...new Set([...mentioned, ...(candidate.core_knowledge_point_codes || [])]),
-  ].slice(0, 3);
+  );
+  const existing = [
+    ...(candidate.core_knowledge_point_codes || []),
+    ...(candidate.auxiliary_knowledge_point_codes || []),
+    ...(candidate.method_codes || []),
+  ];
+  const primary = mentioned.find(code => owners.get(code) === candidate.chapter_code)
+    || candidate.core_knowledge_point_codes?.[0];
+  const selected = [...new Set([primary, ...mentioned, ...existing].filter(Boolean) as string[])];
+  const selectedContent = selected.filter(code => owners.get(code) !== "METHOD").slice(0, 4);
+  candidate.core_knowledge_point_codes = selectedContent
+    .filter(code => owners.get(code) === candidate.chapter_code)
+    .slice(0, 3);
+  candidate.auxiliary_knowledge_point_codes = selectedContent
+    .filter(code => {
+      const owner = owners.get(code);
+      return owner && owner !== candidate.chapter_code && owner !== "METHOD";
+    })
+    .slice(0, 2);
+  candidate.method_codes = selected.filter(code => owners.get(code) === "METHOD").slice(0, 2);
+  const retained = new Set([
+    ...candidate.core_knowledge_point_codes,
+    ...candidate.auxiliary_knowledge_point_codes,
+    ...candidate.method_codes,
+  ]);
+  if (mentioned.some(code => !retained.has(code))) {
+    candidate.classification_notes = "依据题目求解所需的核心内容、相关函数性质与方法确定上述分类。";
+  }
+  return candidate;
+}
+
+/**
+ * Correct high-confidence method patterns that vision models often flatten into
+ * a generic "function maximum/minimum" label. This only fires when the visible
+ * statement contains all structural signals, so ambiguous problems stay with
+ * the model result for teacher review.
+ */
+export function applyDeterministicClassificationHints(
+  stage: EducationStage,
+  extractedQuestion: string,
+  value: MathClassificationCandidate,
+) {
+  const candidate = structuredClone(value);
+  const text = extractedQuestion.replace(/\s+/g, "");
+  const asksForExtremum = /(最大值|最小值|最值)/.test(text);
+  const reciprocalTermCount = (
+    text.match(/(?:\d+(?:\.\d+)?|[a-z])\/(?:\([^)]*[a-z][^)]*\)|[a-z])/gi) || []
+  ).length;
+  const hasTwoVariableLinearConstraint =
+    /[a-z][^=]{0,16}[+\-][^=]{0,16}[a-z][^=]{0,8}=\-?\d/i.test(text);
+
+  if (
+    stage === "高中" &&
+    asksForExtremum &&
+    reciprocalTermCount >= 2 &&
+    hasTwoVariableLinearConstraint
+  ) {
+    candidate.chapter_code = "HS-INEQUALITY";
+    candidate.core_knowledge_point_codes = [
+      "HS-INEQ-BASIC-OPTIMIZATION",
+      "HS-INEQ-BASIC-EQUALITY",
+    ];
+    candidate.auxiliary_knowledge_point_codes = [];
+    candidate.method_codes = ["METHOD-TRANSFORMATION"];
+    candidate.question_type = "方案设计与最优化";
+    candidate.difficulty = "中等";
+    candidate.classification_notes =
+      "将线性约束整体变形为两个正数之和为定值，再用基本不等式求最小值并核对等号条件。";
+  }
   return candidate;
 }
 
@@ -397,7 +474,9 @@ export function validateClassificationCandidate(stage: EducationStage, value: un
       );
   }
 
-  if (seen.size > 4) pushIssue(issues, "TOO_MANY_KNOWLEDGE_POINTS", "knowledge_points", "核心、辅助和方法标签合计不能超过 4 个。");
+  const contentCount = (candidate.core_knowledge_point_codes?.length || 0) + (candidate.auxiliary_knowledge_point_codes?.length || 0);
+  if (contentCount > 4) pushIssue(issues, "TOO_MANY_KNOWLEDGE_POINTS", "knowledge_points", "核心与辅助知识点合计不能超过 4 个。");
+  if ((candidate.method_codes?.length || 0) > 2) pushIssue(issues, "TOO_MANY_METHODS", "method_codes", "数学思想与方法不能超过 2 个。");
   if (!candidate.question_type || !(questionTypes as readonly string[]).includes(candidate.question_type)) {
     pushIssue(issues, "INVALID_QUESTION_TYPE", "question_type", "题型不在受控列表中。");
   } else if (candidate.chapter_code) {
@@ -439,7 +518,6 @@ export function buildClassificationFromCandidate(
   const orderedCodes = [
     ...candidate.core_knowledge_point_codes,
     ...candidate.auxiliary_knowledge_point_codes,
-    ...candidate.method_codes,
   ];
   const reasons = [...new Set([...extraction.review_reasons, ...candidate.review_reasons])];
   const confidence = Math.min(extraction.extraction_confidence, candidate.confidence);
@@ -451,6 +529,7 @@ export function buildClassificationFromCandidate(
     extracted_question: normalizeExtractedQuestion(extraction.extracted_question),
     chapter: { code: chapter[0], name: chapter[1] },
     knowledge_points: orderedCodes.map(code => ({ code, name: taxonomy.get(code)! })),
+    methods: candidate.method_codes.map(code => ({ code, name: taxonomy.get(code)! })),
     question_type: candidate.question_type,
     difficulty: candidate.difficulty,
     confidence,
@@ -460,13 +539,36 @@ export function buildClassificationFromCandidate(
   };
 }
 
+/**
+ * Upgrade historical mixed classifications in memory. Older records stored
+ * method labels inside knowledge_points; callers can safely use this before
+ * rendering or persisting a teacher edit.
+ */
+export function normalizeClassificationTags(value: Classification): Classification {
+  const stage = value.education_stage;
+  const taxonomy = new Map(taxonomyForStage(stage).map(([code, name, owner]) => [code, { name, owner }]));
+  const content = new Map<string, KnowledgePoint>();
+  const methods = new Map<string, KnowledgePoint>();
+  for (const point of [...(value.knowledge_points || []), ...(value.methods || [])]) {
+    const entry = taxonomy.get(point.code);
+    if (!entry) continue;
+    const canonical = { code: point.code, name: entry.name };
+    if (entry.owner === "METHOD") methods.set(point.code, canonical);
+    else content.set(point.code, canonical);
+  }
+  return { ...value, knowledge_points: [...content.values()].slice(0, 4), methods: [...methods.values()].slice(0, 2) };
+}
+
 export function validateClassification(value: unknown): ClassificationValidationIssue[] {
   const issues: ClassificationValidationIssue[] = [];
   if (!isRecord(value)) {
     pushIssue(issues, "INVALID_SHAPE", "$", "分类数据不是对象。");
     return issues;
   }
-  const item = value as Partial<Classification>;
+  const rawItem = value as Partial<Classification>;
+  const item = rawItem.education_stage === "初中" || rawItem.education_stage === "高中"
+    ? normalizeClassificationTags(rawItem as Classification)
+    : rawItem;
   const stage = item.education_stage;
   if (stage !== "初中" && stage !== "高中") {
     pushIssue(issues, "INVALID_STAGE", "education_stage", "学段无效。");
@@ -486,11 +588,23 @@ export function validateClassification(value: unknown): ClassificationValidation
     for (const point of item.knowledge_points) {
       const entry = point && taxonomy.get(point.code);
       if (!entry || entry.name !== point.name) pushIssue(issues, "INVALID_KNOWLEDGE_POINT", "knowledge_points", `知识点 ${point?.code || "(空)"} 的 ID 或名称无效。`);
+      if (entry?.owner === "METHOD") pushIssue(issues, "METHOD_AS_CONTENT", "knowledge_points", `${point.code} 是数学思想或方法，不能作为知识点统计。`);
       if (seen.has(point.code)) pushIssue(issues, "DUPLICATE_KNOWLEDGE_POINT", "knowledge_points", `知识点 ${point.code} 重复。`);
       seen.add(point.code);
       if (entry?.owner === item.chapter?.code) primaryContentCount += 1;
     }
     if (primaryContentCount === 0) pushIssue(issues, "CHAPTER_WITHOUT_CORE_POINT", "knowledge_points", "至少一个内容知识点必须属于主章节，不能只保留跨章节或方法标签。");
+  }
+  if (!Array.isArray(item.methods) || item.methods.length > 2) {
+    pushIssue(issues, "INVALID_METHOD_COUNT", "methods", "数学思想与方法必须为数组，且最多 2 个。");
+  } else {
+    const seenMethods = new Set<string>();
+    for (const method of item.methods) {
+      const entry = method && taxonomy.get(method.code);
+      if (!entry || entry.name !== method.name || entry.owner !== "METHOD") pushIssue(issues, "INVALID_METHOD", "methods", `方法 ${method?.code || "(空)"} 的 ID 或名称无效。`);
+      if (seenMethods.has(method.code)) pushIssue(issues, "DUPLICATE_METHOD", "methods", `方法 ${method.code} 重复。`);
+      seenMethods.add(method.code);
+    }
   }
   if (!item.question_type || !(questionTypes as readonly string[]).includes(item.question_type)) {
     pushIssue(issues, "INVALID_QUESTION_TYPE", "question_type", "题型无效。");

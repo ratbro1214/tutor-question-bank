@@ -2,6 +2,7 @@ import { getD1Binding } from "@/db";
 import { readLearning } from "../learning/route";
 import { buildDiagnosticQueue, buildLearnerProfile, withinRange } from "@/lib/learning";
 import { workbook } from "@/lib/xlsx-export";
+import { normalizeClassificationTags, type Classification } from "@/lib/classification";
 export async function GET(
   request: Request,
   context: { params: Promise<{ id: string }> },
@@ -52,19 +53,20 @@ export async function GET(
       {
         name: "题目记录",
         rows: [
-          ["题目ID", "学生ID", "归档时间", "分类来源", "章节", "知识点", "题型", "难度"],
-          ...questions.map((q) => [
+          ["题目ID", "学生ID", "归档时间", "分类来源", "章节", "知识点", "数学思想与方法", "题型", "难度"],
+          ...questions.map((q) => {
+            const classification = normalizeClassificationTags(JSON.parse(String(q.teacher_confirmed_classification)) as Classification);
+            return [
             q.id,
             id,
             q.created_at,
             ({ live_ai: "AI辅助", demo: "演示分类", manual: "人工分类", legacy: "历史来源未记录" } as Record<string, string>)[String(q.classification_source)] || "未知",
             q.chapter_name,
-            JSON.parse(String(q.teacher_confirmed_classification))
-              .knowledge_points.map((p: { name: string }) => p.name)
-              .join("、"),
+            classification.knowledge_points.map((p) => p.name).join("、"),
+            classification.methods.map((p) => p.name).join("、"),
             q.question_type,
             q.difficulty,
-          ]),
+          ]; }),
         ],
       },
       {

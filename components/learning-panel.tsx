@@ -1,8 +1,9 @@
 "use client";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { TeachingAgentPanel } from "@/components/teaching-agent-panel";
 import {
   attemptStages,
   buildDiagnosticQueue,
@@ -11,13 +12,14 @@ import {
   evidenceDecisions,
   evidenceLevels,
   evidenceSources,
-  formulaErrorPatterns,
+  errorPatternByCode,
+  errorPatternsForKnowledgePoint,
   learningInput,
   learningStats,
   methods,
   outcomes,
-  pilotKnowledgePointCode,
   reasons,
+  supportsQuickAttempt,
   supportLevels,
   withinRange,
   type LearningEvent,
@@ -53,11 +55,13 @@ export function LearningPanel({
   studentId,
   questions,
   questionId,
+  diagnosticPlanId,
   onOpen,
 }: {
   studentId: string;
   questions: Question[];
   questionId?: number;
+  diagnosticPlanId?: string;
   onOpen: (id: number) => void;
 }) {
   const [events, setEvents] = useState<LearningEvent[]>([]);
@@ -92,10 +96,12 @@ export function LearningPanel({
   const [evidenceSource, setEvidenceSource] = useState<(typeof evidenceSources)[number]>(evidenceSources[0]);
   const [aiHypothesis, setAiHypothesis] = useState("");
   const [teacherDecision, setTeacherDecision] = useState<(typeof evidenceDecisions)[number]>(evidenceDecisions[0]);
-  const [errorCode, setErrorCode] = useState<string>(formulaErrorPatterns[0].code);
+  const [knowledgePointCode, setKnowledgePointCode] = useState("");
+  const [errorCode, setErrorCode] = useState<string>("");
   const [evidenceExcerpt, setEvidenceExcerpt] = useState("");
   const [candidateCodes, setCandidateCodes] = useState<string[]>([]);
   const [diagnosisBasis, setDiagnosisBasis] = useState("");
+  const [adoptedDiagnostic, setAdoptedDiagnostic] = useState<{ value: import("@/lib/diagnostic-generation").DiagnosticPackage; knowledgePointCode: string } | null>(null);
   const token = useRef(crypto.randomUUID());
   const locked = useRef(false);
   const previousPayload = useRef("");
@@ -127,6 +133,27 @@ export function LearningPanel({
       });
     return () => controller.abort();
   }, [load]);
+  useEffect(() => {
+    if (!diagnosticPlanId || !questionId) return;
+    const controller = new AbortController();
+    void fetch(`/api/students/${studentId}/agent/diagnostics`, { cache: "no-store", signal: controller.signal })
+      .then(async (response) => {
+        const data = await response.json() as { error?: string; plans?: Array<{ id: string; questionId: number; status: string; knowledgePointCode: string; package: import("@/lib/diagnostic-generation").DiagnosticPackage }> };
+        if (!response.ok) throw new Error(data.error || "诊断方案加载失败。");
+        const selected = data.plans?.find((item) => item.id === diagnosticPlanId && item.questionId === questionId && item.status === "adopted");
+        if (!selected) throw new Error("没有找到已采用的诊断方案。");
+        setAdoptedDiagnostic({ value: selected.package, knowledgePointCode: selected.knowledgePointCode });
+        setKind("attempt");
+        setAttemptStage("诊断检测");
+        setKnowledgePointCode(selected.knowledgePointCode);
+        setEvidenceSource("课堂观察");
+        setEvidenceLevel("有部分步骤");
+        setDiagnosisBasis(selected.package.diagnostic_goal);
+        setMessage("已载入教师采用的诊断方案，请完成后记录学生真实作答。");
+      })
+      .catch((reason) => { if (!controller.signal.aborted) setError(reason instanceof Error ? reason.message : "诊断方案加载失败。"); });
+    return () => controller.abort();
+  }, [diagnosticPlanId, questionId, studentId]);
   const scopedQuestions = questions.filter(
     (q) =>
       (!questionId || q.id === questionId) &&
@@ -153,11 +180,24 @@ export function LearningPanel({
   );
   const profiles = buildLearnerProfile(events);
   const diagnosticQueue = buildDiagnosticQueue(events);
-  const currentQuestion = questions.find((q) => q.id === questionId);
-  const supportsPilot = Boolean(
-    currentQuestion?.knowledgePoints.some(
-      (pointItem) => pointItem.code === pilotKnowledgePointCode,
-    ),
+  const currentQuestion = useMemo(
+    () => questions.find((q) => q.id === questionId),
+    [questionId, questions],
+  );
+  const quickAttemptPoints = useMemo(
+    () => currentQuestion?.knowledgePoints.filter((pointItem) => supportsQuickAttempt(pointItem.code)) || [],
+    [currentQuestion],
+  );
+  const supportsAttempt = quickAttemptPoints.length > 0;
+  const activeKnowledgePointCode = quickAttemptPoints.some((pointItem) => pointItem.code === knowledgePointCode)
+    ? knowledgePointCode
+    : quickAttemptPoints[0]?.code || "";
+  const activeErrorPatterns = errorPatternsForKnowledgePoint(activeKnowledgePointCode);
+  const activeErrorCode = activeErrorPatterns.some((item) => item.code === errorCode)
+    ? errorCode
+    : activeErrorPatterns[0]?.code || "";
+  const activeCandidateCodes = candidateCodes.filter((code) =>
+    activeErrorPatterns.some((item) => item.code === code),
   );
   async function save() {
     if (locked.current || !questionId) return;
@@ -199,7 +239,7 @@ export function LearningPanel({
         supportLevel: kind === "attempt" ? supportLevel : undefined,
         evidenceLevel: kind === "attempt" ? evidenceLevel : undefined,
         evidenceSource: kind === "attempt" ? evidenceSource : undefined,
-        knowledgePointCode: kind === "attempt" ? pilotKnowledgePointCode : undefined,
+        knowledgePointCode: kind === "attempt" ? activeKnowledgePointCode : undefined,
         aiHypothesis: kind === "attempt" && correctness !== "正确" ? aiHypothesis : undefined,
         teacherDecision: kind === "attempt" && correctness !== "正确" ? teacherDecision : undefined,
         errorCode:
@@ -208,10 +248,10 @@ export function LearningPanel({
             : undefined,
         errorLabel:
           kind === "attempt" && correctness !== "正确" && ["教师确认", "教师修正"].includes(teacherDecision)
-            ? formulaErrorPatterns.find((item) => item.code === errorCode)?.label
+            ? activeErrorPatterns.find((item) => item.code === activeErrorCode)?.label
             : undefined,
         evidenceExcerpt: kind === "attempt" && correctness !== "正确" ? evidenceExcerpt : undefined,
-        candidateErrorCodes: kind === "attempt" && correctness !== "正确" ? candidateCodes : [],
+        candidateErrorCodes: kind === "attempt" && correctness !== "正确" ? activeCandidateCodes : [],
         diagnosisBasis: kind === "attempt" && correctness !== "正确" ? diagnosisBasis : undefined,
       });
       const signature = JSON.stringify({ ...payload, id: "" });
@@ -299,6 +339,15 @@ export function LearningPanel({
           {message}
         </p>
       )}
+      {adoptedDiagnostic && questionId && (
+        <div className="rounded-xl border border-indigo-200 bg-indigo-50/50 p-4">
+          <p className="font-semibold text-indigo-950">本次诊断：{adoptedDiagnostic.value.diagnostic_goal}</p>
+          <ol className="mt-2 space-y-2 text-sm leading-6 text-indigo-900">
+            {adoptedDiagnostic.value.questions.map((item, index) => <li key={item.question}>{index + 1}. {item.question}</li>)}
+          </ol>
+          <p className="mt-2 text-xs text-indigo-800">诊断题是教师采用的方案；下方记录的学生作答才会成为学习证据。</p>
+        </div>
+      )}
       {!questionId && (
         <>
           <div className="flex flex-wrap gap-2">
@@ -310,6 +359,9 @@ export function LearningPanel({
             </Button>
             <Button variant="outline" onClick={() => setTab("profile")}>
               动态学习画像
+            </Button>
+            <Button variant="outline" onClick={() => setTab("agent")}>
+              智能体建议
             </Button>
             <a
               className="rounded border px-3 py-2 text-sm"
@@ -404,10 +456,10 @@ export function LearningPanel({
                 <option
                   key={key}
                   value={key}
-                  disabled={key === "attempt" && !supportsPilot}
+                  disabled={key === "attempt" && !supportsAttempt}
                 >
                   {label}
-                  {key === "attempt" && !supportsPilot ? "（试点仅支持乘法公式）" : ""}
+                  {key === "attempt" && !supportsAttempt ? "（此题暂无可记录的知识点）" : ""}
                 </option>
               ))}
             </select>
@@ -447,6 +499,22 @@ export function LearningPanel({
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-2">
+                  <select
+                    aria-label="本次作答对应知识点"
+                    className={selectClass}
+                    value={activeKnowledgePointCode}
+                    onChange={(event) => {
+                      const nextCode = event.target.value;
+                      const patterns = errorPatternsForKnowledgePoint(nextCode);
+                      setKnowledgePointCode(nextCode);
+                      setErrorCode(patterns[0]?.code || "");
+                      setCandidateCodes([]);
+                    }}
+                  >
+                    {quickAttemptPoints.map((item) => (
+                      <option key={item.code} value={item.code}>{item.name}</option>
+                    ))}
+                  </select>
                   <select
                     aria-label="作答阶段"
                     className={selectClass}
@@ -511,24 +579,24 @@ export function LearningPanel({
                       />
                       <p className="text-xs font-medium">候选错误模式（可多选、可不选）</p>
                       <div className="flex flex-wrap gap-2">
-                        {formulaErrorPatterns.map((item) => (
+                        {activeErrorPatterns.map((item) => (
                           <label key={item.code} className="flex items-center gap-1 rounded border p-2 text-xs">
                             <input
                               type="checkbox"
-                              checked={candidateCodes.includes(item.code)}
+                              checked={activeCandidateCodes.includes(item.code)}
                               onChange={(event) => setCandidateCodes(
                                 event.target.checked
-                                  ? [...candidateCodes, item.code]
-                                  : candidateCodes.filter((code) => code !== item.code),
+                                  ? [...activeCandidateCodes, item.code]
+                                  : activeCandidateCodes.filter((code) => code !== item.code),
                               )}
                             />
                             {item.label}
                           </label>
                         ))}
                       </div>
-                      {candidateCodes.length > 0 && (
+                      {activeCandidateCodes.length > 0 && (
                         <p className="text-xs text-slate-500">
-                          已选：{candidateCodes.map((code) => formulaErrorPatterns.find((item) => item.code === code)?.label).filter(Boolean).join("、")}
+                          已选：{activeCandidateCodes.map((code) => errorPatternByCode(code)?.label).filter(Boolean).join("、")}
                         </p>
                       )}
                       <Input
@@ -549,10 +617,10 @@ export function LearningPanel({
                         <select
                           aria-label="具体错误模式"
                           className={selectClass}
-                          value={errorCode}
+                          value={activeErrorCode}
                           onChange={(event) => setErrorCode(event.target.value)}
                         >
-                          {formulaErrorPatterns.map((item) => (
+                          {activeErrorPatterns.map((item) => (
                             <option key={item.code} value={item.code}>{item.label}</option>
                           ))}
                         </select>
@@ -673,11 +741,13 @@ export function LearningPanel({
           </div>
         </details>
       )}
-      {tab === "profile" && !questionId ? (
+      {tab === "agent" && !questionId ? (
+        <TeachingAgentPanel studentId={studentId} questions={questions} events={events} onOpen={onOpen} />
+      ) : tab === "profile" && !questionId ? (
         <div className="space-y-3">
           {!profiles.length && !diagnosticQueue.length && (
             <div className="rounded-xl border border-dashed p-5 text-sm text-slate-500">
-              暂无作答证据。请先在标注为“乘法公式”的题目中快速记录一次作答结果。
+              暂无作答证据。请先在已完成知识点分类的题目中快速记录一次作答结果。
             </div>
           )}
           {diagnosticQueue.map((item) => (
@@ -796,7 +866,7 @@ export function LearningPanel({
                   {e.diagnosisStatus && <p className="mt-1"><b>错因状态：</b>{e.diagnosisStatus}</p>}
                   {e.teacherDecision && e.teacherDecision !== "未判断" && <p className="mt-1"><b>教师判断：</b>{e.teacherDecision}{e.errorLabel ? ` · ${e.errorLabel}` : ""}</p>}
                   {e.aiHypothesis && <p className="mt-1 text-slate-600"><b>AI候选：</b>{e.aiHypothesis}</p>}
-                  {(e.candidateErrorCodes?.length || 0) > 0 && <p className="mt-1 text-slate-600"><b>候选模式：</b>{e.candidateErrorCodes?.map((code) => formulaErrorPatterns.find((item) => item.code === code)?.label).filter(Boolean).join("、")}（待验证）</p>}
+                  {(e.candidateErrorCodes?.length || 0) > 0 && <p className="mt-1 text-slate-600"><b>候选模式：</b>{e.candidateErrorCodes?.map((code) => errorPatternByCode(code)?.label).filter(Boolean).join("、")}（待验证）</p>}
                   {e.diagnosisBasis && <p className="mt-1 text-slate-600"><b>候选依据：</b>{e.diagnosisBasis}</p>}
                   {e.evidenceExcerpt && <p className="mt-1 text-slate-600"><b>证据片段：</b>{e.evidenceExcerpt}</p>}
                 </div>

@@ -153,6 +153,32 @@ export const errorEvidence = sqliteTable(
   },
   (t) => [index("idx_error_evidence_attempt").on(t.attemptId)],
 );
+
+// Generated diagnostic material is a teacher-reviewable draft. It never
+// becomes learner evidence until a separate student attempt is recorded.
+export const diagnosticPlans = sqliteTable(
+  "diagnostic_plans",
+  {
+    id: text("id").primaryKey(),
+    questionId: integer("question_id")
+      .notNull()
+      .references(() => questions.id, { onDelete: "cascade" }),
+    sourceAttemptId: text("source_attempt_id")
+      .notNull()
+      .references(() => studentAttempts.id, { onDelete: "cascade" }),
+    actionId: text("action_id").notNull(),
+    knowledgePointCode: text("knowledge_point_code").notNull().default(""),
+    content: text("content").notNull(),
+    generationMode: text("generation_mode").notNull(),
+    status: text("status").notNull().default("draft"),
+    createdAt: text("created_at").notNull(),
+    decidedAt: text("decided_at"),
+  },
+  (t) => [
+    index("idx_diagnostic_plans_question").on(t.questionId, t.createdAt),
+    index("idx_diagnostic_plans_status").on(t.status),
+  ],
+);
 export const teachingRecords = sqliteTable("teaching_records", {
   id: text("id").primaryKey(),
   inquiryId: text("inquiry_id")

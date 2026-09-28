@@ -26,12 +26,12 @@
   --slate-0: hsl(222 47% 11%); --slate-10: hsl(217 33% 17%); --slate-20: hsl(215 25% 27%); --slate-30: hsl(215 19% 35%); --slate-40: hsl(215 16% 47%); --slate-50: hsl(215 20% 58%); --slate-60: hsl(213 27% 70%); --slate-70: hsl(212 32% 82%); --slate-80: hsl(214 32% 91%); --slate-90: hsl(210 40% 96%); --slate-100: hsl(210 40% 98%);
 
   /* Semantic tokens. */
-  --color-brand-primary: var(--blue-20);
-  --color-brand-primary-hover: var(--blue-30);
-  --color-brand-primary-soft: var(--blue-90);
-  --color-brand-secondary: var(--indigo-30);
-  --color-brand-secondary-soft: var(--indigo-90);
-  --color-surface-base: #f8fafc;
+  --color-brand-primary: #065f46;
+  --color-brand-primary-hover: #047857;
+  --color-brand-primary-soft: #ecfdf5;
+  --color-brand-secondary: #1e3a8a;
+  --color-brand-secondary-soft: #eff6ff;
+  --color-surface-base: #fafafa;
   --color-surface-card: #ffffff;
   --color-text-primary: #0f172a;
   --color-text-secondary: #475569;
@@ -63,7 +63,7 @@
   --chart-3: #104e64;
   --chart-4: #ffb900;
   --chart-5: #fe9a00;
-  --radius: 0.875rem;
+  --radius: 0.5rem;
   --sidebar: #fafafa;
   --sidebar-foreground: #171717;
   --sidebar-primary: #171717;
@@ -136,28 +136,25 @@ h3 {
 
 @utility surface-card {
   border: 1px solid var(--color-border-subtle);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   background: var(--color-surface-card);
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: none;
+  transition: border-color 160ms ease, background-color 160ms ease;
   animation: fade-in-up 420ms cubic-bezier(0.4, 0, 0.2, 1) both;
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 18px -8px rgb(15 23 42 / 0.22), 0 4px 8px -4px rgb(15 23 42 / 0.14);
+    border-color: #cbd5e1;
   }
 }
 
 @utility surface-card-interactive {
   transition:
-    transform 200ms ease,
-    box-shadow 200ms ease;
+    border-color 160ms ease,
+    background-color 160ms ease;
 
   &:hover {
-    transform: translateY(-1px);
-    box-shadow:
-      0 4px 8px rgb(15 23 42 / 0.06),
-      0 16px 32px rgb(15 23 42 / 0.08);
+    border-color: #a7f3d0;
+    background: #fafffd;
   }
 }
 

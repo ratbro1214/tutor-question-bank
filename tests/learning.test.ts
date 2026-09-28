@@ -5,13 +5,40 @@ import { readFileSync, readdirSync } from "node:fs";
 import {
   buildDiagnosticQueue,
   buildLearnerProfile,
+  diagnosticQuestionsForKnowledgePoint,
+  errorPatternsForKnowledgePoint,
   learningInput,
   learningStats,
+  supportsQuickAttempt,
   withinRange,
   type LearningEvent,
 } from "../lib/learning";
+import { seniorTaxonomy } from "../lib/senior-taxonomy";
 import { workbook } from "../lib/xlsx-export";
 import { strFromU8, unzipSync } from "fflate";
+
+test("快速作答覆盖高中分类并按模块提供不同错因与诊断", () => {
+  assert.ok(seniorTaxonomy.length >= 160);
+  assert.equal(
+    seniorTaxonomy.every(([code]) => supportsQuickAttempt(code)),
+    true,
+  );
+  assert.equal(supportsQuickAttempt("ALG-FORMULA"), true);
+  assert.equal(supportsQuickAttempt("GEO-CIRCLE"), false);
+
+  const derivativePatterns = errorPatternsForKnowledgePoint(
+    "HS-DERIVATIVE-MONOTONICITY",
+  );
+  const probabilityPatterns = errorPatternsForKnowledgePoint(
+    "HS-PROB-CONDITIONAL",
+  );
+  assert.ok(derivativePatterns.some((item) => item.code === "DERIVATIVE_SIGN"));
+  assert.ok(probabilityPatterns.some((item) => item.code === "PROB_MODEL"));
+  assert.notDeepEqual(
+    diagnosticQuestionsForKnowledgePoint("HS-DERIVATIVE-MONOTONICITY"),
+    diagnosticQuestionsForKnowledgePoint("HS-PROB-CONDITIONAL"),
+  );
+});
 
 test("学习统计区分题数、提问与复查，排除其他学生题目", () => {
   const events: LearningEvent[] = [

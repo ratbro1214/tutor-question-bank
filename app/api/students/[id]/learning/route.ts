@@ -1,10 +1,11 @@
 import { getD1Binding } from "@/db";
 import {
-  formulaErrorPatterns,
+  errorPatternsForKnowledgePoint,
   learningInput,
-  pilotKnowledgePointCode,
+  supportsQuickAttempt,
   type LearningEvent,
 } from "@/lib/learning";
+import { isMethodCode } from "@/lib/taxonomy";
 
 export async function readLearning(studentId: number) {
   const db = getD1Binding();
@@ -188,29 +189,33 @@ export async function POST(
         )
         .bind(p.questionId, p.knowledgePointCode || "")
         .first();
-      if (!linkedPoint || p.knowledgePointCode !== pilotKnowledgePointCode)
+      const selectedCode = p.knowledgePointCode || "";
+      if (!linkedPoint || isMethodCode("初中", selectedCode) || isMethodCode("高中", selectedCode) || !supportsQuickAttempt(selectedCode))
         return Response.json(
-          { error: "当前试点仅支持已标注为“乘法公式”的题目。" },
+          { error: "请选择此题已确认分类中的高中知识点后再记录。" },
           { status: 400 },
         );
+      const allowedPatterns = errorPatternsForKnowledgePoint(
+        p.knowledgePointCode || "",
+      );
       if (
         p.errorCode &&
-        !formulaErrorPatterns.some(
+        !allowedPatterns.some(
           (item) => item.code === p.errorCode && item.label === p.errorLabel,
         )
       )
         return Response.json(
-          { error: "请选择试点目录中的错误模式。" },
+          { error: "请选择当前知识点目录中的错误模式。" },
           { status: 400 },
         );
       const candidateCodes = [...new Set(p.candidateErrorCodes)].filter(Boolean);
       if (
         candidateCodes.some(
-          (code) => !formulaErrorPatterns.some((item) => item.code === code),
+          (code) => !allowedPatterns.some((item) => item.code === code),
         )
       )
         return Response.json(
-          { error: "候选错因不在当前试点目录中。" },
+          { error: "候选错因不在当前知识点目录中。" },
           { status: 400 },
         );
       const teacherConfirmed = ["教师确认", "教师修正"].includes(

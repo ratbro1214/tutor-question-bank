@@ -12,7 +12,7 @@ import { Label } from "@/components/ui/label";
 import { NativeSelect, NativeSelectOption } from "@/components/ui/native-select";
 import { cn } from "@/lib/utils";
 import { chapterName, chaptersForStage, stageFromGrade, taxonomyForStage } from "@/lib/taxonomy";
-import { questionTypes, subjectForStage, taxonomyVersionForStage, type Classification, type EducationStage } from "@/lib/classification";
+import { normalizeClassificationTags, questionTypes, subjectForStage, taxonomyVersionForStage, type Classification, type EducationStage } from "@/lib/classification";
 
 type Student = { id: number; name: string; grade: string };
 type SimilarQuestion = { id: number; chapterName: string; similarity: number };
@@ -41,7 +41,7 @@ function emptyDraft(stage: EducationStage): Classification {
   const chapter = chaptersForStage(stage)[0];
   return {
     schema_version: "1.0", taxonomy_version: taxonomyVersionForStage(stage), subject: subjectForStage(stage), education_stage: stage,
-    extracted_question: "[以原题图片为准]", chapter: { code: chapter[0], name: chapter[1] }, knowledge_points: [], question_type: "直接计算",
+    extracted_question: "[以原题图片为准]", chapter: { code: chapter[0], name: chapter[1] }, knowledge_points: [], methods: [], question_type: "直接计算",
     difficulty: "基础", confidence: 0, needs_review: true, review_reasons: [], classification_notes: "",
   };
 }
@@ -149,7 +149,8 @@ export function UploadWorkflow() {
   const stageChapters = chaptersForStage(confirmed?.education_stage || selectedStage);
   const stageTaxonomy = taxonomyForStage(confirmed?.education_stage || selectedStage);
   const activePointChapter = pointChapter || confirmed?.chapter.code || "";
-  const availablePoints = useMemo(() => stageTaxonomy.filter(([code, , chapter]) => chapter === activePointChapter || chapter === "METHOD" || confirmed?.knowledge_points.some(point => point.code === code)), [activePointChapter, confirmed?.knowledge_points, stageTaxonomy]);
+  const availablePoints = useMemo(() => stageTaxonomy.filter(([code, , chapter]) => chapter !== "METHOD" && (chapter === activePointChapter || confirmed?.knowledge_points.some(point => point.code === code))), [activePointChapter, confirmed?.knowledge_points, stageTaxonomy]);
+  const availableMethods = useMemo(() => stageTaxonomy.filter(([, , chapter]) => chapter === "METHOD"), [stageTaxonomy]);
 
   function requestServerCancellation() {
     const analysisId = activeAnalysisId.current;
@@ -229,7 +230,8 @@ export function UploadWorkflow() {
   }
 
   function mergeAiResult(result: Classification) {
-    const fields: Array<keyof Classification> = ["extracted_question", "chapter", "knowledge_points", "question_type", "difficulty", "classification_notes"];
+    result = normalizeClassificationTags(result);
+    const fields: Array<keyof Classification> = ["extracted_question", "chapter", "knowledge_points", "methods", "question_type", "difficulty", "classification_notes"];
     setConfirmed(current => {
       const next = current ? { ...current } : emptyDraft(result.education_stage);
       for (const field of fields) if (!dirtyFields.current.has(field)) (next as unknown as Record<string, unknown>)[field] = structuredClone(result[field]);
@@ -269,7 +271,8 @@ export function UploadWorkflow() {
           else if (event.type === "error") { failureAnalysisId = event.analysisId; failureProviderRequestId = event.providerRequestId || ""; failureProviderReferenceId = event.providerReferenceId || ""; failureClientRequestIdSent = event.clientRequestIdSent === true; failureRetryable = event.retryable; throw new Error(event.error); }
           else {
             const finalMetrics = { ...event.metrics, client_total_to_editable: Math.round((clock() - clientStarted) * 10) / 10 };
-            setAi(event.classification); mergeAiResult(event.classification); setMode(event.mode); setMetrics(finalMetrics); setCacheHit(event.cacheHit);
+            const normalized = normalizeClassificationTags(event.classification);
+            setAi(normalized); mergeAiResult(normalized); setMode(event.mode); setMetrics(finalMetrics); setCacheHit(event.cacheHit);
           }
         }
       }
@@ -293,6 +296,15 @@ export function UploadWorkflow() {
     if (!confirmed) return; const item = stageTaxonomy.find(([pointCode]) => pointCode === code); if (!item) return;
     const next = checked ? [...confirmed.knowledge_points.filter(point => point.code !== code), { code: item[0], name: item[1] }] : confirmed.knowledge_points.filter(point => point.code !== code);
     if (next.length > 4) { setError("一道题最多选择 4 个核心知识点。"); return; } patch({ knowledge_points: next });
+  }
+  function toggleMethod(code: string) {
+    if (!confirmed) return;
+    const item = stageTaxonomy.find(([pointCode, , owner]) => pointCode === code && owner === "METHOD");
+    if (!item) return;
+    const checked = confirmed.methods.some(method => method.code === code);
+    const next = checked ? confirmed.methods.filter(method => method.code !== code) : [...confirmed.methods, { code: item[0], name: item[1] }];
+    if (next.length > 2) { setError("一道题最多选择 2 个数学思想或解题方法。"); return; }
+    setError(""); patch({ methods: next });
   }
 
   const submissionId = useRef(crypto.randomUUID());
@@ -320,14 +332,14 @@ export function UploadWorkflow() {
   const modelCalls = ai?.analysis_trace?.classification_attempts.length || 0;
   const currentStep = analyzing || processingImage ? 2 : ai ? 3 : 1;
   const steps = ["选择学生与图片", "AI 识别中", "教师确认分类"];
-  return <div className="mx-auto max-w-5xl space-y-8">
-    <div className="mx-auto max-w-[800px]"><p className="mb-2 text-sm font-semibold text-[var(--color-brand-primary)]">题目录入</p><h1 className="text-[28px] font-bold leading-[1.2] tracking-tight text-[var(--color-text-primary)]">上传、识别，再由教师确认</h1><p className="mt-3 text-base leading-[1.6] text-[var(--color-text-secondary)]">选择学生并上传题目图片，AI 会先给出分类建议，再由你完成最终确认。</p></div>
+  return <div className="mx-auto max-w-[1480px] space-y-8">
+    <div className="mx-auto max-w-5xl"><p className="mb-2 text-sm font-semibold text-[var(--color-brand-primary)]">题目录入</p><h1 className="text-[28px] font-bold leading-[1.2] tracking-tight text-[var(--color-text-primary)]">上传、识别，再由教师确认</h1><p className="mt-3 text-base leading-[1.6] text-[var(--color-text-secondary)]">选择学生并上传题目图片，AI 会先给出分类建议，再由你完成最终确认。</p></div>
 
-    <ol className="mx-auto grid max-w-[800px] grid-cols-3" aria-label="题目录入进度">
+    <ol className="mx-auto grid max-w-5xl grid-cols-3" aria-label="题目录入进度">
       {steps.map((step, index) => { const number = index + 1; const done = currentStep > number; const active = currentStep === number; return <li key={step} className="relative flex flex-col items-center text-center before:absolute before:top-4 before:right-1/2 before:-z-0 before:h-px before:w-full before:bg-[var(--color-border-subtle)] first:before:hidden"><span className={cn("relative z-10 grid size-8 place-items-center rounded-full border text-sm font-bold transition-all duration-200", done ? "border-[var(--color-state-success)] bg-[var(--color-state-success)] text-white" : active ? "border-[var(--color-brand-primary)] bg-[var(--color-brand-primary)] text-white shadow-[0_0_0_4px_rgb(25_93_122_/_0.12)]" : "border-[var(--color-border-subtle)] bg-white text-slate-500")}>{done ? <Check className="size-4" /> : number}</span><span className={cn("mt-2 text-xs sm:text-sm", active ? "font-semibold text-[var(--color-text-primary)]" : "text-[var(--color-text-secondary)]")}>{number}. {step}</span></li>; })}
     </ol>
 
-    <div className="mx-auto max-w-[800px] space-y-6">
+    <div className="grid items-start gap-6 xl:grid-cols-2">
       <section className="surface-card p-5 sm:p-8" style={{ animationDelay: "50ms" }}>
         <div className="mb-6"><h2 className="text-xl font-semibold text-[var(--color-text-primary)]">选择学生与图片</h2><p className="mt-1 text-sm text-[var(--color-text-secondary)]">原图供教师查看，清晰副本用于识别</p></div>
         <div className="grid gap-5">
@@ -349,13 +361,14 @@ export function UploadWorkflow() {
         <div className="mb-6"><h2 className="text-xl font-semibold text-[var(--color-text-primary)]">教师确认分类</h2><p className="mt-1 text-sm text-[var(--color-text-secondary)]">AI 只回填尚未被教师修改的字段</p></div>
         {error && <div className="mb-5 flex items-start justify-between gap-3 rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900"><span className="flex gap-2"><AlertCircle className="mt-0.5 size-4 shrink-0" />{error}</span>{file && errorRetryable && <Button size="sm" variant="outline" onClick={() => void analyze()}>重试</Button>}</div>}
         {file && !ai && !analyzing && <p className="mb-4 rounded-lg bg-slate-50 px-3 py-2 text-sm text-slate-600">AI 识别不可用时，可直接参照原图手动完成分类，再由教师确认归档。</p>}
-        {!confirmed ? <div className="grid min-h-80 place-items-center rounded-2xl bg-slate-50/80 p-8 text-center ring-1 ring-inset ring-slate-900/[0.04]"><div><a href="/example-question.svg" target="_blank" className="mx-auto block w-fit rounded-xl bg-white p-2 shadow-sm ring-1 ring-slate-200 transition-transform hover:-translate-y-0.5" aria-label="查看示例题目图片"><img src="/example-question.svg" alt="示例题目缩略图" className="h-20 w-28 rounded-lg object-cover" /></a><h3 className="mt-5 font-semibold text-[var(--color-text-primary)]">等待题目图片</h3><p className="mx-auto mt-1.5 max-w-md text-sm leading-6 text-[var(--color-text-secondary)]">上传一张题目图片，AI 将自动为您识别并分类。支持 JPG、PNG 格式。</p><a href="/example-question.svg" target="_blank" className="mt-3 inline-block text-sm font-semibold text-[var(--color-brand-primary)] hover:underline">查看示例图片</a></div></div> : <div className="space-y-7">
+        {!confirmed ? <div className="grid min-h-80 place-items-center rounded-2xl bg-slate-50/80 p-8 text-center ring-1 ring-inset ring-slate-900/[0.04]"><div><ImageLightbox src="/example-question.svg" alt="示例题目图片"><button type="button" className="mx-auto block w-fit rounded-lg bg-white p-2 ring-1 ring-slate-200 transition-colors hover:ring-emerald-300" aria-label="预览示例题目图片"><img src="/example-question.svg" alt="示例题目缩略图" className="h-20 w-28 rounded-md object-cover" /></button></ImageLightbox><h3 className="mt-5 font-semibold text-[var(--color-text-primary)]">等待题目图片</h3><p className="mx-auto mt-1.5 max-w-md text-sm leading-6 text-[var(--color-text-secondary)]">上传一张题目图片，AI 将自动为您识别并分类。支持 JPG、PNG 格式。</p><ImageLightbox src="/example-question.svg" alt="示例题目图片"><button type="button" className="mt-3 text-sm font-semibold text-[var(--color-brand-primary)] hover:underline">查看示例图片</button></ImageLightbox></div></div> : <div className="space-y-7">
           <div className="flex flex-wrap items-center gap-2">{ai ? <><Badge className={mode === "live" ? "bg-emerald-100 text-emerald-800" : "bg-amber-100 text-amber-800"}>{cacheHit ? "缓存结果" : mode === "live" ? `AI 已分析 · ${modelCalls} 次调用` : "演示结果"}</Badge><span className="text-sm text-slate-500">置信度 {Math.round(ai.confidence * 100)}%</span></> : <Badge variant="outline">等待 AI，可先填写</Badge>}<Badge variant="outline">{confirmed.education_stage}数学</Badge>{ai?.needs_review && <Badge variant="outline" className="border-amber-300 text-amber-700">需要教师复核</Badge>}</div>
           {metrics && <div className="rounded-xl bg-emerald-50 px-4 py-3 text-xs text-emerald-900">可编辑结果用时 {(metrics.client_total_to_editable / 1000).toFixed(1)} 秒 · 模型完整响应 {metrics.model_complete ? (metrics.model_complete / 1000).toFixed(1) + " 秒" : "缓存命中"}{ai?.analysis_trace && ` · Token ${ai.analysis_trace.usage.total_tokens}`}</div>}
           {preview && <ImageLightbox src={preview} alt="题目原图"><button type="button" className="group block w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-50"><img src={preview} alt="题目原图，点击放大" className="max-h-64 w-full object-contain transition group-hover:scale-[1.01]" /><span className="block border-t border-slate-200 bg-white px-4 py-2 text-center text-sm font-medium text-indigo-600">点击放大查看原图</span></button></ImageLightbox>}
           <div className="grid gap-4 sm:grid-cols-2"><div className="grid gap-2"><Label>主章节</Label><NativeSelect value={confirmed.chapter.code} onChange={event => changeChapter(event.target.value)} className="w-full">{stageChapters.map(([code, name]) => <NativeSelectOption key={code} value={code}>{name}</NativeSelectOption>)}</NativeSelect></div><div className="grid gap-2"><Label>难度</Label><NativeSelect value={confirmed.difficulty} onChange={event => patch({ difficulty: event.target.value as Classification["difficulty"] })} className="w-full">{["基础", "中等", "较难"].map(item => <NativeSelectOption key={item} value={item}>{item}</NativeSelectOption>)}</NativeSelect></div></div>
           <div className="grid gap-2"><Label>题型</Label><NativeSelect value={confirmed.question_type} onChange={event => patch({ question_type: event.target.value })} className="w-full">{questionTypes.map(item => <NativeSelectOption key={item} value={item}>{item}</NativeSelectOption>)}</NativeSelect></div>
-          <div><div className="mb-2 flex items-center justify-between"><Label>知识点</Label><span className="text-xs text-gray-400">已选 {confirmed.knowledge_points.length}/4</span></div><NativeSelect value={activePointChapter} onChange={event => setPointChapter(event.target.value)} className="mb-3 w-full"><NativeSelectOption value="METHOD">通用解题方法</NativeSelectOption>{stageChapters.map(([code, name]) => <NativeSelectOption key={code} value={code}>{name}</NativeSelectOption>)}</NativeSelect><div className="flex max-h-48 flex-wrap content-start gap-2 overflow-auto rounded-2xl bg-slate-50/80 p-3 ring-1 ring-inset ring-slate-900/[0.04]">{availablePoints.map(([code, name]) => { const checked = confirmed.knowledge_points.some(point => point.code === code); return <button type="button" aria-pressed={checked} key={code} onClick={() => togglePoint(code, !checked)} className={cn("rounded-full border px-3 py-2 text-sm transition-all duration-200", checked ? "border-indigo-200 bg-indigo-50 font-medium text-indigo-600 shadow-sm" : "border-slate-200 bg-white text-gray-500 hover:border-indigo-200 hover:text-indigo-600")}>{name}</button>; })}</div></div>
+          <div><div className="mb-2 flex items-center justify-between"><div><Label>知识点</Label><p className="mt-1 text-xs text-gray-500">作为题库统计与筛选的主要维度</p></div><span className="text-xs text-gray-400">已选 {confirmed.knowledge_points.length}/4</span></div><NativeSelect value={activePointChapter} onChange={event => setPointChapter(event.target.value)} className="mb-3 w-full">{stageChapters.map(([code, name]) => <NativeSelectOption key={code} value={code}>{name}</NativeSelectOption>)}</NativeSelect><div className="flex max-h-48 flex-wrap content-start gap-2 overflow-auto rounded-2xl bg-slate-50/80 p-3 ring-1 ring-inset ring-slate-900/[0.04]">{availablePoints.map(([code, name]) => { const checked = confirmed.knowledge_points.some(point => point.code === code); return <button type="button" aria-pressed={checked} key={code} onClick={() => togglePoint(code, !checked)} className={cn("rounded-full border px-3 py-2 text-sm transition-all duration-200", checked ? "border-indigo-200 bg-indigo-50 font-medium text-indigo-600 shadow-sm" : "border-slate-200 bg-white text-gray-500 hover:border-indigo-200 hover:text-indigo-600")}>{name}</button>; })}</div></div>
+          <div><div className="mb-2 flex items-center justify-between"><div><Label>数学思想与方法（可选）</Label><p className="mt-1 text-xs text-gray-500">与知识点平行保存，不参与知识点统计；可在题目详情中查看</p></div><span className="text-xs text-gray-400">已选 {confirmed.methods.length}/2</span></div><div className="flex max-h-40 flex-wrap content-start gap-2 overflow-auto rounded-2xl bg-violet-50/50 p-3 ring-1 ring-inset ring-violet-900/[0.06]">{availableMethods.map(([code, name]) => { const checked = confirmed.methods.some(method => method.code === code); return <button type="button" aria-pressed={checked} key={code} onClick={() => toggleMethod(code)} className={cn("rounded-full border px-3 py-2 text-sm transition-all duration-200", checked ? "border-violet-200 bg-white font-medium text-violet-700 shadow-sm" : "border-slate-200 bg-white text-gray-500 hover:border-violet-200 hover:text-violet-700")}>{name}</button>; })}</div></div>
           <div className="rounded-xl bg-slate-50 p-4"><Label>分类依据或教师备注</Label><Input value={confirmed.classification_notes} onChange={event => patch({ classification_notes: event.target.value })} className="mt-2 bg-white" /></div>
           {duplicates.length > 0 && <div className="rounded-xl border border-amber-200 p-3 text-sm"><p className="font-medium">发现相同原图，请教师确认是否为再次提问。</p><div className="mt-2 flex flex-wrap gap-2">{duplicates.map(q => <Button key={q.id} disabled={saving} variant="outline" onClick={() => void save("link", q.id)}>关联题目 #{q.id} · {q.chapterName}</Button>)}<Button disabled={saving} variant="outline" onClick={() => void save("new")}>作为新题保存</Button><Button disabled={saving} variant="outline" onClick={() => void save("later")}>暂不关联并归档</Button></div></div>}
           {similarQuestions.length > 0 && <div className="space-y-3 rounded-xl border border-indigo-200 bg-indigo-50/60 p-4 text-sm"><div><p className="font-medium text-indigo-950">发现题干相近的候选题</p><p className="mt-1 text-indigo-800">候选依据题干文本相似度及章节、知识点线索生成；相似不代表同一道题，只有你确认后才会建立关联。</p></div><div className="grid gap-2 sm:grid-cols-[1fr_auto]"><NativeSelect aria-label="相似题关联类型" value={relationKind} onChange={event => setRelationKind(event.target.value)}><NativeSelectOption value="同类题">同类题</NativeSelectOption><NativeSelectOption value="变式题">变式题</NativeSelectOption><NativeSelectOption value="相似错误原因">相似错误原因</NativeSelectOption></NativeSelect><Button variant="outline" disabled={saving} onClick={() => void save("new")}>不关联，独立保存</Button></div><div className="space-y-2">{similarQuestions.map(q => <div key={q.id} className="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-indigo-100 bg-white p-3"><span>题目 #{q.id} · {q.chapterName} · 候选匹配分 {q.similarity}/100</span><Button disabled={saving} variant="outline" onClick={() => void save("similar", q.id, relationKind)}>保存新题并建立关联</Button></div>)}</div></div>}
