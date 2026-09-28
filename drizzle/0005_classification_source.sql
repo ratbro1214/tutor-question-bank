@@ -1,0 +1,1 @@
+ALTER TABLE `questions` ADD `classification_source` text DEFAULT 'legacy' NOT NULL;

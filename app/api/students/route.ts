@@ -1,4 +1,4 @@
-import { desc, eq, sql } from "drizzle-orm";
+import { and, desc, eq, isNull, sql } from "drizzle-orm";
 import { getDb } from "@/db";
 import { questions, students } from "@/db/schema";
 import { apiError } from "@/lib/api-error";
@@ -11,8 +11,8 @@ export async function GET() {
       createdAt: students.createdAt,
       questionCount: sql<number>`count(${questions.id})`,
       latestQuestionAt: sql<string | null>`max(${questions.createdAt})`,
-    }).from(students).leftJoin(questions, eq(questions.studentId, students.id))
-      .groupBy(students.id).orderBy(desc(students.updatedAt), students.name);
+    }).from(students).leftJoin(questions, and(eq(questions.studentId, students.id), isNull(questions.deletedAt)))
+      .where(isNull(students.deletedAt)).groupBy(students.id).orderBy(desc(students.updatedAt), students.name);
     return Response.json({ students: rows });
   } catch (error) {
     return Response.json({ error: apiError(error) }, { status: 500 });

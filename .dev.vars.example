@@ -1,0 +1,19 @@
+# 本地视觉识别配置模板。复制为 .dev.vars 后填写真实值。
+# 不要把真实 API Key 提交到 Git、截图或发送到聊天中。
+OPENAI_API_KEY="sk-your-project-api-key"
+
+# OpenAI 兼容接口的基础地址；结尾不需要填写 /responses。
+OPENAI_BASE_URL="https://api.openai.com/v1"
+
+# 官方 OpenAI 使用 responses；部分兼容中转站使用 chat_completions。
+OPENAI_API_STYLE="responses"
+
+# 可选：留空时应用默认使用 gpt-4o-mini。
+OPENAI_VISION_MODEL="gpt-4o-mini"
+
+# 可选：中转站的视觉与文本模型分开时，配置下面两项启用两阶段识别。
+OPENAI_OCR_MODEL=""
+OPENAI_CLASSIFICATION_MODEL=""
+
+# 数学识别默认推理强度；low 优先响应速度，复杂题对照测试可改为 medium。
+OPENAI_REASONING_EFFORT="low"

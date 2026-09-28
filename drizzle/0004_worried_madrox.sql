@@ -1,0 +1,1 @@
+ALTER TABLE `teaching_records` ADD `reasons` text DEFAULT '[]' NOT NULL;

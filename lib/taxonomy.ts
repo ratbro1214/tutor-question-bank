@@ -1,4 +1,7 @@
-export const chapters = [
+import type { EducationStage } from "@/lib/classification";
+import { seniorChapters, seniorTaxonomy } from "@/lib/senior-taxonomy";
+
+export const juniorChapters = [
   ["NUM-RATIONAL", "有理数"], ["ALG-EXPRESSION", "整式与因式分解"], ["ALG-FRACTION", "分式"], ["ALG-RADICAL", "二次根式"],
   ["EQ-LINEAR", "一元一次方程"], ["EQ-SYSTEM", "二元一次方程组"], ["INEQ", "不等式与不等式组"], ["EQ-QUADRATIC", "一元二次方程"],
   ["COORDINATE", "平面直角坐标系"], ["FUNC-CONCEPT", "函数基础"], ["FUNC-LINEAR", "一次函数"], ["FUNC-INVERSE", "反比例函数"],
@@ -7,7 +10,7 @@ export const chapters = [
   ["GEO-PROJECTION", "投影与视图"], ["STAT-DATA", "数据的收集与整理"], ["STAT-DESCRIPTIVE", "数据分析"], ["PROBABILITY", "概率"],
 ] as const;
 
-export const taxonomy = [
+export const juniorTaxonomy = [
   ["NUM-RATIONAL-CONCEPT", "有理数的概念与分类", "NUM-RATIONAL"], ["NUM-NUMBER-LINE", "数轴、相反数与绝对值", "NUM-RATIONAL"], ["NUM-RATIONAL-OPS", "有理数运算", "NUM-RATIONAL"], ["NUM-SCI-NOTATION", "科学记数法与近似数", "NUM-RATIONAL"],
   ["ALG-MONOMIAL-POLYNOMIAL", "单项式与多项式", "ALG-EXPRESSION"], ["ALG-EXPR-OPS", "整式加减", "ALG-EXPRESSION"], ["ALG-MULTIPLY", "整式乘法", "ALG-EXPRESSION"], ["ALG-FORMULA", "乘法公式", "ALG-EXPRESSION"], ["ALG-FACTOR", "因式分解", "ALG-EXPRESSION"],
   ["ALG-FRACTION-CONCEPT", "分式的概念与基本性质", "ALG-FRACTION"], ["ALG-FRACTION-OPS", "分式运算", "ALG-FRACTION"], ["ALG-FRACTION-EQ", "分式方程", "ALG-FRACTION"],
@@ -32,5 +35,43 @@ export const taxonomy = [
   ["METHOD-CLASSIFICATION", "分类讨论", "METHOD"], ["METHOD-NUMBER-SHAPE", "数形结合", "METHOD"], ["METHOD-EQUATION", "方程思想", "METHOD"], ["METHOD-FUNCTION", "函数思想", "METHOD"], ["METHOD-TRANSFORMATION", "转化与化归", "METHOD"], ["METHOD-MODELING", "数学建模", "METHOD"], ["METHOD-FROM-SPECIAL", "从特殊到一般", "METHOD"], ["METHOD-CONSTRUCTION", "构造辅助线", "METHOD"],
 ] as const;
 
-export function chapterName(code: string) { return chapters.find(([itemCode]) => itemCode === code)?.[1] ?? code; }
-export const taxonomyPrompt = taxonomy.map(([code, name, chapter]) => `${code}|${name}|${chapter}`).join("\n");
+const methodTaxonomy = juniorTaxonomy.filter(([, , chapter]) => chapter === "METHOD");
+
+export const chapters = [...juniorChapters, ...seniorChapters] as const;
+export const taxonomy = [...juniorTaxonomy, ...seniorTaxonomy] as const;
+
+export function chaptersForStage(stage: EducationStage) {
+  return stage === "高中" ? seniorChapters : juniorChapters;
+}
+
+export function taxonomyForStage(stage: EducationStage) {
+  return stage === "高中" ? [...seniorTaxonomy, ...methodTaxonomy] : juniorTaxonomy;
+}
+
+export function chapterName(code: string) {
+  return chapters.find(([itemCode]) => itemCode === code)?.[1] ?? code;
+}
+
+export function taxonomyPromptForStage(stage: EducationStage) {
+  return taxonomyForStage(stage).map(([code, name, chapter]) => `${code}|${name}|${chapter}`).join("\n");
+}
+
+export function taxonomyHierarchyPromptForStage(stage: EducationStage) {
+  const taxonomy = taxonomyForStage(stage);
+  const content = chaptersForStage(stage).map(([chapterCode, chapterName]) => {
+    const points = taxonomy
+      .filter(([, , owner]) => owner === chapterCode)
+      .map(([code, name]) => `  - ${code}|${name}`)
+      .join("\n");
+    return `${chapterCode}|${chapterName}\n${points}`;
+  }).join("\n\n");
+  const methods = taxonomy
+    .filter(([, , owner]) => owner === "METHOD")
+    .map(([code, name]) => `- ${code}|${name}`)
+    .join("\n");
+  return `主章节及其内容知识点：\n${content}\n\n通用解题方法（只能放入 method_codes）：\n${methods}`;
+}
+
+export function stageFromGrade(grade?: string): EducationStage {
+  return grade?.includes("高") ? "高中" : "初中";
+}

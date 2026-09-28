@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900">
+  <rect width="1400" height="900" fill="white"/>
+  <rect x="80" y="80" width="1240" height="740" rx="20" fill="none" stroke="#e5e7eb" stroke-width="4"/>
+  <text x="150" y="280" font-size="72" font-family="Microsoft YaHei, SimSun, Arial" fill="#111827">普通文字数学题</text>
+  <text x="150" y="450" font-size="72" font-family="Microsoft YaHei, SimSun, Arial" fill="#111827">解方程：3(x - 2) + 5 = 2x + 9。</text>
+</svg>

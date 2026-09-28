@@ -1,0 +1,1 @@
+ALTER TABLE `student_attempts` ADD `knowledge_point_code` text DEFAULT '' NOT NULL;

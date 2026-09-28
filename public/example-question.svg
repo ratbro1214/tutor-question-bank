@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 180" role="img" aria-labelledby="title desc">
+  <title id="title">数学题示例</title><desc id="desc">整洁的白纸上有一道一次方程题</desc>
+  <rect width="280" height="180" rx="18" fill="#f1f5f9"/>
+  <rect x="24" y="20" width="232" height="140" rx="10" fill="#fff" stroke="#e2e8f0"/>
+  <rect x="44" y="40" width="54" height="8" rx="4" fill="#b9dce9"/>
+  <text x="44" y="82" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="600" fill="#0f172a">解方程：3x + 5 = 20</text>
+  <path d="M44 106h108M44 124h76" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="223" cy="124" r="16" fill="#e4f5ec"/><path d="m216 124 5 5 9-11" fill="none" stroke="#26734d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

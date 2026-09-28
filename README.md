@@ -1,6 +1,17 @@
-# vinext-starter
+# 家教题库系统
 
-A clean full-stack starter running on [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and Drizzle support.
+面向中学数学家教场景的个性化题库与教学记录系统。教师可维护学生档案、上传题目并确认 AI 分类，记录讲解与复习过程，回看学习时间线并导出单个学生的数据。
+
+系统以教师确认的分类作为题库和统计依据。AI 服务不可用时仍可人工录题；题目记录会保留分类来源。学习统计描述已记录的题目和教学活动，不直接推断学生掌握程度。
+
+主要技术组成：React/Vinext 页面与 API、Drizzle ORM、Cloudflare D1 结构化数据、R2 题目图片存储，以及可配置的 OpenAI 兼容视觉模型服务。
+
+毕业设计材料：
+
+- [系统设计说明](docs/系统设计说明.md)
+- [需求与验收追踪](docs/毕业设计需求与验收追踪.md)
+- [阶段验收记录](docs/验收记录-2026-09-27.md)
+- [AI 识别性能与合成样本基准](docs/performance-2026-09-27.md)
 
 ## Prerequisites
 
@@ -124,3 +135,36 @@ The portable build runs Vinext directly without a host `timeout` command. The ma
 
 - [vinext Documentation](https://github.com/cloudflare/vinext)
 - [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
+
+## 学习记录升级（迁移 0002–0004）
+
+学习历史保存在 `inquiries`、`teaching_records`、`reviews`、`review_results` 和 `question_relations`，通过学生已有题目关联。提问、讲解和复查结果采用追加记录；教师修订讲解时，新记录指向原记录。历史题目的上传时间不会被回填为提问事件。`questions.image_hash` 与 `submission_id` 支持 SHA-256 同图候选和归档重试去重；首次再次上传时，系统会按需为旧题原图计算哈希。
+
+将更改部署到已有 D1 数据库前，先备份数据库，并只按顺序应用尚未执行的迁移：
+
+```sh
+node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --remote --config dist/server/wrangler.json --file drizzle/0002_lying_steve_rogers.sql
+node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --remote --config dist/server/wrangler.json --file drizzle/0003_short_the_santerians.sql
+node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --remote --config dist/server/wrangler.json --file drizzle/0004_worried_madrox.sql
+node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --remote --config dist/server/wrangler.json --file drizzle/0005_classification_source.sql
+node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --remote --config dist/server/wrangler.json --file drizzle/0006_freezing_iron_lad.sql
+node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --remote --config dist/server/wrangler.json --file drizzle/0007_closed_tag.sql
+node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --remote --config dist/server/wrangler.json --file drizzle/0008_majestic_nextwave.sql
+```
+
+本地开发库也需要应用相同的待执行迁移，参数使用 `--local --persist-to .wrangler/state`。不要重放已经执行的 SQL。当前本机 D1 已完成 0002–0008；0008 应用前的快照保存在 `.wrangler/backups/before-evidence-levels-20260927.sqlite`。迁移 0006–0008 只新增和扩展作答证据结构，不改写既有学习记录。如在其他本地环境补迁移，应按缺失编号依次执行，例如：
+
+```sh
+node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0005_classification_source.sql
+node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0006_freezing_iron_lad.sql
+node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0007_closed_tag.sql
+node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0008_majestic_nextwave.sql
+```
+
+学生详情页提供活动时间线、章节/知识点与日期筛选、基于教师记录的错误原因和复查分析，以及仅限当前学生的多工作表 `.xlsx` 导出。所有导出内容以文字单元格写入，不执行用户输入的公式。
+
+## AI 失败时人工归档（迁移 0005）
+
+AI 识别服务不可用时，教师仍可手工填写题干和分类并完成归档。`questions.classification_source` 记录 `live_ai`、`demo`、`manual` 或 `legacy` 来源；人工归档的 `ai_classification` 保存 JSON `null`，不会把教师输入伪装成模型输出。部署前先备份数据库，再按顺序应用尚未执行的迁移；本地和远程示例命令见上面的迁移说明。
+
+毕业设计需求与验收追踪表见 [`docs/毕业设计需求与验收追踪.md`](docs/毕业设计需求与验收追踪.md)。

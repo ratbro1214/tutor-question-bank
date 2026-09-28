@@ -8,6 +8,62 @@
       "when": 1790334067203,
       "tag": "0000_shiny_nomad",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1790426671915,
+      "tag": "0001_supreme_payback",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1790439804126,
+      "tag": "0002_lying_steve_rogers",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1790439880362,
+      "tag": "0003_short_the_santerians",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1790440324823,
+      "tag": "0004_worried_madrox",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1790488649460,
+      "tag": "0005_classification_source",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1790519024396,
+      "tag": "0006_freezing_iron_lad",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "6",
+      "when": 1790519267376,
+      "tag": "0007_closed_tag",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "6",
+      "when": 1790520262292,
+      "tag": "0008_majestic_nextwave",
+      "breakpoints": true
     }
   ]
 }
