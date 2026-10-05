@@ -1,13 +1,14 @@
 import { env } from "cloudflare:workers";
-import { and, desc, eq, isNull } from "drizzle-orm";
+import { and, desc, eq, isNull, inArray } from "drizzle-orm";
 import { getDb } from "@/db";
-import { diagnosticPlans, knowledgePoints, questionKnowledgePoints, questions } from "@/db/schema";
+import { diagnosticItems, diagnosticPlans, knowledgePoints, questionKnowledgePoints, questions, students } from "@/db/schema";
 import { readLearning } from "@/app/api/students/[id]/learning/route";
 import { errorPatternByCode } from "@/lib/learning";
 import { buildTeachingAgentPlan } from "@/lib/teaching-agent";
 import {
   fallbackDiagnosticPackage,
   generateDiagnosticPackage,
+  materializeDiagnosticItems,
   type DiagnosticGenerationContext,
   type DiagnosticProviderConfig,
 } from "@/lib/diagnostic-generation";
@@ -32,10 +33,16 @@ export async function GET(_request: Request, context: { params: Promise<{ id: st
       decidedAt: diagnosticPlans.decidedAt,
     }).from(diagnosticPlans)
       .innerJoin(questions, eq(questions.id, diagnosticPlans.questionId))
-      .where(and(eq(questions.studentId, studentId), isNull(questions.deletedAt)))
+      .innerJoin(students, eq(students.id, questions.studentId))
+      .where(and(eq(questions.studentId, studentId), isNull(questions.deletedAt), isNull(students.deletedAt)))
       .orderBy(desc(diagnosticPlans.createdAt));
+    const items = rows.length ? await getDb().select().from(diagnosticItems)
+      .where(inArray(diagnosticItems.planId, rows.map((row) => row.id))) : [];
     return Response.json({
-      plans: rows.map((row) => ({ ...row, package: JSON.parse(row.content), content: undefined })),
+      plans: rows.map((row) => ({ ...row, package: JSON.parse(row.content), content: undefined,
+        items: items.filter((item) => item.planId === row.id).sort((a, b) => a.position - b.position)
+          .map((item) => ({ ...JSON.parse(item.content), id: item.id, position: item.position })),
+      })),
     });
   } catch (error) {
     console.error("diagnostic_plans_load_failed", error);
@@ -82,7 +89,8 @@ export async function POST(request: Request, context: { params: Promise<{ id: st
     }).from(questions)
       .leftJoin(questionKnowledgePoints, eq(questionKnowledgePoints.questionId, questions.id))
       .leftJoin(knowledgePoints, eq(knowledgePoints.id, questionKnowledgePoints.knowledgePointId))
-      .where(and(eq(questions.id, questionId), eq(questions.studentId, studentId), isNull(questions.deletedAt)));
+      .innerJoin(students, eq(students.id, questions.studentId))
+      .where(and(eq(questions.id, questionId), eq(questions.studentId, studentId), isNull(questions.deletedAt), isNull(students.deletedAt)));
     if (!rows.length) return Response.json({ error: "题目不存在或不属于当前学生。" }, { status: 404 });
 
     const learning = await readLearning(studentId);
@@ -111,9 +119,15 @@ export async function POST(request: Request, context: { params: Promise<{ id: st
       candidateErrors: (attempt.candidateErrorCodes || []).map((code) => errorPatternByCode(code)?.label).filter((label): label is string => Boolean(label)),
       ruleQuestions: action.suggestedSteps,
     };
+    let generated;
+    let warning: string | undefined;
     try {
-      const generated = await generateDiagnosticPackage(generationContext, providerConfig());
-      const plan = {
+      generated = await generateDiagnosticPackage(generationContext, providerConfig());
+    } catch {
+      generated = { package: fallbackDiagnosticPackage(generationContext), mode: "fallback" as const };
+      warning = "生成模型暂时不可用，已返回规则版诊断。";
+    }
+    const plan = {
         id: crypto.randomUUID(),
         questionId,
         sourceAttemptId: attempt.id,
@@ -124,25 +138,9 @@ export async function POST(request: Request, context: { params: Promise<{ id: st
         status: "draft",
         createdAt: new Date().toISOString(),
       };
-      await db.insert(diagnosticPlans).values(plan);
-      return Response.json({ ...generated, plan: { id: plan.id, status: plan.status, createdAt: plan.createdAt } });
-    } catch (error) {
-      console.warn("diagnostic_generation_fallback", error);
-      const packageValue = fallbackDiagnosticPackage(generationContext);
-      const plan = {
-        id: crypto.randomUUID(),
-        questionId,
-        sourceAttemptId: attempt.id,
-        actionId: action.id,
-        knowledgePointCode: attempt.knowledgePointCode || "",
-        content: JSON.stringify(packageValue),
-        generationMode: "fallback",
-        status: "draft",
-        createdAt: new Date().toISOString(),
-      };
-      await db.insert(diagnosticPlans).values(plan);
-      return Response.json({ package: packageValue, mode: "fallback", plan: { id: plan.id, status: plan.status, createdAt: plan.createdAt }, warning: "生成模型暂时不可用，已返回规则版诊断。" });
-    }
+    const items = materializeDiagnosticItems(plan.id, generated.package);
+    await db.batch([db.insert(diagnosticPlans).values(plan), db.insert(diagnosticItems).values(items)]);
+    return Response.json({ ...generated, warning, plan: { id: plan.id, status: plan.status, createdAt: plan.createdAt } });
   } catch (error) {
     console.error("diagnostic_generation_failed", error);
     return Response.json({ error: "诊断任务生成失败，请稍后重试。" }, { status: 500 });
@@ -163,7 +161,8 @@ export async function PATCH(request: Request, context: { params: Promise<{ id: s
     const [owned] = await db.select({ id: diagnosticPlans.id, status: diagnosticPlans.status, decidedAt: diagnosticPlans.decidedAt })
       .from(diagnosticPlans)
       .innerJoin(questions, eq(questions.id, diagnosticPlans.questionId))
-      .where(and(eq(diagnosticPlans.id, planId), eq(questions.studentId, studentId), isNull(questions.deletedAt)))
+      .innerJoin(students, eq(students.id, questions.studentId))
+      .where(and(eq(diagnosticPlans.id, planId), eq(questions.studentId, studentId), isNull(questions.deletedAt), isNull(students.deletedAt)))
       .limit(1);
     if (!owned) return Response.json({ error: "诊断方案不存在。" }, { status: 404 });
     if (owned.status !== "draft") {
@@ -171,8 +170,10 @@ export async function PATCH(request: Request, context: { params: Promise<{ id: s
       return Response.json({ error: "诊断方案已经处理，不能重复更改。" }, { status: 409 });
     }
     const decidedAt = new Date().toISOString();
-    await db.update(diagnosticPlans).set({ status, decidedAt }).where(eq(diagnosticPlans.id, planId));
-    return Response.json({ plan: { id: planId, status, decidedAt } });
+    await db.update(diagnosticPlans).set({ status, decidedAt }).where(and(eq(diagnosticPlans.id, planId), eq(diagnosticPlans.status, "draft")));
+    const [result] = await db.select({ status: diagnosticPlans.status, decidedAt: diagnosticPlans.decidedAt }).from(diagnosticPlans).where(eq(diagnosticPlans.id, planId));
+    if (result.status !== status) return Response.json({ error: "诊断方案已由另一操作处理，请刷新。" }, { status: 409 });
+    return Response.json({ plan: { id: planId, ...result } });
   } catch (error) {
     console.error("diagnostic_plan_decision_failed", error);
     return Response.json({ error: "诊断方案状态保存失败。" }, { status: 500 });

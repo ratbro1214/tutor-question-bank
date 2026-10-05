@@ -2,6 +2,14 @@
 @import "tw-animate-css";
 @import "../vendor/shadcn-tailwind-4.13.0.css";
 
+.math-text { overflow-wrap: anywhere; }
+.math-text .katex { font-size: 1.12em; }
+.math-inline { white-space: normal; }
+.math-block { display: block; max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: .15rem 0; }
+.math-block .katex-display { margin: .25em 0; text-align: left; }
+.math-block .katex-display > .katex { text-align: left; }
+.math-fallback { font-family: ui-monospace, monospace; }
+
 @utility scrollbar-thin {
   scrollbar-width: thin;
 }
@@ -26,16 +34,16 @@
   --slate-0: hsl(222 47% 11%); --slate-10: hsl(217 33% 17%); --slate-20: hsl(215 25% 27%); --slate-30: hsl(215 19% 35%); --slate-40: hsl(215 16% 47%); --slate-50: hsl(215 20% 58%); --slate-60: hsl(213 27% 70%); --slate-70: hsl(212 32% 82%); --slate-80: hsl(214 32% 91%); --slate-90: hsl(210 40% 96%); --slate-100: hsl(210 40% 98%);
 
   /* Semantic tokens. */
-  --color-brand-primary: #065f46;
-  --color-brand-primary-hover: #047857;
-  --color-brand-primary-soft: #ecfdf5;
-  --color-brand-secondary: #1e3a8a;
-  --color-brand-secondary-soft: #eff6ff;
-  --color-surface-base: #fafafa;
+  --color-brand-primary: #C65D3B;
+  --color-brand-primary-hover: #AD4C2E;
+  --color-brand-primary-soft: #FBF0EA;
+  --color-brand-secondary: #943D26;
+  --color-brand-secondary-soft: #FBF0EA;
+  --color-surface-base: #FAF8F6;
   --color-surface-card: #ffffff;
   --color-text-primary: #0f172a;
   --color-text-secondary: #475569;
-  --color-border-subtle: #e2e8f0;
+  --color-border-subtle: #EDE5DF;
   --color-state-success: #26734d;
   --color-state-warning: #9a5b13;
   --color-state-error: #b42318;
@@ -50,7 +58,7 @@
   --primary-foreground: #fafafa;
   --secondary: var(--color-brand-secondary-soft);
   --secondary-foreground: var(--color-brand-secondary);
-  --muted: #f3f4f6;
+  --muted: #F4F0ED;
   --muted-foreground: var(--color-text-secondary);
   --accent: var(--color-brand-primary-soft);
   --accent-foreground: var(--color-brand-primary);
@@ -58,23 +66,35 @@
   --border: var(--color-border-subtle);
   --input: var(--color-border-subtle);
   --ring: var(--color-brand-primary);
-  --chart-1: #f54900;
-  --chart-2: #009689;
-  --chart-3: #104e64;
-  --chart-4: #ffb900;
-  --chart-5: #fe9a00;
-  --radius: 0.5rem;
+  --chart-1: #C65D3B;
+  --chart-2: #DE8C6F;
+  --chart-3: #943D26;
+  --chart-4: #E8AF8E;
+  --chart-5: #F0D1BC;
+  --radius: 0.75rem;
   --sidebar: #fafafa;
   --sidebar-foreground: #171717;
-  --sidebar-primary: #171717;
+  --sidebar-primary: var(--primary);
   --sidebar-primary-foreground: #fafafa;
-  --sidebar-accent: #f5f5f5;
-  --sidebar-accent-foreground: #171717;
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--primary);
   --sidebar-border: #e5e5e5;
-  --sidebar-ring: #a1a1a1;
+  --sidebar-ring: var(--primary);
 }
 
 @theme inline {
+  /* Shared brand shades for links, filters, charts and navigation. */
+  --color-terracotta-50: #FCF4EF;
+  --color-terracotta-100: #F7E4D9;
+  --color-terracotta-200: #EBC6B6;
+  --color-terracotta-300: #DFA38B;
+  --color-terracotta-400: #D17B5C;
+  --color-terracotta-500: #C65D3B;
+  --color-terracotta-600: #AD4C2E;
+  --color-terracotta-700: #943D26;
+  --color-terracotta-800: #793322;
+  --color-terracotta-900: #622C20;
+  --color-terracotta-950: #35170F;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -136,14 +156,13 @@ h3 {
 
 @utility surface-card {
   border: 1px solid var(--color-border-subtle);
-  border-radius: 0.5rem;
+  border-radius: 0.875rem;
   background: var(--color-surface-card);
-  box-shadow: none;
-  transition: border-color 160ms ease, background-color 160ms ease;
-  animation: fade-in-up 420ms cubic-bezier(0.4, 0, 0.2, 1) both;
+  box-shadow: 0 2px 6px rgb(74 43 28 / 0.025), 0 8px 24px rgb(74 43 28 / 0.025);
+  transition: border-color 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
 
   &:hover {
-    border-color: #cbd5e1;
+    border-color: #DCCBC1;
   }
 }
 
@@ -153,8 +172,8 @@ h3 {
     background-color 160ms ease;
 
   &:hover {
-    border-color: #a7f3d0;
-    background: #fafffd;
+    border-color: #EBC6B6;
+    background: #FFFAF7;
   }
 }
 
@@ -167,6 +186,16 @@ h3 {
 @keyframes fade-in-up {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+.knowledge-frequency-bar {
+  animation: knowledge-bar-in 320ms ease-out both;
+  transition: width 200ms ease-out, background-color 160ms ease;
+}
+
+@keyframes knowledge-bar-in {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
 }
 
 @media (prefers-reduced-motion: reduce) {

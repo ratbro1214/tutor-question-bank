@@ -50,6 +50,7 @@ next-env.d.ts
 
 /.test-runtime/
 *.tsbuildinfo
+/public/pdfjs/
 
 # local development server logs
 .dev-server.*.log

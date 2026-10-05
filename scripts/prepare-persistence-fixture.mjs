@@ -1,0 +1,12 @@
+import { mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
+import path from "node:path";
+const directory = path.resolve(`.test-runtime/persistence-fixture-${Date.now()}`);
+mkdirSync(directory, { recursive: true }); mkdirSync("work/explanation-fixture", { recursive: true });
+const configPath = path.resolve("dist/server/wrangler.json"), config = JSON.parse(readFileSync(configPath, "utf8"));
+config.main = path.resolve(path.dirname(configPath), config.main);
+if (config.assets?.directory) config.assets.directory = path.resolve(path.dirname(configPath), config.assets.directory);
+writeFileSync(path.join(directory, "wrangler.json"), JSON.stringify(config, null, 2));
+writeFileSync(path.join(directory, ".dev.vars"), 'AI_PROVIDER="openai"\nOPENAI_API_KEY="fixture-only"\nOPENAI_BASE_URL="http://127.0.0.1:8791/v1"\nOPENAI_API_STYLE="responses"\nOPENAI_VISION_MODEL="fixture-model"\n');
+writeFileSync(path.join(directory, "schema.sql"), readdirSync("drizzle").filter(n => n.endsWith(".sql")).sort().map(n => readFileSync(path.join("drizzle", n), "utf8")).join("\n"));
+writeFileSync("work/explanation-fixture/runtime.json", JSON.stringify({ directory }, null, 2));
+console.log(directory);

@@ -1,0 +1,12 @@
+import { mkdirSync, writeFileSync } from "node:fs";
+import { performance } from "node:perf_hooks";
+import { replayScenarios } from "../lib/evaluation-scenarios";
+import { evaluatePolicies, policyNames } from "../lib/teaching-evaluation";
+const start = performance.now();
+const report = { ...evaluatePolicies(replayScenarios), engineRuntimeMs: Math.round((performance.now() - start) * 100) / 100 };
+mkdirSync("outputs", { recursive: true });
+writeFileSync("outputs/teaching-evaluation.json", JSON.stringify(report, null, 2));
+const markdown = ["# 教学策略回放评测", "", report.limitations, "", `场景：${replayScenarios.length}；每个策略检查点：${report.summaries[0].checkpoints}。规则执行耗时 ${report.engineRuntimeMs} ms，仅为本机本次测量；模型调用 0；教师耗时与模型费用未测量。`, "", "| 策略 | 行动匹配 | 画像匹配 | 误判改善 / 不应改善 | 有依据行动 / 全部行动 | 有效引用 / 全部引用 |", "| --- | --- | --- | --- | --- | --- |", ...report.summaries.map((r) => `| ${policyNames[r.policy]} | ${r.actionMatchCount}/${r.checkpoints} | ${r.profileMatchCount}/${r.checkpoints} | ${r.falseImprovementCount}/${r.negativeCount} | ${r.supportedActionCount}/${r.actionCount} | ${r.validReferenceCount}/${r.referenceCount} |`), "", "## 每个检查点", "", ...report.rows.map((r) => `- ${r.title} · ${r.at} · ${policyNames[r.policy]}：行动 ${r.actionMatch ? "匹配" : "不匹配"}，画像 ${r.actualProfile || "无"}（预期 ${r.expectedProfile || "无"}）。${r.reason}`) ].join("\n");
+writeFileSync("outputs/teaching-evaluation.md", markdown);
+console.log(markdown.split("## 每个检查点")[0]);
+if (report.summaries[0].actionMatchCount !== report.summaries[0].checkpoints || report.summaries[0].profileMatchCount !== report.summaries[0].checkpoints) process.exitCode = 1;

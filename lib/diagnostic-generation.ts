@@ -17,6 +17,12 @@ export const diagnosticPackageSchema = z.object({
 }).strict();
 
 export type DiagnosticPackage = z.infer<typeof diagnosticPackageSchema>;
+export type DiagnosticItem = z.infer<typeof diagnosticItemSchema> & { id: string; position: number };
+export function materializeDiagnosticItems(planId: string, value: DiagnosticPackage) {
+  return value.questions.map((item, index) => ({
+    id: `${planId}:${index + 1}`, planId, position: index + 1, content: JSON.stringify(item),
+  }));
+}
 
 export type DiagnosticGenerationContext = {
   educationStage: string;

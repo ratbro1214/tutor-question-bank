@@ -215,6 +215,10 @@ export const learningInput = z
     ]),
     questionId: z.number().int().positive(),
     inquiryId: z.string().max(100).optional(),
+    diagnosticItemId: z.string().trim().min(1).max(100).optional(),
+    targetAttemptId: z.string().uuid().optional(),
+    interventionPlanId: z.string().uuid().optional(),
+    checkQuestion: z.string().trim().max(2000).default(""),
     reviewId: z.string().uuid().optional(),
     occurredAt: date,
     dueAt: date.optional(),
@@ -241,6 +245,14 @@ export const learningInput = z
     diagnosisBasis: z.string().trim().max(1000).optional(),
   })
   .superRefine((value, ctx) => {
+    if (value.interventionPlanId && (value.kind !== "attempt" || !["干预后检测", "间隔复查"].includes(value.attemptStage || "") || value.diagnosticItemId || !value.checkQuestion))
+      ctx.addIssue({ code: z.ZodIssueCode.custom, message: "干预检查需记录新题题干及实际作答。", path: ["interventionPlanId"] });
+    if ((value.diagnosticItemId || value.targetAttemptId) && value.kind !== "attempt")
+      ctx.addIssue({ code: z.ZodIssueCode.custom, message: "只有真实作答可关联诊断证据。", path: ["targetAttemptId"] });
+    if (value.diagnosticItemId && value.attemptStage !== "诊断检测")
+      ctx.addIssue({ code: z.ZodIssueCode.custom, message: "诊断题作答应记录为诊断检测。", path: ["attemptStage"] });
+    if (value.targetAttemptId && (value.targetAttemptId === value.id || value.attemptStage === "首次作答"))
+      ctx.addIssue({ code: z.ZodIssueCode.custom, message: "请关联此前需要验证的作答。", path: ["targetAttemptId"] });
     if (
       value.kind === "result" &&
       ["尚未讲解", "已讲解，尚未复查"].includes(value.outcome)
@@ -283,6 +295,13 @@ export type LearningEvent = {
   id: string;
   questionId: number;
   inquiryId?: string;
+  diagnosticItemId?: string;
+  diagnosticPlanId?: string;
+  diagnosticPosition?: number;
+  diagnosticQuestion?: string;
+  targetAttemptId?: string;
+  interventionPlanId?: string;
+  checkQuestion?: string;
   reviewId?: string;
   kind: string;
   occurredAt: string;
@@ -318,7 +337,21 @@ export type DiagnosticQueueEntry = {
   status: "错因未知" | "待验证" | "已补证" | "未发现持续性证据";
   candidateLabels: string[];
   questions: readonly string[];
+  evidence: EvidenceReference[];
 };
+
+export type EvidenceReference = { eventId: string; questionId: number; occurredAt: string; label: string };
+export function evidenceReference(event: LearningEvent, label: string): EvidenceReference {
+  return { eventId: event.id, questionId: event.questionId, occurredAt: event.occurredAt, label };
+}
+
+// Retrying the same diagnostic item cannot count as two different probes.
+function distinctDiagnosticResults(events: LearningEvent[]) {
+  const latest = new Map<string, LearningEvent>();
+  for (const event of [...events].sort((a, b) => a.occurredAt.localeCompare(b.occurredAt)))
+    latest.set(event.interventionPlanId ? `${event.interventionPlanId}:${event.attemptStage}` : event.diagnosticItemId || event.id, event);
+  return [...latest.values()];
+}
 
 export function buildDiagnosticQueue(events: LearningEvent[]): DiagnosticQueueEntry[] {
   const attempts = events
@@ -332,12 +365,13 @@ export function buildDiagnosticQueue(events: LearningEvent[]): DiagnosticQueueEn
         !["教师确认", "教师修正"].includes(event.teacherDecision || ""),
     )
     .map((event) => {
-      const laterDiagnostics = attempts.filter(
+      const laterDiagnostics = distinctDiagnosticResults(attempts.filter(
         (later) =>
+          later.targetAttemptId === event.id &&
           later.knowledgePointCode === event.knowledgePointCode &&
           later.occurredAt > event.occurredAt &&
           later.attemptStage === "诊断检测",
-      );
+      ));
       const supported = laterDiagnostics.some(
         (later) =>
           later.errorCode &&
@@ -366,6 +400,7 @@ export function buildDiagnosticQueue(events: LearningEvent[]): DiagnosticQueueEn
           return pattern ? [pattern.label] : [];
         }),
         questions: diagnosticQuestionsForKnowledgePoint(event.knowledgePointCode || "").slice(0, 2),
+        evidence: [evidenceReference(event, "待验证的原始作答"), ...laterDiagnostics.map((entry) => evidenceReference(entry, "明确关联的诊断作答"))],
       };
     })
     .sort((a, b) => b.occurredAt.localeCompare(a.occurredAt));
@@ -381,12 +416,15 @@ export type LearnerProfileEntry = {
   latestQuestionId: number;
   intervention: string;
   check: string;
+  evidence: EvidenceReference[];
+  uncertainties: string[];
 };
 
 export function buildLearnerProfile(events: LearningEvent[]): LearnerProfileEntry[] {
   const attempts = events.filter((event) => event.kind === "attempt");
   const confirmed = attempts.filter(
     (event) =>
+      event.correctness !== "正确" &&
       event.errorCode &&
       ["教师确认", "教师修正"].includes(event.teacherDecision || ""),
   );
@@ -400,23 +438,28 @@ export function buildLearnerProfile(events: LearningEvent[]): LearnerProfileEntr
       evidence.sort((a, b) => a.occurredAt.localeCompare(b.occurredAt));
       const first = evidence[0];
       const latest = evidence.at(-1)!;
-      const laterIndependentCorrect = attempts
+      const sourceIds = new Set(evidence.map((event) => event.id));
+      const laterIndependentCorrect = distinctDiagnosticResults(attempts
+        .filter((event) => !!event.targetAttemptId && sourceIds.has(event.targetAttemptId)
+          && event.knowledgePointCode === first.knowledgePointCode && event.occurredAt > latest.occurredAt))
         .filter(
           (event) =>
+            !!event.targetAttemptId && sourceIds.has(event.targetAttemptId) &&
             event.knowledgePointCode === first.knowledgePointCode &&
             event.occurredAt > latest.occurredAt &&
             event.correctness === "正确" &&
             event.supportLevel === "独立完成",
         )
         .sort((a, b) => a.occurredAt.localeCompare(b.occurredAt));
-      const teachingAfterEvidence = events.some(
+      const teachingAfterEvidence = events.filter(
         (event) =>
           event.kind === "teaching" &&
-          event.occurredAt > first.occurredAt &&
-          evidence.some((item) => item.questionId === event.questionId),
+          event.occurredAt > latest.occurredAt &&
+          evidence.some((item) => item.inquiryId && item.inquiryId === event.inquiryId),
       );
-      const independentCorrectBeforeLatest = attempts.some(
+      const independentCorrectBeforeLatest = attempts.filter(
         (event) =>
+          !!event.targetAttemptId && sourceIds.has(event.targetAttemptId) &&
           event.knowledgePointCode === first.knowledgePointCode &&
           event.occurredAt > first.occurredAt &&
           event.occurredAt < latest.occurredAt &&
@@ -425,11 +468,11 @@ export function buildLearnerProfile(events: LearningEvent[]): LearnerProfileEntr
       );
       let status: LearnerProfileEntry["status"] =
         evidence.length > 1 ? "已确认" : "待验证";
-      if (teachingAfterEvidence) status = "已实施干预";
+      if (independentCorrectBeforeLatest.length) status = "再次出现";
+      if (teachingAfterEvidence.length) status = "已实施干预";
       if (laterIndependentCorrect.length) status = "初步改善";
       if (laterIndependentCorrect.some((event) => event.attemptStage === "间隔复查"))
         status = "阶段性稳定";
-      if (independentCorrectBeforeLatest) status = "再次出现";
       const pattern = errorPatternByCode(first.errorCode || "");
       return {
         knowledgePointCode: first.knowledgePointCode || "",
@@ -441,6 +484,17 @@ export function buildLearnerProfile(events: LearningEvent[]): LearnerProfileEntr
         latestQuestionId: latest.questionId,
         intervention: pattern?.intervention || "请教师根据原始作答选择针对性讲解方式。",
         check: pattern?.check || "安排一道新的独立作答题，并记录真实表现。",
+        evidence: [
+          ...evidence.map((event) => evidenceReference(event, "教师确认的错因证据")),
+          ...independentCorrectBeforeLatest.map((event) => evidenceReference(event, "错因再次出现之前的独立检查")),
+          ...teachingAfterEvidence.map((event) => evidenceReference(event, "该次提问后的教学记录")),
+          ...laterIndependentCorrect.map((event) => evidenceReference(event, "针对原错因的独立检查")),
+        ],
+        uncertainties: [
+          ...(evidence.length === 1 ? ["目前只有一次具体错因证据，持续性仍需验证。"] : []),
+          ...(!laterIndependentCorrect.length ? ["尚无明确关联的独立正确作答，不能判断是否改善。"] : []),
+          ...(!laterIndependentCorrect.some((event) => event.attemptStage === "间隔复查") ? ["尚无明确关联的间隔复查证据。"] : []),
+        ],
       };
     })
     .sort((a, b) => b.latestAt.localeCompare(a.latestAt));

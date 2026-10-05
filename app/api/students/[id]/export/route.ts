@@ -3,6 +3,8 @@ import { readLearning } from "../learning/route";
 import { buildDiagnosticQueue, buildLearnerProfile, withinRange } from "@/lib/learning";
 import { workbook } from "@/lib/xlsx-export";
 import { normalizeClassificationTags, type Classification } from "@/lib/classification";
+import { readInterventions } from "../agent/interventions/route";
+import { interventionProgress } from "@/lib/interventions";
 export async function GET(
   request: Request,
   context: { params: Promise<{ id: string }> },
@@ -136,6 +138,7 @@ export async function GET(
             "候选错误模式代码",
             "候选依据",
             "备注",
+            "诊断方案ID", "诊断题ID", "诊断题序号", "诊断题干", "验证的原始作答ID", "干预计划ID", "检测新题",
           ],
           ...selected
             .filter((e) => e.kind === "attempt")
@@ -159,13 +162,14 @@ export async function GET(
               e.candidateErrorCodes?.join("、"),
               e.diagnosisBasis,
               e.notes,
+              e.diagnosticPlanId, e.diagnosticItemId, e.diagnosticPosition, e.diagnosticQuestion, e.targetAttemptId, e.interventionPlanId, e.checkQuestion,
             ]),
         ],
       },
       {
         name: "待诊断线索",
         rows: [
-          ["作答ID", "题目ID", "时间", "证据等级", "证据来源", "状态", "候选错因", "建议诊断题"],
+          ["作答ID", "题目ID", "时间", "证据等级", "证据来源", "状态", "候选错因", "建议诊断题", "依据记录ID"],
           ...buildDiagnosticQueue(selected).map((item) => [
             item.attemptId,
             item.questionId,
@@ -175,13 +179,14 @@ export async function GET(
             item.status,
             item.candidateLabels.join("、"),
             item.questions.join("；"),
+            item.evidence.map((entry) => entry.eventId).join("、"),
           ]),
         ],
       },
       {
         name: "动态画像快照",
         rows: [
-          ["知识点代码", "错误模式", "状态", "确认的证据数", "最近证据时间", "建议干预", "后续检测"],
+          ["知识点代码", "错误模式", "状态", "确认的证据数", "最近证据时间", "建议干预", "后续检测", "依据记录ID", "待补证事项"],
           ...buildLearnerProfile(selected).map((profile) => [
             profile.knowledgePointCode,
             profile.errorLabel,
@@ -190,6 +195,8 @@ export async function GET(
             profile.latestAt,
             profile.intervention,
             profile.check,
+            profile.evidence.map((entry) => entry.eventId).join("、"),
+            profile.uncertainties.join("；"),
           ]),
         ],
       },
@@ -223,6 +230,14 @@ export async function GET(
         ],
       },
     ];
+    const interventions = await readInterventions(id);
+    sheets.push({ name: "干预闭环", rows: [
+      ["计划ID", "题目ID", "原始作答ID", "目标", "策略", "检测要求", "计划时间", "实施时间", "间隔复查时间", "截至导出时的状态", "教学记录ID", "独立检测ID", "间隔复查ID", "依据记录ID"],
+      ...interventions.filter((p) => withinRange(p.createdAt, from, to) || (p.implementedAt && withinRange(p.implementedAt, from, to)) || selected.some((e) => e.interventionPlanId === p.id)).map((p) => {
+        const progress = interventionProgress(p, events);
+        return [p.id, p.questionId, p.sourceAttemptId, p.goal, p.strategy, p.checkInstruction, p.createdAt, p.implementedAt, p.dueAt, progress.status, p.teachingRecordId, progress.post?.id, progress.interval?.id, progress.evidence.map((e) => e.eventId).join("、")];
+      }),
+    ] });
     return new Response(new Uint8Array(workbook(sheets)), {
       headers: {
         "Content-Type":

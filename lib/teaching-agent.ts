@@ -27,7 +27,7 @@ export type TeachingAction = {
   title: string;
   summary: string;
   rationale: string[];
-  evidence: { eventId: string; occurredAt: string; label: string }[];
+  evidence: { eventId: string; questionId: number; occurredAt: string; label: string }[];
   suggestedSteps: readonly string[];
   requiresTeacherApproval: true;
   dueAt?: string;
@@ -79,7 +79,7 @@ export function buildTeachingAgentPlan(
       title: overdueDays > 0 ? `完成逾期 ${overdueDays} 天的复查` : "完成已安排的复查",
       summary: `${context.chapterName}已有教师安排的复查任务，请记录学生本次真实表现。`,
       rationale: ["存在尚未完成的教师复查安排", "复查结果需由本次独立作答或教师观察提供"],
-      evidence: [{ eventId: review.id, occurredAt: review.occurredAt, label: "教师复查安排" }],
+      evidence: [{ eventId: review.id, questionId: review.questionId, occurredAt: review.occurredAt, label: "教师复查安排" }],
       suggestedSteps: ["让学生独立完成一道同知识点新题", "记录正确性、提示程度和完整过程", "根据真实表现完成复查记录"],
       requiresTeacherApproval: true,
       dueAt: review.dueAt,
@@ -107,7 +107,7 @@ export function buildTeachingAgentPlan(
           ? `候选错因：${item.candidateLabels.join("、")}，尚未得到教师确认`
           : "尚无可被支持的具体错因",
       ],
-      evidence: [{ eventId: item.attemptId, occurredAt: item.occurredAt, label: "未完成诊断的真实作答" }],
+      evidence: item.evidence,
       suggestedSteps: item.questions,
       requiresTeacherApproval: true,
     });
@@ -137,11 +137,7 @@ export function buildTeachingAgentPlan(
         `${profile.evidenceCount} 条教师确认或修正的作答证据`,
         `当前证据状态：${profile.status}`,
       ],
-      evidence: [{
-        eventId: `${profile.knowledgePointCode}:${profile.errorCode}`,
-        occurredAt: profile.latestAt,
-        label: `最近一次“${profile.errorLabel}”证据`,
-      }],
+      evidence: profile.evidence,
       suggestedSteps: needsTeaching
         ? [profile.intervention, profile.check]
         : [profile.check, "把新作答与原始证据分开记录"],
@@ -149,11 +145,11 @@ export function buildTeachingAgentPlan(
     });
   }
 
-  const attemptedQuestionIds = new Set(
-    events.filter((event) => event.kind === "attempt").map((event) => event.questionId),
+  const attemptedInquiryIds = new Set(
+    events.filter((event) => event.kind === "attempt" && event.inquiryId).map((event) => event.inquiryId),
   );
   const unansweredInquiry = [...events]
-    .filter((event) => event.kind === "inquiry" && !attemptedQuestionIds.has(event.questionId))
+    .filter((event) => event.kind === "inquiry" && !attemptedInquiryIds.has(event.id))
     .sort((a, b) => b.occurredAt.localeCompare(a.occurredAt))[0];
   if (unansweredInquiry) {
     const context = questionContext(questions, unansweredInquiry.questionId);
@@ -164,9 +160,9 @@ export function buildTeachingAgentPlan(
       confidence: "low",
       questionId: unansweredInquiry.questionId,
       title: "先补充一次真实作答证据",
-      summary: `${context.chapterName}目前只有提问记录，信息不足以判断应诊断还是讲解。`,
-      rationale: ["已记录学生提问", "没有找到该题的真实作答过程或结果"],
-      evidence: [{ eventId: unansweredInquiry.id, occurredAt: unansweredInquiry.occurredAt, label: "学生提问" }],
+      summary: `${context.chapterName}本次提问还缺少作答记录，信息不足以判断应诊断还是讲解。`,
+      rationale: ["已记录学生提问", "没有找到与本次提问关联的真实作答过程或结果"],
+      evidence: [{ eventId: unansweredInquiry.id, questionId: unansweredInquiry.questionId, occurredAt: unansweredInquiry.occurredAt, label: "学生提问" }],
       suggestedSteps: ["记录学生原始答案或关键步骤", "标注是否独立完成及教师提供的提示", "证据不足时保持错因未判断"],
       requiresTeacherApproval: true,
     });

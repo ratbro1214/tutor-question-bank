@@ -186,6 +186,7 @@ test("仅结果可快速记录，教师确认的具体错因才进入画像", ()
       inquiryId: crypto.randomUUID(),
       kind: "attempt",
       occurredAt: "2026-09-10T08:00:00.000Z",
+      targetAttemptId: base.id,
       notes: "",
       attemptStage: "间隔复查",
       responseText: "(a+4)^2=a^2+8a+16",

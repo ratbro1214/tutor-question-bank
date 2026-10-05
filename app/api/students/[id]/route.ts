@@ -1,5 +1,5 @@
 import { and, desc, eq, isNull, sql } from "drizzle-orm";
-import { getDb } from "@/db";
+import { getDb, getD1Binding } from "@/db";
 import { knowledgePoints, questionKnowledgePoints, questions, students } from "@/db/schema";
 import { apiError } from "@/lib/api-error";
 import { normalizeClassificationTags, type Classification } from "@/lib/classification";
@@ -58,7 +58,9 @@ export async function GET(_request: Request, context: { params: Promise<{ id: st
         [...legacyMethods, ...question.teacherConfirmedClassification.methods].map(point => [point.code, point]),
       ).values()];
     }
-    return Response.json({ student, questions: [...grouped.values()] });
+    const origins = await getD1Binding().prepare(`SELECT q.id, p.id AS paperId, p.title, pq.question_number AS number FROM questions q JOIN paper_questions pq ON q.submission_id='paper:'||pq.id||':'||q.student_id JOIN papers p ON p.id=pq.paper_id WHERE q.student_id=? AND q.deleted_at IS NULL`).bind(studentId).all<{ id: number; paperId: string; title: string; number: number }>();
+    const sources = new Map(origins.results.map(row => [row.id, { paperId: row.paperId, title: row.title, number: row.number }]));
+    return Response.json({ student, questions: [...grouped.values()].map(question => ({ ...question, paperSource: sources.get(question.id) || null })) });
   } catch (error) {
     return Response.json({ error: apiError(error) }, { status: 500 });
   }

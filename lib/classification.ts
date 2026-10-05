@@ -546,7 +546,7 @@ export function buildClassificationFromCandidate(
  */
 export function normalizeClassificationTags(value: Classification): Classification {
   const stage = value.education_stage;
-  const taxonomy = new Map(taxonomyForStage(stage).map(([code, name, owner]) => [code, { name, owner }]));
+  const taxonomy = new Map<string, { name: string; owner: string }>(taxonomyForStage(stage).map(([code, name, owner]) => [code, { name, owner }]));
   const content = new Map<string, KnowledgePoint>();
   const methods = new Map<string, KnowledgePoint>();
   for (const point of [...(value.knowledge_points || []), ...(value.methods || [])]) {

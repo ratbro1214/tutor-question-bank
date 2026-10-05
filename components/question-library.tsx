@@ -68,7 +68,7 @@ export function QuestionLibrary() {
 
   return <div className="space-y-8">
     <section className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
-      <div><p className="mb-2 text-sm font-semibold text-[var(--color-brand-primary)]">题目库</p><h1 className="text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">高中数学题库</h1><p className="mt-3 max-w-2xl text-base leading-7 text-slate-500">按知识模块查看题目，进一步分析章节、知识点与学生掌握情况。</p></div>
+      <div><p className="mb-2 text-sm font-semibold text-[var(--color-brand-primary)]">题目库</p><h1 className="font-semibold tracking-tight text-slate-950 text-[32px]">高中数学题库</h1><p className="mt-3 max-w-2xl text-base leading-7 text-slate-500">按知识模块查看题目，进一步分析章节、知识点与学生掌握情况。</p></div>
       <Button asChild size="lg"><Link href="/upload"><FilePlus2 />录入新题目</Link></Button>
     </section>
 

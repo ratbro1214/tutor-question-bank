@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { TeachingAgentPanel } from "@/components/teaching-agent-panel";
+import { EvidenceTrail } from "@/components/evidence-trail";
+import type { DiagnosticItem, DiagnosticPackage } from "@/lib/diagnostic-generation";
 import {
   attemptStages,
   buildDiagnosticQueue,
@@ -49,7 +51,7 @@ const localNow = () => {
   const d = new Date();
   return new Date(d.getTime() - d.getTimezoneOffset() * 60000)
     .toISOString()
-    .slice(0, 16);
+    .slice(0, 19);
 };
 export function LearningPanel({
   studentId,
@@ -101,7 +103,9 @@ export function LearningPanel({
   const [evidenceExcerpt, setEvidenceExcerpt] = useState("");
   const [candidateCodes, setCandidateCodes] = useState<string[]>([]);
   const [diagnosisBasis, setDiagnosisBasis] = useState("");
-  const [adoptedDiagnostic, setAdoptedDiagnostic] = useState<{ value: import("@/lib/diagnostic-generation").DiagnosticPackage; knowledgePointCode: string } | null>(null);
+  const [adoptedDiagnostic, setAdoptedDiagnostic] = useState<{ id: string; sourceAttemptId: string; value: DiagnosticPackage; knowledgePointCode: string; items: DiagnosticItem[] } | null>(null);
+  const [diagnosticItemId, setDiagnosticItemId] = useState("");
+  const [targetAttemptId, setTargetAttemptId] = useState("");
   const token = useRef(crypto.randomUUID());
   const locked = useRef(false);
   const previousPayload = useRef("");
@@ -138,11 +142,13 @@ export function LearningPanel({
     const controller = new AbortController();
     void fetch(`/api/students/${studentId}/agent/diagnostics`, { cache: "no-store", signal: controller.signal })
       .then(async (response) => {
-        const data = await response.json() as { error?: string; plans?: Array<{ id: string; questionId: number; status: string; knowledgePointCode: string; package: import("@/lib/diagnostic-generation").DiagnosticPackage }> };
+        const data = await response.json() as { error?: string; plans?: Array<{ id: string; questionId: number; status: string; sourceAttemptId: string; knowledgePointCode: string; package: DiagnosticPackage; items: DiagnosticItem[] }> };
         if (!response.ok) throw new Error(data.error || "诊断方案加载失败。");
         const selected = data.plans?.find((item) => item.id === diagnosticPlanId && item.questionId === questionId && item.status === "adopted");
         if (!selected) throw new Error("没有找到已采用的诊断方案。");
-        setAdoptedDiagnostic({ value: selected.package, knowledgePointCode: selected.knowledgePointCode });
+        setAdoptedDiagnostic({ id: selected.id, sourceAttemptId: selected.sourceAttemptId, value: selected.package, knowledgePointCode: selected.knowledgePointCode, items: selected.items });
+        setDiagnosticItemId(selected.items[0]?.id || "");
+        setTargetAttemptId(selected.sourceAttemptId);
         setKind("attempt");
         setAttemptStage("诊断检测");
         setKnowledgePointCode(selected.knowledgePointCode);
@@ -154,6 +160,10 @@ export function LearningPanel({
       .catch((reason) => { if (!controller.signal.aborted) setError(reason instanceof Error ? reason.message : "诊断方案加载失败。"); });
     return () => controller.abort();
   }, [diagnosticPlanId, questionId, studentId]);
+  useEffect(() => {
+    if (!events.length || !window.location.hash.startsWith("#learning-event-")) return;
+    document.getElementById(window.location.hash.slice(1))?.scrollIntoView({ block: "center" });
+  }, [events]);
   const scopedQuestions = questions.filter(
     (q) =>
       (!questionId || q.id === questionId) &&
@@ -167,7 +177,10 @@ export function LearningPanel({
   const asks = events.filter(
     (e) => e.questionId === questionId && e.kind === "inquiry",
   );
-  const activeInquiry = inquiryId || asks.at(-1)?.id || "";
+  const diagnosticInquiry = diagnosticItemId && adoptedDiagnostic
+    ? events.find((event) => event.id === adoptedDiagnostic.sourceAttemptId)?.inquiryId
+    : undefined;
+  const activeInquiry = diagnosticInquiry || inquiryId || asks.at(-1)?.id || "";
   const plans = events.filter(
     (e) =>
       e.kind === "review" &&
@@ -211,6 +224,8 @@ export function LearningPanel({
         kind,
         questionId,
         inquiryId: activeInquiry || undefined,
+        diagnosticItemId: kind === "attempt" ? diagnosticItemId || undefined : undefined,
+        targetAttemptId: kind === "attempt" ? targetAttemptId || undefined : undefined,
         reviewId: reviewId || undefined,
         relatedId: relatedId ? Number(relatedId) : undefined,
         relationKind,
@@ -244,7 +259,7 @@ export function LearningPanel({
         teacherDecision: kind === "attempt" && correctness !== "正确" ? teacherDecision : undefined,
         errorCode:
           kind === "attempt" && correctness !== "正确" && ["教师确认", "教师修正"].includes(teacherDecision)
-            ? errorCode
+            ? activeErrorCode
             : undefined,
         errorLabel:
           kind === "attempt" && correctness !== "正确" && ["教师确认", "教师修正"].includes(teacherDecision)
@@ -279,6 +294,13 @@ export function LearningPanel({
         setEvidenceExcerpt("");
         setCandidateCodes([]);
         setDiagnosisBasis("");
+        setTeacherDecision("未判断");
+        setAt(localNow());
+        if (diagnosticItemId && adoptedDiagnostic) {
+          const next = adoptedDiagnostic.items.find((item) => item.id !== diagnosticItemId && !events.some((event) => event.diagnosticItemId === item.id));
+          setDiagnosticItemId(next?.id || "");
+          if (!next) setTargetAttemptId("");
+        }
       }
       setSupersedes("");
       setMessage("已保存，历史记录已保留。");
@@ -340,12 +362,30 @@ export function LearningPanel({
         </p>
       )}
       {adoptedDiagnostic && questionId && (
-        <div className="rounded-xl border border-indigo-200 bg-indigo-50/50 p-4">
-          <p className="font-semibold text-indigo-950">本次诊断：{adoptedDiagnostic.value.diagnostic_goal}</p>
-          <ol className="mt-2 space-y-2 text-sm leading-6 text-indigo-900">
-            {adoptedDiagnostic.value.questions.map((item, index) => <li key={item.question}>{index + 1}. {item.question}</li>)}
+        <div className="rounded-xl border border-terracotta-200 bg-terracotta-50/50 p-4">
+          <p className="font-semibold text-terracotta-950">本次诊断：{adoptedDiagnostic.value.diagnostic_goal}</p>
+          <ol className="mt-2 space-y-2 text-sm leading-6 text-terracotta-900">
+            {adoptedDiagnostic.items.map((item) => <li key={item.id}>
+              {item.position}. {item.question}
+              <span className="ml-2 text-xs">{events.some((event) => event.diagnosticItemId === item.id) ? "已有真实作答" : "待记录"}</span>
+            </li>)}
           </ol>
-          <p className="mt-2 text-xs text-indigo-800">诊断题是教师采用的方案；下方记录的学生作答才会成为学习证据。</p>
+          <label className="mt-3 block text-sm">本次记录哪一道诊断题
+            <select aria-label="本次诊断题" className="ml-2 max-w-full rounded border bg-white p-2" value={diagnosticItemId} onChange={(event) => {
+              const id = event.target.value;
+              setDiagnosticItemId(id); setTargetAttemptId(id ? adoptedDiagnostic.sourceAttemptId : "");
+              if (id) { setKind("attempt"); setAttemptStage("诊断检测"); setKnowledgePointCode(adoptedDiagnostic.knowledgePointCode); }
+              setResponseText(""); setTeacherDecision("未判断"); setAt(localNow());
+            }}>
+              <option value="">普通作答（不关联此诊断包）</option>
+              {adoptedDiagnostic.items.map((item) => <option key={item.id} value={item.id}>第 {item.position} 题 · {item.question.slice(0, 40)}</option>)}
+            </select>
+          </label>
+          {diagnosticItemId && <details className="mt-2 text-xs"><summary>教师核验参考</summary>
+            <p>{adoptedDiagnostic.items.find((item) => item.id === diagnosticItemId)?.expected_answer}</p>
+            <p>{adoptedDiagnostic.items.find((item) => item.id === diagnosticItemId)?.error_signal}</p>
+          </details>}
+          <p className="mt-2 text-xs text-terracotta-800">诊断题是教师采用的方案；下方记录的学生作答才会成为学习证据。</p>
         </div>
       )}
       {!questionId && (
@@ -467,6 +507,7 @@ export function LearningPanel({
               发生时间
               <Input
                 type="datetime-local"
+                step="1"
                 value={at}
                 onChange={(e) => setAt(e.target.value)}
               />
@@ -491,7 +532,7 @@ export function LearningPanel({
               </select>
             )}
             {kind === "attempt" && (
-              <div className="grid gap-3 rounded-xl border border-indigo-100 bg-indigo-50/40 p-3">
+              <div className="grid gap-3 rounded-xl border border-terracotta-100 bg-terracotta-50/40 p-3">
                 <div>
                   <p className="font-medium">快速记录作答结果</p>
                   <p className="text-xs text-slate-500">
@@ -503,10 +544,12 @@ export function LearningPanel({
                     aria-label="本次作答对应知识点"
                     className={selectClass}
                     value={activeKnowledgePointCode}
+                    disabled={!!diagnosticItemId}
                     onChange={(event) => {
                       const nextCode = event.target.value;
                       const patterns = errorPatternsForKnowledgePoint(nextCode);
                       setKnowledgePointCode(nextCode);
+                      setTargetAttemptId("");
                       setErrorCode(patterns[0]?.code || "");
                       setCandidateCodes([]);
                     }}
@@ -519,7 +562,8 @@ export function LearningPanel({
                     aria-label="作答阶段"
                     className={selectClass}
                     value={attemptStage}
-                    onChange={(event) => setAttemptStage(event.target.value as (typeof attemptStages)[number])}
+                    disabled={!!diagnosticItemId}
+                    onChange={(event) => { setAttemptStage(event.target.value as (typeof attemptStages)[number]); setTargetAttemptId(""); }}
                   >
                     {attemptStages.map((item) => <option key={item}>{item}</option>)}
                   </select>
@@ -540,6 +584,15 @@ export function LearningPanel({
                     {evidenceSources.map((item) => <option key={item}>{item}</option>)}
                   </select>
                 </div>
+                {attemptStage !== "首次作答" && <label className="grid gap-1 text-xs">
+                  本次检查要验证哪条原始作答
+                  <select aria-label="要验证的原始作答" className={selectClass} value={targetAttemptId} disabled={!!diagnosticItemId} onChange={(event) => setTargetAttemptId(event.target.value)}>
+                    <option value="">未指定（只保存事实，不用于判断原错因改善）</option>
+                    {events.filter((event) => event.kind === "attempt" && event.correctness !== "正确" && event.knowledgePointCode === activeKnowledgePointCode).map((event) => (
+                      <option key={event.id} value={event.id}>题目 #{event.questionId} · {new Date(event.occurredAt).toLocaleString("zh-CN")} · {event.responseText?.slice(0, 35)}</option>
+                    ))}
+                  </select>
+                </label>}
                 <Textarea
                   aria-label="学生原始作答"
                   placeholder={evidenceLevel === "仅有最终答案" ? "录入答题卡上的最终答案或所选选项" : "忠实录入看得到的步骤，不要补写或猜测"}
@@ -742,7 +795,7 @@ export function LearningPanel({
         </details>
       )}
       {tab === "agent" && !questionId ? (
-        <TeachingAgentPanel studentId={studentId} questions={questions} events={events} onOpen={onOpen} />
+        <TeachingAgentPanel studentId={studentId} questions={questions} events={events} onOpen={onOpen} onRecorded={load} />
       ) : tab === "profile" && !questionId ? (
         <div className="space-y-3">
           {!profiles.length && !diagnosticQueue.length && (
@@ -770,23 +823,26 @@ export function LearningPanel({
                   </ol>
                 </div>
               )}
-              <button type="button" className="mt-3 text-xs font-medium text-indigo-600" onClick={() => onOpen(item.questionId)}>
+              <button type="button" className="mt-3 text-xs font-medium text-terracotta-600" onClick={() => onOpen(item.questionId)}>
                 查看这条作答记录
               </button>
+              <EvidenceTrail studentId={studentId} evidence={item.evidence} events={events} />
             </article>
           ))}
           {profiles.map((profile) => (
             <article key={`${profile.knowledgePointCode}-${profile.errorCode}`} className="rounded-xl border p-4 text-sm">
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <b>{profile.errorLabel}</b>
-                <span className="rounded-full bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700">{profile.status}</span>
+                <span className="rounded-full bg-terracotta-50 px-2 py-1 text-xs font-medium text-terracotta-700">{profile.status}</span>
               </div>
               <p className="mt-2 text-xs text-slate-500">
                 {profile.evidenceCount} 条教师确认的真实作答证据 · 最近记录 {new Date(profile.latestAt).toLocaleDateString("zh-CN")}
               </p>
               <p className="mt-3"><b>建议干预：</b>{profile.intervention}</p>
               <p className="mt-2"><b>后续检测：</b>{profile.check}</p>
-              <button type="button" className="mt-3 text-xs font-medium text-indigo-600" onClick={() => onOpen(profile.latestQuestionId)}>
+              {profile.uncertainties.length > 0 && <ul className="mt-3 space-y-1 text-xs text-amber-800">{profile.uncertainties.map((item) => <li key={item}>待补证：{item}</li>)}</ul>}
+              <EvidenceTrail studentId={studentId} evidence={profile.evidence} events={events} />
+              <button type="button" className="mt-3 text-xs font-medium text-terracotta-600" onClick={() => onOpen(profile.latestQuestionId)}>
                 查看最近一条原始证据
               </button>
             </article>
@@ -842,10 +898,10 @@ export function LearningPanel({
             </p>
           )}
           {[...visible].reverse().map((e) => (
-            <article key={e.id} className="rounded-lg border p-3 text-sm">
+            <article key={e.id} id={`learning-event-${e.id}`} className="scroll-mt-6 rounded-lg border p-3 text-sm">
               <button
                 type="button"
-                className="font-medium text-indigo-700"
+                className="font-medium text-terracotta-700"
                 onClick={() => onOpen(e.questionId)}
               >
                 #{e.questionId} · {e.kind === "inquiry" ? (events.find(item => item.kind === "inquiry" && item.questionId === e.questionId)?.id === e.id ? "首次提问" : "再次提问") : labels[e.kind]} ·{" "}
@@ -863,6 +919,9 @@ export function LearningPanel({
                   <p><b>{e.attemptStage}</b> · {e.correctness} · {e.supportLevel}</p>
                   <p className="mt-1 text-xs text-slate-500">{e.evidenceSource} · {e.evidenceLevel}</p>
                   <p className="mt-1 whitespace-pre-wrap"><b>已记录作答：</b>{e.responseText}</p>
+                  {e.diagnosticItemId && <p className="mt-1"><b>对应诊断题 {e.diagnosticPosition}：</b>{e.diagnosticQuestion}</p>}
+                  {e.interventionPlanId && <p className="mt-1"><b>本轮干预检测题：</b>{e.checkQuestion}</p>}
+                  {e.targetAttemptId && <p className="mt-1 text-xs text-terracotta-700">验证目标：<a className="underline" href={`/students/${studentId}/questions/${events.find((item) => item.id === e.targetAttemptId)?.questionId || e.questionId}#learning-event-${e.targetAttemptId}`}>查看原始作答</a></p>}
                   {e.diagnosisStatus && <p className="mt-1"><b>错因状态：</b>{e.diagnosisStatus}</p>}
                   {e.teacherDecision && e.teacherDecision !== "未判断" && <p className="mt-1"><b>教师判断：</b>{e.teacherDecision}{e.errorLabel ? ` · ${e.errorLabel}` : ""}</p>}
                   {e.aiHypothesis && <p className="mt-1 text-slate-600"><b>AI候选：</b>{e.aiHypothesis}</p>}
@@ -889,7 +948,7 @@ export function LearningPanel({
               {questionId && e.kind === "teaching" && (
                 <button
                   type="button"
-                  className="text-xs text-indigo-600"
+                  className="text-xs text-terracotta-600"
                   onClick={() => {
                     setKind("teaching");
                     setInquiry(e.inquiryId!);

@@ -6,6 +6,7 @@ import {
   sqliteTable,
   text,
   uniqueIndex,
+  type AnySQLiteColumn,
 } from "drizzle-orm/sqlite-core";
 
 export const students = sqliteTable(
@@ -63,6 +64,29 @@ export const questions = sqliteTable(
     uniqueIndex("uq_question_submission").on(table.submissionId),
   ],
 );
+
+export const questionExplanations = sqliteTable("question_explanations", {
+  questionId: integer("question_id").primaryKey().references(() => questions.id, { onDelete: "cascade" }),
+  content: text("content").notNull(),
+  sourceText: text("source_text").notNull(),
+  revision: integer("revision").notNull().default(1),
+  origin: text("origin").notNull(),
+  model: text("model").notNull().default(""),
+  reviewed: integer("reviewed").notNull().default(0),
+  updatedAt: text("updated_at").notNull(),
+});
+
+export const papers = sqliteTable("papers", {
+  id: text("id").primaryKey(), title: text("title").notNull(), originalFilename: text("original_filename").notNull(),
+  sourceKey: text("source_key").notNull(), sourceType: text("source_type").notNull(), fileHash: text("file_hash").notNull(), createdAt: text("created_at").notNull(),
+}, t => [uniqueIndex("uq_paper_hash").on(t.fileHash)]);
+export const paperQuestions = sqliteTable("paper_questions", {
+  id: text("id").primaryKey(), paperId: text("paper_id").notNull().references(() => papers.id, { onDelete: "cascade" }),
+  questionNumber: integer("question_number").notNull(), regions: text("regions").notNull(), imageKey: text("image_key").notNull(),
+  questionText: text("question_text").notNull().default(""), classification: text("classification"),
+  explanation: text("explanation"), model: text("model").notNull().default(""), revision: integer("revision").notNull().default(0),
+  status: text("status").notNull().default("pending"), error: text("error").notNull().default(""), generationToken: text("generation_token"), updatedAt: text("updated_at").notNull(),
+}, t => [uniqueIndex("uq_paper_question_number").on(t.paperId, t.questionNumber)]);
 
 export const knowledgePoints = sqliteTable(
   "knowledge_points",
@@ -127,6 +151,10 @@ export const studentAttempts = sqliteTable(
     correctness: text("correctness").notNull(),
     supportLevel: text("support_level").notNull(),
     notes: text("notes").notNull().default(""),
+    diagnosticItemId: text("diagnostic_item_id").references((): AnySQLiteColumn => diagnosticItems.id, { onDelete: "set null" }),
+    targetAttemptId: text("target_attempt_id").references((): AnySQLiteColumn => studentAttempts.id, { onDelete: "set null" }),
+    interventionPlanId: text("intervention_plan_id").references((): AnySQLiteColumn => interventionPlans.id, { onDelete: "set null" }),
+    checkQuestion: text("check_question").notNull().default(""),
   },
   (t) => [index("idx_student_attempts_question").on(t.questionId, t.occurredAt)],
 );
@@ -179,6 +207,12 @@ export const diagnosticPlans = sqliteTable(
     index("idx_diagnostic_plans_status").on(t.status),
   ],
 );
+export const diagnosticItems = sqliteTable("diagnostic_items", {
+  id: text("id").primaryKey(),
+  planId: text("plan_id").notNull().references(() => diagnosticPlans.id, { onDelete: "cascade" }),
+  position: integer("position").notNull(),
+  content: text("content").notNull(),
+}, (t) => [uniqueIndex("uq_diagnostic_items_position").on(t.planId, t.position)]);
 export const teachingRecords = sqliteTable("teaching_records", {
   id: text("id").primaryKey(),
   inquiryId: text("inquiry_id")
@@ -191,6 +225,20 @@ export const teachingRecords = sqliteTable("teaching_records", {
   notes: text("notes").notNull().default(""),
   supersedesId: text("supersedes_id"),
 });
+export const interventionPlans = sqliteTable("intervention_plans", {
+  id: text("id").primaryKey(),
+  questionId: integer("question_id").notNull().references(() => questions.id, { onDelete: "cascade" }),
+  sourceAttemptId: text("source_attempt_id").notNull().references((): AnySQLiteColumn => studentAttempts.id, { onDelete: "cascade" }),
+  knowledgePointCode: text("knowledge_point_code").notNull(),
+  goal: text("goal").notNull(),
+  strategy: text("strategy").notNull(),
+  checkInstruction: text("check_instruction").notNull(),
+  dueAt: text("due_at").notNull(),
+  createdAt: text("created_at").notNull(),
+  status: text("status").notNull().default("planned"),
+  teachingRecordId: text("teaching_record_id").references(() => teachingRecords.id, { onDelete: "set null" }),
+  implementedAt: text("implemented_at"),
+}, (t) => [index("idx_intervention_question").on(t.questionId, t.createdAt)]);
 export const reviews = sqliteTable("reviews", {
   id: text("id").primaryKey(),
   inquiryId: text("inquiry_id")
