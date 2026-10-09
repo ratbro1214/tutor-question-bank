@@ -2,7 +2,7 @@
 @import "tw-animate-css";
 @import "../vendor/shadcn-tailwind-4.13.0.css";
 
-.math-text { overflow-wrap: anywhere; }
+.math-text { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
 .math-text .katex { font-size: 1.12em; }
 .math-inline { white-space: normal; }
 .math-block { display: block; max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: .15rem 0; }

@@ -1,0 +1,11 @@
+[
+  {"paperId":"gaokao_en_2023_II","ocr":"53.Aunnecessary","transcription":"53.A.unnecessary","method":"option-label-punctuation-recovery","note":"补齐 A 标签后的分隔点；不改选项文字"},
+  {"paperId":"gaokao_en_2025_II","ocr":"34. A. instructors B. admirers C. beginners D. doubters E. authority F. excuse G. impitation H. option","transcription":"34. A. instructors B. admirers C. beginners D. doubters\n\n35. A. authority B. excuse C. inspiration D. option","method":"original-image-transcription","artifactId":"gaokao_en_2025_II_ea25f73e3961f03d","note":"原图第9页的第34/35题被OCR合并；已对照原图"},
+  {"paperId":"gaokao_en_2025_II","ocr":"C Tubpected","transcription":"C. expected","method":"original-image-transcription","artifactId":"gaokao_en_2025_II_1932552028956bf8"},
+  {"paperId":"gaokao_en_2025_II","ocr":"_M_","transcription":"_34_","method":"original-image-transcription","artifactId":"gaokao_en_2025_II_1932552028956bf8"},
+  {"paperId":"gaokao_en_2025_II","ocr":"being two old","transcription":"being too old","method":"original-image-transcription","artifactId":"gaokao_en_2025_II_1932552028956bf8"},
+  {"paperId":"gaokao_en_2025_II","ocr":"an _35_ or many","transcription":"an _35_ for many","method":"original-image-transcription","artifactId":"gaokao_en_2025_II_1932552028956bf8"},
+  {"paperId":"gaokao_en_2025_II","ocr":"She said I was all","transcription":"She said it was all","method":"original-image-transcription","artifactId":"gaokao_en_2025_II_1932552028956bf8"},
+  {"paperId":"gaokao_en_2025_II","ocr":"(center) hating","transcription":"(center) heating","method":"original-image-transcription","artifactId":"gaokao_en_2025_II_ea25f73e3961f03d"},
+  {"paperId":"gaokao_en_2025_II","ocr":"If you're never experienced","transcription":"If you've never experienced","method":"original-image-transcription","artifactId":"gaokao_en_2025_II_ea25f73e3961f03d"}
+]

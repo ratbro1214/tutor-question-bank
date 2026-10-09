@@ -9,15 +9,19 @@ import { Button } from "@/components/ui/button";
 import { MathText } from "@/components/math-text";
 import { PaperCropEditor } from "@/components/paper-crop-editor";
 import { PaperArchive } from "@/components/paper-archive";
-import { buildQuestionCrops, locateQuestionAnchors, parseQuestionSelection, type PaperQuestion, type PaperSummary, type QuestionAnchor, type QuestionCrop } from "@/lib/paper";
+import { buildQuestionCrops, locateQuestionAnchors, parseQuestionSelection, type PaperQuestion, type PaperSummary, type QuestionAnchor, type QuestionCrop, type PaperExcludedBlock } from "@/lib/paper";
+import { detectionTiles, detectionRows, mergeDetectedAnchors } from '@/lib/paper-detection';
+import { readApiResponse } from '@/lib/api-response';
 import { cropQuestionImage, openPaperDocument, type PaperDocument } from "@/lib/pdf-browser";
+import type { PaperAnalysisMode } from '@/lib/paper-analysis';
 
 const inputClass = "rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm outline-none focus:border-terracotta-600";
 async function api<T>(url: string, init?: RequestInit): Promise<T> {
   const response = await fetch(url, { cache: "no-store", ...init });
-  const data = await response.json() as T & { error?: string }; if (!response.ok) throw new Error(data.error || "请求失败，请重试。"); return data;
+  return readApiResponse<T>(response);
 }
-const statusLabel = (q: PaperQuestion) => q.status === "processing" ? "正在解析" : q.status === "pending" && q.explanation ? "裁切已改，待重解" : q.explanation ? q.explanation.content.status === "needs_context" ? "待补充条件" : "解析已保存" : q.status === "failed" ? "待重试" : "待解析";
+const statusLabel = (q: PaperQuestion) => q.status === "processing" ? "正在处理" : q.status === "pending" && q.explanation ? "裁切已改，待重解" : q.explanation ? q.explanation.content.status === "needs_context" ? "待补充条件" : "解析已保存" : q.status === "failed" ? "待重试" : q.classification ? "已分类 · 未解析" : "待分类";
+type PageDetection = { anchors: Omit<QuestionAnchor,'page'>[]; excluded: Omit<PaperExcludedBlock,'page'>[]; isAnswerPage?: boolean };
 
 export function PaperWorkbench({ paperId }: { paperId?: string }) {
   const router = useRouter();
@@ -33,6 +37,14 @@ export function PaperWorkbench({ paperId }: { paperId?: string }) {
   const [editedNumbers, setEditedNumbers] = useState<number[]>([]);
   const docRef = useRef<PaperDocument | null>(null), abortRef = useRef<AbortController | null>(null), alive = useRef(true);
   const operationRef = useRef<{ questionId: string; operationId: string } | null>(null);
+  const detectionRef=useRef<{doc:PaperDocument|null;results:Map<number,PageDetection>}>({doc:null,results:new Map()});
+
+  useEffect(() => {
+    if (paperId) return;
+    const reloadPapers = () => { void api<{ papers: PaperSummary[] }>("/api/papers").then(data => { if (alive.current) setPapers(data.papers); }).catch(() => {}); };
+    window.addEventListener("paper-import-completed", reloadPapers);
+    return () => window.removeEventListener("paper-import-completed", reloadPapers);
+  }, [paperId]);
 
   const prepare = useCallback(async (source: PaperSummary) => {
     setBusy("正在读取试卷并定位题号…"); setError(""); setMessage(""); setEditingCrop(null);
@@ -43,7 +55,7 @@ export function PaperWorkbench({ paperId }: { paperId?: string }) {
       if (!alive.current) { await opened.destroy(); return; }
       await docRef.current?.destroy(); docRef.current = opened; setDoc(opened);
       const detected = buildQuestionCrops(opened.pages, locateQuestionAnchors(opened.pages));
-      setCrops(detected); setSelectedCrops(detected.map(c => c.number)); setEditedNumbers([]); setPreparing(true); setSelection("");
+      setCrops(detected); setSelectedCrops(detected.map(c => c.number)); setEditedNumbers(detected.map(c=>c.number)); setPreparing(true); setSelection("");
       setMessage(detected.length ? `已定位 ${detected.length} 道题，请检查选项、图形和跨页内容是否完整。` : "未从文字层定位到题号。可用 AI 定位，或手动框选指定题目。");
     } catch (reason) { if (alive.current) setError(reason instanceof Error ? reason.message : "试卷读取失败。"); }
     finally { if (alive.current) setBusy(""); }
@@ -97,46 +109,81 @@ export function PaperWorkbench({ paperId }: { paperId?: string }) {
   }
   async function detectWithAI() {
     if (!doc) return;
+    if(detectionRef.current.doc!==doc)detectionRef.current={doc,results:new Map()};
+    const cache=detectionRef.current.results;
     const abort = new AbortController(); abortRef.current = abort; setCancellable(true); setBusy("AI 正在定位题号…"); setError("");
+    let activePage=1;
+    function publish(complete:boolean) {
+      const anchors:QuestionAnchor[]=[],excluded:PaperExcludedBlock[]=[];
+      let answerPage=Infinity;
+      for(const [page,result] of cache){if(result.isAnswerPage){answerPage=Math.min(answerPage,page);continue;}anchors.push(...result.anchors.map(a=>({...a,page})));excluded.push(...result.excluded.map(b=>({...b,page})));}
+      let detected=buildQuestionCrops(doc!.pages.filter(p=>cache.has(p.page)&&p.page<answerPage),mergeDetectedAnchors(anchors),excluded);
+      // The last question may continue onto a page that has not finished yet.
+      if(!complete)detected=detected.slice(0,-1);
+      if(alive.current){setCrops(detected);setSelectedCrops(detected.map(c=>c.number));setSelection('');setEditedNumbers(detected.filter(c=>questions.some(q=>q.number===c.number)).map(c=>c.number));}
+      return detected.length;
+    }
     try {
-      const anchors: QuestionAnchor[] = [];
-      let answerPage = Infinity;
       for (const page of doc.pages) {
+        activePage=page.page;
+        if(cache.has(page.page)){if(cache.get(page.page)!.isAnswerPage)break;continue;}
         setBusy(`AI 正在定位第 ${page.page}/${doc.pages.length} 页…`);
         const canvas = await doc.renderPage(page.page);
-        const blob = await new Promise<Blob>((resolve, reject) => canvas.toBlob(b => b ? resolve(b) : reject(Error("页面图片生成失败。")), "image/jpeg", .85));
-        const form = new FormData(); form.set("image", new File([blob], "page.jpg", { type: "image/jpeg" }));
-        const result = await api<{ anchors: Omit<QuestionAnchor, "page">[]; isAnswerPage?: boolean }>("/api/papers/detect", { method: "POST", body: form, signal: abort.signal });
-        if (result.isAnswerPage) { answerPage = page.page; break; }
-        anchors.push(...result.anchors.map(a => ({ ...a, page: page.page })));
+        const tiles = detectionTiles(canvas.width, canvas.height), form = new FormData();
+        const pixels = canvas.getContext('2d')!.getImageData(0,0,canvas.width,canvas.height).data;
+        const rows = detectionRows(pixels,canvas.width,canvas.height);
+        form.set('rows',JSON.stringify(rows));
+        form.set('tiles', JSON.stringify(tiles)); form.set('pageHeight', String(canvas.height));
+        for (const tile of tiles) {
+          const part = document.createElement('canvas'); part.width = tile.width; part.height = tile.height;
+          part.getContext('2d')!.drawImage(canvas, 0, tile.top, tile.width, tile.height, 0, 0, tile.width, tile.height);
+          const ctx=part.getContext('2d')!;ctx.fillStyle='#0055dd';ctx.font=`bold ${Math.round(canvas.width*.016)}px sans-serif`;
+          for(const row of rows.filter(r=>r.top>=tile.top&&r.bottom<tile.top+tile.height)){
+            ctx.fillText(`R${row.id}`,2,row.top-tile.top+Math.round(canvas.width*.015));
+            ctx.fillRect(Math.round(canvas.width*.035),row.top-tile.top,3,Math.max(3,row.bottom-row.top));
+          }
+          const blob = await new Promise<Blob>((resolve,reject)=>part.toBlob(b=>b?resolve(b):reject(Error('页面图片生成失败。')), 'image/jpeg', .92));
+          form.set(`tile${tile.index}`, new File([blob], `tile-${tile.index}.jpg`, {type:'image/jpeg'}));
+        }
+        const result = await api<PageDetection>("/api/papers/detect", { method: "POST", body: form, signal: abort.signal });
+        cache.set(page.page,result);
+        if (result.isAnswerPage) break;
+        const count=publish(page.page===doc.pages.length);
+        setMessage(`已完成 ${cache.size}/${doc.pages.length} 页，已定位 ${count} 道完整题目。`);
       }
-      const detected = buildQuestionCrops(doc.pages.filter(page => page.page < answerPage), anchors); setCrops(detected); setSelectedCrops(detected.map(c => c.number)); setSelection("");
-      setMessage(`AI 定位了 ${detected.length} 道题。请核对题号和裁切边界，必要时手动调整。`);
-    } catch (reason) { if (!abort.signal.aborted) setError(reason instanceof Error ? reason.message : "题号定位失败。"); else setMessage("已停止定位，原试卷仍然保存。"); }
+      const count=publish(true);
+      setMessage(`已按实际题号行定位 ${count} 道题，保留相邻题号之间的完整内容。请核对预览后保存；已有同题号的旧裁切将在保存时更新。`);
+    } catch (reason) {
+      const count=cache.size?publish(false):0;
+      if(!abort.signal.aborted)setError(`第 ${activePage} 页定位失败：${reason instanceof Error?reason.message:'请重试。'}`);
+      setMessage(`${abort.signal.aborted?'已停止定位。':''}已保留 ${cache.size} 页的结果，展示 ${count} 道完整题目。再次点击 AI 定位题号会继续未完成的页面。`);
+    }
     finally { if (alive.current) { setBusy(""); setCancellable(false); } if (abortRef.current === abort) abortRef.current = null; }
   }
   function selectNumbers() {
     try { const numbers = parseQuestionSelection(selection, preparing ? crops.map(c => c.number) : questions.map(q => q.number)); if (preparing) setSelectedCrops(numbers); else setSelectedQuestions(numbers); setError(""); }
     catch (reason) { setError(reason instanceof Error ? reason.message : "题号无效。"); }
   }
-  async function run(list: PaperQuestion[], regenerate = false) {
+  async function run(list: PaperQuestion[], regenerate = false, mode: PaperAnalysisMode = 'classify') {
+    if (abortRef.current) return;
+    const label = mode === 'classify' ? '分类' : '解析';
     const abort = new AbortController(); abortRef.current = abort; setCancellable(true); setRunning(true); setError(""); let success = 0, failed = 0;
     try {
       for (const question of list) {
         if (abort.signal.aborted) break;
-        if (question.explanation && question.status === "ready" && !question.error && !regenerate) continue;
-        setBusy(`正在解析第 ${question.number} 题 · 已完成 ${success}/${list.length}`); setActiveQuestionId(question.id);
+        if (!regenerate && !question.error && question.status !== 'processing' && (mode === 'classify' ? question.classification?.education_stage === stage : question.explanation && question.status === 'ready')) continue;
+        setBusy(`正在${label}第 ${question.number} 题 · 已完成 ${success}/${list.length}`); setActiveQuestionId(question.id);
         setQuestions(current => current.map(q => q.id === question.id ? { ...q, status: "processing", error: "" } : q));
         try {
           const operationId = crypto.randomUUID(); operationRef.current = { questionId: question.id, operationId };
-          const result = await api<{ question: PaperQuestion }>(`/api/papers/${paperId}/questions/${question.id}/analysis`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ educationStage: stage, regenerate, operationId }), signal: abort.signal });
+          const result = await api<{ question: PaperQuestion }>(`/api/papers/${paperId}/questions/${question.id}/analysis`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ educationStage: stage, regenerate, operationId, mode }), signal: abort.signal });
           if (alive.current) setQuestions(current => current.map(q => q.id === question.id ? result.question : q)); success++;
         } catch (reason) {
           if (abort.signal.aborted) break; failed++;
-          if (alive.current) setQuestions(current => current.map(q => q.id === question.id ? { ...q, status: q.explanation ? "ready" : "failed", error: reason instanceof Error ? reason.message : "解析失败。" } : q));
+          if (alive.current) setQuestions(current => current.map(q => q.id === question.id ? { ...q, status: q.explanation || q.classification ? "ready" : "failed", error: reason instanceof Error ? reason.message : `${label}失败。` } : q));
         } finally { operationRef.current = null; }
       }
-      if (alive.current) { await refresh(); setMessage(`${abort.signal.aborted ? "已停止。" : "本次处理完成。"}成功 ${success} 题${failed ? `，失败 ${failed} 题，可单独重试` : ""}。已完成解析均已保存。`); }
+      if (alive.current) { await refresh(); setMessage(`${abort.signal.aborted ? "已停止。" : "本次处理完成。"}成功${label} ${success} 题${failed ? `，失败 ${failed} 题，可单独重试` : ""}。${mode === 'classify' ? '分类已保存；未生成完整解析，可按需逐题生成。' : '已完成解析均已保存。'}`); }
     } finally { if (alive.current) { setRunning(false); setBusy(""); setCancellable(false); } if (abortRef.current === abort) abortRef.current = null; }
   }
   async function stop() {
@@ -171,12 +218,12 @@ export function PaperWorkbench({ paperId }: { paperId?: string }) {
 
   return <div className="space-y-6">
     <header className="space-y-3">{paperId && <Link className="flex items-center gap-1 text-sm text-slate-500" href="/papers"><ArrowLeft className="size-4" />返回我的套卷</Link>}
-      <div className="flex flex-wrap items-center justify-between gap-3"><div><h1 className="font-semibold tracking-tight text-[32px]">{paper?.title || "套卷复习"}</h1><p className="mt-2 text-sm leading-6 text-slate-500">{paperId ? "按题号选题，检查裁切，逐题生成并保存解析。" : "上传整卷或整页，选择全卷或指定题号，建立自己的高三复习资料。"}</p></div>
+      <div className="flex flex-wrap items-center justify-between gap-3"><div><h1 className="font-semibold tracking-tight text-[32px]">{paper?.title || "套卷复习"}</h1><p className="mt-2 text-sm leading-6 text-slate-500">{paperId ? "先快速分类，再选择需要的题目生成完整解析。" : "上传整卷或整页，选择全卷或指定题号，建立自己的高三复习资料。"}</p></div>
         {paper && <a className="text-sm text-terracotta-800 underline" href={paper.sourceUrl} target="_blank" rel="noreferrer">查看原试卷</a>}</div>
     </header>
     {error && <div role="alert" className="rounded-xl bg-amber-50 p-4 text-sm leading-6 text-amber-900">{error}</div>}
     {message && <p role="status" className="rounded-xl bg-terracotta-50 p-4 text-sm leading-6 text-terracotta-900">{message}</p>}
-    {busy && <div role="status" className="flex flex-wrap items-center gap-3 rounded-xl border border-terracotta-200 bg-white p-4 text-sm"><LoaderCircle className="size-4 animate-spin text-terracotta-700" />{busy}{cancellable && <Button variant="outline" size="sm" onClick={() => void stop()}>停止</Button>}{running && <span className="text-slate-500">每完成一题即保存，复杂题可能需要几分钟。</span>}</div>}
+    {busy && <div role="status" className="flex flex-wrap items-center gap-3 rounded-xl border border-terracotta-200 bg-white p-4 text-sm"><LoaderCircle className="size-4 animate-spin text-terracotta-700" />{busy}{cancellable && <Button variant="outline" size="sm" onClick={() => void stop()}>停止</Button>}{running && <span className="text-slate-500">每完成一题即保存，可随时停止。</span>}</div>}
     {loading && !busy && <p className="text-sm text-slate-500">正在读取套卷…</p>}
     {!paperId && <>
       <section className="surface-card space-y-4 p-6"><h2 className="flex items-center gap-2 text-lg font-semibold"><FileUp className="size-5 text-terracotta-700" />上传试卷</h2>
@@ -194,7 +241,7 @@ export function PaperWorkbench({ paperId }: { paperId?: string }) {
     </>}
     {paper && <>
       <div className="surface-card flex flex-wrap items-center gap-3 p-4"><label className="text-sm">学段 <select aria-label="套卷学段" className={`${inputClass} ml-2`} value={stage} disabled={blocked} onChange={e => setStage(e.target.value)}><option>高中</option><option>初中</option></select></label>
-        <span className="text-sm text-slate-500">已保存 {questions.length} 道题 · {questions.filter(q => q.explanation).length} 道解析</span>
+        <span className="text-sm text-slate-500">已保存 {questions.length} 道题 · {questions.filter(q => q.classification).length} 道已分类 · {questions.filter(q => q.explanation).length} 道解析</span>
         {!preparing && <Button variant="outline" size="sm" disabled={blocked} onClick={() => prepare(paper)}><Scissors className="size-4" />继续选题 / 手动裁切</Button>}
       </div>
       {(preparing || questions.length > 0) && <div className="surface-card space-y-3 p-4"><div className="flex flex-wrap items-center gap-3"><label className="text-sm">指定题号 <input aria-label="指定题号" placeholder="如 1,3,7-10,17；留空选择全部" className={`${inputClass} ml-2 w-72 max-w-full`} value={selection} disabled={blocked} onChange={e => setSelection(e.target.value)} /></label><Button variant="outline" size="sm" onClick={selectNumbers} disabled={blocked}>按题号选择</Button>
@@ -216,27 +263,27 @@ export function PaperWorkbench({ paperId }: { paperId?: string }) {
             {previewUrls[crop.number] ? <a href={previewUrls[crop.number]} target="_blank" rel="noreferrer"><img alt={`第 ${crop.number} 题裁切预览`} src={previewUrls[crop.number]} className="max-h-80 w-full bg-white object-contain" /></a> : <div className="p-8 text-center text-sm text-slate-400">正在生成预览…</div>}
             <p className="p-3 text-xs text-slate-500">第 {[...new Set(crop.regions.map(r => r.page))].join("、")} 页 · {crop.regions.length > 1 ? `${crop.regions.length} 个片段拼接` : "单页题目"}{questions.some(q => q.number === crop.number) ? " · 已入库，会保留已有题目" : ""}</p>
           </article>)}</div>
-          <div className="sticky bottom-3 flex flex-wrap gap-3 rounded-xl border border-terracotta-100 bg-white/95 p-4 shadow-lg"><Button disabled={blocked || !selectedCrops.length || !!editingCrop} onClick={() => saveCrops(true)}><Sparkles className="size-4" />确认裁切并解析所选 {selectedCrops.length} 题</Button><Button variant="outline" disabled={blocked || !selectedCrops.length || !!editingCrop} onClick={() => saveCrops(false)}>仅保存所选题目</Button>{questions.length > 0 && <Button variant="outline" disabled={blocked} onClick={() => setPreparing(false)}>返回已保存题目</Button>}</div>
+          <div className="sticky bottom-3 flex flex-wrap gap-3 rounded-xl border border-terracotta-100 bg-white/95 p-4 shadow-lg"><Button disabled={blocked || !selectedCrops.length || !!editingCrop} onClick={() => saveCrops(true)}><Sparkles className="size-4" />确认裁切并快速分类 {selectedCrops.length} 题</Button><Button variant="outline" disabled={blocked || !selectedCrops.length || !!editingCrop} onClick={() => saveCrops(false)}>仅保存所选题目</Button>{questions.length > 0 && <Button variant="outline" disabled={blocked} onClick={() => setPreparing(false)}>返回已保存题目</Button>}</div>
         </section>
       </>}
       {!preparing && questions.length > 0 && <>
         <PaperArchive key={`${paper.id}:${selectedQuestions.join(',')}:${questions.map(q => q.revision).join(',')}`} paperId={paper.id} questions={questions.filter(q => selectedQuestions.includes(q.number))} disabled={blocked} />
-        <div className="flex flex-wrap gap-3"><Button disabled={blocked || !selectedQuestions.length} onClick={() => run(questions.filter(q => selectedQuestions.includes(q.number)))}><Sparkles className="size-4" />解析所选待完成题目</Button><Button variant="outline" disabled={blocked || questions.every(q => q.explanation && q.status === "ready" && !q.error)} onClick={() => run(questions.filter(q => !q.explanation || q.status !== "ready" || !!q.error))}>解析全部待完成题目</Button></div>
+        <div className="space-y-2"><div className="flex flex-wrap gap-3"><Button disabled={blocked || !selectedQuestions.length} onClick={() => run(questions.filter(q => selectedQuestions.includes(q.number)))}><Sparkles className="size-4" />快速分类所选题目</Button><Button variant="outline" disabled={blocked || questions.every(q => q.classification?.education_stage === stage && !q.error && q.status !== 'processing')} onClick={() => run(questions.filter(q => q.classification?.education_stage !== stage || !!q.error || q.status === 'processing'))}>分类全部未分类题目</Button><Button variant="outline" disabled={blocked || !selectedQuestions.length} onClick={() => run(questions.filter(q => selectedQuestions.includes(q.number)), false, 'explain')}>生成所选题目的完整解析</Button></div><p className="text-xs leading-6 text-slate-500">快速分类仅识别题干、章节、知识点、题型和难度，不生成答案与步骤。完整解析由你另行选择；分类仍需调用 AI API，已有分类会复用。</p></div>
         <div className="grid items-start gap-6 lg:grid-cols-[260px_minmax(0,1fr)]"><aside className="surface-card space-y-1 p-3 lg:sticky lg:top-6"><h2 className="px-2 py-2 font-semibold">套卷题目</h2>{questions.map(q => <div key={q.id} className={`flex items-center gap-2 rounded-lg p-2 ${activeQuestionId === q.id ? "bg-terracotta-50" : ""}`}><input aria-label={`选择第 ${q.number} 题`} type="checkbox" checked={selectedQuestions.includes(q.number)} disabled={blocked} onChange={() => toggle(q.number)} /><button className="flex min-w-0 flex-1 items-center justify-between gap-2 py-1 text-left text-sm" onClick={() => setActiveQuestionId(q.id)}><span>第 {q.number} 题</span><span className={`text-xs ${q.explanation ? "text-terracotta-800" : q.status === "failed" ? "text-amber-700" : "text-slate-500"}`}>{statusLabel(q)}</span></button></div>)}</aside>
-          {active && <article className="surface-card space-y-6 p-5 sm:p-7"><div className="flex flex-wrap items-center justify-between gap-3"><h2 className="text-xl font-semibold">第 {active.number} 题</h2><Button variant="outline" size="sm" disabled={blocked} onClick={() => run([active], !!active.explanation)}>{active.explanation ? "重新生成此题解析" : active.status === "failed" ? "重试此题" : "生成此题解析"}</Button></div>
+          {active && <article className="surface-card min-w-0 space-y-6 p-5 sm:p-7"><div className="flex flex-wrap items-center justify-between gap-3"><h2 className="text-xl font-semibold">第 {active.number} 题</h2><div className="flex flex-wrap gap-2"><Button variant="outline" size="sm" disabled={blocked} onClick={() => run([active], !!active.classification)}>{active.classification ? "重新分类此题" : "快速分类此题"}</Button><Button variant="outline" size="sm" disabled={blocked} onClick={() => run([active], !!active.explanation, 'explain')}>{active.explanation ? "重新生成此题解析" : "生成此题完整解析"}</Button></div></div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <a href={active.imageUrl} target="_blank" rel="noreferrer"><img alt={`第 ${active.number} 题原图`} src={active.imageUrl} className="max-h-[500px] w-full rounded-lg border bg-white object-contain" /></a>
             {active.error && <p role="alert" className="rounded-lg bg-amber-50 p-3 text-sm text-amber-900">{active.error}</p>}
-            {active.classification && <div className="flex flex-wrap gap-2 text-xs"><span className="rounded-full bg-slate-100 px-3 py-1">{active.classification.chapter.name}</span>{active.classification.knowledge_points.map(k => <span className="rounded-full bg-terracotta-50 px-3 py-1 text-terracotta-800" key={k.code}>{k.name}</span>)}<span className="px-2 py-1 text-slate-400">AI 分类建议</span></div>}
+            {active.classification && <div className="space-y-2"><div className="flex flex-wrap gap-2 text-xs"><span className="rounded-full bg-slate-100 px-3 py-1">{active.classification.chapter.name}</span>{active.classification.knowledge_points.map(k => <span className="rounded-full bg-terracotta-50 px-3 py-1 text-terracotta-800" key={k.code}>{k.name}</span>)}<span className="rounded-full bg-slate-100 px-3 py-1">{active.classification.question_type}</span><span className="rounded-full bg-slate-100 px-3 py-1">难度：{active.classification.difficulty}</span><span className="px-2 py-1 text-slate-400">AI 分类建议{active.classification.needs_review ? ' · 需核对' : ''}</span></div><p className="text-xs leading-6 text-slate-500">{active.classification.classification_notes}</p></div>}
             {active.questionText && <details className="rounded-lg border p-3"><summary className="cursor-pointer text-sm text-slate-600">题目原文</summary><MathText className="mt-3 whitespace-pre-wrap text-sm leading-7">{active.questionText}</MathText></details>}
             {active.explanation ? <><p className="flex items-center gap-2 text-xs text-terracotta-800"><Check className="size-4" />解析已保存 · {active.explanation.model} · {new Date(active.explanation.updatedAt).toLocaleString("zh-CN")}</p>
               <p className="text-xs leading-5 text-slate-500">AI 辅助解析，复习时请对照原题核对条件、答案和步骤。</p>
               {active.explanation.content.status === "needs_context" && <div className="rounded-lg bg-amber-50 p-4"><h3 className="font-semibold">需要补充题目信息</h3><MathText className="mt-2 text-sm leading-7">{active.explanation.content.missingInformation}</MathText></div>}
               {active.explanation.content.answer && <div className="rounded-xl bg-terracotta-50 p-4"><h3 className="text-sm font-semibold text-terracotta-800">答案</h3><MathText className="mt-2 leading-8">{active.explanation.content.answer}</MathText></div>}
               {active.explanation.content.approach && <div><h3 className="font-semibold">解题思路</h3><MathText className="mt-2 whitespace-pre-wrap text-sm leading-7">{active.explanation.content.approach}</MathText></div>}
-              <div><h3 className="font-semibold">详细步骤</h3><ol className="mt-4 space-y-5">{active.explanation.content.steps.map((step, i) => <li className="flex gap-3" key={i}><span className="mt-1 grid size-6 shrink-0 place-items-center rounded-full bg-terracotta-50 text-xs text-terracotta-800">{i + 1}</span><div className="min-w-0"><MathText className="font-medium">{step.title}</MathText><MathText className="mt-1 whitespace-pre-wrap text-sm leading-7">{step.content}</MathText></div></li>)}</ol></div>
+              <div><h3 className="font-semibold">详细步骤</h3><ol className="mt-4 space-y-5">{active.explanation.content.steps.map((step, i) => <li className="flex gap-3" key={i}><span className="mt-1 grid size-6 shrink-0 place-items-center rounded-full bg-terracotta-50 text-xs text-terracotta-800">{i + 1}</span><div className="min-w-0 flex-1"><MathText className="font-medium">{step.title}</MathText><MathText className="mt-1 whitespace-pre-wrap text-sm leading-7">{step.content}</MathText></div></li>)}</ol></div>
               {([['teachingNotes', '讲解提示'], ['commonMistakes', '易错点'], ['verification', '结果核验'], ['alternativeMethod', '另一种解法']] as const).map(([key, label]) => active.explanation!.content[key] && <details className="rounded-lg border p-3" key={key}><summary className="cursor-pointer text-sm font-medium">{label}</summary><MathText className="mt-3 whitespace-pre-wrap text-sm leading-7">{active.explanation!.content[key]}</MathText></details>)}
-            </> : <div className="rounded-xl border border-dashed p-6 text-center text-sm leading-6 text-slate-500">{active.status === "processing" ? "正在生成解析。完成后会自动保存；中断后可重新打开并重试。" : "题目已保存，点击生成解析或选择多道题一起处理。"}</div>}
+            </> : <div className="rounded-xl border border-dashed p-6 text-center text-sm leading-6 text-slate-500">{active.status === "processing" ? "正在处理此题，结果完成后自动保存。" : active.classification ? "分类已保存，尚未生成完整解析。需要讲解时再点击“生成此题完整解析”。" : "题目已保存，先快速分类，再决定哪些题需要完整解析。"}</div>}
           </article>}
         </div>
       </>}

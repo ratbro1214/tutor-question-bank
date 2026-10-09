@@ -24,9 +24,9 @@ export async function POST(request: Request, context: { params: Promise<{ id: st
       const existing = await db.prepare("SELECT id,deleted_at FROM questions WHERE submission_id=?").bind(submissionId).first<{ id: number; deleted_at: string | null }>();
       if (existing?.deleted_at) return Response.json({ error: `第 ${row.question_number} 题已在回收站，请先恢复。` }, { status: 409 });
       if (existing) { entries.push({ row, submissionId, existing, classification: null }); continue; }
-      if (row.revision !== selected.revision || row.status === "processing" || row.status === "pending" || row.error) return Response.json({ error: `第 ${row.question_number} 题已变化或尚未完成，请刷新并完成解析后添加。` }, { status: 409 });
+      if (row.revision !== selected.revision || row.status === "processing" || row.status === "pending" || row.error) return Response.json({ error: `第 ${row.question_number} 题已变化或尚未完成分类，请刷新并完成分类后添加。` }, { status: 409 });
       const classification = row.classification ? normalizeClassificationTags(JSON.parse(row.classification) as Classification) : null;
-      if (!classification || validateClassification(classification).length || !classification.knowledge_points.length) return Response.json({ error: `第 ${row.question_number} 题缺少可靠分类，请先完成解析并核对。` }, { status: 400 });
+      if (!classification || validateClassification(classification).length || !classification.knowledge_points.length) return Response.json({ error: `第 ${row.question_number} 题缺少可靠分类，请先快速分类并核对。` }, { status: 400 });
       if (row.explanation && !explanationContentSchema.safeParse(JSON.parse(row.explanation)).success) return Response.json({ error: "解析格式无效，请重新生成。" }, { status: 400 });
       entries.push({ row, submissionId, existing, classification });
     }

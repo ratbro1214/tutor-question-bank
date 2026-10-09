@@ -1,5 +1,9 @@
 # 家教题库系统
 
+套卷现在默认先“快速分类”，只保存题干识别与章节、知识点、题型、难度建议；需要讲解时再选择“生成此题完整解析”或“生成所选题目的完整解析”。分类和解析均可独立保存，后续详解复用已有分类，分类完成不要求同时生成详解。
+
+阶段 3A“批量导入试卷”已集成到 `/papers` 顶部：一次选择多个数学 PDF，以本地文本层切题，保存逐文件/逐题统计、文字重复提示和待审核候选；人工核对后安全关联私有 Canonical。双击根目录 `Start-Tutor.cmd` 启动，访问 `http://localhost:5173/papers`。操作与限制见 [批量 PDF 导入](docs/批量PDF导入-阶段3A.md)。本机已在备份后执行迁移 `0016_paper_import_batches.sql`。
+
 新增“套卷复习”入口 `/papers`：独立保存整卷 PDF 或整页图片，按题号选择全卷或指定题目（如 `1,3,7-10`），预览、调整裁切和跨页拼接后批量生成分类建议与解析。每完成一题即保存，单题失败可重试；无需绑定学生。使用与数据说明见 [套卷复习与解析持久化](docs/套卷复习与解析持久化-2026-10-04.md)。本地数据库先备份，再应用新增的 `drizzle/0013_clumsy_cammi.sql`；本机已执行。
 
 题目详解现在生成成功即写入数据库，不再要求另点保存；有效的手工修改自动保存，未完成编辑保留在本机草稿。版本冲突会阻止覆盖其他页面的更新。
@@ -47,7 +51,7 @@ This starter does not use `wrangler.jsonc`.
 - **Portable:** Preserve host HOME, npm cache, registry, proxy, temporary paths, retry/concurrency settings, and lifecycle-script policy. Use `--prefer-offline --no-audit --no-fund`.
 - **Managed Linux:** Use the existing project-local HOME/cache/tmp setup and Linux install lock, tarball preflight, and timeout. Restore the image-seeded npm cache only when its lockfile hash matches; retain network fallback. Builds keep their existing timeout. These helpers are not invoked by the portable profile.
 
-`scripts/sites-env.mjs` preserves the caller's HOME, npm cache, proxy, XDG, and temporary-directory configuration while defaulting Wrangler and Miniflare state to the checkout. If npm reports an unwritable cache, select a writable path with `npm_config_cache` for that install. The `dev` and `start` scripts also keep Wrangler logs inside the checkout. Generated `.sites-runtime/` and `.wrangler/` directories are disposable and ignored by Git.
+`scripts/sites-env.mjs` preserves the caller's HOME, npm cache, proxy, XDG, and temporary-directory configuration while defaulting Wrangler and Miniflare state to the checkout. If npm reports an unwritable cache, select a writable path with `npm_config_cache` for that install. The `dev` and `start` scripts also keep Wrangler logs inside the checkout. `.sites-runtime/` and `.wrangler/` are ignored by Git, but `.wrangler/state` contains important local business data: D1 databases and R2 uploaded images/files with their object mappings. **Do not delete `.wrangler/state` before creating and validating a complete backup.** Other Wrangler logs and tool caches need not all be retained permanently. See [本地数据备份与恢复](docs/本地数据备份与恢复.md); run `node scripts/backup-project-data.mjs` for a complete backup, rather than relying on the D1-only helper.
 
 On portable, `npm run dev` uses `vinext dev` with HMR, starting at port 5173. Vinext records the running server in ignored `.vinext/` state, rejects an ordinary duplicate launch, and recovers stale state after a stopped process; exactly simultaneous starts can race. Pass `--port <port>` or `--hostname <host>` after `npm run dev --` when needed; keep portable previews on loopback.
 

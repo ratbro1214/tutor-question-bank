@@ -1,0 +1,881 @@
+[
+  {
+    "paperId": "gaokao_en_2020_I",
+    "label": "B",
+    "starts": "After high school, Jennifer attended",
+    "tags": [
+      "非谓语",
+      "原因状语从句"
+    ],
+    "skeleton": "Jennifer attended a local technical college.",
+    "translation": "高中毕业后，Jennifer 上了一所当地的技术学院，一边工作支付学费，因为没有额外的钱留作大学教育之用。",
+    "chunks": [
+      {
+        "text": "After high school,",
+        "role": "时间状语",
+        "explanation": "说明事情发生的时间。",
+        "start": 0,
+        "end": 18
+      },
+      {
+        "text": "Jennifer",
+        "role": "主语",
+        "explanation": "主句的动作执行者。",
+        "start": 19,
+        "end": 27
+      },
+      {
+        "text": "attended",
+        "role": "谓语",
+        "explanation": "主句的限定动词，过去时。",
+        "start": 28,
+        "end": 36
+      },
+      {
+        "text": "a local technical college,",
+        "role": "宾语",
+        "explanation": "说明她就读的学校。",
+        "start": 37,
+        "end": 63
+      },
+      {
+        "text": "working to pay her tuition（学费）,",
+        "role": "非谓语",
+        "explanation": "working 表示伴随动作；to pay 表示工作的目的，不是另一个主句谓语。",
+        "start": 64,
+        "end": 95
+      },
+      {
+        "text": "because there was no extra money set aside for a college education.",
+        "role": "原因从句",
+        "explanation": "because 引出原因；set aside 是过去分词短语，修饰 money，表示留出的资金。",
+        "start": 96,
+        "end": 163
+      }
+    ],
+    "quiz": {
+      "question": "working to pay her tuition 在句中主要起什么作用？",
+      "options": [
+        "主句的谓语",
+        "说明就读期间的伴随动作",
+        "修饰 technical 的定语从句"
+      ],
+      "answer": 1,
+      "explanation": "主句的谓语是 attended。working 是现在分词短语，补充说明她就读时同时工作的情况。"
+    },
+    "id": "sentence_1",
+    "year": 2020,
+    "volume": "I",
+    "title": "2020年新高考全国Ⅰ卷英语",
+    "passageId": "gaokao_en_2020_I_reading_B",
+    "artifactId": "gaokao_en_2020_I_0eec93e6d44208a5",
+    "sourceLocators": [
+      "doc:0eec93e/tier:flash"
+    ],
+    "sourcePage": "https://gaokao.eol.cn/shiti/zhenti/202007/t20200711_1737836.shtml",
+    "publicPath": "/english-exams/gaokao_en_2020_I/gaokao_en_2020_I__paper__0eec93e6d442.doc",
+    "sourceName": "中国教育在线",
+    "text": "After high school, Jennifer attended a local technical college, working to pay her tuition（学费）, because there was no extra money set aside for a college education.",
+    "context": "onsin, grew up on a farm in a family of 10 children. Her dad worked at a job away from the farm, and her mother ran the farm with the kids. After high school, Jennifer attended a local technical college, working to pay her tuition（学费）, because there was no extra money set aside for a college education. After graduation, she worked to help her sisters and brothers pay for their schooling. Jennifer now is married and has three children of he"
+  },
+  {
+    "paperId": "gaokao_en_2020_II",
+    "label": "C",
+    "starts": "By the time 250,000 were on the bridge",
+    "tags": [
+      "时间状语从句",
+      "宾语从句",
+      "定语从句"
+    ],
+    "skeleton": "Engineers noticed something terrible: the roadway was flattening.",
+    "translation": "当桥上聚集了25万人时，工程师发现了一件可怕的事：桥面正在它所承受过的最重负荷下变平。",
+    "chunks": [
+      {
+        "text": "By the time 250,000 were on the bridge,",
+        "role": "时间从句",
+        "explanation": "By the time 表示到……的时候。250,000 指上文提到的人数。",
+        "start": 0,
+        "end": 39
+      },
+      {
+        "text": "engineers noticed something terrible：",
+        "role": "主句",
+        "explanation": "主语 engineers，谓语 noticed，宾语 something terrible。冒号后解释 terrible 的具体内容。",
+        "start": 40,
+        "end": 77
+      },
+      {
+        "text": "the roadway was flattening",
+        "role": "解释性分句",
+        "explanation": "主语 the roadway，谓语 was flattening，过去进行时。",
+        "start": 77,
+        "end": 103
+      },
+      {
+        "text": "under what turned out to be the heaviest load",
+        "role": "宾语从句",
+        "explanation": "under 后的 what 从句整体作介词宾语；what 在从句中作主语。",
+        "start": 104,
+        "end": 149
+      },
+      {
+        "text": "it had ever been asked to carry.",
+        "role": "定语从句",
+        "explanation": "修饰 load，省略了关系代词；it 指 roadway，过去完成时的被动形式 had been asked。",
+        "start": 150,
+        "end": 182
+      }
+    ],
+    "quiz": {
+      "question": "under 后的 what 从句整体充当什么成分？",
+      "options": [
+        "介词 under 的宾语",
+        "修饰 engineers 的定语",
+        "全句的主语"
+      ],
+      "answer": 0,
+      "explanation": "介词 under 需要宾语，what 引导的名词性从句提供这个宾语。不要把 what 当作修饰前面名词的关系代词。"
+    },
+    "id": "sentence_2",
+    "year": 2020,
+    "volume": "II",
+    "title": "2020年新高考全国Ⅱ卷英语",
+    "passageId": "gaokao_en_2020_II_reading_C",
+    "artifactId": "gaokao_en_2020_II_5b0dd9d735e3a229",
+    "sourceLocators": [
+      "doc:5b0dd9d/tier:flash"
+    ],
+    "sourcePage": "https://gaokao.eol.cn/shiti/zhenti/202102/t20210222_2077790.shtml",
+    "publicPath": "/english-exams/gaokao_en_2020_II/gaokao_en_2020_II__paper__5b0dd9d735e3.doc",
+    "sourceName": "中国教育在线",
+    "text": "By the time 250,000 were on the bridge, engineers noticed something terrible：the roadway was flattening under what turned out to be the heaviest load it had ever been asked to carry.",
+    "context": "enjoy a walk across it. Organizers expected perhaps 50,000 people to show up. Instead, as many as 800, 000 crowded the roads to the bridge. By the time 250,000 were on the bridge, engineers noticed something terrible：the roadway was flattening under what turned out to be the heaviest load it had ever been asked to carry. Worse, it was beginning to sway（晃动）. The authorities closed access to the bridge and tens of thousands of people made their way back to lan"
+  },
+  {
+    "paperId": "gaokao_en_2021_I",
+    "label": "D",
+    "starts": "The ability to accurately understand how others are feeling",
+    "tags": [
+      "宾语从句",
+      "非谓语",
+      "对比并列"
+    ],
+    "skeleton": "The ability may be used by a doctor, while a cheater might use it.",
+    "translation": "准确理解他人感受的能力，可以被医生用来判断怎样最有效地帮助患者，而骗子也可能用这种能力来控制潜在的受害者。",
+    "chunks": [
+      {
+        "text": "The ability to accurately understand how others are feeling",
+        "role": "主语",
+        "explanation": "核心名词是 ability；to understand 修饰 ability，how others are feeling 是 understand 的宾语从句。",
+        "start": 0,
+        "end": 59
+      },
+      {
+        "text": "may be used by a doctor",
+        "role": "谓语",
+        "explanation": "情态动词 may 加被动形式 be used，by a doctor 说明使用者。",
+        "start": 60,
+        "end": 83
+      },
+      {
+        "text": "to find how best to help her patients,",
+        "role": "目的状语",
+        "explanation": "to find 说明用途；how best to help 是疑问词加不定式结构，作 find 的宾语。",
+        "start": 84,
+        "end": 122
+      },
+      {
+        "text": "while a cheater might use it to control potential victims.",
+        "role": "对比分句",
+        "explanation": "while 在此表示而、却；it 指前面的理解他人感受的能力。",
+        "start": 123,
+        "end": 181
+      }
+    ],
+    "quiz": {
+      "question": "此处 while 更接近哪个意思？",
+      "options": [
+        "当……的时候",
+        "而／却，形成对比",
+        "尽管，表示让步"
+      ],
+      "answer": 1,
+      "explanation": "两部分对比同一种能力的不同用途，重点不是两个行为在时间上同时发生。"
+    },
+    "id": "sentence_3",
+    "year": 2021,
+    "volume": "I",
+    "title": "2021年新高考全国Ⅰ卷英语",
+    "passageId": "gaokao_en_2021_I_reading_D",
+    "artifactId": "gaokao_en_2021_I_f056d2ccfb77fab8",
+    "sourceLocators": [
+      "doc:f056d2c/tier:standard"
+    ],
+    "sourcePage": "https://gaokao.eol.cn/shiti/yy/202106/t20210608_2119877.shtml",
+    "publicPath": "/english-exams/gaokao_en_2021_I/gaokao_en_2021_I__paper__f056d2ccfb77.pdf",
+    "sourceName": "中国教育在线",
+    "text": "The ability to accurately understand how others are feeling may be used by a doctor to find how best to help her patients, while a cheater might use it to control potential victims.",
+    "context": "al intelligence. We prefer to describe emotional intelligence as a specific set of skills that can be used for either good or bad purposes. The ability to accurately understand how others are feeling may be used by a doctor to find how best to help her patients, while a cheater might use it to control potential victims. Being emotionally intelligent does not necessarily make one a moral person. Although popular beliefs regarding emotional intelligence run f"
+  },
+  {
+    "paperId": "gaokao_en_2021_II",
+    "label": "D",
+    "starts": "An Australian professor is developing a robot",
+    "tags": [
+      "同位语",
+      "定语从句"
+    ],
+    "skeleton": "An Australian professor is developing a robot.",
+    "translation": "一位澳大利亚教授正在开发一种监测放牧牛群健康状况的机器人。这项进展可能给一个数十年来主要依赖低技术手段、如今却面临劳动力短缺的行业带来重大变化。",
+    "chunks": [
+      {
+        "text": "An Australian professor",
+        "role": "主语",
+        "explanation": "主句动作的执行者。",
+        "start": 0,
+        "end": 23
+      },
+      {
+        "text": "is developing a robot",
+        "role": "谓语与宾语",
+        "explanation": "is developing 是现在进行时，a robot 是宾语。",
+        "start": 24,
+        "end": 45
+      },
+      {
+        "text": "to monitor the health of grazing cattle,",
+        "role": "目的状语",
+        "explanation": "to monitor 说明开发机器人的目的；grazing 修饰 cattle。",
+        "start": 46,
+        "end": 86
+      },
+      {
+        "text": "a development that could bring big changes to a profession",
+        "role": "同位语与从句",
+        "explanation": "a development 概括前面的开发行为，that could bring… 修饰 development。",
+        "start": 87,
+        "end": 145
+      },
+      {
+        "text": "that’s relied largely on a low-tech approach for decades but is facing a labor shortage.",
+        "role": "定语从句",
+        "explanation": "that 指 profession；that’s 在此是 that has。has relied 与 is facing 在从句中并列，呈现长期做法与当前困难的对比。",
+        "start": 146,
+        "end": 234
+      }
+    ],
+    "quiz": {
+      "question": "最后一个 that 引导的从句修饰哪个名词？",
+      "options": [
+        "robot",
+        "professor",
+        "profession"
+      ],
+      "answer": 2,
+      "explanation": "从句紧接 profession，讲的是这个行业长期依赖低技术、目前面临缺工，而不是机器人的状态。"
+    },
+    "id": "sentence_4",
+    "year": 2021,
+    "volume": "II",
+    "title": "2021年新高考全国Ⅱ卷英语",
+    "passageId": "gaokao_en_2021_II_reading_D",
+    "artifactId": "gaokao_en_2021_II_d5f5bf68536c0924",
+    "sourceLocators": [
+      "doc:d5f5bf6/tier:flash"
+    ],
+    "sourcePage": "https://gaokao.eol.cn/shiti/zhenti/202204/t20220430_2223302.shtml",
+    "publicPath": "/english-exams/gaokao_en_2021_II/gaokao_en_2021_II__paper__d5f5bf68536c.docx",
+    "sourceName": "中国教育在线",
+    "text": "An Australian professor is developing a robot to monitor the health of grazing cattle, a development that could bring big changes to a profession that’s relied largely on a low-tech approach for decades but is facing a labor shortage.",
+    "context": "An Australian professor is developing a robot to monitor the health of grazing cattle, a development that could bring big changes to a profession that’s relied largely on a low-tech approach for decades but is facing a labor shortage. Salah Sukkarieh, a professor at the University of Sydney, sees robots as necessary given how cattlemen are aging. He is building a four-whe"
+  },
+  {
+    "paperId": "gaokao_en_2022_I",
+    "label": "D",
+    "starts": "A ground-breaking, five-year study shows that",
+    "tags": [
+      "宾语从句",
+      "定语从句"
+    ],
+    "skeleton": "A study shows that changes led to new speech sounds.",
+    "translation": "一项具有突破性、历时五年的研究表明，人类咬合方式中与饮食有关的变化产生了新的语音，这些语音如今出现在全球一半的语言中。",
+    "chunks": [
+      {
+        "text": "A ground-breaking, five-year study",
+        "role": "主语",
+        "explanation": "主语核心为 study，前面的词限定研究的性质与时长。",
+        "start": 0,
+        "end": 34
+      },
+      {
+        "text": "shows",
+        "role": "谓语",
+        "explanation": "主句谓语。",
+        "start": 35,
+        "end": 40
+      },
+      {
+        "text": "that diet-related changes in human bite led to new speech sounds",
+        "role": "宾语从句",
+        "explanation": "that 引导 shows 的宾语；从句主语 changes，谓语 led to，宾语 new speech sounds。",
+        "start": 41,
+        "end": 105
+      },
+      {
+        "text": "that are now found in half the world's languages.",
+        "role": "定语从句",
+        "explanation": "第二个 that 修饰 speech sounds，作从句主语；are found 是被动结构。",
+        "start": 106,
+        "end": 155
+      }
+    ],
+    "quiz": {
+      "question": "两个 that 的作用有何不同？",
+      "options": [
+        "都引导宾语从句",
+        "第一个引导宾语从句，第二个引导定语从句",
+        "第一个是指示代词，第二个引导原因从句"
+      ],
+      "answer": 1,
+      "explanation": "第一个 that 提供 shows 的内容；第二个 that 进一步说明 new speech sounds，且在从句中作主语。"
+    },
+    "id": "sentence_5",
+    "year": 2022,
+    "volume": "I",
+    "title": "2022年新高考全国Ⅰ卷英语",
+    "passageId": "gaokao_en_2022_I_reading_D",
+    "artifactId": "gaokao_en_2022_I_1d330c62ce053eb6",
+    "sourceLocators": [
+      "doc:1d330c6/tier:flash"
+    ],
+    "sourcePage": "https://gaokao.eol.cn/shiti/zhenti/202206/t20220609_2230741.shtml",
+    "publicPath": "/english-exams/gaokao_en_2022_I/gaokao_en_2022_I__paper__1d330c62ce05.docx",
+    "sourceName": "中国教育在线",
+    "text": "A ground-breaking, five-year study shows that diet-related changes in human bite led to new speech sounds that are now found in half the world's languages.",
+    "context": "nds, from the common \"m\" and \"a\" to the rare clicks of some southern African languages. But why are certain sounds more common than others? A ground-breaking, five-year study shows that diet-related changes in human bite led to new speech sounds that are now found in half the world's languages. More than 30 years ago, the scholar Charles Hockett noted that speech sounds called labiodentals, such as \"f\" and \"v\", were more common in "
+  },
+  {
+    "paperId": "gaokao_en_2023_I",
+    "label": "D",
+    "starts": "The experiment of estimation he conducted showed that",
+    "tags": [
+      "省略关系词",
+      "宾语从句"
+    ],
+    "skeleton": "The experiment showed that the average could be quite accurate.",
+    "translation": "他所做的估算实验表明，在某些情况下，大量独立估算值的平均数可能相当准确。",
+    "chunks": [
+      {
+        "text": "The experiment of estimation",
+        "role": "主语",
+        "explanation": "主语核心是 experiment，of estimation 限定实验的内容。",
+        "start": 0,
+        "end": 28
+      },
+      {
+        "text": "he conducted",
+        "role": "定语从句",
+        "explanation": "修饰 experiment，省略了作 conducted 宾语的关系代词 that/which。",
+        "start": 29,
+        "end": 41
+      },
+      {
+        "text": "showed",
+        "role": "谓语",
+        "explanation": "主句谓语，不要误把前面的 conducted 当作主句谓语。",
+        "start": 42,
+        "end": 48
+      },
+      {
+        "text": "that in some cases, the average of a large number of independent estimates could be quite accurate.",
+        "role": "宾语从句",
+        "explanation": "that 引出实验表明的结论；从句主语核心是 average，could be 是谓语，accurate 是表语。",
+        "start": 49,
+        "end": 148
+      }
+    ],
+    "quiz": {
+      "question": "全句的主句谓语是哪个？",
+      "options": [
+        "conducted",
+        "showed",
+        "could be"
+      ],
+      "answer": 1,
+      "explanation": "conducted 位于修饰 experiment 的定语从句中；could be 位于 showed 后的宾语从句中。"
+    },
+    "id": "sentence_6",
+    "year": 2023,
+    "volume": "I",
+    "title": "2023年新课标全国Ⅰ卷英语",
+    "passageId": "gaokao_en_2023_I_reading_D",
+    "artifactId": "gaokao_en_2023_I_8d9fb6d9470abc57",
+    "sourceLocators": [
+      "doc:8d9fb6d/tier:standard/page:1",
+      "doc:d37d050/tier:standard/page:1",
+      "doc:3f2c5f6/tier:standard/page:1",
+      "doc:0f5d187/tier:standard/page:1",
+      "doc:200ac4c/tier:standard/page:1",
+      "doc:6d7139a/tier:standard/page:1",
+      "doc:08755c5/tier:standard/page:1"
+    ],
+    "sourcePage": "https://gaokao.eol.cn/shiti/yy/202306/t20230611_2435466.shtml",
+    "publicPath": "/english-exams/gaokao_en_2023_I/gaokao_en_2023_I__paper__8d9fb6d9470a.png",
+    "sourceName": "中国教育在线",
+    "text": "The experiment of estimation he conducted showed that in some cases, the average of a large number of independent estimates could be quite accurate.",
+    "context": "07, the English statistician Francis Galton published a paper which illustrated what has come to be known as the “wisdom of crowds” effect. The experiment of estimation he conducted showed that in some cases, the average of a large number of independent estimates could be quite accurate. This effect capitalizes on the fact that when people make errors, those errors aren't always the same. Some people will tend to overestimat"
+  },
+  {
+    "paperId": "gaokao_en_2023_II",
+    "label": "D",
+    "starts": "If you're lucky, there might be a pocket park",
+    "tags": [
+      "条件状语从句",
+      "形式主语",
+      "定语从句"
+    ],
+    "skeleton": "There might be a pocket park, but it is unusual to find places.",
+    "translation": "如果你幸运的话，住处附近可能有一个袖珍公园，但在城市中找到相对原生态的地方并不常见。",
+    "chunks": [
+      {
+        "text": "If you're lucky,",
+        "role": "条件从句",
+        "explanation": "If 提出条件。",
+        "start": 0,
+        "end": 16
+      },
+      {
+        "text": "there might be a pocket park near where you live,",
+        "role": "存在句",
+        "explanation": "there might be 表示可能存在；where you live 整体作 near 的宾语，表示居住的地方。",
+        "start": 17,
+        "end": 66
+      },
+      {
+        "text": "but it's unusual to find places in a city",
+        "role": "对比分句与形式主语",
+        "explanation": "but 转折；it 是形式主语，真正主语是 to find places in a city…，不是指前面的公园。",
+        "start": 67,
+        "end": 108
+      },
+      {
+        "text": "that are relatively wild.",
+        "role": "定语从句",
+        "explanation": "that 修饰 places，wild 在此描述较少人工干预的自然状态。",
+        "start": 109,
+        "end": 134
+      }
+    ],
+    "quiz": {
+      "question": "it's unusual 中的 it 是什么？",
+      "options": [
+        "指代 pocket park",
+        "形式主语，真正主语在后面的不定式中",
+        "指代 where you live"
+      ],
+      "answer": 1,
+      "explanation": "It is + 形容词 + to do 是常见的形式主语结构，真正评价的是找到这些地方这件事。"
+    },
+    "id": "sentence_7",
+    "year": 2023,
+    "volume": "II",
+    "title": "2023年新课标全国Ⅱ卷英语",
+    "passageId": "gaokao_en_2023_II_reading_D",
+    "artifactId": "gaokao_en_2023_II_e808ed6eee69f388",
+    "sourceLocators": [
+      "doc:e808ed6/tier:standard/page:1",
+      "doc:e7f85fd/tier:standard/page:1",
+      "doc:11c2d7c/tier:standard/page:1",
+      "doc:40cf762/tier:standard/page:1",
+      "doc:3be400e/tier:standard/page:1",
+      "doc:f982e52/tier:standard/page:1",
+      "doc:5e04444/tier:standard/page:1",
+      "doc:84e1562/tier:standard/page:1",
+      "doc:8dbfdcd/tier:standard/page:1",
+      "doc:96c9d15/tier:standard/page:1",
+      "doc:c43b899/tier:standard/page:1",
+      "doc:5aca89b/tier:standard/page:1"
+    ],
+    "sourcePage": "https://gaokao.eol.cn/shiti/yy/202306/t20230611_2435440.shtml",
+    "publicPath": "/english-exams/gaokao_en_2023_II/gaokao_en_2023_II__paper__e808ed6eee69.jpg",
+    "sourceName": "中国教育在线",
+    "text": "If you're lucky, there might be a pocket park near where you live, but it's unusual to find places in a city that are relatively wild.",
+    "context": "As cities balloon with growth, access to nature for people living in urban areas is becoming harder to find. If you're lucky, there might be a pocket park near where you live, but it's unusual to find places in a city that are relatively wild. Past research has found health and wellness benefits of nature for humans, but a new study shows that wildness in urban areas is extremely "
+  },
+  {
+    "paperId": "gaokao_en_2024_I",
+    "label": "D",
+    "starts": "This makes sense because the people who get observational biodiversity data",
+    "tags": [
+      "原因状语从句",
+      "定语从句",
+      "非谓语"
+    ],
+    "skeleton": "This makes sense because the people are often citizen scientists.",
+    "translation": "这说得通，因为通过移动设备获取观测性生物多样性数据的人，往往是记录自己在附近区域遇到的物种的公民科学家。",
+    "chunks": [
+      {
+        "text": "This makes sense",
+        "role": "主句",
+        "explanation": "This 指上文提到的情况；makes sense 表示合理、说得通。",
+        "start": 0,
+        "end": 16
+      },
+      {
+        "text": "because the people",
+        "role": "原因从句",
+        "explanation": "because 开始说明原因，从句主语的核心是 people。",
+        "start": 17,
+        "end": 35
+      },
+      {
+        "text": "who get observational biodiversity data on mobile devices",
+        "role": "定语从句",
+        "explanation": "who 修饰 people，作 get 的主语；此从句结束后才回到原因从句的谓语。",
+        "start": 36,
+        "end": 93
+      },
+      {
+        "text": "are often citizen scientists",
+        "role": "原因从句谓语与表语",
+        "explanation": "are 是原因从句的谓语，citizen scientists 是表语。",
+        "start": 94,
+        "end": 122
+      },
+      {
+        "text": "recording their encounters with species in areas nearby.",
+        "role": "非谓语定语",
+        "explanation": "recording 修饰 citizen scientists，说明他们记录的活动；不是与 are 并列的限定谓语。",
+        "start": 123,
+        "end": 179
+      }
+    ],
+    "quiz": {
+      "question": "because 从句的主干谓语是哪个？",
+      "options": [
+        "get",
+        "recording",
+        "are"
+      ],
+      "answer": 2,
+      "explanation": "who get… 是插在 people 后的定语从句。去掉它，就能看出 the people are often citizen scientists。"
+    },
+    "id": "sentence_8",
+    "year": 2024,
+    "volume": "I",
+    "title": "2024年新课标全国Ⅰ卷英语",
+    "passageId": "gaokao_en_2024_I_reading_D",
+    "artifactId": "gaokao_en_2024_I_702232e07efbbcda",
+    "sourceLocators": [
+      "doc:702232e/tier:standard/pages:1-18"
+    ],
+    "sourcePage": "https://imgs.app.gaokaozhitongche.com/resource/pdf/paper/202406/20240612092215_pqN6oM.pdf",
+    "publicPath": "/english-exams/gaokao_en_2024_I/gaokao_en_2024_I__paper__702232e07efb.pdf",
+    "sourceName": "高考直通车公开题卷",
+    "text": "This makes sense because the people who get observational biodiversity data on mobile devices are often citizen scientists recording their encounters with species in areas nearby.",
+    "context": "-only records did not lead to better global coverage. Moreover, these data are biased and favor certain regions, time periods, and species. This makes sense because the people who get observational biodiversity data on mobile devices are often citizen scientists recording their encounters with species in areas nearby. These data are also biased toward certain species with attractive or eye-catching features. What can we do with the imperfect datasets of b"
+  },
+  {
+    "paperId": "gaokao_en_2024_II",
+    "label": "D",
+    "starts": "Given the astonishing potential of AI to transform our lives",
+    "tags": [
+      "介词短语",
+      "并列句",
+      "表语从句"
+    ],
+    "skeleton": "We all need to take action, and this is where the book comes in.",
+    "translation": "考虑到人工智能改变生活的巨大潜力，我们都需要采取行动应对人工智能驱动的未来，而《AI by Design》这本书正是在这里发挥作用。",
+    "chunks": [
+      {
+        "text": "Given the astonishing potential of AI to transform our lives,",
+        "role": "背景状语",
+        "explanation": "Given 在这里作介词，表示考虑到；to transform 修饰 potential。",
+        "start": 0,
+        "end": 61
+      },
+      {
+        "text": "we all need to take action",
+        "role": "主句",
+        "explanation": "主语 we，谓语 need to take，宾语 action。",
+        "start": 62,
+        "end": 88
+      },
+      {
+        "text": "to deal with our AI-powered future,",
+        "role": "目的状语",
+        "explanation": "说明采取行动的目的。",
+        "start": 89,
+        "end": 124
+      },
+      {
+        "text": "and this is where AI by Design: A Plan for Living with Artificial Intelligence comes in.",
+        "role": "并列句与表语从句",
+        "explanation": "and 连接分句；where… 作 is 的表语，comes in 表示发挥作用，而非单纯走进来。",
+        "start": 125,
+        "end": 213
+      }
+    ],
+    "quiz": {
+      "question": "Given 在句首最合适的理解是？",
+      "options": [
+        "已经给出的礼物",
+        "考虑到",
+        "过去完成时谓语"
+      ],
+      "answer": 1,
+      "explanation": "Given + 名词短语用于引入考虑因素，后面的 we all need… 才是主句。"
+    },
+    "id": "sentence_9",
+    "year": 2024,
+    "volume": "II",
+    "title": "2024年新课标全国Ⅱ卷英语",
+    "passageId": "gaokao_en_2024_II_reading_D",
+    "artifactId": "gaokao_en_2024_II_46faf62ab015dc4b",
+    "sourceLocators": [
+      "doc:46faf62/tier:standard/page:1",
+      "doc:f82b00c/tier:standard/page:1",
+      "doc:4d79a9a/tier:standard/page:1",
+      "doc:7ff6742/tier:standard/page:1",
+      "doc:e77adf6/tier:standard/page:1",
+      "doc:1ee58a7/tier:standard/page:1",
+      "doc:d41d269/tier:standard/page:1",
+      "doc:3676fcc/tier:standard/page:1",
+      "doc:f907f91/tier:standard/page:1",
+      "doc:48f1b4d/tier:standard/page:1",
+      "doc:d598e1e/tier:standard/page:1",
+      "doc:79de2fe/tier:standard/page:1",
+      "doc:867cace/tier:standard/page:1",
+      "doc:11dc53b/tier:standard/page:1",
+      "doc:f77f5c5/tier:standard/page:1",
+      "doc:b903293/tier:standard/page:1",
+      "doc:f7b578f/tier:standard/page:1",
+      "doc:a209611/tier:standard/page:1"
+    ],
+    "sourcePage": "https://gaokao.eol.cn/shiti/yy/202406/t20240613_2616244.shtml",
+    "publicPath": "/english-exams/gaokao_en_2024_II/gaokao_en_2024_II__paper__46faf62ab015.png",
+    "sourceName": "中国教育在线",
+    "text": "Given the astonishing potential of AI to transform our lives, we all need to take action to deal with our AI-powered future, and this is where AI by Design: A Plan for Living with Artificial Intelligence comes in.",
+    "context": "Given the astonishing potential of AI to transform our lives, we all need to take action to deal with our AI-powered future, and this is where AI by Design: A Plan for Living with Artificial Intelligence comes in. This absorbing new book by Catriona Campbell is a practical roadmap addressing the challenges posed by the forthcoming AI revolution (变革). "
+  },
+  {
+    "paperId": "gaokao_en_2025_I",
+    "label": "A",
+    "starts": "As the world races to decarbonize everything",
+    "tags": [
+      "状语从句",
+      "非限制性定语从句"
+    ],
+    "skeleton": "It faces particular problems with transportation.",
+    "translation": "在全球争相对各领域实现脱碳之际，交通运输带来了特别棘手的问题——它约占与能源相关的温室气体排放量的四分之一。",
+    "chunks": [
+      {
+        "text": "As the world races to decarbonize everything,",
+        "role": "背景从句",
+        "explanation": "As 在此可理解为当……之际、随着，交代全球脱碳的背景。",
+        "start": 0,
+        "end": 45
+      },
+      {
+        "text": "it faces particular problems with transportation",
+        "role": "主句",
+        "explanation": "it 指 the world；faces 是主句谓语，problems 是宾语，with transportation 限定问题涉及的领域。",
+        "start": 46,
+        "end": 94
+      },
+      {
+        "text": "—which accounts for about a quarter of our energy-related greenhouse gas emissions.",
+        "role": "非限制性定语从句",
+        "explanation": "which 指 transportation，补充其排放占比；account for 表示占据某个比例。",
+        "start": 94,
+        "end": 177
+      }
+    ],
+    "quiz": {
+      "question": "which 指向什么？",
+      "options": [
+        "everything",
+        "transportation",
+        "particular problems"
+      ],
+      "answer": 1,
+      "explanation": "从句给出交通运输的排放占比，which 指向紧前面的 transportation。"
+    },
+    "id": "sentence_10",
+    "year": 2025,
+    "volume": "I",
+    "title": "2025年新课标全国Ⅰ卷英语",
+    "passageId": "gaokao_en_2025_I_reading_A",
+    "artifactId": "gaokao_en_2025_I_e73099a6cf19483e",
+    "sourceLocators": [
+      "doc:e73099a/tier:standard/page:1",
+      "doc:4d26145/tier:standard/page:1",
+      "doc:e8537e7/tier:standard/page:1",
+      "doc:b0be0f1/tier:standard/page:1",
+      "doc:b9b2ecd/tier:standard/page:1",
+      "doc:9b7ef25/tier:standard/page:1",
+      "doc:671f2f3/tier:standard/page:1",
+      "doc:4cc9c9e/tier:standard/page:1"
+    ],
+    "sourcePage": "https://gaokao.eol.cn/shiti/yy/202506/t20250612_2674288.shtml",
+    "publicPath": "/english-exams/gaokao_en_2025_I/gaokao_en_2025_I__paper__e73099a6cf19.png",
+    "sourceName": "中国教育在线",
+    "text": "As the world races to decarbonize everything, it faces particular problems with transportation—which accounts for about a quarter of our energy-related greenhouse gas emissions.",
+    "context": "ing of planes, trains and automobiles Moving goods and people around the world is responsible for a large part of global CO₂ emissions(排放). As the world races to decarbonize everything, it faces particular problems with transportation—which accounts for about a quarter of our energy-related greenhouse gas emissions. Here's the breakdown of the emissions in 2018 for different modes of transport. The fuels for transport need to be not just green, cheap an"
+  },
+  {
+    "paperId": "gaokao_en_2025_I",
+    "label": "C",
+    "starts": "While safety improvements might have been made to our streets",
+    "tags": [
+      "让步状语从句",
+      "情态动词被动"
+    ],
+    "skeleton": "Transport studies also show declines in pedestrian mobility.",
+    "translation": "尽管近年来街道的安全性可能有所改善，交通研究也显示行人的出行能力有所下降，年幼儿童尤其如此。",
+    "chunks": [
+      {
+        "text": "While safety improvements might have been made to our streets in recent years,",
+        "role": "让步从句",
+        "explanation": "While 在此表示尽管；might have been made 是情态动词加完成时被动，表达对过去情况的推测。",
+        "start": 0,
+        "end": 78
+      },
+      {
+        "text": "transport studies",
+        "role": "主语",
+        "explanation": "主句的主语，不是前面从句中的 safety improvements。",
+        "start": 79,
+        "end": 96
+      },
+      {
+        "text": "also show declines in pedestrian(行人) mobility,",
+        "role": "谓语与宾语",
+        "explanation": "show 是谓语；declines 是宾语核心，in pedestrian mobility 限定下降的领域。",
+        "start": 97,
+        "end": 143
+      },
+      {
+        "text": "especially among young children.",
+        "role": "补充状语",
+        "explanation": "突出受影响较明显的群体。",
+        "start": 144,
+        "end": 176
+      }
+    ],
+    "quiz": {
+      "question": "本句 While 的逻辑关系是？",
+      "options": [
+        "让步：尽管",
+        "同时发生的两个动作",
+        "原因：因为"
+      ],
+      "answer": 0,
+      "explanation": "安全可能改善与出行能力下降形成反差，因此这里强调让步关系。"
+    },
+    "id": "sentence_11",
+    "year": 2025,
+    "volume": "I",
+    "title": "2025年新课标全国Ⅰ卷英语",
+    "passageId": "gaokao_en_2025_I_reading_C",
+    "artifactId": "gaokao_en_2025_I_e73099a6cf19483e",
+    "sourceLocators": [
+      "doc:e73099a/tier:standard/page:1",
+      "doc:4d26145/tier:standard/page:1",
+      "doc:e8537e7/tier:standard/page:1",
+      "doc:b0be0f1/tier:standard/page:1",
+      "doc:b9b2ecd/tier:standard/page:1",
+      "doc:9b7ef25/tier:standard/page:1",
+      "doc:671f2f3/tier:standard/page:1",
+      "doc:4cc9c9e/tier:standard/page:1"
+    ],
+    "sourcePage": "https://gaokao.eol.cn/shiti/yy/202506/t20250612_2674288.shtml",
+    "publicPath": "/english-exams/gaokao_en_2025_I/gaokao_en_2025_I__paper__e73099a6cf19.png",
+    "sourceName": "中国教育在线",
+    "text": "While safety improvements might have been made to our streets in recent years, transport studies also show declines in pedestrian(行人) mobility, especially among young children.",
+    "context": "While safety improvements might have been made to our streets in recent years, transport studies also show declines in pedestrian(行人) mobility, especially among young children. Many parents say there's too much traffic on the roads for their children to walk safely to school, so they pack them into the car instead."
+  },
+  {
+    "paperId": "gaokao_en_2025_II",
+    "label": "D",
+    "starts": "But last month, one popular New York City restaurant tried a different way",
+    "tags": [
+      "解释性分句",
+      "定语从句",
+      "非谓语"
+    ],
+    "skeleton": "A restaurant tried a different way: it changed its menu.",
+    "translation": "但上个月，纽约市一家受欢迎的餐厅尝试了另一种做法：它修改菜单，专门提供那些原本会被丢弃的食物。",
+    "chunks": [
+      {
+        "text": "But last month,",
+        "role": "连接与时间状语",
+        "explanation": "But 承接前文并转折，last month 表示时间。",
+        "start": 0,
+        "end": 15
+      },
+      {
+        "text": "one popular New York City restaurant tried a different way:",
+        "role": "主句",
+        "explanation": "主语核心 restaurant，谓语 tried，宾语 a different way。冒号后解释具体做法。",
+        "start": 16,
+        "end": 75
+      },
+      {
+        "text": "It changed its menu",
+        "role": "解释性分句",
+        "explanation": "It 指这家餐厅，changed 为谓语，menu 为宾语。",
+        "start": 76,
+        "end": 95
+      },
+      {
+        "text": "to exclusively (专门) offer food",
+        "role": "目的状语",
+        "explanation": "to offer 表示调整菜单的目的。exclusively 修饰 offer，不要按中文顺序逐词硬译。",
+        "start": 96,
+        "end": 126
+      },
+      {
+        "text": "that would otherwise be thrown away.",
+        "role": "定语从句",
+        "explanation": "that 修饰 food；would be thrown away 是被动形式，otherwise 表示否则、若不这样做。",
+        "start": 127,
+        "end": 163
+      }
+    ],
+    "quiz": {
+      "question": "otherwise 在这里隐含的条件是什么？",
+      "options": [
+        "若不采用这家餐厅的做法",
+        "食物必须有另一种味道",
+        "餐厅上个月没有营业"
+      ],
+      "answer": 0,
+      "explanation": "食物因为这次菜单调整得以被使用；如果没有这种做法，它原本会被丢弃。"
+    },
+    "id": "sentence_12",
+    "year": 2025,
+    "volume": "II",
+    "title": "2025年新课标全国Ⅱ卷英语",
+    "passageId": "gaokao_en_2025_II_reading_D",
+    "artifactId": "gaokao_en_2025_II_7f356d28e5c20083",
+    "sourceLocators": [
+      "doc:7f356d2/tier:standard/page:1",
+      "doc:e3bf2c4/tier:standard/page:1",
+      "doc:af8b5a3/tier:standard/page:1",
+      "doc:1634205/tier:standard/page:1",
+      "doc:c9be32c/tier:standard/page:1",
+      "doc:53c4d54/tier:standard/page:1",
+      "doc:a9eb8be/tier:standard/page:1",
+      "doc:1932552/tier:standard/page:1",
+      "doc:ea25f73/tier:standard/page:1",
+      "doc:f1525be/tier:standard/page:1",
+      "doc:5385918/tier:standard/page:1"
+    ],
+    "sourcePage": "https://gaokao.eol.cn/shiti/yy/202506/t20250612_2674278.shtml",
+    "publicPath": "/english-exams/gaokao_en_2025_II/gaokao_en_2025_II__paper__7f356d28e5c2.png",
+    "sourceName": "中国教育在线",
+    "text": "But last month, one popular New York City restaurant tried a different way: It changed its menu to exclusively (专门) offer food that would otherwise be thrown away.",
+    "context": "echnological solutions to educational campaigns, food producers and sellers are looking for ways to use more of what we're already growing. But last month, one popular New York City restaurant tried a different way: It changed its menu to exclusively (专门) offer food that would otherwise be thrown away. For two weeks in March, Greenwich Village's Blue Hill restaurant was renamed wastED, and served items like fried skate cartilage, a juice p"
+  }
+]

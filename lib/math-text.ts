@@ -6,7 +6,10 @@ export function normalizeMathCommands(tex: string) {
   tex = tex.replace(/\\+u00(?:0[0-9a-f]|1[0-9a-f]|7f)/gi, "")
     .replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/g, "");
   if (/\\\\[A-Za-z]/.test(tex) && !/(?<!\\)\\[A-Za-z]/.test(tex)) tex = tex.replace(/\\\\(?=[A-Za-z])/g, "\\");
-  return tex.replace(/(?<!\\)\\\\(?=(?:begin|end)\{)/g, "\\");
+  return tex.replace(/(?<!\\)\\\\(?=(?:begin|end)\{)/g, "\\")
+    // Models sometimes place Chinese punctuation inside the formula boundary.
+    // Keep the punctuation visible without KaTeX's strict math-mode rejection.
+    .replace(/[，。；：！？、]/g, punctuation => `\\text{${punctuation}}`);
 }
 
 const superscripts: Record<string, string> = Object.fromEntries([..."⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁽⁾ⁿ"].map((char, index) => [char, [..."0123456789+-()n"][index]]));
@@ -56,7 +59,8 @@ export function splitMathText(text: string): MathSegment[] {
     const start = match.index, opening = match[0].replace(/^\\+/, "\\");
     search = start + match[0].length;
     if (escaped(text, start)) continue;
-    let end = -1, closingLength = 0, tex = "", display = opening !== "$" && opening !== "\\(";
+    let end = -1, closingLength = 0, tex = "";
+    const display = opening !== "$" && opening !== "\\(";
     if (match[1]) {
       const closing = new RegExp(`\\\\+end\\{${match[1]}\\}`, "g"); closing.lastIndex = search;
       const closingMatch = closing.exec(text);

@@ -52,17 +52,18 @@ export async function cropQuestionImage(doc: PaperDocument, regions: CropRegion[
     // Remove entirely blank continuation fragments and excess vertical whitespace.
     // This uses rendered pixels, so diagrams without PDF text are retained.
     const pixels = canvas.getContext("2d")!.getImageData(0, 0, canvas.width, canvas.height).data;
-    let first = canvas.height, last = -1;
+    let first = canvas.height, last = -1, firstX = canvas.width, lastX = -1;
     for (let y = 0; y < canvas.height; y++) {
       for (let x = 0; x < canvas.width; x += 2) {
         const offset = (y * canvas.width + x) * 4;
-        if (pixels[offset + 3] > 16 && pixels[offset] + pixels[offset + 1] + pixels[offset + 2] < 730) { first = Math.min(first, y); last = y; break; }
+        if (pixels[offset + 3] > 16 && pixels[offset] + pixels[offset + 1] + pixels[offset + 2] < 730) { first = Math.min(first, y); last = y; firstX = Math.min(firstX,x); lastX = Math.max(lastX,x); }
       }
     }
     if (last < 0) continue;
     const top = Math.max(0, first - 14), bottom = Math.min(canvas.height, last + 15);
-    const trimmed = document.createElement("canvas"); trimmed.width = canvas.width; trimmed.height = bottom - top;
-    trimmed.getContext("2d")!.drawImage(canvas, 0, top, canvas.width, trimmed.height, 0, 0, canvas.width, trimmed.height);
+    const left = Math.max(0,firstX-14), right = Math.min(canvas.width,lastX+16);
+    const trimmed = document.createElement("canvas"); trimmed.width = right-left; trimmed.height = bottom - top;
+    trimmed.getContext("2d")!.drawImage(canvas, left, top, trimmed.width, trimmed.height, 0, 0, trimmed.width, trimmed.height);
     parts.push(trimmed);
   }
   if (!parts.length) throw new Error("裁切范围内没有可见题目，请重新框选。");

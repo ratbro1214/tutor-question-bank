@@ -1,0 +1,532 @@
+{
+  "paperId": "gaokao_en_2022_II",
+  "status": "PENDING",
+  "extractionMethod": "mineru-office-flash",
+  "sections": [
+    {
+      "id": "gaokao_en_2022_II_reading",
+      "paper_id": "gaokao_en_2022_II",
+      "type": "reading",
+      "title": "阅读理解与七选五",
+      "position": 0
+    },
+    {
+      "id": "gaokao_en_2022_II_language",
+      "paper_id": "gaokao_en_2022_II",
+      "type": "language",
+      "title": "语言运用",
+      "position": 1
+    },
+    {
+      "id": "gaokao_en_2022_II_writing",
+      "paper_id": "gaokao_en_2022_II",
+      "type": "writing",
+      "title": "写作",
+      "position": 2
+    }
+  ],
+  "passages": [
+    {
+      "id": "gaokao_en_2022_II_reading_A",
+      "section_id": "gaokao_en_2022_II_reading",
+      "label": "A",
+      "text": "**A**\r\n\r\n**Children's Discovery Museum**\r\n\r\n**General Information about Group Play**\r\n\r\n**Pricing**\r\n\r\nGroup Play       \\$7/person\r\n\r\n**Scholarships**\r\n\r\nWe offer scholarships to low-income schools and youth organizations, subject to availability. Participation in a post-visit survey is required.\r\n\r\nScholarships are for Group Play admission fees and/or transportation. Transportation invoices（发票）must be received within 60 days of your visit to guarantee the scholarship.\r\n\r\n**Group Size**\r\n\r\nWe require one chaperone（监护人）per ten children. Failure to provide enough chaperones will result in an extra charge of \\$50 per absent adult.\r\n\r\nGroup Play is for groups of 10 or more with a limit of 35 people. For groups of 35 or more, please call to discuss options.\r\n\r\n**Hours**\r\n\r\nThe Museum is open daily from 9：30 am to 4：30 pm.\r\n\r\nGroup Play may be scheduled during any day or time the Museum is open.\r\n\r\n**Registration Policy**\r\n\r\nRegistration must be made at least two weeks in advance.\r\n\r\nRegister online or fill out a Group Play Registration Form with multiple date and start time options.\r\n\r\nOnce the registration form is received and processed, we will send a confirmation email within two business days.\r\n\r\n**Guidelines**\r\n\r\n●Teachers and chaperones should model good behavior for the group and remain with students at all times.\r\n\r\n●Children are not allowed unaccompanied in all areas of the Museum.\r\n\r\n●Children should play nicely with each other and exhibits.\r\n\r\n●Use your indoor voice when at the Museum.",
+      "artifact_id": "gaokao_en_2022_II_092466a264b8effd",
+      "source_locator": "doc:092466a/tier:flash/page:1",
+      "status": "PENDING"
+    },
+    {
+      "id": "gaokao_en_2022_II_reading_B",
+      "section_id": "gaokao_en_2022_II_reading",
+      "label": "B",
+      "text": "B\r\n\r\nWe journalists live in a new age of storytelling, with many new multimedia tools. Many young people don't even realize it's new. For them, it's just normal.\r\n\r\nThis <u>hit home for me</u> as I was sitting with my 2-year-old grandson on a sofa over the Spring Festival holiday. I had brought a children's book to read. It had simple words and colorful pictures—a perfect match for his age.\r\n\r\nPicture this: my grandson sitting on my lap as I hold the book in front so he can see the pictures. As I read, he reaches out and pokes（戳）the page with his finger.\r\n\r\nWhat's up with that? He just likes the pictures, I thought. Then I turned the page and continued. He poked the page even harder. I nearly dropped the book. I was confused: Is there something wrong with this kid?\r\n\r\nThen I realized what was happening. He was actually a stranger to books. His father frequently amused the boy with a tablet computer which was loaded with colorful pictures that come alive when you poke them. He thought my storybook was like that.\r\n\r\nSorry, kid. This book is not part of your high-tech world. It's an outdated, lifeless thing. An antique, Like your grandfather. Well, I may be old, but I'm not hopelessly challenged, digitally speaking. I edit video and produce audio. I use mobile payment. I've even built websites.\r\n\r\nThere's one notable gap in my new-media experience, however: I've spent little time in front of a camera, since I have a face made for radio. But that didn't stop China Daily from asking me last week to share a personal story for a video project about the integration of Beijing, Tianjin and Hebei province.\r\n\r\nAnyway, grandpa is now an internet star—two minutes of fame! I promise not to let it go to my head. But I will make sure my 2-year-old grandson sees it on his tablet.",
+      "artifact_id": "gaokao_en_2022_II_092466a264b8effd",
+      "source_locator": "doc:092466a/tier:flash/page:1",
+      "status": "PENDING"
+    },
+    {
+      "id": "gaokao_en_2022_II_reading_C",
+      "section_id": "gaokao_en_2022_II_reading",
+      "label": "C",
+      "text": "C\r\n\r\nOver the last seven years, most states have banned texting by drivers, and public service campaigns have tried a wide range of methods to persuade people to put down their phones when they are behind the wheel.\r\n\r\nYet the problem, by just about any measure, appears to be getting worse. Americans are still texting while driving, as well as using social networks and taking photos. Road accidents, which had fallen for years, are now rising sharply.\r\n\r\nThat is partly because people are driving more, but Mark Rosekind, the chief of the National Highway Traffic Safety Administration, said distracted（分心）driving was \"only increasing, unfortunately.\"\r\n\r\n\"Big change requires big ideas.\" he said in a speech last month, referring broadly to the need to improve road safety. So to try to change a distinctly modern behavior, lawmakers and public health experts are reaching back to an old approach: They want to treat distracted driving like drunk driving.\r\n\r\nAn idea from lawmakers in New York is to give police officers a new device called the Textalyzer. It would work like this: An officer arriving at the scene of a crash could ask for the phones of the drivers and use the Textalyzer to check in the operating system for recent activity. The technology could determine whether a driver had just texted, emailed or done anything else that is not allowed under New York's hands-free driving laws.\r\n\r\n\"We need <u>something</u> on the books that can change people's behavior,” said Félix W. Ortiz, who pushed for the state's 2001 ban on hand-held devices by drivers. If the Textalyzer bill becomes law, he said, \"people are going to be more afraid to put their hands on the cell phone.\"",
+      "artifact_id": "gaokao_en_2022_II_092466a264b8effd",
+      "source_locator": "doc:092466a/tier:flash/page:1",
+      "status": "PENDING"
+    },
+    {
+      "id": "gaokao_en_2022_II_reading_D",
+      "section_id": "gaokao_en_2022_II_reading",
+      "label": "D",
+      "text": "D\r\n\r\nAs we age, even if we're healthy, the heart just isn't as efficient in processing oxygen as it used to be. In most people the first signs show up in their 50s or early 60s. And among people who don't exercise, the changes can start even sooner.\r\n\r\n\"Think of a rubber band. In the beginning, it is flexible, but put it in a drawer for 20 years and it will become dry and easily broken,\" says Dr. Ben Levine, a heart specialist at the University of Texas. That's what happens to the heart. Fortunately for those in midlife, Levine is finding that even if you haven't been an enthusiastic exerciser, getting in shape now may help improve your aging heart.\r\n\r\nLevine and his research team selected volunteers aged between 45 and 64 who did not exercise much but were otherwise healthy. Participants were randomly divided into two groups. The first group participated in a program of nonaerobic（无氧）exercise—balance training and weight training—three times a week. The second group did high-intensity aerobic exercise under the guidance of a trainer for four or more days a week. After two years, the second group saw remarkable improvements in heart health.\r\n\r\n\"We took these 50-year-old hearts and turned the clock back to 30-or 35-year-old hearts,\" says Levine. \"And the reason they got so much stronger and fitter was that their hearts could now fill a lot better and pump（泵送）a lot more blood during exercise.\" But the hearts of those who participated in less intense exercise didn't change, he says.\r\n\r\n\"The sweet spot in life to start exercising, if you haven't already, is in late middle age when the heart still has flexibility,\" Levine says. \"We put healthy 70-year-olds through a yearlong exercise training program, and nothing happened to them at all.\"\r\n\r\nDr. Nieca Goldberg, a spokeswoman for the American Heart Association, says Levine's findings are a great start. But the study was small and needs to be repeated with far larger groups of people to determine exactly which aspects of an exercise routine make the biggest difference.",
+      "artifact_id": "gaokao_en_2022_II_092466a264b8effd",
+      "source_locator": "doc:092466a/tier:flash/page:1",
+      "status": "PENDING"
+    },
+    {
+      "id": "gaokao_en_2022_II_reading_七选五",
+      "section_id": "gaokao_en_2022_II_reading",
+      "label": "七选五",
+      "text": "第二节（共5小题；每小题2.5分，满分12.5分）**\r\n\r\n阅读下面短文，从短文后的选项中选出可以填入空白处的最佳选项。选项中有两项为多余选项。\r\n\r\nWriting an essay is a difficult process for most people. However, the process can be made easier if you learn to practice three simple techniques.\r\n\r\n<u>36__</u>When you are first trying to think of ideas for an essay, put your pen to your paper and write nonstop for ten or fifteen minutes without letting your pen leave the paper. Stay loose and free. <u>__37__</u> Don't worry about grammar or spelling. Even though this technique won't work for everyone, it helps many people get a good store of ideas to draw on.\r\n\r\nThe next technique is to write your draft rapidly without worrying about being perfect. <u>__38__</u> Yet, by learning to live with imperfection, you will save yourself headaches and a wastepaper basket full of crumpled（弄皱）paper. Think of your first draft as a path cut out of the jungle—as part of an exploration, not as a complete highway.\r\n\r\nThe third technique is to try printing out a triple-spaced（三倍行距）copy to allow space for revision. <u>__39__</u> As a result, these writers never get in the habit of crossing out chunks（大块）of their draft and writing revisions in the blank space. After you have revised your draft until it is too messy to work from anymore, you can enter your changes into your word processor. <u>__40__</u> The resulting blank space invites you to revise.\r\n\r\nA. Make sure your handwriting is neat.\r\n\r\nB. Let your pen follow the waves of thought.\r\n\r\nC. The second draft of the essay should be better.\r\n\r\nD. First of all, lean the technique of nonstop writing.\r\n\r\nE. Too many writers try to get their drafts right the first time.\r\n\r\nF. Many beginning writers don't leave enough space to revise.\r\n\r\nG. Then you can print out a fresh draft, again setting your text on triple-space.",
+      "artifact_id": "gaokao_en_2022_II_092466a264b8effd",
+      "source_locator": "doc:092466a/tier:flash/page:1",
+      "status": "PENDING"
+    },
+    {
+      "id": "gaokao_en_2022_II_language_正文",
+      "section_id": "gaokao_en_2022_II_language",
+      "label": "正文",
+      "text": "**第三部分 语言运用（共两节，满分30分）**\r\n\r\n**第一节（共15小题；每小题1分，满分15分）**\r\n\r\n阅读下面短文，从每题所给的A、B，C、D四个选项中选出可以填入空白处的最佳选项。\r\n\r\nLike many young people, Jessica wants to travel the globe. Unlike most of them, this 25-year-old is doing it <u>__41__</u>. She and her husband have spent the last two years traveling the world, stopping everywhere from Paris to Singapore. It might sound like one long, expensive <u>__42__</u>, but the couple has an unusual way to make their travel <u>__43__</u>.\r\n\r\nThey're part of a new form of the <u>__44__</u> economy: an online group of house sitters. Throughout their no-cost stays in <u>__45__</u> homes, they feed pets and water plants in the homeowner's <u>__46__</u>.\r\n\r\nIt's not all sightseeing. The two travelers carefully <u>__47__</u> their trips, scheduling their days around the pets that are sometimes difficult to <u>__48__</u>. But house sitting also offers a level of <u>__49__</u> they can't find in a hotel. \"It's like <u>__50__</u> at a friend's house,\" Jessica says.\r\n\r\nThe couple has a high <u>__51__</u> rate in getting accepted as house sitters and they always go beyond the homeowner's <u>__52__</u>. For Jessica, that means <u>__53__</u> plenty of pictures of happy pets, keeping the house <u>__54__</u> and leaving a nice small gift before heading to the next house. \"You want to make the homeowner feel that they made the right <u>__55__</u>,\" she says.\r\n\r\n41. A. indoors     B. online        C. single-handed     D. full-time\r\n\r\n42. A. game       B. service       C. vacation          D. procedure\r\n\r\n43. A. safe        B. busy         C. helpful           D. affordable\r\n\r\n44. A. local        B. private       C. sharing          D. agricultural\r\n\r\n45. A. strangers'     B. parents'      C. co-workers'       D. neighbors'\r\n\r\n46. A. favor        B. defense       C. honor           D. absence\r\n\r\n47. A. plan        B. explain        C. compare         D. complete\r\n\r\n48. A. buy        B. transport       C. choose          D. please\r\n\r\n49. A. support     B. comfort        C. control          D. attention\r\n\r\n50. A. cooking     B. staying        C. waiting          D. studying\r\n\r\n51. A. success      B. survival       C. growth            D. unemployment\r\n\r\n52. A. budget       B. abilities       C. expectations       D. understanding\r\n\r\n53. A. admiring     B. donating       C. sending          D. borrowing\r\n\r\n54. A. clean        B. open          C. simple           D. empty\r\n\r\n55. A. guess       B. decision        C. response         D. impression\r\n\r\n**第二节（共10小题；每小题1.5分，满分15分）**\r\n\r\n阅读下面短文，在空白处填入1个适当的单词或括号内单词的正确形式。\r\n\r\nHenry Tyler made the catch of the year on the weekend. When he saw a young child hanging from a sixth-floor apartment balcony（阳台）, Henry ran one hundred metres, jumped over a 1.2-metre fence, and held out his arms to catch the <u>__56__</u>（fall）child.\r\n\r\nEric Brown, only three years old, knocked Henry down when he fell. The boy is in the hospital and doctors say he'll be OK.\r\n\r\n<u>57__</u> Brown family live in an apartment building outside Toronto. On the day of the accident, Mrs. Brown was at work and Eric was at home with his father. They both fell <u>__58__</u>（sleep）while watching TV.\r\n\r\nEric woke up a little later when he heard children playing outside. He pushed a chair onto the balcony, and climbed up <u>__59__</u>（see）them. When he looked down, he <u>__60__</u>（accidental ）slipped and fell over the edge. He hung on for a few minutes <u>__61__</u>screamed for his father, but his father didn't hear him.\r\n\r\nHenry <u>__62__</u>（fix）his car when he heard the screams. He looked up and saw Eric hanging from the balcony. He quickly <u>__63__</u>（throw）his tools aside, and started running, arms out.\r\n\r\n\"He saved my <u>__64__</u>（son）life,\" said Mrs. Brown. \"I don't know <u>__65__</u> to thank him.”\r\n\r\n\"I just didn't want the boy to be hurt,\" said Henry.",
+      "artifact_id": "gaokao_en_2022_II_092466a264b8effd",
+      "source_locator": "doc:092466a/tier:flash/page:1",
+      "status": "PENDING"
+    },
+    {
+      "id": "gaokao_en_2022_II_writing_正文",
+      "section_id": "gaokao_en_2022_II_writing",
+      "label": "正文",
+      "text": "**第四部分 写作（共两节，满分40分）**\r\n\r\n**第一节（满分15分）**\r\n\r\n假定你是校广播站英语节目“Talk and Talk”的负责人李华，请给外教Caroline写邮件邀请她做一次访谈。内容包括：\r\n\r\n1. 节目介绍；\r\n\r\n2. 访谈的时间和话题。\r\n\r\n注意：\r\n\r\n1. 写作词数应为80左右；\r\n\r\n2. 请按如下格式在答题卡的相应位置作答。\r\n\r\n<table><tr><td><p>Dear Caroline,</p><p>Yours sincerely,</p><p>Li Hua</p></td></tr></table>\r\n\r\n**第二节（满分25分）**\r\n\r\n阅读下面材料，根据其内容和所给段落开头语续写两段，使之构成一篇完整的短文。\r\n\r\nIt was the day of the big cross-country run. Students from seven different primary schools in and around the small town were warming up and walking the route（路线）through thick evergreen forest.\r\n\r\nI looked around and finally spotted David, who was standing by himself off to the side by a fence. He was small for ten years old. His usual big toothy smile was absent today. I walked over and asked him why he wasn't with the other children. He hesitated and then said he had decided not to run.\r\n\r\nWhat was wrong? He had worked so hard for this event!\r\n\r\nI quickly searched the crowd for the school's coach and asked him what had happened. \"I was afraid that kids from other schools would laugh at him,\" he explained uncomfortably. \"I gave him the choice to run or not, and let him decide.\"\r\n\r\nI bit back my frustration（懊恼）. I knew the coach meant well — he thought he was doing the right thing. After making sure that David could run if he wanted, I turned to find him coming towards me, his small body rocking from side to side as he swung his feet forward.\r\n\r\nDavid had a brain disease which prevented him from walking or running like other children, but at school his classmates thought of him as a regular kid. He always participated to the best of his ability in whatever they were doing. That was why none of the children thought it unusual that David had decided to join the cross-country team. It just took him longer — that’s all. David had not missed a single practice, and although he always finished his run long after the other children, he did always finish. As a special education teacher at the school, I was familiar with the challenges David faced and was proud of his strong determination.\r\n\r\n注意：\r\n\r\n1. 续写词数应为150左右；\r\n\r\n2. 请按如下格式在答题卡的相应位置作答.\r\n\r\n<table><tr><td><p>We sat down next to each other, but David wouldn't look at me. </p><p>I watched as David moved up to the starting line with the other runners. </p></td></tr></table>\r\n\r\n**2022年普通高等学校招生全国统一考试（新高考全国Ⅱ卷）**\r\n\r\n**英语",
+      "artifact_id": "gaokao_en_2022_II_092466a264b8effd",
+      "source_locator": "doc:092466a/tier:flash/page:1",
+      "status": "PENDING"
+    }
+  ],
+  "questions": [
+    {
+      "id": "gaokao_en_2022_II_Q21",
+      "section_id": "gaokao_en_2022_II_reading",
+      "passage_id": "gaokao_en_2022_II_reading_A",
+      "number": 21,
+      "type": "MCQ",
+      "stem": "What does a group need to do if they are offered a scholarship?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_II_Q22",
+      "section_id": "gaokao_en_2022_II_reading",
+      "passage_id": "gaokao_en_2022_II_reading_A",
+      "number": 22,
+      "type": "MCQ",
+      "stem": "How many chaperones are needed for a group of 30 children to visit the Museum?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_II_Q23",
+      "section_id": "gaokao_en_2022_II_reading",
+      "passage_id": "gaokao_en_2022_II_reading_A",
+      "number": 23,
+      "type": "MCQ",
+      "stem": "What are children prohibited from doing at the Museum?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_II_Q24",
+      "section_id": "gaokao_en_2022_II_reading",
+      "passage_id": "gaokao_en_2022_II_reading_B",
+      "number": 24,
+      "type": "MCQ",
+      "stem": "What do the underlined words \"hit home for me\" mean in paragraph 2?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_II_Q25",
+      "section_id": "gaokao_en_2022_II_reading",
+      "passage_id": "gaokao_en_2022_II_reading_B",
+      "number": 25,
+      "type": "MCQ",
+      "stem": "Why did the kid poke the storybook?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_II_Q26",
+      "section_id": "gaokao_en_2022_II_reading",
+      "passage_id": "gaokao_en_2022_II_reading_B",
+      "number": 26,
+      "type": "MCQ",
+      "stem": "What does the author think of himself?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_II_Q27",
+      "section_id": "gaokao_en_2022_II_reading",
+      "passage_id": "gaokao_en_2022_II_reading_B",
+      "number": 27,
+      "type": "MCQ",
+      "stem": "What can we learn about the author as a journalist?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_II_Q28",
+      "section_id": "gaokao_en_2022_II_reading",
+      "passage_id": "gaokao_en_2022_II_reading_C",
+      "number": 28,
+      "type": "MCQ",
+      "stem": "Which of the following best describes the ban on drivers' texting in the US?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_II_Q29",
+      "section_id": "gaokao_en_2022_II_reading",
+      "passage_id": "gaokao_en_2022_II_reading_C",
+      "number": 29,
+      "type": "MCQ",
+      "stem": "What can the Textalyzer help a police officer find out?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_II_Q30",
+      "section_id": "gaokao_en_2022_II_reading",
+      "passage_id": "gaokao_en_2022_II_reading_C",
+      "number": 30,
+      "type": "MCQ",
+      "stem": "What does the underlined word \"something\" in the last paragraph refer to?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_II_Q31",
+      "section_id": "gaokao_en_2022_II_reading",
+      "passage_id": "gaokao_en_2022_II_reading_C",
+      "number": 31,
+      "type": "MCQ",
+      "stem": "What is a suitable title for the text?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_II_Q32",
+      "section_id": "gaokao_en_2022_II_reading",
+      "passage_id": "gaokao_en_2022_II_reading_D",
+      "number": 32,
+      "type": "MCQ",
+      "stem": "What does Levine want to explain by mentioning the rubber band?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_II_Q33",
+      "section_id": "gaokao_en_2022_II_reading",
+      "passage_id": "gaokao_en_2022_II_reading_D",
+      "number": 33,
+      "type": "MCQ",
+      "stem": "In which aspect were the two groups different in terms of research design?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_II_Q34",
+      "section_id": "gaokao_en_2022_II_reading",
+      "passage_id": "gaokao_en_2022_II_reading_D",
+      "number": 34,
+      "type": "MCQ",
+      "stem": "What does Levine's research find?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_II_Q35",
+      "section_id": "gaokao_en_2022_II_reading",
+      "passage_id": "gaokao_en_2022_II_reading_D",
+      "number": 35,
+      "type": "MCQ",
+      "stem": "What does Dr. Nieca Goldberg suggest?",
+      "score": "2.5"
+    }
+  ],
+  "options": [
+    {
+      "question_id": "gaokao_en_2022_II_Q21",
+      "label": "A",
+      "text": "Prepay the admission fees."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q21",
+      "label": "B",
+      "text": "Use the Museum's transportation."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q21",
+      "label": "C",
+      "text": "Take a survey after the visit."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q21",
+      "label": "D",
+      "text": "Schedule their visit on weekdays."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q22",
+      "label": "A",
+      "text": "One."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q22",
+      "label": "B",
+      "text": "Two."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q22",
+      "label": "C",
+      "text": "Three."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q22",
+      "label": "D",
+      "text": "Four."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q23",
+      "label": "A",
+      "text": "Using the computer."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q23",
+      "label": "B",
+      "text": "Talking with each other."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q23",
+      "label": "C",
+      "text": "Touching the exhibits."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q23",
+      "label": "D",
+      "text": "Exploring the place alone."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q24",
+      "label": "A",
+      "text": "Provided shelter for me."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q24",
+      "label": "B",
+      "text": "Became very clear to me."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q24",
+      "label": "C",
+      "text": "Took the pressure off me."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q24",
+      "label": "D",
+      "text": "Worked quite well on me."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q25",
+      "label": "A",
+      "text": "He took it for a tablet computer."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q25",
+      "label": "B",
+      "text": "He disliked the colorful pictures."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q25",
+      "label": "C",
+      "text": "He was angry with his grandpa."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q25",
+      "label": "D",
+      "text": "He wanted to read it by himself."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q26",
+      "label": "A",
+      "text": "Socially ambitious."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q26",
+      "label": "B",
+      "text": "Physically attractive."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q26",
+      "label": "C",
+      "text": "Financially independent."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q26",
+      "label": "D",
+      "text": "Digitally competent."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q27",
+      "label": "A",
+      "text": "He lacks experience in his job."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q27",
+      "label": "B",
+      "text": "He seldom appears on television."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q27",
+      "label": "C",
+      "text": "He manages a video department."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q27",
+      "label": "D",
+      "text": "He often interviews internet stars."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q28",
+      "label": "A",
+      "text": "Ineffective."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q28",
+      "label": "B",
+      "text": "Unnecessary."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q28",
+      "label": "C",
+      "text": "Inconsistent."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q28",
+      "label": "D",
+      "text": "Unfair."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q29",
+      "label": "A",
+      "text": "Where a driver came from."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q29",
+      "label": "B",
+      "text": "Whether a driver used their phone."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q29",
+      "label": "C",
+      "text": "How fast a driver was going."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q29",
+      "label": "D",
+      "text": "When a driver arrived at the scene."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q30",
+      "label": "A",
+      "text": "Advice."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q30",
+      "label": "B",
+      "text": "Data."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q30",
+      "label": "C",
+      "text": "Tests."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q30",
+      "label": "D",
+      "text": "Laws."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q31",
+      "label": "A",
+      "text": "To Drive or Not to Drive? Think Before You Start"
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q31",
+      "label": "B",
+      "text": "Texting and Driving? Watch Out for the Textalyzer"
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q31",
+      "label": "C",
+      "text": "New York Banning Hand-Held Devices by Drivers"
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q31",
+      "label": "D",
+      "text": "The Next Generation Cell Phone: The Textalyzer"
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q32",
+      "label": "A",
+      "text": "The right way of exercising."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q32",
+      "label": "B",
+      "text": "The causes of a heart attack."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q32",
+      "label": "C",
+      "text": "The difficulty of keeping fit."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q32",
+      "label": "D",
+      "text": "The aging process of the heart."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q33",
+      "label": "A",
+      "text": "Diet plan."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q33",
+      "label": "B",
+      "text": "Professional background."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q33",
+      "label": "C",
+      "text": "Exercise type."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q33",
+      "label": "D",
+      "text": "Previous physical condition."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q34",
+      "label": "A",
+      "text": "Middle-aged hearts get younger with aerobic exercise."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q34",
+      "label": "B",
+      "text": "High-intensity exercise is more suitable for the young."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q34",
+      "label": "C",
+      "text": "It is never too late for people to start taking exercise."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q34",
+      "label": "D",
+      "text": "The more exercise we do, the stronger our hearts get."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q35",
+      "label": "A",
+      "text": "Making use of the findings."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q35",
+      "label": "B",
+      "text": "Interviewing the study participants."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q35",
+      "label": "C",
+      "text": "Conducting further research."
+    },
+    {
+      "question_id": "gaokao_en_2022_II_Q35",
+      "label": "D",
+      "text": "Clarifying the purpose of the study.\r\n\r\n**"
+    }
+  ]
+}

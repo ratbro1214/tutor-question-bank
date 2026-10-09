@@ -1,4 +1,7 @@
 import { sql } from "drizzle-orm";
+export * from './english-schema';
+export * from './canonical-schema';
+export * from './paper-batch-schema';
 import {
   index,
   integer,

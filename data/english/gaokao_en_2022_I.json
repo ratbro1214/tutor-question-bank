@@ -1,0 +1,532 @@
+{
+  "paperId": "gaokao_en_2022_I",
+  "status": "PENDING",
+  "extractionMethod": "mineru-office-flash",
+  "sections": [
+    {
+      "id": "gaokao_en_2022_I_reading",
+      "paper_id": "gaokao_en_2022_I",
+      "type": "reading",
+      "title": "阅读理解与七选五",
+      "position": 0
+    },
+    {
+      "id": "gaokao_en_2022_I_language",
+      "paper_id": "gaokao_en_2022_I",
+      "type": "language",
+      "title": "语言运用",
+      "position": 1
+    },
+    {
+      "id": "gaokao_en_2022_I_writing",
+      "paper_id": "gaokao_en_2022_I",
+      "type": "writing",
+      "title": "写作",
+      "position": 2
+    }
+  ],
+  "passages": [
+    {
+      "id": "gaokao_en_2022_I_reading_A",
+      "section_id": "gaokao_en_2022_I_reading",
+      "label": "A",
+      "text": "**A**\r\n\r\n**Grading Policies for Introduction to Literature**\r\n\r\n**Grading Scale**\r\n\r\n90-100, A; 80-89, B; 70-79, C; 60-69, D; Below 60, E.\r\n\r\n**Essays（60%）**\r\n\r\nYour four major essays will combine to form the main part of the grade for this course: Essay 1 =10%; Essay 2=15%; Essay 3=15%; Essay 4=20%\r\n\r\n**Group Assignments（30%）**\r\n\r\nStudents will work in groups to complete four assignments（作业）during the course. All the assignments will be submitted by the assigned date through Blackboard, our online learning and course management system.\r\n\r\n**Daily Work/In-Class Writings and Tests/Group Work/Homework（10%）**\r\n\r\nClass activities will vary from day to day, but students must be ready to complete short in-class writings or tests drawn directly from assigned readings or notes from the previous class' lecture/discussion, so it is important to take careful notes during class. Additionally, from time to time I will assign group work to be completed in class or short assignments to be completed at home, both of which will be graded.\r\n\r\n**Late Work**\r\n\r\nAn essay not submitted in class on the due date will lose a letter grade for each class period it is late. If it is not turned in by the 4th day after the due date, it will earn a zero. Daily assignments not completed during class will get a zero. Short writings missed as a result of an excused absence will be accepted.",
+      "artifact_id": "gaokao_en_2022_I_1d330c62ce053eb6",
+      "source_locator": "doc:1d330c6/tier:flash/page:1",
+      "status": "PENDING"
+    },
+    {
+      "id": "gaokao_en_2022_I_reading_B",
+      "section_id": "gaokao_en_2022_I_reading",
+      "label": "B",
+      "text": "B\r\n\r\nLike most of us, I try to be mindful of food that goes to waste. The arugula（芝麻菜）was to make a nice green salad, rounding out a roast chicken dinner. But I ended up working late. Then friends called with a dinner invitation. I stuck the chicken in the freezer. But as days passed, the arugula went bad. Even worse, I had unthinkingly bought way too much; I could have made six salads with what I threw out.\r\n\r\nIn a world where nearly 800 million people a year go hungry, \"food waste goes against the moral grain,\" as Elizabeth Royte writes in this month's cover story. It's jaw-dropping how much perfectly good food is thrown away—from “ugly\"（but quite eatable）vegetables rejected by grocers to large amounts of uneaten dishes thrown into restaurant garbage cans.\r\n\r\nProducing food that no one eats wastes the water, fuel, and other resources used to grow it. That makes food waste an environmental problem. In fact, Royte writes, \"if food waste were a country, it would be the third largest producer of greenhouse gases in the world.\"\r\n\r\nIf that's hard to understand, let's keep it as simple as the arugula at the back of my refrigerator. Mike Curtin sees my arugula story all the time — but for him, it's more like 12 bones of donated strawberries nearing their last days. Curtin is CEO of DC Central Kitchen in Washington, D.C., which recovers food and turns it into healthy meals. Last year it recovered more than 807,500 pounds of food by taking donations and collecting blemished（有瑕疵的）produce that otherwise would have rotted in fields. And the strawberries? Volunteers will wash, cut, and freeze or dry them for use in meals down the road.\r\n\r\nSuch methods seem obvious, yet so often we just don't think. \"Everyone can play a part in reducing waste, whether by not purchasing more food than necessary in your weekly shopping or by asking restaurants to not include the side dish you won't eat,\" Curtin says.",
+      "artifact_id": "gaokao_en_2022_I_1d330c62ce053eb6",
+      "source_locator": "doc:1d330c6/tier:flash/page:1",
+      "status": "PENDING"
+    },
+    {
+      "id": "gaokao_en_2022_I_reading_C",
+      "section_id": "gaokao_en_2022_I_reading",
+      "label": "C",
+      "text": "C\r\n\r\nThe elderly residents（居民）in care homes in London are being given hens to look after to stop them feeling lonely.\r\n\r\nThe project was dreamed up by a local charity（慈善组织）to reduce loneliness and improve elderly people's wellbeing, It is also being used to help patients suffering dementia, a serious illness of the mind. Staff in care homes have reported a reduction in the use of medicine where hens are in use.\r\n\r\nAmong those taking part in the project is 80-year-old Ruth Xavier. She said: “I used to keep hens when I was younger and had to prepare their breakfast each morning before I went to school.\r\n\r\n\"I like the project a lot. I am down there in my wheelchair in the morning letting the hens out and down there again at night to see they've gone to bed.\r\n\r\n\"It's good to have a different focus. People have been bringing their children in to see the hens and residents come and sit outside to watch them. I'm enjoying the creative activities, and it feels great to have done something useful.\"\r\n\r\nThere are now 700 elderly people looking after hens in 20 care homes in the North East, and the charity has been given financial support to roll it out countrywide.\r\n\r\nWendy Wilson, extra care manager at 60 Penfold Street, one of the first to <u>embark on</u> the project, said: \"Residents really welcome the idea of the project and the creative sessions. We are looking forward to the benefits and fun the project can bring to people here.\"\r\n\r\nLynn Lewis, director of Notting Hill Pathways, said: \"We are happy to be taking part in the project. It will really help connect our residents through a shared interest and creative activities.\"",
+      "artifact_id": "gaokao_en_2022_I_1d330c62ce053eb6",
+      "source_locator": "doc:1d330c6/tier:flash/page:1",
+      "status": "PENDING"
+    },
+    {
+      "id": "gaokao_en_2022_I_reading_D",
+      "section_id": "gaokao_en_2022_I_reading",
+      "label": "D",
+      "text": "D\r\n\r\nHuman speech contains more than 2,000 different sounds, from the common \"m\" and \"a\" to the rare clicks of some southern African languages. But why are certain sounds more common than others? A ground-breaking, five-year study shows that diet-related changes in human bite led to new speech sounds that are now found in half the world's languages.\r\n\r\nMore than 30 years ago, the scholar Charles Hockett noted that speech sounds called labiodentals, such as \"f\" and \"v\", were more common in the languages of societies that ate softer foods. Now a team of researchers led by Damián Blasi at the University of Zurich, Switzerland, has found how and why this trend arose.\r\n\r\nThey discovered that the upper and lower front teeth of ancient human adults were aligned（对齐）, making it hard to produce labiodentals, which are formed by touching the lower lip to the upper teeth. Later, our jaws changed to an overbite structure（结构）, making it easier to produce such sounds.\r\n\r\nThe team showed that this change in bite was connected with the development of agriculture in the Neolithic period. Food became easier to chew at this point. The jawbone didn't have to do as much work and so didn't grow to be so large.\r\n\r\nAnalyses of a language database also confirmed that there was a global change in the sound of world languages after the Neolithic age, with the use of \"f\" and \"v\" increasing remarkably during the last few thousand years. These sounds are still not found in the languages of many hunter-gatherer people today.\r\n\r\nThis research overturns the popular view that all human speech sounds were present when human beings evolved around 300,000 years ago. \"The set of speech sounds we use has not necessarily remained stable since the appearance of human beings, but rather the huge variety of speech sounds that we find today is the product of a complex interplay of things like biological change and cultural evolution,\" said Steven Moran, a member of the research team.",
+      "artifact_id": "gaokao_en_2022_I_1d330c62ce053eb6",
+      "source_locator": "doc:1d330c6/tier:flash/page:1",
+      "status": "PENDING"
+    },
+    {
+      "id": "gaokao_en_2022_I_reading_七选五",
+      "section_id": "gaokao_en_2022_I_reading",
+      "label": "七选五",
+      "text": "第二节（共5小题；每小题2.5分，满分12.5分）**\r\n\r\n阅读下面短文，从短文后的选项中选出可以填入空白处的最佳选项。选项中有两项为多余选项。\r\n\r\n*Fitness Magazine* recently ran an article titled \"Five Reasons to Thank Your Workout Partner.\" One reason was: \"You'll actually show up if you know someone is waiting for you at the gym,\" while another read: \" <u>__36__</u>\" With a workout partner, you will increase your training effort as there is a subtle（微妙）competition.\r\n\r\nSo, how do you find a workout partner?\r\n\r\nFirst of all, decide what you want from that person. <u>__37__</u> Or do you just want to be physically fit, able to move with strength and flexibility? Think about the exercises you would like to do with your workout partner.\r\n\r\nYou might think about posting what you are looking for on social media, but it probably won't result in a useful response. <u>__38__</u>If you plan on working out in a gym, that person must belong to the same gym.\r\n\r\nMy partner posted her request on the notice board of a local park. Her notice included what kind of training she wanted to do, how many days a week and how many hours she wanted to spend on each session, and her age. It also listed her favorite sports and activities, and provided her phone number. <u>__39</u>\r\n\r\nYou and your partner will probably have different skills. <u>__40__</u>Over time, both of you will benefit — your partner will be able to lift more weights and you will become more physically fit. The core（核心）of your relationship is that you will always be there to help each other.\r\n\r\nA. Your first meeting may be a little awkward.\r\n\r\nB. A workout partner usually needs to live close by.\r\n\r\nC. You'll work harder if you train with someone else.\r\n\r\nD. Do you want to be a better athlete in your favorite sport?\r\n\r\nE. How can you write a good \"seeking training partner\" notice?\r\n\r\nF. Just accept your differences and learn to work with each other.\r\n\r\nG. Any notice for a training partner should include such information.",
+      "artifact_id": "gaokao_en_2022_I_1d330c62ce053eb6",
+      "source_locator": "doc:1d330c6/tier:flash/page:1",
+      "status": "PENDING"
+    },
+    {
+      "id": "gaokao_en_2022_I_language_正文",
+      "section_id": "gaokao_en_2022_I_language",
+      "label": "正文",
+      "text": "**第三部分 语言运用（共两节，满分30分）**\r\n\r\n**第一节（共15小题；每小题1分，满分15分）**\r\n\r\n阅读下面短文，从每题所给的A、B、C、D四个选项中选出可以填入空白处的最佳选项。\r\n\r\nMy husband, our children and I have had wonderful camping experiences over the past ten years.\r\n\r\nSome of our <u>__41__</u>are funny, especially from the early years when our children were little. Once, we <u>__42__</u>along Chalk Creek. I was <u>__43__</u>that our 15-month-old boy would fall into the creek（小溪）. I tied a rope around his waist to keep him near to our spot. That lasted about ten minutes. He was <u>__44__</u> , and his crying let the whole campground know it. So <u>__45__</u>tying him up, I just kept a close eye on him. It <u>__46__</u> — he didn't end up in the creek. My three-year-old, however, did.\r\n\r\nAnother time, we rented a boat in Vallecito Lake. The sky was clear when we <u>__47__</u>, but storms move in fast in the mountains, and this one quickly <u>__48__</u>our peaceful morning trip. The <u>__49__</u> picked up and thunder rolled. My husband stopped fishing to <u>__50__</u> the motor. Nothing. He tried again. No <u>__51__</u>. We were stuck in the middle of the lake with a dead motor. As we all sat there <u>__52__</u>, a fisherman pulled up, threw us a rope and towed（拖）us back. We were <u>__53__</u>.\r\n\r\nNow, every year when my husband pulls our camper out of the garage, we are filled with a sense of <u>__54__</u>, wondering what camping fun and <u>__55__</u> we will experience next.\r\n\r\n41. A. ideas         B. jokes           C. memories           D. discoveries\r\n\r\n42. A. camped       B. drove           C. walked             D. cycled\r\n\r\n43. A. annoyed      B. surprised         C. disappointed         D. worried\r\n\r\n44. A. unhurt        B. unfortunate       C. uncomfortable       D. unafraid\r\n\r\n45. A. due to        B. instead of         C. apart from          D. as for\r\n\r\n46. A. worked       B. happened          C. mattered           D. changed\r\n\r\n47. A. signed up      B. calmed down      C. checked out         D. headed off\r\n\r\n48. A. arranged       B. interrupted        C. completed          D. recorded\r\n\r\n49. A. wind        B. noise             C. temperature         D. speed\r\n\r\n50. A. find        B. hide               C. start               D. fix\r\n\r\n51. A. luck         B. answer            C. wonder            D. signal\r\n\r\n52. A. patiently     B. tirelessly           C. doubtfully          D. helplessly\r\n\r\n53. A. sorry        B. brave              C. safe               D. right\r\n\r\n54. A. relief        B. duty               C. pride              D. excitement\r\n\r\n55. A. failure        B. adventure          C. performance        D. conflict\r\n\r\n**第二节（共10小题; 每小题1.5分，满分15分）**\r\n\r\n阅读下面短文，在空白处填入1个适当的单词或括号内单词的正确形式。\r\n\r\nThe Chinese government recently finalized a plan to set up a Giant Panda National Park（GPNP）. <u>__56__</u>（cover）an area about three times <u>__57__</u>size of Yellowstone National Park, the GPNP will be one of the first national parks in the country. The plan will extend protection to a significant number of areas that <u>__58__</u>（be） previously unprotected, bringing many of the existing protected areas for giant pandas under one authority <u>__59__</u>（increase）effectiveness and reduce inconsistencies in management.\r\n\r\nAfter a three-year pilot period, the GPNP will be officially set up next year. The GPNP <u>__60__</u>（design） to reflect the guiding principle of \"protecting the authenticity and integrity（完整性）of natural ecosystems, preserving biological diversity, protecting ecological buffer zones, <u>__61__</u>leaving behind precious natural assets（资产）for future generations\". The GPNP's main goal is to improve connectivity between separate <u>__62__</u>（population）and homes of giant pandas, and <u>__63__</u>（eventual）achieve a desired level of population in the wild.\r\n\r\nGiant pandas also serve <u>__64__</u>an umbrella species（物种）, bringing protection to a host of plants and animals in the southwestern and northwestern parts of China. The GPNP is intended to provide stronger protection for all the species <u>__65__</u> live within the Giant Panda Range and significantly improve the health of the ecosystem in the area.",
+      "artifact_id": "gaokao_en_2022_I_1d330c62ce053eb6",
+      "source_locator": "doc:1d330c6/tier:flash/page:1",
+      "status": "PENDING"
+    },
+    {
+      "id": "gaokao_en_2022_I_writing_正文",
+      "section_id": "gaokao_en_2022_I_writing",
+      "label": "正文",
+      "text": "**第四部分 写作（共两节，满分40分）**\r\n\r\n**第一节（满分15分）**\r\n\r\n假定你是校广播站英语节目“Talk and Talk”的负责人李华，请给外教Caroline写邮件邀请她做一次访谈。内容包括：\r\n\r\n1. 节目介绍；\r\n\r\n2. 访谈的时间和话题。\r\n\r\n注意：\r\n\r\n1. 写作词数应为80左右；\r\n\r\n2. 请按如下格式在答题卡的相应位置作答。\r\n\r\n<table><tr><td><p>Dear Caroline,</p><p>Yours sincerely,</p><p>Li Hua</p></td></tr></table>\r\n\r\n**第二节（满分25分）**\r\n\r\n阅读下面材料，根据其内容和所给段落开头语续写两段，使之构成一篇完整的短文。\r\n\r\nIt was the day of the big cross-country run. Students from seven different primary schools in and around the small town were warming up and walking the route（路线）through thick evergreen forest.\r\n\r\nI looked around and finally spotted David, who was standing by himself off to the side by a fence. He was small for ten years old. His usual big toothy smile was absent today. I walked over and asked him why he wasn't with the other children. He hesitated and then said he had decided not to run.\r\n\r\nWhat was wrong? He had worked so hard for this event!\r\n\r\nI quickly searched the crowd for the school's coach and asked him what had happened. \"I was afraid that kids from other schools would laugh at him,\" he explained uncomfortably. \"I gave him the choice to run or not, and let him decide.\"\r\n\r\nI bit back my frustration（懊恼）. I knew the coach meant well — he thought he was doing the right thing. After making sure that David could run if he wanted, I turned to find him coming towards me, his small body rocking from side to side as he swung his feet forward.\r\n\r\nDavid had a brain disease which prevented him from walking or running like other children, but at school his classmates thought of him as a regular kid. He always participated to the best of his ability in whatever they were doing. That was why none of the children thought it unusual that David had decided to join the cross-country team. It just took him longer — that’s all. David had not missed a single practice, and although he always finished his run long after the other children, he did always finish. As a special education teacher at the school, I was familiar with the challenges David faced and was proud of his strong determination.\r\n\r\n注意：\r\n\r\n1. 续写词数应为150左右；\r\n\r\n2. 请按如下格式在答题卡的相应位置作答.\r\n\r\n<table><tr><td><p>We sat down next to each other, but David wouldn't look at me. </p><p>I watched as David moved up to the starting line with the other runners. </p></td></tr></table>\r\n\r\n学科网（北京）股份有限公司 学科网（北京）股份有限公司 学科网（北京）股份有限公司 学科网（北京）股份有限公司 学科网（北京）股份有限公司 学科网（北京）股份有限公司 学科网（北京）股份有限公司 学科网（北京）股份有限公司 学科网（北京）股份有限公司",
+      "artifact_id": "gaokao_en_2022_I_1d330c62ce053eb6",
+      "source_locator": "doc:1d330c6/tier:flash/page:1",
+      "status": "PENDING"
+    }
+  ],
+  "questions": [
+    {
+      "id": "gaokao_en_2022_I_Q21",
+      "section_id": "gaokao_en_2022_I_reading",
+      "passage_id": "gaokao_en_2022_I_reading_A",
+      "number": 21,
+      "type": "MCQ",
+      "stem": "Where is this text probably taken from?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_I_Q22",
+      "section_id": "gaokao_en_2022_I_reading",
+      "passage_id": "gaokao_en_2022_I_reading_A",
+      "number": 22,
+      "type": "MCQ",
+      "stem": "How many parts is a student's final grade made up of?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_I_Q23",
+      "section_id": "gaokao_en_2022_I_reading",
+      "passage_id": "gaokao_en_2022_I_reading_A",
+      "number": 23,
+      "type": "MCQ",
+      "stem": "What will happen if you submit an essay one week after the due date?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_I_Q24",
+      "section_id": "gaokao_en_2022_I_reading",
+      "passage_id": "gaokao_en_2022_I_reading_B",
+      "number": 24,
+      "type": "MCQ",
+      "stem": "What does the author want to show by telling the arugula story?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_I_Q25",
+      "section_id": "gaokao_en_2022_I_reading",
+      "passage_id": "gaokao_en_2022_I_reading_B",
+      "number": 25,
+      "type": "MCQ",
+      "stem": "What is a consequence of food waste according to the text?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_I_Q26",
+      "section_id": "gaokao_en_2022_I_reading",
+      "passage_id": "gaokao_en_2022_I_reading_B",
+      "number": 26,
+      "type": "MCQ",
+      "stem": "What does Curtin's company do?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_I_Q27",
+      "section_id": "gaokao_en_2022_I_reading",
+      "passage_id": "gaokao_en_2022_I_reading_B",
+      "number": 27,
+      "type": "MCQ",
+      "stem": "What does Curtin suggest people do?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_I_Q28",
+      "section_id": "gaokao_en_2022_I_reading",
+      "passage_id": "gaokao_en_2022_I_reading_C",
+      "number": 28,
+      "type": "MCQ",
+      "stem": "What is the purpose of the project?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_I_Q29",
+      "section_id": "gaokao_en_2022_I_reading",
+      "passage_id": "gaokao_en_2022_I_reading_C",
+      "number": 29,
+      "type": "MCQ",
+      "stem": "How has the project affected Ruth Xavier?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_I_Q30",
+      "section_id": "gaokao_en_2022_I_reading",
+      "passage_id": "gaokao_en_2022_I_reading_C",
+      "number": 30,
+      "type": "MCQ",
+      "stem": "What do the underlined words \"embark on\" mean in paragraph 7?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_I_Q31",
+      "section_id": "gaokao_en_2022_I_reading",
+      "passage_id": "gaokao_en_2022_I_reading_C",
+      "number": 31,
+      "type": "MCQ",
+      "stem": "What can we learn about the project from the last two paragraphs?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_I_Q32",
+      "section_id": "gaokao_en_2022_I_reading",
+      "passage_id": "gaokao_en_2022_I_reading_D",
+      "number": 32,
+      "type": "MCQ",
+      "stem": "Which aspect of the human speech sound does Damián Blasi's research focus on?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_I_Q33",
+      "section_id": "gaokao_en_2022_I_reading",
+      "passage_id": "gaokao_en_2022_I_reading_D",
+      "number": 33,
+      "type": "MCQ",
+      "stem": "Why was it difficult for ancient human adults to produce labiodentals?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_I_Q34",
+      "section_id": "gaokao_en_2022_I_reading",
+      "passage_id": "gaokao_en_2022_I_reading_D",
+      "number": 34,
+      "type": "MCQ",
+      "stem": "What is paragraph 5 mainly about?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2022_I_Q35",
+      "section_id": "gaokao_en_2022_I_reading",
+      "passage_id": "gaokao_en_2022_I_reading_D",
+      "number": 35,
+      "type": "MCQ",
+      "stem": "What does Steven Moran say about the set of human speech sounds?",
+      "score": "2.5"
+    }
+  ],
+  "options": [
+    {
+      "question_id": "gaokao_en_2022_I_Q21",
+      "label": "A",
+      "text": "A textbook."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q21",
+      "label": "B",
+      "text": "An exam paper."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q21",
+      "label": "C",
+      "text": "A course plan."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q21",
+      "label": "D",
+      "text": "An academic article."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q22",
+      "label": "A",
+      "text": "Two."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q22",
+      "label": "B",
+      "text": "Three."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q22",
+      "label": "C",
+      "text": "Four."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q22",
+      "label": "D",
+      "text": "Five."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q23",
+      "label": "A",
+      "text": "You will receive a zero."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q23",
+      "label": "B",
+      "text": "You will lose a letter grade."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q23",
+      "label": "C",
+      "text": "You will be given a test."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q23",
+      "label": "D",
+      "text": "You will have to rewrite it."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q24",
+      "label": "A",
+      "text": "We pay little attention to food waste."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q24",
+      "label": "B",
+      "text": "We waste food unintentionally at times."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q24",
+      "label": "C",
+      "text": "We waste more vegetables than meat."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q24",
+      "label": "D",
+      "text": "We have good reasons for wasting food."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q25",
+      "label": "A",
+      "text": "Moral decline."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q25",
+      "label": "B",
+      "text": "Environmental harm."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q25",
+      "label": "C",
+      "text": "Energy shortage."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q25",
+      "label": "D",
+      "text": "Worldwide starvation."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q26",
+      "label": "A",
+      "text": "It produces kitchen equipment."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q26",
+      "label": "B",
+      "text": "It turns rotten arugula into clean fuel."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q26",
+      "label": "C",
+      "text": "It helps local farmers grow fruits"
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q26",
+      "label": "D",
+      "text": "It makes meals out of unwanted food."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q27",
+      "label": "A",
+      "text": "Buy only what is needed."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q27",
+      "label": "B",
+      "text": "Reduce food consumption."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q27",
+      "label": "C",
+      "text": "Go shopping once a week."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q27",
+      "label": "D",
+      "text": "Eat in restaurants less often."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q28",
+      "label": "A",
+      "text": "To ensure harmony in care homes."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q28",
+      "label": "B",
+      "text": "To provide part-time jobs for the aged."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q28",
+      "label": "C",
+      "text": "To raise money for medical research."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q28",
+      "label": "D",
+      "text": "To promote the elderly people's welfare."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q29",
+      "label": "A",
+      "text": "She has learned new life skills."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q29",
+      "label": "B",
+      "text": "She has gained a sense of achievement."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q29",
+      "label": "C",
+      "text": "She has recovered her memory."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q29",
+      "label": "D",
+      "text": "She has developed a strong personality."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q30",
+      "label": "A",
+      "text": "Improve."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q30",
+      "label": "B",
+      "text": "Oppose."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q30",
+      "label": "C",
+      "text": "Begin."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q30",
+      "label": "D",
+      "text": "Evaluate."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q31",
+      "label": "A",
+      "text": "It is well received."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q31",
+      "label": "B",
+      "text": "It needs to be more creative."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q31",
+      "label": "C",
+      "text": "It is highly profitable."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q31",
+      "label": "D",
+      "text": "It takes ages to see the results."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q32",
+      "label": "A",
+      "text": "Its variety."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q32",
+      "label": "B",
+      "text": "Its distribution."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q32",
+      "label": "C",
+      "text": "Its quantity."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q32",
+      "label": "D",
+      "text": "Its development."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q33",
+      "label": "A",
+      "text": "They had fewer upper teeth than lower teeth."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q33",
+      "label": "B",
+      "text": "They could not open and close their lips easily."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q33",
+      "label": "C",
+      "text": "Their jaws were not conveniently structured."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q33",
+      "label": "D",
+      "text": "Their lower front teeth were not large enough."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q34",
+      "label": "A",
+      "text": "Supporting evidence for the research results."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q34",
+      "label": "B",
+      "text": "Potential application of the research findings."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q34",
+      "label": "C",
+      "text": "A further explanation of the research methods."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q34",
+      "label": "D",
+      "text": "A reasonable doubt about the research process."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q35",
+      "label": "A",
+      "text": "It is key to effective communication."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q35",
+      "label": "B",
+      "text": "It contributes much to cultural diversity."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q35",
+      "label": "C",
+      "text": "It is a complex and dynamic system."
+    },
+    {
+      "question_id": "gaokao_en_2022_I_Q35",
+      "label": "D",
+      "text": "It drives the evolution of human beings.\r\n\r\n**"
+    }
+  ]
+}

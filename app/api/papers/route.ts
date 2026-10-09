@@ -22,7 +22,7 @@ export async function POST(request: Request) {
     const id = crypto.randomUUID(), title = String(form.get("title") || file.name.replace(/\.[^.]+$/, "")).trim().slice(0, 200);
     key = `papers/${id}/source`;
     await getBucket().put(key, bytes, { httpMetadata: { contentType: sourceType } });
-    await getD1Binding().prepare("INSERT INTO papers(id,title,original_filename,source_key,source_type,file_hash,created_at) VALUES(?,?,?,?,?,?,?)").bind(id, title || "未命名套卷", file.name.slice(0, 240), key, sourceType, hash, new Date().toISOString()).run();
+    await getD1Binding().batch([getD1Binding().prepare("INSERT INTO papers(id,title,original_filename,source_key,source_type,file_hash,created_at) VALUES(?,?,?,?,?,?,?)").bind(id, title || "未命名套卷", file.name.slice(0, 240), key, sourceType, hash, new Date().toISOString())]);
     saved = true;
     const row = await getD1Binding().prepare("SELECT * FROM papers WHERE id=?").bind(id).first<PaperRow>();
     return Response.json({ paper: publicPaper(row!) }, { status: 201 });

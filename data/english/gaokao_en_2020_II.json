@@ -1,0 +1,532 @@
+{
+  "paperId": "gaokao_en_2020_II",
+  "status": "PENDING",
+  "extractionMethod": "mineru-office-flash",
+  "sections": [
+    {
+      "id": "gaokao_en_2020_II_reading",
+      "paper_id": "gaokao_en_2020_II",
+      "type": "reading",
+      "title": "阅读理解与七选五",
+      "position": 0
+    },
+    {
+      "id": "gaokao_en_2020_II_language",
+      "paper_id": "gaokao_en_2020_II",
+      "type": "language",
+      "title": "语言运用",
+      "position": 1
+    },
+    {
+      "id": "gaokao_en_2020_II_writing",
+      "paper_id": "gaokao_en_2020_II",
+      "type": "writing",
+      "title": "写作",
+      "position": 2
+    }
+  ],
+  "passages": [
+    {
+      "id": "gaokao_en_2020_II_reading_A",
+      "section_id": "gaokao_en_2020_II_reading",
+      "label": "A",
+      "text": "Pali Overnight Adventures offers children and teens exciting experiences this summer. From broadcasting to street art, these are just 4 of the 17 highly unique camps being offered.\r\n\r\n**Broadcasting Camp**\r\n\r\nBecome the next star reporter, news writer, director or producer. While running every aspect of our own news station, kids and their fellow campers will create and host a broadcast airing each night at dinner for the entire camp. Every night it goes on the web, keeping parents and the world informed of the happenings at Pali.\r\n\r\n**Secret Agent Camp**\r\n\r\nIn the movie Mission Impossible, Tom Cruise made being a secret agent seem like the coolest job ever. Campers who sign up for the 2-week secret agent camp can get to know about the life of real secret agents by learning strategies and military skills on the paintball field.\r\n\r\n**Culinary Camp**\r\n\r\nIf your child enjoys being in the kitchen, then the culinary camp is definitely the right fit. Campers learn technical skills of roasting, frying and cutting, as well as some recipes that they can take home and share with their families.\r\n\r\n**Street Art Camp**\r\n\r\nThis camp takes creative license to an entirely new level. Campers will share their colorful ideas and imagination with each other and work together to visualize, sketch and paint with non-traditional techniques to create the coolest mural（壁画）which will be displayed in public for all to see.",
+      "artifact_id": "gaokao_en_2020_II_5b0dd9d735e3a229",
+      "source_locator": "doc:5b0dd9d/tier:flash/page:1",
+      "status": "PENDING"
+    },
+    {
+      "id": "gaokao_en_2020_II_reading_B",
+      "section_id": "gaokao_en_2020_II_reading",
+      "label": "B",
+      "text": "B\r\n\r\nThe end of the school year was in sight and spirits were high. I was back teaching after an absence of 15 years, dealing with the various kinds of \"forbidden fruit\" that come out of book bags. Now was the spring of the water pistol（手枪）.\r\n\r\nI decided to think up a method of dealing with forbidden fruit.\r\n\r\n\"Please bring that pistol to me,\" I said. \"I'm going to put it in my Grandma's Box.\"\r\n\r\n\"What's that?\" they asked.\r\n\r\n\"It's a large wooden chest full of toys for my grandchildren,\" I replied,\r\n\r\n\"You don't have grandchildren,\" someone said.\r\n\r\n\"I don't now.\" I replied. \"But someday I will. When I do, my box will be full of wonderful things for them.\"\r\n\r\nMy imaginary Grandma's Box worked like magic that spring, and later. Sometimes. students would ask me to describe all the things I had in it. Then I would try to remember the different possessions I supposedly had taken away—since I seldom actually kept them Usually <u>the offender_</u>would appear at the end of the day, and I would return the belonging.\r\n\r\nThe-years went by, and my first grandchild Gordon was born. I shared my joy with that year's class. Then someone said, \"Now you can use your Grandma's Box.\" From then on instead of coming to ask their possessions back, the students would say, \"That's okay. Put it in your Grandma's Box for Gordon.\"\r\n\r\nI loved talking about the imaginary box, not only with my students but also with my own children. They enjoyed hearing about all the forbidden fruit I had collected. Then one Christmas I received a surprise gift—a large, beautifully made wooden chest. My son Bruce had made my Grandma's Box a reality.",
+      "artifact_id": "gaokao_en_2020_II_5b0dd9d735e3a229",
+      "source_locator": "doc:5b0dd9d/tier:flash/page:1",
+      "status": "PENDING"
+    },
+    {
+      "id": "gaokao_en_2020_II_reading_C",
+      "section_id": "gaokao_en_2020_II_reading",
+      "label": "C",
+      "text": "C\r\n\r\n![Image block](doc:5b0dd9d/tier:flash/page:1/block:129)\r\n\r\nIn May 1987 the Golden Gate Bridge had a 50th birthday party. The bridge was closed to motor traffic so people could enjoy a walk across it. Organizers expected perhaps 50,000 people to show up. Instead, as many as 800, 000 crowded the roads to the bridge. By the time 250,000 were on the bridge, engineers noticed something terrible：the roadway was flattening under what turned out to be the heaviest load it had ever been asked to carry. Worse, it was beginning to sway（晃动）. The authorities closed access to the bridge and tens of thousands of people made their way back to land. A disaster was avoided.\r\n\r\nThe story is one of scores in To Forgive Design：Understanding Failure, a book that is at once a love letter to engineering and a paean（赞歌）to its breakdowns. Its author, Dr. Henry Petroski, has long been writing about disasters. In this book, he includes the loss of the space shuttles（航天飞机）Challenger and Columbia, and the sinking of the Titanic.\r\n\r\nThough he acknowledges that engineering works can fail because the person who thought them up or engineered them simply got things wrong, in this book Dr. Petroski widens his view to consider the larger context in which such failures occur. Sometimes devices fail because a good design is constructed with low quality materials incompetently applied. Or perhaps a design works so well it is adopted elsewhere again and again, with seemingly harmless improvements, until, suddenly, it does not work at all anymore.\r\n\r\nReaders will encounter not only stories they have heard before, but some new stories and a moving discussion of the responsibility of the engineer to the public and the ways young engineers can be helped to grasp them.\r\n\r\n\"Success is success but that is all that it is,\" Dr. Petroski writes. It is failure that brings improvement.",
+      "artifact_id": "gaokao_en_2020_II_5b0dd9d735e3a229",
+      "source_locator": "doc:5b0dd9d/tier:flash/page:1",
+      "status": "PENDING"
+    },
+    {
+      "id": "gaokao_en_2020_II_reading_D",
+      "section_id": "gaokao_en_2020_II_reading",
+      "label": "D",
+      "text": "D\r\n\r\nRainforests are home to a rich variety of medicinal plants, food, birds and animals. Can you believe that a single bush（灌木丛）in the Amazon may have more species of ants than the whole of Britain! About 480 varieties of trees may be found in just one hectare of rainforest.\r\n\r\nRainforests are the lungs of the planet-storing vast quantities of carbon dioxide and producing a significant amount of the world's oxygen. Rainforests have their own perfect system for ensuring their own survival; the tall trees make a canopy（树冠层）of branches and leaves which protect themselves, smaller plants, and the forest animals from heavy rain, intense dry heat from the sun and strong winds.\r\n\r\nAmazingly, the trees grow in such a way that their leaves and branches, although close together, never actually touch those of another tree. Scientists think this is the plants' way to prevent the spread of any tree diseases and make life more difficult for leaf-eating insects like caterpillars. To survive in the forest, animals must climb, jump or fly across the gaps. The ground floor of the forest is not all tangled leaves and bushes, like in films, but is actually fairly clear. It is where dead leaves turn into food for the trees and other forest life.\r\n\r\nThey are not called rainforests for nothing! Rainforests can generate 75%of their own rain. At least 80 inches of rain a year is normal-and in some areas there may be as much as 430 inches of rain annually. This is real rain-your umbrella may protect you in a shower, but it won't keep you dry if there is a full rainstorm. In just two hours, streams can rise ten to twenty feet. The humidity（湿气）of large rainforests contributes to the formation of rainclouds that may travel to other countries in need of rain.",
+      "artifact_id": "gaokao_en_2020_II_5b0dd9d735e3a229",
+      "source_locator": "doc:5b0dd9d/tier:flash/page:1",
+      "status": "PENDING"
+    },
+    {
+      "id": "gaokao_en_2020_II_reading_七选五",
+      "section_id": "gaokao_en_2020_II_reading",
+      "label": "七选五",
+      "text": "第二节（共5小题：每小题2.5分，满分12.5分）**\r\n\r\n阅读下面短文，从短文后的选项中选出可以填入空白处的最佳选项，选项中有两项为多余选项。\r\n\r\nTalking with your doctor\r\n\r\nTalking freely with your doctor can make you feel better and gives your doctor the information she or he needs to give you the best care. Don't be afraid or embarrassed to discuss something that is bothering you.<u>___36</u>\r\n\r\n●Stay positive.\r\n\r\nGo to your doctor's visits with a good attitude.<u>___37___</u>Think teamwork! Think positive!\r\n\r\n●Keep track of how you are feeling.\r\n\r\n<u>38___</u>This will make it easier for you to answer questions about your symptoms（症状）and how medicines make you feel. It also makes it easier for you to bring up anything that you are worried about. Make sure to be honest about how you feel and how long you've felt that way.\r\n\r\n<u>●   39</u>\r\n\r\nYour medical history is a list of your illnesses, treatments, what the doctors told you to do, and anything else you think your doctor should know. Also, if you are allergic（过敏）to any medicines, be sure to mention that to your doctor.\r\n\r\n●Ask questions.\r\n\r\nDo not be afraid to ask your doctor any questions you have. To remember all the questions you have when you are not in the doctor's office, write them down and bring the list with you to your appointment.<u>___40___</u>Remember—there's no such thing as a stupid question. If you don't understand the answer to a question, ask the doctor to explain it again until you do understand.\r\n\r\nA. This will make getting answers easier.\r\n\r\nB. Here are some tips for talking with your doctor.\r\n\r\nC. You can talk to another doctor if the treatments don't work.\r\n\r\nD. Before your doctor's visit, keep notes on how you are feeling.\r\n\r\nE. Remember, your doctor and other caregivers are on your side.\r\n\r\nF. Bring your medical history, including a list of your current medicines.\r\n\r\nG. Writing down what the doctor says will help you remember important information.",
+      "artifact_id": "gaokao_en_2020_II_5b0dd9d735e3a229",
+      "source_locator": "doc:5b0dd9d/tier:flash/page:1",
+      "status": "PENDING"
+    },
+    {
+      "id": "gaokao_en_2020_II_language_正文",
+      "section_id": "gaokao_en_2020_II_language",
+      "label": "正文",
+      "text": "**第三部分语言运用（共两节，满分30分）**\r\n\r\n第一节（共15小题；每小题1分，满分15分）\r\n\r\n阅读下面短文，从每题所给的A、B、C、D四个选项中选出可以填入空白处的最佳选项。\r\n\r\nWhen Jim Grant spotted black smoke coming out of a building on his way to work, he<u>___41___</u>his car to call 911. Then he<u>___42___</u>a U-turn, circling back to take another look.\r\n\r\nPulling up to the building, Grant saw flames（火焰）shooting out of a second-floor window. Not seeing or hearing any fire engines<u>___43___</u>Grant rushed to a side<u>___44___</u>and ran up the stairs.\r\n\r\nOn the second floor, he<u>___45___</u>every apartment door. \"Get out!\" Grant shouted, No one<u>___46___</u>and he assumed that people had already<u>___47___</u>. Reaching the end of the hallway, though, Grant<u>___48___</u>a half-open door. He kicked it wide open, finding a<u>___49___</u>woman in a wheelchair with a little boy and a tiny baby. \"Let's<u>___50___</u>!\" he screamed. The woman looked at him in confusion and said something about changing her clothes. Grant didn't wait, Clutching（抓牢）the baby to his chest and<u>___51___</u>the boy alongside, Grant ran down the hallway. When he was<u>___52___</u>outside, the only<u>___53___</u>in sight was a policeman. Grant told him about the<u>___54___</u>and they rushed into the smoky building.\r\n\r\nThanks to them, a family was saved from the fire. Grant and the policeman were honored for their<u>___55___</u>.\r\n\r\n（    ）41. A. drove         B. stopped      C. reached      D. abandoned\r\n\r\n（    ）42. A. saw           B. made      C. missed        D. crossed\r\n\r\n（    ）43. A. burning        B. leaving      C. approaching     D. waiting\r\n\r\n（    ）44. A. entrance        B. road       C. building       D. window\r\n\r\n（    ）45. A. locked          B. kicked     C. counted      D. repaired\r\n\r\n（    ）46. A. agreed          B. cared       C. responded      D. understood\r\n\r\n（    ）47. A. arrived          B. returned    C. hidden       D. escaped\r\n\r\n（    ）48. A. skipped         B. closed      C. noticed      D. remembered\r\n\r\n（    ）49. A. frightened       B. curious        C. patient      D. grateful\r\n\r\n（    ）50. A. turn back         B. go up      C. get out        D. lie down\r\n\r\n（    ）51. A. following        B. dragging      C. examining     D. passing\r\n\r\n（    ）52. A. safely          B. secretly       C. suddenly      D. previously\r\n\r\n（    ）53. A. witness         B. guide       C. service         D. help\r\n\r\n（    ）54. A. woman         B. door        C. car            D. baby\r\n\r\n（    ）55. A. wisdom         B. generosity   C. honesty         D. courage\r\n\r\n**第二节（共10小题；每小题1.5分，满分15分）**\r\n\r\n阅读下面短文，在空白处填入1个适当的单词或括号内单词的正确形式。\r\n\r\nThese days, it is not unusual for 10-to 12-year-olds to publish their own websites or for second and third graders<u>___56___</u>（begin）computer classes. At the same time, computer games are becoming increasingly popular as major publishing houses continue to develop<u>___57___</u>（education）computer programs for children in preschool. Also, technological know-how has become a<u>___58___</u>（require）for most jobs in an increasingly digital world, as the computer has become a common tool in most<u>___59___</u>（profession）\r\n\r\nThe Digital World is a set of volumes<u>___60___</u>aim to describe how digital systems influence society and help readers understand the nature of digital systems and their many interacting parts. Each volume in the set explores<u>___61___</u>wide range of material, explains the basic concepts of major applications of digital systems, <u>___62___</u>discusses the influences they have on everyday life. Because the number of possible topics<u>___63___</u>（be）practically limitless, we focus on a sample of the most interesting and useful applications and tools and explain the basic principles of technology. Readers<u>___64___</u>（encourage）to continue exploring the digital world with the guidance of<u>___65___</u>（we）Further Resources section featured in each volume.",
+      "artifact_id": "gaokao_en_2020_II_5b0dd9d735e3a229",
+      "source_locator": "doc:5b0dd9d/tier:flash/page:1",
+      "status": "PENDING"
+    },
+    {
+      "id": "gaokao_en_2020_II_writing_正文",
+      "section_id": "gaokao_en_2020_II_writing",
+      "label": "正文",
+      "text": "**第四部分写作（共两节，满分40分）**\r\n\r\n**第一节（满分15分）**\r\n\r\n假定你是李华，上周日你校举办了5公里越野赛跑活动。请你为校英文报写一篇报道，内容包括：\r\n\r\n1. 参加人员；\r\n\r\n2. 跑步从校门只到南山脚下；\r\n\r\n3. 活动反响。\r\n\r\n注意：\r\n\r\n1. 写作词数应为80左右；\r\n\r\n2. 请按如下格式在答题卡的相应位置作答。\r\n\r\n| A Cross-Country Running Race |\r\n| --- |\r\n\r\n**第二节（满分25分）**\r\n\r\n阅读下面材料，根据其内容和所给段落开头语续写两段，使之构成一篇完整的短文。\r\n\r\nThe Meredith family lived in a small community. As the economy was in decline, some people in the town had lost their jobs. Many of their families were struggling to make ends meet. People were trying to help each other meet the challenges.\r\n\r\nMrs. Meredith was a most kind and thoughtful woman. She spent a great deal of time visiting the poor. She knew they had problems, and they needed all kinds of help. When she had time, she would bring food and medicine to them.\r\n\r\nOne morning she told her children about a family she had visited the day before. There was a man sick in bed, his wife, who took care of him and could not go out to work, and their little boy. The little boy-his name was Bernard—had interested her very much.\r\n\r\n\"I wish you could see him,\" she said to her own children, John, Harry, and Clara. \"He is such a help to his mother. He wants very much to earn some money, but I don't see what he can do\"\r\n\r\nAfter their mother left the room, the children sat thinking(          )could help him to earn money.\" said Clara. \"His family is suffering so much.\"\r\n\r\n\"So do I,\" said Harry. \"We really should do something to assist them.\"\r\n\r\nFor some moments, John said nothing. but, suddenly, he sprang to his feet and cried, \"I have a great idea! I have a solution that we can all help accomplish（完成）.\"\r\n\r\nThe other children also jumped up all attention. When John had an idea, it was sure to be a good one, \"I tell you what we can do, \"said John. \"You know that big box of com Uncle John sent us? Well, we can make popcorn（爆米花）, and put it into paper bags, and Bernard can take it around to the houses and sell it.\"\r\n\r\n注意：\r\n\r\n1. 续写词数应为150左右；\r\n\r\n2. 请按如下格式在答题卡的相应位置作答。\r\n\r\n<table><tr><td><p>When Mrs. Meredith heard of John's idea, she thought it was a good one, too. </p><p>With everything ready, Bernard started out on his new business.</p></td></tr></table>",
+      "artifact_id": "gaokao_en_2020_II_5b0dd9d735e3a229",
+      "source_locator": "doc:5b0dd9d/tier:flash/page:1",
+      "status": "PENDING"
+    }
+  ],
+  "questions": [
+    {
+      "id": "gaokao_en_2020_II_Q21",
+      "section_id": "gaokao_en_2020_II_reading",
+      "passage_id": "gaokao_en_2020_II_reading_A",
+      "number": 21,
+      "type": "MCQ",
+      "stem": "How many camps does Pali Overnight Adventures offer this summer? （    ）",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2020_II_Q22",
+      "section_id": "gaokao_en_2020_II_reading",
+      "passage_id": "gaokao_en_2020_II_reading_A",
+      "number": 22,
+      "type": "MCQ",
+      "stem": "What will campers do at the Broadcasting Camp? （    ）",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2020_II_Q23",
+      "section_id": "gaokao_en_2020_II_reading",
+      "passage_id": "gaokao_en_2020_II_reading_A",
+      "number": 23,
+      "type": "MCQ",
+      "stem": "Which camp will attract children who are interested in cooking? （    ）",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2020_II_Q24",
+      "section_id": "gaokao_en_2020_II_reading",
+      "passage_id": "gaokao_en_2020_II_reading_B",
+      "number": 24,
+      "type": "MCQ",
+      "stem": "What was the author's purpose in having the conversation with the students? （    ）",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2020_II_Q25",
+      "section_id": "gaokao_en_2020_II_reading",
+      "passage_id": "gaokao_en_2020_II_reading_B",
+      "number": 25,
+      "type": "MCQ",
+      "stem": "What do the underlined words \"the offender\" in paragraph 8 refer to? （    ）",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2020_II_Q26",
+      "section_id": "gaokao_en_2020_II_reading",
+      "passage_id": "gaokao_en_2020_II_reading_B",
+      "number": 26,
+      "type": "MCQ",
+      "stem": "What did the students do after they learned about the birth of Gordon? （    ）",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2020_II_Q27",
+      "section_id": "gaokao_en_2020_II_reading",
+      "passage_id": "gaokao_en_2020_II_reading_B",
+      "number": 27,
+      "type": "MCQ",
+      "stem": "What can we infer about the author? （    ）",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2020_II_Q28",
+      "section_id": "gaokao_en_2020_II_reading",
+      "passage_id": "gaokao_en_2020_II_reading_C",
+      "number": 28,
+      "type": "MCQ",
+      "stem": "What happened to the Golden Gate Bridge on its 50th birthday? （    ）",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2020_II_Q29",
+      "section_id": "gaokao_en_2020_II_reading",
+      "passage_id": "gaokao_en_2020_II_reading_C",
+      "number": 29,
+      "type": "MCQ",
+      "stem": "Which of the following is Dr. Petroski's idea according to paragraph 3? （    ）",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2020_II_Q30",
+      "section_id": "gaokao_en_2020_II_reading",
+      "passage_id": "gaokao_en_2020_II_reading_C",
+      "number": 30,
+      "type": "MCQ",
+      "stem": "What does the last paragraph suggest? （    ）",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2020_II_Q31",
+      "section_id": "gaokao_en_2020_II_reading",
+      "passage_id": "gaokao_en_2020_II_reading_C",
+      "number": 31,
+      "type": "MCQ",
+      "stem": "What is the text? （    ）",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2020_II_Q32",
+      "section_id": "gaokao_en_2020_II_reading",
+      "passage_id": "gaokao_en_2020_II_reading_D",
+      "number": 32,
+      "type": "MCQ",
+      "stem": "What can we learn about rainforests from the first paragraph? （    ）",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2020_II_Q33",
+      "section_id": "gaokao_en_2020_II_reading",
+      "passage_id": "gaokao_en_2020_II_reading_D",
+      "number": 33,
+      "type": "MCQ",
+      "stem": "Which of the following contributes most to the survival of rainforests? （    ）",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2020_II_Q34",
+      "section_id": "gaokao_en_2020_II_reading",
+      "passage_id": "gaokao_en_2020_II_reading_D",
+      "number": 34,
+      "type": "MCQ",
+      "stem": "Why do the leaves and branches of different trees avoid touching each other? （    ）",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2020_II_Q35",
+      "section_id": "gaokao_en_2020_II_reading",
+      "passage_id": "gaokao_en_2020_II_reading_D",
+      "number": 35,
+      "type": "MCQ",
+      "stem": "What can be a suitable title for the text? （    ）",
+      "score": "2.5"
+    }
+  ],
+  "options": [
+    {
+      "question_id": "gaokao_en_2020_II_Q21",
+      "label": "A",
+      "text": "2."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q21",
+      "label": "B",
+      "text": "4."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q21",
+      "label": "C",
+      "text": "17."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q21",
+      "label": "D",
+      "text": "21."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q22",
+      "label": "A",
+      "text": "Create a website."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q22",
+      "label": "B",
+      "text": "Run a news station."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q22",
+      "label": "C",
+      "text": "Meet a star reporter."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q22",
+      "label": "D",
+      "text": "Hold a dinner party."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q23",
+      "label": "A",
+      "text": "Broadcasting Camp."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q23",
+      "label": "B",
+      "text": "Secret Agent Camp."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q23",
+      "label": "C",
+      "text": "Culinary Camp"
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q23",
+      "label": "D",
+      "text": "Street Art Camp."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q24",
+      "label": "A",
+      "text": "To collect the water pistol."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q24",
+      "label": "B",
+      "text": "To talk about her grandchildren."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q24",
+      "label": "C",
+      "text": "To recommend some toys."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q24",
+      "label": "D",
+      "text": "To explain her teaching method."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q25",
+      "label": "A",
+      "text": "The student's parent."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q25",
+      "label": "B",
+      "text": "The maker of the Grandma's Box."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q25",
+      "label": "C",
+      "text": "The author's grandchild."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q25",
+      "label": "D",
+      "text": "The owner of the forbidden fruit.\r\n\r\n![Image block](doc:5b0dd9d/tier:flash/page:1/block:117)"
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q26",
+      "label": "A",
+      "text": "They went to play with the baby."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q26",
+      "label": "B",
+      "text": "They asked to see the Grandma's Box."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q26",
+      "label": "C",
+      "text": "They made a present for Gordon."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q26",
+      "label": "D",
+      "text": "They stopped asking their toys back."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q27",
+      "label": "A",
+      "text": "She enjoys telling jokes."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q27",
+      "label": "B",
+      "text": "She is a strict and smart teacher."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q27",
+      "label": "C",
+      "text": "She loves doing woodwork."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q27",
+      "label": "D",
+      "text": "She is a responsible grandmother"
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q28",
+      "label": "A",
+      "text": "It carried more weight than it could."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q28",
+      "label": "B",
+      "text": "It swayed violently in a strong wind"
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q28",
+      "label": "C",
+      "text": "Its roadway was damaged by vehicles"
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q28",
+      "label": "D",
+      "text": "Its access was blocked by many people."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q29",
+      "label": "A",
+      "text": "No design is well received everywhere"
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q29",
+      "label": "B",
+      "text": "Construction is more important than design."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q29",
+      "label": "C",
+      "text": "Not all disasters are caused by engineering design"
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q29",
+      "label": "D",
+      "text": "Improvements on engineering works are necessary."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q30",
+      "label": "A",
+      "text": "Failure can lead to progress."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q30",
+      "label": "B",
+      "text": "Success results in overconfidence"
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q30",
+      "label": "C",
+      "text": "Failure should be avoided."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q30",
+      "label": "D",
+      "text": "Success comes from joint efforts."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q31",
+      "label": "A",
+      "text": "A news report"
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q31",
+      "label": "B",
+      "text": "A short story."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q31",
+      "label": "C",
+      "text": "A book review"
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q31",
+      "label": "D",
+      "text": "A research article."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q32",
+      "label": "A",
+      "text": "They produce oxygen."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q32",
+      "label": "B",
+      "text": "They cover a vast area."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q32",
+      "label": "C",
+      "text": "They are well managed."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q32",
+      "label": "D",
+      "text": "They are rich in wildlife."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q33",
+      "label": "A",
+      "text": "Heavy rains"
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q33",
+      "label": "B",
+      "text": "Big trees."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q33",
+      "label": "C",
+      "text": "Small plants."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q33",
+      "label": "D",
+      "text": "Forest animals."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q34",
+      "label": "A",
+      "text": "For more sunlight."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q34",
+      "label": "B",
+      "text": "For more growing space."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q34",
+      "label": "C",
+      "text": "For self-protection."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q34",
+      "label": "D",
+      "text": "For the detection of insects."
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q35",
+      "label": "A",
+      "text": "Life-Giving Rainforests"
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q35",
+      "label": "B",
+      "text": "The Law of the Jungle"
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q35",
+      "label": "C",
+      "text": "Animals in the Amazon"
+    },
+    {
+      "question_id": "gaokao_en_2020_II_Q35",
+      "label": "D",
+      "text": "Weather in Rainforests\r\n\r\n**"
+    }
+  ]
+}

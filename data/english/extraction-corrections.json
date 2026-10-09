@@ -1,0 +1,45 @@
+[
+  {
+    "paperId": "gaokao_en_2023_II",
+    "artifactId": "gaokao_en_2023_II_3be400e5f2edd85d",
+    "page": 1,
+    "questionNumber": 35,
+    "ocr": "A end of the study.",
+    "transcription": "A. Language study.",
+    "reason": "按归档原图补回 OCR 遗失的选项文字；不涉及答案正确性验证"
+  },
+  {
+    "paperId": "gaokao_en_2025_II",
+    "artifactId": "gaokao_en_2025_II_16342059a8b853a8",
+    "page": 1,
+    "questionNumber": 7,
+    "ocr": "8. It assess peer pressure,",
+    "transcription": "A. It eases peer pressure.",
+    "reason": "按归档原图修复被识别成题号的选项 A"
+  },
+  {
+    "paperId": "gaokao_en_2025_II",
+    "artifactId": "gaokao_en_2025_II_53c4d54dae209c86",
+    "page": 1,
+    "questionNumber": 14,
+    "ocr": "14. What the ingredients were used? B. Which dishes were best liked",
+    "transcription": "14. What is paragraph 5 mainly about?\nA. Why the ingredients were used. B. Which dishes were best liked.",
+    "reason": "按归档原图补回 OCR 遗失的题干及选项 A"
+  },
+  {
+    "paperId": "gaokao_en_2025_I",
+    "artifactId": "gaokao_en_2025_I_e73099a6cf19483e",
+    "page": 1,
+    "ocr": "Batteries are energy-efficient",
+    "transcription": "CARS—Batteries\nBatteries are energy-efficient",
+    "reason": "按原图补回 OCR 遗失的方框标题"
+  },
+  {
+    "paperId": "gaokao_en_2025_I",
+    "artifactId": "gaokao_en_2025_I_e73099a6cf19483e",
+    "page": 1,
+    "ocr": "Hydrogen fuel cells are a lighter choice",
+    "transcription": "TRUCKS—Hydrogen fuel cells\nHydrogen fuel cells are a lighter choice",
+    "reason": "按原图补回 OCR 遗失的方框标题"
+  }
+]

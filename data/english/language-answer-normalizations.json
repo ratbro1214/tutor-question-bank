@@ -1,0 +1,9 @@
+[
+  {"paperId":"gaokao_en_2024_I","number":56,"sourceAnswer":"Engineering","answer":"engineering","reason":"原件答案列表首字母大写；题文The latest之后为句中名词"},
+  {"paperId":"gaokao_en_2024_I","number":57,"sourceAnswer":"Functional","answer":"functional","reason":"原件答案列表首字母大写；题文protective之后为句中形容词"},
+  {"paperId":"gaokao_en_2024_I","number":60,"sourceAnswer":"Walks","answer":"walks","reason":"原件答案列表首字母大写；题文主语之后为句中谓语"},
+  {"paperId":"gaokao_en_2024_I","number":62,"sourceAnswer":"Favorites","answer":"favourites/favorites","reason":"原件使用美式拼写及列表大写；结合句中位置改为小写，同时接受提示词favourite对应的英式复数"},
+  {"paperId":"gaokao_en_2024_I","number":63,"sourceAnswer":"As","answer":"as","reason":"原件答案列表首字母大写；题文stands之后为句中介词"},
+  {"paperId":"gaokao_en_2024_I","number":64,"sourceAnswer":"That","answer":"that","reason":"原件答案列表首字母大写；题文Silk Route之后为句中关系词"},
+  {"paperId":"gaokao_en_2024_I","number":65,"sourceAnswer":"Richness","answer":"richness","reason":"原件答案列表首字母大写；题文the之后为句中名词"}
+]

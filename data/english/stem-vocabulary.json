@@ -1,0 +1,5611 @@
+{
+  "scope": "阅读理解 A–D 题干；不含选项、文章正文、听力及七选五占位符",
+  "sourceStatus": "源题干为现有自动提取文本，待逐题校对；释义与读题提示为教学整理。频次只代表本地语料。",
+  "dictionaryUrl": "https://dictionary.cambridge.org/us/dictionary/english/suggest",
+  "paperCount": 12,
+  "questionCount": 180,
+  "matchedQuestionCount": 81,
+  "terms": [
+    {
+      "id": "suggest-inference",
+      "word": "suggest",
+      "pattern": "suggest(?:s|ed|ing)?",
+      "category": "推断",
+      "meaning": "暗示；表明",
+      "confusion": "看到 suggest 不要一律译为“建议”。段落、事实或研究作主语时，常是在问它说明什么。",
+      "strategy": "结合指定段落的事实，找有依据的含义；不要凭空联想。",
+      "questionCount": 3
+    },
+    {
+      "id": "suggest-advice",
+      "word": "suggest",
+      "pattern": "suggest(?:s|ed|ing)?",
+      "category": "建议",
+      "meaning": "建议；提议",
+      "confusion": "人物提出做法时仍可表示“建议”，不能把题干中的 suggest 全部记成“暗示”。",
+      "strategy": "找出这个人建议采取的行动，核对动作及对象。",
+      "questionCount": 5
+    },
+    {
+      "id": "infer",
+      "word": "infer",
+      "pattern": "infer(?:red|ring|s)?",
+      "category": "推断",
+      "meaning": "推断；推知",
+      "confusion": "infer 是读者根据线索推断；imply 是作者或文字暗示。",
+      "strategy": "先找事实，再作有限推断；答案必须有文本依据。",
+      "questionCount": 3
+    },
+    {
+      "id": "imply",
+      "word": "imply",
+      "pattern": "(?:imply|implies|implied|implying)",
+      "category": "推断",
+      "meaning": "暗示；言外之意是",
+      "confusion": "作者没有直说，也可能通过语气、对比或事例表达。",
+      "strategy": "读懂前后关系，判断作者间接表达的意思。",
+      "questionCount": 1
+    },
+    {
+      "id": "conclude",
+      "word": "conclude",
+      "pattern": "conclud(?:e|es|ed|ing)",
+      "category": "推断",
+      "meaning": "得出结论",
+      "confusion": "be concluded about 是“关于……能得出什么结论”，不是“结束”。",
+      "strategy": "综合相关信息，选择证据能支持的结论。",
+      "questionCount": 1
+    },
+    {
+      "id": "purpose",
+      "word": "purpose",
+      "pattern": "purpose",
+      "category": "意图",
+      "meaning": "目的；意图",
+      "confusion": "问“为什么写/提到”，不能只回答“写了什么”。",
+      "strategy": "检查事例或段落在论述中的作用：说明、举例、对比等。",
+      "questionCount": 5
+    },
+    {
+      "id": "mention",
+      "word": "mention",
+      "pattern": "mention(?:s|ed|ing)?",
+      "category": "意图",
+      "meaning": "提到；提及",
+      "confusion": "Why mention / purpose in mentioning 问提及某事的作用；people mentioned 则问被提到的人。",
+      "strategy": "先看疑问词：Why 问作用，Who/What 通常定位具体信息。",
+      "questionCount": 9
+    },
+    {
+      "id": "attitude",
+      "word": "attitude",
+      "pattern": "attitude",
+      "category": "态度",
+      "meaning": "态度；看法",
+      "confusion": "作者态度不等于文中引用人物的态度。",
+      "strategy": "找到作者自己的评价词和语气，再判断支持、质疑或中立。",
+      "questionCount": 2
+    },
+    {
+      "id": "mainly",
+      "word": "mainly",
+      "pattern": "mainly",
+      "category": "主旨",
+      "meaning": "主要地；主要关于",
+      "confusion": "不能用一个局部细节代替整段或全文中心。",
+      "strategy": "注意题干范围是 paragraph 还是 text，概括对应范围。",
+      "questionCount": 7
+    },
+    {
+      "id": "title",
+      "word": "title",
+      "pattern": "title",
+      "category": "主旨",
+      "meaning": "标题",
+      "confusion": "标题要覆盖主题，不能只贴合一个例子。",
+      "strategy": "比较标题与全文话题、核心观点和范围是否一致。",
+      "questionCount": 7
+    },
+    {
+      "id": "suitable",
+      "word": "suitable",
+      "pattern": "suitable",
+      "category": "主旨",
+      "meaning": "合适的；恰当的",
+      "confusion": "suitable title 表示“合适的标题”。",
+      "strategy": "兼顾准确、范围适当与概括性。",
+      "questionCount": 7
+    },
+    {
+      "id": "best-describes",
+      "word": "best describe",
+      "pattern": "best\\s+describ(?:e|es)",
+      "category": "描述",
+      "meaning": "最恰当地描述",
+      "confusion": "best 强调比较选项，部分符合不一定最恰当。",
+      "strategy": "综合对象的特征，避免以偏概全。",
+      "questionCount": 4
+    },
+    {
+      "id": "describe",
+      "word": "describe",
+      "pattern": "describ(?:e|es|ed|ing)",
+      "category": "描述",
+      "meaning": "描述；刻画",
+      "confusion": "描述题关注题干指定对象的特征。",
+      "strategy": "定位对象，核对选项描述与文章是否一致。",
+      "questionCount": 1
+    },
+    {
+      "id": "refer-to",
+      "word": "refer to",
+      "pattern": "refer(?:s|red|ring)?\\s+to",
+      "category": "词义与指代",
+      "meaning": "指的是；指代",
+      "confusion": "在代词题里不是“参考”，而是问该词对应什么。",
+      "strategy": "回到原句和前文寻找指代对象，代入核对语义。",
+      "questionCount": 5
+    },
+    {
+      "id": "mean",
+      "word": "mean",
+      "pattern": "mean(?:s)?",
+      "category": "词义与指代",
+      "meaning": "意思是；意为",
+      "confusion": "问指定词句在本文中的含义，而非所有字典义。",
+      "strategy": "利用上下文、转折、解释或例子推测，再代入检验。",
+      "questionCount": 9
+    },
+    {
+      "id": "underlined",
+      "word": "underlined",
+      "pattern": "underlined",
+      "category": "定位",
+      "meaning": "画下划线的",
+      "confusion": "用于指定被考查的词或短语，不是词义提示。",
+      "strategy": "先定位题干指定词，再读它所在句的上下文。",
+      "questionCount": 13
+    },
+    {
+      "id": "phrase",
+      "word": "phrase",
+      "pattern": "phrase",
+      "category": "词义与指代",
+      "meaning": "短语；词组",
+      "confusion": "短语含义未必是逐词翻译的总和。",
+      "strategy": "把整个词组作为单位，结合语境理解。",
+      "questionCount": 2
+    },
+    {
+      "id": "according-to",
+      "word": "according to",
+      "pattern": "according\\s+to",
+      "category": "定位",
+      "meaning": "根据；按照",
+      "confusion": "指定信息来源，不能用自己的常识替代。",
+      "strategy": "只根据指定人物、段落或全文提供的信息判断。",
+      "questionCount": 9
+    },
+    {
+      "id": "following",
+      "word": "the following",
+      "pattern": "the\\s+following",
+      "category": "读题",
+      "meaning": "下列（选项）",
+      "confusion": "不是“接下来的故事”，而是指下面列出的内容。",
+      "strategy": "逐项核对选项，并留意 best、not、except 等限制。",
+      "questionCount": 10
+    },
+    {
+      "id": "paragraph",
+      "word": "paragraph",
+      "pattern": "paragraph(?:s)?",
+      "category": "定位",
+      "meaning": "段落",
+      "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+      "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+      "questionCount": 33
+    },
+    {
+      "id": "probably",
+      "word": "probably",
+      "pattern": "probably",
+      "category": "推断",
+      "meaning": "很可能；大概",
+      "confusion": "允许合理推测，但不等于随意猜测。",
+      "strategy": "比较文本支持程度，避免超出原文的绝对结论。",
+      "questionCount": 4
+    },
+    {
+      "id": "concern",
+      "word": "concerning",
+      "pattern": "concerning",
+      "category": "读题",
+      "meaning": "关于；涉及",
+      "confusion": "题干中的 concerning 可用作介词，不一定表示“令人担忧的”。",
+      "strategy": "把 concerning 后面的内容视为题目限定的话题。",
+      "questionCount": 1
+    }
+  ],
+  "examples": [
+    {
+      "paperId": "gaokao_en_2020_I",
+      "year": 2020,
+      "volume": "I",
+      "title": "2020年新高考全国Ⅰ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2020_I_Q1",
+      "number": 1,
+      "stem": "How many people can each grand prize winner take on the free trip?",
+      "artifactId": "gaokao_en_2020_I_0eec93e6d44208a5",
+      "sourceLocators": [
+        "doc:0eec93e/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2020_I",
+      "year": 2020,
+      "volume": "I",
+      "title": "2020年新高考全国Ⅰ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2020_I_Q2",
+      "number": 2,
+      "stem": "What will each of the honorable mention winners get?",
+      "artifactId": "gaokao_en_2020_I_0eec93e6d44208a5",
+      "sourceLocators": [
+        "doc:0eec93e/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "mention",
+          "word": "mention",
+          "pattern": "mention(?:s|ed|ing)?",
+          "category": "意图",
+          "meaning": "提到；提及",
+          "confusion": "Why mention / purpose in mentioning 问提及某事的作用；people mentioned 则问被提到的人。",
+          "strategy": "先看疑问词：Why 问作用，Who/What 通常定位具体信息。",
+          "start": 32,
+          "end": 39,
+          "matched": "mention",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2020_I",
+      "year": 2020,
+      "volume": "I",
+      "title": "2020年新高考全国Ⅰ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2020_I_Q3",
+      "number": 3,
+      "stem": "Which of the following will result in disqualification?",
+      "artifactId": "gaokao_en_2020_I_0eec93e6d44208a5",
+      "sourceLocators": [
+        "doc:0eec93e/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "following",
+          "word": "the following",
+          "pattern": "the\\s+following",
+          "category": "读题",
+          "meaning": "下列（选项）",
+          "confusion": "不是“接下来的故事”，而是指下面列出的内容。",
+          "strategy": "逐项核对选项，并留意 best、not、except 等限制。",
+          "start": 9,
+          "end": 22,
+          "matched": "the following",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2020_I",
+      "year": 2020,
+      "volume": "I",
+      "title": "2020年新高考全国Ⅰ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2020_I_Q4",
+      "number": 4,
+      "stem": "What did Jennifer do after high school?",
+      "artifactId": "gaokao_en_2020_I_0eec93e6d44208a5",
+      "sourceLocators": [
+        "doc:0eec93e/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2020_I",
+      "year": 2020,
+      "volume": "I",
+      "title": "2020年新高考全国Ⅰ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2020_I_Q5",
+      "number": 5,
+      "stem": "Why did Jennifer choose the program at Ministry Saint Joseph’s Hospital in Marshfield?",
+      "artifactId": "gaokao_en_2020_I_0eec93e6d44208a5",
+      "sourceLocators": [
+        "doc:0eec93e/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2020_I",
+      "year": 2020,
+      "volume": "I",
+      "title": "2020年新高考全国Ⅰ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2020_I_Q6",
+      "number": 6,
+      "stem": "What did Jennifer sacrifice to achieve her goal?",
+      "artifactId": "gaokao_en_2020_I_0eec93e6d44208a5",
+      "sourceLocators": [
+        "doc:0eec93e/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2020_I",
+      "year": 2020,
+      "volume": "I",
+      "title": "2020年新高考全国Ⅰ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2020_I_Q7",
+      "number": 7,
+      "stem": "What can we learn from Jenifer’s story?",
+      "artifactId": "gaokao_en_2020_I_0eec93e6d44208a5",
+      "sourceLocators": [
+        "doc:0eec93e/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2020_I",
+      "year": 2020,
+      "volume": "I",
+      "title": "2020年新高考全国Ⅰ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2020_I_Q8",
+      "number": 8,
+      "stem": "What made Mr Bissell return to Uzbekistan?",
+      "artifactId": "gaokao_en_2020_I_0eec93e6d44208a5",
+      "sourceLocators": [
+        "doc:0eec93e/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2020_I",
+      "year": 2020,
+      "volume": "I",
+      "title": "2020年新高考全国Ⅰ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2020_I_Q9",
+      "number": 9,
+      "stem": "What does the underlined word “that” in paragraph 2 refer to?",
+      "artifactId": "gaokao_en_2020_I_0eec93e6d44208a5",
+      "sourceLocators": [
+        "doc:0eec93e/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "underlined",
+          "word": "underlined",
+          "pattern": "underlined",
+          "category": "定位",
+          "meaning": "画下划线的",
+          "confusion": "用于指定被考查的词或短语，不是词义提示。",
+          "strategy": "先定位题干指定词，再读它所在句的上下文。",
+          "start": 14,
+          "end": 24,
+          "matched": "underlined",
+          "needsContext": false
+        },
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 40,
+          "end": 49,
+          "matched": "paragraph",
+          "needsContext": false
+        },
+        {
+          "id": "refer-to",
+          "word": "refer to",
+          "pattern": "refer(?:s|red|ring)?\\s+to",
+          "category": "词义与指代",
+          "meaning": "指的是；指代",
+          "confusion": "在代词题里不是“参考”，而是问该词对应什么。",
+          "strategy": "回到原句和前文寻找指代对象，代入核对语义。",
+          "start": 52,
+          "end": 60,
+          "matched": "refer to",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2020_I",
+      "year": 2020,
+      "volume": "I",
+      "title": "2020年新高考全国Ⅰ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2020_I_Q10",
+      "number": 10,
+      "stem": "Which of the following best describes Mr Bissell’s road trip in Uzbekistan?",
+      "artifactId": "gaokao_en_2020_I_0eec93e6d44208a5",
+      "sourceLocators": [
+        "doc:0eec93e/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "following",
+          "word": "the following",
+          "pattern": "the\\s+following",
+          "category": "读题",
+          "meaning": "下列（选项）",
+          "confusion": "不是“接下来的故事”，而是指下面列出的内容。",
+          "strategy": "逐项核对选项，并留意 best、not、except 等限制。",
+          "start": 9,
+          "end": 22,
+          "matched": "the following",
+          "needsContext": false
+        },
+        {
+          "id": "best-describes",
+          "word": "best describe",
+          "pattern": "best\\s+describ(?:e|es)",
+          "category": "描述",
+          "meaning": "最恰当地描述",
+          "confusion": "best 强调比较选项，部分符合不一定最恰当。",
+          "strategy": "综合对象的特征，避免以偏概全。",
+          "start": 23,
+          "end": 37,
+          "matched": "best describes",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2020_I",
+      "year": 2020,
+      "volume": "I",
+      "title": "2020年新高考全国Ⅰ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2020_I_Q11",
+      "number": 11,
+      "stem": "What is the purpose of this text?",
+      "artifactId": "gaokao_en_2020_I_0eec93e6d44208a5",
+      "sourceLocators": [
+        "doc:0eec93e/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "purpose",
+          "word": "purpose",
+          "pattern": "purpose",
+          "category": "意图",
+          "meaning": "目的；意图",
+          "confusion": "问“为什么写/提到”，不能只回答“写了什么”。",
+          "strategy": "检查事例或段落在论述中的作用：说明、举例、对比等。",
+          "start": 12,
+          "end": 19,
+          "matched": "purpose",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2020_I",
+      "year": 2020,
+      "volume": "I",
+      "title": "2020年新高考全国Ⅰ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2020_I_Q12",
+      "number": 12,
+      "stem": "What is the recent study mainly about?",
+      "artifactId": "gaokao_en_2020_I_0eec93e6d44208a5",
+      "sourceLocators": [
+        "doc:0eec93e/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "mainly",
+          "word": "mainly",
+          "pattern": "mainly",
+          "category": "主旨",
+          "meaning": "主要地；主要关于",
+          "confusion": "不能用一个局部细节代替整段或全文中心。",
+          "strategy": "注意题干范围是 paragraph 还是 text，概括对应范围。",
+          "start": 25,
+          "end": 31,
+          "matched": "mainly",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2020_I",
+      "year": 2020,
+      "volume": "I",
+      "title": "2020年新高考全国Ⅰ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2020_I_Q13",
+      "number": 13,
+      "stem": "What does the underlined word \"beanpoles\" in paragraph 1 refer to?",
+      "artifactId": "gaokao_en_2020_I_0eec93e6d44208a5",
+      "sourceLocators": [
+        "doc:0eec93e/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "underlined",
+          "word": "underlined",
+          "pattern": "underlined",
+          "category": "定位",
+          "meaning": "画下划线的",
+          "confusion": "用于指定被考查的词或短语，不是词义提示。",
+          "strategy": "先定位题干指定词，再读它所在句的上下文。",
+          "start": 14,
+          "end": 24,
+          "matched": "underlined",
+          "needsContext": false
+        },
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 45,
+          "end": 54,
+          "matched": "paragraph",
+          "needsContext": false
+        },
+        {
+          "id": "refer-to",
+          "word": "refer to",
+          "pattern": "refer(?:s|red|ring)?\\s+to",
+          "category": "词义与指代",
+          "meaning": "指的是；指代",
+          "confusion": "在代词题里不是“参考”，而是问该词对应什么。",
+          "strategy": "回到原句和前文寻找指代对象，代入核对语义。",
+          "start": 57,
+          "end": 65,
+          "matched": "refer to",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2020_I",
+      "year": 2020,
+      "volume": "I",
+      "title": "2020年新高考全国Ⅰ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2020_I_Q14",
+      "number": 14,
+      "stem": "Why did the researchers hire the actor?",
+      "artifactId": "gaokao_en_2020_I_0eec93e6d44208a5",
+      "sourceLocators": [
+        "doc:0eec93e/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2020_I",
+      "year": 2020,
+      "volume": "I",
+      "title": "2020年新高考全国Ⅰ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2020_I_Q15",
+      "number": 15,
+      "stem": "On what basis do we \"adjust the influence\" according to the last paragraph?",
+      "artifactId": "gaokao_en_2020_I_0eec93e6d44208a5",
+      "sourceLocators": [
+        "doc:0eec93e/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "according-to",
+          "word": "according to",
+          "pattern": "according\\s+to",
+          "category": "定位",
+          "meaning": "根据；按照",
+          "confusion": "指定信息来源，不能用自己的常识替代。",
+          "strategy": "只根据指定人物、段落或全文提供的信息判断。",
+          "start": 43,
+          "end": 55,
+          "matched": "according to",
+          "needsContext": false
+        },
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 65,
+          "end": 74,
+          "matched": "paragraph",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2020_II",
+      "year": 2020,
+      "volume": "II",
+      "title": "2020年新高考全国Ⅱ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2020_II_Q21",
+      "number": 21,
+      "stem": "How many camps does Pali Overnight Adventures offer this summer? （    ）",
+      "artifactId": "gaokao_en_2020_II_5b0dd9d735e3a229",
+      "sourceLocators": [
+        "doc:5b0dd9d/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2020_II",
+      "year": 2020,
+      "volume": "II",
+      "title": "2020年新高考全国Ⅱ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2020_II_Q22",
+      "number": 22,
+      "stem": "What will campers do at the Broadcasting Camp? （    ）",
+      "artifactId": "gaokao_en_2020_II_5b0dd9d735e3a229",
+      "sourceLocators": [
+        "doc:5b0dd9d/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2020_II",
+      "year": 2020,
+      "volume": "II",
+      "title": "2020年新高考全国Ⅱ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2020_II_Q23",
+      "number": 23,
+      "stem": "Which camp will attract children who are interested in cooking? （    ）",
+      "artifactId": "gaokao_en_2020_II_5b0dd9d735e3a229",
+      "sourceLocators": [
+        "doc:5b0dd9d/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2020_II",
+      "year": 2020,
+      "volume": "II",
+      "title": "2020年新高考全国Ⅱ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2020_II_Q24",
+      "number": 24,
+      "stem": "What was the author's purpose in having the conversation with the students? （    ）",
+      "artifactId": "gaokao_en_2020_II_5b0dd9d735e3a229",
+      "sourceLocators": [
+        "doc:5b0dd9d/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "purpose",
+          "word": "purpose",
+          "pattern": "purpose",
+          "category": "意图",
+          "meaning": "目的；意图",
+          "confusion": "问“为什么写/提到”，不能只回答“写了什么”。",
+          "strategy": "检查事例或段落在论述中的作用：说明、举例、对比等。",
+          "start": 22,
+          "end": 29,
+          "matched": "purpose",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2020_II",
+      "year": 2020,
+      "volume": "II",
+      "title": "2020年新高考全国Ⅱ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2020_II_Q25",
+      "number": 25,
+      "stem": "What do the underlined words \"the offender\" in paragraph 8 refer to? （    ）",
+      "artifactId": "gaokao_en_2020_II_5b0dd9d735e3a229",
+      "sourceLocators": [
+        "doc:5b0dd9d/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "underlined",
+          "word": "underlined",
+          "pattern": "underlined",
+          "category": "定位",
+          "meaning": "画下划线的",
+          "confusion": "用于指定被考查的词或短语，不是词义提示。",
+          "strategy": "先定位题干指定词，再读它所在句的上下文。",
+          "start": 12,
+          "end": 22,
+          "matched": "underlined",
+          "needsContext": false
+        },
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 47,
+          "end": 56,
+          "matched": "paragraph",
+          "needsContext": false
+        },
+        {
+          "id": "refer-to",
+          "word": "refer to",
+          "pattern": "refer(?:s|red|ring)?\\s+to",
+          "category": "词义与指代",
+          "meaning": "指的是；指代",
+          "confusion": "在代词题里不是“参考”，而是问该词对应什么。",
+          "strategy": "回到原句和前文寻找指代对象，代入核对语义。",
+          "start": 59,
+          "end": 67,
+          "matched": "refer to",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2020_II",
+      "year": 2020,
+      "volume": "II",
+      "title": "2020年新高考全国Ⅱ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2020_II_Q26",
+      "number": 26,
+      "stem": "What did the students do after they learned about the birth of Gordon? （    ）",
+      "artifactId": "gaokao_en_2020_II_5b0dd9d735e3a229",
+      "sourceLocators": [
+        "doc:5b0dd9d/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2020_II",
+      "year": 2020,
+      "volume": "II",
+      "title": "2020年新高考全国Ⅱ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2020_II_Q27",
+      "number": 27,
+      "stem": "What can we infer about the author? （    ）",
+      "artifactId": "gaokao_en_2020_II_5b0dd9d735e3a229",
+      "sourceLocators": [
+        "doc:5b0dd9d/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "infer",
+          "word": "infer",
+          "pattern": "infer(?:red|ring|s)?",
+          "category": "推断",
+          "meaning": "推断；推知",
+          "confusion": "infer 是读者根据线索推断；imply 是作者或文字暗示。",
+          "strategy": "先找事实，再作有限推断；答案必须有文本依据。",
+          "start": 12,
+          "end": 17,
+          "matched": "infer",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2020_II",
+      "year": 2020,
+      "volume": "II",
+      "title": "2020年新高考全国Ⅱ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2020_II_Q28",
+      "number": 28,
+      "stem": "What happened to the Golden Gate Bridge on its 50th birthday? （    ）",
+      "artifactId": "gaokao_en_2020_II_5b0dd9d735e3a229",
+      "sourceLocators": [
+        "doc:5b0dd9d/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2020_II",
+      "year": 2020,
+      "volume": "II",
+      "title": "2020年新高考全国Ⅱ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2020_II_Q29",
+      "number": 29,
+      "stem": "Which of the following is Dr. Petroski's idea according to paragraph 3? （    ）",
+      "artifactId": "gaokao_en_2020_II_5b0dd9d735e3a229",
+      "sourceLocators": [
+        "doc:5b0dd9d/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "following",
+          "word": "the following",
+          "pattern": "the\\s+following",
+          "category": "读题",
+          "meaning": "下列（选项）",
+          "confusion": "不是“接下来的故事”，而是指下面列出的内容。",
+          "strategy": "逐项核对选项，并留意 best、not、except 等限制。",
+          "start": 9,
+          "end": 22,
+          "matched": "the following",
+          "needsContext": false
+        },
+        {
+          "id": "according-to",
+          "word": "according to",
+          "pattern": "according\\s+to",
+          "category": "定位",
+          "meaning": "根据；按照",
+          "confusion": "指定信息来源，不能用自己的常识替代。",
+          "strategy": "只根据指定人物、段落或全文提供的信息判断。",
+          "start": 46,
+          "end": 58,
+          "matched": "according to",
+          "needsContext": false
+        },
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 59,
+          "end": 68,
+          "matched": "paragraph",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2020_II",
+      "year": 2020,
+      "volume": "II",
+      "title": "2020年新高考全国Ⅱ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2020_II_Q30",
+      "number": 30,
+      "stem": "What does the last paragraph suggest? （    ）",
+      "artifactId": "gaokao_en_2020_II_5b0dd9d735e3a229",
+      "sourceLocators": [
+        "doc:5b0dd9d/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 19,
+          "end": 28,
+          "matched": "paragraph",
+          "needsContext": false
+        },
+        {
+          "id": "suggest-inference",
+          "word": "suggest",
+          "pattern": "suggest(?:s|ed|ing)?",
+          "category": "推断",
+          "meaning": "暗示；表明",
+          "confusion": "看到 suggest 不要一律译为“建议”。段落、事实或研究作主语时，常是在问它说明什么。",
+          "strategy": "结合指定段落的事实，找有依据的含义；不要凭空联想。",
+          "start": 29,
+          "end": 36,
+          "matched": "suggest",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2020_II",
+      "year": 2020,
+      "volume": "II",
+      "title": "2020年新高考全国Ⅱ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2020_II_Q31",
+      "number": 31,
+      "stem": "What is the text? （    ）",
+      "artifactId": "gaokao_en_2020_II_5b0dd9d735e3a229",
+      "sourceLocators": [
+        "doc:5b0dd9d/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2020_II",
+      "year": 2020,
+      "volume": "II",
+      "title": "2020年新高考全国Ⅱ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2020_II_Q32",
+      "number": 32,
+      "stem": "What can we learn about rainforests from the first paragraph? （    ）",
+      "artifactId": "gaokao_en_2020_II_5b0dd9d735e3a229",
+      "sourceLocators": [
+        "doc:5b0dd9d/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 51,
+          "end": 60,
+          "matched": "paragraph",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2020_II",
+      "year": 2020,
+      "volume": "II",
+      "title": "2020年新高考全国Ⅱ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2020_II_Q33",
+      "number": 33,
+      "stem": "Which of the following contributes most to the survival of rainforests? （    ）",
+      "artifactId": "gaokao_en_2020_II_5b0dd9d735e3a229",
+      "sourceLocators": [
+        "doc:5b0dd9d/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "following",
+          "word": "the following",
+          "pattern": "the\\s+following",
+          "category": "读题",
+          "meaning": "下列（选项）",
+          "confusion": "不是“接下来的故事”，而是指下面列出的内容。",
+          "strategy": "逐项核对选项，并留意 best、not、except 等限制。",
+          "start": 9,
+          "end": 22,
+          "matched": "the following",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2020_II",
+      "year": 2020,
+      "volume": "II",
+      "title": "2020年新高考全国Ⅱ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2020_II_Q34",
+      "number": 34,
+      "stem": "Why do the leaves and branches of different trees avoid touching each other? （    ）",
+      "artifactId": "gaokao_en_2020_II_5b0dd9d735e3a229",
+      "sourceLocators": [
+        "doc:5b0dd9d/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2020_II",
+      "year": 2020,
+      "volume": "II",
+      "title": "2020年新高考全国Ⅱ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2020_II_Q35",
+      "number": 35,
+      "stem": "What can be a suitable title for the text? （    ）",
+      "artifactId": "gaokao_en_2020_II_5b0dd9d735e3a229",
+      "sourceLocators": [
+        "doc:5b0dd9d/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "suitable",
+          "word": "suitable",
+          "pattern": "suitable",
+          "category": "主旨",
+          "meaning": "合适的；恰当的",
+          "confusion": "suitable title 表示“合适的标题”。",
+          "strategy": "兼顾准确、范围适当与概括性。",
+          "start": 14,
+          "end": 22,
+          "matched": "suitable",
+          "needsContext": false
+        },
+        {
+          "id": "title",
+          "word": "title",
+          "pattern": "title",
+          "category": "主旨",
+          "meaning": "标题",
+          "confusion": "标题要覆盖主题，不能只贴合一个例子。",
+          "strategy": "比较标题与全文话题、核心观点和范围是否一致。",
+          "start": 23,
+          "end": 28,
+          "matched": "title",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2021_I",
+      "year": 2021,
+      "volume": "I",
+      "title": "2021年新高考全国Ⅰ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2021_I_Q21",
+      "number": 21,
+      "stem": "What is probably the major concern of travelers who choose to stay in a hostel?",
+      "artifactId": "gaokao_en_2021_I_f056d2ccfb77fab8",
+      "sourceLocators": [
+        "doc:f056d2c/tier:standard"
+      ],
+      "matches": [
+        {
+          "id": "probably",
+          "word": "probably",
+          "pattern": "probably",
+          "category": "推断",
+          "meaning": "很可能；大概",
+          "confusion": "允许合理推测，但不等于随意猜测。",
+          "strategy": "比较文本支持程度，避免超出原文的绝对结论。",
+          "start": 8,
+          "end": 16,
+          "matched": "probably",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2021_I",
+      "year": 2021,
+      "volume": "I",
+      "title": "2021年新高考全国Ⅰ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2021_I_Q22",
+      "number": 22,
+      "stem": "Which hotel best suits people who enjoy an active social life?",
+      "artifactId": "gaokao_en_2021_I_f056d2ccfb77fab8",
+      "sourceLocators": [
+        "doc:f056d2c/tier:standard"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2021_I",
+      "year": 2021,
+      "volume": "I",
+      "title": "2021年新高考全国Ⅰ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2021_I_Q23",
+      "number": 23,
+      "stem": "What is the disadvantage of Hotel and Hostel Des Artistes?",
+      "artifactId": "gaokao_en_2021_I_f056d2ccfb77fab8",
+      "sourceLocators": [
+        "doc:f056d2c/tier:standard"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2021_I",
+      "year": 2021,
+      "volume": "I",
+      "title": "2021年新高考全国Ⅰ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2021_I_Q24",
+      "number": 24,
+      "stem": "What should Titterton be able to do to be a page turner?",
+      "artifactId": "gaokao_en_2021_I_f056d2ccfb77fab8",
+      "sourceLocators": [
+        "doc:f056d2c/tier:standard"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2021_I",
+      "year": 2021,
+      "volume": "I",
+      "title": "2021年新高考全国Ⅰ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2021_I_Q25",
+      "number": 25,
+      "stem": "Which of the following best describes Titterton’s job on stage?",
+      "artifactId": "gaokao_en_2021_I_f056d2ccfb77fab8",
+      "sourceLocators": [
+        "doc:f056d2c/tier:standard"
+      ],
+      "matches": [
+        {
+          "id": "following",
+          "word": "the following",
+          "pattern": "the\\s+following",
+          "category": "读题",
+          "meaning": "下列（选项）",
+          "confusion": "不是“接下来的故事”，而是指下面列出的内容。",
+          "strategy": "逐项核对选项，并留意 best、not、except 等限制。",
+          "start": 9,
+          "end": 22,
+          "matched": "the following",
+          "needsContext": false
+        },
+        {
+          "id": "best-describes",
+          "word": "best describe",
+          "pattern": "best\\s+describ(?:e|es)",
+          "category": "描述",
+          "meaning": "最恰当地描述",
+          "confusion": "best 强调比较选项，部分符合不一定最恰当。",
+          "strategy": "综合对象的特征，避免以偏概全。",
+          "start": 23,
+          "end": 37,
+          "matched": "best describes",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2021_I",
+      "year": 2021,
+      "volume": "I",
+      "title": "2021年新高考全国Ⅰ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2021_I_Q26",
+      "number": 26,
+      "stem": "What does Titterton need to practise?",
+      "artifactId": "gaokao_en_2021_I_f056d2ccfb77fab8",
+      "sourceLocators": [
+        "doc:f056d2c/tier:standard"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2021_I",
+      "year": 2021,
+      "volume": "I",
+      "title": "2021年新高考全国Ⅰ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2021_I_Q27",
+      "number": 27,
+      "stem": "Why is Ms Raspopova’s husband “the worse page turner”?",
+      "artifactId": "gaokao_en_2021_I_f056d2ccfb77fab8",
+      "sourceLocators": [
+        "doc:f056d2c/tier:standard"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2021_I",
+      "year": 2021,
+      "volume": "I",
+      "title": "2021年新高考全国Ⅰ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2021_I_Q28",
+      "number": 28,
+      "stem": "What was a cause of the waterfowl population decline in North America?",
+      "artifactId": "gaokao_en_2021_I_f056d2ccfb77fab8",
+      "sourceLocators": [
+        "doc:f056d2c/tier:standard"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2021_I",
+      "year": 2021,
+      "volume": "I",
+      "title": "2021年新高考全国Ⅰ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2021_I_Q29",
+      "number": 29,
+      "stem": "What does the underlined word “decimate” mean in the first paragraph?",
+      "artifactId": "gaokao_en_2021_I_f056d2ccfb77fab8",
+      "sourceLocators": [
+        "doc:f056d2c/tier:standard"
+      ],
+      "matches": [
+        {
+          "id": "underlined",
+          "word": "underlined",
+          "pattern": "underlined",
+          "category": "定位",
+          "meaning": "画下划线的",
+          "confusion": "用于指定被考查的词或短语，不是词义提示。",
+          "strategy": "先定位题干指定词，再读它所在句的上下文。",
+          "start": 14,
+          "end": 24,
+          "matched": "underlined",
+          "needsContext": false
+        },
+        {
+          "id": "mean",
+          "word": "mean",
+          "pattern": "mean(?:s)?",
+          "category": "词义与指代",
+          "meaning": "意思是；意为",
+          "confusion": "问指定词句在本文中的含义，而非所有字典义。",
+          "strategy": "利用上下文、转折、解释或例子推测，再代入检验。",
+          "start": 41,
+          "end": 45,
+          "matched": "mean",
+          "needsContext": false
+        },
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 59,
+          "end": 68,
+          "matched": "paragraph",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2021_I",
+      "year": 2021,
+      "volume": "I",
+      "title": "2021年新高考全国Ⅰ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2021_I_Q30",
+      "number": 30,
+      "stem": "What is a direct result of the Act passed in 1934?",
+      "artifactId": "gaokao_en_2021_I_f056d2ccfb77fab8",
+      "sourceLocators": [
+        "doc:f056d2c/tier:standard"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2021_I",
+      "year": 2021,
+      "volume": "I",
+      "title": "2021年新高考全国Ⅰ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2021_I_Q31",
+      "number": 31,
+      "stem": "Which of the following is a suitable title for the text?",
+      "artifactId": "gaokao_en_2021_I_f056d2ccfb77fab8",
+      "sourceLocators": [
+        "doc:f056d2c/tier:standard"
+      ],
+      "matches": [
+        {
+          "id": "following",
+          "word": "the following",
+          "pattern": "the\\s+following",
+          "category": "读题",
+          "meaning": "下列（选项）",
+          "confusion": "不是“接下来的故事”，而是指下面列出的内容。",
+          "strategy": "逐项核对选项，并留意 best、not、except 等限制。",
+          "start": 9,
+          "end": 22,
+          "matched": "the following",
+          "needsContext": false
+        },
+        {
+          "id": "suitable",
+          "word": "suitable",
+          "pattern": "suitable",
+          "category": "主旨",
+          "meaning": "合适的；恰当的",
+          "confusion": "suitable title 表示“合适的标题”。",
+          "strategy": "兼顾准确、范围适当与概括性。",
+          "start": 28,
+          "end": 36,
+          "matched": "suitable",
+          "needsContext": false
+        },
+        {
+          "id": "title",
+          "word": "title",
+          "pattern": "title",
+          "category": "主旨",
+          "meaning": "标题",
+          "confusion": "标题要覆盖主题，不能只贴合一个例子。",
+          "strategy": "比较标题与全文话题、核心观点和范围是否一致。",
+          "start": 37,
+          "end": 42,
+          "matched": "title",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2021_I",
+      "year": 2021,
+      "volume": "I",
+      "title": "2021年新高考全国Ⅰ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2021_I_Q32",
+      "number": 32,
+      "stem": "What is a common misunderstanding of emotional intelligence?",
+      "artifactId": "gaokao_en_2021_I_f056d2ccfb77fab8",
+      "sourceLocators": [
+        "doc:f056d2c/tier:standard"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2021_I",
+      "year": 2021,
+      "volume": "I",
+      "title": "2021年新高考全国Ⅰ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2021_I_Q33",
+      "number": 33,
+      "stem": "Why does the author mention “doctor” and “cheater” in paragraph 2?",
+      "artifactId": "gaokao_en_2021_I_f056d2ccfb77fab8",
+      "sourceLocators": [
+        "doc:f056d2c/tier:standard"
+      ],
+      "matches": [
+        {
+          "id": "mention",
+          "word": "mention",
+          "pattern": "mention(?:s|ed|ing)?",
+          "category": "意图",
+          "meaning": "提到；提及",
+          "confusion": "Why mention / purpose in mentioning 问提及某事的作用；people mentioned 则问被提到的人。",
+          "strategy": "先看疑问词：Why 问作用，Who/What 通常定位具体信息。",
+          "start": 20,
+          "end": 27,
+          "matched": "mention",
+          "needsContext": false
+        },
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 54,
+          "end": 63,
+          "matched": "paragraph",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2021_I",
+      "year": 2021,
+      "volume": "I",
+      "title": "2021年新高考全国Ⅰ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2021_I_Q34",
+      "number": 34,
+      "stem": "What is the author’s attitude to the popularization of emotional intelligence?",
+      "artifactId": "gaokao_en_2021_I_f056d2ccfb77fab8",
+      "sourceLocators": [
+        "doc:f056d2c/tier:standard"
+      ],
+      "matches": [
+        {
+          "id": "attitude",
+          "word": "attitude",
+          "pattern": "attitude",
+          "category": "态度",
+          "meaning": "态度；看法",
+          "confusion": "作者态度不等于文中引用人物的态度。",
+          "strategy": "找到作者自己的评价词和语气，再判断支持、质疑或中立。",
+          "start": 21,
+          "end": 29,
+          "matched": "attitude",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2021_I",
+      "year": 2021,
+      "volume": "I",
+      "title": "2021年新高考全国Ⅰ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2021_I_Q35",
+      "number": 35,
+      "stem": "What does the last paragraph mainly talk about concerning emotional intelligence?",
+      "artifactId": "gaokao_en_2021_I_f056d2ccfb77fab8",
+      "sourceLocators": [
+        "doc:f056d2c/tier:standard"
+      ],
+      "matches": [
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 19,
+          "end": 28,
+          "matched": "paragraph",
+          "needsContext": false
+        },
+        {
+          "id": "mainly",
+          "word": "mainly",
+          "pattern": "mainly",
+          "category": "主旨",
+          "meaning": "主要地；主要关于",
+          "confusion": "不能用一个局部细节代替整段或全文中心。",
+          "strategy": "注意题干范围是 paragraph 还是 text，概括对应范围。",
+          "start": 29,
+          "end": 35,
+          "matched": "mainly",
+          "needsContext": false
+        },
+        {
+          "id": "concern",
+          "word": "concerning",
+          "pattern": "concerning",
+          "category": "读题",
+          "meaning": "关于；涉及",
+          "confusion": "题干中的 concerning 可用作介词，不一定表示“令人担忧的”。",
+          "strategy": "把 concerning 后面的内容视为题目限定的话题。",
+          "start": 47,
+          "end": 57,
+          "matched": "concerning",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2021_II",
+      "year": 2021,
+      "volume": "II",
+      "title": "2021年新高考全国Ⅱ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2021_II_Q21",
+      "number": 21,
+      "stem": "What should you do if you want to attend the taster session of Jodie’s fitness classes?",
+      "artifactId": "gaokao_en_2021_II_d5f5bf68536c0924",
+      "sourceLocators": [
+        "doc:d5f5bf6/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2021_II",
+      "year": 2021,
+      "volume": "II",
+      "title": "2021年新高考全国Ⅱ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2021_II_Q22",
+      "number": 22,
+      "stem": "How much is the ticket for Felt Picture Making?",
+      "artifactId": "gaokao_en_2021_II_d5f5bf68536c0924",
+      "sourceLocators": [
+        "doc:d5f5bf6/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2021_II",
+      "year": 2021,
+      "volume": "II",
+      "title": "2021年新高考全国Ⅱ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2021_II_Q23",
+      "number": 23,
+      "stem": "Which of the following starts earliest?",
+      "artifactId": "gaokao_en_2021_II_d5f5bf68536c0924",
+      "sourceLocators": [
+        "doc:d5f5bf6/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "following",
+          "word": "the following",
+          "pattern": "the\\s+following",
+          "category": "读题",
+          "meaning": "下列（选项）",
+          "confusion": "不是“接下来的故事”，而是指下面列出的内容。",
+          "strategy": "逐项核对选项，并留意 best、not、except 等限制。",
+          "start": 9,
+          "end": 22,
+          "matched": "the following",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2021_II",
+      "year": 2021,
+      "volume": "II",
+      "title": "2021年新高考全国Ⅱ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2021_II_Q24",
+      "number": 24,
+      "stem": "Why did the author bring the tiger cubs home?",
+      "artifactId": "gaokao_en_2021_II_d5f5bf68536c0924",
+      "sourceLocators": [
+        "doc:d5f5bf6/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2021_II",
+      "year": 2021,
+      "volume": "II",
+      "title": "2021年新高考全国Ⅱ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2021_II_Q25",
+      "number": 25,
+      "stem": "What do the underlined words “get up to mischief’ mean in paragraph 3?",
+      "artifactId": "gaokao_en_2021_II_d5f5bf68536c0924",
+      "sourceLocators": [
+        "doc:d5f5bf6/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "underlined",
+          "word": "underlined",
+          "pattern": "underlined",
+          "category": "定位",
+          "meaning": "画下划线的",
+          "confusion": "用于指定被考查的词或短语，不是词义提示。",
+          "strategy": "先定位题干指定词，再读它所在句的上下文。",
+          "start": 12,
+          "end": 22,
+          "matched": "underlined",
+          "needsContext": false
+        },
+        {
+          "id": "mean",
+          "word": "mean",
+          "pattern": "mean(?:s)?",
+          "category": "词义与指代",
+          "meaning": "意思是；意为",
+          "confusion": "问指定词句在本文中的含义，而非所有字典义。",
+          "strategy": "利用上下文、转折、解释或例子推测，再代入检验。",
+          "start": 50,
+          "end": 54,
+          "matched": "mean",
+          "needsContext": false
+        },
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 58,
+          "end": 67,
+          "matched": "paragraph",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2021_II",
+      "year": 2021,
+      "volume": "II",
+      "title": "2021年新高考全国Ⅱ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2021_II_Q26",
+      "number": 26,
+      "stem": "What did the author think of raising the tiger cubs at home?",
+      "artifactId": "gaokao_en_2021_II_d5f5bf68536c0924",
+      "sourceLocators": [
+        "doc:d5f5bf6/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2021_II",
+      "year": 2021,
+      "volume": "II",
+      "title": "2021年新高考全国Ⅱ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2021_II_Q27",
+      "number": 27,
+      "stem": "Why did the author decide to send Spot and Stripe back to the zoo?",
+      "artifactId": "gaokao_en_2021_II_d5f5bf68536c0924",
+      "sourceLocators": [
+        "doc:d5f5bf6/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2021_II",
+      "year": 2021,
+      "volume": "II",
+      "title": "2021年新高考全国Ⅱ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2021_II_Q28",
+      "number": 28,
+      "stem": "What will Zafirakou do with her prize money?",
+      "artifactId": "gaokao_en_2021_II_d5f5bf68536c0924",
+      "sourceLocators": [
+        "doc:d5f5bf6/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2021_II",
+      "year": 2021,
+      "volume": "II",
+      "title": "2021年新高考全国Ⅱ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2021_II_Q29",
+      "number": 29,
+      "stem": "What does Craig-Martin think of the teaching of the arts in UK schools?",
+      "artifactId": "gaokao_en_2021_II_d5f5bf68536c0924",
+      "sourceLocators": [
+        "doc:d5f5bf6/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2021_II",
+      "year": 2021,
+      "volume": "II",
+      "title": "2021年新高考全国Ⅱ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2021_II_Q30",
+      "number": 30,
+      "stem": "What should be stressed in school education according to Schama?",
+      "artifactId": "gaokao_en_2021_II_d5f5bf68536c0924",
+      "sourceLocators": [
+        "doc:d5f5bf6/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "according-to",
+          "word": "according to",
+          "pattern": "according\\s+to",
+          "category": "定位",
+          "meaning": "根据；按照",
+          "confusion": "指定信息来源，不能用自己的常识替代。",
+          "strategy": "只根据指定人物、段落或全文提供的信息判断。",
+          "start": 44,
+          "end": 56,
+          "matched": "according to",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2021_II",
+      "year": 2021,
+      "volume": "II",
+      "title": "2021年新高考全国Ⅱ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2021_II_Q31",
+      "number": 31,
+      "stem": "Which of the following is a suitable title for the text?",
+      "artifactId": "gaokao_en_2021_II_d5f5bf68536c0924",
+      "sourceLocators": [
+        "doc:d5f5bf6/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "following",
+          "word": "the following",
+          "pattern": "the\\s+following",
+          "category": "读题",
+          "meaning": "下列（选项）",
+          "confusion": "不是“接下来的故事”，而是指下面列出的内容。",
+          "strategy": "逐项核对选项，并留意 best、not、except 等限制。",
+          "start": 9,
+          "end": 22,
+          "matched": "the following",
+          "needsContext": false
+        },
+        {
+          "id": "suitable",
+          "word": "suitable",
+          "pattern": "suitable",
+          "category": "主旨",
+          "meaning": "合适的；恰当的",
+          "confusion": "suitable title 表示“合适的标题”。",
+          "strategy": "兼顾准确、范围适当与概括性。",
+          "start": 28,
+          "end": 36,
+          "matched": "suitable",
+          "needsContext": false
+        },
+        {
+          "id": "title",
+          "word": "title",
+          "pattern": "title",
+          "category": "主旨",
+          "meaning": "标题",
+          "confusion": "标题要覆盖主题，不能只贴合一个例子。",
+          "strategy": "比较标题与全文话题、核心观点和范围是否一致。",
+          "start": 37,
+          "end": 42,
+          "matched": "title",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2021_II",
+      "year": 2021,
+      "volume": "II",
+      "title": "2021年新高考全国Ⅱ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2021_II_Q32",
+      "number": 32,
+      "stem": "What is a problem with the cattle-raising industry?",
+      "artifactId": "gaokao_en_2021_II_d5f5bf68536c0924",
+      "sourceLocators": [
+        "doc:d5f5bf6/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2021_II",
+      "year": 2021,
+      "volume": "II",
+      "title": "2021年新高考全国Ⅱ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2021_II_Q33",
+      "number": 33,
+      "stem": "What will Sukkarieh's robot be able to do?",
+      "artifactId": "gaokao_en_2021_II_d5f5bf68536c0924",
+      "sourceLocators": [
+        "doc:d5f5bf6/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2021_II",
+      "year": 2021,
+      "volume": "II",
+      "title": "2021年新高考全国Ⅱ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2021_II_Q34",
+      "number": 34,
+      "stem": "Why does Pete Bonds still hire cowboys to watch cattle?",
+      "artifactId": "gaokao_en_2021_II_d5f5bf68536c0924",
+      "sourceLocators": [
+        "doc:d5f5bf6/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2021_II",
+      "year": 2021,
+      "volume": "II",
+      "title": "2021年新高考全国Ⅱ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2021_II_Q35",
+      "number": 35,
+      "stem": "How may robots help with cattle watching according to Michael Kelsey?",
+      "artifactId": "gaokao_en_2021_II_d5f5bf68536c0924",
+      "sourceLocators": [
+        "doc:d5f5bf6/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "according-to",
+          "word": "according to",
+          "pattern": "according\\s+to",
+          "category": "定位",
+          "meaning": "根据；按照",
+          "confusion": "指定信息来源，不能用自己的常识替代。",
+          "strategy": "只根据指定人物、段落或全文提供的信息判断。",
+          "start": 41,
+          "end": 53,
+          "matched": "according to",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2022_I",
+      "year": 2022,
+      "volume": "I",
+      "title": "2022年新高考全国Ⅰ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2022_I_Q21",
+      "number": 21,
+      "stem": "Where is this text probably taken from?",
+      "artifactId": "gaokao_en_2022_I_1d330c62ce053eb6",
+      "sourceLocators": [
+        "doc:1d330c6/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "probably",
+          "word": "probably",
+          "pattern": "probably",
+          "category": "推断",
+          "meaning": "很可能；大概",
+          "confusion": "允许合理推测，但不等于随意猜测。",
+          "strategy": "比较文本支持程度，避免超出原文的绝对结论。",
+          "start": 19,
+          "end": 27,
+          "matched": "probably",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2022_I",
+      "year": 2022,
+      "volume": "I",
+      "title": "2022年新高考全国Ⅰ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2022_I_Q22",
+      "number": 22,
+      "stem": "How many parts is a student's final grade made up of?",
+      "artifactId": "gaokao_en_2022_I_1d330c62ce053eb6",
+      "sourceLocators": [
+        "doc:1d330c6/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2022_I",
+      "year": 2022,
+      "volume": "I",
+      "title": "2022年新高考全国Ⅰ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2022_I_Q23",
+      "number": 23,
+      "stem": "What will happen if you submit an essay one week after the due date?",
+      "artifactId": "gaokao_en_2022_I_1d330c62ce053eb6",
+      "sourceLocators": [
+        "doc:1d330c6/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2022_I",
+      "year": 2022,
+      "volume": "I",
+      "title": "2022年新高考全国Ⅰ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2022_I_Q24",
+      "number": 24,
+      "stem": "What does the author want to show by telling the arugula story?",
+      "artifactId": "gaokao_en_2022_I_1d330c62ce053eb6",
+      "sourceLocators": [
+        "doc:1d330c6/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2022_I",
+      "year": 2022,
+      "volume": "I",
+      "title": "2022年新高考全国Ⅰ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2022_I_Q25",
+      "number": 25,
+      "stem": "What is a consequence of food waste according to the text?",
+      "artifactId": "gaokao_en_2022_I_1d330c62ce053eb6",
+      "sourceLocators": [
+        "doc:1d330c6/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "according-to",
+          "word": "according to",
+          "pattern": "according\\s+to",
+          "category": "定位",
+          "meaning": "根据；按照",
+          "confusion": "指定信息来源，不能用自己的常识替代。",
+          "strategy": "只根据指定人物、段落或全文提供的信息判断。",
+          "start": 36,
+          "end": 48,
+          "matched": "according to",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2022_I",
+      "year": 2022,
+      "volume": "I",
+      "title": "2022年新高考全国Ⅰ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2022_I_Q26",
+      "number": 26,
+      "stem": "What does Curtin's company do?",
+      "artifactId": "gaokao_en_2022_I_1d330c62ce053eb6",
+      "sourceLocators": [
+        "doc:1d330c6/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2022_I",
+      "year": 2022,
+      "volume": "I",
+      "title": "2022年新高考全国Ⅰ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2022_I_Q27",
+      "number": 27,
+      "stem": "What does Curtin suggest people do?",
+      "artifactId": "gaokao_en_2022_I_1d330c62ce053eb6",
+      "sourceLocators": [
+        "doc:1d330c6/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "suggest-advice",
+          "word": "suggest",
+          "pattern": "suggest(?:s|ed|ing)?",
+          "category": "建议",
+          "meaning": "建议；提议",
+          "confusion": "人物提出做法时仍可表示“建议”，不能把题干中的 suggest 全部记成“暗示”。",
+          "strategy": "找出这个人建议采取的行动，核对动作及对象。",
+          "start": 17,
+          "end": 24,
+          "matched": "suggest",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2022_I",
+      "year": 2022,
+      "volume": "I",
+      "title": "2022年新高考全国Ⅰ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2022_I_Q28",
+      "number": 28,
+      "stem": "What is the purpose of the project?",
+      "artifactId": "gaokao_en_2022_I_1d330c62ce053eb6",
+      "sourceLocators": [
+        "doc:1d330c6/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "purpose",
+          "word": "purpose",
+          "pattern": "purpose",
+          "category": "意图",
+          "meaning": "目的；意图",
+          "confusion": "问“为什么写/提到”，不能只回答“写了什么”。",
+          "strategy": "检查事例或段落在论述中的作用：说明、举例、对比等。",
+          "start": 12,
+          "end": 19,
+          "matched": "purpose",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2022_I",
+      "year": 2022,
+      "volume": "I",
+      "title": "2022年新高考全国Ⅰ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2022_I_Q29",
+      "number": 29,
+      "stem": "How has the project affected Ruth Xavier?",
+      "artifactId": "gaokao_en_2022_I_1d330c62ce053eb6",
+      "sourceLocators": [
+        "doc:1d330c6/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2022_I",
+      "year": 2022,
+      "volume": "I",
+      "title": "2022年新高考全国Ⅰ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2022_I_Q30",
+      "number": 30,
+      "stem": "What do the underlined words \"embark on\" mean in paragraph 7?",
+      "artifactId": "gaokao_en_2022_I_1d330c62ce053eb6",
+      "sourceLocators": [
+        "doc:1d330c6/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "underlined",
+          "word": "underlined",
+          "pattern": "underlined",
+          "category": "定位",
+          "meaning": "画下划线的",
+          "confusion": "用于指定被考查的词或短语，不是词义提示。",
+          "strategy": "先定位题干指定词，再读它所在句的上下文。",
+          "start": 12,
+          "end": 22,
+          "matched": "underlined",
+          "needsContext": false
+        },
+        {
+          "id": "mean",
+          "word": "mean",
+          "pattern": "mean(?:s)?",
+          "category": "词义与指代",
+          "meaning": "意思是；意为",
+          "confusion": "问指定词句在本文中的含义，而非所有字典义。",
+          "strategy": "利用上下文、转折、解释或例子推测，再代入检验。",
+          "start": 41,
+          "end": 45,
+          "matched": "mean",
+          "needsContext": false
+        },
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 49,
+          "end": 58,
+          "matched": "paragraph",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2022_I",
+      "year": 2022,
+      "volume": "I",
+      "title": "2022年新高考全国Ⅰ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2022_I_Q31",
+      "number": 31,
+      "stem": "What can we learn about the project from the last two paragraphs?",
+      "artifactId": "gaokao_en_2022_I_1d330c62ce053eb6",
+      "sourceLocators": [
+        "doc:1d330c6/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 54,
+          "end": 64,
+          "matched": "paragraphs",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2022_I",
+      "year": 2022,
+      "volume": "I",
+      "title": "2022年新高考全国Ⅰ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2022_I_Q32",
+      "number": 32,
+      "stem": "Which aspect of the human speech sound does Damián Blasi's research focus on?",
+      "artifactId": "gaokao_en_2022_I_1d330c62ce053eb6",
+      "sourceLocators": [
+        "doc:1d330c6/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2022_I",
+      "year": 2022,
+      "volume": "I",
+      "title": "2022年新高考全国Ⅰ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2022_I_Q33",
+      "number": 33,
+      "stem": "Why was it difficult for ancient human adults to produce labiodentals?",
+      "artifactId": "gaokao_en_2022_I_1d330c62ce053eb6",
+      "sourceLocators": [
+        "doc:1d330c6/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2022_I",
+      "year": 2022,
+      "volume": "I",
+      "title": "2022年新高考全国Ⅰ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2022_I_Q34",
+      "number": 34,
+      "stem": "What is paragraph 5 mainly about?",
+      "artifactId": "gaokao_en_2022_I_1d330c62ce053eb6",
+      "sourceLocators": [
+        "doc:1d330c6/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 8,
+          "end": 17,
+          "matched": "paragraph",
+          "needsContext": false
+        },
+        {
+          "id": "mainly",
+          "word": "mainly",
+          "pattern": "mainly",
+          "category": "主旨",
+          "meaning": "主要地；主要关于",
+          "confusion": "不能用一个局部细节代替整段或全文中心。",
+          "strategy": "注意题干范围是 paragraph 还是 text，概括对应范围。",
+          "start": 20,
+          "end": 26,
+          "matched": "mainly",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2022_I",
+      "year": 2022,
+      "volume": "I",
+      "title": "2022年新高考全国Ⅰ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2022_I_Q35",
+      "number": 35,
+      "stem": "What does Steven Moran say about the set of human speech sounds?",
+      "artifactId": "gaokao_en_2022_I_1d330c62ce053eb6",
+      "sourceLocators": [
+        "doc:1d330c6/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2022_II",
+      "year": 2022,
+      "volume": "II",
+      "title": "2022年新高考全国Ⅱ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2022_II_Q21",
+      "number": 21,
+      "stem": "What does a group need to do if they are offered a scholarship?",
+      "artifactId": "gaokao_en_2022_II_092466a264b8effd",
+      "sourceLocators": [
+        "doc:092466a/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2022_II",
+      "year": 2022,
+      "volume": "II",
+      "title": "2022年新高考全国Ⅱ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2022_II_Q22",
+      "number": 22,
+      "stem": "How many chaperones are needed for a group of 30 children to visit the Museum?",
+      "artifactId": "gaokao_en_2022_II_092466a264b8effd",
+      "sourceLocators": [
+        "doc:092466a/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2022_II",
+      "year": 2022,
+      "volume": "II",
+      "title": "2022年新高考全国Ⅱ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2022_II_Q23",
+      "number": 23,
+      "stem": "What are children prohibited from doing at the Museum?",
+      "artifactId": "gaokao_en_2022_II_092466a264b8effd",
+      "sourceLocators": [
+        "doc:092466a/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2022_II",
+      "year": 2022,
+      "volume": "II",
+      "title": "2022年新高考全国Ⅱ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2022_II_Q24",
+      "number": 24,
+      "stem": "What do the underlined words \"hit home for me\" mean in paragraph 2?",
+      "artifactId": "gaokao_en_2022_II_092466a264b8effd",
+      "sourceLocators": [
+        "doc:092466a/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "underlined",
+          "word": "underlined",
+          "pattern": "underlined",
+          "category": "定位",
+          "meaning": "画下划线的",
+          "confusion": "用于指定被考查的词或短语，不是词义提示。",
+          "strategy": "先定位题干指定词，再读它所在句的上下文。",
+          "start": 12,
+          "end": 22,
+          "matched": "underlined",
+          "needsContext": false
+        },
+        {
+          "id": "mean",
+          "word": "mean",
+          "pattern": "mean(?:s)?",
+          "category": "词义与指代",
+          "meaning": "意思是；意为",
+          "confusion": "问指定词句在本文中的含义，而非所有字典义。",
+          "strategy": "利用上下文、转折、解释或例子推测，再代入检验。",
+          "start": 47,
+          "end": 51,
+          "matched": "mean",
+          "needsContext": false
+        },
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 55,
+          "end": 64,
+          "matched": "paragraph",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2022_II",
+      "year": 2022,
+      "volume": "II",
+      "title": "2022年新高考全国Ⅱ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2022_II_Q25",
+      "number": 25,
+      "stem": "Why did the kid poke the storybook?",
+      "artifactId": "gaokao_en_2022_II_092466a264b8effd",
+      "sourceLocators": [
+        "doc:092466a/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2022_II",
+      "year": 2022,
+      "volume": "II",
+      "title": "2022年新高考全国Ⅱ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2022_II_Q26",
+      "number": 26,
+      "stem": "What does the author think of himself?",
+      "artifactId": "gaokao_en_2022_II_092466a264b8effd",
+      "sourceLocators": [
+        "doc:092466a/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2022_II",
+      "year": 2022,
+      "volume": "II",
+      "title": "2022年新高考全国Ⅱ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2022_II_Q27",
+      "number": 27,
+      "stem": "What can we learn about the author as a journalist?",
+      "artifactId": "gaokao_en_2022_II_092466a264b8effd",
+      "sourceLocators": [
+        "doc:092466a/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2022_II",
+      "year": 2022,
+      "volume": "II",
+      "title": "2022年新高考全国Ⅱ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2022_II_Q28",
+      "number": 28,
+      "stem": "Which of the following best describes the ban on drivers' texting in the US?",
+      "artifactId": "gaokao_en_2022_II_092466a264b8effd",
+      "sourceLocators": [
+        "doc:092466a/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "following",
+          "word": "the following",
+          "pattern": "the\\s+following",
+          "category": "读题",
+          "meaning": "下列（选项）",
+          "confusion": "不是“接下来的故事”，而是指下面列出的内容。",
+          "strategy": "逐项核对选项，并留意 best、not、except 等限制。",
+          "start": 9,
+          "end": 22,
+          "matched": "the following",
+          "needsContext": false
+        },
+        {
+          "id": "best-describes",
+          "word": "best describe",
+          "pattern": "best\\s+describ(?:e|es)",
+          "category": "描述",
+          "meaning": "最恰当地描述",
+          "confusion": "best 强调比较选项，部分符合不一定最恰当。",
+          "strategy": "综合对象的特征，避免以偏概全。",
+          "start": 23,
+          "end": 37,
+          "matched": "best describes",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2022_II",
+      "year": 2022,
+      "volume": "II",
+      "title": "2022年新高考全国Ⅱ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2022_II_Q29",
+      "number": 29,
+      "stem": "What can the Textalyzer help a police officer find out?",
+      "artifactId": "gaokao_en_2022_II_092466a264b8effd",
+      "sourceLocators": [
+        "doc:092466a/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2022_II",
+      "year": 2022,
+      "volume": "II",
+      "title": "2022年新高考全国Ⅱ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2022_II_Q30",
+      "number": 30,
+      "stem": "What does the underlined word \"something\" in the last paragraph refer to?",
+      "artifactId": "gaokao_en_2022_II_092466a264b8effd",
+      "sourceLocators": [
+        "doc:092466a/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "underlined",
+          "word": "underlined",
+          "pattern": "underlined",
+          "category": "定位",
+          "meaning": "画下划线的",
+          "confusion": "用于指定被考查的词或短语，不是词义提示。",
+          "strategy": "先定位题干指定词，再读它所在句的上下文。",
+          "start": 14,
+          "end": 24,
+          "matched": "underlined",
+          "needsContext": false
+        },
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 54,
+          "end": 63,
+          "matched": "paragraph",
+          "needsContext": false
+        },
+        {
+          "id": "refer-to",
+          "word": "refer to",
+          "pattern": "refer(?:s|red|ring)?\\s+to",
+          "category": "词义与指代",
+          "meaning": "指的是；指代",
+          "confusion": "在代词题里不是“参考”，而是问该词对应什么。",
+          "strategy": "回到原句和前文寻找指代对象，代入核对语义。",
+          "start": 64,
+          "end": 72,
+          "matched": "refer to",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2022_II",
+      "year": 2022,
+      "volume": "II",
+      "title": "2022年新高考全国Ⅱ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2022_II_Q31",
+      "number": 31,
+      "stem": "What is a suitable title for the text?",
+      "artifactId": "gaokao_en_2022_II_092466a264b8effd",
+      "sourceLocators": [
+        "doc:092466a/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "suitable",
+          "word": "suitable",
+          "pattern": "suitable",
+          "category": "主旨",
+          "meaning": "合适的；恰当的",
+          "confusion": "suitable title 表示“合适的标题”。",
+          "strategy": "兼顾准确、范围适当与概括性。",
+          "start": 10,
+          "end": 18,
+          "matched": "suitable",
+          "needsContext": false
+        },
+        {
+          "id": "title",
+          "word": "title",
+          "pattern": "title",
+          "category": "主旨",
+          "meaning": "标题",
+          "confusion": "标题要覆盖主题，不能只贴合一个例子。",
+          "strategy": "比较标题与全文话题、核心观点和范围是否一致。",
+          "start": 19,
+          "end": 24,
+          "matched": "title",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2022_II",
+      "year": 2022,
+      "volume": "II",
+      "title": "2022年新高考全国Ⅱ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2022_II_Q32",
+      "number": 32,
+      "stem": "What does Levine want to explain by mentioning the rubber band?",
+      "artifactId": "gaokao_en_2022_II_092466a264b8effd",
+      "sourceLocators": [
+        "doc:092466a/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "mention",
+          "word": "mention",
+          "pattern": "mention(?:s|ed|ing)?",
+          "category": "意图",
+          "meaning": "提到；提及",
+          "confusion": "Why mention / purpose in mentioning 问提及某事的作用；people mentioned 则问被提到的人。",
+          "strategy": "先看疑问词：Why 问作用，Who/What 通常定位具体信息。",
+          "start": 36,
+          "end": 46,
+          "matched": "mentioning",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2022_II",
+      "year": 2022,
+      "volume": "II",
+      "title": "2022年新高考全国Ⅱ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2022_II_Q33",
+      "number": 33,
+      "stem": "In which aspect were the two groups different in terms of research design?",
+      "artifactId": "gaokao_en_2022_II_092466a264b8effd",
+      "sourceLocators": [
+        "doc:092466a/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2022_II",
+      "year": 2022,
+      "volume": "II",
+      "title": "2022年新高考全国Ⅱ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2022_II_Q34",
+      "number": 34,
+      "stem": "What does Levine's research find?",
+      "artifactId": "gaokao_en_2022_II_092466a264b8effd",
+      "sourceLocators": [
+        "doc:092466a/tier:flash"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2022_II",
+      "year": 2022,
+      "volume": "II",
+      "title": "2022年新高考全国Ⅱ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2022_II_Q35",
+      "number": 35,
+      "stem": "What does Dr. Nieca Goldberg suggest?",
+      "artifactId": "gaokao_en_2022_II_092466a264b8effd",
+      "sourceLocators": [
+        "doc:092466a/tier:flash"
+      ],
+      "matches": [
+        {
+          "id": "suggest-advice",
+          "word": "suggest",
+          "pattern": "suggest(?:s|ed|ing)?",
+          "category": "建议",
+          "meaning": "建议；提议",
+          "confusion": "人物提出做法时仍可表示“建议”，不能把题干中的 suggest 全部记成“暗示”。",
+          "strategy": "找出这个人建议采取的行动，核对动作及对象。",
+          "start": 29,
+          "end": 36,
+          "matched": "suggest",
+          "needsContext": true
+        },
+        {
+          "id": "suggest-inference",
+          "word": "suggest",
+          "pattern": "suggest(?:s|ed|ing)?",
+          "category": "推断",
+          "meaning": "暗示；表明",
+          "confusion": "看到 suggest 不要一律译为“建议”。段落、事实或研究作主语时，常是在问它说明什么。",
+          "strategy": "结合指定段落的事实，找有依据的含义；不要凭空联想。",
+          "start": 29,
+          "end": 36,
+          "matched": "suggest",
+          "needsContext": true
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2023_I",
+      "year": 2023,
+      "volume": "I",
+      "title": "2023年新课标全国Ⅰ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2023_I_Q21",
+      "number": 21,
+      "stem": "What is an advantage of MacBike?",
+      "artifactId": "gaokao_en_2023_I_8d9fb6d9470abc57",
+      "sourceLocators": [
+        "doc:8d9fb6d/tier:standard/page:1",
+        "doc:d37d050/tier:standard/page:1",
+        "doc:3f2c5f6/tier:standard/page:1",
+        "doc:0f5d187/tier:standard/page:1",
+        "doc:200ac4c/tier:standard/page:1",
+        "doc:6d7139a/tier:standard/page:1",
+        "doc:08755c5/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2023_I",
+      "year": 2023,
+      "volume": "I",
+      "title": "2023年新课标全国Ⅰ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2023_I_Q22",
+      "number": 22,
+      "stem": "How much do you pay for renting a bike with hand brake and three gears for two days?",
+      "artifactId": "gaokao_en_2023_I_8d9fb6d9470abc57",
+      "sourceLocators": [
+        "doc:8d9fb6d/tier:standard/page:1",
+        "doc:d37d050/tier:standard/page:1",
+        "doc:3f2c5f6/tier:standard/page:1",
+        "doc:0f5d187/tier:standard/page:1",
+        "doc:200ac4c/tier:standard/page:1",
+        "doc:6d7139a/tier:standard/page:1",
+        "doc:08755c5/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2023_I",
+      "year": 2023,
+      "volume": "I",
+      "title": "2023年新课标全国Ⅰ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2023_I_Q23",
+      "number": 23,
+      "stem": "Where does the guided city tour start?",
+      "artifactId": "gaokao_en_2023_I_8d9fb6d9470abc57",
+      "sourceLocators": [
+        "doc:8d9fb6d/tier:standard/page:1",
+        "doc:d37d050/tier:standard/page:1",
+        "doc:3f2c5f6/tier:standard/page:1",
+        "doc:0f5d187/tier:standard/page:1",
+        "doc:200ac4c/tier:standard/page:1",
+        "doc:6d7139a/tier:standard/page:1",
+        "doc:08755c5/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2023_I",
+      "year": 2023,
+      "volume": "I",
+      "title": "2023年新课标全国Ⅰ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2023_I_Q24",
+      "number": 24,
+      "stem": "What can we learn about John from the first two paragraphs?",
+      "artifactId": "gaokao_en_2023_I_8d9fb6d9470abc57",
+      "sourceLocators": [
+        "doc:8d9fb6d/tier:standard/page:1",
+        "doc:d37d050/tier:standard/page:1",
+        "doc:3f2c5f6/tier:standard/page:1",
+        "doc:0f5d187/tier:standard/page:1",
+        "doc:200ac4c/tier:standard/page:1",
+        "doc:6d7139a/tier:standard/page:1",
+        "doc:08755c5/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 48,
+          "end": 58,
+          "matched": "paragraphs",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2023_I",
+      "year": 2023,
+      "volume": "I",
+      "title": "2023年新课标全国Ⅰ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2023_I_Q25",
+      "number": 25,
+      "stem": "Why did John put the sludge into the tanks?",
+      "artifactId": "gaokao_en_2023_I_8d9fb6d9470abc57",
+      "sourceLocators": [
+        "doc:8d9fb6d/tier:standard/page:1",
+        "doc:d37d050/tier:standard/page:1",
+        "doc:3f2c5f6/tier:standard/page:1",
+        "doc:0f5d187/tier:standard/page:1",
+        "doc:200ac4c/tier:standard/page:1",
+        "doc:6d7139a/tier:standard/page:1",
+        "doc:08755c5/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2023_I",
+      "year": 2023,
+      "volume": "I",
+      "title": "2023年新课标全国Ⅰ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2023_I_Q26",
+      "number": 26,
+      "stem": "What is the author's purpose in mentioning Fuzhou?",
+      "artifactId": "gaokao_en_2023_I_8d9fb6d9470abc57",
+      "sourceLocators": [
+        "doc:8d9fb6d/tier:standard/page:1",
+        "doc:d37d050/tier:standard/page:1",
+        "doc:3f2c5f6/tier:standard/page:1",
+        "doc:0f5d187/tier:standard/page:1",
+        "doc:200ac4c/tier:standard/page:1",
+        "doc:6d7139a/tier:standard/page:1",
+        "doc:08755c5/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "purpose",
+          "word": "purpose",
+          "pattern": "purpose",
+          "category": "意图",
+          "meaning": "目的；意图",
+          "confusion": "问“为什么写/提到”，不能只回答“写了什么”。",
+          "strategy": "检查事例或段落在论述中的作用：说明、举例、对比等。",
+          "start": 21,
+          "end": 28,
+          "matched": "purpose",
+          "needsContext": false
+        },
+        {
+          "id": "mention",
+          "word": "mention",
+          "pattern": "mention(?:s|ed|ing)?",
+          "category": "意图",
+          "meaning": "提到；提及",
+          "confusion": "Why mention / purpose in mentioning 问提及某事的作用；people mentioned 则问被提到的人。",
+          "strategy": "先看疑问词：Why 问作用，Who/What 通常定位具体信息。",
+          "start": 32,
+          "end": 42,
+          "matched": "mentioning",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2023_I",
+      "year": 2023,
+      "volume": "I",
+      "title": "2023年新课标全国Ⅰ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2023_I_Q27",
+      "number": 27,
+      "stem": "What is the basis for John's work?",
+      "artifactId": "gaokao_en_2023_I_8d9fb6d9470abc57",
+      "sourceLocators": [
+        "doc:8d9fb6d/tier:standard/page:1",
+        "doc:d37d050/tier:standard/page:1",
+        "doc:3f2c5f6/tier:standard/page:1",
+        "doc:0f5d187/tier:standard/page:1",
+        "doc:200ac4c/tier:standard/page:1",
+        "doc:6d7139a/tier:standard/page:1",
+        "doc:08755c5/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2023_I",
+      "year": 2023,
+      "volume": "I",
+      "title": "2023年新课标全国Ⅰ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2023_I_Q28",
+      "number": 28,
+      "stem": "What is the book aimed at?",
+      "artifactId": "gaokao_en_2023_I_8d9fb6d9470abc57",
+      "sourceLocators": [
+        "doc:8d9fb6d/tier:standard/page:1",
+        "doc:d37d050/tier:standard/page:1",
+        "doc:3f2c5f6/tier:standard/page:1",
+        "doc:0f5d187/tier:standard/page:1",
+        "doc:200ac4c/tier:standard/page:1",
+        "doc:6d7139a/tier:standard/page:1",
+        "doc:08755c5/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2023_I",
+      "year": 2023,
+      "volume": "I",
+      "title": "2023年新课标全国Ⅰ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2023_I_Q29",
+      "number": 29,
+      "stem": "What does the underlined word \"declutter\" in paragraph 3 mean?",
+      "artifactId": "gaokao_en_2023_I_8d9fb6d9470abc57",
+      "sourceLocators": [
+        "doc:8d9fb6d/tier:standard/page:1",
+        "doc:d37d050/tier:standard/page:1",
+        "doc:3f2c5f6/tier:standard/page:1",
+        "doc:0f5d187/tier:standard/page:1",
+        "doc:200ac4c/tier:standard/page:1",
+        "doc:6d7139a/tier:standard/page:1",
+        "doc:08755c5/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "underlined",
+          "word": "underlined",
+          "pattern": "underlined",
+          "category": "定位",
+          "meaning": "画下划线的",
+          "confusion": "用于指定被考查的词或短语，不是词义提示。",
+          "strategy": "先定位题干指定词，再读它所在句的上下文。",
+          "start": 14,
+          "end": 24,
+          "matched": "underlined",
+          "needsContext": false
+        },
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 45,
+          "end": 54,
+          "matched": "paragraph",
+          "needsContext": false
+        },
+        {
+          "id": "mean",
+          "word": "mean",
+          "pattern": "mean(?:s)?",
+          "category": "词义与指代",
+          "meaning": "意思是；意为",
+          "confusion": "问指定词句在本文中的含义，而非所有字典义。",
+          "strategy": "利用上下文、转折、解释或例子推测，再代入检验。",
+          "start": 57,
+          "end": 61,
+          "matched": "mean",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2023_I",
+      "year": 2023,
+      "volume": "I",
+      "title": "2023年新课标全国Ⅰ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2023_I_Q30",
+      "number": 30,
+      "stem": "What is presented in the final chapter of part one?",
+      "artifactId": "gaokao_en_2023_I_8d9fb6d9470abc57",
+      "sourceLocators": [
+        "doc:8d9fb6d/tier:standard/page:1",
+        "doc:d37d050/tier:standard/page:1",
+        "doc:3f2c5f6/tier:standard/page:1",
+        "doc:0f5d187/tier:standard/page:1",
+        "doc:200ac4c/tier:standard/page:1",
+        "doc:6d7139a/tier:standard/page:1",
+        "doc:08755c5/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2023_I",
+      "year": 2023,
+      "volume": "I",
+      "title": "2023年新课标全国Ⅰ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2023_I_Q31",
+      "number": 31,
+      "stem": "What does the author suggest readers do with the practices offered in part two?",
+      "artifactId": "gaokao_en_2023_I_8d9fb6d9470abc57",
+      "sourceLocators": [
+        "doc:8d9fb6d/tier:standard/page:1",
+        "doc:d37d050/tier:standard/page:1",
+        "doc:3f2c5f6/tier:standard/page:1",
+        "doc:0f5d187/tier:standard/page:1",
+        "doc:200ac4c/tier:standard/page:1",
+        "doc:6d7139a/tier:standard/page:1",
+        "doc:08755c5/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "suggest-advice",
+          "word": "suggest",
+          "pattern": "suggest(?:s|ed|ing)?",
+          "category": "建议",
+          "meaning": "建议；提议",
+          "confusion": "人物提出做法时仍可表示“建议”，不能把题干中的 suggest 全部记成“暗示”。",
+          "strategy": "找出这个人建议采取的行动，核对动作及对象。",
+          "start": 21,
+          "end": 28,
+          "matched": "suggest",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2023_I",
+      "year": 2023,
+      "volume": "I",
+      "title": "2023年新课标全国Ⅰ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2023_I_Q32",
+      "number": 32,
+      "stem": "What is paragraph 2 of the text mainly about?",
+      "artifactId": "gaokao_en_2023_I_8d9fb6d9470abc57",
+      "sourceLocators": [
+        "doc:8d9fb6d/tier:standard/page:1",
+        "doc:d37d050/tier:standard/page:1",
+        "doc:3f2c5f6/tier:standard/page:1",
+        "doc:0f5d187/tier:standard/page:1",
+        "doc:200ac4c/tier:standard/page:1",
+        "doc:6d7139a/tier:standard/page:1",
+        "doc:08755c5/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 8,
+          "end": 17,
+          "matched": "paragraph",
+          "needsContext": false
+        },
+        {
+          "id": "mainly",
+          "word": "mainly",
+          "pattern": "mainly",
+          "category": "主旨",
+          "meaning": "主要地；主要关于",
+          "confusion": "不能用一个局部细节代替整段或全文中心。",
+          "strategy": "注意题干范围是 paragraph 还是 text，概括对应范围。",
+          "start": 32,
+          "end": 38,
+          "matched": "mainly",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2023_I",
+      "year": 2023,
+      "volume": "I",
+      "title": "2023年新课标全国Ⅰ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2023_I_Q33",
+      "number": 33,
+      "stem": "Navajas' study found that the average accuracy could increase even if ____.",
+      "artifactId": "gaokao_en_2023_I_8d9fb6d9470abc57",
+      "sourceLocators": [
+        "doc:8d9fb6d/tier:standard/page:1",
+        "doc:d37d050/tier:standard/page:1",
+        "doc:3f2c5f6/tier:standard/page:1",
+        "doc:0f5d187/tier:standard/page:1",
+        "doc:200ac4c/tier:standard/page:1",
+        "doc:6d7139a/tier:standard/page:1",
+        "doc:08755c5/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2023_I",
+      "year": 2023,
+      "volume": "I",
+      "title": "2023年新课标全国Ⅰ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2023_I_Q34",
+      "number": 34,
+      "stem": "What did the follow-up study focus on?",
+      "artifactId": "gaokao_en_2023_I_8d9fb6d9470abc57",
+      "sourceLocators": [
+        "doc:8d9fb6d/tier:standard/page:1",
+        "doc:d37d050/tier:standard/page:1",
+        "doc:3f2c5f6/tier:standard/page:1",
+        "doc:0f5d187/tier:standard/page:1",
+        "doc:200ac4c/tier:standard/page:1",
+        "doc:6d7139a/tier:standard/page:1",
+        "doc:08755c5/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2023_I",
+      "year": 2023,
+      "volume": "I",
+      "title": "2023年新课标全国Ⅰ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2023_I_Q35",
+      "number": 35,
+      "stem": "What is the author's attitude toward Navajas' studies?",
+      "artifactId": "gaokao_en_2023_I_8d9fb6d9470abc57",
+      "sourceLocators": [
+        "doc:8d9fb6d/tier:standard/page:1",
+        "doc:d37d050/tier:standard/page:1",
+        "doc:3f2c5f6/tier:standard/page:1",
+        "doc:0f5d187/tier:standard/page:1",
+        "doc:200ac4c/tier:standard/page:1",
+        "doc:6d7139a/tier:standard/page:1",
+        "doc:08755c5/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "attitude",
+          "word": "attitude",
+          "pattern": "attitude",
+          "category": "态度",
+          "meaning": "态度；看法",
+          "confusion": "作者态度不等于文中引用人物的态度。",
+          "strategy": "找到作者自己的评价词和语气，再判断支持、质疑或中立。",
+          "start": 21,
+          "end": 29,
+          "matched": "attitude",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2023_II",
+      "year": 2023,
+      "volume": "II",
+      "title": "2023年新课标全国Ⅱ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2023_II_Q21",
+      "number": 21,
+      "stem": "Which of the four programs begins the earliest?",
+      "artifactId": "gaokao_en_2023_II_e808ed6eee69f388",
+      "sourceLocators": [
+        "doc:e808ed6/tier:standard/page:1",
+        "doc:e7f85fd/tier:standard/page:1",
+        "doc:11c2d7c/tier:standard/page:1",
+        "doc:40cf762/tier:standard/page:1",
+        "doc:3be400e/tier:standard/page:1",
+        "doc:f982e52/tier:standard/page:1",
+        "doc:5e04444/tier:standard/page:1",
+        "doc:84e1562/tier:standard/page:1",
+        "doc:8dbfdcd/tier:standard/page:1",
+        "doc:96c9d15/tier:standard/page:1",
+        "doc:c43b899/tier:standard/page:1",
+        "doc:5aca89b/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2023_II",
+      "year": 2023,
+      "volume": "II",
+      "title": "2023年新课标全国Ⅱ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2023_II_Q22",
+      "number": 22,
+      "stem": "What is the short talk at Artist Point about?",
+      "artifactId": "gaokao_en_2023_II_e808ed6eee69f388",
+      "sourceLocators": [
+        "doc:e808ed6/tier:standard/page:1",
+        "doc:e7f85fd/tier:standard/page:1",
+        "doc:11c2d7c/tier:standard/page:1",
+        "doc:40cf762/tier:standard/page:1",
+        "doc:3be400e/tier:standard/page:1",
+        "doc:f982e52/tier:standard/page:1",
+        "doc:5e04444/tier:standard/page:1",
+        "doc:84e1562/tier:standard/page:1",
+        "doc:8dbfdcd/tier:standard/page:1",
+        "doc:96c9d15/tier:standard/page:1",
+        "doc:c43b899/tier:standard/page:1",
+        "doc:5aca89b/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2023_II",
+      "year": 2023,
+      "volume": "II",
+      "title": "2023年新课标全国Ⅱ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2023_II_Q23",
+      "number": 23,
+      "stem": "Where will the participants meet for the July 10 photography workshop?",
+      "artifactId": "gaokao_en_2023_II_e808ed6eee69f388",
+      "sourceLocators": [
+        "doc:e808ed6/tier:standard/page:1",
+        "doc:e7f85fd/tier:standard/page:1",
+        "doc:11c2d7c/tier:standard/page:1",
+        "doc:40cf762/tier:standard/page:1",
+        "doc:3be400e/tier:standard/page:1",
+        "doc:f982e52/tier:standard/page:1",
+        "doc:5e04444/tier:standard/page:1",
+        "doc:84e1562/tier:standard/page:1",
+        "doc:8dbfdcd/tier:standard/page:1",
+        "doc:96c9d15/tier:standard/page:1",
+        "doc:c43b899/tier:standard/page:1",
+        "doc:5aca89b/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2023_II",
+      "year": 2023,
+      "volume": "II",
+      "title": "2023年新课标全国Ⅱ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2023_II_Q24",
+      "number": 24,
+      "stem": "What do we know about Abby Jaramillo?",
+      "artifactId": "gaokao_en_2023_II_e808ed6eee69f388",
+      "sourceLocators": [
+        "doc:e808ed6/tier:standard/page:1",
+        "doc:e7f85fd/tier:standard/page:1",
+        "doc:11c2d7c/tier:standard/page:1",
+        "doc:40cf762/tier:standard/page:1",
+        "doc:3be400e/tier:standard/page:1",
+        "doc:f982e52/tier:standard/page:1",
+        "doc:5e04444/tier:standard/page:1",
+        "doc:84e1562/tier:standard/page:1",
+        "doc:8dbfdcd/tier:standard/page:1",
+        "doc:96c9d15/tier:standard/page:1",
+        "doc:c43b899/tier:standard/page:1",
+        "doc:5aca89b/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2023_II",
+      "year": 2023,
+      "volume": "II",
+      "title": "2023年新课标全国Ⅱ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2023_II_Q25",
+      "number": 25,
+      "stem": "What was a problem facing Jaramillo at the start of the program?",
+      "artifactId": "gaokao_en_2023_II_e808ed6eee69f388",
+      "sourceLocators": [
+        "doc:e808ed6/tier:standard/page:1",
+        "doc:e7f85fd/tier:standard/page:1",
+        "doc:11c2d7c/tier:standard/page:1",
+        "doc:40cf762/tier:standard/page:1",
+        "doc:3be400e/tier:standard/page:1",
+        "doc:f982e52/tier:standard/page:1",
+        "doc:5e04444/tier:standard/page:1",
+        "doc:84e1562/tier:standard/page:1",
+        "doc:8dbfdcd/tier:standard/page:1",
+        "doc:96c9d15/tier:standard/page:1",
+        "doc:c43b899/tier:standard/page:1",
+        "doc:5aca89b/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2023_II",
+      "year": 2023,
+      "volume": "II",
+      "title": "2023年新课标全国Ⅱ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2023_II_Q26",
+      "number": 26,
+      "stem": "Which of the following best describes the impact of the program?",
+      "artifactId": "gaokao_en_2023_II_e808ed6eee69f388",
+      "sourceLocators": [
+        "doc:e808ed6/tier:standard/page:1",
+        "doc:e7f85fd/tier:standard/page:1",
+        "doc:11c2d7c/tier:standard/page:1",
+        "doc:40cf762/tier:standard/page:1",
+        "doc:3be400e/tier:standard/page:1",
+        "doc:f982e52/tier:standard/page:1",
+        "doc:5e04444/tier:standard/page:1",
+        "doc:84e1562/tier:standard/page:1",
+        "doc:8dbfdcd/tier:standard/page:1",
+        "doc:96c9d15/tier:standard/page:1",
+        "doc:c43b899/tier:standard/page:1",
+        "doc:5aca89b/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "following",
+          "word": "the following",
+          "pattern": "the\\s+following",
+          "category": "读题",
+          "meaning": "下列（选项）",
+          "confusion": "不是“接下来的故事”，而是指下面列出的内容。",
+          "strategy": "逐项核对选项，并留意 best、not、except 等限制。",
+          "start": 9,
+          "end": 22,
+          "matched": "the following",
+          "needsContext": false
+        },
+        {
+          "id": "best-describes",
+          "word": "best describe",
+          "pattern": "best\\s+describ(?:e|es)",
+          "category": "描述",
+          "meaning": "最恰当地描述",
+          "confusion": "best 强调比较选项，部分符合不一定最恰当。",
+          "strategy": "综合对象的特征，避免以偏概全。",
+          "start": 23,
+          "end": 37,
+          "matched": "best describes",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2023_II",
+      "year": 2023,
+      "volume": "II",
+      "title": "2023年新课标全国Ⅱ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2023_II_Q27",
+      "number": 27,
+      "stem": "What can be a suitable title for the text?",
+      "artifactId": "gaokao_en_2023_II_e808ed6eee69f388",
+      "sourceLocators": [
+        "doc:e808ed6/tier:standard/page:1",
+        "doc:e7f85fd/tier:standard/page:1",
+        "doc:11c2d7c/tier:standard/page:1",
+        "doc:40cf762/tier:standard/page:1",
+        "doc:3be400e/tier:standard/page:1",
+        "doc:f982e52/tier:standard/page:1",
+        "doc:5e04444/tier:standard/page:1",
+        "doc:84e1562/tier:standard/page:1",
+        "doc:8dbfdcd/tier:standard/page:1",
+        "doc:96c9d15/tier:standard/page:1",
+        "doc:c43b899/tier:standard/page:1",
+        "doc:5aca89b/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "suitable",
+          "word": "suitable",
+          "pattern": "suitable",
+          "category": "主旨",
+          "meaning": "合适的；恰当的",
+          "confusion": "suitable title 表示“合适的标题”。",
+          "strategy": "兼顾准确、范围适当与概括性。",
+          "start": 14,
+          "end": 22,
+          "matched": "suitable",
+          "needsContext": false
+        },
+        {
+          "id": "title",
+          "word": "title",
+          "pattern": "title",
+          "category": "主旨",
+          "meaning": "标题",
+          "confusion": "标题要覆盖主题，不能只贴合一个例子。",
+          "strategy": "比较标题与全文话题、核心观点和范围是否一致。",
+          "start": 23,
+          "end": 28,
+          "matched": "title",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2023_II",
+      "year": 2023,
+      "volume": "II",
+      "title": "2023年新课标全国Ⅱ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2023_II_Q28",
+      "number": 28,
+      "stem": "Where is the text most probably taken from?",
+      "artifactId": "gaokao_en_2023_II_e808ed6eee69f388",
+      "sourceLocators": [
+        "doc:e808ed6/tier:standard/page:1",
+        "doc:e7f85fd/tier:standard/page:1",
+        "doc:11c2d7c/tier:standard/page:1",
+        "doc:40cf762/tier:standard/page:1",
+        "doc:3be400e/tier:standard/page:1",
+        "doc:f982e52/tier:standard/page:1",
+        "doc:5e04444/tier:standard/page:1",
+        "doc:84e1562/tier:standard/page:1",
+        "doc:8dbfdcd/tier:standard/page:1",
+        "doc:96c9d15/tier:standard/page:1",
+        "doc:c43b899/tier:standard/page:1",
+        "doc:5aca89b/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "probably",
+          "word": "probably",
+          "pattern": "probably",
+          "category": "推断",
+          "meaning": "很可能；大概",
+          "confusion": "允许合理推测，但不等于随意猜测。",
+          "strategy": "比较文本支持程度，避免超出原文的绝对结论。",
+          "start": 23,
+          "end": 31,
+          "matched": "probably",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2023_II",
+      "year": 2023,
+      "volume": "II",
+      "title": "2023年新课标全国Ⅱ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2023_II_Q29",
+      "number": 29,
+      "stem": "What are the selected artworks about?",
+      "artifactId": "gaokao_en_2023_II_e808ed6eee69f388",
+      "sourceLocators": [
+        "doc:e808ed6/tier:standard/page:1",
+        "doc:e7f85fd/tier:standard/page:1",
+        "doc:11c2d7c/tier:standard/page:1",
+        "doc:40cf762/tier:standard/page:1",
+        "doc:3be400e/tier:standard/page:1",
+        "doc:f982e52/tier:standard/page:1",
+        "doc:5e04444/tier:standard/page:1",
+        "doc:84e1562/tier:standard/page:1",
+        "doc:8dbfdcd/tier:standard/page:1",
+        "doc:96c9d15/tier:standard/page:1",
+        "doc:c43b899/tier:standard/page:1",
+        "doc:5aca89b/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2023_II",
+      "year": 2023,
+      "volume": "II",
+      "title": "2023年新课标全国Ⅱ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2023_II_Q30",
+      "number": 30,
+      "stem": "What do the underlined words “relate to” in paragraph 2 mean?",
+      "artifactId": "gaokao_en_2023_II_e808ed6eee69f388",
+      "sourceLocators": [
+        "doc:e808ed6/tier:standard/page:1",
+        "doc:e7f85fd/tier:standard/page:1",
+        "doc:11c2d7c/tier:standard/page:1",
+        "doc:40cf762/tier:standard/page:1",
+        "doc:3be400e/tier:standard/page:1",
+        "doc:f982e52/tier:standard/page:1",
+        "doc:5e04444/tier:standard/page:1",
+        "doc:84e1562/tier:standard/page:1",
+        "doc:8dbfdcd/tier:standard/page:1",
+        "doc:96c9d15/tier:standard/page:1",
+        "doc:c43b899/tier:standard/page:1",
+        "doc:5aca89b/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "underlined",
+          "word": "underlined",
+          "pattern": "underlined",
+          "category": "定位",
+          "meaning": "画下划线的",
+          "confusion": "用于指定被考查的词或短语，不是词义提示。",
+          "strategy": "先定位题干指定词，再读它所在句的上下文。",
+          "start": 12,
+          "end": 22,
+          "matched": "underlined",
+          "needsContext": false
+        },
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 44,
+          "end": 53,
+          "matched": "paragraph",
+          "needsContext": false
+        },
+        {
+          "id": "mean",
+          "word": "mean",
+          "pattern": "mean(?:s)?",
+          "category": "词义与指代",
+          "meaning": "意思是；意为",
+          "confusion": "问指定词句在本文中的含义，而非所有字典义。",
+          "strategy": "利用上下文、转折、解释或例子推测，再代入检验。",
+          "start": 56,
+          "end": 60,
+          "matched": "mean",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2023_II",
+      "year": 2023,
+      "volume": "II",
+      "title": "2023年新课标全国Ⅱ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2023_II_Q31",
+      "number": 31,
+      "stem": "What does the author want to say by mentioning the e-reader?",
+      "artifactId": "gaokao_en_2023_II_e808ed6eee69f388",
+      "sourceLocators": [
+        "doc:e808ed6/tier:standard/page:1",
+        "doc:e7f85fd/tier:standard/page:1",
+        "doc:11c2d7c/tier:standard/page:1",
+        "doc:40cf762/tier:standard/page:1",
+        "doc:3be400e/tier:standard/page:1",
+        "doc:f982e52/tier:standard/page:1",
+        "doc:5e04444/tier:standard/page:1",
+        "doc:84e1562/tier:standard/page:1",
+        "doc:8dbfdcd/tier:standard/page:1",
+        "doc:96c9d15/tier:standard/page:1",
+        "doc:c43b899/tier:standard/page:1",
+        "doc:5aca89b/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "mention",
+          "word": "mention",
+          "pattern": "mention(?:s|ed|ing)?",
+          "category": "意图",
+          "meaning": "提到；提及",
+          "confusion": "Why mention / purpose in mentioning 问提及某事的作用；people mentioned 则问被提到的人。",
+          "strategy": "先看疑问词：Why 问作用，Who/What 通常定位具体信息。",
+          "start": 36,
+          "end": 46,
+          "matched": "mentioning",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2023_II",
+      "year": 2023,
+      "volume": "II",
+      "title": "2023年新课标全国Ⅱ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2023_II_Q32",
+      "number": 32,
+      "stem": "What phenomenon does the author describe at the beginning of the text?",
+      "artifactId": "gaokao_en_2023_II_e808ed6eee69f388",
+      "sourceLocators": [
+        "doc:e808ed6/tier:standard/page:1",
+        "doc:e7f85fd/tier:standard/page:1",
+        "doc:11c2d7c/tier:standard/page:1",
+        "doc:40cf762/tier:standard/page:1",
+        "doc:3be400e/tier:standard/page:1",
+        "doc:f982e52/tier:standard/page:1",
+        "doc:5e04444/tier:standard/page:1",
+        "doc:84e1562/tier:standard/page:1",
+        "doc:8dbfdcd/tier:standard/page:1",
+        "doc:96c9d15/tier:standard/page:1",
+        "doc:c43b899/tier:standard/page:1",
+        "doc:5aca89b/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "describe",
+          "word": "describe",
+          "pattern": "describ(?:e|es|ed|ing)",
+          "category": "描述",
+          "meaning": "描述；刻画",
+          "confusion": "描述题关注题干指定对象的特征。",
+          "strategy": "定位对象，核对选项描述与文章是否一致。",
+          "start": 32,
+          "end": 40,
+          "matched": "describe",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2023_II",
+      "year": 2023,
+      "volume": "II",
+      "title": "2023年新课标全国Ⅱ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2023_II_Q33",
+      "number": 33,
+      "stem": "Why did the researchers code participant submissions into categories?",
+      "artifactId": "gaokao_en_2023_II_e808ed6eee69f388",
+      "sourceLocators": [
+        "doc:e808ed6/tier:standard/page:1",
+        "doc:e7f85fd/tier:standard/page:1",
+        "doc:11c2d7c/tier:standard/page:1",
+        "doc:40cf762/tier:standard/page:1",
+        "doc:3be400e/tier:standard/page:1",
+        "doc:f982e52/tier:standard/page:1",
+        "doc:5e04444/tier:standard/page:1",
+        "doc:84e1562/tier:standard/page:1",
+        "doc:8dbfdcd/tier:standard/page:1",
+        "doc:96c9d15/tier:standard/page:1",
+        "doc:c43b899/tier:standard/page:1",
+        "doc:5aca89b/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2023_II",
+      "year": 2023,
+      "volume": "II",
+      "title": "2023年新课标全国Ⅱ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2023_II_Q34",
+      "number": 34,
+      "stem": "What can we learn from the example given in paragraph 5?",
+      "artifactId": "gaokao_en_2023_II_e808ed6eee69f388",
+      "sourceLocators": [
+        "doc:e808ed6/tier:standard/page:1",
+        "doc:e7f85fd/tier:standard/page:1",
+        "doc:11c2d7c/tier:standard/page:1",
+        "doc:40cf762/tier:standard/page:1",
+        "doc:3be400e/tier:standard/page:1",
+        "doc:f982e52/tier:standard/page:1",
+        "doc:5e04444/tier:standard/page:1",
+        "doc:84e1562/tier:standard/page:1",
+        "doc:8dbfdcd/tier:standard/page:1",
+        "doc:96c9d15/tier:standard/page:1",
+        "doc:c43b899/tier:standard/page:1",
+        "doc:5aca89b/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 44,
+          "end": 53,
+          "matched": "paragraph",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2023_II",
+      "year": 2023,
+      "volume": "II",
+      "title": "2023年新课标全国Ⅱ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2023_II_Q35",
+      "number": 35,
+      "stem": "What should be done before we can interact with nature according to Kahn?",
+      "artifactId": "gaokao_en_2023_II_e808ed6eee69f388",
+      "sourceLocators": [
+        "doc:e808ed6/tier:standard/page:1",
+        "doc:e7f85fd/tier:standard/page:1",
+        "doc:11c2d7c/tier:standard/page:1",
+        "doc:40cf762/tier:standard/page:1",
+        "doc:3be400e/tier:standard/page:1",
+        "doc:f982e52/tier:standard/page:1",
+        "doc:5e04444/tier:standard/page:1",
+        "doc:84e1562/tier:standard/page:1",
+        "doc:8dbfdcd/tier:standard/page:1",
+        "doc:96c9d15/tier:standard/page:1",
+        "doc:c43b899/tier:standard/page:1",
+        "doc:5aca89b/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "according-to",
+          "word": "according to",
+          "pattern": "according\\s+to",
+          "category": "定位",
+          "meaning": "根据；按照",
+          "confusion": "指定信息来源，不能用自己的常识替代。",
+          "strategy": "只根据指定人物、段落或全文提供的信息判断。",
+          "start": 55,
+          "end": 67,
+          "matched": "according to",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2024_I",
+      "year": 2024,
+      "volume": "I",
+      "title": "2024年新课标全国Ⅰ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2024_I_Q21",
+      "number": 21,
+      "stem": "What is the aim of the Habitat Restoration Team?",
+      "artifactId": "gaokao_en_2024_I_702232e07efbbcda",
+      "sourceLocators": [
+        "doc:702232e/tier:standard/pages:1-18"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2024_I",
+      "year": 2024,
+      "volume": "I",
+      "title": "2024年新课标全国Ⅰ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2024_I_Q22",
+      "number": 22,
+      "stem": "What is the lower age limit for joining the Habitat Restoration Team?",
+      "artifactId": "gaokao_en_2024_I_702232e07efbbcda",
+      "sourceLocators": [
+        "doc:702232e/tier:standard/pages:1-18"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2024_I",
+      "year": 2024,
+      "volume": "I",
+      "title": "2024年新课标全国Ⅰ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2024_I_Q23",
+      "number": 23,
+      "stem": "What are the volunteers expected to do?",
+      "artifactId": "gaokao_en_2024_I_702232e07efbbcda",
+      "sourceLocators": [
+        "doc:702232e/tier:standard/pages:1-18"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2024_I",
+      "year": 2024,
+      "volume": "I",
+      "title": "2024年新课标全国Ⅰ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2024_I_Q24",
+      "number": 24,
+      "stem": "What do some of Farber's coworkers think of him?",
+      "artifactId": "gaokao_en_2024_I_702232e07efbbcda",
+      "sourceLocators": [
+        "doc:702232e/tier:standard/pages:1-18"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2024_I",
+      "year": 2024,
+      "volume": "I",
+      "title": "2024年新课标全国Ⅰ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2024_I_Q25",
+      "number": 25,
+      "stem": "Why did Farber decide to try acupuncture on pets?",
+      "artifactId": "gaokao_en_2024_I_702232e07efbbcda",
+      "sourceLocators": [
+        "doc:702232e/tier:standard/pages:1-18"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2024_I",
+      "year": 2024,
+      "volume": "I",
+      "title": "2024年新课标全国Ⅰ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2024_I_Q26",
+      "number": 26,
+      "stem": "What does paragraph 3 mainly talk about?",
+      "artifactId": "gaokao_en_2024_I_702232e07efbbcda",
+      "sourceLocators": [
+        "doc:702232e/tier:standard/pages:1-18"
+      ],
+      "matches": [
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 10,
+          "end": 19,
+          "matched": "paragraph",
+          "needsContext": false
+        },
+        {
+          "id": "mainly",
+          "word": "mainly",
+          "pattern": "mainly",
+          "category": "主旨",
+          "meaning": "主要地；主要关于",
+          "confusion": "不能用一个局部细节代替整段或全文中心。",
+          "strategy": "注意题干范围是 paragraph 还是 text，概括对应范围。",
+          "start": 22,
+          "end": 28,
+          "matched": "mainly",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2024_I",
+      "year": 2024,
+      "volume": "I",
+      "title": "2024年新课标全国Ⅰ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2024_I_Q27",
+      "number": 27,
+      "stem": "Why does the author mention the American Holistic Veterinary Medical Association?",
+      "artifactId": "gaokao_en_2024_I_702232e07efbbcda",
+      "sourceLocators": [
+        "doc:702232e/tier:standard/pages:1-18"
+      ],
+      "matches": [
+        {
+          "id": "mention",
+          "word": "mention",
+          "pattern": "mention(?:s|ed|ing)?",
+          "category": "意图",
+          "meaning": "提到；提及",
+          "confusion": "Why mention / purpose in mentioning 问提及某事的作用；people mentioned 则问被提到的人。",
+          "strategy": "先看疑问词：Why 问作用，Who/What 通常定位具体信息。",
+          "start": 20,
+          "end": 27,
+          "matched": "mention",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2024_I",
+      "year": 2024,
+      "volume": "I",
+      "title": "2024年新课标全国Ⅰ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2024_I_Q28",
+      "number": 28,
+      "stem": "What does the underlined phrase \"shine through\" in paragraph 2 mean?",
+      "artifactId": "gaokao_en_2024_I_702232e07efbbcda",
+      "sourceLocators": [
+        "doc:702232e/tier:standard/pages:1-18"
+      ],
+      "matches": [
+        {
+          "id": "underlined",
+          "word": "underlined",
+          "pattern": "underlined",
+          "category": "定位",
+          "meaning": "画下划线的",
+          "confusion": "用于指定被考查的词或短语，不是词义提示。",
+          "strategy": "先定位题干指定词，再读它所在句的上下文。",
+          "start": 14,
+          "end": 24,
+          "matched": "underlined",
+          "needsContext": false
+        },
+        {
+          "id": "phrase",
+          "word": "phrase",
+          "pattern": "phrase",
+          "category": "词义与指代",
+          "meaning": "短语；词组",
+          "confusion": "短语含义未必是逐词翻译的总和。",
+          "strategy": "把整个词组作为单位，结合语境理解。",
+          "start": 25,
+          "end": 31,
+          "matched": "phrase",
+          "needsContext": false
+        },
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 51,
+          "end": 60,
+          "matched": "paragraph",
+          "needsContext": false
+        },
+        {
+          "id": "mean",
+          "word": "mean",
+          "pattern": "mean(?:s)?",
+          "category": "词义与指代",
+          "meaning": "意思是；意为",
+          "confusion": "问指定词句在本文中的含义，而非所有字典义。",
+          "strategy": "利用上下文、转折、解释或例子推测，再代入检验。",
+          "start": 63,
+          "end": 67,
+          "matched": "mean",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2024_I",
+      "year": 2024,
+      "volume": "I",
+      "title": "2024年新课标全国Ⅰ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2024_I_Q29",
+      "number": 29,
+      "stem": "What does the shallowing hypothesis assume?",
+      "artifactId": "gaokao_en_2024_I_702232e07efbbcda",
+      "sourceLocators": [
+        "doc:702232e/tier:standard/pages:1-18"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2024_I",
+      "year": 2024,
+      "volume": "I",
+      "title": "2024年新课标全国Ⅰ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2024_I_Q30",
+      "number": 30,
+      "stem": "Why are audio and video increasingly used by university teachers?",
+      "artifactId": "gaokao_en_2024_I_702232e07efbbcda",
+      "sourceLocators": [
+        "doc:702232e/tier:standard/pages:1-18"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2024_I",
+      "year": 2024,
+      "volume": "I",
+      "title": "2024年新课标全国Ⅰ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2024_I_Q31",
+      "number": 31,
+      "stem": "What does the author imply in the last paragraph?",
+      "artifactId": "gaokao_en_2024_I_702232e07efbbcda",
+      "sourceLocators": [
+        "doc:702232e/tier:standard/pages:1-18"
+      ],
+      "matches": [
+        {
+          "id": "imply",
+          "word": "imply",
+          "pattern": "(?:imply|implies|implied|implying)",
+          "category": "推断",
+          "meaning": "暗示；言外之意是",
+          "confusion": "作者没有直说，也可能通过语气、对比或事例表达。",
+          "strategy": "读懂前后关系，判断作者间接表达的意思。",
+          "start": 21,
+          "end": 26,
+          "matched": "imply",
+          "needsContext": false
+        },
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 39,
+          "end": 48,
+          "matched": "paragraph",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2024_I",
+      "year": 2024,
+      "volume": "I",
+      "title": "2024年新课标全国Ⅰ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2024_I_Q32",
+      "number": 32,
+      "stem": "What do we know about the records of species collected now?",
+      "artifactId": "gaokao_en_2024_I_702232e07efbbcda",
+      "sourceLocators": [
+        "doc:702232e/tier:standard/pages:1-18"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2024_I",
+      "year": 2024,
+      "volume": "I",
+      "title": "2024年新课标全国Ⅰ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2024_I_Q33",
+      "number": 33,
+      "stem": "What does Daru's study focus on?",
+      "artifactId": "gaokao_en_2024_I_702232e07efbbcda",
+      "sourceLocators": [
+        "doc:702232e/tier:standard/pages:1-18"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2024_I",
+      "year": 2024,
+      "volume": "I",
+      "title": "2024年新课标全国Ⅰ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2024_I_Q34",
+      "number": 34,
+      "stem": "What has led to the biases according to the study?",
+      "artifactId": "gaokao_en_2024_I_702232e07efbbcda",
+      "sourceLocators": [
+        "doc:702232e/tier:standard/pages:1-18"
+      ],
+      "matches": [
+        {
+          "id": "according-to",
+          "word": "according to",
+          "pattern": "according\\s+to",
+          "category": "定位",
+          "meaning": "根据；按照",
+          "confusion": "指定信息来源，不能用自己的常识替代。",
+          "strategy": "只根据指定人物、段落或全文提供的信息判断。",
+          "start": 27,
+          "end": 39,
+          "matched": "according to",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2024_I",
+      "year": 2024,
+      "volume": "I",
+      "title": "2024年新课标全国Ⅰ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2024_I_Q35",
+      "number": 35,
+      "stem": "What is Daru's suggestion for biodiversity apps?",
+      "artifactId": "gaokao_en_2024_I_702232e07efbbcda",
+      "sourceLocators": [
+        "doc:702232e/tier:standard/pages:1-18"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2024_II",
+      "year": 2024,
+      "volume": "II",
+      "title": "2024年新课标全国Ⅱ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2024_II_Q1",
+      "number": 1,
+      "stem": "Which walk takes the shortest time?",
+      "artifactId": "gaokao_en_2024_II_46faf62ab015dc4b",
+      "sourceLocators": [
+        "doc:46faf62/tier:standard/page:1",
+        "doc:f82b00c/tier:standard/page:1",
+        "doc:4d79a9a/tier:standard/page:1",
+        "doc:7ff6742/tier:standard/page:1",
+        "doc:e77adf6/tier:standard/page:1",
+        "doc:1ee58a7/tier:standard/page:1",
+        "doc:d41d269/tier:standard/page:1",
+        "doc:3676fcc/tier:standard/page:1",
+        "doc:f907f91/tier:standard/page:1",
+        "doc:48f1b4d/tier:standard/page:1",
+        "doc:d598e1e/tier:standard/page:1",
+        "doc:79de2fe/tier:standard/page:1",
+        "doc:867cace/tier:standard/page:1",
+        "doc:11dc53b/tier:standard/page:1",
+        "doc:f77f5c5/tier:standard/page:1",
+        "doc:b903293/tier:standard/page:1",
+        "doc:f7b578f/tier:standard/page:1",
+        "doc:a209611/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2024_II",
+      "year": 2024,
+      "volume": "II",
+      "title": "2024年新课标全国Ⅱ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2024_II_Q2",
+      "number": 2,
+      "stem": "What are participants in Walk 3 required to do?",
+      "artifactId": "gaokao_en_2024_II_46faf62ab015dc4b",
+      "sourceLocators": [
+        "doc:46faf62/tier:standard/page:1",
+        "doc:f82b00c/tier:standard/page:1",
+        "doc:4d79a9a/tier:standard/page:1",
+        "doc:7ff6742/tier:standard/page:1",
+        "doc:e77adf6/tier:standard/page:1",
+        "doc:1ee58a7/tier:standard/page:1",
+        "doc:d41d269/tier:standard/page:1",
+        "doc:3676fcc/tier:standard/page:1",
+        "doc:f907f91/tier:standard/page:1",
+        "doc:48f1b4d/tier:standard/page:1",
+        "doc:d598e1e/tier:standard/page:1",
+        "doc:79de2fe/tier:standard/page:1",
+        "doc:867cace/tier:standard/page:1",
+        "doc:11dc53b/tier:standard/page:1",
+        "doc:f77f5c5/tier:standard/page:1",
+        "doc:b903293/tier:standard/page:1",
+        "doc:f7b578f/tier:standard/page:1",
+        "doc:a209611/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2024_II",
+      "year": 2024,
+      "volume": "II",
+      "title": "2024年新课标全国Ⅱ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2024_II_Q3",
+      "number": 3,
+      "stem": "What do the four walks have in common?",
+      "artifactId": "gaokao_en_2024_II_46faf62ab015dc4b",
+      "sourceLocators": [
+        "doc:46faf62/tier:standard/page:1",
+        "doc:f82b00c/tier:standard/page:1",
+        "doc:4d79a9a/tier:standard/page:1",
+        "doc:7ff6742/tier:standard/page:1",
+        "doc:e77adf6/tier:standard/page:1",
+        "doc:1ee58a7/tier:standard/page:1",
+        "doc:d41d269/tier:standard/page:1",
+        "doc:3676fcc/tier:standard/page:1",
+        "doc:f907f91/tier:standard/page:1",
+        "doc:48f1b4d/tier:standard/page:1",
+        "doc:d598e1e/tier:standard/page:1",
+        "doc:79de2fe/tier:standard/page:1",
+        "doc:867cace/tier:standard/page:1",
+        "doc:11dc53b/tier:standard/page:1",
+        "doc:f77f5c5/tier:standard/page:1",
+        "doc:b903293/tier:standard/page:1",
+        "doc:f7b578f/tier:standard/page:1",
+        "doc:a209611/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2024_II",
+      "year": 2024,
+      "volume": "II",
+      "title": "2024年新课标全国Ⅱ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2024_II_Q4",
+      "number": 4,
+      "stem": "Why did BART start the kiosk program?",
+      "artifactId": "gaokao_en_2024_II_46faf62ab015dc4b",
+      "sourceLocators": [
+        "doc:46faf62/tier:standard/page:1",
+        "doc:f82b00c/tier:standard/page:1",
+        "doc:4d79a9a/tier:standard/page:1",
+        "doc:7ff6742/tier:standard/page:1",
+        "doc:e77adf6/tier:standard/page:1",
+        "doc:1ee58a7/tier:standard/page:1",
+        "doc:d41d269/tier:standard/page:1",
+        "doc:3676fcc/tier:standard/page:1",
+        "doc:f907f91/tier:standard/page:1",
+        "doc:48f1b4d/tier:standard/page:1",
+        "doc:d598e1e/tier:standard/page:1",
+        "doc:79de2fe/tier:standard/page:1",
+        "doc:867cace/tier:standard/page:1",
+        "doc:11dc53b/tier:standard/page:1",
+        "doc:f77f5c5/tier:standard/page:1",
+        "doc:b903293/tier:standard/page:1",
+        "doc:f7b578f/tier:standard/page:1",
+        "doc:a209611/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2024_II",
+      "year": 2024,
+      "volume": "II",
+      "title": "2024年新课标全国Ⅱ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2024_II_Q5",
+      "number": 5,
+      "stem": "How are the stories categorized in the kiosk?",
+      "artifactId": "gaokao_en_2024_II_46faf62ab015dc4b",
+      "sourceLocators": [
+        "doc:46faf62/tier:standard/page:1",
+        "doc:f82b00c/tier:standard/page:1",
+        "doc:4d79a9a/tier:standard/page:1",
+        "doc:7ff6742/tier:standard/page:1",
+        "doc:e77adf6/tier:standard/page:1",
+        "doc:1ee58a7/tier:standard/page:1",
+        "doc:d41d269/tier:standard/page:1",
+        "doc:3676fcc/tier:standard/page:1",
+        "doc:f907f91/tier:standard/page:1",
+        "doc:48f1b4d/tier:standard/page:1",
+        "doc:d598e1e/tier:standard/page:1",
+        "doc:79de2fe/tier:standard/page:1",
+        "doc:867cace/tier:standard/page:1",
+        "doc:11dc53b/tier:standard/page:1",
+        "doc:f77f5c5/tier:standard/page:1",
+        "doc:b903293/tier:standard/page:1",
+        "doc:f7b578f/tier:standard/page:1",
+        "doc:a209611/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2024_II",
+      "year": 2024,
+      "volume": "II",
+      "title": "2024年新课标全国Ⅱ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2024_II_Q6",
+      "number": 6,
+      "stem": "What has Trost been doing recently?",
+      "artifactId": "gaokao_en_2024_II_46faf62ab015dc4b",
+      "sourceLocators": [
+        "doc:46faf62/tier:standard/page:1",
+        "doc:f82b00c/tier:standard/page:1",
+        "doc:4d79a9a/tier:standard/page:1",
+        "doc:7ff6742/tier:standard/page:1",
+        "doc:e77adf6/tier:standard/page:1",
+        "doc:1ee58a7/tier:standard/page:1",
+        "doc:d41d269/tier:standard/page:1",
+        "doc:3676fcc/tier:standard/page:1",
+        "doc:f907f91/tier:standard/page:1",
+        "doc:48f1b4d/tier:standard/page:1",
+        "doc:d598e1e/tier:standard/page:1",
+        "doc:79de2fe/tier:standard/page:1",
+        "doc:867cace/tier:standard/page:1",
+        "doc:11dc53b/tier:standard/page:1",
+        "doc:f77f5c5/tier:standard/page:1",
+        "doc:b903293/tier:standard/page:1",
+        "doc:f7b578f/tier:standard/page:1",
+        "doc:a209611/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2024_II",
+      "year": 2024,
+      "volume": "II",
+      "title": "2024年新课标全国Ⅱ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2024_II_Q7",
+      "number": 7,
+      "stem": "What is Trost's opinion about BART's future?",
+      "artifactId": "gaokao_en_2024_II_46faf62ab015dc4b",
+      "sourceLocators": [
+        "doc:46faf62/tier:standard/page:1",
+        "doc:f82b00c/tier:standard/page:1",
+        "doc:4d79a9a/tier:standard/page:1",
+        "doc:7ff6742/tier:standard/page:1",
+        "doc:e77adf6/tier:standard/page:1",
+        "doc:1ee58a7/tier:standard/page:1",
+        "doc:d41d269/tier:standard/page:1",
+        "doc:3676fcc/tier:standard/page:1",
+        "doc:f907f91/tier:standard/page:1",
+        "doc:48f1b4d/tier:standard/page:1",
+        "doc:d598e1e/tier:standard/page:1",
+        "doc:79de2fe/tier:standard/page:1",
+        "doc:867cace/tier:standard/page:1",
+        "doc:11dc53b/tier:standard/page:1",
+        "doc:f77f5c5/tier:standard/page:1",
+        "doc:b903293/tier:standard/page:1",
+        "doc:f7b578f/tier:standard/page:1",
+        "doc:a209611/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2024_II",
+      "year": 2024,
+      "volume": "II",
+      "title": "2024年新课标全国Ⅱ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2024_II_Q8",
+      "number": 8,
+      "stem": "What can be learned about BMF from paragraph 1?",
+      "artifactId": "gaokao_en_2024_II_46faf62ab015dc4b",
+      "sourceLocators": [
+        "doc:46faf62/tier:standard/page:1",
+        "doc:f82b00c/tier:standard/page:1",
+        "doc:4d79a9a/tier:standard/page:1",
+        "doc:7ff6742/tier:standard/page:1",
+        "doc:e77adf6/tier:standard/page:1",
+        "doc:1ee58a7/tier:standard/page:1",
+        "doc:d41d269/tier:standard/page:1",
+        "doc:3676fcc/tier:standard/page:1",
+        "doc:f907f91/tier:standard/page:1",
+        "doc:48f1b4d/tier:standard/page:1",
+        "doc:d598e1e/tier:standard/page:1",
+        "doc:79de2fe/tier:standard/page:1",
+        "doc:867cace/tier:standard/page:1",
+        "doc:11dc53b/tier:standard/page:1",
+        "doc:f77f5c5/tier:standard/page:1",
+        "doc:b903293/tier:standard/page:1",
+        "doc:f7b578f/tier:standard/page:1",
+        "doc:a209611/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 35,
+          "end": 44,
+          "matched": "paragraph",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2024_II",
+      "year": 2024,
+      "volume": "II",
+      "title": "2024年新课标全国Ⅱ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2024_II_Q9",
+      "number": 9,
+      "stem": "What information does the convenient app offer?",
+      "artifactId": "gaokao_en_2024_II_46faf62ab015dc4b",
+      "sourceLocators": [
+        "doc:46faf62/tier:standard/page:1",
+        "doc:f82b00c/tier:standard/page:1",
+        "doc:4d79a9a/tier:standard/page:1",
+        "doc:7ff6742/tier:standard/page:1",
+        "doc:e77adf6/tier:standard/page:1",
+        "doc:1ee58a7/tier:standard/page:1",
+        "doc:d41d269/tier:standard/page:1",
+        "doc:3676fcc/tier:standard/page:1",
+        "doc:f907f91/tier:standard/page:1",
+        "doc:48f1b4d/tier:standard/page:1",
+        "doc:d598e1e/tier:standard/page:1",
+        "doc:79de2fe/tier:standard/page:1",
+        "doc:867cace/tier:standard/page:1",
+        "doc:11dc53b/tier:standard/page:1",
+        "doc:f77f5c5/tier:standard/page:1",
+        "doc:b903293/tier:standard/page:1",
+        "doc:f7b578f/tier:standard/page:1",
+        "doc:a209611/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2024_II",
+      "year": 2024,
+      "volume": "II",
+      "title": "2024年新课标全国Ⅱ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2024_II_Q10",
+      "number": 10,
+      "stem": "What can be concluded about BMF employees?",
+      "artifactId": "gaokao_en_2024_II_46faf62ab015dc4b",
+      "sourceLocators": [
+        "doc:46faf62/tier:standard/page:1",
+        "doc:f82b00c/tier:standard/page:1",
+        "doc:4d79a9a/tier:standard/page:1",
+        "doc:7ff6742/tier:standard/page:1",
+        "doc:e77adf6/tier:standard/page:1",
+        "doc:1ee58a7/tier:standard/page:1",
+        "doc:d41d269/tier:standard/page:1",
+        "doc:3676fcc/tier:standard/page:1",
+        "doc:f907f91/tier:standard/page:1",
+        "doc:48f1b4d/tier:standard/page:1",
+        "doc:d598e1e/tier:standard/page:1",
+        "doc:79de2fe/tier:standard/page:1",
+        "doc:867cace/tier:standard/page:1",
+        "doc:11dc53b/tier:standard/page:1",
+        "doc:f77f5c5/tier:standard/page:1",
+        "doc:b903293/tier:standard/page:1",
+        "doc:f7b578f/tier:standard/page:1",
+        "doc:a209611/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "conclude",
+          "word": "conclude",
+          "pattern": "conclud(?:e|es|ed|ing)",
+          "category": "推断",
+          "meaning": "得出结论",
+          "confusion": "be concluded about 是“关于……能得出什么结论”，不是“结束”。",
+          "strategy": "综合相关信息，选择证据能支持的结论。",
+          "start": 12,
+          "end": 21,
+          "matched": "concluded",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2024_II",
+      "year": 2024,
+      "volume": "II",
+      "title": "2024年新课标全国Ⅱ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2024_II_Q11",
+      "number": 11,
+      "stem": "What does the text mainly talk about?",
+      "artifactId": "gaokao_en_2024_II_46faf62ab015dc4b",
+      "sourceLocators": [
+        "doc:46faf62/tier:standard/page:1",
+        "doc:f82b00c/tier:standard/page:1",
+        "doc:4d79a9a/tier:standard/page:1",
+        "doc:7ff6742/tier:standard/page:1",
+        "doc:e77adf6/tier:standard/page:1",
+        "doc:1ee58a7/tier:standard/page:1",
+        "doc:d41d269/tier:standard/page:1",
+        "doc:3676fcc/tier:standard/page:1",
+        "doc:f907f91/tier:standard/page:1",
+        "doc:48f1b4d/tier:standard/page:1",
+        "doc:d598e1e/tier:standard/page:1",
+        "doc:79de2fe/tier:standard/page:1",
+        "doc:867cace/tier:standard/page:1",
+        "doc:11dc53b/tier:standard/page:1",
+        "doc:f77f5c5/tier:standard/page:1",
+        "doc:b903293/tier:standard/page:1",
+        "doc:f7b578f/tier:standard/page:1",
+        "doc:a209611/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "mainly",
+          "word": "mainly",
+          "pattern": "mainly",
+          "category": "主旨",
+          "meaning": "主要地；主要关于",
+          "confusion": "不能用一个局部细节代替整段或全文中心。",
+          "strategy": "注意题干范围是 paragraph 还是 text，概括对应范围。",
+          "start": 19,
+          "end": 25,
+          "matched": "mainly",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2024_II",
+      "year": 2024,
+      "volume": "II",
+      "title": "2024年新课标全国Ⅱ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2024_II_Q12",
+      "number": 12,
+      "stem": "What does the phrase “In the wrong hands” in paragraph 2 probably mean?",
+      "artifactId": "gaokao_en_2024_II_46faf62ab015dc4b",
+      "sourceLocators": [
+        "doc:46faf62/tier:standard/page:1",
+        "doc:f82b00c/tier:standard/page:1",
+        "doc:4d79a9a/tier:standard/page:1",
+        "doc:7ff6742/tier:standard/page:1",
+        "doc:e77adf6/tier:standard/page:1",
+        "doc:1ee58a7/tier:standard/page:1",
+        "doc:d41d269/tier:standard/page:1",
+        "doc:3676fcc/tier:standard/page:1",
+        "doc:f907f91/tier:standard/page:1",
+        "doc:48f1b4d/tier:standard/page:1",
+        "doc:d598e1e/tier:standard/page:1",
+        "doc:79de2fe/tier:standard/page:1",
+        "doc:867cace/tier:standard/page:1",
+        "doc:11dc53b/tier:standard/page:1",
+        "doc:f77f5c5/tier:standard/page:1",
+        "doc:b903293/tier:standard/page:1",
+        "doc:f7b578f/tier:standard/page:1",
+        "doc:a209611/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "phrase",
+          "word": "phrase",
+          "pattern": "phrase",
+          "category": "词义与指代",
+          "meaning": "短语；词组",
+          "confusion": "短语含义未必是逐词翻译的总和。",
+          "strategy": "把整个词组作为单位，结合语境理解。",
+          "start": 14,
+          "end": 20,
+          "matched": "phrase",
+          "needsContext": false
+        },
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 45,
+          "end": 54,
+          "matched": "paragraph",
+          "needsContext": false
+        },
+        {
+          "id": "probably",
+          "word": "probably",
+          "pattern": "probably",
+          "category": "推断",
+          "meaning": "很可能；大概",
+          "confusion": "允许合理推测，但不等于随意猜测。",
+          "strategy": "比较文本支持程度，避免超出原文的绝对结论。",
+          "start": 57,
+          "end": 65,
+          "matched": "probably",
+          "needsContext": false
+        },
+        {
+          "id": "mean",
+          "word": "mean",
+          "pattern": "mean(?:s)?",
+          "category": "词义与指代",
+          "meaning": "意思是；意为",
+          "confusion": "问指定词句在本文中的含义，而非所有字典义。",
+          "strategy": "利用上下文、转折、解释或例子推测，再代入检验。",
+          "start": 66,
+          "end": 70,
+          "matched": "mean",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2024_II",
+      "year": 2024,
+      "volume": "II",
+      "title": "2024年新课标全国Ⅱ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2024_II_Q13",
+      "number": 13,
+      "stem": "What is a feature of AI by Design according to the text?",
+      "artifactId": "gaokao_en_2024_II_46faf62ab015dc4b",
+      "sourceLocators": [
+        "doc:46faf62/tier:standard/page:1",
+        "doc:f82b00c/tier:standard/page:1",
+        "doc:4d79a9a/tier:standard/page:1",
+        "doc:7ff6742/tier:standard/page:1",
+        "doc:e77adf6/tier:standard/page:1",
+        "doc:1ee58a7/tier:standard/page:1",
+        "doc:d41d269/tier:standard/page:1",
+        "doc:3676fcc/tier:standard/page:1",
+        "doc:f907f91/tier:standard/page:1",
+        "doc:48f1b4d/tier:standard/page:1",
+        "doc:d598e1e/tier:standard/page:1",
+        "doc:79de2fe/tier:standard/page:1",
+        "doc:867cace/tier:standard/page:1",
+        "doc:11dc53b/tier:standard/page:1",
+        "doc:f77f5c5/tier:standard/page:1",
+        "doc:b903293/tier:standard/page:1",
+        "doc:f7b578f/tier:standard/page:1",
+        "doc:a209611/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "according-to",
+          "word": "according to",
+          "pattern": "according\\s+to",
+          "category": "定位",
+          "meaning": "根据；按照",
+          "confusion": "指定信息来源，不能用自己的常识替代。",
+          "strategy": "只根据指定人物、段落或全文提供的信息判断。",
+          "start": 34,
+          "end": 46,
+          "matched": "according to",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2024_II",
+      "year": 2024,
+      "volume": "II",
+      "title": "2024年新课标全国Ⅱ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2024_II_Q14",
+      "number": 14,
+      "stem": "What does Campbell urge people to do regarding AI development?",
+      "artifactId": "gaokao_en_2024_II_46faf62ab015dc4b",
+      "sourceLocators": [
+        "doc:46faf62/tier:standard/page:1",
+        "doc:f82b00c/tier:standard/page:1",
+        "doc:4d79a9a/tier:standard/page:1",
+        "doc:7ff6742/tier:standard/page:1",
+        "doc:e77adf6/tier:standard/page:1",
+        "doc:1ee58a7/tier:standard/page:1",
+        "doc:d41d269/tier:standard/page:1",
+        "doc:3676fcc/tier:standard/page:1",
+        "doc:f907f91/tier:standard/page:1",
+        "doc:48f1b4d/tier:standard/page:1",
+        "doc:d598e1e/tier:standard/page:1",
+        "doc:79de2fe/tier:standard/page:1",
+        "doc:867cace/tier:standard/page:1",
+        "doc:11dc53b/tier:standard/page:1",
+        "doc:f77f5c5/tier:standard/page:1",
+        "doc:b903293/tier:standard/page:1",
+        "doc:f7b578f/tier:standard/page:1",
+        "doc:a209611/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2024_II",
+      "year": 2024,
+      "volume": "II",
+      "title": "2024年新课标全国Ⅱ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2024_II_Q15",
+      "number": 15,
+      "stem": "What is the author's purpose in writing the text?",
+      "artifactId": "gaokao_en_2024_II_46faf62ab015dc4b",
+      "sourceLocators": [
+        "doc:46faf62/tier:standard/page:1",
+        "doc:f82b00c/tier:standard/page:1",
+        "doc:4d79a9a/tier:standard/page:1",
+        "doc:7ff6742/tier:standard/page:1",
+        "doc:e77adf6/tier:standard/page:1",
+        "doc:1ee58a7/tier:standard/page:1",
+        "doc:d41d269/tier:standard/page:1",
+        "doc:3676fcc/tier:standard/page:1",
+        "doc:f907f91/tier:standard/page:1",
+        "doc:48f1b4d/tier:standard/page:1",
+        "doc:d598e1e/tier:standard/page:1",
+        "doc:79de2fe/tier:standard/page:1",
+        "doc:867cace/tier:standard/page:1",
+        "doc:11dc53b/tier:standard/page:1",
+        "doc:f77f5c5/tier:standard/page:1",
+        "doc:b903293/tier:standard/page:1",
+        "doc:f7b578f/tier:standard/page:1",
+        "doc:a209611/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "purpose",
+          "word": "purpose",
+          "pattern": "purpose",
+          "category": "意图",
+          "meaning": "目的；意图",
+          "confusion": "问“为什么写/提到”，不能只回答“写了什么”。",
+          "strategy": "检查事例或段落在论述中的作用：说明、举例、对比等。",
+          "start": 21,
+          "end": 28,
+          "matched": "purpose",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2025_I",
+      "year": 2025,
+      "volume": "I",
+      "title": "2025年新课标全国Ⅰ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2025_I_Q21",
+      "number": 21,
+      "stem": "What percentage of global transport emissions did road vehicles account for in 2018?",
+      "artifactId": "gaokao_en_2025_I_e73099a6cf19483e",
+      "sourceLocators": [
+        "doc:e73099a/tier:standard/page:1",
+        "doc:4d26145/tier:standard/page:1",
+        "doc:e8537e7/tier:standard/page:1",
+        "doc:b0be0f1/tier:standard/page:1",
+        "doc:b9b2ecd/tier:standard/page:1",
+        "doc:9b7ef25/tier:standard/page:1",
+        "doc:671f2f3/tier:standard/page:1",
+        "doc:4cc9c9e/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2025_I",
+      "year": 2025,
+      "volume": "I",
+      "title": "2025年新课标全国Ⅰ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2025_I_Q22",
+      "number": 22,
+      "stem": "Which mode of transport can go green comparatively easily?",
+      "artifactId": "gaokao_en_2025_I_e73099a6cf19483e",
+      "sourceLocators": [
+        "doc:e73099a/tier:standard/page:1",
+        "doc:4d26145/tier:standard/page:1",
+        "doc:e8537e7/tier:standard/page:1",
+        "doc:b0be0f1/tier:standard/page:1",
+        "doc:b9b2ecd/tier:standard/page:1",
+        "doc:9b7ef25/tier:standard/page:1",
+        "doc:671f2f3/tier:standard/page:1",
+        "doc:4cc9c9e/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2025_I",
+      "year": 2025,
+      "volume": "I",
+      "title": "2025年新课标全国Ⅰ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2025_I_Q23",
+      "number": 23,
+      "stem": "What does Wipke suggest regarding energy transition?",
+      "artifactId": "gaokao_en_2025_I_e73099a6cf19483e",
+      "sourceLocators": [
+        "doc:e73099a/tier:standard/page:1",
+        "doc:4d26145/tier:standard/page:1",
+        "doc:e8537e7/tier:standard/page:1",
+        "doc:b0be0f1/tier:standard/page:1",
+        "doc:b9b2ecd/tier:standard/page:1",
+        "doc:9b7ef25/tier:standard/page:1",
+        "doc:671f2f3/tier:standard/page:1",
+        "doc:4cc9c9e/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "suggest-advice",
+          "word": "suggest",
+          "pattern": "suggest(?:s|ed|ing)?",
+          "category": "建议",
+          "meaning": "建议；提议",
+          "confusion": "人物提出做法时仍可表示“建议”，不能把题干中的 suggest 全部记成“暗示”。",
+          "strategy": "找出这个人建议采取的行动，核对动作及对象。",
+          "start": 16,
+          "end": 23,
+          "matched": "suggest",
+          "needsContext": true
+        },
+        {
+          "id": "suggest-inference",
+          "word": "suggest",
+          "pattern": "suggest(?:s|ed|ing)?",
+          "category": "推断",
+          "meaning": "暗示；表明",
+          "confusion": "看到 suggest 不要一律译为“建议”。段落、事实或研究作主语时，常是在问它说明什么。",
+          "strategy": "结合指定段落的事实，找有依据的含义；不要凭空联想。",
+          "start": 16,
+          "end": 23,
+          "matched": "suggest",
+          "needsContext": true
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2025_I",
+      "year": 2025,
+      "volume": "I",
+      "title": "2025年新课标全国Ⅰ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2025_I_Q24",
+      "number": 24,
+      "stem": "Who are the people mentioned at the beginning of paragraph 1?",
+      "artifactId": "gaokao_en_2025_I_e73099a6cf19483e",
+      "sourceLocators": [
+        "doc:e73099a/tier:standard/page:1",
+        "doc:4d26145/tier:standard/page:1",
+        "doc:e8537e7/tier:standard/page:1",
+        "doc:b0be0f1/tier:standard/page:1",
+        "doc:b9b2ecd/tier:standard/page:1",
+        "doc:9b7ef25/tier:standard/page:1",
+        "doc:671f2f3/tier:standard/page:1",
+        "doc:4cc9c9e/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "mention",
+          "word": "mention",
+          "pattern": "mention(?:s|ed|ing)?",
+          "category": "意图",
+          "meaning": "提到；提及",
+          "confusion": "Why mention / purpose in mentioning 问提及某事的作用；people mentioned 则问被提到的人。",
+          "strategy": "先看疑问词：Why 问作用，Who/What 通常定位具体信息。",
+          "start": 19,
+          "end": 28,
+          "matched": "mentioned",
+          "needsContext": false
+        },
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 49,
+          "end": 58,
+          "matched": "paragraph",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2025_I",
+      "year": 2025,
+      "volume": "I",
+      "title": "2025年新课标全国Ⅰ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2025_I_Q25",
+      "number": 25,
+      "stem": "Why did the students perform poorly in writing their first essay?",
+      "artifactId": "gaokao_en_2025_I_e73099a6cf19483e",
+      "sourceLocators": [
+        "doc:e73099a/tier:standard/page:1",
+        "doc:4d26145/tier:standard/page:1",
+        "doc:e8537e7/tier:standard/page:1",
+        "doc:b0be0f1/tier:standard/page:1",
+        "doc:b9b2ecd/tier:standard/page:1",
+        "doc:9b7ef25/tier:standard/page:1",
+        "doc:671f2f3/tier:standard/page:1",
+        "doc:4cc9c9e/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2025_I",
+      "year": 2025,
+      "volume": "I",
+      "title": "2025年新课标全国Ⅰ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2025_I_Q26",
+      "number": 26,
+      "stem": "What does the underlined word \"staggering\" in paragraph 3 mean?",
+      "artifactId": "gaokao_en_2025_I_e73099a6cf19483e",
+      "sourceLocators": [
+        "doc:e73099a/tier:standard/page:1",
+        "doc:4d26145/tier:standard/page:1",
+        "doc:e8537e7/tier:standard/page:1",
+        "doc:b0be0f1/tier:standard/page:1",
+        "doc:b9b2ecd/tier:standard/page:1",
+        "doc:9b7ef25/tier:standard/page:1",
+        "doc:671f2f3/tier:standard/page:1",
+        "doc:4cc9c9e/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "underlined",
+          "word": "underlined",
+          "pattern": "underlined",
+          "category": "定位",
+          "meaning": "画下划线的",
+          "confusion": "用于指定被考查的词或短语，不是词义提示。",
+          "strategy": "先定位题干指定词，再读它所在句的上下文。",
+          "start": 14,
+          "end": 24,
+          "matched": "underlined",
+          "needsContext": false
+        },
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 46,
+          "end": 55,
+          "matched": "paragraph",
+          "needsContext": false
+        },
+        {
+          "id": "mean",
+          "word": "mean",
+          "pattern": "mean(?:s)?",
+          "category": "词义与指代",
+          "meaning": "意思是；意为",
+          "confusion": "问指定词句在本文中的含义，而非所有字典义。",
+          "strategy": "利用上下文、转折、解释或例子推测，再代入检验。",
+          "start": 58,
+          "end": 62,
+          "matched": "mean",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2025_I",
+      "year": 2025,
+      "volume": "I",
+      "title": "2025年新课标全国Ⅰ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2025_I_Q27",
+      "number": 27,
+      "stem": "What does the author's experience show?",
+      "artifactId": "gaokao_en_2025_I_e73099a6cf19483e",
+      "sourceLocators": [
+        "doc:e73099a/tier:standard/page:1",
+        "doc:4d26145/tier:standard/page:1",
+        "doc:e8537e7/tier:standard/page:1",
+        "doc:b0be0f1/tier:standard/page:1",
+        "doc:b9b2ecd/tier:standard/page:1",
+        "doc:9b7ef25/tier:standard/page:1",
+        "doc:671f2f3/tier:standard/page:1",
+        "doc:4cc9c9e/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2025_I",
+      "year": 2025,
+      "volume": "I",
+      "title": "2025年新课标全国Ⅰ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2025_I_Q28",
+      "number": 28,
+      "stem": "What phenomenon does the author point out in paragraph 1?",
+      "artifactId": "gaokao_en_2025_I_e73099a6cf19483e",
+      "sourceLocators": [
+        "doc:e73099a/tier:standard/page:1",
+        "doc:4d26145/tier:standard/page:1",
+        "doc:e8537e7/tier:standard/page:1",
+        "doc:b0be0f1/tier:standard/page:1",
+        "doc:b9b2ecd/tier:standard/page:1",
+        "doc:9b7ef25/tier:standard/page:1",
+        "doc:671f2f3/tier:standard/page:1",
+        "doc:4cc9c9e/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 45,
+          "end": 54,
+          "matched": "paragraph",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2025_I",
+      "year": 2025,
+      "volume": "I",
+      "title": "2025年新课标全国Ⅰ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2025_I_Q29",
+      "number": 29,
+      "stem": "What were the Canadian journalist and other campaigners trying to do?",
+      "artifactId": "gaokao_en_2025_I_e73099a6cf19483e",
+      "sourceLocators": [
+        "doc:e73099a/tier:standard/page:1",
+        "doc:4d26145/tier:standard/page:1",
+        "doc:e8537e7/tier:standard/page:1",
+        "doc:b0be0f1/tier:standard/page:1",
+        "doc:b9b2ecd/tier:standard/page:1",
+        "doc:9b7ef25/tier:standard/page:1",
+        "doc:671f2f3/tier:standard/page:1",
+        "doc:4cc9c9e/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2025_I",
+      "year": 2025,
+      "volume": "I",
+      "title": "2025年新课标全国Ⅰ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2025_I_Q30",
+      "number": 30,
+      "stem": "What can be inferred about the campaigns in Australia in the late 1960s and 1970s?",
+      "artifactId": "gaokao_en_2025_I_e73099a6cf19483e",
+      "sourceLocators": [
+        "doc:e73099a/tier:standard/page:1",
+        "doc:4d26145/tier:standard/page:1",
+        "doc:e8537e7/tier:standard/page:1",
+        "doc:b0be0f1/tier:standard/page:1",
+        "doc:b9b2ecd/tier:standard/page:1",
+        "doc:9b7ef25/tier:standard/page:1",
+        "doc:671f2f3/tier:standard/page:1",
+        "doc:4cc9c9e/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "infer",
+          "word": "infer",
+          "pattern": "infer(?:red|ring|s)?",
+          "category": "推断",
+          "meaning": "推断；推知",
+          "confusion": "infer 是读者根据线索推断；imply 是作者或文字暗示。",
+          "strategy": "先找事实，再作有限推断；答案必须有文本依据。",
+          "start": 12,
+          "end": 20,
+          "matched": "inferred",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2025_I",
+      "year": 2025,
+      "volume": "I",
+      "title": "2025年新课标全国Ⅰ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2025_I_Q31",
+      "number": 31,
+      "stem": "What can be a suitable title for the text?",
+      "artifactId": "gaokao_en_2025_I_e73099a6cf19483e",
+      "sourceLocators": [
+        "doc:e73099a/tier:standard/page:1",
+        "doc:4d26145/tier:standard/page:1",
+        "doc:e8537e7/tier:standard/page:1",
+        "doc:b0be0f1/tier:standard/page:1",
+        "doc:b9b2ecd/tier:standard/page:1",
+        "doc:9b7ef25/tier:standard/page:1",
+        "doc:671f2f3/tier:standard/page:1",
+        "doc:4cc9c9e/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "suitable",
+          "word": "suitable",
+          "pattern": "suitable",
+          "category": "主旨",
+          "meaning": "合适的；恰当的",
+          "confusion": "suitable title 表示“合适的标题”。",
+          "strategy": "兼顾准确、范围适当与概括性。",
+          "start": 14,
+          "end": 22,
+          "matched": "suitable",
+          "needsContext": false
+        },
+        {
+          "id": "title",
+          "word": "title",
+          "pattern": "title",
+          "category": "主旨",
+          "meaning": "标题",
+          "confusion": "标题要覆盖主题，不能只贴合一个例子。",
+          "strategy": "比较标题与全文话题、核心观点和范围是否一致。",
+          "start": 23,
+          "end": 28,
+          "matched": "title",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2025_I",
+      "year": 2025,
+      "volume": "I",
+      "title": "2025年新课标全国Ⅰ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2025_I_Q32",
+      "number": 32,
+      "stem": "How does the author present the issue in the first paragraph?",
+      "artifactId": "gaokao_en_2025_I_e73099a6cf19483e",
+      "sourceLocators": [
+        "doc:e73099a/tier:standard/page:1",
+        "doc:4d26145/tier:standard/page:1",
+        "doc:e8537e7/tier:standard/page:1",
+        "doc:b0be0f1/tier:standard/page:1",
+        "doc:b9b2ecd/tier:standard/page:1",
+        "doc:9b7ef25/tier:standard/page:1",
+        "doc:671f2f3/tier:standard/page:1",
+        "doc:4cc9c9e/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 51,
+          "end": 60,
+          "matched": "paragraph",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2025_I",
+      "year": 2025,
+      "volume": "I",
+      "title": "2025年新课标全国Ⅰ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2025_I_Q33",
+      "number": 33,
+      "stem": "What determines the effectiveness of trapping microplastics in water?",
+      "artifactId": "gaokao_en_2025_I_e73099a6cf19483e",
+      "sourceLocators": [
+        "doc:e73099a/tier:standard/page:1",
+        "doc:4d26145/tier:standard/page:1",
+        "doc:e8537e7/tier:standard/page:1",
+        "doc:b0be0f1/tier:standard/page:1",
+        "doc:b9b2ecd/tier:standard/page:1",
+        "doc:9b7ef25/tier:standard/page:1",
+        "doc:671f2f3/tier:standard/page:1",
+        "doc:4cc9c9e/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2025_I",
+      "year": 2025,
+      "volume": "I",
+      "title": "2025年新课标全国Ⅰ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2025_I_Q34",
+      "number": 34,
+      "stem": "What does the author try to illustrate by mentioning bottled water in paragraph 4?",
+      "artifactId": "gaokao_en_2025_I_e73099a6cf19483e",
+      "sourceLocators": [
+        "doc:e73099a/tier:standard/page:1",
+        "doc:4d26145/tier:standard/page:1",
+        "doc:e8537e7/tier:standard/page:1",
+        "doc:b0be0f1/tier:standard/page:1",
+        "doc:b9b2ecd/tier:standard/page:1",
+        "doc:9b7ef25/tier:standard/page:1",
+        "doc:671f2f3/tier:standard/page:1",
+        "doc:4cc9c9e/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "mention",
+          "word": "mention",
+          "pattern": "mention(?:s|ed|ing)?",
+          "category": "意图",
+          "meaning": "提到；提及",
+          "confusion": "Why mention / purpose in mentioning 问提及某事的作用；people mentioned 则问被提到的人。",
+          "strategy": "先看疑问词：Why 问作用，Who/What 通常定位具体信息。",
+          "start": 42,
+          "end": 52,
+          "matched": "mentioning",
+          "needsContext": false
+        },
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 70,
+          "end": 79,
+          "matched": "paragraph",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2025_I",
+      "year": 2025,
+      "volume": "I",
+      "title": "2025年新课标全国Ⅰ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2025_I_Q35",
+      "number": 35,
+      "stem": "What is Gauchotte-Lindsay's suggestion about?",
+      "artifactId": "gaokao_en_2025_I_e73099a6cf19483e",
+      "sourceLocators": [
+        "doc:e73099a/tier:standard/page:1",
+        "doc:4d26145/tier:standard/page:1",
+        "doc:e8537e7/tier:standard/page:1",
+        "doc:b0be0f1/tier:standard/page:1",
+        "doc:b9b2ecd/tier:standard/page:1",
+        "doc:9b7ef25/tier:standard/page:1",
+        "doc:671f2f3/tier:standard/page:1",
+        "doc:4cc9c9e/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2025_II",
+      "year": 2025,
+      "volume": "II",
+      "title": "2025年新课标全国Ⅱ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2025_II_Q1",
+      "number": 1,
+      "stem": "Where can you find an original copy of the Magna Carta?",
+      "artifactId": "gaokao_en_2025_II_7f356d28e5c20083",
+      "sourceLocators": [
+        "doc:7f356d2/tier:standard/page:1",
+        "doc:e3bf2c4/tier:standard/page:1",
+        "doc:af8b5a3/tier:standard/page:1",
+        "doc:1634205/tier:standard/page:1",
+        "doc:c9be32c/tier:standard/page:1",
+        "doc:53c4d54/tier:standard/page:1",
+        "doc:a9eb8be/tier:standard/page:1",
+        "doc:1932552/tier:standard/page:1",
+        "doc:ea25f73/tier:standard/page:1",
+        "doc:f1525be/tier:standard/page:1",
+        "doc:5385918/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2025_II",
+      "year": 2025,
+      "volume": "II",
+      "title": "2025年新课标全国Ⅱ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2025_II_Q2",
+      "number": 2,
+      "stem": "What is a feature of Shrewsbury Town Center?",
+      "artifactId": "gaokao_en_2025_II_7f356d28e5c20083",
+      "sourceLocators": [
+        "doc:7f356d2/tier:standard/page:1",
+        "doc:e3bf2c4/tier:standard/page:1",
+        "doc:af8b5a3/tier:standard/page:1",
+        "doc:1634205/tier:standard/page:1",
+        "doc:c9be32c/tier:standard/page:1",
+        "doc:53c4d54/tier:standard/page:1",
+        "doc:a9eb8be/tier:standard/page:1",
+        "doc:1932552/tier:standard/page:1",
+        "doc:ea25f73/tier:standard/page:1",
+        "doc:f1525be/tier:standard/page:1",
+        "doc:5385918/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2025_II",
+      "year": 2025,
+      "volume": "II",
+      "title": "2025年新课标全国Ⅱ卷英语",
+      "passage": "A",
+      "questionId": "gaokao_en_2025_II_Q3",
+      "number": 3,
+      "stem": "What does the author suggest visitors do in Mevagissey?",
+      "artifactId": "gaokao_en_2025_II_7f356d28e5c20083",
+      "sourceLocators": [
+        "doc:7f356d2/tier:standard/page:1",
+        "doc:e3bf2c4/tier:standard/page:1",
+        "doc:af8b5a3/tier:standard/page:1",
+        "doc:1634205/tier:standard/page:1",
+        "doc:c9be32c/tier:standard/page:1",
+        "doc:53c4d54/tier:standard/page:1",
+        "doc:a9eb8be/tier:standard/page:1",
+        "doc:1932552/tier:standard/page:1",
+        "doc:ea25f73/tier:standard/page:1",
+        "doc:f1525be/tier:standard/page:1",
+        "doc:5385918/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "suggest-advice",
+          "word": "suggest",
+          "pattern": "suggest(?:s|ed|ing)?",
+          "category": "建议",
+          "meaning": "建议；提议",
+          "confusion": "人物提出做法时仍可表示“建议”，不能把题干中的 suggest 全部记成“暗示”。",
+          "strategy": "找出这个人建议采取的行动，核对动作及对象。",
+          "start": 21,
+          "end": 28,
+          "matched": "suggest",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2025_II",
+      "year": 2025,
+      "volume": "II",
+      "title": "2025年新课标全国Ⅱ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2025_II_Q4",
+      "number": 4,
+      "stem": "Who does He teach at LPCH?",
+      "artifactId": "gaokao_en_2025_II_7f356d28e5c20083",
+      "sourceLocators": [
+        "doc:7f356d2/tier:standard/page:1",
+        "doc:e3bf2c4/tier:standard/page:1",
+        "doc:af8b5a3/tier:standard/page:1",
+        "doc:1634205/tier:standard/page:1",
+        "doc:c9be32c/tier:standard/page:1",
+        "doc:53c4d54/tier:standard/page:1",
+        "doc:a9eb8be/tier:standard/page:1",
+        "doc:1932552/tier:standard/page:1",
+        "doc:ea25f73/tier:standard/page:1",
+        "doc:f1525be/tier:standard/page:1",
+        "doc:5385918/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2025_II",
+      "year": 2025,
+      "volume": "II",
+      "title": "2025年新课标全国Ⅱ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2025_II_Q5",
+      "number": 5,
+      "stem": "What is a characteristic of Ho's job?",
+      "artifactId": "gaokao_en_2025_II_7f356d28e5c20083",
+      "sourceLocators": [
+        "doc:7f356d2/tier:standard/page:1",
+        "doc:e3bf2c4/tier:standard/page:1",
+        "doc:af8b5a3/tier:standard/page:1",
+        "doc:1634205/tier:standard/page:1",
+        "doc:c9be32c/tier:standard/page:1",
+        "doc:53c4d54/tier:standard/page:1",
+        "doc:a9eb8be/tier:standard/page:1",
+        "doc:1932552/tier:standard/page:1",
+        "doc:ea25f73/tier:standard/page:1",
+        "doc:f1525be/tier:standard/page:1",
+        "doc:5385918/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2025_II",
+      "year": 2025,
+      "volume": "II",
+      "title": "2025年新课标全国Ⅱ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2025_II_Q6",
+      "number": 6,
+      "stem": "What does the underlined word \"it\" refer to in paragraph 4?",
+      "artifactId": "gaokao_en_2025_II_7f356d28e5c20083",
+      "sourceLocators": [
+        "doc:7f356d2/tier:standard/page:1",
+        "doc:e3bf2c4/tier:standard/page:1",
+        "doc:af8b5a3/tier:standard/page:1",
+        "doc:1634205/tier:standard/page:1",
+        "doc:c9be32c/tier:standard/page:1",
+        "doc:53c4d54/tier:standard/page:1",
+        "doc:a9eb8be/tier:standard/page:1",
+        "doc:1932552/tier:standard/page:1",
+        "doc:ea25f73/tier:standard/page:1",
+        "doc:f1525be/tier:standard/page:1",
+        "doc:5385918/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "underlined",
+          "word": "underlined",
+          "pattern": "underlined",
+          "category": "定位",
+          "meaning": "画下划线的",
+          "confusion": "用于指定被考查的词或短语，不是词义提示。",
+          "strategy": "先定位题干指定词，再读它所在句的上下文。",
+          "start": 14,
+          "end": 24,
+          "matched": "underlined",
+          "needsContext": false
+        },
+        {
+          "id": "refer-to",
+          "word": "refer to",
+          "pattern": "refer(?:s|red|ring)?\\s+to",
+          "category": "词义与指代",
+          "meaning": "指的是；指代",
+          "confusion": "在代词题里不是“参考”，而是问该词对应什么。",
+          "strategy": "回到原句和前文寻找指代对象，代入核对语义。",
+          "start": 35,
+          "end": 43,
+          "matched": "refer to",
+          "needsContext": false
+        },
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 47,
+          "end": 56,
+          "matched": "paragraph",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2025_II",
+      "year": 2025,
+      "volume": "II",
+      "title": "2025年新课标全国Ⅱ卷英语",
+      "passage": "B",
+      "questionId": "gaokao_en_2025_II_Q7",
+      "number": 7,
+      "stem": "How does the hospital school benefit the students according to Good?",
+      "artifactId": "gaokao_en_2025_II_7f356d28e5c20083",
+      "sourceLocators": [
+        "doc:7f356d2/tier:standard/page:1",
+        "doc:e3bf2c4/tier:standard/page:1",
+        "doc:af8b5a3/tier:standard/page:1",
+        "doc:1634205/tier:standard/page:1",
+        "doc:c9be32c/tier:standard/page:1",
+        "doc:53c4d54/tier:standard/page:1",
+        "doc:a9eb8be/tier:standard/page:1",
+        "doc:1932552/tier:standard/page:1",
+        "doc:ea25f73/tier:standard/page:1",
+        "doc:f1525be/tier:standard/page:1",
+        "doc:5385918/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "according-to",
+          "word": "according to",
+          "pattern": "according\\s+to",
+          "category": "定位",
+          "meaning": "根据；按照",
+          "confusion": "指定信息来源，不能用自己的常识替代。",
+          "strategy": "只根据指定人物、段落或全文提供的信息判断。",
+          "start": 50,
+          "end": 62,
+          "matched": "according to",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2025_II",
+      "year": 2025,
+      "volume": "II",
+      "title": "2025年新课标全国Ⅱ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2025_II_Q8",
+      "number": 8,
+      "stem": "How was Detinidad's business when it started?",
+      "artifactId": "gaokao_en_2025_II_7f356d28e5c20083",
+      "sourceLocators": [
+        "doc:7f356d2/tier:standard/page:1",
+        "doc:e3bf2c4/tier:standard/page:1",
+        "doc:af8b5a3/tier:standard/page:1",
+        "doc:1634205/tier:standard/page:1",
+        "doc:c9be32c/tier:standard/page:1",
+        "doc:53c4d54/tier:standard/page:1",
+        "doc:a9eb8be/tier:standard/page:1",
+        "doc:1932552/tier:standard/page:1",
+        "doc:ea25f73/tier:standard/page:1",
+        "doc:f1525be/tier:standard/page:1",
+        "doc:5385918/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2025_II",
+      "year": 2025,
+      "volume": "II",
+      "title": "2025年新课标全国Ⅱ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2025_II_Q9",
+      "number": 9,
+      "stem": "What is one of Knuth's findings about plants?",
+      "artifactId": "gaokao_en_2025_II_7f356d28e5c20083",
+      "sourceLocators": [
+        "doc:7f356d2/tier:standard/page:1",
+        "doc:e3bf2c4/tier:standard/page:1",
+        "doc:af8b5a3/tier:standard/page:1",
+        "doc:1634205/tier:standard/page:1",
+        "doc:c9be32c/tier:standard/page:1",
+        "doc:53c4d54/tier:standard/page:1",
+        "doc:a9eb8be/tier:standard/page:1",
+        "doc:1932552/tier:standard/page:1",
+        "doc:ea25f73/tier:standard/page:1",
+        "doc:f1525be/tier:standard/page:1",
+        "doc:5385918/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2025_II",
+      "year": 2025,
+      "volume": "II",
+      "title": "2025年新课标全国Ⅱ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2025_II_Q10",
+      "number": 10,
+      "stem": "What does Detinidad try to explain by mentioning doctors and lawyers?",
+      "artifactId": "gaokao_en_2025_II_7f356d28e5c20083",
+      "sourceLocators": [
+        "doc:7f356d2/tier:standard/page:1",
+        "doc:e3bf2c4/tier:standard/page:1",
+        "doc:af8b5a3/tier:standard/page:1",
+        "doc:1634205/tier:standard/page:1",
+        "doc:c9be32c/tier:standard/page:1",
+        "doc:53c4d54/tier:standard/page:1",
+        "doc:a9eb8be/tier:standard/page:1",
+        "doc:1932552/tier:standard/page:1",
+        "doc:ea25f73/tier:standard/page:1",
+        "doc:f1525be/tier:standard/page:1",
+        "doc:5385918/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "mention",
+          "word": "mention",
+          "pattern": "mention(?:s|ed|ing)?",
+          "category": "意图",
+          "meaning": "提到；提及",
+          "confusion": "Why mention / purpose in mentioning 问提及某事的作用；people mentioned 则问被提到的人。",
+          "strategy": "先看疑问词：Why 问作用，Who/What 通常定位具体信息。",
+          "start": 38,
+          "end": 48,
+          "matched": "mentioning",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2025_II",
+      "year": 2025,
+      "volume": "II",
+      "title": "2025年新课标全国Ⅱ卷英语",
+      "passage": "C",
+      "questionId": "gaokao_en_2025_II_Q11",
+      "number": 11,
+      "stem": "What can be a suitable title for the text?",
+      "artifactId": "gaokao_en_2025_II_7f356d28e5c20083",
+      "sourceLocators": [
+        "doc:7f356d2/tier:standard/page:1",
+        "doc:e3bf2c4/tier:standard/page:1",
+        "doc:af8b5a3/tier:standard/page:1",
+        "doc:1634205/tier:standard/page:1",
+        "doc:c9be32c/tier:standard/page:1",
+        "doc:53c4d54/tier:standard/page:1",
+        "doc:a9eb8be/tier:standard/page:1",
+        "doc:1932552/tier:standard/page:1",
+        "doc:ea25f73/tier:standard/page:1",
+        "doc:f1525be/tier:standard/page:1",
+        "doc:5385918/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "suitable",
+          "word": "suitable",
+          "pattern": "suitable",
+          "category": "主旨",
+          "meaning": "合适的；恰当的",
+          "confusion": "suitable title 表示“合适的标题”。",
+          "strategy": "兼顾准确、范围适当与概括性。",
+          "start": 14,
+          "end": 22,
+          "matched": "suitable",
+          "needsContext": false
+        },
+        {
+          "id": "title",
+          "word": "title",
+          "pattern": "title",
+          "category": "主旨",
+          "meaning": "标题",
+          "confusion": "标题要覆盖主题，不能只贴合一个例子。",
+          "strategy": "比较标题与全文话题、核心观点和范围是否一致。",
+          "start": 23,
+          "end": 28,
+          "matched": "title",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2025_II",
+      "year": 2025,
+      "volume": "II",
+      "title": "2025年新课标全国Ⅱ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2025_II_Q12",
+      "number": 12,
+      "stem": "What can be inferred about the author's early life?",
+      "artifactId": "gaokao_en_2025_II_7f356d28e5c20083",
+      "sourceLocators": [
+        "doc:7f356d2/tier:standard/page:1",
+        "doc:e3bf2c4/tier:standard/page:1",
+        "doc:af8b5a3/tier:standard/page:1",
+        "doc:1634205/tier:standard/page:1",
+        "doc:c9be32c/tier:standard/page:1",
+        "doc:53c4d54/tier:standard/page:1",
+        "doc:a9eb8be/tier:standard/page:1",
+        "doc:1932552/tier:standard/page:1",
+        "doc:ea25f73/tier:standard/page:1",
+        "doc:f1525be/tier:standard/page:1",
+        "doc:5385918/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "infer",
+          "word": "infer",
+          "pattern": "infer(?:red|ring|s)?",
+          "category": "推断",
+          "meaning": "推断；推知",
+          "confusion": "infer 是读者根据线索推断；imply 是作者或文字暗示。",
+          "strategy": "先找事实，再作有限推断；答案必须有文本依据。",
+          "start": 12,
+          "end": 20,
+          "matched": "inferred",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2025_II",
+      "year": 2025,
+      "volume": "II",
+      "title": "2025年新课标全国Ⅱ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2025_II_Q13",
+      "number": 13,
+      "stem": "Why did Blue Hill carry out the experiment?",
+      "artifactId": "gaokao_en_2025_II_7f356d28e5c20083",
+      "sourceLocators": [
+        "doc:7f356d2/tier:standard/page:1",
+        "doc:e3bf2c4/tier:standard/page:1",
+        "doc:af8b5a3/tier:standard/page:1",
+        "doc:1634205/tier:standard/page:1",
+        "doc:c9be32c/tier:standard/page:1",
+        "doc:53c4d54/tier:standard/page:1",
+        "doc:a9eb8be/tier:standard/page:1",
+        "doc:1932552/tier:standard/page:1",
+        "doc:ea25f73/tier:standard/page:1",
+        "doc:f1525be/tier:standard/page:1",
+        "doc:5385918/tier:standard/page:1"
+      ],
+      "matches": []
+    },
+    {
+      "paperId": "gaokao_en_2025_II",
+      "year": 2025,
+      "volume": "II",
+      "title": "2025年新课标全国Ⅱ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2025_II_Q14",
+      "number": 14,
+      "stem": "What is paragraph 5 mainly about?",
+      "artifactId": "gaokao_en_2025_II_7f356d28e5c20083",
+      "sourceLocators": [
+        "doc:7f356d2/tier:standard/page:1",
+        "doc:e3bf2c4/tier:standard/page:1",
+        "doc:af8b5a3/tier:standard/page:1",
+        "doc:1634205/tier:standard/page:1",
+        "doc:c9be32c/tier:standard/page:1",
+        "doc:53c4d54/tier:standard/page:1",
+        "doc:a9eb8be/tier:standard/page:1",
+        "doc:1932552/tier:standard/page:1",
+        "doc:ea25f73/tier:standard/page:1",
+        "doc:f1525be/tier:standard/page:1",
+        "doc:5385918/tier:standard/page:1"
+      ],
+      "matches": [
+        {
+          "id": "paragraph",
+          "word": "paragraph",
+          "pattern": "paragraph(?:s)?",
+          "category": "定位",
+          "meaning": "段落",
+          "confusion": "paragraph 2 与 the last paragraph 指定不同的证据范围。",
+          "strategy": "先定位指定段，再根据题型判断是否需联系上下文。",
+          "start": 8,
+          "end": 17,
+          "matched": "paragraph",
+          "needsContext": false
+        },
+        {
+          "id": "mainly",
+          "word": "mainly",
+          "pattern": "mainly",
+          "category": "主旨",
+          "meaning": "主要地；主要关于",
+          "confusion": "不能用一个局部细节代替整段或全文中心。",
+          "strategy": "注意题干范围是 paragraph 还是 text，概括对应范围。",
+          "start": 20,
+          "end": 26,
+          "matched": "mainly",
+          "needsContext": false
+        }
+      ]
+    },
+    {
+      "paperId": "gaokao_en_2025_II",
+      "year": 2025,
+      "volume": "II",
+      "title": "2025年新课标全国Ⅱ卷英语",
+      "passage": "D",
+      "questionId": "gaokao_en_2025_II_Q15",
+      "number": 15,
+      "stem": "What can we learn about wastED?",
+      "artifactId": "gaokao_en_2025_II_7f356d28e5c20083",
+      "sourceLocators": [
+        "doc:7f356d2/tier:standard/page:1",
+        "doc:e3bf2c4/tier:standard/page:1",
+        "doc:af8b5a3/tier:standard/page:1",
+        "doc:1634205/tier:standard/page:1",
+        "doc:c9be32c/tier:standard/page:1",
+        "doc:53c4d54/tier:standard/page:1",
+        "doc:a9eb8be/tier:standard/page:1",
+        "doc:1932552/tier:standard/page:1",
+        "doc:ea25f73/tier:standard/page:1",
+        "doc:f1525be/tier:standard/page:1",
+        "doc:5385918/tier:standard/page:1"
+      ],
+      "matches": []
+    }
+  ]
+}

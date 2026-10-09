@@ -1,0 +1,41 @@
+"use client";
+import { useState } from 'react';
+import lessons from '@/data/english/sentence-practice.json';
+import type { VocabularyResult } from '@/lib/english-study';
+type Lesson=typeof lessons[number];
+const colors=['bg-[#e8efe5] text-[#315d4c]','bg-[#f4e8db] text-[#8a5334]','bg-[#e8edf5] text-[#40577b]','bg-[#efe9f4] text-[#72518a]','bg-[#f2edda] text-[#786433]'];
+export function EnglishSentencePractice({onComplete}:{onComplete:()=>void}) {
+  const [year,setYear]=useState('');const [tag,setTag]=useState('');const [selected,setSelected]=useState(lessons[0].id);
+  const filtered=lessons.filter(l=>(!year||String(l.year)===year)&&(!tag||l.tags.includes(tag)));
+  const current=filtered.find(l=>l.id===selected)||filtered[0];
+  const allTags=[...new Set(lessons.flatMap(l=>l.tags))];
+  return <div className="space-y-5">
+    <div className="rounded-xl bg-[#f1f5ef] p-4 text-xs leading-6 text-slate-600"><b className="text-[#315d4c]">12 组真题长难句精讲</b><p>先找主干，再逐块看修饰关系，最后用理解题检查。原句来自已归档阅读真题；结构说明与译文为教学整理。</p></div>
+    <div className="flex flex-wrap gap-2 text-xs"><label>年份 <select aria-label="长难句年份" value={year} onChange={e=>setYear(e.target.value)} className="rounded-lg border p-2"><option value="">全部</option>{[2020,2021,2022,2023,2024,2025].map(y=><option key={y}>{y}</option>)}</select></label><label>结构 <select aria-label="长难句结构" value={tag} onChange={e=>setTag(e.target.value)} className="rounded-lg border p-2"><option value="">全部</option>{allTags.map(t=><option key={t}>{t}</option>)}</select></label></div>
+    <label className="block text-xs text-slate-500">选择真题句子<select aria-label="选择真题句子" value={current?.id||''} onChange={e=>setSelected(e.target.value)} className="mt-2 w-full rounded-xl border p-3 text-sm text-slate-700">{filtered.map(l=><option key={l.id} value={l.id}>{l.year} · {l.volume==='I'?'Ⅰ':'Ⅱ'} 卷 · 阅读 {l.label} — {l.text.slice(0,54)}…</option>)}</select></label>
+    {current?<SentenceLesson key={current.id} lesson={current} onComplete={onComplete}/>:<p className="text-sm text-slate-500">当前组合没有收录句子，请更换年份或结构。</p>}
+    {current&&<div className="flex justify-between text-xs"><button disabled={filtered.indexOf(current)===0} onClick={()=>setSelected(filtered[filtered.indexOf(current)-1].id)} className="rounded-lg border px-3 py-2 disabled:opacity-40">上一句</button><span className="self-center text-slate-400">{filtered.indexOf(current)+1} / {filtered.length}</span><button disabled={filtered.indexOf(current)===filtered.length-1} onClick={()=>setSelected(filtered[filtered.indexOf(current)+1].id)} className="rounded-lg border px-3 py-2 disabled:opacity-40">下一句</button></div>}
+  </div>;
+}
+function SentenceLesson({lesson,onComplete}:{lesson:Lesson;onComplete:()=>void}) {
+  const [stage,setStage]=useState(0);const [chunk,setChunk]=useState(0);const [answer,setAnswer]=useState<number|null>(null);const [submitted,setSubmitted]=useState(false);
+  const [lookup,setLookup]=useState('');const [definition,setDefinition]=useState('');const [lookupLoading,setLookupLoading]=useState(false);
+  async function lookupWord(){if(!lookup.trim())return;setLookupLoading(true);try{const response=await fetch(`/api/english/vocabulary?q=${encodeURIComponent(lookup.trim())}`);if(!response.ok)throw Error('lookup');const result=await response.json() as VocabularyResult;const entry=result.entries[0];setDefinition(entry?`${entry.word} ${entry.phonetic?`/${entry.phonetic}/`:''}\n${entry.translation}`:'当前考试词库没有匹配词条。');}catch{setDefinition('查词暂时失败，请重试。');}finally{setLookupLoading(false);}}
+  function submit(){if(answer===null)return;setSubmitted(true);if(answer===lesson.quiz.answer&&stage>=2)onComplete();}
+  function reveal(next:number){setStage(value=>Math.max(value,next));if(next>=2&&submitted&&answer===lesson.quiz.answer)onComplete();}
+  return <div className="space-y-4">
+    <div className="rounded-2xl bg-[#f8f6f2] p-5"><div className="mb-4 flex flex-wrap gap-1">{lesson.tags.map(t=><span key={t} className="rounded-full bg-white px-2 py-1 text-[10px] text-slate-500">{t}</span>)}</div>
+      <p className="font-serif text-lg leading-[2.1] text-slate-800">{stage>=2?lesson.chunks.map((part,i)=><span key={i}>{i>0?lesson.text.slice(lesson.chunks[i-1].end,part.start):lesson.text.slice(0,part.start)}<button aria-label={`句子片段 ${i+1}：${part.role}`} aria-pressed={chunk===i} onClick={()=>setChunk(i)} className={`inline rounded px-1 text-left transition ${colors[i%colors.length]} ${chunk===i?'ring-1 ring-current':''}`}>{part.text}</button></span>):lesson.text}</p>
+      <p className="mt-3 text-[10px] text-slate-400">{lesson.year} 新高考 {lesson.volume==='I'?'Ⅰ':'Ⅱ'} 卷 · 阅读 {lesson.label}</p>
+    </div>
+    <div className="flex flex-wrap gap-2">{['1 · 找主干','2 · 看结构','3 · 读译文'].map((label,i)=><button key={label} onClick={()=>reveal(i+1)} aria-pressed={stage>=i+1} className={`rounded-xl border px-3 py-2 text-xs ${stage>=i+1?'border-[#b9cabb] bg-[#f1f5ef] text-[#315d4c]':'text-slate-500'}`}>{label}</button>)}</div>
+    {stage>=1&&<div className="rounded-xl border border-[#d8e2d5] p-4"><p className="text-xs font-semibold text-[#315d4c]">主干读法</p><p className="mt-2 font-serif text-base leading-7">{lesson.skeleton}</p><p className="mt-2 text-[10px] text-slate-400">这是简化读法，用于辨认核心关系；完整信息仍以原句为准。</p></div>}
+    {stage>=2&&<div className="rounded-xl border p-4"><p className="mb-3 text-xs text-slate-500">点击上方彩色片段，逐层理解它与主句的关系。</p><p className={`inline-block rounded-lg px-2 py-1 text-xs font-semibold ${colors[chunk%colors.length]}`}>{chunk+1} · {lesson.chunks[chunk].role}</p><p className="mt-3 text-sm leading-7 text-slate-600">{lesson.chunks[chunk].explanation}</p><div className="mt-3 flex flex-wrap gap-1">{lesson.chunks.map((p,i)=><button key={i} onClick={()=>setChunk(i)} className={`rounded-lg border px-2 py-1 text-[10px] ${chunk===i?'bg-[#193a35] text-white':'text-slate-500'}`}>{i+1} {p.role}</button>)}</div></div>}
+    {stage>=3&&<div className="rounded-xl bg-[#f1f5ef] p-4"><p className="text-xs font-semibold text-[#315d4c]">整句译文</p><p className="mt-2 text-sm leading-7 text-slate-600">{lesson.translation}</p></div>}
+    <div className="rounded-xl border p-4"><p className="text-xs font-semibold text-slate-700">理解检查</p><p className="my-3 text-sm">{lesson.quiz.question}</p><div className="space-y-2">{lesson.quiz.options.map((option,i)=><label key={option} className={`flex cursor-pointer items-center gap-2 rounded-lg border p-3 text-xs ${answer===i?'border-[#b9cabb] bg-[#f1f5ef]':''}`}><input type="radio" name={lesson.id} checked={answer===i} onChange={()=>{setAnswer(i);setSubmitted(false);}}/>{option}</label>)}</div><button disabled={answer===null} onClick={submit} className="mt-3 rounded-lg bg-[#193a35] px-3 py-2 text-xs text-white disabled:opacity-40">检查理解</button>
+      {submitted&&<div role="status" className="mt-3 text-xs leading-6"><b className={answer===lesson.quiz.answer?'text-[#315d4c]':'text-terracotta-700'}>{answer===lesson.quiz.answer?'回答正确':'再看一下句子关系'}</b><p>{lesson.quiz.explanation}</p>{answer===lesson.quiz.answer&&stage<2&&<p>再展开结构，完成这句的拆解练习。</p>}</div>}
+    </div>
+    <details className="rounded-xl border p-4 text-xs"><summary className="cursor-pointer font-semibold text-slate-600">回到原文语境与来源</summary><p className="mt-3 font-serif text-sm leading-7">{lesson.context}</p><div className="mt-3 flex flex-wrap gap-3 text-[#315d4c]"><a className="underline" href={lesson.sourcePage} target="_blank" rel="noreferrer">{lesson.sourceName} · 来源页面</a>{lesson.publicPath&&<a className="underline" href={lesson.publicPath} target="_blank" rel="noreferrer">打开真题原件</a>}</div></details>
+    <form onSubmit={e=>{e.preventDefault();void lookupWord();}} className="rounded-xl border p-4"><label className="text-xs font-semibold text-slate-600" htmlFor="sentence-word">遇到生词？查开源词库</label><div className="mt-2 flex gap-2"><input id="sentence-word" value={lookup} onChange={e=>setLookup(e.target.value)} maxLength={80} placeholder="输入原词或词形" className="min-w-0 flex-1 rounded-lg border px-3 py-2 text-sm"/><button disabled={lookupLoading||!lookup.trim()} className="rounded-lg border px-3 text-xs disabled:opacity-40">{lookupLoading?'查询中…':'查词'}</button></div>{definition&&<p role="status" className="mt-3 whitespace-pre-line text-xs leading-6">{definition}</p>}</form>
+  </div>;
+}

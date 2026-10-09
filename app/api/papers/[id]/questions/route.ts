@@ -23,7 +23,7 @@ export async function POST(request: Request, context: { params: Promise<{ id: st
       if (!updated) return Response.json({ error: "裁切已在其他页面更新，请重新读取。" }, { status: 409 });
       committed = true; return Response.json({ question: publicPaperQuestion(updated) });
     }
-    await getD1Binding().prepare("INSERT INTO paper_questions(id,paper_id,question_number,regions,image_key,question_text,updated_at) VALUES(?,?,?,?,?,?,?)").bind(id, paperId, input.number, JSON.stringify(input.regions), key, input.text, new Date().toISOString()).run(); committed = true;
+    await getD1Binding().batch([getD1Binding().prepare("INSERT INTO paper_questions(id,paper_id,question_number,regions,image_key,question_text,updated_at) VALUES(?,?,?,?,?,?,?)").bind(id, paperId, input.number, JSON.stringify(input.regions), key, input.text, new Date().toISOString())]); committed = true;
     const row = await getD1Binding().prepare("SELECT * FROM paper_questions WHERE id=?").bind(id).first<PaperQuestionRow>();
     return Response.json({ question: publicPaperQuestion(row!) }, { status: 201 });
   } catch (error) {

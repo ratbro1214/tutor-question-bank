@@ -54,3 +54,18 @@ next-env.d.ts
 
 # local development server logs
 .dev-server.*.log
+
+# Local persistence and uploaded binary objects; back up separately from Git.
+/blobs/
+/uploads/
+/instance/
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+
+# Private business backups and staged restore payloads
+/backups/
+/.data-restore-*/
+*.key
+/secrets/

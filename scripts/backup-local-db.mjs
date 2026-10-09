@@ -1,0 +1,15 @@
+import { DatabaseSync, backup } from 'node:sqlite';
+import { readdir, mkdir } from 'node:fs/promises';
+import path from 'node:path';
+const dir = path.resolve('.wrangler/state/v3/d1/miniflare-D1DatabaseObject');
+const files = (await readdir(dir)).filter(f=>f.endsWith('.sqlite') && f !== 'metadata.sqlite');
+if (files.length !== 1) throw Error('Expected exactly one local application database');
+const dest = path.resolve('../work/backups');
+await mkdir(dest, { recursive: true });
+const db = new DatabaseSync(path.join(dir,files[0]), { readOnly: true });
+const target = path.join(dest, `english-import-${new Date().toISOString().replaceAll(':','-')}.sqlite`);
+await backup(db, target);
+console.log('Backup:', target);
+console.log('English papers:', db.prepare('SELECT COUNT(*) n FROM english_papers').get().n);
+console.log('Existing student records:', db.prepare('SELECT COUNT(*) n FROM students').get().n);
+db.close();

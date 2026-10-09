@@ -1,0 +1,532 @@
+{
+  "paperId": "gaokao_en_2021_II",
+  "status": "PENDING",
+  "extractionMethod": "mineru-office-flash",
+  "sections": [
+    {
+      "id": "gaokao_en_2021_II_reading",
+      "paper_id": "gaokao_en_2021_II",
+      "type": "reading",
+      "title": "阅读理解与七选五",
+      "position": 0
+    },
+    {
+      "id": "gaokao_en_2021_II_language",
+      "paper_id": "gaokao_en_2021_II",
+      "type": "language",
+      "title": "语言运用",
+      "position": 1
+    },
+    {
+      "id": "gaokao_en_2021_II_writing",
+      "paper_id": "gaokao_en_2021_II",
+      "type": "writing",
+      "title": "写作",
+      "position": 2
+    }
+  ],
+  "passages": [
+    {
+      "id": "gaokao_en_2021_II_reading_A",
+      "section_id": "gaokao_en_2021_II_reading",
+      "label": "A",
+      "text": "A\r\n\r\nThings to Do in Yorkshire This Summer\r\n\r\n**Harrogate Music Festival**\r\n\r\nSince its birth, Harrogate Music Festival has gone from strength to strength. This year, we are celebrating our 50th anniversary. We begin on 1st June with Manchester Camerata and Nicola Benedetti, presenting an amazing programme of Mozart pieces.\r\n\r\nDates: 1 June — 31 July\r\n\r\nTickets:£12 — £96\r\n\r\n**Jodie’s Fitness Summer Classes**\r\n\r\nAs the summer months roll in, our Georgian country estate makes the perfect setting for an outdoor fitness session. Come and work out with our qualified personal trainer, Jodie McGregor, on the grounds of the Middleton Lodge estate.\r\n\r\nWe will be holding a free taster session on 23rd May, at 10 am, to demonstrate the variety of effective and active exercises. There are eight spaces available for the taster session. Advance bookings are required(info@middletonlodge.co.uk).\r\n\r\nDates:23 May — 11 July\r\n\r\nTickets: £7.50 per session\r\n\r\n**Felt Picture Making**\r\n\r\nWorking from an inspirational picture, this workshop at Helmsley Arts Centre will teach you the techniques you will need to recreate your picture in wool.\r\n\r\nWe will also discuss the origins of felt（毛毡）, what enables wool fibres to become felt and how the processes we use work.\r\n\r\nDates: 12 June — 12 July\r\n\r\nTickets: £40 including materials\r\n\r\n**Figure It Out!—Playing with Math**\r\n\r\nA new exhibition in Halifax uses everyday activities to explain the hidden math principles we all use on a regular basis. Pack a bag, cut a cake, guess which juice container holds the most liquid, and much more. Discover how architects, product designers and scientists use similar skills in their work.\r\n\r\nDates:7 May — 10 June\r\n\r\nTickets: Free",
+      "artifact_id": "gaokao_en_2021_II_d5f5bf68536c0924",
+      "source_locator": "doc:d5f5bf6/tier:flash/page:1",
+      "status": "PENDING"
+    },
+    {
+      "id": "gaokao_en_2021_II_reading_B",
+      "section_id": "gaokao_en_2021_II_reading",
+      "label": "B",
+      "text": "B\r\n\r\nI have worked as a keeper at the National Zoo for 11 years. Spot and Stripe are the first tiger cubs（幼兽）that have ever been born here. Globally, a third of Sumatran cubs in zoos don’t make it to adulthood, so I decided to give them round-the-clock care at home.\r\n\r\nI’ve got two children — the younger one, Kynan, was extremely happy about the tigers arriving — but all of us really looked forward to being part of their lives and watching them grow. I wasn’t worried about bringing them into my home with my wife and kids. These were cubs. They weighed about 2.5 kg and were so small that there was absolutely no risk.\r\n\r\nAs they grew more mobile, we let them move freely around the house during the day, but when we were asleep we had to contain them in a large room, otherwise they’d get up to mischief. We’d come down in the morning to find they’d turned the room upside down, and left it looking like a zoo.\r\n\r\nThings quickly got very intense due to the huge amount of energy required to look after them. There were some tough times and I just felt extremely tired. I was grateful that my family was there to help. We had to have a bit of a production line going, making up “tiger milk”, washing baby bottles, and cleaning the floors.\r\n\r\nWhen Spot and Stripe were four months old, they were learning how to open doors and jump fences, and we knew it really was time for them to go. It was hard for us to finally part with them. For the first few days, Kynan was always a bit disappointed that the cubs weren’t there.\r\n\r\nI’m not sad about it. I’m hands-on with them every day at the zoo, and I do look back very fondly on the time that we had them.",
+      "artifact_id": "gaokao_en_2021_II_d5f5bf68536c0924",
+      "source_locator": "doc:d5f5bf6/tier:flash/page:1",
+      "status": "PENDING"
+    },
+    {
+      "id": "gaokao_en_2021_II_reading_C",
+      "section_id": "gaokao_en_2021_II_reading",
+      "label": "C",
+      "text": "C\r\n\r\nA British woman who won a \\$1 million prize after she was named the World's Best Teacher will use the cash to bring inspirational figures into UK schools.\r\n\r\nAndria Zafirakou,a north London secondary school teacher, said she wanted to bring about a classroom revolution （变革）. “We are going to make a change，” she said.\"I’ve started a project to promote the teaching of the arts in our schools.\"\r\n\r\nThe project results from the difficulties many schools have in getting artists of any sort — whether an up-and-coming local musician or a major movie star — into schools to work with and inspire children.\r\n\r\nZafirakou began the project at Alperton Community School, her place of work for the past twelve years. “I've seen those magic moments when children are talking to someone they are inspired by — their eyes are shining and their faces light up,” she said. “We need artists . more than ever in our schools.\"\r\n\r\nArtist Michael Craig-Martin said: “Andria's brilliant project to bring artists from all fields into direct contact with children is particularly welcome at a time when the arts are being downgraded in schools.\" It was a mistake to see the arts as unnecessary, he added.\r\n\r\nHistorian Sir Simon Schama is also a supporter of the project. He said that arts education in schools was not just an add-on. “It is absolutely necessary. The future depends on creativity and creativity depends on the young. What will remain of us when artificial intelligence takes over will be our creativity, and it is our creative spirit, our visionary sense of freshness, that has been our strength for centuries.\"",
+      "artifact_id": "gaokao_en_2021_II_d5f5bf68536c0924",
+      "source_locator": "doc:d5f5bf6/tier:flash/page:1",
+      "status": "PENDING"
+    },
+    {
+      "id": "gaokao_en_2021_II_reading_D",
+      "section_id": "gaokao_en_2021_II_reading",
+      "label": "D",
+      "text": "D\r\n\r\nAn Australian professor is developing a robot to monitor the health of grazing cattle, a development that could bring big changes to a profession that’s relied largely on a low-tech approach for decades but is facing a labor shortage.\r\n\r\nSalah Sukkarieh, a professor at the University of Sydney, sees robots as necessary given how cattlemen are aging. He is building a four-wheeled robot that will run on solar and electric power. It will use cameras and sensors to monitor the animals. A computer system will analyze the video to determine whether a cow is sick. Radio tags （标签）on the animals will measure temperature changes. The quality of grassland will be tracked by monitoring the shape，color and texture （质地） of grass. That way， cattlemen will know whether they need to move their cattle to another field for nutrition purposes.\r\n\r\nMachines have largely taken over planting, watering and harvesting crops such as com and wheat, but the monitoring of cattle has gone through fewer changes.\r\n\r\nFor Texas cattleman Pete Bonds, it's increasingly difficult to find workers interested in watching cattle. But Bonds doesn't believe a robot is right for the job. Years of experience in the industry — and failed attempts to use technology — have convinced him that the best way to check cattle is with a man on a horse. Bonds, who bought his first cattle almost 50 years ago, still has each of his cowboys inspect 300 or 400 cattle daily and look for signs that an animal is getting sick.\r\n\r\nOther cattlemen see more promise in robots. Michael Kelsey Paris, vice president of the Oklahoma Cattlemen's Association, said a robot could be extremely useful given rising concerns about cattle theft. Cattle tend to be kept in remote places and their value has risen, making them appealing targets.",
+      "artifact_id": "gaokao_en_2021_II_d5f5bf68536c0924",
+      "source_locator": "doc:d5f5bf6/tier:flash/page:1",
+      "status": "PENDING"
+    },
+    {
+      "id": "gaokao_en_2021_II_reading_七选五",
+      "section_id": "gaokao_en_2021_II_reading",
+      "label": "七选五",
+      "text": "第二节（共5小题；每小题2.5分，满分12.5分）\r\n\r\n阅读下面短文，从短文后的选项中选出可以填入空白处的最佳选项。选项中有两项为多余选项。\r\n\r\nIf the only reading you ever do is the novel or magazine, the speed at which you read probably does not matter very much. But if you have to read a great deal for study, you will appreciate the benefits of being able to read more quickly. \\_\\_\\_\\_36\\_\\_\\_\\_\\_\r\n\r\nBefore you open the book, make sure that you are comfortable. You need a seat which supports your back and the book should be at the right distance from your eyes.  \\_\\_\\_\\_37\\_\\_\\_\\_\\_\r\n\r\n\\_\\_\\_\\_\\_38\\_\\_\\_\\_\\_\\_Look at the table of contents, the preface, the chapter heading, etc.This will help you to decide whether you really need to read the whole book or only certain parts of it. Ten minutes spent in this way could save you quite a lot of time in the long run.\r\n\r\nIf you decide that you need to read the whole book, decide how much you can read at a time. \\_\\_\\_39\\_\\_\\_\\_ A history book which may contain the facts in story form will be easier to read than one dealing with scientific subjects. In the former case you may be able to read a chapter. In the latter you may only be able to read one page.\r\n\r\nAlways keep a pencil and paper beside you.  \\_\\_\\_\\_\\_40\\_\\_\\_\\_\\_\\_Note also the facts important for your purpose as well as anything which leads you to further research. You don't have to write these things in detail. It is enough to put the page number and one or two words as a reminder .\r\n\r\nA. Stop to have a rest now and then.\r\n\r\nB. Spend a few minutes looking through the book.\r\n\r\nC. This depends on the type of book you are reading.\r\n\r\nD. Here are some tips to help improve your reading speed.\r\n\r\nE. Make a note of any page which is of special importance.\r\n\r\nF. You may find yourself having to learn something by heart.\r\n\r\nG. Keep the room cool rather than warm to avoid feeling sleepy.",
+      "artifact_id": "gaokao_en_2021_II_d5f5bf68536c0924",
+      "source_locator": "doc:d5f5bf6/tier:flash/page:1",
+      "status": "PENDING"
+    },
+    {
+      "id": "gaokao_en_2021_II_language_正文",
+      "section_id": "gaokao_en_2021_II_language",
+      "label": "正文",
+      "text": "第三部分 语言运用（共两节，满分30分）\r\n\r\n第一节（共15小题；每小题1分，满分15分）\r\n\r\n阅读下面短文，从每题所给的A、B、C、D四个选项中选出可以填入空白处的最佳选项。\r\n\r\nOver the past 38 years, Mr. Wang has pretended to be someone else many times,and has even learned to＿41＿different dialects（方言），leading to him being described as an “Oscar-winning actor\".\r\n\r\nThe 60-year-old is not an actor, but a ＿42.＿However,he is more devoted to his “ ＿43＿ \"than any real actor.\r\n\r\nIn the 1990s, a group of thieves often sold stolen goods with the help of some beggars. To look into the ＿44＿，Wang disguised（伪装）himself and ＿45＿ the beggars．Dirty shorts and old shoes gave him the ＿46＿ of a real beggar and his convincing dialect soon won him the ＿47＿ of the beggars.\r\n\r\n“I often <u>__48__</u> them to drink alcohol. Once they were ＿49＿, they began to talk a lot,\"Wang said. “I'd then \\_\\_50 \\_\\_ myself to use the toilet, <u>__51__</u> what the beggars said, and send the ＿52＿ to my teammates.”\r\n\r\nWang，who is often in <u>__53__</u> situations， is also a judo （柔道） master． “As long as I get close enough, no criminal can <u>__54__</u> from me,\" he said.\r\n\r\nWang's <u>__55__</u> won him several honors, including a National May Day Labor Medal and 11 Citations of Merit.\r\n\r\n41.A.teach   \t B.compare   \tC.assess    \t\tD.speak\r\n\r\n42.A.lawyer    \tB.doctor   \t\tC.policeman   \tD.businessman\r\n\r\n43.A.role     \tB.study    \t\tC.family    \t\tD.audience\r\n\r\n44.A.mirror    \tB.case    \t\tC.future    \t\tD.question\r\n\r\n45.A.interviewed  B.joined    \t\tC.arrested   \t\tD.assisted\r\n\r\n46.A.challenge \tB.experience   \tC.appearance \t\tD.freedom\r\n\r\n47.A.vote  \t\tB.sympathy   \tC.permission \t\tD.trust\r\n\r\n48.A.invited \t\tB.forced    \t\tC.helped \t\tD.expected\r\n\r\n49.A.drunk \t\tB.deserted   \tC.bored \t\t\tD.lost\r\n\r\n50.A.guide \t\tB.persuade   \tC.excuse \t\tD.allow\r\n\r\n51.A.refer to \t\tB.note down   \tC.ask about \t\tD.miss out\r\n\r\n52.A.plan\t\t B.agreement   \tC.direction \t\tD.information\r\n\r\n53.A.awkward \tB.dangerous   \tC.unfortunate\t\t D.strange\r\n\r\n54.A.separate \tB.recover   \t\tC.escape \t\tD.hear\r\n\r\n55.A.courage \t\tB.honesty   \t\tC.kindness \t\tD.optimism\r\n\r\n第二节（共10小题；每小题1.5分，满分15分）\r\n\r\n阅读下面短文，在空白处填入1个适当的单词或括号内单词的正确形式。\r\n\r\nI've always loved the ocean. In the\\_＿56\\_＿ (seven) grade,I started volunteering at the Monterey Bay Aquarium in California. I was upset to learn that many sea animals eat plastic garbage,＿57＿(think)it is food.\r\n\r\nI decided to do something ＿58＿ (educate) people about this problem. I held presentations at schools to teach kids about plastic waste. I wanted to reach businesses too. I decided that if I learned of a company\\_59＿ used a lot of plastic, I'd send it an email urging it to cut back.\r\n\r\nOne day, I saw a commercial for a health-care company. People in the ad were using plastic straws （吸管）． I found the contact information of the company＿ 60＿ emailed its president. I told him how ＿ 61＿ (harm) plastic could be to the environment and asked him to consider using more eco-friendly options. I was so＿ 62\\_ (excite) when he wrote back to me.He said he would make sure that the company cut its use of plastic straws in half.\r\n\r\nI kept going. Whenever I heard of businesses using plastic, I'd send an email. One of the biggest companies I wrote to  ＿63＿ (be) Alaska Airlines. A company  ＿64\\_ (represent) wrote back and told me the airline was switching over ＿65＿ plastic to paper cups on all of its 1,200 daily flights.",
+      "artifact_id": "gaokao_en_2021_II_d5f5bf68536c0924",
+      "source_locator": "doc:d5f5bf6/tier:flash/page:1",
+      "status": "PENDING"
+    },
+    {
+      "id": "gaokao_en_2021_II_writing_正文",
+      "section_id": "gaokao_en_2021_II_writing",
+      "label": "正文",
+      "text": "第四部分 写作（共两节，满分40分）\r\n\r\n第一节（满分15分）\r\n\r\n你校英文报 *Youth* 正在庆祝创刊十周年。请你写一篇短文投稿，内容包括：\r\n\r\n1．读报的经历：\r\n\r\n2．喜爱的栏目：\r\n\r\n3．期望和祝福。\r\n\r\n注意：\r\n\r\n1．写作词数应为80左右：\r\n\r\n2．请按如下格式在答题卡的相应位置作答。\r\n\r\n***Youth*** **and Me**\r\n\r\n第二节（满分25分）\r\n\r\n阅读下面材料，根据其内容和所给段落开头语续写两段，使之构成一篇完整的短文。\r\n\r\nA MOTHER'S DAY SURPRISE\r\n\r\nThe twins were filled with excitement as they thought of the surprise they were planning for Mother's Day. How pleased and proud Mother would be when they brought her breakfast in bed. They planned to make French toast and chicken porridge （粥）. They had watched their mother in the kitchen. There was nothing to it. Jenna and Jeff knew exactly what to do.\r\n\r\nThe big day came at last. The alarm rang at 6 a.m. The pair went down the stairs quietly to the kitchen. They decided to boil the porridge first. They put some rice into a pot of water and left it to boil while they made the French toast. Jeff broke two eggs into a plate and added in some milk.Jenna found the bread and put two slices into the egg mixture.Next,Jeff tumed on the second stove（炉）burner to heat up the frying pan. Everything was going smoothly until Jeff started frying the bread.The pan was too hot and the bread turned black within seconds.Jenna threw the burnt piece into the sink and put in the other slice of bread. This time, she turned down the fire so it cooked nicely.\r\n\r\nThen Jeff noticed steam shooting out of the pot and the lid（盖子）starting to shake.The next minute,the porridge boiled over and put out the fire.Jenna panicked.Thankfully,Jeff stayed calm and turned off the gas quickly.But the stove was a mess now.Jenna told Jeff to clean it up so they could continue to cook the rest of the porridge. But Jeff's hand touched the hot burner and he gave a cry of pain. Jenna made him put his hand in cold water.Then she caught the smell of burning. Oh dear! The piece of bread in the pan had turned black as well.\r\n\r\n注意：\r\n\r\n1．续写词数应为150左右；\r\n\r\n2．请按如下格式在答题卡的相应位置作答。\r\n\r\nAs the twins looked around them in disappintment,their father appeared.\r\n\r\nThe twins carried the breakfast upstairs and woke their mother up.\r\n\r\n**",
+      "artifact_id": "gaokao_en_2021_II_d5f5bf68536c0924",
+      "source_locator": "doc:d5f5bf6/tier:flash/page:1",
+      "status": "PENDING"
+    }
+  ],
+  "questions": [
+    {
+      "id": "gaokao_en_2021_II_Q21",
+      "section_id": "gaokao_en_2021_II_reading",
+      "passage_id": "gaokao_en_2021_II_reading_A",
+      "number": 21,
+      "type": "MCQ",
+      "stem": "What should you do if you want to attend the taster session of Jodie’s fitness classes?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2021_II_Q22",
+      "section_id": "gaokao_en_2021_II_reading",
+      "passage_id": "gaokao_en_2021_II_reading_A",
+      "number": 22,
+      "type": "MCQ",
+      "stem": "How much is the ticket for Felt Picture Making?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2021_II_Q23",
+      "section_id": "gaokao_en_2021_II_reading",
+      "passage_id": "gaokao_en_2021_II_reading_A",
+      "number": 23,
+      "type": "MCQ",
+      "stem": "Which of the following starts earliest?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2021_II_Q24",
+      "section_id": "gaokao_en_2021_II_reading",
+      "passage_id": "gaokao_en_2021_II_reading_B",
+      "number": 24,
+      "type": "MCQ",
+      "stem": "Why did the author bring the tiger cubs home?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2021_II_Q25",
+      "section_id": "gaokao_en_2021_II_reading",
+      "passage_id": "gaokao_en_2021_II_reading_B",
+      "number": 25,
+      "type": "MCQ",
+      "stem": "What do the underlined words “get up to mischief’ mean in paragraph 3?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2021_II_Q26",
+      "section_id": "gaokao_en_2021_II_reading",
+      "passage_id": "gaokao_en_2021_II_reading_B",
+      "number": 26,
+      "type": "MCQ",
+      "stem": "What did the author think of raising the tiger cubs at home?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2021_II_Q27",
+      "section_id": "gaokao_en_2021_II_reading",
+      "passage_id": "gaokao_en_2021_II_reading_B",
+      "number": 27,
+      "type": "MCQ",
+      "stem": "Why did the author decide to send Spot and Stripe back to the zoo?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2021_II_Q28",
+      "section_id": "gaokao_en_2021_II_reading",
+      "passage_id": "gaokao_en_2021_II_reading_C",
+      "number": 28,
+      "type": "MCQ",
+      "stem": "What will Zafirakou do with her prize money?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2021_II_Q29",
+      "section_id": "gaokao_en_2021_II_reading",
+      "passage_id": "gaokao_en_2021_II_reading_C",
+      "number": 29,
+      "type": "MCQ",
+      "stem": "What does Craig-Martin think of the teaching of the arts in UK schools?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2021_II_Q30",
+      "section_id": "gaokao_en_2021_II_reading",
+      "passage_id": "gaokao_en_2021_II_reading_C",
+      "number": 30,
+      "type": "MCQ",
+      "stem": "What should be stressed in school education according to Schama?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2021_II_Q31",
+      "section_id": "gaokao_en_2021_II_reading",
+      "passage_id": "gaokao_en_2021_II_reading_C",
+      "number": 31,
+      "type": "MCQ",
+      "stem": "Which of the following is a suitable title for the text?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2021_II_Q32",
+      "section_id": "gaokao_en_2021_II_reading",
+      "passage_id": "gaokao_en_2021_II_reading_D",
+      "number": 32,
+      "type": "MCQ",
+      "stem": "What is a problem with the cattle-raising industry?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2021_II_Q33",
+      "section_id": "gaokao_en_2021_II_reading",
+      "passage_id": "gaokao_en_2021_II_reading_D",
+      "number": 33,
+      "type": "MCQ",
+      "stem": "What will Sukkarieh's robot be able to do?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2021_II_Q34",
+      "section_id": "gaokao_en_2021_II_reading",
+      "passage_id": "gaokao_en_2021_II_reading_D",
+      "number": 34,
+      "type": "MCQ",
+      "stem": "Why does Pete Bonds still hire cowboys to watch cattle?",
+      "score": "2.5"
+    },
+    {
+      "id": "gaokao_en_2021_II_Q35",
+      "section_id": "gaokao_en_2021_II_reading",
+      "passage_id": "gaokao_en_2021_II_reading_D",
+      "number": 35,
+      "type": "MCQ",
+      "stem": "How may robots help with cattle watching according to Michael Kelsey?",
+      "score": "2.5"
+    }
+  ],
+  "options": [
+    {
+      "question_id": "gaokao_en_2021_II_Q21",
+      "label": "A",
+      "text": "Join a fitness club."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q21",
+      "label": "B",
+      "text": "Pay a registration fee."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q21",
+      "label": "C",
+      "text": "Make a booking."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q21",
+      "label": "D",
+      "text": "Hire a personal trainer."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q22",
+      "label": "A",
+      "text": "£7.50."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q22",
+      "label": "B",
+      "text": "£12."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q22",
+      "label": "C",
+      "text": "£40."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q22",
+      "label": "D",
+      "text": "£96."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q23",
+      "label": "A",
+      "text": "Harrogate Music Festival."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q23",
+      "label": "B",
+      "text": "Jodie’s Fitness Summer Classes."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q23",
+      "label": "C",
+      "text": "Felt Picture Making."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q23",
+      "label": "D",
+      "text": "Figure It Out!—Playing with Math."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q24",
+      "label": "A",
+      "text": "To ensure their survival."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q24",
+      "label": "B",
+      "text": "To observe their differences."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q24",
+      "label": "C",
+      "text": "To teach them life skills."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q24",
+      "label": "D",
+      "text": "To let them play with his kids."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q25",
+      "label": "A",
+      "text": "Behave badly."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q25",
+      "label": "B",
+      "text": "Lose their way."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q25",
+      "label": "C",
+      "text": "Sleep soundly."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q25",
+      "label": "D",
+      "text": "Miss their mom."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q26",
+      "label": "A",
+      "text": "Boring."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q26",
+      "label": "B",
+      "text": "Tiring."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q26",
+      "label": "C",
+      "text": "Costly."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q26",
+      "label": "D",
+      "text": "Risky."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q27",
+      "label": "A",
+      "text": "They frightened the children."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q27",
+      "label": "B",
+      "text": "They became difficult to contain."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q27",
+      "label": "C",
+      "text": "They annoyed the neighbours."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q27",
+      "label": "D",
+      "text": "They started fighting each other."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q28",
+      "label": "A",
+      "text": "Make a movie."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q28",
+      "label": "B",
+      "text": "Build new schools."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q28",
+      "label": "C",
+      "text": "Run a project."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q28",
+      "label": "D",
+      "text": "Help local musicians."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q29",
+      "label": "A",
+      "text": "It is particularly difficult."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q29",
+      "label": "B",
+      "text": "It increases artists’ income."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q29",
+      "label": "C",
+      "text": "It opens children's mind."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q29",
+      "label": "D",
+      "text": "It deserves greater attention."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q30",
+      "label": "A",
+      "text": "Moral principles."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q30",
+      "label": "B",
+      "text": "Interpersonal skills."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q30",
+      "label": "C",
+      "text": "Creative abilities."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q30",
+      "label": "D",
+      "text": "Positive worldviews."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q31",
+      "label": "A",
+      "text": "Bring Artists to Schools"
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q31",
+      "label": "B",
+      "text": "When Historians Meet Artists"
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q31",
+      "label": "C",
+      "text": "Arts Education in Britain"
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q31",
+      "label": "D",
+      "text": "The World's Best Arts Teacher"
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q32",
+      "label": "A",
+      "text": "Soil pollution."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q32",
+      "label": "B",
+      "text": "Lack of workers."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q32",
+      "label": "C",
+      "text": "Aging machines."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q32",
+      "label": "D",
+      "text": "Low profitability."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q33",
+      "label": "A",
+      "text": "Monitor the quality of grass."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q33",
+      "label": "B",
+      "text": "Cure the diseased cattle."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q33",
+      "label": "C",
+      "text": "Move cattle to another field."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q33",
+      "label": "D",
+      "text": "Predict weather changes."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q34",
+      "label": "A",
+      "text": "He wants to help them earn a living."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q34",
+      "label": "B",
+      "text": "He thinks men can do the job better."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q34",
+      "label": "C",
+      "text": "He is inexperienced in using robots."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q34",
+      "label": "D",
+      "text": "He enjoys the traditional way of life."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q35",
+      "label": "A",
+      "text": "Increase the value of cattle."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q35",
+      "label": "B",
+      "text": "Bring down the cost of labor."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q35",
+      "label": "C",
+      "text": "Make the job more appealing."
+    },
+    {
+      "question_id": "gaokao_en_2021_II_Q35",
+      "label": "D",
+      "text": "Keep cattle from being stolen."
+    }
+  ]
+}
