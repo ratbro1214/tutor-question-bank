@@ -7,6 +7,7 @@ import { questions, students, questionExplanations } from "@/db/schema";
 import { getBucket } from "@/lib/storage";
 import { explanationSaveSchema, saveExplanationSql, type SavedExplanation } from "@/lib/question-explanation";
 import { generateExplanation, ExplanationGenerationError, type ExplanationProvider } from "@/lib/explanation-generation";
+import { configuredExplanationProvider } from "@/lib/ai-provider";
 import type { Classification } from "@/lib/classification";
 
 type Context = { params: Promise<{ id: string }> };
@@ -27,10 +28,7 @@ function failure(error: unknown) {
   console.error("question_explanation_failed", { name: error instanceof Error ? error.name : "UnknownError" });
   return Response.json({ error: "解析暂时无法读取或保存，请稍后重试。" }, { status: 500 });
 }
-function provider(): ExplanationProvider {
-  if (env.AI_PROVIDER === "deepseek") return { apiKey: env.DEEPSEEK_API_KEY, baseUrl: env.DEEPSEEK_BASE_URL || "https://api.deepseek.com", apiStyle: "chat_completions", model: env.DEEPSEEK_VISION_MODEL || "deepseek-flash", strictJsonSchema: false };
-  return { apiKey: env.OPENAI_API_KEY, baseUrl: env.OPENAI_BASE_URL || "https://api.openai.com/v1", apiStyle: env.OPENAI_API_STYLE || "responses", model: env.OPENAI_VISION_MODEL || env.OPENAI_CLASSIFICATION_MODEL || "gpt-4o-mini", strictJsonSchema: true };
-}
+function provider(): ExplanationProvider { return configuredExplanationProvider(env as unknown as Record<string, unknown>); }
 export async function GET(request: Request, context: Context) {
   try {
     const questionId = positiveId((await context.params).id), studentId = positiveId(new URL(request.url).searchParams.get("studentId"));

@@ -29,7 +29,7 @@ async function exists(path: string): Promise<boolean> {
   }
 }
 
-export function sites({ mockAuth = true } = {}): Plugin {
+export function sites({ mockAuth = true, autoLocalSignIn = false } = {}): Plugin {
   let root = process.cwd();
   let command: "build" | "serve" = "build";
 
@@ -105,7 +105,7 @@ export function sites({ mockAuth = true } = {}): Plugin {
         const signIn = url.pathname === "/signin-with-chatgpt";
         const signOut = url.pathname === "/signout-with-chatgpt";
         if (!signIn && !signOut) {
-          if (signInCookies.length === 1 && signInCookies[0] === "1") {
+          if ((autoLocalSignIn && signInCookies.length === 0) || (signInCookies.length === 1 && signInCookies[0] === "1")) {
             setHeader(request, "oai-authenticated-user-id", localUserId);
             setHeader(request, "oai-authenticated-user-email", localEmail);
             setHeader(
@@ -163,8 +163,8 @@ export function sites({ mockAuth = true } = {}): Plugin {
         );
         response.setHeader(
           "Set-Cookie",
-          `${localCookieName}=${signIn ? "1" : ""}; Path=/; ${
-            signOut ? "Max-Age=0; " : ""
+          `${localCookieName}=${signIn ? "1" : autoLocalSignIn ? "0" : ""}; Path=/; ${
+            signOut && !autoLocalSignIn ? "Max-Age=0; " : ""
           }HttpOnly; SameSite=Lax${secure ? "; Secure" : ""}`,
         );
         response.end();

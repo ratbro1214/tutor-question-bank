@@ -1,0 +1,13 @@
+import { mkdirSync,writeFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { splitSolutions,proposeMatch,type MatchQuestion,type SolutionEntry } from '../lib/paper-solutions';
+const region={page:1,x:0,y:0,width:1,height:1},questions:MatchQuestion[]=[1,2,3,17].map(number=>({id:'q'+number,number,text:number===17?'（1）求值（2）证明':'求值',type:number<3?'选择题':number===3?'填空题':'解答题',revision:0,regions:[region]}));
+const lines=['一、选择题','1.A 2.B','二、填空题','3. 12','三、解答题','17. 解：由条件得','（1）计算','（2）证明','20. 解：额外题'];
+const entries=splitSolutions([{page:1,width:600,height:1000,items:lines.map((text,i)=>({text,x:40,y:30+i*50,width:450,height:20}))}]);
+const base:SolutionEntry={key:'extra',number:null,section:'',text:'无法确定题号的过程',regions:[region],answerOnly:false,warnings:[]};
+const cases=[{name:'完整配套及额外题',entries}, {name:'缺失题号',entries:[base]}, {name:'分节重复编号',entries:[{...base,key:'a',number:1,section:'选择题',text:'A'},{...base,key:'b',number:1,section:'解答题',text:'解：证明'}]}, {name:'题型冲突',entries:[{...base,number:1,section:'填空题',text:'12'}]}];
+const counts={correctMatches:0,wrongMatches:0,unmatched:0,needsReview:0,teacherMeanCorrectionMs:null};
+const samples=cases.flatMap(c=>c.entries.map(e=>{const proposal=proposeMatch(e,questions,c.entries),humanTarget=e.number!==null&&questions.some(q=>q.number===e.number)?'q'+e.number:null;
+ if(proposal.status==='MATCHED'){if(proposal.questionId===humanTarget)counts.correctMatches++;else counts.wrongMatches++;}else if(proposal.status==='UNMATCHED')counts.unmatched++;else counts.needsReview++;
+ return {case:c.name,number:e.number,humanTarget,proposal};}));
+const out=resolve(import.meta.dirname,'../../outputs');mkdirSync(out,{recursive:true});writeFileSync(resolve(out,'5B-2-匹配样本统计.json'),JSON.stringify({kind:'Human-labeled synthetic text-layer samples; not real PDF accuracy',counts,samples,teacherTiming:'Not measured with real teachers'},null,2));console.log(JSON.stringify(counts));

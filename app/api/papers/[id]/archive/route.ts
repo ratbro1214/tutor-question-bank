@@ -12,7 +12,7 @@ export async function POST(request: Request, context: { params: Promise<{ id: st
   try {
     const payload = payloadSchema.safeParse(await request.json());
     if (!payload.success) return Response.json({ error: "请选择题目、目标题库，并核对分类。" }, { status: 400 });
-    const { id } = await context.params, paper = await findPaper(id);
+    const { id } = await context.params, paper = await findPaper(id,request,true);
     if (!paper) return Response.json({ error: "套卷不存在。" }, { status: 404 });
     const db = getD1Binding(), { studentId } = payload.data;
     if (!await db.prepare("SELECT id FROM students WHERE id=? AND deleted_at IS NULL").bind(studentId).first()) return Response.json({ error: "目标题库不存在。" }, { status: 404 });

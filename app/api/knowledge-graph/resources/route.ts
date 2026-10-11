@@ -1,0 +1,2 @@
+import { graphStore, graphResponse, graphFailure } from '@/lib/knowledge-graph-server';
+export async function GET(request: Request) { try { const store = await graphStore(request), p = new URL(request.url).searchParams; return graphResponse(await store.questions({ knowledge: p.get('knowledge') || '', methodId: p.get('methodId') || '', canonicalId: p.get('canonicalId') || '', page: Number(p.get('page') || 1), approved: p.get('approved') !== 'false', scopeId: p.get('scope') || undefined })); } catch (e) { return graphFailure(e); } }

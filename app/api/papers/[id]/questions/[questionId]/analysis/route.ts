@@ -15,7 +15,7 @@ export async function POST(request: Request, context: { params: Promise<{ id: st
   let token = "", questionId = "";
   try {
     const params = await context.params; questionId = params.questionId;
-    if (!await findPaper(params.id)) return Response.json({ error: "套卷不存在。" }, { status: 404 });
+    if (!await findPaper(params.id,request,true)) return Response.json({ error: "套卷不存在。" }, { status: 404 });
     const db = getD1Binding(), row = await db.prepare("SELECT * FROM paper_questions WHERE id=? AND paper_id=?").bind(questionId, params.id).first<PaperQuestionRow>();
     if (!row) return Response.json({ error: "套卷题目不存在。" }, { status: 404 });
     const input = await request.json() as { educationStage?: string; regenerate?: boolean; operationId?: string; cancel?: boolean; mode?: string };

@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 import hostingConfig from "./.openai/hosting.json";
 import { readExecutionProfile } from "./scripts/execution-profile.mjs";
 import { sites } from "./build/sites-vite-plugin";
+import { localSolutionOCR } from "./build/local-solution-ocr-plugin";
 
 const SITE_CREATOR_PLACEHOLDER_DATABASE_ID =
   "00000000-0000-4000-8000-000000000000";
@@ -57,7 +58,10 @@ export default defineConfig(async () => {
     },
     plugins: [
       vinext(),
-      sites({ mockAuth: !managedLinux }),
+      // Loopback-only development uses the local teacher without an account step.
+      // Production auth and managed hosting are unaffected; explicit sign-out still works.
+      sites({ mockAuth: !managedLinux, autoLocalSignIn: !managedLinux }),
+      localSolutionOCR(!managedLinux),
       cloudflare({
         viteEnvironment: { name: "rsc", childEnvironments: ["ssr"] },
         inspectorPort: false,

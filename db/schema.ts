@@ -2,6 +2,9 @@ import { sql } from "drizzle-orm";
 export * from './english-schema';
 export * from './canonical-schema';
 export * from './paper-batch-schema';
+export * from './lesson-plan-schema';
+export * from './paper-solution-schema';
+export * from './knowledge-graph-schema';
 import {
   index,
   integer,

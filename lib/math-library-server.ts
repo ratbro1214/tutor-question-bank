@@ -2,6 +2,9 @@ import { env } from 'cloudflare:workers';
 import { getD1Binding } from '@/db';
 import { getChatGPTUser } from '@/app/chatgpt-auth';
 import { libraryBase, libraryProjection, libraryWhere, parseLibraryFilters } from './math-library-query';
+import { librarySourcesSql } from './math-library-sources';
+import { libraryExplanation } from './math-library-explanation';
+import { canonicalSolutions } from './canonical-solutions';
 export class LibraryError extends Error {constructor(message:string,public status:number){super(message);}}
 export async function libraryScopes(request:Request) {
  const user=await getChatGPTUser();if(!user)throw new LibraryError('请先登录后访问私有数学题库。',401);
@@ -39,16 +42,12 @@ export async function libraryDetail(id:string,scopeIds:string[]) {
  const db=getD1Binding();
  const row=await db.prepare(libraryBase(scopeIds)+`SELECT ${libraryProjection},c.original_text AS text,c.current_revision_id,c.scope_id FROM library c WHERE c.id=?`).bind(...scopeIds,id).first<Record<string,unknown>>();
  if(!row)throw new LibraryError('题目不存在或无权访问。',404);
- const sources=await db.prepare(`SELECT o.id,o.question_number,o.page,o.source_locator_json,o.image_key,o.public_image_path,o.content_revision_id,o.mapping_status,s.title,s.math_paper_id,s.source_type,
- l.module_type,l.module_record_id,
- CASE WHEN pq.question_text=? THEN pq.explanation WHEN sq.extracted_question=? AND sq.deleted_at IS NULL THEN qe.content END AS explanation,
- CASE WHEN pq.id IS NOT NULL THEN pq.question_text=? WHEN sq.id IS NOT NULL THEN sq.extracted_question=? ELSE NULL END AS business_content_matches
- FROM question_occurrences o JOIN source_documents s ON s.id=o.source_document_id AND s.scope_id=?
- LEFT JOIN question_module_links l ON l.id=(SELECT l2.id FROM question_module_links l2 WHERE l2.occurrence_id=o.id AND l2.canonical_question_id=o.canonical_question_id ORDER BY l2.created_at DESC,l2.id LIMIT 1)
- LEFT JOIN paper_questions pq ON l.module_type='paper_question' AND pq.id=l.module_record_id
- LEFT JOIN questions sq ON l.module_type='student_question' AND CAST(sq.id AS TEXT)=l.module_record_id
- LEFT JOIN question_explanations qe ON qe.question_id=sq.id
- WHERE o.canonical_question_id=? AND o.mapping_status!='detached' ORDER BY o.created_at,o.id`).bind(row.text,row.text,row.text,row.text,row.scope_id,id).all<Record<string,unknown>>();
- return {...publicLibraryRow(row),sources:sources.results.map(s=>({...s,locator:parse(s.source_locator_json,{}),explanation:s.content_revision_id===row.current_revision_id?parse(s.explanation):null,imageUrl:s.image_key?`/api/math-library/${id}/image/${s.id}`:null}))};
+ const sources=await db.prepare(librarySourcesSql).bind(row.text,row.text,row.text,row.text,row.scope_id,id).all<Record<string,unknown>>();
+ const user=await getChatGPTUser();
+ const pairedSolutions=user?await canonicalSolutions(db,user.userId,scopeIds,id,String(row.current_revision_id)):[];
+ return {...publicLibraryRow(row),pairedSolutions,sources:sources.results.map(s=>{
+ return {...s,locator:parse(s.source_locator_json,{}),...libraryExplanation(s.explanation,s.explanation_reviewed,String(row.text),s.content_revision_id===row.current_revision_id),
+ imageUrl:s.image_key?`/api/math-library/${id}/image/${s.id}`:null};
+ })};
 }
 export function libraryFailure(error:unknown){if(error instanceof LibraryError)return Response.json({error:error.message},{status:error.status,headers:{'Cache-Control':'no-store'}});console.error('[math-library]',error);return Response.json({error:'题库查询失败，请稍后重试。'},{status:500});}

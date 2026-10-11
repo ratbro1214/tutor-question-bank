@@ -1,0 +1,32 @@
+import assert from 'node:assert/strict';
+import { writeFile } from 'node:fs/promises';
+import { performance } from 'node:perf_hooks';
+import { resolve } from 'node:path';
+const origin = 'http://localhost:5173';
+const checks = [];
+async function request(path, status = 200, options) {
+  const start = performance.now(), r = await fetch(origin + path, options), text = await r.text();
+  assert.equal(r.status, status, path + ': ' + text.slice(0, 200));
+  checks.push({ path, status, elapsedMs: +(performance.now() - start).toFixed(2), noStore: r.headers.get('cache-control')?.includes('no-store') || false });
+  return r.headers.get('content-type')?.includes('application/json') ? JSON.parse(text) : text;
+}
+const graph = await request('/api/knowledge-graph'); assert.equal(graph.methods.length, 0); assert.ok(!('questions' in graph));
+const candidate = await request('/api/knowledge-graph?approved=false'); assert.equal(candidate.methods.length, 5); assert.equal(candidate.relations.length, 11);
+const methods = await request('/api/knowledge-graph/methods?approved=false'); assert.equal(methods.items.length, 5);
+const detail = await request('/api/knowledge-graph/methods/' + methods.items[0].id); assert.ok(detail.versions.length >= 1);
+const relations = await request('/api/knowledge-graph/relations?approved=false'); assert.equal(relations.items.length, 11);
+const history = await request('/api/knowledge-graph/relations/' + relations.items[0].id); assert.equal(history.versions.length, 1);
+const resources = await request('/api/knowledge-graph/resources?knowledge=HS-DERIVATIVE-MONOTONICITY&approved=false'); assert.equal(resources.total, 1); assert.equal(resources.items.length, 1); assert.equal(resources.items[0].reviewed, false);
+const official = await request('/api/knowledge-graph/resources?knowledge=HS-DERIVATIVE-MONOTONICITY'); assert.equal(official.items.length, 0);
+await request('/api/knowledge-graph/resources?knowledge=x&page=0', 400);
+await request('/api/knowledge-graph/resources?knowledge=x&scope=not-owned', 403);
+await request('/api/knowledge-graph?scope=not-owned', 403);
+await request('/api/knowledge-graph/methods/not-owned', 404);
+await request('/api/knowledge-graph/relations/not-owned', 404);
+const post = body => ({ method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+await request('/api/knowledge-graph/methods', 403, { ...post({}), headers: { 'Content-Type': 'application/json', Origin: 'https://untrusted.example' } });
+await request('/api/knowledge-graph/methods', 400, post({ id: crypto.randomUUID(), conditions: [] }));
+await request('/api/knowledge-graph/candidates', 404, post({ canonicalId: 'not-owned', revisionId: 'not-owned', reviewId: 'not-owned' }));
+await request('/knowledge-graph'); await request('/math-methods');
+const report = { date: new Date().toISOString(), origin, checks, passed: checks.length, failed: 0, officialMethods: graph.methods.length, candidateMethods: candidate.methods.length, realQuestions: resources.total, reviewedQuestions: official.items.length };
+await writeFile(resolve('../outputs/5C-HTTP验收.json'), JSON.stringify(report, null, 2)); console.log(JSON.stringify(report, null, 2));

@@ -28,6 +28,7 @@ async function fixture(name) {
   await fs.writeFile(path.join(root, 'drizzle/meta/_journal.json'), '{"entries":[]}');
   await fs.mkdir(path.join(root, 'db'), { recursive: true });
   await fs.writeFile(path.join(root, 'db/canonical-schema.ts'), '// synthetic canonical schema metadata');
+  await fs.writeFile(path.join(root, 'db/lesson-plan-schema.ts'), '// synthetic lesson schema metadata');
   return { root, writer: { close() {} } };
 }
 test('WAL snapshot, complete validation, isolated restore, overwrite refusal, corruption and force safety', async () => {
@@ -43,6 +44,7 @@ test('WAL snapshot, complete validation, isolated restore, overwrite refusal, co
     const target = path.join(parent, 'restored');
     await restoreProject({ directory: result.directory, target });
     assert.equal(await fs.readFile(path.join(target, 'db/canonical-schema.ts'), 'utf8'), '// synthetic canonical schema metadata');
+    assert.equal(await fs.readFile(path.join(target, 'db/lesson-plan-schema.ts'), 'utf8'), '// synthetic lesson schema metadata');
     const db = new DatabaseSync(path.join(target, '.wrangler/state/v3/d1/miniflare-D1DatabaseObject/application.sqlite'), { readOnly: true });
     assert.equal(db.prepare('SELECT count(*) n FROM questions').get().n, 1); db.close();
     const restoredBefore = await fingerprint(target);

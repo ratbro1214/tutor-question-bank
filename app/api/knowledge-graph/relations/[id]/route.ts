@@ -1,0 +1,5 @@
+import { z } from 'zod';
+import { graphStore, graphBody, graphResponse, graphFailure } from '@/lib/knowledge-graph-server';
+export async function GET(request: Request, ctx: { params: Promise<{ id: string }> }) { try { return graphResponse(await (await graphStore(request)).relationHistory((await ctx.params).id)); } catch (e) { return graphFailure(e); } }
+export async function PUT(request: Request, ctx: { params: Promise<{ id: string }> }) { try { return graphResponse(await (await graphStore(request, true)).writeRelation((await ctx.params).id, await graphBody(request))); } catch (e) { return graphFailure(e); } }
+export async function DELETE(request: Request, ctx: { params: Promise<{ id: string }> }) { try { const store = await graphStore(request, true), input = z.object({ operationId: z.string().uuid(), expectedRevision: z.number().int().positive() }).strict().parse(await graphBody(request)); return graphResponse(await store.revokeRelation((await ctx.params).id, input.expectedRevision, input.operationId)); } catch (e) { return graphFailure(e); } }

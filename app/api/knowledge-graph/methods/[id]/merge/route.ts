@@ -1,0 +1,3 @@
+import { z } from 'zod';
+import { graphStore, graphBody, graphResponse, graphFailure } from '@/lib/knowledge-graph-server';
+export async function POST(request: Request, ctx: { params: Promise<{ id: string }> }) { try { const store = await graphStore(request, true), { targetId, ...input } = z.object({ targetId: z.string().min(1), operationId: z.string().uuid(), sourceRevision: z.number().int().positive(), targetRevision: z.number().int().positive() }).strict().parse(await graphBody(request)); return graphResponse(await store.merge((await ctx.params).id, targetId, input)); } catch (e) { return graphFailure(e); } }

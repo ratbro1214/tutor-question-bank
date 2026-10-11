@@ -8,7 +8,7 @@ export async function POST(request: Request, context: { params: Promise<{ id: st
   let key = "", committed = false;
   try {
     const { id: paperId } = await context.params;
-    if (!await findPaper(paperId)) return Response.json({ error: "套卷不存在。" }, { status: 404 });
+    if (!await findPaper(paperId,request,true)) return Response.json({ error: "套卷不存在。" }, { status: 404 });
     const form = await request.formData(), image = form.get("image");
     const input = metadataSchema.parse(JSON.parse(String(form.get("metadata"))));
     if (!(image instanceof File) || !["image/jpeg", "image/png"].includes(image.type) || !image.size || image.size > 8 * 1024 * 1024) return Response.json({ error: "单题裁切图片无效，图片上限 8MB。" }, { status: 400 });

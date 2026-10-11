@@ -28,6 +28,7 @@ export function PaperWorkbench({ paperId }: { paperId?: string }) {
   const [paperQuery, setPaperQuery] = useState(""); const [paperStatus, setPaperStatus] = useState("");
   const [papers, setPapers] = useState<PaperSummary[]>([]), [paper, setPaper] = useState<PaperSummary | null>(null), [questions, setQuestions] = useState<PaperQuestion[]>([]);
   const [file, setFile] = useState<File | null>(null), [title, setTitle] = useState(""), [stage, setStage] = useState("高中");
+  const [solutionFile, setSolutionFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(true), [busy, setBusy] = useState(""), [error, setError] = useState(""), [message, setMessage] = useState("");
   const [crops, setCrops] = useState<QuestionCrop[]>([]), [preparing, setPreparing] = useState(false), [doc, setDoc] = useState<PaperDocument | null>(null);
   const [selectedCrops, setSelectedCrops] = useState<number[]>([]), [selectedQuestions, setSelectedQuestions] = useState<number[]>([]), [selection, setSelection] = useState("");
@@ -103,6 +104,12 @@ export function PaperWorkbench({ paperId }: { paperId?: string }) {
     try {
       const form = new FormData(); form.set("file", file); form.set("title", title || file.name.replace(/\.[^.]+$/, ""));
       const result = await api<{ paper: PaperSummary }>("/api/papers", { method: "POST", body: form });
+      if (solutionFile) {
+        setBusy("试卷已保存，正在关联配套解析…");
+        const paired = new FormData(); paired.set('file', solutionFile);
+        try { await api(`/api/papers/${result.paper.id}/solutions`, { method: 'POST', body: paired }); }
+        catch (reason) { throw Error(`试卷已保存。配套解析上传失败：${reason instanceof Error ? reason.message : '请重试'}。可从试卷的“配套解析审核”入口继续上传。`); }
+      }
       router.push(`/papers/${result.paper.id}`);
     } catch (reason) { setError(reason instanceof Error ? reason.message : "上传失败。"); }
     finally { setBusy(""); }
@@ -225,12 +232,15 @@ export function PaperWorkbench({ paperId }: { paperId?: string }) {
     {message && <p role="status" className="rounded-xl bg-terracotta-50 p-4 text-sm leading-6 text-terracotta-900">{message}</p>}
     {busy && <div role="status" className="flex flex-wrap items-center gap-3 rounded-xl border border-terracotta-200 bg-white p-4 text-sm"><LoaderCircle className="size-4 animate-spin text-terracotta-700" />{busy}{cancellable && <Button variant="outline" size="sm" onClick={() => void stop()}>停止</Button>}{running && <span className="text-slate-500">每完成一题即保存，可随时停止。</span>}</div>}
     {loading && !busy && <p className="text-sm text-slate-500">正在读取套卷…</p>}
+    {paperId && <Link href={`/papers/${paperId}/solutions`} className="inline-block rounded-lg border border-terracotta-200 bg-white px-4 py-3 text-sm text-terracotta-800">配套解析审核 · 匹配、解法评审与通法 →</Link>}
     {!paperId && <>
       <section className="surface-card space-y-4 p-6"><h2 className="flex items-center gap-2 text-lg font-semibold"><FileUp className="size-5 text-terracotta-700" />上传试卷</h2>
         <p className="text-sm leading-6 text-slate-500">支持 PDF、JPG、PNG，文件不超过 40MB，PDF 最多 80 页。文字版优先按题号定位，扫描版可用 AI 定位或手动框选。</p>
         <div className="grid gap-3 sm:grid-cols-2"><input aria-label="套卷名称" placeholder="套卷名称（可选）" className={inputClass} value={title} onChange={e => setTitle(e.target.value)} disabled={blocked} />
           <input aria-label="上传试卷文件" className={`${inputClass} file:mr-3 file:rounded file:border-0 file:bg-terracotta-50 file:px-3 file:py-1 file:text-terracotta-800`} type="file" accept="application/pdf,image/jpeg,image/png,.pdf,.jpg,.jpeg,.png" disabled={blocked} onChange={e => { setFile(e.target.files?.[0] || null); setError(""); }} /></div>
-        <Button onClick={upload} disabled={blocked || !file}><FileUp className="size-4" />上传并选择题目</Button>
+        <label className="block space-y-2 text-sm"><span>配套解析文件（选填，PDF）</span><input aria-label="配套解析文件" className={inputClass} type="file" accept="application/pdf,.pdf" disabled={blocked} onChange={e => setSolutionFile(e.target.files?.[0] || null)} /></label>
+        <p className="text-xs text-slate-500">不选解析时沿用原流程；选择后关联同一导入批次，保存试卷裁切后进入配套解析审核。</p>
+        <Button onClick={upload} disabled={blocked || !file}><FileUp className="size-4" />{solutionFile ? '联合上传并选择题目' : '仅上传试卷并选择题目'}</Button>
       </section>
       <section className="grid gap-4 sm:grid-cols-3" aria-label="套卷概览"><WorkspaceMetric label="我的套卷" value={loading ? "—" : papers.length} note="独立保存的整卷与整页材料" /><WorkspaceMetric label="待解析题目" value={loading ? "—" : papers.reduce((n,p) => n + Math.max(0,p.questionCount - p.completedCount),0)} note="已选题中尚未保存解析的题目" /><WorkspaceMetric label="解析已保存" value={loading ? "—" : papers.reduce((n,p) => n + p.completedCount,0)} note="解析完成不代表学生已经掌握" /></section>
       <section className="space-y-4"><div className="flex flex-wrap items-center justify-between gap-3"><h2 className="text-lg font-semibold">我的套卷</h2><div className="flex flex-wrap gap-2"><input aria-label="搜索套卷" placeholder="搜索套卷或文件名…" className={inputClass} value={paperQuery} onChange={e => setPaperQuery(e.target.value)} /><select aria-label="筛选套卷解析状态" className={inputClass} value={paperStatus} onChange={e => setPaperStatus(e.target.value)}><option value="">全部状态</option><option value="pending">待解析</option><option value="complete">解析已完成</option></select></div></div>

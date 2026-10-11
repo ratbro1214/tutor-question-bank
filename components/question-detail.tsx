@@ -12,6 +12,7 @@ import { Label } from "@/components/ui/label";
 import { NativeSelect, NativeSelectOption } from "@/components/ui/native-select";
 import { LearningPanel } from "@/components/learning-panel";
 import { QuestionExplanation } from "@/components/question-explanation";
+import { StudentCanonicalButton } from "@/components/student-canonical-button";
 import { normalizeClassificationTags, questionTypes, subjectForStage, taxonomyVersionForStage, type Classification, type EducationStage } from "@/lib/classification";
 import { chapterName, chaptersForStage, taxonomyForStage } from "@/lib/taxonomy";
 import { cn } from "@/lib/utils";
@@ -25,8 +26,9 @@ type Question = {
 };
 type Student = { id: number; name: string; grade: string; notes: string };
 
-export function QuestionDetail({ studentId, questionId, diagnosticPlanId }: { studentId: string; questionId: string; diagnosticPlanId?: string }) {
+export function QuestionDetail({ studentId, questionId, diagnosticPlanId, entry = 'archive' }: { studentId: string; questionId: string; diagnosticPlanId?: string; entry?: 'archive' | 'library' }) {
   const router = useRouter();
+  const backHref = entry === 'library' ? '/questions' : `/students/${studentId}?tab=questions`;
   const [student, setStudent] = useState<Student | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
   const [question, setQuestion] = useState<Question | null>(null);
@@ -107,20 +109,22 @@ export function QuestionDetail({ studentId, questionId, diagnosticPlanId }: { st
     try {
       const response = await fetch(`/api/questions/${question.id}`, { method: "DELETE" });
       const data = await response.json() as { error?: string }; if (!response.ok) throw new Error(data.error || "删除失败");
-      router.push(`/students/${studentId}`); router.refresh();
+      router.push(backHref); router.refresh();
     } catch (reason) { setError(reason instanceof Error ? reason.message : "删除失败"); setDeleting(false); }
   }
 
   if (loading) return <div className="grid min-h-[55vh] place-items-center text-[var(--color-text-secondary)]"><LoaderCircle className="mr-2 inline size-5 animate-spin" />正在打开题目…</div>;
-  if (error && !question) return <div className="mx-auto max-w-3xl"><Link href={`/students/${studentId}`} className="mb-5 inline-flex items-center gap-1 text-sm text-[var(--color-brand-primary)]"><ArrowLeft className="size-4" />返回学生题库</Link><div className="rounded-2xl border border-amber-200 bg-amber-50 p-6 text-amber-900">{error}</div></div>;
+  if (error && !question) return <div className="mx-auto max-w-3xl"><Link href={backHref} className="mb-5 inline-flex items-center gap-1 text-sm text-[var(--color-brand-primary)]"><ArrowLeft className="size-4" />返回{entry === 'library' ? '学生题库' : '学生归档题目'}</Link><div className="rounded-2xl border border-amber-200 bg-amber-50 p-6 text-amber-900">{error}</div></div>;
   if (!question || !draft || !student) return null;
 
   return <div className="mx-auto max-w-6xl space-y-8">
     <header className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
-      <div><Link href={`/students/${studentId}`} className="mb-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-brand-primary)]"><ArrowLeft className="size-4" />返回 {student.name} 的题库</Link><h1 className="font-bold leading-[1.2] text-[var(--color-text-primary)] text-[32px]">查看与修改题目</h1><p className="mt-2 flex items-center gap-2 text-sm text-[var(--color-text-secondary)]"><CalendarDays className="size-4" />题目 #{question.id} · {new Date(question.createdAt + "Z").toLocaleDateString("zh-CN")}</p></div>
+      <div><Link href={backHref} className="mb-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-brand-primary)]"><ArrowLeft className="size-4" />返回{entry === 'library' ? '学生题库' : `${student.name} 的归档题目`}</Link><h1 className="font-bold leading-[1.2] text-[var(--color-text-primary)] text-[32px]">{entry === 'library' ? '学生题库 · 题目详情' : '学习档案 · 题目详情'}</h1><p className="mt-2 flex items-center gap-2 text-sm text-[var(--color-text-secondary)]"><CalendarDays className="size-4" />题目 #{question.id} · {new Date(question.createdAt + "Z").toLocaleDateString("zh-CN")}</p></div>
       <div className="flex gap-2"><Button variant="outline" onClick={remove} disabled={deleting || saving} className="border-red-200 text-red-700 hover:bg-red-50">{deleting ? <LoaderCircle className="animate-spin" /> : <Trash2 />}移入回收站</Button><Button onClick={save} disabled={saving || deleting || !draft.knowledge_points.length}>{saving ? <LoaderCircle className="animate-spin" /> : <Check />}{saving ? "保存中…" : "保存教师修改"}</Button></div>
     </header>
 
+    {entry === 'library' && <p className="text-sm text-slate-500">所属学生：{student.name} · <Link className="text-terracotta-800 underline" href={`/students/${studentId}`}>查看个人学习档案 →</Link></p>}
+    <StudentCanonicalButton key={question.id} questionId={question.id} studentId={studentId} disabled={saving || deleting} />
     {question.paperSource && <p className="text-sm text-slate-600">来自套卷：<Link href={`/papers/${question.paperSource.paperId}`} className="text-terracotta-800 underline">{question.paperSource.title} · 第 {question.paperSource.number} 题</Link></p>}
     {error && <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">{error}</div>}
     {message && <div className="rounded-xl border border-terracotta-200 bg-terracotta-50 p-4 text-sm text-terracotta-900">{message}</div>}
@@ -135,6 +139,6 @@ export function QuestionDetail({ studentId, questionId, diagnosticPlanId }: { st
       </div>
     </div>
 
-    <section><LearningPanel studentId={studentId} questions={questions} questionId={question.id} diagnosticPlanId={diagnosticPlanId} onOpen={id => router.push(`/students/${studentId}/questions/${id}`)} /></section>
+    {entry === 'archive' && <section><LearningPanel studentId={studentId} questions={questions} questionId={question.id} diagnosticPlanId={diagnosticPlanId} onOpen={id => router.push(`/students/${studentId}/questions/${id}`)} /></section>}
   </div>;
 }

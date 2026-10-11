@@ -25,13 +25,13 @@ teachingNotes 写老师如何讲清关键转折，可给具体启发式提问。
 export class ExplanationGenerationError extends Error {
   constructor(message: string, public status = 502) { super(message); }
 }
-function outputText(payload: unknown) {
+export function outputText(payload: unknown) {
   const data = payload as { output_text?: string; choices?: { message?: { content?: string } }[]; output?: { content?: { type?: string; text?: string }[] }[] };
   return data.output_text || data.choices?.[0]?.message?.content || data.output?.flatMap((item) => item.content || []).filter((part) => part.type === "output_text").map((part) => part.text || "").join("") || "";
 }
 // JSON-only providers sometimes emit bare TeX escapes inside JSON strings.
 // Repair that transport syntax without altering fields or accepting partial JSON.
-function parseExplanationJson(text: string): unknown {
+export function parseExplanationJson(text: string): unknown {
   let normalized = "", inString = false;
   const texCommands = /^(?:begin|beta|bar|bmod|boldsymbol|binom|big|bigl|bigr|biggl|biggr|frac|forall|neq|ne|not|nabla|nu|right|rangle|rbrace|rfloor|rceil|rm|rvert|text|textrm|textbf|textit|textsf|texttt|textcolor|times|tan|theta|tau|tfrac|tilde|underbrace|underline|underset|upsilon)(?![A-Za-z])/;
   for (let i = 0; i < text.length; i++) {
@@ -48,7 +48,7 @@ function parseExplanationJson(text: string): unknown {
 }
 // Consume Responses SSE to keep the upstream connection active. Only a completed
 // response can become a draft; deltas alone may contain an unfinished proof/JSON.
-async function readResponse(response: Response) {
+export async function readResponse(response: Response) {
   if (!response.headers.get("content-type")?.includes("text/event-stream")) return response.json();
   if (!response.body) throw new Error("Missing response body");
   const reader = response.body.getReader(), decoder = new TextDecoder();

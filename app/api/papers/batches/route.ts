@@ -2,6 +2,9 @@ import { z } from 'zod';
 import { getD1Binding } from '@/db';
 import { getBucket } from '@/lib/storage';
 import { batchResult, privateScope, attachPaper, registerItem, confirmItem, ImportConflict } from '@/lib/paper-batch-server';
+import { solutionStore } from '@/lib/paper-solution-server';
+import { SolutionError } from '@/lib/paper-solution-store';
+import { LibraryError } from '@/lib/math-library-server';
 const uuid=z.string().uuid();
 const requestSchema=z.discriminatedUnion('action',[
  z.object({action:z.literal('create'),filenames:z.array(z.string().min(1).max(240)).min(1).max(20)}),
@@ -15,6 +18,7 @@ export async function GET(request:Request) {
  try {
   const db=getD1Binding(),id=new URL(request.url).searchParams.get('id');
   const scope=await privateScope(db);
+  if(!(await solutionStore(request)).scopes.includes(scope.id))throw new SolutionError('无权访问此批次范围。',403);
   if(id) {
    const batchId=uuid.parse(id);
    if(!await db.prepare('SELECT id FROM paper_import_batches WHERE id=? AND scope_id=?').bind(batchId,scope.id).first()) throw new ImportConflict('批次不存在或 scope 不符。');
@@ -27,6 +31,7 @@ export async function POST(request:Request) {
  try {
   const input=requestSchema.parse(await request.json()),db=getD1Binding();
   const scope=await privateScope(db);
+  if(!(await solutionStore(request,true)).scopes.includes(scope.id))throw new SolutionError('无权修改此批次范围。',403);
   let id:string;
   if(input.action==='create') {
    id=crypto.randomUUID();
@@ -49,6 +54,7 @@ export async function POST(request:Request) {
  } catch(error) {return failure(error);}
 }
 function failure(error:unknown) {
+ if(error instanceof SolutionError||error instanceof LibraryError)return Response.json({error:error.message},{status:error.status,headers:{'Cache-Control':'no-store'}});
  if(error instanceof z.ZodError||error instanceof SyntaxError) return Response.json({error:'批次参数无效。'},{status:400});
  if(error instanceof ImportConflict||error instanceof Error&&error.name==='AssertionError') return Response.json({error:error.message},{status:409});
  console.warn('paper_batch_failed',{name:error instanceof Error?error.name:'unknown'});

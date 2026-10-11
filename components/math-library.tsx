@@ -2,6 +2,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { MathText } from '@/components/math-text';
+import { QuestionMethodEvidence } from '@/components/question-method-evidence';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
@@ -13,9 +14,9 @@ type Point={code:string;name:string};
 type Item={id:string;text:string;stage:string|null;status:string;identity_status:string;classification:Classification|null;imageUrl:string|null;sources:{id:string;title:string;paperId:string|null}[]};
 type Facets={stats:{total:number;classified:number;unclassified:number;papers:number};stages:string[];chapters:Point[];knowledge:Point[];types:string[];difficulties:string[];papers:{id:string;title:string}[]};
 type Results={items:Item[];total:number;page:number;pageSize:number};
-type Source={id:string;title:string;math_paper_id:string|null;source_type:string;question_number:string|null;page:number|null;imageUrl:string|null;locator:{regions?:CropRegion[]};explanation:ExplanationContent|null;content_revision_id:string;business_content_matches:number|null};
-type Detail=Omit<Item,'sources'>&{current_revision_id:string;sources:Source[]};
-const emptyFilters={q:'',stage:'',chapter:'',knowledge:'',type:'',difficulty:'',paper:'',classification:''};
+type Source={id:string;title:string;math_paper_id:string|null;source_type:string;question_number:string|null;page:number|null;imageUrl:string|null;locator:{regions?:CropRegion[]};explanation:ExplanationContent|null;explanationReviewed:boolean|null;content_revision_id:string;business_content_matches:number|null};
+type Detail=Omit<Item,'sources'>&{current_revision_id:string;sources:Source[];pairedSolutions?:Awaited<ReturnType<typeof import('@/lib/canonical-solutions').canonicalSolutions>>};
+const emptyFilters={q:'',stage:'',chapter:'',knowledge:'',type:'',difficulty:'',paper:'',classification:'',review:''};
 const selectClass='h-10 w-full rounded-xl border border-slate-200 bg-white px-3 text-sm';
 async function read<T>(url:string,signal:AbortSignal):Promise<T>{const response=await fetch(url,{signal,cache:'no-store'}),data=await response.json() as T&{error?:string};if(!response.ok)throw Error(data.error||'题库读取失败。');return data;}
 function LibraryImage({url,thumbnail=false,label='原始题图'}:{url:string|null;thumbnail?:boolean;label?:string}){
@@ -46,6 +47,7 @@ export function MathLibrary(){
  {filter('题型','type',(facets?.types||[]).map(s=>({value:s,label:s})))}
  {filter('难度','difficulty',(facets?.difficulties||[]).map(s=>({value:s,label:s})))}
  {filter('来源试卷','paper',(facets?.papers||[]).map(p=>({value:p.id,label:p.title})))}
+ {filter('审核状态','review',[{value:'ready',label:'内容身份就绪（非解析审核）'},{value:'needs_review',label:'内容身份待复核'},{value:'incomplete',label:'内容不完整'},{value:'classification_review',label:'分类待复核'}])}
  {filter('分类状态','classification',[{value:'classified',label:'已有知识点'},{value:'unclassified',label:'未分类'}])}
  <Button variant="outline" className="mt-6" onClick={()=>{setInput('');setState({filters:emptyFilters,page:1});}}>清空筛选</Button></div></section>
  {error&&<div role="alert" className="rounded-xl bg-red-50 p-4 text-red-700">{error}<Button variant="outline" className="ml-4" onClick={()=>setRetry(n=>n+1)}>重试</Button></div>}
@@ -61,12 +63,14 @@ export function MathLibraryDetail({id}:{id:string}){
  useEffect(()=>{const controller=new AbortController();setItem(null);setError('');read<Detail>('/api/math-library/'+encodeURIComponent(id),controller.signal).then(setItem).catch(e=>{if(!controller.signal.aborted)setError(e.message);});return()=>controller.abort();},[id,retry]);
  return <div className="space-y-6"><Link href="/math-library" className="text-sm text-terracotta-800">← 返回统一数学题库</Link><h1 className="text-2xl font-semibold">题目详情</h1>{error?<div role="alert" className="rounded-xl bg-red-50 p-5">{error}<Button variant="outline" className="ml-4" onClick={()=>setRetry(n=>n+1)}>重试</Button></div>:!item?<p role="status">正在读取题目…</p>:<>
  <section className="space-y-4 rounded-2xl border border-[var(--border)] bg-white p-6"><p className="break-all text-xs text-slate-500">Canonical Question ID：{item.id}<br/>当前版本：{item.current_revision_id} · 状态：{item.status} · 内容身份：{item.identity_status}</p><ClassificationLabels item={{...item,sources:[]}}/><h2 className="text-lg font-semibold">完整题干</h2><MathText className="text-sm leading-8">{item.text||'当前版本未保存文字题干，请查看原始题图。'}</MathText><p className="text-sm text-slate-500">解题方法：{item.classification?.methods?.map(m=>m.name).join('、')||'未标注'}</p></section>
+ <QuestionMethodEvidence id={id}/>
  <h2 className="text-xl font-semibold">题图、解析与来源（{item.sources.length} 次出现）</h2>{!item.sources.length&&<p>此题尚未记录可访问的来源；题图与解析未生成。</p>}
+ {item.pairedSolutions?.map((s,i)=><section key={`${s.entryId}:${s.reviewId}:${i}`} className="surface-card space-y-3 p-5"><h3 className="font-semibold">配套原始解析 · {s.filename} · 匹配已确认</h3><MathText className="whitespace-pre-wrap leading-8">{s.original}</MathText>{s.teacherText&&<details><summary>教师编辑副本</summary><MathText>{s.teacherText}</MathText></details>}<a className="mr-4 text-sm underline" href={`${s.sourceUrl}#page=${s.regions[0]?.page}`} target="_blank" rel="noreferrer">查看来源 PDF</a><Link className="text-sm underline" href={`/papers/${s.paperId}/solutions`}>打开匹配与 AI 评审</Link>{s.review&&<details><summary>教师已接受的 AI 建议（未经形式化验证）</summary><MathText>{s.review.quality.summary}</MathText><MathText className="whitespace-pre-wrap">{s.review.methods?JSON.stringify(s.review.methods,null,2):'基础质量核查；未执行深度解法与通法分析。'}</MathText></details>}</section>)}
  {item.sources.map(source=><section key={source.id} className="space-y-5 rounded-2xl border border-[var(--border)] bg-white p-6"><div><h3 className="font-semibold">{source.title}</h3><p className="mt-2 text-sm text-slate-500">原题号：{source.question_number||'未记录'} · 页码：{source.locator.regions?.map(r=>r.page).filter((v,i,a)=>a.indexOf(v)===i).join('、')||source.page||'未记录'} · 来源：{source.source_type==='math_paper'?'数学套卷':source.source_type}</p>{source.math_paper_id&&<Link href={'/papers/'+source.math_paper_id} className="mt-2 inline-block text-sm text-terracotta-800">打开来源试卷 →</Link>}</div>
  {source.content_revision_id!==item.current_revision_id&&<p className="rounded-lg bg-amber-50 p-3 text-sm">该来源对应历史内容版本；当前题干以上方 Canonical 版本为准。</p>}
  {source.business_content_matches===0&&<p className="rounded-lg bg-amber-50 p-3 text-sm">来源业务题的文字已变更，解析未作为当前版本解析展示。原题图可能也已更新，请核对来源试卷。</p>}
  <LibraryImage url={source.imageUrl} label={source.title+'第'+source.question_number+'题原图'}/>
  {source.locator.regions?.length?<div className="text-xs text-slate-500"><p>原题图沿用已有拼接顺序，共 {source.locator.regions.length} 个裁切片段：</p><ol className="mt-2 list-inside list-decimal space-y-1">{source.locator.regions.map((r,i)=><li key={i}>第 {r.page} 页 · x={r.x.toFixed(3)}, y={r.y.toFixed(3)}, 宽={r.width.toFixed(3)}, 高={r.height.toFixed(3)}</li>)}</ol></div>:<p className="text-xs text-slate-500">裁切位置未记录。</p>}
- <h3 className="text-lg font-semibold">已有解析</h3>{source.explanation?<SavedExplanation content={source.explanation}/>:<p className="text-sm text-slate-500">解析未生成，或当前内容版本没有可复用的解析。</p>}</section>)}
+ <h3 className="text-lg font-semibold">已有解析</h3>{source.explanation?<><p className="text-sm text-slate-500">解析审核：{source.explanationReviewed === true ? '教师已审核' : source.explanationReviewed === false ? '未经教师审核' : '未记录审核结论'}</p><SavedExplanation content={source.explanation}/></>:<p className="text-sm text-slate-500">解析未生成，或当前内容版本没有可复用的解析。</p>}</section>)}
  </>}</div>;
 }

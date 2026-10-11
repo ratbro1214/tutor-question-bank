@@ -2,6 +2,9 @@ import { getD1Binding } from "@/db";
 import type { PaperQuestion, PaperSummary } from "./paper";
 import type { Classification } from "./classification";
 import type { ExplanationContent } from "./question-explanation";
+import { solutionStore } from './paper-solution-server';
+import { SolutionError } from './paper-solution-store';
+import { LibraryError } from './math-library-server';
 
 export type PaperRow = { id: string; title: string; original_filename: string; source_key: string; source_type: string; created_at: string; question_count?: number; completed_count?: number };
 export type PaperQuestionRow = { id: string; paper_id: string; question_number: number; regions: string; image_key: string; question_text: string; classification: string | null; explanation: string | null; model: string; revision: number; status: string; error: string; generation_token: string | null; updated_at: string };
@@ -15,11 +18,13 @@ export function publicPaperQuestion(row: PaperQuestionRow): PaperQuestion {
     explanation: row.explanation ? { content: JSON.parse(row.explanation) as ExplanationContent, sourceText: row.question_text, model: row.model, revision: row.revision, reviewed: false, origin: "ai", updatedAt: row.updated_at } : null,
     status: row.status, error: row.error, updatedAt: row.updated_at };
 }
-export async function findPaper(id: string) {
+export async function findPaper(id: string, request?:Request, mutation=false) {
   if (!validPaperId(id)) return null;
+  if(request)await (await solutionStore(request,mutation)).paper(id);
   return getD1Binding().prepare("SELECT p.*, (SELECT count(*) FROM paper_questions WHERE paper_id=p.id) AS question_count, (SELECT count(*) FROM paper_questions WHERE paper_id=p.id AND explanation IS NOT NULL) AS completed_count FROM papers p WHERE id=?").bind(id).first<PaperRow>();
 }
 export function paperFailure(error: unknown) {
+  if(error instanceof SolutionError||error instanceof LibraryError)return Response.json({error:error.message},{status:error.status,headers:{'Cache-Control':'no-store'}});
   console.warn("paper_request_failed", { errorName: error instanceof Error ? error.name : "UnknownError" });
   return Response.json({ error: "套卷暂时无法读取或保存，请稍后重试。" }, { status: 500 });
 }

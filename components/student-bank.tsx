@@ -16,6 +16,8 @@ import { Textarea } from "@/components/ui/textarea";
 import type { Classification } from "@/lib/classification";
 import { broadQuestionCategory, questionCategoryOrder, questionChapterLabel } from "@/lib/question-category";
 import { cn } from "@/lib/utils";
+import { StudentCanonicalBatch } from "@/components/student-canonical-batch";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 type Question = {
   id: number;
@@ -34,7 +36,7 @@ type Question = {
 };
 type Student = { id: number; name: string; grade: string; notes: string };
 
-export function StudentBank({ id }: { id: string }) {
+export function StudentBank({ id, initialTab = 'overview' }: { id: string; initialTab?: string }) {
   const router = useRouter();
   const [student, setStudent] = useState<Student | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -46,6 +48,9 @@ export function StudentBank({ id }: { id: string }) {
   const [deletingStudent, setDeletingStudent] = useState(false);
   const [editStudentOpen, setEditStudentOpen] = useState(false);
   const [savingStudent, setSavingStudent] = useState(false);
+  const [selectedQuestions, setSelectedQuestions] = useState<Set<number>>(new Set());
+  const [batchBusy, setBatchBusy] = useState(false);
+  const [archiveTab, setArchiveTab] = useState(['overview', 'questions', 'records'].includes(initialTab) ? initialTab : 'overview');
 
   async function loadStudent(showLoading = false) {
     if (showLoading) setLoading(true);
@@ -63,7 +68,7 @@ export function StudentBank({ id }: { id: string }) {
     }
   }
 
-  useEffect(() => { let active = true; void Promise.resolve().then(() => { if (active) return loadStudent(true); }); return () => { active = false; }; }, [id]);
+  useEffect(() => { let active = true; void Promise.resolve().then(() => { if (active) { setSelectedQuestions(new Set()); setBatchBusy(false); return loadStudent(true); } }); return () => { active = false; }; }, [id]);
 
   const pointCounts = useMemo(() => {
     const counts = new Map<string, { name: string; count: number }>();
@@ -93,7 +98,15 @@ export function StudentBank({ id }: { id: string }) {
     scrollToQuestions();
   }
   function scrollToQuestions() {
+    selectArchiveTab('questions');
     requestAnimationFrame(() => document.getElementById("student-questions")?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "start" }));
+  }
+  function selectArchiveTab(value: string) {
+    if (batchBusy) return;
+    setArchiveTab(value);
+    const url = new URL(window.location.href);
+    url.searchParams.set('tab', value);
+    window.history.replaceState(window.history.state, '', url);
   }
   function selectPoint(code: string) {
     setPoint(current => current === code ? "all" : code);
@@ -151,7 +164,7 @@ export function StudentBank({ id }: { id: string }) {
       </div>
       <div className="flex flex-col gap-2 sm:flex-row">
         <Button size="lg" variant="outline" onClick={() => setEditStudentOpen(true)}><Pencil />编辑资料</Button>
-        <Button size="lg" variant="outline" onClick={deleteStudent} disabled={deletingStudent} className="border-red-200 text-red-700 hover:bg-red-50 hover:text-red-800">{deletingStudent ? <><LoaderCircle className="animate-spin" />正在移动…</> : <><Trash2 />移入回收站</>}</Button>
+        <Button size="lg" variant="outline" onClick={deleteStudent} disabled={deletingStudent || batchBusy} className="border-red-200 text-red-700 hover:bg-red-50 hover:text-red-800">{deletingStudent ? <><LoaderCircle className="animate-spin" />正在移动…</> : <><Trash2 />移入回收站</>}</Button>
         <Button asChild size="lg"><Link href="/upload"><Upload />录入新题</Link></Button>
       </div>
     </section>
@@ -188,17 +201,26 @@ export function StudentBank({ id }: { id: string }) {
       { label: "最常出现", value: pointCounts[0]?.[1].name || "暂无", icon: TrendingUp, detail: pointCounts[0] ? `${pointCounts[0][1].count} 次` : "等待录入" },
     ].map(({ label, value, icon: Icon, detail }, index) => <div key={label} className={`min-w-0 px-5 py-4 ${index ? "border-t border-slate-200 sm:border-l sm:border-t-0" : ""}`}><div className="flex items-center gap-2 text-xs font-medium text-gray-500"><Icon className="size-4 text-terracotta-700" />{label}</div><strong className={`mt-1 block truncate font-mono font-bold leading-tight tracking-tight text-gray-950 ${typeof value === "number" ? "text-[30px]" : "text-xl sm:text-2xl"}`}>{value}</strong><span className="mt-1 block text-xs text-slate-400">{detail}</span></div>)}</section>
 
+    <Tabs value={archiveTab} onValueChange={selectArchiveTab} className="space-y-5">
+    <TabsList aria-label="学生学习档案分栏" className="h-auto w-full justify-start gap-1 bg-slate-100 p-1 sm:w-fit"><TabsTrigger value="overview" disabled={batchBusy}>档案概览</TabsTrigger><TabsTrigger value="questions">归档题目（{questions.length}）</TabsTrigger><TabsTrigger value="records" disabled={batchBusy}>教学记录</TabsTrigger></TabsList>
+    <TabsContent value="overview" forceMount className="space-y-5 data-[state=inactive]:hidden">
     {pointCounts.length > 0 && <KnowledgeDistribution points={pointCounts} selected={point} onSelect={selectPoint} />}
+    <div className="rounded-xl border border-slate-200 bg-white p-5"><h2 className="font-semibold">学习档案概览</h2><p className="mt-2 text-sm leading-6 text-slate-500">查看本学生归档题目的知识点分布。进入“归档题目”可筛选、编辑或批量加入统一数学题库；进入“教学记录”可查看和补记提问、作答及复查。</p><div className="mt-4 flex flex-wrap gap-2"><Button variant="outline" onClick={() => selectArchiveTab('questions')}>查看归档题目</Button><Button variant="outline" onClick={() => selectArchiveTab('records')}>查看教学记录</Button></div></div>
+    </TabsContent>
+    <TabsContent value="questions" forceMount className="space-y-5 data-[state=inactive]:hidden">
 
     {questions.length > 0 && <section className="border-b border-slate-200 pb-5"><div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between"><div><h2 className="font-bold text-gray-950">按模块查看题目</h2><p className="mt-1 text-sm text-gray-500">选择分类，快速缩小题目范围。</p></div><span className="mt-2 font-mono text-xs text-slate-400 sm:mt-0">共 {questions.length} 道</span></div><div className="mt-4 flex flex-wrap gap-2"><button type="button" onClick={() => selectCategory("全部")} className={cn("rounded-md border px-3 py-1.5 text-sm font-medium transition-colors", category === "全部" ? "border-[var(--color-brand-primary)] bg-[var(--color-brand-primary)] text-white" : "border-slate-200 bg-white text-slate-600 hover:border-terracotta-300 hover:text-terracotta-700")}>全部题目 <span className="ml-1 opacity-70">{questions.length}</span></button>{categoryCounts.map(item => <button type="button" key={item.name} onClick={() => selectCategory(item.name)} className={cn("rounded-md border px-3 py-1.5 text-sm font-medium transition-colors", category === item.name ? "border-[var(--color-brand-primary)] bg-[var(--color-brand-primary)] text-white" : "border-slate-200 bg-white text-slate-600 hover:border-terracotta-300 hover:text-terracotta-700")}>{item.name} <span className="ml-1 opacity-70">{item.count}</span></button>)}</div></section>}
 
     <section id="student-questions" className="scroll-mt-6">
       {(category !== "全部" || point !== "all" || query.trim()) && <div className="mb-3 flex flex-wrap items-center gap-2 rounded-lg border border-terracotta-100 bg-terracotta-50/50 px-3 py-2 text-xs text-terracotta-900"><span>当前筛选：</span>{category !== "全部" && <span>{category}</span>}{point !== "all" && <span>{pointCounts.find(([code]) => code === point)?.[1].name}</span>}{query.trim() && <span>搜索“{query.trim()}”</span>}<Button size="sm" variant="ghost" className="ml-auto h-7 text-xs" onClick={() => { setCategory("全部"); setPoint("all"); setQuery(""); }}>清除筛选</Button></div>}
       <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"><div><h2 className="text-xl font-bold text-slate-950">{category === "全部" ? "全部题目" : category}</h2><p className="mt-1 text-sm text-slate-500">共 {filtered.length} 道</p></div><div className="flex flex-col gap-2 sm:flex-row"><div className="relative"><Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-slate-400" /><Input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="搜索题目或知识点" className="bg-white pl-9 sm:w-64" /></div><NativeSelect value={point} onChange={(event) => setPoint(event.target.value)} className="w-full bg-white sm:w-48"><NativeSelectOption value="all">全部知识点</NativeSelectOption>{pointCounts.map(([code, item]) => <NativeSelectOption key={code} value={code}>{item.name} ({item.count})</NativeSelectOption>)}</NativeSelect></div></div>
-      {filtered.length ? <div className="space-y-3">{filtered.map((question) => <Link href={`/students/${id}/questions/${question.id}`} key={question.id} className="group grid w-full overflow-hidden rounded-lg border border-slate-200 bg-white text-left transition-colors hover:border-terracotta-300 hover:bg-terracotta-50/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand-primary)] md:grid-cols-[180px_1fr]"><div className="grid min-h-36 place-items-center border-b border-slate-100 bg-slate-50 md:border-b-0 md:border-r"><img src={question.imageUrl} alt="题目图片" className="h-full max-h-48 w-full object-contain" /></div><div className="p-4"><div className="flex flex-wrap items-center gap-2"><Badge className="bg-terracotta-50 text-terracotta-800">{broadQuestionCategory(question)}</Badge><Badge variant="outline">{questionChapterLabel(question)}</Badge><Badge variant="outline">{question.difficulty}</Badge>{question.classificationSource === "manual" && <Badge variant="outline">人工分类</Badge>}{question.classificationSource === "demo" && <Badge variant="outline">演示分类</Badge>}<span className="ml-auto flex items-center gap-1 text-xs text-slate-500"><CalendarDays className="size-3.5" />{new Date(question.createdAt + "Z").toLocaleDateString("zh-CN")}</span></div><p className="mt-3 line-clamp-2 text-sm leading-6 text-slate-600">{question.extractedQuestion || "以原题图片为准，点击进入完整详情页。"}</p><div className="mt-3 flex flex-wrap gap-2">{question.knowledgePoints.map((item) => <span key={item.code} className="rounded-md bg-slate-100 px-2 py-1 text-xs text-slate-600">{item.name}</span>)}</div><div className="mt-3 flex items-center justify-between gap-3 border-t border-slate-100 pt-3 text-xs text-slate-500"><span>题型：{question.questionType}</span><span className="inline-flex items-center gap-1 font-semibold text-[var(--color-brand-primary)]"><Pencil className="size-3.5" />打开题目详情</span></div></div></Link>)}</div> : <div className="rounded-lg border border-dashed border-slate-300 bg-white p-12 text-center"><ImageIcon className="mx-auto size-9 text-slate-300" /><h3 className="mt-4 font-semibold text-slate-900">暂无匹配题目</h3><p className="mt-1 text-sm text-slate-500">调整分类、搜索条件或知识点筛选。</p></div>}
+      <StudentCanonicalBatch key={id} studentId={Number(id)} allIds={questions.map(q => q.id)} filteredIds={filtered.map(q => q.id)} selected={selectedQuestions} onSelect={setSelectedQuestions} busy={batchBusy} onBusyChange={setBatchBusy} />
+      {filtered.length ? <div className="space-y-3">{filtered.map((question) => <div key={question.id} className="flex items-start gap-3"><input type="checkbox" aria-label={`选择题目 #${question.id}`} disabled={batchBusy} checked={selectedQuestions.has(question.id)} onChange={event => setSelectedQuestions(current => { const next = new Set(current); if (event.target.checked) next.add(question.id); else next.delete(question.id); return next; })} className="mt-5 size-4 shrink-0 accent-[var(--color-brand-primary)]" /><Link href={`/students/${id}/questions/${question.id}`} key={question.id} className="group grid w-full overflow-hidden rounded-lg border border-slate-200 bg-white text-left transition-colors hover:border-terracotta-300 hover:bg-terracotta-50/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand-primary)] md:grid-cols-[180px_1fr]"><div className="grid min-h-36 place-items-center border-b border-slate-100 bg-slate-50 md:border-b-0 md:border-r"><img src={question.imageUrl} alt="题目图片" className="h-full max-h-48 w-full object-contain" /></div><div className="p-4"><div className="flex flex-wrap items-center gap-2"><Badge className="bg-terracotta-50 text-terracotta-800">{broadQuestionCategory(question)}</Badge><Badge variant="outline">{questionChapterLabel(question)}</Badge><Badge variant="outline">{question.difficulty}</Badge>{question.classificationSource === "manual" && <Badge variant="outline">人工分类</Badge>}{question.classificationSource === "demo" && <Badge variant="outline">演示分类</Badge>}<span className="ml-auto flex items-center gap-1 text-xs text-slate-500"><CalendarDays className="size-3.5" />{new Date(question.createdAt + "Z").toLocaleDateString("zh-CN")}</span></div><p className="mt-3 line-clamp-2 text-sm leading-6 text-slate-600">{question.extractedQuestion || "以原题图片为准，点击进入完整详情页。"}</p><div className="mt-3 flex flex-wrap gap-2">{question.knowledgePoints.map((item) => <span key={item.code} className="rounded-md bg-slate-100 px-2 py-1 text-xs text-slate-600">{item.name}</span>)}</div><div className="mt-3 flex items-center justify-between gap-3 border-t border-slate-100 pt-3 text-xs text-slate-500"><span>题型：{question.questionType}</span><span className="inline-flex items-center gap-1 font-semibold text-[var(--color-brand-primary)]"><Pencil className="size-3.5" />打开题目详情</span></div></div></Link></div>)}</div> : <div className="rounded-lg border border-dashed border-slate-300 bg-white p-12 text-center"><ImageIcon className="mx-auto size-9 text-slate-300" /><h3 className="mt-4 font-semibold text-slate-900">暂无匹配题目</h3><p className="mt-1 text-sm text-slate-500">调整分类、搜索条件或知识点筛选。</p></div>}
     </section>
 
-    <LearningPanel key={id} studentId={id} questions={questions} onOpen={questionId => router.push(`/students/${id}/questions/${questionId}`)} />
+    </TabsContent>
+    <TabsContent value="records" forceMount className="data-[state=inactive]:hidden"><LearningPanel key={id} studentId={id} questions={questions} onOpen={questionId => router.push(`/students/${id}/questions/${questionId}`)} /></TabsContent>
+    </Tabs>
       </div>
     </div>
   </div>;
