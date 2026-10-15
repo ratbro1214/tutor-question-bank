@@ -27,8 +27,8 @@ export function StrategyDecisionPanel({ scopeId, canonicalId }: { scopeId?: stri
     try { const result=await graphRequest<Decision>('/strategies',{action:'decide',...(canonicalId?{canonicalId}:{scopeId,text}),facts},'POST',c.signal);if(!c.signal.aborted)setData(result); }
     catch(e){if(!c.signal.aborted)setError((e as Error).message);}finally{if(!c.signal.aborted)setBusy(false);}
   }
-  return <section className="space-y-4 rounded-xl border border-indigo-100 bg-white p-4"><button type="button" className={graphButton} aria-expanded={open} onClick={()=>setOpen(v=>!v)}>解题策略决策器 · 规则分析（无需 AI）{open?'收起':'展开'}</button>{open&&<>
-    <p className="text-sm text-slate-500">先核对结构事实，再比较策略。未知项可以保留；待审核卡仅供教师预览。{canonicalId?'分析当前 canonical 题目。':'粘贴题干或输入如“含参函数恒成立问题”。'}</p>
+  return <section className="space-y-4 rounded-xl border border-indigo-100 bg-white p-4"><button type="button" className={graphButton} aria-expanded={open} onClick={()=>setOpen(v=>!v)}>解题策略建议{open?'收起':'展开'}</button>{open&&<>
+    <p className="text-sm text-slate-500">确认已知条件，未知项可保留。{canonicalId?'分析当前题目。':'粘贴题干或输入如“含参函数恒成立问题”。'}</p>
     {!canonicalId&&<textarea aria-label="策略分析题干" className="w-full rounded border p-3 text-sm" rows={3} value={text} onChange={e=>{invalidate();setText(e.target.value);}} />}
     <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{fields.map(([key,label,options])=><label className="text-xs text-slate-600" key={key}>{label}<select className="mt-1 w-full rounded border p-2 text-sm" value={facts[key]} onChange={e=>{invalidate();setFacts(v=>({...v,[key]:e.target.value}));}}>{options.map(([value,name])=><option key={value} value={value}>{name}</option>)}</select></label>)}</div>
     <button className={graphButton} disabled={busy||(!canonicalId&&(!scopeId||!text.trim()))} onClick={()=>void run()}>{busy?'正在分析…':'生成可解释策略建议'}</button>{error&&<p role="alert" className="text-sm text-red-700">{error}</p>}
@@ -36,7 +36,7 @@ export function StrategyDecisionPanel({ scopeId, canonicalId }: { scopeId?: stri
       <div className="rounded bg-amber-50 p-3"><h3 className="font-semibold">边界与常见失效原因</h3>{[...data.checks,...data.risks].map((v,i)=><MathText key={i}>{v}</MathText>)}</div>
       {!data.items.length&&<p className="text-sm">当前无可用策略，请先在方法库导入核心候选卡，或人工选择方法。</p>}
       {data.items.map(item=><article className="space-y-3 rounded-lg border p-4" key={item.id}><h3 className="font-semibold">{item.name} · {item.verdict==='preferred'?'条件匹配，优先核验':item.verdict==='alternative'?'备选':'待核验路径'} · {item.status==='approved'?'卡片已审核':'卡片待审核'}</h3><MathText>{item.reason}</MathText><MathText>{'适用条件：'+item.conditions.join('；')}</MathText><MathText>{'为什么可选更简洁的方法：'+item.whySimpler}</MathText>{item.mechanisms.map((m,i)=><MathText key={i}>{`${m.event}：${m.equation} → ${m.consequence}`}</MathText>)}<details><summary className="cursor-pointer text-sm">规范书写、替代方法、前置知识与迁移</summary><div className="mt-2 space-y-2">{item.standardSolution.map((s,i)=><MathText key={i}>{s}</MathText>)}{item.alternatives.map(a=><MathText key={a.name}>{a.name+'：'+a.advantage+'；'+a.cost}</MathText>)}<p className="text-xs">知识编码：{item.prerequisites.join('、')}</p>{item.transfer.map((s,i)=><MathText key={i}>{s}</MathText>)}</div></details><Link className="text-sm underline" href={'/math-methods?method='+encodeURIComponent(item.id)}>查看方法网络与审核 →</Link></article>)}
-      <p className="text-xs text-slate-500">规则分析不自动写入题目关联。教师可在方法卡中选择本题的已审核解析，保存候选关联并审核；也可使用原有 AI 比较入口后人工确认。</p>
+      <p className="text-xs text-slate-500">建议仅供参考，题目关联需在方法卡中确认。</p>
     </>}
   </>}</section>;
 }

@@ -44,6 +44,9 @@
   --color-text-primary: #0f172a;
   --color-text-secondary: #475569;
   --color-border-subtle: #EDE5DF;
+  --surface-shadow: 0 1px 2px rgb(28 25 23 / 0.02), 0 4px 16px -2px rgb(28 25 23 / 0.045), inset 0 1px 0 rgb(255 255 255 / 0.85);
+  --surface-gradient: linear-gradient(180deg, #fff 0%, #fdfcfb 100%);
+  --motion-ease: cubic-bezier(0.16, 1, 0.3, 1);
   --color-state-success: #26734d;
   --color-state-warning: #9a5b13;
   --color-state-error: #b42318;
@@ -157,8 +160,8 @@ h3 {
 @utility surface-card {
   border: 1px solid var(--color-border-subtle);
   border-radius: 0.875rem;
-  background: var(--color-surface-card);
-  box-shadow: 0 2px 6px rgb(74 43 28 / 0.025), 0 8px 24px rgb(74 43 28 / 0.025);
+  background: var(--surface-gradient);
+  box-shadow: var(--surface-shadow);
   transition: border-color 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
 
   &:hover {
@@ -169,13 +172,47 @@ h3 {
 @utility surface-card-interactive {
   transition:
     border-color 160ms ease,
-    background-color 160ms ease;
+    box-shadow 200ms var(--motion-ease),
+    transform 200ms var(--motion-ease);
 
   &:hover {
     border-color: #EBC6B6;
-    background: #FFFAF7;
+    box-shadow: 0 8px 24px -4px rgb(194 89 52 / 0.10), inset 0 1px 0 white;
+    transform: translateY(-2px);
   }
 }
+
+/* A visible default border also covers native selects and small utility panels. */
+@layer base {
+  *, ::before, ::after { border-color: var(--border); }
+  button, a, summary, select, input, textarea { -webkit-tap-highlight-color: transparent; }
+  :focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+  summary { cursor: pointer; }
+}
+
+.action-grid {
+  background-image: radial-gradient(ellipse at 100% 0%, rgb(235 198 182 / 0.30), transparent 65%), radial-gradient(rgb(194 89 52 / 0.12) 1px, transparent 1px);
+  background-size: 100% 100%, 20px 20px;
+}
+.metric-watermark { pointer-events: none; position: absolute; right: -12px; bottom: 14px; color: var(--primary); opacity: 0.055; }
+.metric-watermark svg { width: 104px; height: 104px; stroke-width: 1; }
+.question-card { background: radial-gradient(ellipse at 100% 0%, rgb(251 240 234 / 0.65), transparent 48%), var(--surface-gradient); }
+.question-media { background: white; border-radius: 12px; padding: 12px; box-shadow: 0 1px 10px rgb(28 25 23 / 0.025); }
+.lesson-paper { background: #fffefc; box-shadow: var(--surface-shadow), 0 16px 48px -28px rgb(74 43 28 / 0.18); }
+.lesson-paper [data-slot="textarea"] { background: transparent; border-color: transparent; border-radius: 6px; padding-inline: 0.75rem; box-shadow: none; line-height: 1.9; }
+.lesson-paper [data-slot="textarea"]:hover { background: rgb(244 240 237 / 0.45); }
+.lesson-paper [data-slot="textarea"]:focus-visible { background: white; border-color: var(--border); box-shadow: 0 0 0 3px rgb(198 93 59 / 0.08); }
+.lesson-block { border-top: 1px solid var(--border); padding-top: 1.5rem; }
+.lesson-block-title { color: #793322; font-size: 0.875rem; font-weight: 600; }
+.lesson-stage { border-left: 2px solid #ebc6b6; padding: 1rem 0 1rem 1.25rem; }
+.ai-generating { position: relative; isolation: isolate; border-radius: 16px; padding: 16px; overflow: hidden; background: #fffaf7; border: 1px solid #ebc6b6; }
+.ai-generating::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(110deg, transparent 20%, rgb(235 198 182 / 0.40) 45%, transparent 70%); transform: translateX(-100%); animation: ai-shine 2.8s ease-in-out infinite; z-index: -1; }
+@keyframes ai-shine { to { transform: translateX(100%); } }
+.atlas-surface { box-shadow: 0 16px 40px -18px rgb(11 20 39 / 0.5), inset 0 1px 0 rgb(255 255 255 / 0.10); }
+.exam-banner::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgb(255 255 255 / 0.18) 1px, transparent 1px); background-size: 22px 22px; mask-image: linear-gradient(90deg, transparent 20%, black 100%); pointer-events: none; }
+.quiet-details > summary { padding-block: 0.25rem; }
+.quiet-details[open] > :not(summary) { animation: detail-reveal 180ms var(--motion-ease); }
+@keyframes detail-reveal { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
 
 @utility upload-dot-grid {
   background-color: #f1f5f9;

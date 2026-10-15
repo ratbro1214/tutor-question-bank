@@ -204,7 +204,7 @@ export function StudentBank({ id, initialTab = 'overview' }: { id: string; initi
     <TabsList aria-label="学生学习档案分栏" className="h-auto w-full justify-start gap-1 bg-slate-100 p-1 sm:w-fit"><TabsTrigger value="overview" disabled={batchBusy}>档案概览</TabsTrigger><TabsTrigger value="questions">归档题目（{questions.length}）</TabsTrigger><TabsTrigger value="records" disabled={batchBusy}>教学记录</TabsTrigger></TabsList>
     <TabsContent value="overview" forceMount className="space-y-5 data-[state=inactive]:hidden">
     {pointCounts.length > 0 && <KnowledgeDistribution points={pointCounts} selected={point} onSelect={selectPoint} />}
-    <div className="rounded-xl border border-slate-200 bg-white p-5"><h2 className="font-semibold">学习档案概览</h2><p className="mt-2 text-sm leading-6 text-slate-500">查看本学生归档题目的知识点分布。进入“归档题目”可筛选、编辑或批量加入统一数学题库；进入“教学记录”可查看和补记提问、作答及复查。</p><div className="mt-4 flex flex-wrap gap-2"><Button variant="outline" onClick={() => selectArchiveTab('questions')}>查看归档题目</Button><Button variant="outline" onClick={() => selectArchiveTab('records')}>查看教学记录</Button></div></div>
+    <div className="rounded-xl border border-slate-200 bg-white p-5"><h2 className="font-semibold">学习档案概览</h2><p className="mt-2 text-sm leading-6 text-slate-500">查看知识点分布、归档题目和教学记录。</p><div className="mt-4 flex flex-wrap gap-2"><Button variant="outline" onClick={() => selectArchiveTab('questions')}>查看归档题目</Button><Button variant="outline" onClick={() => selectArchiveTab('records')}>查看教学记录</Button></div></div>
     </TabsContent>
     <TabsContent value="questions" forceMount className="space-y-5 data-[state=inactive]:hidden">
 

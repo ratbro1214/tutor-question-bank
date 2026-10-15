@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from 'react';
 import { Button } from './ui/button';
+import { Sparkles, LoaderCircle } from 'lucide-react';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { LessonStageView, LessonStructureView } from './lesson-structure-editor';
@@ -53,7 +54,7 @@ export function LessonAIPanel({ id, revision, content, busy, accept }: { id: str
     catch (e) { setError((e as Error).message); }
   }
   const stale = proposal && JSON.stringify(content) !== proposal.original;
-  return <div className="space-y-3"><h2 className="font-semibold">AI 教案生成与局部编辑</h2>
+  return <div className="space-y-3"><h2 className="flex items-center gap-2 font-semibold"><Sparkles className="size-4 text-terracotta-700" />AI 备课助手</h2>
     <p className="text-xs text-slate-500">{availability?.message || '正在检查模型配置；手动编辑始终可用。'}</p>
     {availability?.available && <p className="text-xs text-slate-500">使用现有配置：{availability.model}（调用时检查连接）</p>}
     <Button className="w-full" disabled={busy || running || availability?.available === false} onClick={() => generate()}>{content.questions.length ? '结合题库生成课程草稿' : '根据专题与需求设计课程'}</Button>
@@ -65,7 +66,7 @@ export function LessonAIPanel({ id, revision, content, busy, accept }: { id: str
       {action === '调整课堂时间' && <label className="block text-xs">该环节分钟数<Input type="number" min={1} max={480} value={minutes} onChange={e => setMinutes(Number(e.target.value))} /><span>只改此环节，课程总时长随之更新，接受前显示变化。</span></label>}
       <Button variant="outline" disabled={availability?.available === false} onClick={() => generate({ stageIndex, action, instruction, ...(action === '调整课堂时间' ? { minutes } : {}) })}>生成单环节建议</Button>
     </fieldset>}
-    {running && <div role="status" className="space-y-2 text-sm"><p>AI 正在生成，原内容保留中…</p><Button variant="outline" onClick={() => request.current?.abort()}>停止生成</Button></div>}
+    {running && <div role="status" className="ai-generating space-y-3 text-sm"><p className="flex items-center gap-2 font-medium text-terracotta-800"><LoaderCircle className="size-4 animate-spin" />正在编排教学思路…</p><p className="text-xs text-slate-500">正在组织目标、活动与课堂追问，原内容已保留。</p><Button variant="outline" onClick={() => request.current?.abort()}>停止生成</Button></div>}
     {error && <div role="alert" className="space-y-2 text-sm text-amber-800"><p>{error}</p><Button variant="outline" disabled={busy || running} onClick={() => { if (last.current) void generate(last.current.edit); else { setAvailability(null); void fetch('/api/lesson-plans/' + id + '/generate', { cache: 'no-store' }).then(readApiResponse<{ available: boolean; message: string; model: string }>).then(v => { setAvailability(v); setError(''); }).catch(e => setError(e.message)); } }}>重试</Button></div>}
     {message && <p role="status" className="text-xs">{message}</p>}
     {proposal && <section className="space-y-3 rounded-xl border bg-slate-50 p-3"><h3 className="font-semibold">AI 修改预览 · 未接受</h3>

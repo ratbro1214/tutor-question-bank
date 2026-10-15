@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import { getD1Binding } from '@/db';
 import { getBucket } from '@/lib/storage';
-import { batchResult, privateScope, attachPaper, registerItem, confirmItem, ImportConflict } from '@/lib/paper-batch-server';
+import { batchResult, batchHistory, privateScope, attachPaper, registerItem, confirmItem, ImportConflict } from '@/lib/paper-batch-server';
 import { solutionStore } from '@/lib/paper-solution-server';
 import { SolutionError } from '@/lib/paper-solution-store';
 import { LibraryError } from '@/lib/math-library-server';
@@ -24,7 +24,7 @@ export async function GET(request:Request) {
    if(!await db.prepare('SELECT id FROM paper_import_batches WHERE id=? AND scope_id=?').bind(batchId,scope.id).first()) throw new ImportConflict('批次不存在或 scope 不符。');
    return Response.json(await batchResult(db,batchId),{headers:{'Cache-Control':'no-store'}});
   }
-  return Response.json({batches:(await db.prepare('SELECT id,status,created_at FROM paper_import_batches WHERE scope_id=? ORDER BY rowid DESC LIMIT 20').bind(scope.id).all()).results},{headers:{'Cache-Control':'no-store'}});
+  return Response.json({batches:await batchHistory(db,scope.id)},{headers:{'Cache-Control':'no-store'}});
  } catch(error) {return failure(error);}
 }
 export async function POST(request:Request) {

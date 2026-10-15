@@ -27,7 +27,7 @@ export function MethodAICompletion({ content, disabled, onApply }: { content: Me
     } catch(e) { if (!c.signal.aborted) setError((e as Error).message); } finally { if (!c.signal.aborted) setBusy(false); }
   }}>{busy ? 'AI 正在补全…' : canFill ? 'AI 补全识别信号与思考过程' : '识别信号与思考过程已填写'}</button>
     {busy && <button type="button" className="text-sm underline" onClick={() => { controller.current?.abort(); setBusy(false); }}>取消生成</button>}</div>
-    <p className="text-xs leading-6 text-slate-500">根据现有方法卡生成建议，只补空缺字段。可编辑后填入草稿，保存后由教师审核。</p>
+    <p className="text-xs leading-6 text-slate-500">补全空缺内容，编辑确认后保存为待审核草稿。</p>
     {error && <p role="alert" className="text-sm text-red-700">{error}</p>}
     {result && <div className="space-y-3"><p className="text-xs text-violet-900">AI 建议 · 待核查 · {result.model}</p>
       {missing.signals && <SuggestionField title="识别信号" list value={result.suggestion.signals.join('\n')} onChange={value => setResult(r => r && ({ ...r, suggestion:{ ...r.suggestion, signals:value.split('\n') } }))} />}

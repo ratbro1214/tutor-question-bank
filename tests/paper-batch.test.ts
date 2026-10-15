@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { DatabaseSync } from 'node:sqlite';
 import { readFileSync,readdirSync } from 'node:fs';
-import { attachPaper,registerItem,confirmItem,batchResult } from '../lib/paper-batch-server';
+import { attachPaper,registerItem,confirmItem,batchResult,batchHistory } from '../lib/paper-batch-server';
 import { sha256 } from '../lib/canonical-paper-import.mjs';
 import type { ReviewApplication } from '../lib/paper-batch';
 import { importKnowledgeCatalog } from '../lib/knowledge_graph/seed-store';
@@ -35,6 +35,19 @@ function fixture() {
  const plain:ReviewApplication={formula:true,options:false,subquestions:false,visual:false,cross_page:false};
  return {sql,db,bucket,bytes,batch,file,question,register,plain,setBeforeBatch:(fn:()=>void)=>{beforeBatch=fn;},close:()=>sql.close()};
 }
+test('batch history uses PDF filenames in file order, isolates scopes and limits recent records',async()=>{
+ const f=fixture();try {
+  const first=f.batch();f.file(first,'第二份试卷',1);f.file(first,'第一份试卷',0);
+  let history=await batchHistory(f.db,'scope');
+  assert.deepEqual(history[0].filenames,['第一份试卷.pdf','第二份试卷.pdf']);
+  assert.deepEqual(await batchHistory(f.db,'another-scope'),[]);
+  for(let i=0;i<21;i++)f.batch();
+  history=await batchHistory(f.db,'scope');
+  assert.equal(history.length,20);assert.ok(!history.some(b=>b.id===first));
+  assert.deepEqual(history[0].filenames,[]);
+ }finally{f.close();}
+});
+
 test('three PDFs produce independent items, scoped text duplicates and failed items; unreviewed single/cross-page/visual items never enter canonical',async()=>{
  const f=fixture();try {
   const batch=f.batch();

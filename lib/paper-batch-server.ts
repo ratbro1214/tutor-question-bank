@@ -5,12 +5,18 @@ import { sha256, stableJSON, observedSourceHash, prepareReadyRecord, CONTENT_SCH
 import { createPendingIdentityDecision } from './paper-identity-review-package.mjs';
 import { DECISION_VERSION } from './canonical-identity-decision.mjs';
 import { cropRegionSchema } from './paper';
-import { regionContext, type BatchResult, type BatchItem, type BatchFile, type ReviewApplication } from './paper-batch';
+import { regionContext, type BatchResult, type BatchItem, type BatchFile, type BatchHistory, type ReviewApplication } from './paper-batch';
 import type { PaperQuestionRow, PaperRow } from './paper-server';
 
 type Scope = {id:string;code:string;scope_type:string;kind:string;ownership_status:string;owner_principal_id:string};
 type Paper = PaperRow & {file_hash:string};
 export class ImportConflict extends Error {}
+export async function batchHistory(db: D1Database, scopeId: string): Promise<BatchHistory[]> {
+ const rows = (await db.prepare(`SELECT b.id,b.status,b.created_at,
+  (SELECT json_group_array(filename) FROM (SELECT filename FROM paper_import_files WHERE batch_id=b.id ORDER BY position)) AS filenames_json
+  FROM paper_import_batches b WHERE b.scope_id=? ORDER BY b.rowid DESC LIMIT 20`).bind(scopeId).all<{ id:string; status:string; created_at:string; filenames_json:string }>()).results;
+ return rows.map(({filenames_json,...batch})=>({...batch,filenames:JSON.parse(filenames_json)}));
+}
 export async function privateScope(db:D1Database) {
  const scope=await db.prepare("SELECT * FROM question_library_scopes WHERE code='project-private'").first<Scope>();
  if(!scope||scope.kind!=='private'||scope.scope_type==='authorized_public'||scope.ownership_status!=='known'||scope.owner_principal_id!=='project_owner') throw new ImportConflict('project-private scope 未建立或归属不符，停止导入。');

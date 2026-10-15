@@ -10,11 +10,11 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-[var(--color-brand-primary)] text-white shadow-[0_1px_2px_rgb(15_23_42_/_0.12)] hover:bg-[var(--color-brand-primary-hover)] hover:shadow-[0_4px_12px_rgb(25_93_122_/_0.2)]",
+          "bg-[linear-gradient(180deg,#D4653B_0%,#C0522A_100%)] text-white shadow-[inset_0_1px_0_rgb(255_255_255_/_0.25),0_2px_4px_rgb(192_82_42_/_0.2)] hover:brightness-95 hover:shadow-[inset_0_1px_0_rgb(255_255_255_/_0.25),0_4px_12px_rgb(192_82_42_/_0.22)]",
         destructive:
           "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:bg-destructive/60 dark:focus-visible:ring-destructive/40",
         outline:
-          "border border-[var(--color-brand-primary)] bg-transparent text-[var(--color-brand-primary)] hover:bg-[rgb(25_93_122_/_0.05)]",
+          "border border-[var(--color-border-subtle)] bg-white/80 text-[var(--color-text-secondary)] shadow-[inset_0_1px_0_white] hover:border-terracotta-200 hover:bg-terracotta-50 hover:text-terracotta-800",
         secondary:
           "bg-[var(--color-brand-secondary-soft)] text-[var(--color-brand-secondary)] hover:brightness-[0.98]",
         ghost:
