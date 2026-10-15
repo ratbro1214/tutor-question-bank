@@ -1,0 +1,212 @@
+[
+  {
+    "commit": "74f05d421c8d72de68d983dbdef160e55c0873e8",
+    "id": "mathmap-cn",
+    "license": "CC-BY-SA-4.0",
+    "files": [
+      {
+        "path": "LICENSE",
+        "bytes": 1088,
+        "sha256": "2ad9d92a85b079417372555e82f0ee3bc5988d55696d9463f512c1566774a218"
+      },
+      {
+        "path": "NOTICE",
+        "bytes": 1593,
+        "sha256": "40991dc159995cad6df64a737172268ee477c6bdadaf7d7569cbc7c3bc1aed20"
+      },
+      {
+        "path": "README.md",
+        "bytes": 2096,
+        "sha256": "f4d9226c26dba23cf74a961455ebdca91d56d00ef44581e37dc438d64c79dbc9"
+      },
+      {
+        "path": "data/topics/math-stage4-gg.json",
+        "bytes": 6688,
+        "sha256": "bab98627e019c80c9368ad03d3c7cfd9570e762ffce40fe25843e74e9a5878b4"
+      },
+      {
+        "path": "data/topics/math-stage4-na.json",
+        "bytes": 16561,
+        "sha256": "dfa6c23b69d37ea4200fe89af68358dfecbf91a06eeebdfb574d78c38053de6b"
+      },
+      {
+        "path": "data/topics/math-stage4-sp-cp.json",
+        "bytes": 3869,
+        "sha256": "17c0563eeed3d56eceea3fc87ec705d2e20f488fac79cb77a597394c468bee34"
+      },
+      {
+        "path": "data/topics/math-stage5.json",
+        "bytes": 47105,
+        "sha256": "018bbb0d39f476808c5bdcf43e30df95eda844afc93e4c39bb1f1d3894f2aae9"
+      },
+      {
+        "path": "data/topics/math-supplement.json",
+        "bytes": 8397,
+        "sha256": "8eea8f46c2b9735e3a14c2bd6cae2dcd96452dc68a893aeffd6a1b38e17f8a67"
+      },
+      {
+        "path": "data/topics/math-supplement-fine.json",
+        "bytes": 11885,
+        "sha256": "b0d2b5552302427317280b0a4254d2acf253128d8c082115f747e5ed4d2a5509"
+      },
+      {
+        "path": "data/topics/math-supplement-fine2.json",
+        "bytes": 16563,
+        "sha256": "fd276b5e362861078cc7432d25e238f9e0acce178dd2f38f483040d522e8fe04"
+      },
+      {
+        "path": "data/dependencies/math-stage4-gg-internal.json",
+        "bytes": 1797,
+        "sha256": "5a8d73b90e894d8fe67bfc7b0e88ad9ede7ae48fb7bbcdefb1eb1e334ba4612c"
+      },
+      {
+        "path": "data/dependencies/math-stage4-na-internal.json",
+        "bytes": 4356,
+        "sha256": "fec27c21cb6ca3fa569e1f72612a0829dff081eaccd2dea6f0b92a46e57084f9"
+      },
+      {
+        "path": "data/dependencies/math-stage4-sp-cp-internal.json",
+        "bytes": 470,
+        "sha256": "3744a68092a4d397edb0c9ae4dd4ee0a7b642b8474a145ed94a32db80f4bc1ce"
+      },
+      {
+        "path": "data/dependencies/math-stage5-internal.json",
+        "bytes": 10906,
+        "sha256": "0df86153b17059a1cde32abb9c13efedf6bf09bb0fefc8b8ba7bb1ad03dde402"
+      },
+      {
+        "path": "data/dependencies/math-s4-s5-cross.json",
+        "bytes": 2327,
+        "sha256": "d6585a58522ee10fe6d99b18cf19208f52ca86efd522393056034f1e1fd852ff"
+      },
+      {
+        "path": "data/dependencies/math-cross-domain.json",
+        "bytes": 1462,
+        "sha256": "1577b33ff37d95917ccfa5cfe0d50b22fc18b7d61d5d7ced2adfc5118f77f3ba"
+      },
+      {
+        "path": "data/dependencies/math-na-cross.json",
+        "bytes": 1811,
+        "sha256": "53be9bffbc0df6c967c8b160ff4f06f16e97381716f8522b90bba8ddba2e6edb"
+      },
+      {
+        "path": "data/dependencies/math-sp-cp-internal.json",
+        "bytes": 1990,
+        "sha256": "60aab4e18864b4b074922daeff8fbe6793e42a06c154d7ff53111db111d348e0"
+      },
+      {
+        "path": "data/dependencies/math-supplement-deps.json",
+        "bytes": 3139,
+        "sha256": "a1f482d531b8e96d3a3d60bbbd5d8ec379765789c19862b2f992ea6455525a1c"
+      },
+      {
+        "path": "data/dependencies/math-supplement-fine-deps.json",
+        "bytes": 3904,
+        "sha256": "3a42a832d9e223ecb1ca8cc0f55baeff74980f072d34a1701097559a11712d33"
+      },
+      {
+        "path": "data/dependencies/math-supplement-fine2-deps.json",
+        "bytes": 6633,
+        "sha256": "1a4259b876b6ede132931cfe4a4bd777fd94b3fe31296fcf75f1ef7365dfe1c8"
+      }
+    ],
+    "repo": "xmonkey/mathmap-cn",
+    "fetchedOn": "2026-10-11",
+    "url": "https://github.com/xmonkey/mathmap-cn"
+  },
+  {
+    "commit": "5b81b2d8cd2fc0fb5c6dee5e8c064f4416582aaf",
+    "id": "mathbook",
+    "license": "MIT",
+    "files": [
+      {
+        "path": "LICENSE",
+        "bytes": 1070,
+        "sha256": "c8c8088e67fb7d1a3db56a97eaddad42c7ec843bf6f276838ebc0eae9d2004d9"
+      },
+      {
+        "path": "README.md",
+        "bytes": 68,
+        "sha256": "6d27d0bc3c4f903ac7f7b4135230bc498d562ad9d050b244c732b72513da96da"
+      },
+      {
+        "path": "01.方程求解.md",
+        "bytes": 3216,
+        "sha256": "ec850a748928d77a276dfb1ac3ac15c8eb16bc380736181b6c65de3f7b518cee"
+      },
+      {
+        "path": "02.集合.md",
+        "bytes": 3663,
+        "sha256": "a759482c08c2bbcb8760d21f27e60b9fd9ad226dcd8f9bc34fa5d3cd8de3abd7"
+      },
+      {
+        "path": "03.不等式.md",
+        "bytes": 24171,
+        "sha256": "e08ab3bfba3e20f03cffd0474cc6759cc44543f329dcf89fa8c4b435eb223058"
+      },
+      {
+        "path": "04.函数.md",
+        "bytes": 10308,
+        "sha256": "2f89b12e9733c9d8151d64c60461d01c2d5485f3df907cebfad0deccf5fd650e"
+      },
+      {
+        "path": "05.基本计算.md",
+        "bytes": 8798,
+        "sha256": "4aef10376f934fafbbeac58a52ed645fdc4982a67ab68a492efed9f31012dbe3"
+      },
+      {
+        "path": "06.三角恒等变换.md",
+        "bytes": 16815,
+        "sha256": "34bcca6e487f43fe05f372decc90f63724d3fd8239a4332031cfd5ff07f59e0e"
+      },
+      {
+        "path": "07.平面向量.md",
+        "bytes": 28750,
+        "sha256": "dfca02d1ad5136c58e932d91023175880b69481ac1f88bd89cadd10d25a34567"
+      },
+      {
+        "path": "08.立体几何.md",
+        "bytes": 27838,
+        "sha256": "0f296c6c5894c874f8d60ad7be950d7635b8a730f6fdd893dc39eba50cc7729d"
+      },
+      {
+        "path": "09.空间向量.md",
+        "bytes": 5401,
+        "sha256": "ad897e75dde174f873973db9f0a1ac63edcc3dfb7622d03c2b434b7b1008d7e0"
+      },
+      {
+        "path": "10.解析几何.md",
+        "bytes": 66086,
+        "sha256": "7b630cbcb4e923ccc747645b9aa826a258da50a45dbba87e5e3a527645308e60"
+      },
+      {
+        "path": "11.数列.md",
+        "bytes": 28267,
+        "sha256": "8ddb37630983a29a51243634444f090cd8535cb79555b592e2d95d277f435cac"
+      },
+      {
+        "path": "12.导数.md",
+        "bytes": 38386,
+        "sha256": "6f83892316740e92964b38aba564a5f628cb2234f843cfec01ba78beb39d1021"
+      },
+      {
+        "path": "13.统计.md",
+        "bytes": 6487,
+        "sha256": "5f8cde2045a3652fb1b61c0d2a72cb97ee487b2c5f2096c280643efe1b174cdf"
+      },
+      {
+        "path": "14.概率.md",
+        "bytes": 20613,
+        "sha256": "eae9daadc40a9e57c27f059053de632218e17d32e43141737b55dd5f457053e0"
+      },
+      {
+        "path": "15.组合计数.md",
+        "bytes": 12163,
+        "sha256": "94154f50d25b9cb4ceaa259f60b828114a30aba2ee0716726b7e7ff8fb44e5a6"
+      }
+    ],
+    "repo": "liuhaopeng543/MathBook",
+    "fetchedOn": "2026-10-11",
+    "url": "https://github.com/liuhaopeng543/MathBook"
+  }
+]

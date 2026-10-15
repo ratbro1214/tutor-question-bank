@@ -21,6 +21,26 @@ const sample = (): LessonStructure => ({ objectives: ['测试目标'], prerequis
 const config: ExplanationProvider = { apiKey: 'fixture-only', baseUrl: 'https://fixture.invalid/v1/', apiStyle: 'chat_completions', strictJsonSchema: true, model: 'fixture-only' };
 const answer = (raw: unknown) => Response.json({ choices: [{ finish_reason: 'stop', message: { content: JSON.stringify(raw) } }] });
 
+test('description-led course design works without library questions and rejects invented references', async () => {
+  const course = lessonContentSchema.parse({ topic: '导数与单调性', brief: '学生会求导，但不会讨论含参数的单调性；安排分层练习。' });
+  const raw = sample(); raw.examples = []; raw.stages.forEach(s => { s.questionIds = []; });
+  const result = await generateLesson(course, [], config, undefined, undefined, async (_url, init) => {
+    const prompt = JSON.parse(JSON.parse(String(init!.body)).messages[1].content);
+    assert.equal(prompt.lesson.brief, course.brief);
+    assert.equal(prompt.questions.length, 0);
+    return answer(raw);
+  });
+  assert.equal(result.mode, 'full');
+  if (result.mode === 'full') {
+    assert.equal(result.structure.examples.length, 0);
+    assert.equal(result.structure.stages.reduce((sum, s) => sum + s.minutes, 0), 45);
+    assert.ok(acceptLessonProposal(course, JSON.stringify(course), result).structure);
+  }
+  raw.stages[1].questionIds = [randomUUID()];
+  assert.throws(() => finalizeGeneratedLesson(raw, course, []), /未选择/);
+  assert.equal(lessonContentSchema.parse({ topic: '旧教案' }).brief, '');
+});
+
 test('full generation is structured, references selected versions and cannot elevate answer review', () => {
   const result = finalizeGeneratedLesson(sample(), content, [question]);
   assert.equal(result.structure.examples[0].answerStatus, 'missing');
@@ -109,7 +129,7 @@ test('Responses completed stream is reused; incomplete output never becomes a dr
 });
 test('missing model, cancellation before/during request, timeout and empty candidate set preserve original', async () => {
   await assert.rejects(generateLesson(content, [question], { ...config, apiKey: undefined }), /AI 不可用/);
-  await assert.rejects(generateLesson(content, [], config), /真实 Canonical/);
+  await assert.rejects(generateLesson(content, [], config), /所选题目读取不完整/);
   const cancelled = new AbortController(); cancelled.abort();
   let calls = 0;
   await assert.rejects(generateLesson(content, [question], config, undefined, cancelled.signal, async () => { calls++; return answer(sample()); }), /取消/); assert.equal(calls, 0);

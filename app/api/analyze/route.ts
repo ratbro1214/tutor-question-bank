@@ -20,11 +20,12 @@ import {
 import { taxonomyForStage, taxonomyHierarchyPromptForStage } from "@/lib/taxonomy";
 import { registerAnalysis, unregisterAnalysis } from "@/lib/analysis-cancellation";
 import { AnalysisUpstreamError, classifyAnalysisFailure, isRetryableUpstreamStatus, providerReferenceFromText } from "@/lib/analysis-errors";
+import { knowledgeAnalysisInstructions, knowledgeAnalysisSchema } from '@/lib/knowledge_graph/analysis';
 
 const MAX_IMAGE_BYTES = 8 * 1024 * 1024;
 const MAX_UPSTREAM_ATTEMPTS = 2;
 const UPSTREAM_ATTEMPT_TIMEOUT_MS = 120_000;
-const PROMPT_VERSION = "fast-math-v8-content-method-separated";
+const PROMPT_VERSION = "fast-math-v9-knowledge-graph-candidates";
 const CACHE_TTL_SECONDS = 7 * 24 * 60 * 60;
 const memoryCache = new Map<string, { expires: number; classification: Classification }>();
 
@@ -223,6 +224,7 @@ function fastAnalysisSchema(stage: EducationStage) {
 
 function fixedInstructions(stage: EducationStage) {
   return [
+    ...(stage === '高中' ? [knowledgeAnalysisInstructions] : []),
     `你是家教题库的${stage}数学图片识别与分类器。忠实抄录题干、公式、选项、单位、图中标签及小问；忽略手写草稿。`,
     "extracted_question 面向教师直接阅读和编辑：保持原题的编号、换行与选项结构；公式使用可读的 Unicode/纯文本写法（例如 x²/4 + y²/2 = 1、PA:PN = PB·PM），禁止输出 \\frac、\\overline、^{}、_{}、美元符号等 LaTeX 源码。不要改写或概括原题。",
     "看不清处写[无法辨认]，不得猜测；图片、裁切、图形或分类存在不确定性时设置复核原因。",
@@ -313,6 +315,7 @@ function applyHighConfidenceContentRules(stage: EducationStage, extraction: Visi
 
 async function repairClassification(extraction: VisionExtraction, issues: ClassificationValidationIssue[], stage: EducationStage, config: ProviderConfig, effort: ReasoningEffort, signal: AbortSignal, cacheKey: string, analysisId: string) {
   const baseInstructions = [
+    ...(stage === '高中' ? [knowledgeAnalysisInstructions] : []),
     `你是${stage}数学分类复核器。只修复标签冲突，不重新做视觉识别，不输出答案或完整解题过程。`,
     "选择唯一主章节；核心知识点必须属于主章节；必要跨章节知识点放 auxiliary；方法标签放 method；合计不超过4个。分类依据中提到的受控知识点必须同步放入对应数组。",
     taxonomyHierarchyPromptForStage(stage),
@@ -429,6 +432,7 @@ export async function POST(request: Request) {
         const validationStart = performance.now();
         let candidate = applyHighConfidenceContentRules(stage, extraction, normalizeCandidate(stage, raw.classification as MathClassificationCandidate));
         let issues = validateClassificationCandidate(stage, candidate);
+        if (stage === '高中' && !knowledgeAnalysisSchema.safeParse(candidate.knowledge_graph).success) issues.push({ code: 'INVALID_KNOWLEDGE_GRAPH', field: 'knowledge_graph', message: '请按约定输出主知识点、辅助知识点、考点和具体题型。' });
         timings.validation = elapsed(validationStart);
         attempts.push({ attempt: 1, validation_issues: issues, retry_reason: issues.length ? validationRetryReason(issues) : candidate?.needs_followup ? "模型请求按需复核。" : undefined });
 
@@ -441,6 +445,7 @@ export async function POST(request: Request) {
           addUsage(usage, repair.usage);
           candidate = applyHighConfidenceContentRules(stage, extraction, normalizeCandidate(stage, repair.value as MathClassificationCandidate));
           issues = validateClassificationCandidate(stage, candidate);
+          if (stage === '高中' && !knowledgeAnalysisSchema.safeParse(candidate.knowledge_graph).success) issues.push({ code: 'INVALID_KNOWLEDGE_GRAPH', field: 'knowledge_graph', message: '知识图谱候选格式仍无效。' });
           attempts.push({ attempt: 2, validation_issues: issues, retry_reason: issues.length ? validationRetryReason(issues) : undefined });
         }
 

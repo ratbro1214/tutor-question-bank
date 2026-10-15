@@ -10,6 +10,7 @@ export const mathMethods = sqliteTable('math_methods', {
   content: text('content').notNull(), source: text('source').notNull(), reviewer: text('reviewer'),
   mergedInto: text('merged_into').references((): AnySQLiteColumn => mathMethods.id), createdAt: text('created_at').notNull(), updatedAt: text('updated_at').notNull(),
 }, t => [uniqueIndex('uq_math_method_owner_scope').on(t.id, t.ownerId, t.scopeId), index('idx_math_method_scope_status').on(t.ownerId, t.scopeId, t.status),
+  uniqueIndex('uq_math_method_strategy_key').on(t.ownerId, t.scopeId, sql`json_extract(${t.content}, '$.strategy.key')`).where(sql`json_extract(${t.content}, '$.strategy.key') IS NOT NULL`),
   check('ck_math_method_status', sql`${t.status} IN ('candidate','approved','rejected')`), check('ck_math_method_json', sql`json_valid(${t.content}) AND json_valid(${t.source})`),
   check('ck_math_method_revision', sql`${t.revision}>0`), check('ck_math_method_review', sql`${t.status}<>'approved' OR ${t.reviewer} IS NOT NULL`)]);
 export const mathMethodVersions = sqliteTable('math_method_versions', {

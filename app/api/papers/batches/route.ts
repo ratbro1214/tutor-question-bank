@@ -33,6 +33,7 @@ export async function POST(request:Request) {
   const scope=await privateScope(db);
   if(!(await solutionStore(request,true)).scopes.includes(scope.id))throw new SolutionError('无权修改此批次范围。',403);
   let id:string;
+  let knowledgeGraph: unknown;
   if(input.action==='create') {
    id=crypto.randomUUID();
    await db.batch([db.prepare('INSERT INTO paper_import_batches(id,scope_id) VALUES(?,?)').bind(id,scope.id),...input.filenames.map((name,position)=>db.prepare('INSERT INTO paper_import_files(id,batch_id,position,filename) VALUES(?,?,?,?)').bind(crypto.randomUUID(),id,position,name))]);
@@ -41,7 +42,7 @@ export async function POST(request:Request) {
    if(!await db.prepare('SELECT id FROM paper_import_batches WHERE id=? AND scope_id=?').bind(id,scope.id).first()) throw new ImportConflict('批次不存在或 scope 不符。');
    if(input.action==='attach') await attachPaper(db,id,input.fileId,input.paperId);
    if(input.action==='item') await registerItem(db,getBucket(),id,input.fileId,input);
-   if(input.action==='confirm') await confirmItem(db,getBucket(),id,input.itemId,input.applicability,input.observedHash);
+   if(input.action==='confirm') knowledgeGraph = await confirmItem(db,getBucket(),id,input.itemId,input.applicability,input.observedHash);
    if(input.action==='finishFile') await db.batch([db.prepare("UPDATE paper_import_files SET status=?,error=? WHERE id=? AND batch_id=? AND status IN ('pending','processing')").bind(input.status,input.error,input.fileId,id)]);
    if(input.action==='finish') {
     const result=await batchResult(db,id);
@@ -50,7 +51,7 @@ export async function POST(request:Request) {
     await db.batch([db.prepare('UPDATE paper_import_batches SET status=? WHERE id=?').bind(status,id)]);
    }
   }
-  return Response.json(await batchResult(db,id));
+  return Response.json({ ...await batchResult(db,id), ...(knowledgeGraph ? { knowledgeGraph } : {}) });
  } catch(error) {return failure(error);}
 }
 function failure(error:unknown) {

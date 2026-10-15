@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { cropRegionSchema, type CropRegion, type QuestionCrop } from "@/lib/paper";
 import type { PaperDocument } from "@/lib/pdf-browser";
 
-export function PaperCropEditor({ doc, crop, onApply, onClose }: { doc: PaperDocument; crop: QuestionCrop; onApply: (crop: QuestionCrop) => void; onClose: () => void }) {
+export function PaperCropEditor({ doc, crop, onApply, onClose, lockNumber = false }: { doc: PaperDocument; crop: QuestionCrop; onApply: (crop: QuestionCrop) => void; onClose: () => void; lockNumber?: boolean }) {
   const [number, setNumber] = useState(crop.number), [regions, setRegions] = useState(crop.regions), [active, setActive] = useState(0), [image, setImage] = useState(""), [error, setError] = useState("");
   const start = useRef<{ x: number; y: number } | null>(null), region = regions[active];
   useEffect(() => {
@@ -16,7 +16,7 @@ export function PaperCropEditor({ doc, crop, onApply, onClose }: { doc: PaperDoc
   function point(event: React.PointerEvent<HTMLDivElement>) { const rect = event.currentTarget.getBoundingClientRect(); return { x: Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width)), y: Math.max(0, Math.min(1, (event.clientY - rect.top) / rect.height)) }; }
   return <div className="surface-card space-y-4 p-5" aria-label="调整题目裁切">
     <div className="flex items-center justify-between"><h3 className="font-semibold">调整裁切 · 拖动框选完整题目</h3><Button variant="outline" size="sm" onClick={onClose}>关闭</Button></div>
-    <div className="flex flex-wrap items-center gap-3"><label>题号 <input aria-label="裁切题号" type="number" min={1} max={200} className="w-20 rounded border p-2" value={number} onChange={e => setNumber(Number(e.target.value))} /></label>
+    <div className="flex flex-wrap items-center gap-3"><label>题号 <input aria-label="裁切题号" type="number" disabled={lockNumber} min={1} max={200} className="w-20 rounded border p-2" value={number} onChange={e => setNumber(Number(e.target.value))} /></label>
       <label>片段 <select aria-label="当前裁切片段" className="rounded border p-2" value={active} onChange={e => setActive(Number(e.target.value))}>{regions.map((r, i) => <option key={i} value={i}>{i + 1} · 第 {r.page} 页</option>)}</select></label>
       <label>页码 <input aria-label="裁切页码" type="number" min={1} max={doc.pages.length} className="w-20 rounded border p-2" value={region.page} onChange={e => update({ page: Math.max(1, Math.min(doc.pages.length, Number(e.target.value))) })} /></label>
       <Button variant="outline" size="sm" onClick={() => { setRegions(current => [...current, { page: Math.min(doc.pages.length, region.page + 1), x: .02, y: .035, width: .96, height: .3 }]); setActive(regions.length); }}>添加跨页片段</Button>

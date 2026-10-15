@@ -6,6 +6,7 @@ import { generateExplanation, ExplanationGenerationError, type ExplanationProvid
 import type { Classification } from "@/lib/classification";
 import { POST as analyzeImage } from "@/app/api/analyze/route";
 import { processPaperAnalysis } from '@/lib/paper-analysis';
+import { syncPaperKnowledge } from '@/lib/knowledge_graph/server';
 
 function provider(): ExplanationProvider {
   if (env.AI_PROVIDER === "deepseek") return { apiKey: env.DEEPSEEK_API_KEY, baseUrl: env.DEEPSEEK_BASE_URL || "https://api.deepseek.com", apiStyle: "chat_completions", model: env.DEEPSEEK_VISION_MODEL || "deepseek-flash", strictJsonSchema: false };
@@ -29,7 +30,7 @@ export async function POST(request: Request, context: { params: Promise<{ id: st
       return Response.json({ question: publicPaperQuestion(current!) });
     }
     const stage = input.educationStage === "初中" ? "初中" : "高中";
-    if (mode === 'classify' && row.classification && JSON.parse(row.classification).education_stage === stage && row.status !== 'processing' && !row.error && !input.regenerate) return Response.json({ question: publicPaperQuestion(row), reused: true });
+    if (mode === 'classify' && row.classification && JSON.parse(row.classification).education_stage === stage && row.status !== 'processing' && !row.error && !input.regenerate) return Response.json({ question: publicPaperQuestion(row), reused: true, knowledgeGraph: await syncPaperKnowledge(request, questionId) });
     if (mode === 'explain' && row.explanation && row.status === "ready" && !row.error && !input.regenerate) return Response.json({ question: publicPaperQuestion(row), reused: true });
     const config = provider();
     if (!config.apiKey) throw new ExplanationGenerationError("尚未配置 AI 分类/解题模型。", 503);
@@ -66,7 +67,7 @@ export async function POST(request: Request, context: { params: Promise<{ id: st
      ? await db.prepare("UPDATE paper_questions SET status='ready',error='',generation_token=NULL,updated_at=? WHERE id=? AND generation_token=? RETURNING *").bind(new Date().toISOString(), questionId, token).first<PaperQuestionRow>()
      : await db.prepare("UPDATE paper_questions SET explanation=?,model=?,revision=revision+1,status='ready',error='',generation_token=NULL,updated_at=? WHERE id=? AND generation_token=? RETURNING *").bind(JSON.stringify(result.content), config.model, new Date().toISOString(), questionId, token).first<PaperQuestionRow>();
     if (!saved) return Response.json({ error: "解析任务已更新，请重新读取。" }, { status: 409 });
-    return Response.json({ question: publicPaperQuestion(saved) }, { headers: { "Cache-Control": "no-store" } });
+    return Response.json({ question: publicPaperQuestion(saved), knowledgeGraph: await syncPaperKnowledge(request, questionId) }, { headers: { "Cache-Control": "no-store" } });
   } catch (error) {
     const message = error instanceof ExplanationGenerationError ? error.message : "此题处理失败，请稍后重试。";
     if (token && questionId) await getD1Binding().prepare("UPDATE paper_questions SET status=CASE WHEN explanation IS NULL AND classification IS NULL THEN 'failed' ELSE 'ready' END,error=?,generation_token=NULL,updated_at=? WHERE id=? AND generation_token=?").bind(message, new Date().toISOString(), questionId, token).run().catch(() => {});

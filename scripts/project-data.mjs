@@ -127,7 +127,7 @@ function gitState(root) {
 }
 function allowedRestore(file) {
   return /^(?:\.wrangler\/state\/v3\/(?:d1|r2)\/|data\/english\/|public\/english[^/]*(?:\/|$)|blobs\/|drizzle\/)/.test(file)
-    || ['.openai/hosting.json', 'db/schema.ts', 'db/english-schema.ts', 'db/canonical-schema.ts', 'db/paper-batch-schema.ts', 'db/lesson-plan-schema.ts', 'drizzle.config.ts', 'cloudflare-env.d.ts'].includes(file);
+    || ['.openai/hosting.json', 'db/schema.ts', 'db/english-schema.ts', 'db/canonical-schema.ts', 'db/paper-batch-schema.ts', 'db/lesson-plan-schema.ts', 'db/paper-solution-schema.ts', 'drizzle.config.ts', 'cloudflare-env.d.ts'].includes(file);
 }
 export async function validateBackup(directory) {
   await noLinks(directory);

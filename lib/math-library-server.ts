@@ -5,6 +5,7 @@ import { libraryBase, libraryProjection, libraryWhere, parseLibraryFilters } fro
 import { librarySourcesSql } from './math-library-sources';
 import { libraryExplanation } from './math-library-explanation';
 import { canonicalSolutions } from './canonical-solutions';
+import { LibraryTrashStore } from './math-library-trash';
 export class LibraryError extends Error {constructor(message:string,public status:number){super(message);}}
 export async function libraryScopes(request:Request) {
  const user=await getChatGPTUser();if(!user)throw new LibraryError('请先登录后访问私有数学题库。',401);
@@ -16,6 +17,16 @@ export async function libraryScopes(request:Request) {
  const ids=rows.results.map(r=>r.id);const requested=new URL(request.url).searchParams.get('scope');
  if(!ids.length||(requested&&!ids.includes(requested)))throw new LibraryError('无权访问此题库范围。',403);
  return requested?[requested]:ids;
+}
+export async function libraryTrashStore(request: Request) {
+ if ((request.headers.get('Origin') && request.headers.get('Origin') !== new URL(request.url).origin) || request.headers.get('Sec-Fetch-Site') === 'cross-site') throw new LibraryError('不允许跨站修改。', 403);
+ const scopes = await libraryScopes(request), user = await getChatGPTUser();
+ if (!user) throw new LibraryError('请先登录。', 401);
+ return new LibraryTrashStore(getD1Binding(), user.userId, scopes);
+}
+export async function libraryTrashItems(scopes: string[]) {
+ const rows = await getD1Binding().prepare(libraryBase(scopes, false, true) + `SELECT ${libraryProjection},t.deleted_at FROM library c JOIN math_library_trash t ON t.canonical_question_id=c.id ORDER BY t.deleted_at DESC,c.id`).bind(...scopes).all<Record<string, unknown>>();
+ return { items: rows.results.map(publicLibraryRow) };
 }
 const parse=(value:unknown,fallback:unknown=null)=>{if(typeof value!=='string')return value??fallback;try{return JSON.parse(value);}catch{return fallback;}};
 export function publicLibraryRow(row:Record<string,unknown>){const classification=parse(row.classification) as Record<string,unknown>|null;if(classification){delete classification.analysis_trace;delete classification.extracted_question;}return {...row,classification,sources:parse(row.sources,[]),imageUrl:row.image_occurrence_id?`/api/math-library/${row.id}/image/${row.image_occurrence_id}`:null};}

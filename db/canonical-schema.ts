@@ -31,6 +31,12 @@ export const canonicalQuestions = sqliteTable('canonical_questions', {
   check('ck_canonical_redirect', sql`${t.redirectToId} IS NULL OR (${t.status} = 'merged' AND ${t.redirectToId} <> ${t.id})`),
 ]);
 
+export const mathLibraryTrash = sqliteTable('math_library_trash', {
+  canonicalQuestionId: text('canonical_question_id').primaryKey().notNull().references(() => canonicalQuestions.id, { onDelete: 'restrict' }),
+  deletedBy: text('deleted_by').notNull(),
+  deletedAt: timestamp('deleted_at'),
+});
+
 export const canonicalQuestionRevisions = sqliteTable('canonical_question_revisions', {
   id: text('id').primaryKey().notNull(), canonicalQuestionId: text('canonical_question_id').notNull().references((): AnySQLiteColumn => canonicalQuestions.id, { onDelete: 'restrict' }),
   revision: integer('revision').notNull(), subject: text('subject').notNull().default('unknown'), educationStage: text('education_stage'),
@@ -48,6 +54,14 @@ export const canonicalQuestionRevisions = sqliteTable('canonical_question_revisi
   check('ck_canonical_revision_identity', sql`${t.identityStatus} IN ('incomplete','ready','needs_review')`),
   check('ck_canonical_revision_supersedes', sql`${t.supersedesId} IS NULL OR ${t.supersedesId} <> ${t.id}`),
 ]);
+
+export const canonicalQuestionExplanations = sqliteTable('canonical_question_explanations', {
+  contentRevisionId: text('content_revision_id').primaryKey().notNull().references(() => canonicalQuestionRevisions.id, { onDelete: 'restrict' }),
+  content: text('content').notNull(), sourceText: text('source_text').notNull(),
+  revision: integer('revision').notNull().default(1), origin: text('origin').notNull(),
+  model: text('model').notNull().default(''), reviewed: integer('reviewed').notNull().default(0),
+  updatedAt: timestamp('updated_at'),
+});
 
 export const sourceDocuments = sqliteTable('source_documents', {
   id: text('id').primaryKey().notNull(), scopeId: text('scope_id').notNull().references(() => questionLibraryScopes.id, { onDelete: 'restrict' }),

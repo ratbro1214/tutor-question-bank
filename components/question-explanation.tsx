@@ -10,8 +10,8 @@ import { explanationDraftKey, readExplanationDraft } from "@/lib/explanation-dra
 const textareaClass = "w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm leading-7 outline-none focus:border-terracotta-600 focus:ring-2 focus:ring-terracotta-100 disabled:opacity-60";
 const textClass = "whitespace-pre-wrap break-words text-sm leading-7 text-slate-700";
 
-export function QuestionExplanation({ studentId, questionId, questionText }: { studentId: string; questionId: number; questionText: string }) {
-  const endpoint = `/api/questions/${questionId}/explanation`;
+export function QuestionExplanation({ studentId, questionId, questionText, apiEndpoint }: { studentId: string; questionId: number; questionText: string; apiEndpoint?: string }) {
+  const endpoint = apiEndpoint || `/api/questions/${questionId}/explanation`;
   const [draft, setDraft] = useState<ExplanationContent | null>(null);
   const [sourceText, setSourceText] = useState(questionText);
   const [saved, setSaved] = useState<SavedExplanation | null>(null);
@@ -28,7 +28,7 @@ export function QuestionExplanation({ studentId, questionId, questionText }: { s
   const [message, setMessage] = useState("");
   const [reload, setReload] = useState(0);
   const [saveBlocked, setSaveBlocked] = useState(false);
-  const storageKey = explanationDraftKey(studentId, questionId);
+  const storageKey = apiEndpoint ? `canonical-explanation:${apiEndpoint}` : explanationDraftKey(studentId, questionId);
   const controller = useRef<AbortController | null>(null);
   const initialText = useRef(questionText);
   useEffect(() => {
@@ -36,13 +36,13 @@ export function QuestionExplanation({ studentId, questionId, questionText }: { s
     async function load() {
       setLoading(true); setError("");
       try {
-        const response = await fetch(`${endpoint}?studentId=${studentId}`, { cache: "no-store", signal: abort.signal });
+        const response = await fetch(`${endpoint}${endpoint.includes('?')?'&':'?'}studentId=${encodeURIComponent(studentId)}`, { cache: "no-store", signal: abort.signal });
         const data = await response.json() as { explanation: SavedExplanation | null; error?: string };
         if (!response.ok) throw Error(data.error || "解析加载失败。");
         if (abort.signal.aborted) return;
         setSaved(data.explanation); setDraft(data.explanation?.content || null);
         setSourceText(data.explanation?.sourceText || initialText.current);
-        setOrigin(data.explanation?.origin || "manual"); setModel(data.explanation?.model || "");
+        setOrigin(data.explanation?.origin === 'external' ? 'manual' : data.explanation?.origin || "manual"); setModel(data.explanation?.model || "");
         setReviewed(data.explanation?.reviewed || false); setLoaded(true); setDirty(false);
         setSaveBlocked(false);
         let backup = null;
@@ -144,7 +144,7 @@ export function QuestionExplanation({ studentId, questionId, questionText }: { s
       </div>}
       {hasContent && <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-slate-500">
         <span className={`rounded-full px-2.5 py-1 ${reviewed ? "bg-terracotta-50 text-terracotta-800" : "bg-amber-50 text-amber-800"}`}>{reviewed ? "教师已核对" : "待教师核对"}</span>
-        <span>{origin === "ai" ? "AI 辅助解析" : "教师编写"}</span>
+        <span>{saved?.origin === 'external' && !dirty ? '来源参考解析' : origin === "ai" ? "AI 辅助解析" : "教师编写"}</span>
         <span>{dirty ? "尚未保存" : "已保存"}</span>
       </div>}
     </div>
@@ -154,7 +154,7 @@ export function QuestionExplanation({ studentId, questionId, questionText }: { s
       {saveBlocked && <button className="text-sm text-terracotta-800 underline" onClick={readServerVersion}>已复制需要保留的内容，读取服务器版本</button>}
       {message && <p role="status" className="text-sm leading-6 text-terracotta-800">{message}</p>}
       {generating && <div role="status" className="rounded-xl bg-terracotta-50 p-4 text-sm leading-6 text-terracotta-900"><div className="flex items-center gap-2"><LoaderCircle className="size-4 animate-spin" />正在分析原图、推导步骤并检查答案…</div><p className="mt-1 text-terracotta-800">复杂题可能需要几分钟，最多等待 5 分钟，请保持页面打开。</p><button className="mt-2 text-xs underline" onClick={() => controller.current?.abort()}>取消本次生成</button></div>}
-      {!loading && loaded && <details className="rounded-xl border border-slate-200 p-3" open={editing || !hasContent}>
+      {!loading && loaded && <details className="rounded-xl border border-slate-200 p-3" open={editing || (!hasContent && !apiEndpoint)}>
         <summary className="flex cursor-pointer items-center justify-between text-sm font-medium text-slate-600">核对题目原文<ChevronDown className="size-4" /></summary>
         <textarea aria-label="解析对应的题目原文" className={`${textareaClass} mt-3`} rows={4} maxLength={16000} value={sourceText} disabled={busy} onChange={(event) => { setSourceText(event.target.value); setReviewed(false); if (draft) setDirty(true); setMessage(""); }} />
         <p className="mt-2 text-xs leading-5 text-slate-500">可修正识别错误。生成时会同时核对原图；这里的修改随解析保存。</p>

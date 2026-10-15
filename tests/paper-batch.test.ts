@@ -5,6 +5,7 @@ import { readFileSync,readdirSync } from 'node:fs';
 import { attachPaper,registerItem,confirmItem,batchResult } from '../lib/paper-batch-server';
 import { sha256 } from '../lib/canonical-paper-import.mjs';
 import type { ReviewApplication } from '../lib/paper-batch';
+import { importKnowledgeCatalog } from '../lib/knowledge_graph/seed-store';
 
 // Execute the actual D1 statement batches against SQLite, with rollback on any statement failure.
 function fixture() {
@@ -45,6 +46,18 @@ test('three PDFs produce independent items, scoped text duplicates and failed it
   }
   const result=await batchResult(f.db,batch);assert.equal(result.counts.pdfs,3);assert.equal(result.counts.questions,6);assert.equal(result.counts.NEEDS_REVIEW,3);assert.equal(result.counts.FAILED,3);
   assert.equal(f.sql.prepare('SELECT count(*) n FROM canonical_questions').get()!.n,0);
+ }finally{f.close();}
+});
+
+test('confirmed paper import automatically attaches saved AI graph output without another model call', async () => {
+ const f=fixture();try {
+  importKnowledgeCatalog(f.sql,JSON.parse(readFileSync(new URL('../data/knowledge_graph/senior-math-v1.json',import.meta.url),'utf8')));
+  const batch=f.batch(),q=f.question('p',1),file=f.file(batch);
+  f.sql.prepare('UPDATE paper_questions SET classification=? WHERE id=?').run(JSON.stringify({education_stage:'高中',chapter:{code:'HS-FUNCTION'},knowledge_graph:{main_knowledge:'二次函数',secondary_knowledge:[],exam_point:'二次函数区间最值',question_type:'含参数二次函数最值问题'}}),q);
+  await attachPaper(f.db,batch,file,'p');const item=await f.register(batch,file,q,1);
+  const result=await confirmItem(f.db,f.bucket,batch,item.id,f.plain,item.observed_hash!);
+  assert.equal(result.status,'attached');
+  assert.equal(f.sql.prepare('SELECT count(*) n FROM question_knowledge_relation').get()?.n,3);
  }finally{f.close();}
 });
 test('explicit human READY creates graph, equal text reuses identity with separate occurrence, repeats create zero canonical/source/link rows',async()=>{

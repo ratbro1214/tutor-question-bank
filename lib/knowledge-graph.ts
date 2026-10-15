@@ -1,8 +1,13 @@
 import { z } from 'zod';
+import { methodStrategySchema } from './method-strategy-schema';
 
 export const graphStatus = z.enum(['candidate', 'approved', 'rejected']);
 const line = z.string().trim().min(1).max(12000);
 export const methodContentSchema = z.object({
+  strategy: methodStrategySchema.optional(),
+  signals: z.array(line).max(15).optional(), motivation: line.optional(), formulas: z.array(line).max(15).optional(),
+  knowledgePoints: z.array(line).max(15).optional(), strategies: z.array(line).max(15).optional(),
+  problemTypes: z.array(line).max(15).optional(), efficiency: line.optional(), teachingValue: line.optional(),
   name: line.max(160), summary: line, typicalProblems: z.array(line).max(15),
   conditions: z.array(line).min(1).max(15), steps: z.array(line).min(1).max(20),
   limitations: z.array(line).min(1).max(15), mistakes: z.array(line).max(15), variants: z.array(line).max(15),

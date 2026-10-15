@@ -16,6 +16,7 @@ export function LessonAIPanel({ id, revision, content, busy, accept }: { id: str
   const [proposal, setProposal] = useState<Proposal | null>(null), [stageIndex, setStageIndex] = useState(0);
   const [action, setAction] = useState<(typeof lessonEditActions)[number]>('优化表达'), [instruction, setInstruction] = useState(''), [minutes, setMinutes] = useState(5);
   const request = useRef<AbortController | null>(null), last = useRef<{ edit?: LessonEdit } | null>(null);
+  const autoStarted = useRef(false);
   useEffect(() => {
     const abort = new AbortController();
     fetch('/api/lesson-plans/' + id + '/generate', { signal: abort.signal, cache: 'no-store' }).then(readApiResponse<{ available: boolean; message: string; model: string }>).then(setAvailability).catch(e => { if (!abort.signal.aborted) setError(e.message); });
@@ -38,6 +39,14 @@ export function LessonAIPanel({ id, revision, content, busy, accept }: { id: str
       else setError(e instanceof Error ? e.message : '生成失败；原教案保留。');
     } finally { clearTimeout(timer); if (request.current === abort) { request.current = null; setRunning(false); } }
   }
+  useEffect(() => {
+    if (autoStarted.current || !availability?.available || busy || request.current) return;
+    if (new URLSearchParams(window.location.search).get('design') !== '1') return;
+    autoStarted.current = true;
+    const url = new URL(window.location.href); url.searchParams.delete('design');
+    window.history.replaceState(window.history.state, '', url.pathname + url.search + url.hash);
+    void generate();
+  });
   function acceptProposal() {
     if (!proposal) return;
     try { accept(acceptLessonProposal(content, proposal.original, proposal.result, proposal.edit)); setProposal(null); setMessage('已接受为未确认草稿，并保留修改前内容。请检查后保存。'); }
@@ -47,8 +56,8 @@ export function LessonAIPanel({ id, revision, content, busy, accept }: { id: str
   return <div className="space-y-3"><h2 className="font-semibold">AI 教案生成与局部编辑</h2>
     <p className="text-xs text-slate-500">{availability?.message || '正在检查模型配置；手动编辑始终可用。'}</p>
     {availability?.available && <p className="text-xs text-slate-500">使用现有配置：{availability.model}（调用时检查连接）</p>}
-    <Button className="w-full" disabled={busy || running || availability?.available === false || !content.questions.length} onClick={() => generate()}>生成结构化教案草稿</Button>
-    {!content.questions.length && <p className="text-xs text-amber-800">请先选择真实题库例题。</p>}
+    <Button className="w-full" disabled={busy || running || availability?.available === false} onClick={() => generate()}>{content.questions.length ? '结合题库生成课程草稿' : '根据专题与需求设计课程'}</Button>
+    <p className="text-xs text-slate-500">{content.questions.length ? `使用 ${content.questions.length} 道题库例题，结合课程需求设计讲解、追问和练习。` : '可以先生成目标、讲解、活动与分层练习建议，再从教学资源区补选真实例题。'}</p>
     {content.structure && <fieldset disabled={busy || running} className="space-y-2 rounded-lg border p-3"><legend className="text-sm">局部修改</legend>
       <label className="block text-xs">指定环节<select aria-label="AI 指定教学环节" className="h-10 w-full rounded-lg border bg-white" value={stageIndex} onChange={e => setStageIndex(Number(e.target.value))}>{content.structure.stages.map((s, i) => <option key={i} value={i}>{i + 1}. {s.title}</option>)}</select></label>
       <label className="block text-xs">操作<select aria-label="AI 局部编辑操作" className="h-10 w-full rounded-lg border bg-white" value={action} onChange={e => setAction(e.target.value as typeof action)}>{lessonEditActions.map(a => <option key={a}>{a}</option>)}</select></label>

@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { DatabaseSync } from 'node:sqlite';
 import { readFileSync, readdirSync } from 'node:fs';
 import { StudentCanonicalStore } from '../lib/student-canonical-store';
+import { importKnowledgeCatalog } from '../lib/knowledge_graph/seed-store';
 
 function fixture() {
   const db = new DatabaseSync(':memory:'); db.exec('PRAGMA foreign_keys=ON');
@@ -24,6 +25,16 @@ test('student question import preserves old rows, persists classification and is
     assert.deepEqual(f.db.prepare('SELECT * FROM questions').all(), before);
     const rev = f.db.prepare('SELECT * FROM canonical_question_revisions').get()!; assert.equal(rev.education_stage, '高中'); assert.equal(JSON.parse(String(rev.payload)).classification.knowledge_points[0].code, 'HS-DERIVATIVE-CALC');
     assert.equal(f.db.prepare('SELECT count(*) n FROM canonical_questions').get()!.n, 1); assert.deepEqual(f.db.prepare('PRAGMA foreign_key_check').all(), []);
+  } finally { f.db.close(); }
+});
+
+test('confirmed student import automatically attaches knowledge when catalog is initialized', async () => {
+  const f = fixture(); try {
+    importKnowledgeCatalog(f.db, JSON.parse(readFileSync(new URL('../data/knowledge_graph/senior-math-v1.json', import.meta.url), 'utf8')));
+    const p = await f.store.preview(1, 1);
+    const result = await f.store.add(1, 1, p.snapshot, p.text);
+    assert.equal(result.knowledgeGraph.status, 'attached');
+    assert.equal(f.db.prepare('SELECT count(*) n FROM question_knowledge_relation WHERE question_id=?').get(result.canonicalId)?.n, 1);
   } finally { f.db.close(); }
 });
 test('same reviewed text and image reuse identity with separate student source mappings', async () => {

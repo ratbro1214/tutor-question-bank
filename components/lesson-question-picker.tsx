@@ -8,6 +8,7 @@ import { readApiResponse } from '@/lib/api-response';
 import { chaptersForStage, taxonomyForStage } from '@/lib/taxonomy';
 import { defaultSelectionWeights, rankLessonCandidates, type LibraryCandidate } from '@/lib/lesson-question-selection';
 import type { LessonContent, LessonPlan } from '@/lib/lesson-plan';
+import { lessonTopicFilters } from '@/lib/lesson-topic';
 
 const initial = { q: '', stage: '', chapter: '', knowledge: '', type: '', difficulty: '', paper: '', review: '' };
 type Facets = { types: string[]; difficulties: string[]; papers: { id: string; title: string }[] };
@@ -30,11 +31,11 @@ export function LessonQuestionPicker({ content, resources, busy, replaceId, canc
     controller.current?.abort(); setLoading(false); setItems([]); setSearched(false); setPreview(''); setPage(1);
     setFilters(f => ({ ...f, [key]: value, ...(key === 'stage' ? { chapter: '', knowledge: '' } : key === 'chapter' ? { knowledge: '' } : {}) }));
   }
-  async function search(nextPage = 1) {
+  async function search(nextPage = 1, criteria = filters) {
     controller.current?.abort(); const abort = new AbortController(); controller.current = abort;
     setLoading(true); setError(''); setItems([]); setPreview(''); setSearched(false);
     try {
-      const response = await fetch('/api/math-library?' + new URLSearchParams({ ...filters, page: String(nextPage), pageSize: '20' }), { cache: 'no-store', signal: abort.signal });
+      const response = await fetch('/api/math-library?' + new URLSearchParams({ ...criteria, page: String(nextPage), pageSize: '20' }), { cache: 'no-store', signal: abort.signal });
       const result = await readApiResponse<{ items: LibraryCandidate[]; total: number }>(response);
       if (!abort.signal.aborted) { setItems(result.items); setTotal(result.total); setPage(nextPage); setSearched(true); }
     } catch (e) { if (!abort.signal.aborted) setError((e as Error).message); }
@@ -46,7 +47,8 @@ export function LessonQuestionPicker({ content, resources, busy, replaceId, canc
   const ranked = rankLessonCandidates(items, target, content.questions.map(q => ({ canonicalId: q.canonicalId, text: resources.find(r => r.canonicalId === q.canonicalId && r.revisionId === q.revisionId)?.text || '' })), weights);
   const displayed = rank ? ranked : items.map(item => ({ item, score: 0, reasons: [] }));
   return <div className="space-y-3">
-    <p className="text-xs text-slate-500">复用统一题库检索；手动选题和规则推荐均无需调用 AI。</p>
+    <p className="text-xs text-slate-500">从教学题库挑选真实例题，加入后可让 AI 结合原题重新完善课程。</p>
+    <Button variant="outline" disabled={busy||loading} onClick={()=>{const suggestion=lessonTopicFilters(content),next={...initial,...suggestion};setFilters(next);setTarget(old=>({...old,knowledge:suggestion.knowledge}));void search(1,next);}}>按课程专题找题</Button>
     {replaceId && <p role="status" className="rounded-lg bg-amber-50 p-2 text-sm">请选择替换题目，保留原位置、用途和备注。<Button size="sm" variant="ghost" onClick={cancelReplace}>取消替换</Button></p>}
     <div className="grid gap-2 sm:grid-cols-2">
       {field('学段', 'stage', [['初中', '初中'], ['高中', '高中']])}

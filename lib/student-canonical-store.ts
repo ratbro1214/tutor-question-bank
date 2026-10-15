@@ -1,6 +1,7 @@
 import { createHash } from 'node:crypto';
 import { normalizeClassificationTags, validateClassification, type Classification } from './classification';
 import { normalizeQuestionTextV1 } from './paper-canonical-preview.mjs';
+import { tryAttachKnowledge } from './knowledge_graph/attachment-store';
 
 const hash = (value: string | Uint8Array) => createHash('sha256').update(value).digest('hex');
 // Stable UUIDs make concurrent submissions converge without adding a new schema.
@@ -41,7 +42,7 @@ export class StudentCanonicalStore {
       if (old.scope_id !== this.scope) throw new StudentImportError('无权修改已有题库关联。', 403);
       const pinned = await this.db.prepare('SELECT r.original_text,o.occurrence_hash FROM question_module_links l JOIN question_occurrences o ON o.id=l.occurrence_id JOIN canonical_question_revisions r ON r.id=o.content_revision_id WHERE l.module_type=\'student_question\' AND l.module_record_id=?').bind(String(id)).first<{ original_text: string; occurrence_hash: string }>();
       if (old.snapshot !== snapshot || pinned?.original_text !== text || pinned.occurrence_hash !== imageHash) throw new StudentImportError('此题已加入统一题库，当前内容与入库版本不同；原入库版本已保留。');
-      return { canonicalId: old.id, reused: true };
+      return { canonicalId: old.id, reused: true, knowledgeGraph: await tryAttachKnowledge(this.db, this.owner, [this.scope], old.id) };
     }
     // Only identical reviewed text AND image bytes in the same scope can reuse an identity.
     const matches = await this.db.prepare(`SELECT DISTINCT c.id,r.id AS revision_id FROM canonical_questions c JOIN canonical_question_revisions r ON r.id=c.current_revision_id JOIN question_occurrences o ON o.canonical_question_id=c.id AND o.content_revision_id=r.id WHERE c.scope_id=? AND c.subject='math' AND c.status='active' AND r.identity_status='ready' AND r.normalized_text=? AND o.occurrence_hash=? AND o.mapping_status='confirmed'`).bind(this.scope, normalized, imageHash).all<{ id: string; revision_id: string }>();
@@ -66,6 +67,6 @@ export class StudentCanonicalStore {
     statements.push(this.db.prepare(`INSERT OR IGNORE INTO question_occurrences(id,canonical_question_id,content_revision_id,source_document_id,source_type,occurrence_key,source_locator_json,image_key,original_filename,raw_text,occurrence_hash,metadata,mapping_status) VALUES(?,?,?,?,'student_archive',?,?,?,?,?,?,?,'confirmed')`).bind(occurrenceId, canonicalId, revisionId, sourceId, `student_question:${id}`, JSON.stringify({ question_id: id }), row.image_key, row.original_filename, text, imageHash, JSON.stringify({ reviewer: this.owner, import_stage: 'student-button' })));
     statements.push(this.db.prepare(`INSERT OR IGNORE INTO question_module_links(id,module_type,module_record_id,canonical_question_id,occurrence_id,legacy_student_question_id,observed_source_hash) VALUES(?,'student_question',?,?,?,?,?)`).bind(uuid(`${this.scope}:student-link:${id}`), String(id), canonicalId, occurrenceId, id, snapshot));
     try { await this.db.batch(statements); } catch { throw new StudentImportError('入库未完成，题目可能已变化；请重新打开核对窗口后重试。'); }
-    return { canonicalId, reused: Boolean(matches.results.length) };
+    return { canonicalId, reused: Boolean(matches.results.length), knowledgeGraph: await tryAttachKnowledge(this.db, this.owner, [this.scope], canonicalId) };
   }
 }

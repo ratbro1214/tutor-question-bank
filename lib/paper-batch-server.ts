@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { tryAttachKnowledge } from './knowledge_graph/attachment-store';
 import { normalizeQuestionTextV1, hashNormalizedText } from './paper-canonical-preview.mjs';
 import { sha256, stableJSON, observedSourceHash, prepareReadyRecord, CONTENT_SCHEMA_VERSION, IDENTITY_VERSION } from './canonical-paper-import.mjs';
 import { createPendingIdentityDecision } from './paper-identity-review-package.mjs';
@@ -86,7 +87,7 @@ export async function confirmItem(db:D1Database,bucket:R2Bucket,batchId:string,i
  const q=await db.prepare('SELECT * FROM paper_questions WHERE id=?').bind(item.paper_question_id).first<PaperQuestionRow>();
  const paper=await db.prepare('SELECT * FROM papers WHERE id=?').bind(item.paper_id).first<Paper>();
  if(!q||!paper||observedHash!==item.observed_hash||observedSourceHash(q)!==observedHash) throw new ImportConflict('题目在预览后发生变化，请重新导入核对。');
- if(item.canonical_id) return;
+ if(item.canonical_id) return tryAttachKnowledge(db,'project_owner',[scope.id],item.canonical_id);
  const image=await bucket.get(q.image_key),source=await bucket.get(paper.source_key);
  if(!image||!source) throw new ImportConflict('题图或原试卷缺失。');
  const regions=JSON.parse(q.regions),context=regionContext(regions);
@@ -120,4 +121,5 @@ export async function confirmItem(db:D1Database,bucket:R2Bucket,batchId:string,i
  statements.push(db.prepare(`UPDATE paper_import_items SET status=CASE WHEN EXISTS(SELECT 1 FROM canonical_question_revisions WHERE id=? AND json_extract(payload,'$.human_review.review_notes')=?) THEN 'NEW' ELSE 'DUPLICATE' END,canonical_id=?,reason=?,decision=? WHERE id=?`).bind(revisionId,decision.review_notes,canonicalId,'人工 READY 确认后安全关联；同 scope 完整身份重复时复用 Canonical，并保留本来源 occurrence。',JSON.stringify(decision),itemId));
  await db.batch(statements);
  assert.ok(await db.prepare('SELECT id FROM question_module_links WHERE module_record_id=? AND canonical_question_id=?').bind(q.id,canonicalId).first());
+ return tryAttachKnowledge(db,'project_owner',[scope.id],canonicalId);
 }

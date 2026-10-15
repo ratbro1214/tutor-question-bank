@@ -5,6 +5,7 @@ export * from './paper-batch-schema';
 export * from './lesson-plan-schema';
 export * from './paper-solution-schema';
 export * from './knowledge-graph-schema';
+export * from './knowledge_graph/models';
 import {
   index,
   integer,

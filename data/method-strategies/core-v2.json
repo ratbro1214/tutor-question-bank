@@ -1,0 +1,2438 @@
+{
+  "schemaVersion": 2,
+  "datasetId": "gaokao-method-core-v2",
+  "provenance": "依据阶段6需求编写的AI辅助教学草案；缺失的深度报告未作为来源；非官方高考解答。",
+  "cards": [
+    {
+      "name": "定义域与次数退化",
+      "summary": "参数改变表达式的合法域或最高次项，原有定理前提随之改变。",
+      "typicalProblems": [
+        "求使 (a-1)x²+x-1=0 恰有一个实根的 a。"
+      ],
+      "conditions": [
+        "先写原式定义域；按最高次系数是否为零分别研究。"
+      ],
+      "limitations": [
+        "不能在次数未确定时直接使用二次方程判别式。"
+      ],
+      "steps": [
+        "列分母、根式、对数限制",
+        "解最高次系数为零的参数",
+        "分别处理常数、一次和二次情形",
+        "把结论代回原式"
+      ],
+      "mistakes": [
+        "不能在次数未确定时直接使用二次方程判别式。",
+        "约分后仍保留原分母非零；空定义域须说明题目是否允许。"
+      ],
+      "variants": [
+        "改变参数系数或区间开闭性后重新定位临界事件。"
+      ],
+      "signals": [
+        "含参数",
+        "定义域",
+        "二次项",
+        "退化"
+      ],
+      "motivation": "参数改变表达式的合法域或最高次项，原有定理前提随之改变。",
+      "knowledgePoints": [
+        "含参数函数与不等式"
+      ],
+      "strategy": {
+        "version": 2,
+        "key": "p-domain-degree",
+        "family": "parameter",
+        "parent": "参数分类讨论与参数分离",
+        "legacyNames": [
+          "参数分离法",
+          "参数分类讨论法"
+        ],
+        "knowledgeCodes": [
+          "HS-INEQ-PARAMETER",
+          "HS-DERIVATIVE-PARAMETER"
+        ],
+        "catalogCodes": [
+          "FUNC.QUADRATIC",
+          "SETS.LOGIC-PARAM"
+        ],
+        "structure": [
+          "参数改变表达式的合法域或最高次项，原有定理前提随之改变。"
+        ],
+        "checks": [
+          "约分后仍保留原分母非零；空定义域须说明题目是否允许。",
+          "结论分别验证必要性与充分性，不从单个样例推出全称结论。"
+        ],
+        "criticalMechanisms": [
+          {
+            "event": "最高次项消失",
+            "equation": "A(a)=0 或分母 D(x,a)=0",
+            "consequence": "方程降次或定义域发生变化，必须切换模型。"
+          }
+        ],
+        "alternatives": [
+          {
+            "name": "图像观察",
+            "advantage": "当结构匹配时可减少分段或计算。",
+            "cost": "图像不能替代对退化参数的代数核验"
+          }
+        ],
+        "whySimpler": "图像不能替代对退化参数的代数核验",
+        "standardSolution": [
+          "先写原式定义域；按最高次系数是否为零分别研究。",
+          "列分母、根式、对数限制",
+          "解最高次系数为零的参数",
+          "分别处理常数、一次和二次情形",
+          "把结论代回原式",
+          "约分后仍保留原分母非零；空定义域须说明题目是否允许。"
+        ],
+        "teacherNotes": [
+          "临界方程只产生候选分类点；分类是否必要须由数学结构变化和全局证明确认。",
+          "本卡为本阶段编写的教学草案，例题不是自动关联的真题，须人工审核。"
+        ],
+        "examples": [
+          {
+            "statement": "求使 (a-1)x²+x-1=0 恰有一个实根的 a。",
+            "solution": "a=1 时为一次方程，恰有一根。a≠1 时须 Δ=4a-3=0，得 a=3/4。故 a∈{3/4,1}。"
+          }
+        ],
+        "difficulty": 4,
+        "links": [
+          {
+            "type": "boundary",
+            "targetKey": "p-separation-sign",
+            "reason": "在“定义域与次数退化”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "系数变号与判别式变化",
+      "summary": "开口由二次项系数决定；实根数量由判别式决定，两类事件不能混为一谈。",
+      "typicalProblems": [
+        "x²-2ax+1=0 有两个不同实根，求 a。"
+      ],
+      "conditions": [
+        "已确认二次项系数非零，讨论实根时限定实数域。"
+      ],
+      "limitations": [
+        "Δ≥0 只保证有实根，不保证根在指定区间。"
+      ],
+      "steps": [
+        "先处理 A=0",
+        "计算 Δ",
+        "解 A=0、Δ=0 的候选临界参数",
+        "在各参数段检验符号与根数"
+      ],
+      "mistakes": [
+        "Δ≥0 只保证有实根，不保证根在指定区间。",
+        "区分不同实根、重根与代数重数。"
+      ],
+      "variants": [
+        "改变参数系数或区间开闭性后重新定位临界事件。"
+      ],
+      "signals": [
+        "判别式",
+        "实根",
+        "二次",
+        "系数"
+      ],
+      "motivation": "开口由二次项系数决定；实根数量由判别式决定，两类事件不能混为一谈。",
+      "knowledgePoints": [
+        "含参数函数与不等式"
+      ],
+      "strategy": {
+        "version": 2,
+        "key": "p-coefficient-delta",
+        "family": "parameter",
+        "parent": "参数分类讨论与参数分离",
+        "legacyNames": [
+          "参数分离法",
+          "参数分类讨论法"
+        ],
+        "knowledgeCodes": [
+          "HS-INEQ-PARAMETER",
+          "HS-DERIVATIVE-PARAMETER"
+        ],
+        "catalogCodes": [
+          "FUNC.QUADRATIC",
+          "SETS.LOGIC-PARAM"
+        ],
+        "structure": [
+          "开口由二次项系数决定；实根数量由判别式决定，两类事件不能混为一谈。"
+        ],
+        "checks": [
+          "区分不同实根、重根与代数重数。",
+          "结论分别验证必要性与充分性，不从单个样例推出全称结论。"
+        ],
+        "criticalMechanisms": [
+          {
+            "event": "重根产生或开口反向",
+            "equation": "Δ(a)=0；A(a)=0",
+            "consequence": "根数或符号分布改变；Δ=0 对应重根而非两个不同根。"
+          }
+        ],
+        "alternatives": [
+          {
+            "name": "配方",
+            "advantage": "当结构匹配时可减少分段或计算。",
+            "cost": "便于观察顶点，但仍须区分严格不等号与等号"
+          }
+        ],
+        "whySimpler": "便于观察顶点，但仍须区分严格不等号与等号",
+        "standardSolution": [
+          "已确认二次项系数非零，讨论实根时限定实数域。",
+          "先处理 A=0",
+          "计算 Δ",
+          "解 A=0、Δ=0 的候选临界参数",
+          "在各参数段检验符号与根数",
+          "区分不同实根、重根与代数重数。"
+        ],
+        "teacherNotes": [
+          "临界方程只产生候选分类点；分类是否必要须由数学结构变化和全局证明确认。",
+          "本卡为本阶段编写的教学草案，例题不是自动关联的真题，须人工审核。"
+        ],
+        "examples": [
+          {
+            "statement": "x²-2ax+1=0 有两个不同实根，求 a。",
+            "solution": "二次项系数恒为1；Δ=4(a²-1)>0，故 a<-1 或 a>1。"
+          }
+        ],
+        "difficulty": 4,
+        "links": [
+          {
+            "type": "prerequisite",
+            "targetKey": "p-domain-degree",
+            "reason": "在“系数变号与判别式变化”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          },
+          {
+            "type": "combination",
+            "targetKey": "p-root-interval",
+            "reason": "在“系数变号与判别式变化”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "指定区间的根位置",
+      "summary": "根的位置由根数、端点符号、对称轴及顶点共同约束。",
+      "typicalProblems": [
+        "x²-2x+a=0 的两不同根均在 (0,2)，求 a。"
+      ],
+      "conditions": [
+        "二次式或已证明单调的函数；使用介值时须连续。"
+      ],
+      "limitations": [
+        "仅凭 f(l)f(r)>0 不能判定区间内没有根。"
+      ],
+      "steps": [
+        "确定次数与根数",
+        "定位对称轴或单调区间",
+        "比较端点及极值的符号",
+        "分别判断边界根是否允许"
+      ],
+      "mistakes": [
+        "仅凭 f(l)f(r)>0 不能判定区间内没有根。",
+        "两个不同根在开区间需 Δ>0、对称轴在区间内及相应端点条件。"
+      ],
+      "variants": [
+        "改变参数系数或区间开闭性后重新定位临界事件。"
+      ],
+      "signals": [
+        "根",
+        "区间",
+        "零点",
+        "分布"
+      ],
+      "motivation": "根的位置由根数、端点符号、对称轴及顶点共同约束。",
+      "knowledgePoints": [
+        "含参数函数与不等式"
+      ],
+      "strategy": {
+        "version": 2,
+        "key": "p-root-interval",
+        "family": "parameter",
+        "parent": "参数分类讨论与参数分离",
+        "legacyNames": [
+          "参数分离法",
+          "参数分类讨论法"
+        ],
+        "knowledgeCodes": [
+          "HS-INEQ-PARAMETER",
+          "HS-DERIVATIVE-PARAMETER"
+        ],
+        "catalogCodes": [
+          "FUNC.QUADRATIC",
+          "SETS.LOGIC-PARAM"
+        ],
+        "structure": [
+          "根的位置由根数、端点符号、对称轴及顶点共同约束。"
+        ],
+        "checks": [
+          "两个不同根在开区间需 Δ>0、对称轴在区间内及相应端点条件。",
+          "结论分别验证必要性与充分性，不从单个样例推出全称结论。"
+        ],
+        "criticalMechanisms": [
+          {
+            "event": "根穿越区间边界或成对出现",
+            "equation": "f(l,a)=0；f(r,a)=0；Δ(a)=0",
+            "consequence": "区间内根数可能变化，需同时检查顶点。"
+          }
+        ],
+        "alternatives": [
+          {
+            "name": "直接求根",
+            "advantage": "当结构匹配时可减少分段或计算。",
+            "cost": "根式不等式增加运算，但本例也可用 0<1-√(1-a)<1"
+          }
+        ],
+        "whySimpler": "根式不等式增加运算，但本例也可用 0<1-√(1-a)<1",
+        "standardSolution": [
+          "二次式或已证明单调的函数；使用介值时须连续。",
+          "确定次数与根数",
+          "定位对称轴或单调区间",
+          "比较端点及极值的符号",
+          "分别判断边界根是否允许",
+          "两个不同根在开区间需 Δ>0、对称轴在区间内及相应端点条件。"
+        ],
+        "teacherNotes": [
+          "临界方程只产生候选分类点；分类是否必要须由数学结构变化和全局证明确认。",
+          "本卡为本阶段编写的教学草案，例题不是自动关联的真题，须人工审核。"
+        ],
+        "examples": [
+          {
+            "statement": "x²-2x+a=0 的两不同根均在 (0,2)，求 a。",
+            "solution": "Δ=4(1-a)>0 得 a<1；对称轴为1；开口向上且 f(0)=f(2)=a>0，结合顶点值 a-1<0，得 0<a<1。"
+          }
+        ],
+        "difficulty": 4,
+        "links": [
+          {
+            "type": "prerequisite",
+            "targetKey": "p-coefficient-delta",
+            "reason": "在“指定区间的根位置”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          },
+          {
+            "type": "boundary",
+            "targetKey": "p-endpoint-collision",
+            "reason": "在“指定区间的根位置”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "根与端点碰撞",
+      "summary": "区间中的根可经端点进入或离开；端点是否属于定义域决定临界值是否保留。",
+      "typicalProblems": [
+        "方程 x²=a 在 [1,2) 内有根，求 a。"
+      ],
+      "conditions": [
+        "方程及端点有意义，开闭性已经明确。"
+      ],
+      "limitations": [
+        "端点方程给出候选值，不自动给出最终参数范围。"
+      ],
+      "steps": [
+        "代入左右端点",
+        "解端点方程",
+        "与判别式及退化候选值合并",
+        "分段计数并在临界值直接验证"
+      ],
+      "mistakes": [
+        "端点方程给出候选值，不自动给出最终参数范围。",
+        "无穷端点用极限或渐近行为，不能代入无穷。"
+      ],
+      "variants": [
+        "改变参数系数或区间开闭性后重新定位临界事件。"
+      ],
+      "signals": [
+        "端点",
+        "开区间",
+        "闭区间",
+        "根"
+      ],
+      "motivation": "区间中的根可经端点进入或离开；端点是否属于定义域决定临界值是否保留。",
+      "knowledgePoints": [
+        "含参数函数与不等式"
+      ],
+      "strategy": {
+        "version": 2,
+        "key": "p-endpoint-collision",
+        "family": "parameter",
+        "parent": "参数分类讨论与参数分离",
+        "legacyNames": [
+          "参数分离法",
+          "参数分类讨论法"
+        ],
+        "knowledgeCodes": [
+          "HS-INEQ-PARAMETER",
+          "HS-DERIVATIVE-PARAMETER"
+        ],
+        "catalogCodes": [
+          "FUNC.QUADRATIC",
+          "SETS.LOGIC-PARAM"
+        ],
+        "structure": [
+          "区间中的根可经端点进入或离开；端点是否属于定义域决定临界值是否保留。"
+        ],
+        "checks": [
+          "无穷端点用极限或渐近行为，不能代入无穷。",
+          "结论分别验证必要性与充分性，不从单个样例推出全称结论。"
+        ],
+        "criticalMechanisms": [
+          {
+            "event": "根落在端点",
+            "equation": "f(l,a)=0 或 f(r,a)=0",
+            "consequence": "根数在开闭区间的计数规则不同。"
+          }
+        ],
+        "alternatives": [
+          {
+            "name": "值域法",
+            "advantage": "当结构匹配时可减少分段或计算。",
+            "cost": "有单调性时更省事；非单调函数不能直接平方端点定范围"
+          }
+        ],
+        "whySimpler": "有单调性时更省事；非单调函数不能直接平方端点定范围",
+        "standardSolution": [
+          "方程及端点有意义，开闭性已经明确。",
+          "代入左右端点",
+          "解端点方程",
+          "与判别式及退化候选值合并",
+          "分段计数并在临界值直接验证",
+          "无穷端点用极限或渐近行为，不能代入无穷。"
+        ],
+        "teacherNotes": [
+          "临界方程只产生候选分类点；分类是否必要须由数学结构变化和全局证明确认。",
+          "本卡为本阶段编写的教学草案，例题不是自动关联的真题，须人工审核。"
+        ],
+        "examples": [
+          {
+            "statement": "方程 x²=a 在 [1,2) 内有根，求 a。",
+            "solution": "该区间 x>0 且 x² 严格递增，值域为 [1,4)，故 1≤a<4；a=4 的根2不在区间内。"
+          }
+        ],
+        "difficulty": 4,
+        "links": [
+          {
+            "type": "combination",
+            "targetKey": "p-root-interval",
+            "reason": "在“根与端点碰撞”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "参数分离与不等号方向",
+      "summary": "F(x,a)=A(x)a+B(x) 对参数呈一次结构；A 的符号控制方向。",
+      "typicalProblems": [
+        "对所有 x∈[-1,1]，ax≤1，求 a。"
+      ],
+      "conditions": [
+        "逐点处理 A=0，并确定 A>0、A<0 的区域。"
+      ],
+      "limitations": [
+        "不能除以符号未知的式子；非线性参数不一定能一次分离。"
+      ],
+      "steps": [
+        "求合法域与 A=0 的点",
+        "按 A 的符号分区",
+        "分离得到上界或下界",
+        "对全称条件取交集，对存在条件取并集"
+      ],
+      "mistakes": [
+        "不能除以符号未知的式子；非线性参数不一定能一次分离。",
+        "全称 a≤g(x) 求所有上界限制的交集；严格条件另查界是否可达。"
+      ],
+      "variants": [
+        "改变参数系数或区间开闭性后重新定位临界事件。"
+      ],
+      "signals": [
+        "恒成立",
+        "参数分离",
+        "分母",
+        "变号",
+        "含参"
+      ],
+      "motivation": "F(x,a)=A(x)a+B(x) 对参数呈一次结构；A 的符号控制方向。",
+      "knowledgePoints": [
+        "含参数函数与不等式"
+      ],
+      "strategy": {
+        "version": 2,
+        "key": "p-separation-sign",
+        "family": "parameter",
+        "parent": "参数分类讨论与参数分离",
+        "legacyNames": [
+          "参数分离法",
+          "参数分类讨论法"
+        ],
+        "knowledgeCodes": [
+          "HS-INEQ-PARAMETER",
+          "HS-DERIVATIVE-PARAMETER"
+        ],
+        "catalogCodes": [
+          "FUNC.QUADRATIC",
+          "SETS.LOGIC-PARAM"
+        ],
+        "structure": [
+          "F(x,a)=A(x)a+B(x) 对参数呈一次结构；A 的符号控制方向。"
+        ],
+        "checks": [
+          "全称 a≤g(x) 求所有上界限制的交集；严格条件另查界是否可达。",
+          "结论分别验证必要性与充分性，不从单个样例推出全称结论。"
+        ],
+        "criticalMechanisms": [
+          {
+            "event": "除数为零或变号",
+            "equation": "A(x)=0",
+            "consequence": "分离方向反转，零点处须回原式。"
+          }
+        ],
+        "alternatives": [
+          {
+            "name": "端点最值法",
+            "advantage": "当结构匹配时可减少分段或计算。",
+            "cost": "本例线性函数在区间端点取最值，更快；一般非线性式须另证"
+          }
+        ],
+        "whySimpler": "本例线性函数在区间端点取最值，更快；一般非线性式须另证",
+        "standardSolution": [
+          "逐点处理 A=0，并确定 A>0、A<0 的区域。",
+          "求合法域与 A=0 的点",
+          "按 A 的符号分区",
+          "分离得到上界或下界",
+          "对全称条件取交集，对存在条件取并集",
+          "全称 a≤g(x) 求所有上界限制的交集；严格条件另查界是否可达。"
+        ],
+        "teacherNotes": [
+          "临界方程只产生候选分类点；分类是否必要须由数学结构变化和全局证明确认。",
+          "本卡为本阶段编写的教学草案，例题不是自动关联的真题，须人工审核。"
+        ],
+        "examples": [
+          {
+            "statement": "对所有 x∈[-1,1]，ax≤1，求 a。",
+            "solution": "x>0 给 a≤1/x，合并为 a≤1；x<0 给 a≥1/x，合并为 a≥-1；x=0 恒成立。故 -1≤a≤1。"
+          }
+        ],
+        "difficulty": 4,
+        "links": [
+          {
+            "type": "prerequisite",
+            "targetKey": "p-domain-degree",
+            "reason": "在“参数分离与不等号方向”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          },
+          {
+            "type": "combination",
+            "targetKey": "p-worst-constant",
+            "reason": "在“参数分离与不等号方向”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          },
+          {
+            "type": "alternative",
+            "targetKey": "i-square",
+            "reason": "在“参数分离与不等号方向”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "导数零点排序",
+      "summary": "导数因子的零点随参数移动，零点顺序改变会改变符号表。",
+      "typicalProblems": [
+        "f′(x)=(x-a)(x-1)，求增区间。"
+      ],
+      "conditions": [
+        "导数表达式正确，所有实零点及不可导点均已列出。"
+      ],
+      "limitations": [
+        "不能按书写顺序排列含参数的零点，也不能跨定义域断点画连续符号表。"
+      ],
+      "steps": [
+        "求导并分解",
+        "列零点相等的方程",
+        "比较各参数段内的零点顺序",
+        "画符号表并处理重合情形"
+      ],
+      "mistakes": [
+        "不能按书写顺序排列含参数的零点，也不能跨定义域断点画连续符号表。",
+        "导数零点不必是极值点，必须比较两侧符号。"
+      ],
+      "variants": [
+        "改变参数系数或区间开闭性后重新定位临界事件。"
+      ],
+      "signals": [
+        "导数",
+        "排序",
+        "单调区间",
+        "含参"
+      ],
+      "motivation": "导数因子的零点随参数移动，零点顺序改变会改变符号表。",
+      "knowledgePoints": [
+        "含参数函数与不等式"
+      ],
+      "strategy": {
+        "version": 2,
+        "key": "p-derivative-order",
+        "family": "parameter",
+        "parent": "参数分类讨论与参数分离",
+        "legacyNames": [
+          "参数分离法",
+          "参数分类讨论法"
+        ],
+        "knowledgeCodes": [
+          "HS-INEQ-PARAMETER",
+          "HS-DERIVATIVE-PARAMETER"
+        ],
+        "catalogCodes": [
+          "FUNC.QUADRATIC",
+          "SETS.LOGIC-PARAM"
+        ],
+        "structure": [
+          "导数因子的零点随参数移动，零点顺序改变会改变符号表。"
+        ],
+        "checks": [
+          "导数零点不必是极值点，必须比较两侧符号。",
+          "结论分别验证必要性与充分性，不从单个样例推出全称结论。"
+        ],
+        "criticalMechanisms": [
+          {
+            "event": "两个驻点重合",
+            "equation": "r₁(a)=r₂(a)",
+            "consequence": "符号段合并，重根处导数未必变号。"
+          }
+        ],
+        "alternatives": [
+          {
+            "name": "直接配方分析导数",
+            "advantage": "当结构匹配时可减少分段或计算。",
+            "cost": "适合整体判定非负，不能替代两异根时的局部符号排序"
+          }
+        ],
+        "whySimpler": "适合整体判定非负，不能替代两异根时的局部符号排序",
+        "standardSolution": [
+          "导数表达式正确，所有实零点及不可导点均已列出。",
+          "求导并分解",
+          "列零点相等的方程",
+          "比较各参数段内的零点顺序",
+          "画符号表并处理重合情形",
+          "导数零点不必是极值点，必须比较两侧符号。"
+        ],
+        "teacherNotes": [
+          "临界方程只产生候选分类点；分类是否必要须由数学结构变化和全局证明确认。",
+          "本卡为本阶段编写的教学草案，例题不是自动关联的真题，须人工审核。"
+        ],
+        "examples": [
+          {
+            "statement": "f′(x)=(x-a)(x-1)，求增区间。",
+            "solution": "a<1 时在 (-∞,a)、(1,+∞) 增；a>1 时在 (-∞,1)、(a,+∞) 增；a=1 时导数为平方，函数在实数上严格递增（任何非退化区间导数非恒零）。"
+          }
+        ],
+        "difficulty": 4,
+        "links": [
+          {
+            "type": "prerequisite",
+            "targetKey": "p-domain-degree",
+            "reason": "在“导数零点排序”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          },
+          {
+            "type": "boundary",
+            "targetKey": "p-stationary-domain",
+            "reason": "在“导数零点排序”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "导数零点进出定义域",
+      "summary": "驻点只在合法域内才参与极值比较；参数使驻点穿过边界时需重新选择候选点。",
+      "typicalProblems": [
+        "f(x)=x²-2ax 在 [0,1] 的最小值。"
+      ],
+      "conditions": [
+        "明确开闭区间，函数在分段内可导。"
+      ],
+      "limitations": [
+        "不能将定义域外的驻点当成最值候选。"
+      ],
+      "steps": [
+        "求定义域",
+        "求驻点 r(a)",
+        "解 r(a)=端点 并判定归属",
+        "比较合法驻点与可取端点或极限"
+      ],
+      "mistakes": [
+        "不能将定义域外的驻点当成最值候选。",
+        "开端点只能给极限，不一定有最值。"
+      ],
+      "variants": [
+        "改变参数系数或区间开闭性后重新定位临界事件。"
+      ],
+      "signals": [
+        "导数",
+        "定义域",
+        "极值",
+        "区间"
+      ],
+      "motivation": "驻点只在合法域内才参与极值比较；参数使驻点穿过边界时需重新选择候选点。",
+      "knowledgePoints": [
+        "含参数函数与不等式"
+      ],
+      "strategy": {
+        "version": 2,
+        "key": "p-stationary-domain",
+        "family": "parameter",
+        "parent": "参数分类讨论与参数分离",
+        "legacyNames": [
+          "参数分离法",
+          "参数分类讨论法"
+        ],
+        "knowledgeCodes": [
+          "HS-INEQ-PARAMETER",
+          "HS-DERIVATIVE-PARAMETER"
+        ],
+        "catalogCodes": [
+          "FUNC.QUADRATIC",
+          "SETS.LOGIC-PARAM"
+        ],
+        "structure": [
+          "驻点只在合法域内才参与极值比较；参数使驻点穿过边界时需重新选择候选点。"
+        ],
+        "checks": [
+          "开端点只能给极限，不一定有最值。",
+          "结论分别验证必要性与充分性，不从单个样例推出全称结论。"
+        ],
+        "criticalMechanisms": [
+          {
+            "event": "驻点穿过边界",
+            "equation": "r(a)=l 或 r(a)=r",
+            "consequence": "极值候选集合改变。"
+          }
+        ],
+        "alternatives": [
+          {
+            "name": "配方与最近点",
+            "advantage": "当结构匹配时可减少分段或计算。",
+            "cost": "二次式可直接比较 x 到 a 的距离，比通用导数讨论简洁"
+          }
+        ],
+        "whySimpler": "二次式可直接比较 x 到 a 的距离，比通用导数讨论简洁",
+        "standardSolution": [
+          "明确开闭区间，函数在分段内可导。",
+          "求定义域",
+          "求驻点 r(a)",
+          "解 r(a)=端点 并判定归属",
+          "比较合法驻点与可取端点或极限",
+          "开端点只能给极限，不一定有最值。"
+        ],
+        "teacherNotes": [
+          "临界方程只产生候选分类点；分类是否必要须由数学结构变化和全局证明确认。",
+          "本卡为本阶段编写的教学草案，例题不是自动关联的真题，须人工审核。"
+        ],
+        "examples": [
+          {
+            "statement": "f(x)=x²-2ax 在 [0,1] 的最小值。",
+            "solution": "驻点 x=a。当 a≤0 最小值0；0<a<1 最小值 -a²；a≥1 最小值1-2a。在 a=0,1 两种公式分别一致。"
+          }
+        ],
+        "difficulty": 4,
+        "links": [
+          {
+            "type": "combination",
+            "targetKey": "p-derivative-order",
+            "reason": "在“导数零点进出定义域”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          },
+          {
+            "type": "alternative",
+            "targetKey": "i-square",
+            "reason": "在“导数零点进出定义域”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "极值穿过零点",
+      "summary": "极值相对横轴的位置控制零点个数；还需区间两端行为和单调性保证计数。",
+      "typicalProblems": [
+        "x³-3x+a=0 有三个不同实根，求 a。"
+      ],
+      "conditions": [
+        "连续性和各段严格单调性已证明。"
+      ],
+      "limitations": [
+        "极值等于零时是相切根，不能按异号区间重复计数。"
+      ],
+      "steps": [
+        "求驻点及单调段",
+        "计算各极值",
+        "解极值等于零的参数",
+        "结合端点或极限逐段计数"
+      ],
+      "mistakes": [
+        "极值等于零时是相切根，不能按异号区间重复计数。",
+        "分别核对三段是否实际跨过零；不是只看 Δ。"
+      ],
+      "variants": [
+        "改变参数系数或区间开闭性后重新定位临界事件。"
+      ],
+      "signals": [
+        "极值",
+        "零点个数",
+        "三个实根"
+      ],
+      "motivation": "极值相对横轴的位置控制零点个数；还需区间两端行为和单调性保证计数。",
+      "knowledgePoints": [
+        "含参数函数与不等式"
+      ],
+      "strategy": {
+        "version": 2,
+        "key": "p-extremum-zero",
+        "family": "parameter",
+        "parent": "参数分类讨论与参数分离",
+        "legacyNames": [
+          "参数分离法",
+          "参数分类讨论法"
+        ],
+        "knowledgeCodes": [
+          "HS-INEQ-PARAMETER",
+          "HS-DERIVATIVE-PARAMETER"
+        ],
+        "catalogCodes": [
+          "FUNC.QUADRATIC",
+          "SETS.LOGIC-PARAM"
+        ],
+        "structure": [
+          "极值相对横轴的位置控制零点个数；还需区间两端行为和单调性保证计数。"
+        ],
+        "checks": [
+          "分别核对三段是否实际跨过零；不是只看 Δ。",
+          "结论分别验证必要性与充分性，不从单个样例推出全称结论。"
+        ],
+        "criticalMechanisms": [
+          {
+            "event": "极值落在横轴",
+            "equation": "F(r(a),a)=0 且 Fₓ(r(a),a)=0",
+            "consequence": "重根形成或消失，零点数量可能改变。"
+          }
+        ],
+        "alternatives": [
+          {
+            "name": "图像平移",
+            "advantage": "当结构匹配时可减少分段或计算。",
+            "cost": "帮助定位临界值，规范证明仍写单调性和极值符号"
+          }
+        ],
+        "whySimpler": "帮助定位临界值，规范证明仍写单调性和极值符号",
+        "standardSolution": [
+          "连续性和各段严格单调性已证明。",
+          "求驻点及单调段",
+          "计算各极值",
+          "解极值等于零的参数",
+          "结合端点或极限逐段计数",
+          "分别核对三段是否实际跨过零；不是只看 Δ。"
+        ],
+        "teacherNotes": [
+          "临界方程只产生候选分类点；分类是否必要须由数学结构变化和全局证明确认。",
+          "本卡为本阶段编写的教学草案，例题不是自动关联的真题，须人工审核。"
+        ],
+        "examples": [
+          {
+            "statement": "x³-3x+a=0 有三个不同实根，求 a。",
+            "solution": "导数3(x²-1)，极大值 a+2、极小值 a-2；两端分别趋于负、正无穷。三异根当且仅当 a+2>0 且 a-2<0，即 -2<a<2。"
+          }
+        ],
+        "difficulty": 4,
+        "links": [
+          {
+            "type": "prerequisite",
+            "targetKey": "p-derivative-order",
+            "reason": "在“极值穿过零点”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          },
+          {
+            "type": "boundary",
+            "targetKey": "p-endpoint-collision",
+            "reason": "在“极值穿过零点”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "图像相切临界机制",
+      "summary": "内部切触是联立函数值相等与斜率相等的候选边界。",
+      "typicalProblems": [
+        "直线 y=ax 与 y=x²+1 相切，求 a。"
+      ],
+      "conditions": [
+        "交点为定义域内部可导点；还需证明是支撑切线或目标范围边界。"
+      ],
+      "limitations": [
+        "联立 F=F′=0 一般只有必要性，不自动保证全局恒成立。"
+      ],
+      "steps": [
+        "写差函数 F",
+        "解 F=0、F′=0",
+        "核对切点位置",
+        "证明全局符号并检查端点"
+      ],
+      "mistakes": [
+        "联立 F=F′=0 一般只有必要性，不自动保证全局恒成立。",
+        "相切也可能穿过横轴（奇数高阶接触），需回到符号证明。"
+      ],
+      "variants": [
+        "改变参数系数或区间开闭性后重新定位临界事件。"
+      ],
+      "signals": [
+        "相切",
+        "切线",
+        "唯一交点"
+      ],
+      "motivation": "内部切触是联立函数值相等与斜率相等的候选边界。",
+      "knowledgePoints": [
+        "含参数函数与不等式"
+      ],
+      "strategy": {
+        "version": 2,
+        "key": "p-tangency",
+        "family": "parameter",
+        "parent": "参数分类讨论与参数分离",
+        "legacyNames": [
+          "参数分离法",
+          "参数分类讨论法"
+        ],
+        "knowledgeCodes": [
+          "HS-INEQ-PARAMETER",
+          "HS-DERIVATIVE-PARAMETER"
+        ],
+        "catalogCodes": [
+          "FUNC.QUADRATIC",
+          "SETS.LOGIC-PARAM"
+        ],
+        "structure": [
+          "内部切触是联立函数值相等与斜率相等的候选边界。"
+        ],
+        "checks": [
+          "相切也可能穿过横轴（奇数高阶接触），需回到符号证明。",
+          "结论分别验证必要性与充分性，不从单个样例推出全称结论。"
+        ],
+        "criticalMechanisms": [
+          {
+            "event": "内部切触",
+            "equation": "F(x,a)=0，Fₓ(x,a)=0",
+            "consequence": "两个交点可能合并；边界还可能来自端点或退化。"
+          }
+        ],
+        "alternatives": [
+          {
+            "name": "判别式法",
+            "advantage": "当结构匹配时可减少分段或计算。",
+            "cost": "二次式直接 Δ=0 最简；一般曲线需要联立和全局检验"
+          }
+        ],
+        "whySimpler": "二次式直接 Δ=0 最简；一般曲线需要联立和全局检验",
+        "standardSolution": [
+          "交点为定义域内部可导点；还需证明是支撑切线或目标范围边界。",
+          "写差函数 F",
+          "解 F=0、F′=0",
+          "核对切点位置",
+          "证明全局符号并检查端点",
+          "相切也可能穿过横轴（奇数高阶接触），需回到符号证明。"
+        ],
+        "teacherNotes": [
+          "临界方程只产生候选分类点；分类是否必要须由数学结构变化和全局证明确认。",
+          "本卡为本阶段编写的教学草案，例题不是自动关联的真题，须人工审核。"
+        ],
+        "examples": [
+          {
+            "statement": "直线 y=ax 与 y=x²+1 相切，求 a。",
+            "solution": "交点方程 x²-ax+1=0；Δ=a²-4=0，故 a=±2；切点 x=a/2，均在定义域内。"
+          }
+        ],
+        "difficulty": 4,
+        "links": [
+          {
+            "type": "combination",
+            "targetKey": "p-extremum-zero",
+            "reason": "在“图像相切临界机制”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          },
+          {
+            "type": "alternative",
+            "targetKey": "p-coefficient-delta",
+            "reason": "在“图像相切临界机制”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "等号反推临界参数",
+      "summary": "可取等号点为参数边界提供必要条件，再独立证明充分性。",
+      "typicalProblems": [
+        "求使 x²-2x+a≥0 对所有实数 x 成立的最小 a。"
+      ],
+      "conditions": [
+        "拟定等号点在合法域中且代入不丢失信息。"
+      ],
+      "limitations": [
+        "仅由一个点反推参数不足以证明对所有点成立。"
+      ],
+      "steps": [
+        "选择结构对称或驻点处的候选等号点",
+        "代入得到参数的必要限制",
+        "在候选参数下作差或配方",
+        "证明全域成立并说明等号"
+      ],
+      "mistakes": [
+        "仅由一个点反推参数不足以证明对所有点成立。",
+        "开区间中的极限可能不给可取等号点。"
+      ],
+      "variants": [
+        "改变参数系数或区间开闭性后重新定位临界事件。"
+      ],
+      "signals": [
+        "等号",
+        "临界参数",
+        "最佳常数"
+      ],
+      "motivation": "可取等号点为参数边界提供必要条件，再独立证明充分性。",
+      "knowledgePoints": [
+        "含参数函数与不等式"
+      ],
+      "strategy": {
+        "version": 2,
+        "key": "p-equality-parameter",
+        "family": "parameter",
+        "parent": "参数分类讨论与参数分离",
+        "legacyNames": [
+          "参数分离法",
+          "参数分类讨论法"
+        ],
+        "knowledgeCodes": [
+          "HS-INEQ-PARAMETER",
+          "HS-DERIVATIVE-PARAMETER"
+        ],
+        "catalogCodes": [
+          "FUNC.QUADRATIC",
+          "SETS.LOGIC-PARAM"
+        ],
+        "structure": [
+          "可取等号点为参数边界提供必要条件，再独立证明充分性。"
+        ],
+        "checks": [
+          "开区间中的极限可能不给可取等号点。",
+          "结论分别验证必要性与充分性，不从单个样例推出全称结论。"
+        ],
+        "criticalMechanisms": [
+          {
+            "event": "达到边界值",
+            "equation": "F(x₀,a)=0",
+            "consequence": "得到候选极限参数，必须补充分性。"
+          }
+        ],
+        "alternatives": [
+          {
+            "name": "导数最值",
+            "advantage": "当结构匹配时可减少分段或计算。",
+            "cost": "配方已经给出必要且充分的证据，无需增加求导计算"
+          }
+        ],
+        "whySimpler": "配方已经给出必要且充分的证据，无需增加求导计算",
+        "standardSolution": [
+          "拟定等号点在合法域中且代入不丢失信息。",
+          "选择结构对称或驻点处的候选等号点",
+          "代入得到参数的必要限制",
+          "在候选参数下作差或配方",
+          "证明全域成立并说明等号",
+          "开区间中的极限可能不给可取等号点。"
+        ],
+        "teacherNotes": [
+          "临界方程只产生候选分类点；分类是否必要须由数学结构变化和全局证明确认。",
+          "本卡为本阶段编写的教学草案，例题不是自动关联的真题，须人工审核。"
+        ],
+        "examples": [
+          {
+            "statement": "求使 x²-2x+a≥0 对所有实数 x 成立的最小 a。",
+            "solution": "取 x=1 得 a≥1；当 a=1 时原式=(x-1)²≥0，等号 x=1 可取。故最小 a=1。"
+          }
+        ],
+        "difficulty": 4,
+        "links": [
+          {
+            "type": "combination",
+            "targetKey": "i-equality-reverse",
+            "reason": "在“等号反推临界参数”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          },
+          {
+            "type": "boundary",
+            "targetKey": "i-attainability",
+            "reason": "在“等号反推临界参数”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "最坏点与最佳常数",
+      "summary": "全称约束由最紧的点限制；严格不等式与界可达性共同决定是否包含参数端点。",
+      "typicalProblems": [
+        "对所有 x>0，x+1/x≥a，求最大 a。"
+      ],
+      "conditions": [
+        "明确量词、优化方向及辅助函数的定义域。"
+      ],
+      "limitations": [
+        "不能把 inf 写成一定取得的最小值，不能把存在条件用全称交集处理。"
+      ],
+      "steps": [
+        "先作合法参数分离",
+        "判定求 inf 还是 sup",
+        "用配方或基本不等式尝试取界",
+        "检验可达性及严格性",
+        "用逼近或反例证明最佳性"
+      ],
+      "mistakes": [
+        "不能把 inf 写成一定取得的最小值，不能把存在条件用全称交集处理。",
+        "若 g(x)>L 对所有 x 而 inf g=L，则 a=L 仍可能满足 a<g(x)。"
+      ],
+      "variants": [
+        "改变参数系数或区间开闭性后重新定位临界事件。"
+      ],
+      "signals": [
+        "恒成立",
+        "最佳常数",
+        "最大",
+        "最小",
+        "任意"
+      ],
+      "motivation": "全称约束由最紧的点限制；严格不等式与界可达性共同决定是否包含参数端点。",
+      "knowledgePoints": [
+        "含参数函数与不等式"
+      ],
+      "strategy": {
+        "version": 2,
+        "key": "p-worst-constant",
+        "family": "parameter",
+        "parent": "参数分类讨论与参数分离",
+        "legacyNames": [
+          "参数分离法",
+          "参数分类讨论法"
+        ],
+        "knowledgeCodes": [
+          "HS-INEQ-PARAMETER",
+          "HS-DERIVATIVE-PARAMETER"
+        ],
+        "catalogCodes": [
+          "FUNC.QUADRATIC",
+          "SETS.LOGIC-PARAM"
+        ],
+        "structure": [
+          "全称约束由最紧的点限制；严格不等式与界可达性共同决定是否包含参数端点。"
+        ],
+        "checks": [
+          "若 g(x)>L 对所有 x 而 inf g=L，则 a=L 仍可能满足 a<g(x)。",
+          "结论分别验证必要性与充分性，不从单个样例推出全称结论。"
+        ],
+        "criticalMechanisms": [
+          {
+            "event": "最坏点取到或逼近",
+            "equation": "a≤inf g；或 a≥sup g（非严格全称条件）",
+            "consequence": "决定最佳参数；严格条件须区分每点严格与界可达。"
+          }
+        ],
+        "alternatives": [
+          {
+            "name": "导数最值",
+            "advantage": "当结构匹配时可减少分段或计算。",
+            "cost": "基本不等式一次给出界和等号，导数步骤更多"
+          }
+        ],
+        "whySimpler": "基本不等式一次给出界和等号，导数步骤更多",
+        "standardSolution": [
+          "明确量词、优化方向及辅助函数的定义域。",
+          "先作合法参数分离",
+          "判定求 inf 还是 sup",
+          "用配方或基本不等式尝试取界",
+          "检验可达性及严格性",
+          "用逼近或反例证明最佳性",
+          "若 g(x)>L 对所有 x 而 inf g=L，则 a=L 仍可能满足 a<g(x)。"
+        ],
+        "teacherNotes": [
+          "临界方程只产生候选分类点；分类是否必要须由数学结构变化和全局证明确认。",
+          "本卡为本阶段编写的教学草案，例题不是自动关联的真题，须人工审核。"
+        ],
+        "examples": [
+          {
+            "statement": "对所有 x>0，x+1/x≥a，求最大 a。",
+            "solution": "由 x+1/x≥2，且 x=1 时取等号，故 a≤2；a=2 成立，所以最大 a=2。"
+          }
+        ],
+        "difficulty": 4,
+        "links": [
+          {
+            "type": "prerequisite",
+            "targetKey": "p-separation-sign",
+            "reason": "在“最坏点与最佳常数”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          },
+          {
+            "type": "alternative",
+            "targetKey": "i-fixed-product",
+            "reason": "在“最坏点与最佳常数”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          },
+          {
+            "type": "boundary",
+            "targetKey": "i-attainability",
+            "reason": "在“最坏点与最佳常数”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "定和求积",
+      "summary": "非负两项之和固定，积由差的平方控制。",
+      "typicalProblems": [
+        "x,y≥0 且 x+y=6，求 xy 最大值。"
+      ],
+      "conditions": [
+        "两项非负，和固定，等量点满足全部约束。"
+      ],
+      "limitations": [
+        "有负量时不能直接使用实数几何平均数形式。"
+      ],
+      "steps": [
+        "确认非负与定和",
+        "应用 ab≤(a+b)²/4",
+        "联立 a=b 与其他限制",
+        "写出取值及最大值"
+      ],
+      "mistakes": [
+        "有负量时不能直接使用实数几何平均数形式。",
+        "若有区间或整数约束，等量点可能不可取。"
+      ],
+      "variants": [
+        "改变系数、约束或区间后重新核验等号。"
+      ],
+      "signals": [
+        "定和",
+        "和为",
+        "乘积",
+        "最大值"
+      ],
+      "motivation": "非负两项之和固定，积由差的平方控制。",
+      "knowledgePoints": [
+        "基本不等式与最值"
+      ],
+      "strategy": {
+        "version": 2,
+        "key": "i-fixed-sum",
+        "family": "inequality",
+        "parent": "基本不等式",
+        "legacyNames": [
+          "基本不等式求最值"
+        ],
+        "knowledgeCodes": [
+          "HS-INEQ-BASIC",
+          "HS-INEQ-BASIC-EQUALITY",
+          "HS-INEQ-BASIC-OPTIMIZATION"
+        ],
+        "catalogCodes": [
+          "INEQ.BASIC"
+        ],
+        "structure": [
+          "非负两项之和固定，积由差的平方控制。"
+        ],
+        "checks": [
+          "若有区间或整数约束，等量点可能不可取。",
+          "结论分别验证必要性与充分性，不从单个样例推出全称结论。"
+        ],
+        "criticalMechanisms": [
+          {
+            "event": "两量相等",
+            "equation": "a=b",
+            "consequence": "等号决定最大积的可达性。"
+          }
+        ],
+        "alternatives": [
+          {
+            "name": "一元配方",
+            "advantage": "当结构匹配时可减少分段或计算。",
+            "cost": "可用 xy=x(6-x)=9-(x-3)²，等价且同样简洁"
+          }
+        ],
+        "whySimpler": "可用 xy=x(6-x)=9-(x-3)²，等价且同样简洁",
+        "standardSolution": [
+          "两项非负，和固定，等量点满足全部约束。",
+          "确认非负与定和",
+          "应用 ab≤(a+b)²/4",
+          "联立 a=b 与其他限制",
+          "写出取值及最大值",
+          "若有区间或整数约束，等量点可能不可取。"
+        ],
+        "teacherNotes": [
+          "教师可用 Cauchy、Jensen、Hölder 等理论识别结构；学生书写采用本卡给出的基本不等式、作差或导数依据。",
+          "本卡为本阶段编写的教学草案，例题不是自动关联的真题，须人工审核。"
+        ],
+        "examples": [
+          {
+            "statement": "x,y≥0 且 x+y=6，求 xy 最大值。",
+            "solution": "xy≤(x+y)²/4=9，且 x=y=3 时满足条件并取等号，最大值9。"
+          }
+        ],
+        "difficulty": 3,
+        "links": [
+          {
+            "type": "boundary",
+            "targetKey": "i-attainability",
+            "reason": "在“定和求积”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          },
+          {
+            "type": "alternative",
+            "targetKey": "i-square",
+            "reason": "在“定和求积”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "定积求和",
+      "summary": "正两项乘积固定，和在两项相等时达到下界。",
+      "typicalProblems": [
+        "x>0，求 x+4/x 的最小值。"
+      ],
+      "conditions": [
+        "两项为正且乘积为正常数。"
+      ],
+      "limitations": [
+        "只知两项均为负时不能套 a+b≥2√ab。"
+      ],
+      "steps": [
+        "检查正数",
+        "确认积为定值",
+        "使用和不小于两倍积的平方根",
+        "检验等号和变量范围"
+      ],
+      "mistakes": [
+        "只知两项均为负时不能套 a+b≥2√ab。",
+        "乘积不固定时得到的界可能仍含变量，不是最终常数。"
+      ],
+      "variants": [
+        "改变系数、约束或区间后重新核验等号。"
+      ],
+      "signals": [
+        "定积",
+        "积为",
+        "和",
+        "最小值"
+      ],
+      "motivation": "正两项乘积固定，和在两项相等时达到下界。",
+      "knowledgePoints": [
+        "基本不等式与最值"
+      ],
+      "strategy": {
+        "version": 2,
+        "key": "i-fixed-product",
+        "family": "inequality",
+        "parent": "基本不等式",
+        "legacyNames": [
+          "基本不等式求最值"
+        ],
+        "knowledgeCodes": [
+          "HS-INEQ-BASIC",
+          "HS-INEQ-BASIC-EQUALITY",
+          "HS-INEQ-BASIC-OPTIMIZATION"
+        ],
+        "catalogCodes": [
+          "INEQ.BASIC"
+        ],
+        "structure": [
+          "正两项乘积固定，和在两项相等时达到下界。"
+        ],
+        "checks": [
+          "乘积不固定时得到的界可能仍含变量，不是最终常数。",
+          "结论分别验证必要性与充分性，不从单个样例推出全称结论。"
+        ],
+        "criticalMechanisms": [
+          {
+            "event": "两量相等",
+            "equation": "a=b=√P",
+            "consequence": "固定积下的候选极小点。"
+          }
+        ],
+        "alternatives": [
+          {
+            "name": "导数",
+            "advantage": "当结构匹配时可减少分段或计算。",
+            "cost": "可核对正域中的单调性，但基本不等式更短"
+          }
+        ],
+        "whySimpler": "可核对正域中的单调性，但基本不等式更短",
+        "standardSolution": [
+          "两项为正且乘积为正常数。",
+          "检查正数",
+          "确认积为定值",
+          "使用和不小于两倍积的平方根",
+          "检验等号和变量范围",
+          "乘积不固定时得到的界可能仍含变量，不是最终常数。"
+        ],
+        "teacherNotes": [
+          "教师可用 Cauchy、Jensen、Hölder 等理论识别结构；学生书写采用本卡给出的基本不等式、作差或导数依据。",
+          "本卡为本阶段编写的教学草案，例题不是自动关联的真题，须人工审核。"
+        ],
+        "examples": [
+          {
+            "statement": "x>0，求 x+4/x 的最小值。",
+            "solution": "x+4/x≥2√4=4；x=4/x 即 x=2 可取，故最小值4。"
+          }
+        ],
+        "difficulty": 3,
+        "links": [
+          {
+            "type": "boundary",
+            "targetKey": "i-attainability",
+            "reason": "在“定积求和”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          },
+          {
+            "type": "alternative",
+            "targetKey": "i-derivative",
+            "reason": "在“定积求和”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "倒数型配凑",
+      "summary": "正变量倒数之和可由定和转化为积的上界。",
+      "typicalProblems": [
+        "x,y>0，x+y=2，求 1/x+1/y 最小值。"
+      ],
+      "conditions": [
+        "分母为正，且固定的和或积已知。"
+      ],
+      "limitations": [
+        "分母过零或变号时不能直接使用正数倒数次序。"
+      ],
+      "steps": [
+        "通分或寻找配对",
+        "用定和控制分母乘积",
+        "按正数倒数反向比较",
+        "检验等量点"
+      ],
+      "mistakes": [
+        "分母过零或变号时不能直接使用正数倒数次序。",
+        "所有分母非零，等号与原约束同步成立。"
+      ],
+      "variants": [
+        "改变系数、约束或区间后重新核验等号。"
+      ],
+      "signals": [
+        "倒数",
+        "1/x",
+        "frac",
+        "分式"
+      ],
+      "motivation": "正变量倒数之和可由定和转化为积的上界。",
+      "knowledgePoints": [
+        "基本不等式与最值"
+      ],
+      "strategy": {
+        "version": 2,
+        "key": "i-reciprocal",
+        "family": "inequality",
+        "parent": "基本不等式",
+        "legacyNames": [
+          "基本不等式求最值"
+        ],
+        "knowledgeCodes": [
+          "HS-INEQ-BASIC",
+          "HS-INEQ-BASIC-EQUALITY",
+          "HS-INEQ-BASIC-OPTIMIZATION"
+        ],
+        "catalogCodes": [
+          "INEQ.BASIC"
+        ],
+        "structure": [
+          "正变量倒数之和可由定和转化为积的上界。"
+        ],
+        "checks": [
+          "所有分母非零，等号与原约束同步成立。",
+          "结论分别验证必要性与充分性，不从单个样例推出全称结论。"
+        ],
+        "criticalMechanisms": [
+          {
+            "event": "分母乘积达到上界",
+            "equation": "xy≤(x+y)²/4",
+            "consequence": "正数取倒数后给目标下界。"
+          }
+        ],
+        "alternatives": [
+          {
+            "name": "教师 Cauchy 识别",
+            "advantage": "当结构匹配时可减少分段或计算。",
+            "cost": "前台可转写为通分加基本不等式，无需引用拓展定理"
+          }
+        ],
+        "whySimpler": "前台可转写为通分加基本不等式，无需引用拓展定理",
+        "standardSolution": [
+          "分母为正，且固定的和或积已知。",
+          "通分或寻找配对",
+          "用定和控制分母乘积",
+          "按正数倒数反向比较",
+          "检验等量点",
+          "所有分母非零，等号与原约束同步成立。"
+        ],
+        "teacherNotes": [
+          "教师可用 Cauchy、Jensen、Hölder 等理论识别结构；学生书写采用本卡给出的基本不等式、作差或导数依据。",
+          "本卡为本阶段编写的教学草案，例题不是自动关联的真题，须人工审核。"
+        ],
+        "examples": [
+          {
+            "statement": "x,y>0，x+y=2，求 1/x+1/y 最小值。",
+            "solution": "1/x+1/y=2/(xy)，且 xy≤1，因此原式≥2；x=y=1 时取等号。"
+          }
+        ],
+        "difficulty": 3,
+        "links": [
+          {
+            "type": "prerequisite",
+            "targetKey": "i-fixed-sum",
+            "reason": "在“倒数型配凑”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          },
+          {
+            "type": "combination",
+            "targetKey": "i-make-one",
+            "reason": "在“倒数型配凑”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "凑1构造",
+      "summary": "将已知的定和约束写成1，展开后构造互为倒数的正项。",
+      "typicalProblems": [
+        "x,y>0，x+y=1，求 1/x+4/y 最小值。"
+      ],
+      "conditions": [
+        "代入的1确实来自原约束；展开后各不等式条件满足。"
+      ],
+      "limitations": [
+        "不能任意乘入非常数因子，不能丢掉展开的常数项。"
+      ],
+      "steps": [
+        "由约束写出1",
+        "目标乘以该恒等式",
+        "展开并配对",
+        "逐项检验等号同步"
+      ],
+      "mistakes": [
+        "不能任意乘入非常数因子，不能丢掉展开的常数项。",
+        "展开后的几组等号必须能同时满足。"
+      ],
+      "variants": [
+        "改变系数、约束或区间后重新核验等号。"
+      ],
+      "signals": [
+        "凑1",
+        "1/x",
+        "约束",
+        "分式"
+      ],
+      "motivation": "将已知的定和约束写成1，展开后构造互为倒数的正项。",
+      "knowledgePoints": [
+        "基本不等式与最值"
+      ],
+      "strategy": {
+        "version": 2,
+        "key": "i-make-one",
+        "family": "inequality",
+        "parent": "基本不等式",
+        "legacyNames": [
+          "基本不等式求最值"
+        ],
+        "knowledgeCodes": [
+          "HS-INEQ-BASIC",
+          "HS-INEQ-BASIC-EQUALITY",
+          "HS-INEQ-BASIC-OPTIMIZATION"
+        ],
+        "catalogCodes": [
+          "INEQ.BASIC"
+        ],
+        "structure": [
+          "将已知的定和约束写成1，展开后构造互为倒数的正项。"
+        ],
+        "checks": [
+          "展开后的几组等号必须能同时满足。",
+          "结论分别验证必要性与充分性，不从单个样例推出全称结论。"
+        ],
+        "criticalMechanisms": [
+          {
+            "event": "配对项相等",
+            "equation": "u=v",
+            "consequence": "确定凑1后的等号点。"
+          }
+        ],
+        "alternatives": [
+          {
+            "name": "一元导数",
+            "advantage": "当结构匹配时可减少分段或计算。",
+            "cost": "能求得同一结果，但需求导及端点极限"
+          }
+        ],
+        "whySimpler": "能求得同一结果，但需求导及端点极限",
+        "standardSolution": [
+          "代入的1确实来自原约束；展开后各不等式条件满足。",
+          "由约束写出1",
+          "目标乘以该恒等式",
+          "展开并配对",
+          "逐项检验等号同步",
+          "展开后的几组等号必须能同时满足。"
+        ],
+        "teacherNotes": [
+          "教师可用 Cauchy、Jensen、Hölder 等理论识别结构；学生书写采用本卡给出的基本不等式、作差或导数依据。",
+          "本卡为本阶段编写的教学草案，例题不是自动关联的真题，须人工审核。"
+        ],
+        "examples": [
+          {
+            "statement": "x,y>0，x+y=1，求 1/x+4/y 最小值。",
+            "solution": "(1/x+4/y)(x+y)=5+y/x+4x/y≥5+4=9；等号 y/x=4x/y，即 y=2x，故 x=1/3,y=2/3 可取。"
+          }
+        ],
+        "difficulty": 3,
+        "links": [
+          {
+            "type": "prerequisite",
+            "targetKey": "i-fixed-product",
+            "reason": "在“凑1构造”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          },
+          {
+            "type": "boundary",
+            "targetKey": "i-synchronous",
+            "reason": "在“凑1构造”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "拆项配凑",
+      "summary": "把目标拆成常数与能配成定积的正项，拆法受等号条件约束。",
+      "typicalProblems": [
+        "x>0，求 x²+2/x 最小值。"
+      ],
+      "conditions": [
+        "拆分恒等且所用项符号合法。"
+      ],
+      "limitations": [
+        "拆分后不能为不同项分别取不可能同时达到的最小值。"
+      ],
+      "steps": [
+        "先试等号比例",
+        "按比例拆项",
+        "对定积部分使用基本不等式",
+        "联立剩余项与等号条件"
+      ],
+      "mistakes": [
+        "拆分后不能为不同项分别取不可能同时达到的最小值。",
+        "最终下界不再含自由变量，或继续处理剩余项。"
+      ],
+      "variants": [
+        "改变系数、约束或区间后重新核验等号。"
+      ],
+      "signals": [
+        "拆项",
+        "x²",
+        "x^2",
+        "最小值"
+      ],
+      "motivation": "把目标拆成常数与能配成定积的正项，拆法受等号条件约束。",
+      "knowledgePoints": [
+        "基本不等式与最值"
+      ],
+      "strategy": {
+        "version": 2,
+        "key": "i-split",
+        "family": "inequality",
+        "parent": "基本不等式",
+        "legacyNames": [
+          "基本不等式求最值"
+        ],
+        "knowledgeCodes": [
+          "HS-INEQ-BASIC",
+          "HS-INEQ-BASIC-EQUALITY",
+          "HS-INEQ-BASIC-OPTIMIZATION"
+        ],
+        "catalogCodes": [
+          "INEQ.BASIC"
+        ],
+        "structure": [
+          "把目标拆成常数与能配成定积的正项，拆法受等号条件约束。"
+        ],
+        "checks": [
+          "最终下界不再含自由变量，或继续处理剩余项。",
+          "结论分别验证必要性与充分性，不从单个样例推出全称结论。"
+        ],
+        "criticalMechanisms": [
+          {
+            "event": "拆分项相等",
+            "equation": "u(x)=v(x)",
+            "consequence": "确定拆分系数是否有助于取等。"
+          }
+        ],
+        "alternatives": [
+          {
+            "name": "作差因式分解",
+            "advantage": "当结构匹配时可减少分段或计算。",
+            "cost": "直接因式分解给出完全课内依据，优先于书写多元拓展结论"
+          }
+        ],
+        "whySimpler": "直接因式分解给出完全课内依据，优先于书写多元拓展结论",
+        "standardSolution": [
+          "拆分恒等且所用项符号合法。",
+          "先试等号比例",
+          "按比例拆项",
+          "对定积部分使用基本不等式",
+          "联立剩余项与等号条件",
+          "最终下界不再含自由变量，或继续处理剩余项。"
+        ],
+        "teacherNotes": [
+          "教师可用 Cauchy、Jensen、Hölder 等理论识别结构；学生书写采用本卡给出的基本不等式、作差或导数依据。",
+          "本卡为本阶段编写的教学草案，例题不是自动关联的真题，须人工审核。"
+        ],
+        "examples": [
+          {
+            "statement": "x>0，求 x²+2/x 最小值。",
+            "solution": "先由 x²=1/x 猜测等号点 x=1，再作差：原式-3=(x-1)²(x+2)/x≥0，因为 x>0；x=1 时等号可取，故最小值3。"
+          }
+        ],
+        "difficulty": 3,
+        "links": [
+          {
+            "type": "prerequisite",
+            "targetKey": "i-equality-reverse",
+            "reason": "在“拆项配凑”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          },
+          {
+            "type": "alternative",
+            "targetKey": "i-square",
+            "reason": "在“拆项配凑”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "比例换元",
+      "summary": "齐次式仅依赖比值，正比例换元可将多变量问题降为一元。",
+      "typicalProblems": [
+        "x,y>0，求 (x²+y²)/(xy) 最小值。"
+      ],
+      "conditions": [
+        "换元覆盖所有合法比值，原有约束同步转写。"
+      ],
+      "limitations": [
+        "不能丢失比值范围，也不能对非齐次项随意消除尺度。"
+      ],
+      "steps": [
+        "识别齐次次数",
+        "设 t=x/y 并求范围",
+        "改写目标",
+        "用基本不等式或配方",
+        "还原等号比例"
+      ],
+      "mistakes": [
+        "不能丢失比值范围，也不能对非齐次项随意消除尺度。",
+        "分母变量非零；正比值与负比值分开。"
+      ],
+      "variants": [
+        "改变系数、约束或区间后重新核验等号。"
+      ],
+      "signals": [
+        "比例",
+        "齐次",
+        "x/y",
+        "y/x"
+      ],
+      "motivation": "齐次式仅依赖比值，正比例换元可将多变量问题降为一元。",
+      "knowledgePoints": [
+        "基本不等式与最值"
+      ],
+      "strategy": {
+        "version": 2,
+        "key": "i-ratio",
+        "family": "inequality",
+        "parent": "基本不等式",
+        "legacyNames": [
+          "基本不等式求最值"
+        ],
+        "knowledgeCodes": [
+          "HS-INEQ-BASIC",
+          "HS-INEQ-BASIC-EQUALITY",
+          "HS-INEQ-BASIC-OPTIMIZATION"
+        ],
+        "catalogCodes": [
+          "INEQ.BASIC"
+        ],
+        "structure": [
+          "齐次式仅依赖比值，正比例换元可将多变量问题降为一元。"
+        ],
+        "checks": [
+          "分母变量非零；正比值与负比值分开。",
+          "结论分别验证必要性与充分性，不从单个样例推出全称结论。"
+        ],
+        "criticalMechanisms": [
+          {
+            "event": "比值取等号比例",
+            "equation": "t=t₀",
+            "consequence": "决定最值是否对应合法原变量。"
+          }
+        ],
+        "alternatives": [
+          {
+            "name": "平方非负",
+            "advantage": "当结构匹配时可减少分段或计算。",
+            "cost": "原式-2=(x-y)²/(xy)≥0，步骤更少"
+          }
+        ],
+        "whySimpler": "原式-2=(x-y)²/(xy)≥0，步骤更少",
+        "standardSolution": [
+          "换元覆盖所有合法比值，原有约束同步转写。",
+          "识别齐次次数",
+          "设 t=x/y 并求范围",
+          "改写目标",
+          "用基本不等式或配方",
+          "还原等号比例",
+          "分母变量非零；正比值与负比值分开。"
+        ],
+        "teacherNotes": [
+          "教师可用 Cauchy、Jensen、Hölder 等理论识别结构；学生书写采用本卡给出的基本不等式、作差或导数依据。",
+          "本卡为本阶段编写的教学草案，例题不是自动关联的真题，须人工审核。"
+        ],
+        "examples": [
+          {
+            "statement": "x,y>0，求 (x²+y²)/(xy) 最小值。",
+            "solution": "令 t=x/y>0，原式=t+1/t≥2，t=1 即 x=y 时取等，故最小值2。"
+          }
+        ],
+        "difficulty": 3,
+        "links": [
+          {
+            "type": "prerequisite",
+            "targetKey": "i-fixed-product",
+            "reason": "在“比例换元”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          },
+          {
+            "type": "boundary",
+            "targetKey": "i-interval",
+            "reason": "在“比例换元”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "由等号条件反推配凑",
+      "summary": "先解目标可能取等的位置，用该比例决定配对的系数。",
+      "typicalProblems": [
+        "x>0，求 2x+8/x 最小值。"
+      ],
+      "conditions": [
+        "选定的等号候选最终必须有全局下界证明。"
+      ],
+      "limitations": [
+        "猜等号位置不能代替证明；参数变化后比例须重算。"
+      ],
+      "steps": [
+        "写配对项相等关系",
+        "求候选变量或比例",
+        "反推拆项系数",
+        "验证恒等变形及全域界"
+      ],
+      "mistakes": [
+        "猜等号位置不能代替证明；参数变化后比例须重算。",
+        "回代原约束，并检验边界有无更小值。"
+      ],
+      "variants": [
+        "改变系数、约束或区间后重新核验等号。"
+      ],
+      "signals": [
+        "等号",
+        "配凑",
+        "权重"
+      ],
+      "motivation": "先解目标可能取等的位置，用该比例决定配对的系数。",
+      "knowledgePoints": [
+        "基本不等式与最值"
+      ],
+      "strategy": {
+        "version": 2,
+        "key": "i-equality-reverse",
+        "family": "inequality",
+        "parent": "基本不等式",
+        "legacyNames": [
+          "基本不等式求最值"
+        ],
+        "knowledgeCodes": [
+          "HS-INEQ-BASIC",
+          "HS-INEQ-BASIC-EQUALITY",
+          "HS-INEQ-BASIC-OPTIMIZATION"
+        ],
+        "catalogCodes": [
+          "INEQ.BASIC"
+        ],
+        "structure": [
+          "先解目标可能取等的位置，用该比例决定配对的系数。"
+        ],
+        "checks": [
+          "回代原约束，并检验边界有无更小值。",
+          "结论分别验证必要性与充分性，不从单个样例推出全称结论。"
+        ],
+        "criticalMechanisms": [
+          {
+            "event": "配对比例匹配",
+            "equation": "u(x)=v(x)",
+            "consequence": "配凑系数决定可达等号。"
+          }
+        ],
+        "alternatives": [
+          {
+            "name": "导数驻点",
+            "advantage": "当结构匹配时可减少分段或计算。",
+            "cost": "猜测只负责定位，基本不等式负责全局证明"
+          }
+        ],
+        "whySimpler": "猜测只负责定位，基本不等式负责全局证明",
+        "standardSolution": [
+          "选定的等号候选最终必须有全局下界证明。",
+          "写配对项相等关系",
+          "求候选变量或比例",
+          "反推拆项系数",
+          "验证恒等变形及全域界",
+          "回代原约束，并检验边界有无更小值。"
+        ],
+        "teacherNotes": [
+          "教师可用 Cauchy、Jensen、Hölder 等理论识别结构；学生书写采用本卡给出的基本不等式、作差或导数依据。",
+          "本卡为本阶段编写的教学草案，例题不是自动关联的真题，须人工审核。"
+        ],
+        "examples": [
+          {
+            "statement": "x>0，求 2x+8/x 最小值。",
+            "solution": "由 2x=8/x 猜 x=2；再用 2x+8/x≥2√16=8，x=2 可取，故最小值8。"
+          }
+        ],
+        "difficulty": 3,
+        "links": [
+          {
+            "type": "boundary",
+            "targetKey": "i-attainability",
+            "reason": "在“由等号条件反推配凑”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "等号可达性检查",
+      "summary": "不等式给出界；等号点属于可行域才证明这个界是最值。",
+      "typicalProblems": [
+        "x∈(2,+∞)，求 x+1/x 的最小值。"
+      ],
+      "conditions": [
+        "同时保留正负性、区间、整数和所有约束。"
+      ],
+      "limitations": [
+        "等号不可取时不能直接宣称原下界就是最小值。"
+      ],
+      "steps": [
+        "列每一步等号条件",
+        "联立原始约束",
+        "检验解是否可行",
+        "不可行时重新研究边界或单调性"
+      ],
+      "mistakes": [
+        "等号不可取时不能直接宣称原下界就是最小值。",
+        "严格不等式和开端点需区分最小值与下确界。"
+      ],
+      "variants": [
+        "改变系数、约束或区间后重新核验等号。"
+      ],
+      "signals": [
+        "等号",
+        "取等",
+        "区间限制",
+        "最值"
+      ],
+      "motivation": "不等式给出界；等号点属于可行域才证明这个界是最值。",
+      "knowledgePoints": [
+        "基本不等式与最值"
+      ],
+      "strategy": {
+        "version": 2,
+        "key": "i-attainability",
+        "family": "inequality",
+        "parent": "基本不等式",
+        "legacyNames": [
+          "基本不等式求最值"
+        ],
+        "knowledgeCodes": [
+          "HS-INEQ-BASIC",
+          "HS-INEQ-BASIC-EQUALITY",
+          "HS-INEQ-BASIC-OPTIMIZATION"
+        ],
+        "catalogCodes": [
+          "INEQ.BASIC"
+        ],
+        "structure": [
+          "不等式给出界；等号点属于可行域才证明这个界是最值。"
+        ],
+        "checks": [
+          "严格不等式和开端点需区分最小值与下确界。",
+          "结论分别验证必要性与充分性，不从单个样例推出全称结论。"
+        ],
+        "criticalMechanisms": [
+          {
+            "event": "等号点离开可行域",
+            "equation": "E ∩ D=∅",
+            "consequence": "原界可能不锐，需重算最值或证明仅有下确界。"
+          }
+        ],
+        "alternatives": [
+          {
+            "name": "作差比较",
+            "advantage": "当结构匹配时可减少分段或计算。",
+            "cost": "x+1/x-5/2=(2x-1)(x-2)/(2x)>0，结合逼近也可证明"
+          }
+        ],
+        "whySimpler": "x+1/x-5/2=(2x-1)(x-2)/(2x)>0，结合逼近也可证明",
+        "standardSolution": [
+          "同时保留正负性、区间、整数和所有约束。",
+          "列每一步等号条件",
+          "联立原始约束",
+          "检验解是否可行",
+          "不可行时重新研究边界或单调性",
+          "严格不等式和开端点需区分最小值与下确界。"
+        ],
+        "teacherNotes": [
+          "教师可用 Cauchy、Jensen、Hölder 等理论识别结构；学生书写采用本卡给出的基本不等式、作差或导数依据。",
+          "本卡为本阶段编写的教学草案，例题不是自动关联的真题，须人工审核。"
+        ],
+        "examples": [
+          {
+            "statement": "x∈(2,+∞)，求 x+1/x 的最小值。",
+            "solution": "函数在 x>2 时导数1-1/x²>0，且 x→2+ 时趋于5/2；故无最小值，下确界5/2。不能写最小值2。"
+          }
+        ],
+        "difficulty": 3,
+        "links": [
+          {
+            "type": "alternative",
+            "targetKey": "i-interval",
+            "reason": "在“等号可达性检查”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "区间限制后的最值",
+      "summary": "无约束等号点与合法区间的相对位置决定采用等号或边界。",
+      "typicalProblems": [
+        "x∈[3,4]，求 x+4/x 最小值。"
+      ],
+      "conditions": [
+        "区间和开闭性明确，函数在各段有单调性证明。"
+      ],
+      "limitations": [
+        "不能把受限最值直接等同于无约束基本不等式的界。"
+      ],
+      "steps": [
+        "求等号点",
+        "与区间比较",
+        "证明远离等号点后的单调性",
+        "比较端点及极限"
+      ],
+      "mistakes": [
+        "不能把受限最值直接等同于无约束基本不等式的界。",
+        "闭端点可代入；开端点只求极限并检查是否达到。"
+      ],
+      "variants": [
+        "改变系数、约束或区间后重新核验等号。"
+      ],
+      "signals": [
+        "区间",
+        "最小值",
+        "最大值",
+        "限制"
+      ],
+      "motivation": "无约束等号点与合法区间的相对位置决定采用等号或边界。",
+      "knowledgePoints": [
+        "基本不等式与最值"
+      ],
+      "strategy": {
+        "version": 2,
+        "key": "i-interval",
+        "family": "inequality",
+        "parent": "基本不等式",
+        "legacyNames": [
+          "基本不等式求最值"
+        ],
+        "knowledgeCodes": [
+          "HS-INEQ-BASIC",
+          "HS-INEQ-BASIC-EQUALITY",
+          "HS-INEQ-BASIC-OPTIMIZATION"
+        ],
+        "catalogCodes": [
+          "INEQ.BASIC"
+        ],
+        "structure": [
+          "无约束等号点与合法区间的相对位置决定采用等号或边界。"
+        ],
+        "checks": [
+          "闭端点可代入；开端点只求极限并检查是否达到。",
+          "结论分别验证必要性与充分性，不从单个样例推出全称结论。"
+        ],
+        "criticalMechanisms": [
+          {
+            "event": "等号点碰撞边界",
+            "equation": "x₀=l 或 x₀=r",
+            "consequence": "最优点从内部迁移到边界。"
+          }
+        ],
+        "alternatives": [
+          {
+            "name": "作差",
+            "advantage": "当结构匹配时可减少分段或计算。",
+            "cost": "与 f(3) 作差=(x-3)(3x-4)/(3x)≥0，可避免求导"
+          }
+        ],
+        "whySimpler": "与 f(3) 作差=(x-3)(3x-4)/(3x)≥0，可避免求导",
+        "standardSolution": [
+          "区间和开闭性明确，函数在各段有单调性证明。",
+          "求等号点",
+          "与区间比较",
+          "证明远离等号点后的单调性",
+          "比较端点及极限",
+          "闭端点可代入；开端点只求极限并检查是否达到。"
+        ],
+        "teacherNotes": [
+          "教师可用 Cauchy、Jensen、Hölder 等理论识别结构；学生书写采用本卡给出的基本不等式、作差或导数依据。",
+          "本卡为本阶段编写的教学草案，例题不是自动关联的真题，须人工审核。"
+        ],
+        "examples": [
+          {
+            "statement": "x∈[3,4]，求 x+4/x 最小值。",
+            "solution": "无约束取等点 x=2 不在区间；f′=1-4/x²>0 于 [3,4]，故最小值 f(3)=13/3。"
+          }
+        ],
+        "difficulty": 3,
+        "links": [
+          {
+            "type": "prerequisite",
+            "targetKey": "i-attainability",
+            "reason": "在“区间限制后的最值”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          },
+          {
+            "type": "alternative",
+            "targetKey": "i-derivative",
+            "reason": "在“区间限制后的最值”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "作差、平方非负与配方",
+      "summary": "目标与候选界之差化为非负平方或非负因子的积。",
+      "typicalProblems": [
+        "证明 x>0 时 x+1/x≥2。"
+      ],
+      "conditions": [
+        "恒等变形有效，乘除因子符号已经确定。"
+      ],
+      "limitations": [
+        "含分母时不能仅见分子为平方就判非负。"
+      ],
+      "steps": [
+        "确定候选界",
+        "作差并通分或配方",
+        "逐项说明非负理由",
+        "联立等号条件"
+      ],
+      "mistakes": [
+        "含分母时不能仅见分子为平方就判非负。",
+        "必要性由原式在等号点的值说明；定义域仍保留。"
+      ],
+      "variants": [
+        "改变系数、约束或区间后重新核验等号。"
+      ],
+      "signals": [
+        "作差",
+        "配方",
+        "平方",
+        "证明"
+      ],
+      "motivation": "目标与候选界之差化为非负平方或非负因子的积。",
+      "knowledgePoints": [
+        "基本不等式与最值"
+      ],
+      "strategy": {
+        "version": 2,
+        "key": "i-square",
+        "family": "inequality",
+        "parent": "基本不等式",
+        "legacyNames": [
+          "基本不等式求最值"
+        ],
+        "knowledgeCodes": [
+          "HS-INEQ-BASIC",
+          "HS-INEQ-BASIC-EQUALITY",
+          "HS-INEQ-BASIC-OPTIMIZATION"
+        ],
+        "catalogCodes": [
+          "INEQ.BASIC"
+        ],
+        "structure": [
+          "目标与候选界之差化为非负平方或非负因子的积。"
+        ],
+        "checks": [
+          "必要性由原式在等号点的值说明；定义域仍保留。",
+          "结论分别验证必要性与充分性，不从单个样例推出全称结论。"
+        ],
+        "criticalMechanisms": [
+          {
+            "event": "平方为零",
+            "equation": "H(x)²=0",
+            "consequence": "直接给出下界与等号。"
+          }
+        ],
+        "alternatives": [
+          {
+            "name": "基本不等式",
+            "advantage": "当结构匹配时可减少分段或计算。",
+            "cost": "两种依据都属课内；作差能展示正数前提为何必要"
+          }
+        ],
+        "whySimpler": "两种依据都属课内；作差能展示正数前提为何必要",
+        "standardSolution": [
+          "恒等变形有效，乘除因子符号已经确定。",
+          "确定候选界",
+          "作差并通分或配方",
+          "逐项说明非负理由",
+          "联立等号条件",
+          "必要性由原式在等号点的值说明；定义域仍保留。"
+        ],
+        "teacherNotes": [
+          "教师可用 Cauchy、Jensen、Hölder 等理论识别结构；学生书写采用本卡给出的基本不等式、作差或导数依据。",
+          "本卡为本阶段编写的教学草案，例题不是自动关联的真题，须人工审核。"
+        ],
+        "examples": [
+          {
+            "statement": "证明 x>0 时 x+1/x≥2。",
+            "solution": "原式减2=(x-1)²/x≥0，因为 x>0；当且仅当 x=1 时等号成立。"
+          }
+        ],
+        "difficulty": 3,
+        "links": [
+          {
+            "type": "alternative",
+            "targetKey": "i-fixed-product",
+            "reason": "在“作差、平方非负与配方”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "一元函数与导数替代",
+      "summary": "若配凑等号不易同步，可在合法域内求一元函数的全局最值。",
+      "typicalProblems": [
+        "x>0，求 x- ln x 最小值。"
+      ],
+      "conditions": [
+        "函数在各区间可导，不可导点和端点单独处理。"
+      ],
+      "limitations": [
+        "驻点不一定是极值，更不一定是全局最值。"
+      ],
+      "steps": [
+        "降为一元并保留范围",
+        "求导与驻点",
+        "画符号表",
+        "比较合法驻点、端点和极限"
+      ],
+      "mistakes": [
+        "驻点不一定是极值，更不一定是全局最值。",
+        "不跨越断点；开区间可能没有最值。"
+      ],
+      "variants": [
+        "改变系数、约束或区间后重新核验等号。"
+      ],
+      "signals": [
+        "导数",
+        "一元",
+        "区间",
+        "最值"
+      ],
+      "motivation": "若配凑等号不易同步，可在合法域内求一元函数的全局最值。",
+      "knowledgePoints": [
+        "基本不等式与最值"
+      ],
+      "strategy": {
+        "version": 2,
+        "key": "i-derivative",
+        "family": "inequality",
+        "parent": "基本不等式",
+        "legacyNames": [
+          "基本不等式求最值"
+        ],
+        "knowledgeCodes": [
+          "HS-INEQ-BASIC",
+          "HS-INEQ-BASIC-EQUALITY",
+          "HS-INEQ-BASIC-OPTIMIZATION"
+        ],
+        "catalogCodes": [
+          "INEQ.BASIC"
+        ],
+        "structure": [
+          "若配凑等号不易同步，可在合法域内求一元函数的全局最值。"
+        ],
+        "checks": [
+          "不跨越断点；开区间可能没有最值。",
+          "结论分别验证必要性与充分性，不从单个样例推出全称结论。"
+        ],
+        "criticalMechanisms": [
+          {
+            "event": "导数符号改变",
+            "equation": "f′(x)=0 并检验两侧符号",
+            "consequence": "定位候选极值，但全局结论仍需比较。"
+          }
+        ],
+        "alternatives": [
+          {
+            "name": "作差辅助函数",
+            "advantage": "当结构匹配时可减少分段或计算。",
+            "cost": "仍需证明对数不等式；不能为了避免导数循环引用待证结论"
+          }
+        ],
+        "whySimpler": "仍需证明对数不等式；不能为了避免导数循环引用待证结论",
+        "standardSolution": [
+          "函数在各区间可导，不可导点和端点单独处理。",
+          "降为一元并保留范围",
+          "求导与驻点",
+          "画符号表",
+          "比较合法驻点、端点和极限",
+          "不跨越断点；开区间可能没有最值。"
+        ],
+        "teacherNotes": [
+          "教师可用 Cauchy、Jensen、Hölder 等理论识别结构；学生书写采用本卡给出的基本不等式、作差或导数依据。",
+          "本卡为本阶段编写的教学草案，例题不是自动关联的真题，须人工审核。"
+        ],
+        "examples": [
+          {
+            "statement": "x>0，求 x- ln x 最小值。",
+            "solution": "f′=1-1/x，在 (0,1) 为负，在 (1,+∞) 为正，故 x=1 为全局最小点，最小值1。"
+          }
+        ],
+        "difficulty": 3,
+        "links": [
+          {
+            "type": "boundary",
+            "targetKey": "p-stationary-domain",
+            "reason": "在“一元函数与导数替代”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          }
+        ]
+      }
+    },
+    {
+      "name": "不等式联用与等号同步",
+      "summary": "多个估计串联时，所有等号条件必须同时满足才能证明界可达。",
+      "typicalProblems": [
+        "x>0，能否将 x+1/x 与 x+4/x 的下界相加得 2x+5/x 的最小值6？"
+      ],
+      "conditions": [
+        "每个估计的方向与符号正确，并记录每一步等号。"
+      ],
+      "limitations": [
+        "不能把各自可取等号误认为组合后能同时取等。"
+      ],
+      "steps": [
+        "分别记录界与等号",
+        "检查相加相乘时方向合法",
+        "求等号条件的交集",
+        "为空则换估计或用一元法"
+      ],
+      "mistakes": [
+        "不能把各自可取等号误认为组合后能同时取等。",
+        "乘两个不等式时额外要求可乘的量非负。"
+      ],
+      "variants": [
+        "改变系数、约束或区间后重新核验等号。"
+      ],
+      "signals": [
+        "联用",
+        "同步",
+        "多个",
+        "等号"
+      ],
+      "motivation": "多个估计串联时，所有等号条件必须同时满足才能证明界可达。",
+      "knowledgePoints": [
+        "基本不等式与最值"
+      ],
+      "strategy": {
+        "version": 2,
+        "key": "i-synchronous",
+        "family": "inequality",
+        "parent": "基本不等式",
+        "legacyNames": [
+          "基本不等式求最值"
+        ],
+        "knowledgeCodes": [
+          "HS-INEQ-BASIC",
+          "HS-INEQ-BASIC-EQUALITY",
+          "HS-INEQ-BASIC-OPTIMIZATION"
+        ],
+        "catalogCodes": [
+          "INEQ.BASIC"
+        ],
+        "structure": [
+          "多个估计串联时，所有等号条件必须同时满足才能证明界可达。"
+        ],
+        "checks": [
+          "乘两个不等式时额外要求可乘的量非负。",
+          "结论分别验证必要性与充分性，不从单个样例推出全称结论。"
+        ],
+        "criticalMechanisms": [
+          {
+            "event": "等号条件相容或冲突",
+            "equation": "E₁∩E₂∩D 是否为空",
+            "consequence": "决定组合界是否为真实最值。"
+          }
+        ],
+        "alternatives": [
+          {
+            "name": "一次整体配对",
+            "advantage": "当结构匹配时可减少分段或计算。",
+            "cost": "整体配对保证等号统一，比两次独立估计更锐"
+          }
+        ],
+        "whySimpler": "整体配对保证等号统一，比两次独立估计更锐",
+        "standardSolution": [
+          "每个估计的方向与符号正确，并记录每一步等号。",
+          "分别记录界与等号",
+          "检查相加相乘时方向合法",
+          "求等号条件的交集",
+          "为空则换估计或用一元法",
+          "乘两个不等式时额外要求可乘的量非负。"
+        ],
+        "teacherNotes": [
+          "教师可用 Cauchy、Jensen、Hölder 等理论识别结构；学生书写采用本卡给出的基本不等式、作差或导数依据。",
+          "本卡为本阶段编写的教学草案，例题不是自动关联的真题，须人工审核。"
+        ],
+        "examples": [
+          {
+            "statement": "x>0，能否将 x+1/x 与 x+4/x 的下界相加得 2x+5/x 的最小值6？",
+            "solution": "不能。前两式取等分别需 x=1 与 x=2，不能同步。直接用 2x+5/x≥2√10，x=√(5/2) 可取，最小值2√10。"
+          }
+        ],
+        "difficulty": 3,
+        "links": [
+          {
+            "type": "boundary",
+            "targetKey": "i-attainability",
+            "reason": "在“不等式联用与等号同步”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          },
+          {
+            "type": "alternative",
+            "targetKey": "i-fixed-product",
+            "reason": "在“不等式联用与等号同步”中需结合目标策略核对适用条件；整卡审核后方作为正式关系。"
+          }
+        ]
+      }
+    }
+  ]
+}

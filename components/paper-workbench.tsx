@@ -287,7 +287,7 @@ export function PaperWorkbench({ paperId }: { paperId?: string }) {
             {active.classification && <div className="space-y-2"><div className="flex flex-wrap gap-2 text-xs"><span className="rounded-full bg-slate-100 px-3 py-1">{active.classification.chapter.name}</span>{active.classification.knowledge_points.map(k => <span className="rounded-full bg-terracotta-50 px-3 py-1 text-terracotta-800" key={k.code}>{k.name}</span>)}<span className="rounded-full bg-slate-100 px-3 py-1">{active.classification.question_type}</span><span className="rounded-full bg-slate-100 px-3 py-1">难度：{active.classification.difficulty}</span><span className="px-2 py-1 text-slate-400">AI 分类建议{active.classification.needs_review ? ' · 需核对' : ''}</span></div><p className="text-xs leading-6 text-slate-500">{active.classification.classification_notes}</p></div>}
             {active.questionText && <details className="rounded-lg border p-3"><summary className="cursor-pointer text-sm text-slate-600">题目原文</summary><MathText className="mt-3 whitespace-pre-wrap text-sm leading-7">{active.questionText}</MathText></details>}
             {active.explanation ? <><p className="flex items-center gap-2 text-xs text-terracotta-800"><Check className="size-4" />解析已保存 · {active.explanation.model} · {new Date(active.explanation.updatedAt).toLocaleString("zh-CN")}</p>
-              <p className="text-xs leading-5 text-slate-500">AI 辅助解析，复习时请对照原题核对条件、答案和步骤。</p>
+              <p className="text-xs leading-5 text-slate-500">{active.explanation.origin === "external" ? "外部来源参考解析，尚未经教师审核；请对照原卷核对。" : "AI 辅助解析，复习时请对照原题核对条件、答案和步骤。"}</p>
               {active.explanation.content.status === "needs_context" && <div className="rounded-lg bg-amber-50 p-4"><h3 className="font-semibold">需要补充题目信息</h3><MathText className="mt-2 text-sm leading-7">{active.explanation.content.missingInformation}</MathText></div>}
               {active.explanation.content.answer && <div className="rounded-xl bg-terracotta-50 p-4"><h3 className="text-sm font-semibold text-terracotta-800">答案</h3><MathText className="mt-2 leading-8">{active.explanation.content.answer}</MathText></div>}
               {active.explanation.content.approach && <div><h3 className="font-semibold">解题思路</h3><MathText className="mt-2 whitespace-pre-wrap text-sm leading-7">{active.explanation.content.approach}</MathText></div>}
@@ -300,3 +300,4 @@ export function PaperWorkbench({ paperId }: { paperId?: string }) {
     </>}
   </div>;
 }
+

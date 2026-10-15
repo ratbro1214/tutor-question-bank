@@ -15,7 +15,7 @@ export function publicPaper(row: PaperRow): PaperSummary {
 export function publicPaperQuestion(row: PaperQuestionRow): PaperQuestion {
   return { id: row.id, number: row.question_number, revision: row.revision, regions: JSON.parse(row.regions), imageUrl: `/api/images/${encodeURIComponent(row.image_key)}`, questionText: row.question_text,
     classification: row.classification ? JSON.parse(row.classification) as Classification : null,
-    explanation: row.explanation ? { content: JSON.parse(row.explanation) as ExplanationContent, sourceText: row.question_text, model: row.model, revision: row.revision, reviewed: false, origin: "ai", updatedAt: row.updated_at } : null,
+    explanation: row.explanation ? { content: JSON.parse(row.explanation) as ExplanationContent, sourceText: row.question_text, model: row.model, revision: row.revision, reviewed: false, origin: row.model.startsWith('external:') ? "external" : "ai", updatedAt: row.updated_at } : null,
     status: row.status, error: row.error, updatedAt: row.updated_at };
 }
 export async function findPaper(id: string, request?:Request, mutation=false) {

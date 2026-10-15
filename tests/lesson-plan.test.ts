@@ -128,6 +128,21 @@ test('shared Canonical SQL review filter searches actual accessible records only
   } finally { f.db.close(); }
 });
 
+test('source filtering returns one identity across repeated sources and excludes inaccessible scope', () => {
+  const f = fixture(); try {
+    for (const [index,canonical,revision,scope] of [[0,f.c,f.r,'s'],[1,f.c,f.r,'s'],[2,f.c2,f.r2,'other']] as const) {
+      const source = randomUUID(), occurrence = randomUUID();
+      f.db.prepare("INSERT INTO source_documents(id,scope_id,source_type,title) VALUES (?,?,'student_archive','TEST ONLY')").run(source,scope);
+      f.db.prepare("INSERT INTO question_occurrences(id,canonical_question_id,content_revision_id,source_document_id,source_type,occurrence_key,mapping_status) VALUES (?,?,?,?,'student_archive',?,'confirmed')").run(occurrence,canonical,revision,source,'test-'+index);
+    }
+    const where=libraryWhere(parseLibraryFilters(new URLSearchParams('source=student_archive')));
+    assert.deepEqual(f.db.prepare(libraryBase(['s'])+'SELECT c.id FROM library c'+where.sql).all('s',...where.values).map(row=>row.id),[f.c]);
+    const papers=libraryWhere(parseLibraryFilters(new URLSearchParams('source=math_paper')));
+    assert.equal(f.db.prepare(libraryBase(['s'])+'SELECT c.id FROM library c'+papers.sql).all('s',...papers.values).length,0);
+    assert.throws(()=>parseLibraryFilters(new URLSearchParams('source=invalid')));
+  } finally { f.db.close(); }
+});
+
 test('manual selection, purpose, replacement and ordering survive save and reopen', async () => {
   const f = fixture(); try {
     f.db.prepare('UPDATE canonical_questions SET scope_id=? WHERE id=?').run('s', f.c2);

@@ -62,15 +62,40 @@ export class KnowledgeGraphStore {
     if (previous) { await this.row('math_methods', id); if (previous.scope_id !== input.scopeId || previous.merged_into) throw new GraphError('范围不可修改；已合并方法请编辑目标卡。', 409); }
     if (previous?.operation_id === input.operationId) { if (previous.content !== JSON.stringify(input.content) || previous.source !== JSON.stringify(input.source) || previous.status !== input.status) throw new GraphError('重复提交编号不能用于不同内容。', 409); return this.getMethod(id); }
     if (Number(previous?.revision || 0) !== input.expectedRevision) throw new GraphError('方法版本已更新，请重新载入。', 409);
+    if (!previous && input.content.strategy && input.status !== 'candidate') throw new GraphError('新策略必须先保存为候选，再由教师审核。');
+    if (previous && parse(previous.content).strategy?.key && parse(previous.content).strategy.key !== input.content.strategy?.key) throw new GraphError('策略身份键不可修改或移除，请保留旧键。');
+    if (input.content.strategy) {
+      const key = input.content.strategy.key;
+      if (await this.db.prepare("SELECT id FROM math_methods WHERE owner_id=? AND scope_id=? AND id<>? AND json_extract(content,'$.strategy.key')=?").bind(this.owner, input.scopeId, id, key).first()) throw new GraphError('策略键已存在，请编辑原卡。', 409);
+      if (input.status === 'approved') {
+        // Older local libraries may not yet contain every legacy taxonomy code.
+        // Catalog references below remain mandatory; only existing legacy points get applies edges.
+        for (const code of input.content.strategy.catalogCodes) if (!await this.db.prepare('SELECT id FROM knowledge_nodes WHERE code=?').bind(code).first()) throw new GraphError('关联星图节点不存在。');
+        const methods = await this.methods(false, input.scopeId);
+        for (const link of input.content.strategy.links) if (!methods.some(m => m.content.strategy?.key === link.targetKey && m.evidenceValid)) throw new GraphError('方法网络目标不存在或来源失效。');
+        // Prerequisites are directional. Validate the edited graph before committing approval.
+        const graph = new Map(methods.filter(m => m.id !== id && m.content.strategy).map(m => [m.content.strategy!.key, m.content.strategy!.links.filter(l => l.type === 'prerequisite').map(l => l.targetKey)]));
+        graph.set(key, input.content.strategy.links.filter(l => l.type === 'prerequisite').map(l => l.targetKey));
+        const visiting = new Set<string>(), done = new Set<string>();
+        const visit = (k: string) => { if (visiting.has(k)) throw new GraphError('先修方法形成循环。'); if (done.has(k)) return; visiting.add(k); for (const target of graph.get(k) || []) visit(target); visiting.delete(k); done.add(k); };
+        for (const k of graph.keys()) visit(k);
+      }
+    }
     // Extraction creates candidates only. An explicit subsequent teacher write can approve them.
     if (!previous && input.source.origin === 'ai' && input.status !== 'candidate') throw new GraphError('AI 提取必须先保存为候选。');
     if (input.status === 'approved' && input.content.limitations.some(line => line.startsWith('原通法未明确给出局限'))) throw new GraphError('请教师补充真实适用局限后再审核。');
     if (input.status !== 'rejected') await this.validateSource(input.source, input.scopeId);
     const now = new Date().toISOString(), json = JSON.stringify(input.content), source = JSON.stringify(input.source), reviewer = input.status === 'candidate' ? null : this.owner;
-    const statement = previous ? this.db.prepare('UPDATE math_methods SET revision=revision+1,operation_id=?,status=?,content=?,source=?,reviewer=?,updated_at=? WHERE id=? AND owner_id=? AND revision=? AND merged_into IS NULL').bind(input.operationId, input.status, json, source, reviewer, now, id, this.owner, input.expectedRevision)
+    let statement = previous ? this.db.prepare('UPDATE math_methods SET revision=revision+1,operation_id=?,status=?,content=?,source=?,reviewer=?,updated_at=? WHERE id=? AND owner_id=? AND revision=? AND merged_into IS NULL').bind(input.operationId, input.status, json, source, reviewer, now, id, this.owner, input.expectedRevision)
       : this.db.prepare('INSERT INTO math_methods(id,owner_id,scope_id,revision,operation_id,status,content,source,reviewer,created_at,updated_at) VALUES(?,?,?,1,?,?,?,?,?,?,?)').bind(id, this.owner, input.scopeId, input.operationId, input.status, json, source, reviewer, now, now);
+    if (input.content.strategy) {
+      const guard = "NOT EXISTS(SELECT 1 FROM math_methods WHERE owner_id=? AND scope_id=? AND id<>? AND json_extract(content,'$.strategy.key')=?)";
+      const guardValues = [this.owner, input.scopeId, id, input.content.strategy.key];
+      statement = previous ? this.db.prepare('UPDATE math_methods SET revision=revision+1,operation_id=?,status=?,content=?,source=?,reviewer=?,updated_at=? WHERE id=? AND owner_id=? AND revision=? AND merged_into IS NULL AND '+guard).bind(input.operationId,input.status,json,source,reviewer,now,id,this.owner,input.expectedRevision,...guardValues)
+        : this.db.prepare('INSERT INTO math_methods(id,owner_id,scope_id,revision,operation_id,status,content,source,reviewer,created_at,updated_at) SELECT ?,?,?,1,?,?,?,?,?,?,? WHERE '+guard).bind(id,this.owner,input.scopeId,input.operationId,input.status,json,source,reviewer,now,now,...guardValues);
+    }
     await this.db.batch([this.lock(input.operationId), statement, this.methodVersion(id, input.operationId, now)]);
-    const saved = await this.row('math_methods', id); if (saved.operation_id !== input.operationId) throw new GraphError('方法版本冲突，未覆盖已保存内容。', 409); return this.getMethod(id);
+    const saved = await this.db.prepare('SELECT operation_id FROM math_methods WHERE id=? AND owner_id=?').bind(id,this.owner).first<{operation_id:string}>(); if (!saved || saved.operation_id !== input.operationId) throw new GraphError('方法版本或策略身份冲突，未覆盖已保存内容。', 409); return this.getMethod(id);
   }
   private lock(token: string) { return this.db.prepare('INSERT INTO math_graph_locks(owner_id,token) VALUES(?,?) ON CONFLICT(owner_id) DO UPDATE SET token=excluded.token').bind(this.owner, token); }
   private methodVersion(id: string, op: string, now: string) { return this.db.prepare(`INSERT INTO math_method_versions(operation_id,method_id,revision,snapshot,actor,created_at)

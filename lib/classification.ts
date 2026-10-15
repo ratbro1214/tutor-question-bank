@@ -1,4 +1,5 @@
 import { chaptersForStage, taxonomyForStage } from "@/lib/taxonomy";
+import { knowledgeAnalysisJsonSchema, knowledgeAnalysisSchema, type KnowledgeAnalysis } from './knowledge_graph/analysis';
 
 export type Difficulty = "基础" | "中等" | "较难";
 export type EducationStage = "初中" | "高中";
@@ -33,6 +34,7 @@ export type VisionExtraction = {
 };
 
 export type MathClassificationCandidate = {
+  knowledge_graph?: KnowledgeAnalysis;
   chapter_code: string;
   core_knowledge_point_codes: string[];
   auxiliary_knowledge_point_codes: string[];
@@ -74,6 +76,7 @@ export type ClassificationAnalysisTrace = {
 };
 
 export type Classification = {
+  knowledge_graph?: KnowledgeAnalysis;
   schema_version: "1.0";
   taxonomy_version: "cn-junior-math-1.0" | "cn-senior-math-1.0";
   subject: "初中数学" | "高中数学";
@@ -123,6 +126,7 @@ export function classificationCandidateSchemaForStage(stage: EducationStage) {
   return {
     type: "object", additionalProperties: false,
     properties: {
+      ...(stage === '高中' ? { knowledge_graph: knowledgeAnalysisJsonSchema } : {}),
       chapter_code: { type: "string", enum: chaptersForStage(stage).map(([code]) => code) },
       core_knowledge_point_codes: { type: "array", minItems: 1, maxItems: 3, items: { type: "string", enum: contentCodes } },
       auxiliary_knowledge_point_codes: { type: "array", maxItems: 2, items: { type: "string", enum: contentCodes } },
@@ -136,6 +140,7 @@ export function classificationCandidateSchemaForStage(stage: EducationStage) {
       classification_notes: { type: "string" },
     },
     required: [
+      ...(stage === '高中' ? ['knowledge_graph'] : []),
       "chapter_code", "core_knowledge_point_codes",
       "auxiliary_knowledge_point_codes", "method_codes", "question_type", "difficulty", "confidence",
       "needs_followup", "needs_review", "review_reasons", "classification_notes",
@@ -523,6 +528,7 @@ export function buildClassificationFromCandidate(
   const confidence = Math.min(extraction.extraction_confidence, candidate.confidence);
   return {
     schema_version: "1.0",
+    ...(stage === '高中' && knowledgeAnalysisSchema.safeParse(candidate.knowledge_graph).success ? { knowledge_graph: knowledgeAnalysisSchema.parse(candidate.knowledge_graph) } : {}),
     taxonomy_version: taxonomyVersionForStage(stage),
     subject: subjectForStage(stage),
     education_stage: stage,

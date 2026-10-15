@@ -1,5 +1,5 @@
 // Shared source resolution for current and pinned Canonical revisions.
-export const librarySourcesSql = `SELECT o.id,o.question_number,o.page,o.source_locator_json,o.image_key,o.public_image_path,o.content_revision_id,o.mapping_status,s.title,s.math_paper_id,s.source_type,
+export const librarySourcesSql = `SELECT o.id,o.question_number,o.page,o.source_locator_json,o.image_key,o.public_image_path,o.content_revision_id,o.mapping_status,s.title,s.math_paper_id,s.source_type,s.source_url,s.license,s.metadata,
  l.module_type,l.module_record_id,
  CASE WHEN pq.question_text=? THEN pq.explanation WHEN sq.extracted_question=? AND sq.deleted_at IS NULL AND qe.source_text=sq.extracted_question THEN qe.content END AS explanation,
  CASE WHEN sq.extracted_question=qe.source_text AND sq.deleted_at IS NULL THEN qe.reviewed END AS explanation_reviewed,

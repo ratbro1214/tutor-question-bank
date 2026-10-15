@@ -15,6 +15,7 @@ export const questionCategoryOrder = [
   "平面解析几何",
   "计数原理与概率统计",
   "复数",
+  "数与式", "方程与不等式", "函数与图像", "图形与几何", "数据与概率",
 ] as const;
 
 export type QuestionCategory = typeof questionCategoryOrder[number];
@@ -22,6 +23,11 @@ export type QuestionCategory = typeof questionCategoryOrder[number];
 export function broadQuestionCategory(question: ClassifiableQuestion): QuestionCategory | "其他" {
   const code = question.chapterCode;
   const pointCodes = question.knowledgePoints?.map(point => point.code) || [];
+  if (code.startsWith('NUM-') || code.startsWith('ALG-')) return '数与式';
+  if (code.startsWith('EQ-') || code === 'INEQ') return '方程与不等式';
+  if (code.startsWith('FUNC-') || code === 'COORDINATE') return '函数与图像';
+  if (code.startsWith('GEO-')) return '图形与几何';
+  if (code.startsWith('STAT-') || code === 'PROBABILITY') return '数据与概率';
 
   if (code === "HS-SETS-LOGIC") return "集合与逻辑";
   if (["HS-FUNCTION", "HS-ELEMENTARY-FUNCTION", "HS-DERIVATIVE"].includes(code)) return "函数与导数";

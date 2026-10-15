@@ -20,7 +20,7 @@ export const explanationContentSchema = z.object({
 export type ExplanationContent = z.infer<typeof explanationContentSchema>;
 export type SavedExplanation = {
   content: ExplanationContent; sourceText: string; revision: number;
-  origin: "ai" | "manual"; model: string; reviewed: boolean; updatedAt: string;
+  origin: "ai" | "manual" | "external"; model: string; reviewed: boolean; updatedAt: string;
 };
 export const emptyExplanation: ExplanationContent = {
   status: "ready", answer: "", approach: "", steps: [], teachingNotes: "",

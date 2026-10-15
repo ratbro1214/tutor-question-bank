@@ -12,7 +12,7 @@ const lessonContentObject = z.object({
   stage: z.enum(['初中', '高中']).default('高中'), grade: z.string().max(30).default('高三'),
   duration: z.number().int().min(1).max(480).default(45),
   scenario: z.enum(['一对一家教', '小班教学', '专题复习']).default('一对一家教'),
-  goals: text.default(''), baseline: text.default(''), analysis: text.default(''),
+  goals: text.default(''), baseline: text.default(''), brief: text.default(''), analysis: text.default(''),
   flow: text.default(''), examples: text.default(''), exercises: text.default(''), summary: text.default(''),
   studentSummary: text.default(''), answerLines: z.number().int().min(2).max(20).default(6),
   questions: z.array(lessonQuestionSchema).max(30).default([]),
