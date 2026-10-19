@@ -1,0 +1,194 @@
+{
+  "nodeId": "course:/G354",
+  "contents": [
+    {
+      "id": "lesson-content:book3:U08:statistics-essay",
+      "nodeId": "course:/G354",
+      "proposedNodeId": null,
+      "kind": "context",
+      "origin": "lesson_plan_verbatim",
+      "title": "作业2 统计数据的随机性和规律性小论文",
+      "scope": "原396–398段为统计单元长周期小论文，可从必修完成后布置，到选择性必修统计结束收交；主归既有第13章统计，来源第12单元编号保留；选择性必修章位作任务延续关联，不新建原子知识定义。",
+      "blocks": [
+        {
+          "role": "question",
+          "type": "text",
+          "value": "作业2  同学们，我们已经完成统计单元的学习，相信同学们已经积累了一些统计学习心得.请在报纸、杂志或网络上找一些统计数据，并考虑哪种统计图表可以较为合适地呈现这些数据.以“统计数据的随机性和规律性”“统计数据的获取、分析与结论”等为题撰写一篇数学小论文，字数不限.内容可以是：对统计单元的基本认识或学过内容的梳理，谈谈学习了统计内容后对数据随机性和规律性的理解.可以以具体例子说明对数据的随机性和规律性的认识，也可以说说自己对统计数据的获取、分析和得出统计结论的一些做法和感悟.",
+          "evidenceIds": [
+            "ev:book3:U08:para396:statistics-essay:0"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "设计说明  数据的随机性和规律性是统计的基本特征.统计学是由收集数据、分析数据，并由数据得出结论的一些概念原则和方法组成的学科.学生通过自己举例或者将学习感悟有条理地表达出来，写成小论文，并在此过程中发展数据分析素养.",
+          "evidenceIds": [
+            "ev:book3:U08:para397:statistics-essay:1"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "本作业是一份长周期作业，可以在必修课程中统计内容学完之后布置，等到选择性必修课程中统计学习结束时收交作业并评价.作业的评价建议以小组为单位将组员的小论文内容进行汇编整理，提炼核心内容制作成PPT，在课堂上进行小组汇报.各组员的小论文在小组内互评，各小组的汇报由组与组之间的互评与教师评价相结合进行最终评价.",
+          "evidenceIds": [
+            "ev:book3:U08:para398:statistics-essay:2"
+          ]
+        }
+      ],
+      "matching": {
+        "status": "confirmed",
+        "reason": "原396–398段为统计单元长周期小论文，可从必修完成后布置，到选择性必修统计结束收交；主归既有第13章统计，来源第12单元编号保留；选择性必修章位作任务延续关联，不新建原子知识定义。"
+      },
+      "evidence": [
+        {
+          "id": "ev:book3:U08:para396:statistics-essay:0",
+          "sourceId": "U08",
+          "sourceSha256": "88e25b9b6c61b742d1ce34c7fb5425b74a149518aaf3b94ec7e5b1c8904a494f",
+          "locator": {
+            "headingPath": [
+              "作业2 统计数据的随机性和规律性小论文"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 396,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 18,
+            "printedPage": null,
+            "pdfPage": 18,
+            "equationObjectId": null
+          },
+          "quote": "作业2  同学们，我们已经完成统计单元的学习，相信同学们已经积累了一些统计学习心得.请在报纸、杂志或网络上找一些统计数据，并考虑哪种统计图表可以较为合适地呈现这些数据.以“统计数据的随机性和规律性”“统计数据的获取、分析与结论”等为题撰写一篇数学小论文，字数不限.内容可以是：对统计单元的基本认识或学过内容的梳理，谈谈学习了统计内容后对数据随机性和规律性的理解.可以以具体例子说明对数据的随机性和规律性的认识，也可以说说自己对统计数据的获取、分析和得出统计结论的一些做法和感悟.",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "U08",
+            "requestedPath": "increments/u05-u08-v1/evidence/U08/page-18.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/U08.docx",
+          "sourceTitle": "必修三 第12单元 统计 单元教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:U08:para397:statistics-essay:1",
+          "sourceId": "U08",
+          "sourceSha256": "88e25b9b6c61b742d1ce34c7fb5425b74a149518aaf3b94ec7e5b1c8904a494f",
+          "locator": {
+            "headingPath": [
+              "作业2 统计数据的随机性和规律性小论文"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 397,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 18,
+            "printedPage": null,
+            "pdfPage": 18,
+            "equationObjectId": null
+          },
+          "quote": "设计说明  数据的随机性和规律性是统计的基本特征.统计学是由收集数据、分析数据，并由数据得出结论的一些概念原则和方法组成的学科.学生通过自己举例或者将学习感悟有条理地表达出来，写成小论文，并在此过程中发展数据分析素养.",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "U08",
+            "requestedPath": "increments/u05-u08-v1/evidence/U08/page-18.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/U08.docx",
+          "sourceTitle": "必修三 第12单元 统计 单元教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:U08:para398:statistics-essay:2",
+          "sourceId": "U08",
+          "sourceSha256": "88e25b9b6c61b742d1ce34c7fb5425b74a149518aaf3b94ec7e5b1c8904a494f",
+          "locator": {
+            "headingPath": [
+              "作业2 统计数据的随机性和规律性小论文"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 398,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 18,
+            "printedPage": null,
+            "pdfPage": 18,
+            "equationObjectId": null
+          },
+          "quote": "本作业是一份长周期作业，可以在必修课程中统计内容学完之后布置，等到选择性必修课程中统计学习结束时收交作业并评价.作业的评价建议以小组为单位将组员的小论文内容进行汇编整理，提炼核心内容制作成PPT，在课堂上进行小组汇报.各组员的小论文在小组内互评，各小组的汇报由组与组之间的互评与教师评价相结合进行最终评价.",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "U08",
+            "requestedPath": "increments/u05-u08-v1/evidence/U08/page-18.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/U08.docx",
+          "sourceTitle": "必修三 第12单元 统计 单元教学设计",
+          "sourceStatus": "partially_reviewed"
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": [],
+      "historicalAssignmentBeforeB12": {
+        "nodeId": null,
+        "matching": {
+          "status": "unresolved",
+          "reason": "跨主题活动未强配单节点"
+        },
+        "proposedNodeId": null
+      },
+      "sourceAssignmentB12": {
+        "contentId": "lesson-content:book3:U08:statistics-essay",
+        "sourceId": "U08",
+        "primaryNodeId": "course:/G354",
+        "associatedNodeIds": [
+          "method:statistical-modeling",
+          "kp:21351"
+        ],
+        "chapterIds": [
+          "course:/G354",
+          "course:/G431"
+        ],
+        "basis": "原396–398段为统计单元长周期小论文，可从必修完成后布置，到选择性必修统计结束收交；主归既有第13章统计，来源第12单元编号保留；选择性必修章位作任务延续关联，不新建原子知识定义。",
+        "sameCIDRetained": true,
+        "newIdentityCreated": false
+      },
+      "sourceUsageReviewB12": {
+        "batch": "B12",
+        "status": "frozen_context_checked_with_declared_limits",
+        "wholeSourceVerified": false,
+        "nativeChineseWholePageVerified": false,
+        "sourceIssueIds": []
+      }
+    }
+  ],
+  "requirements": {},
+  "methodCandidates": [],
+  "relationProposals": [],
+  "legacyFormulaRecords": []
+}

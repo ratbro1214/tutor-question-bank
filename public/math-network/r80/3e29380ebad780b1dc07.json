@@ -1,0 +1,3317 @@
+{
+  "nodeId": "method:auxiliary-angle",
+  "contents": [
+    {
+      "id": "lesson-content:book-2:auxiliary-angle-goal",
+      "nodeId": "method:auxiliary-angle",
+      "proposedNodeId": null,
+      "kind": "context",
+      "origin": "lesson_plan_verbatim",
+      "title": "辅助角公式化简的课时目标",
+      "scope": "仅教学目标覆盖，尚非完整推导/例题证据。",
+      "blocks": [
+        {
+          "role": "statement",
+          "type": "text",
+          "value": "2．经历逆用两角和与差的正弦公式将形如$a\\sin\\alpha+b\\cos\\alpha$（$ab\\ne0$）的式子化为$A\\sin(\\alpha+\\varphi)$（$A>0$）的过程，体验从特殊到一般的研究方法．",
+          "sourceString": "2．经历逆用两角和与差的正弦公式将形如$a\\sin\\alpha+b\\cos\\alpha$（$ab\\ne0$）的式子化为$A\\sin(\\alpha+\\varphi)$（$A>0$）的过程，体验从特殊到一般的研究方法．",
+          "sourceStringKind": "visual_transcription_with_latex_delimiters",
+          "evidenceIds": [
+            "ev:book-2:U09:auxiliary-angle-goal-b0"
+          ]
+        }
+      ],
+      "matching": {
+        "status": "confirmed",
+        "reason": "按实际任务、公式与原节点名称核对；不改变既有ID。"
+      },
+      "evidence": [
+        {
+          "id": "ev:book-2:U09:auxiliary-angle-goal-b0",
+          "sourceId": "U09",
+          "sourceSha256": "2b3349e2b4f6695915d9ffd353ae5ec5157e7a2f1938951a771108fa32f8a5b5",
+          "locator": {
+            "headingPath": [
+              "U09全源补齐"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 234,
+            "paragraphIndexConvention": "1-based all .//w:p document order",
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 13,
+            "pdfPage": 13,
+            "printedPage": 13,
+            "equationObjectId": null,
+            "paragraphIndices": [
+              234
+            ],
+            "printedPageBasis": "原渲染页脚实际可见页码"
+          },
+          "quote": "）的过程，体验从特殊到一般的研究方法．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": "increments/u09-final-audit-v1/original-assets/U09/word/media/image12.wmf",
+          "mathSourceAssets": [
+            {
+              "sourcePart": "word/media/image12.wmf",
+              "path": "increments/u09-final-audit-v1/original-assets/U09/word/media/image12.wmf",
+              "bytes": 1008,
+              "sha256": "8c04f8158b88bd5882d4745d2b914277439dfae6d354444e726800879b0ce3db"
+            },
+            {
+              "sourcePart": "word/embeddings/oleObject11.bin",
+              "path": "increments/u09-final-audit-v1/original-assets/U09/word/embeddings/oleObject11.bin",
+              "bytes": 3584,
+              "sha256": "6a21efdf690350a482195c1382aca1f2036695082a6c9e6d92036d420a98ba2f"
+            },
+            {
+              "sourcePart": "word/media/image13.wmf",
+              "path": "increments/u09-final-audit-v1/original-assets/U09/word/media/image13.wmf",
+              "bytes": 854,
+              "sha256": "7bcac17a750a08e3e2f95742f105eb0ee72d5d13709e8a74f82f4f0dd4330d87"
+            },
+            {
+              "sourcePart": "word/embeddings/oleObject12.bin",
+              "path": "increments/u09-final-audit-v1/original-assets/U09/word/embeddings/oleObject12.bin",
+              "bytes": 3584,
+              "sha256": "41c503af0b40008081493bc81757073e86da8945ab13152136e1e84809dcb6e1"
+            },
+            {
+              "sourcePart": "word/media/image14.wmf",
+              "path": "increments/u09-final-audit-v1/original-assets/U09/word/media/image14.wmf",
+              "bytes": 996,
+              "sha256": "53326d395d1ba20969137cdebf4145b103ddf4bf2c278e2608180ee1eb2533fe"
+            },
+            {
+              "sourcePart": "word/embeddings/oleObject13.bin",
+              "path": "increments/u09-final-audit-v1/original-assets/U09/word/embeddings/oleObject13.bin",
+              "bytes": 3584,
+              "sha256": "5f7a3d21a6a4d717f0c56e0596852325720e7ccdf5596b747a6d58c4cf18ca5c"
+            },
+            {
+              "sourcePart": "word/media/image15.wmf",
+              "path": "increments/u09-final-audit-v1/original-assets/U09/word/media/image15.wmf",
+              "bytes": 850,
+              "sha256": "59f4265bfb4499df86b0a34a39c0f4ccf42fe0e76eb7cc282f1911e84b1257bf"
+            },
+            {
+              "sourcePart": "word/embeddings/oleObject14.bin",
+              "path": "increments/u09-final-audit-v1/original-assets/U09/word/embeddings/oleObject14.bin",
+              "bytes": 3584,
+              "sha256": "a2b26f7b0be9e36901923c67e51e14c10677365a204d13b031f84cd9df44438a"
+            }
+          ],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "U09",
+            "requestedPath": "increments/u09-final-audit-v1/increments/u09-v1/evidence/U09-cjk/page-13.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/U09.docx",
+          "sourceTitle": "高一年级必修第二册第5单元三角单元设计",
+          "sourceStatus": "partially_reviewed"
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": [
+        {
+          "id": "formula:book-2:auxiliary-angle-goal:b0:m0",
+          "location": "blocks[0].value.inlineMath[0]",
+          "sourceString": "2．经历逆用两角和与差的正弦公式将形如$a\\sin\\alpha+b\\cos\\alpha$（$ab\\ne0$）的式子化为$A\\sin(\\alpha+\\varphi)$（$A>0$）的过程，体验从特殊到一般的研究方法．",
+          "latex": "a\\sin\\alpha+b\\cos\\alpha",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:auxiliary-angle-goal:b0:m1",
+          "location": "blocks[0].value.inlineMath[1]",
+          "sourceString": "2．经历逆用两角和与差的正弦公式将形如$a\\sin\\alpha+b\\cos\\alpha$（$ab\\ne0$）的式子化为$A\\sin(\\alpha+\\varphi)$（$A>0$）的过程，体验从特殊到一般的研究方法．",
+          "latex": "ab\\ne0",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:auxiliary-angle-goal:b0:m2",
+          "location": "blocks[0].value.inlineMath[2]",
+          "sourceString": "2．经历逆用两角和与差的正弦公式将形如$a\\sin\\alpha+b\\cos\\alpha$（$ab\\ne0$）的式子化为$A\\sin(\\alpha+\\varphi)$（$A>0$）的过程，体验从特殊到一般的研究方法．",
+          "latex": "A\\sin(\\alpha+\\varphi)",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:auxiliary-angle-goal:b0:m3",
+          "location": "blocks[0].value.inlineMath[3]",
+          "sourceString": "2．经历逆用两角和与差的正弦公式将形如$a\\sin\\alpha+b\\cos\\alpha$（$ab\\ne0$）的式子化为$A\\sin(\\alpha+\\varphi)$（$A>0$）的过程，体验从特殊到一般的研究方法．",
+          "latex": "A>0",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        }
+      ]
+    },
+    {
+      "id": "lesson-content:book-2:U10:extrema-two-methods",
+      "nodeId": "method:auxiliary-angle",
+      "proposedNodeId": null,
+      "kind": "example",
+      "origin": "lesson_plan_verbatim",
+      "title": "化同名成二次形式与辅助角化一角求最值",
+      "scope": "U10教案原文；渲染页为转换件页码，不是原始印刷页。",
+      "blocks": [
+        {
+          "role": "question",
+          "type": "text",
+          "value": "例2 求下列函数的最大值和最小值：",
+          "sourceString": "例2 求下列函数的最大值和最小值：",
+          "sourceStringKind": "visual_transcription_with_latex_delimiters",
+          "evidenceIds": [
+            "ev:book-2:U10:extrema-two-methods-b0"
+          ]
+        },
+        {
+          "role": "question",
+          "type": "text",
+          "value": "（1）$y=-2\\sin^2x+2\\cos x+2$；",
+          "sourceString": "（1）$y=-2\\sin^2x+2\\cos x+2$；",
+          "sourceStringKind": "visual_transcription_with_latex_delimiters",
+          "evidenceIds": [
+            "ev:book-2:U10:extrema-two-methods-b1"
+          ]
+        },
+        {
+          "role": "question",
+          "type": "text",
+          "value": "（2）$y=3\\cos x-\\sqrt3\\sin x,\\ x\\in\\left[0,\\frac\\pi2\\right]$．",
+          "sourceString": "（2）$y=3\\cos x-\\sqrt3\\sin x,\\ x\\in\\left[0,\\frac\\pi2\\right]$．",
+          "sourceStringKind": "visual_transcription_with_latex_delimiters",
+          "evidenceIds": [
+            "ev:book-2:U10:extrema-two-methods-b2"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "分析 （1）将$\\sin x$、$\\cos x$分别看成一个变量，注意$|\\sin x|\\le1$，$|\\cos x|\\le1$，然后转化为求关于该变量的函数的最大值和最小值问题．（2）形如$a\\sin x+b\\cos x\\ (ab\\ne0)$情形的式子，均可转化为$\\sqrt{a^2+b^2}\\sin(x+\\phi)$的形式．",
+          "sourceString": "分析 （1）将$\\sin x$、$\\cos x$分别看成一个变量，注意$|\\sin x|\\le1$，$|\\cos x|\\le1$，然后转化为求关于该变量的函数的最大值和最小值问题．（2）形如$a\\sin x+b\\cos x\\ (ab\\ne0)$情形的式子，均可转化为$\\sqrt{a^2+b^2}\\sin(x+\\phi)$的形式．",
+          "sourceStringKind": "visual_transcription_with_latex_delimiters",
+          "evidenceIds": [
+            "ev:book-2:U10:extrema-two-methods-b3"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "math",
+          "value": "\\begin{aligned}y&=-2\\sin^2x+2\\cos x+2=2\\cos^2x+2\\cos x\\\\&=2\\left(\\cos x+\\frac12\\right)^2-\\frac12.\\end{aligned}",
+          "sourceString": "\\begin{aligned}y&=-2\\sin^2x+2\\cos x+2=2\\cos^2x+2\\cos x\\\\&=2\\left(\\cos x+\\frac12\\right)^2-\\frac12.\\end{aligned}",
+          "sourceStringKind": "visual_transcription_with_latex_delimiters",
+          "evidenceIds": [
+            "ev:book-2:U10:extrema-two-methods-b4"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "因为$\\cos x$的取值范围为$[-1,1]$，所以当$\\cos x=1$，即$x=2k\\pi,k\\in\\mathbf Z$时，$y$取到最大值$4$；",
+          "sourceString": "因为$\\cos x$的取值范围为$[-1,1]$，所以当$\\cos x=1$，即$x=2k\\pi,k\\in\\mathbf Z$时，$y$取到最大值$4$；",
+          "sourceStringKind": "visual_transcription_with_latex_delimiters",
+          "evidenceIds": [
+            "ev:book-2:U10:extrema-two-methods-b5"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "当$\\cos x=-\\frac12$，即$x=2k\\pi\\pm\\frac{2\\pi}3,k\\in\\mathbf Z$时，$y$取到最小值$-\\frac12$．",
+          "sourceString": "当$\\cos x=-\\frac12$，即$x=2k\\pi\\pm\\frac{2\\pi}3,k\\in\\mathbf Z$时，$y$取到最小值$\\frac12$．",
+          "sourceStringKind": "visual_transcription_with_latex_delimiters",
+          "evidenceIds": [
+            "ev:book-2:U10:extrema-two-methods-b6"
+          ],
+          "correctionId": "correction:U10:example2-minimum:20261012"
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "（2）$y=3\\cos x-\\sqrt3\\sin x=2\\sqrt3\\cos\\left(x+\\frac\\pi6\\right)$．",
+          "sourceString": "（2）$y=3\\cos x-\\sqrt3\\sin x=2\\sqrt3\\cos\\left(x+\\frac\\pi6\\right)$．",
+          "sourceStringKind": "visual_transcription_with_latex_delimiters",
+          "evidenceIds": [
+            "ev:book-2:U10:extrema-two-methods-b7"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "因为$x\\in\\left[0,\\frac\\pi2\\right]$，所以$\\frac\\pi6\\le x+\\frac\\pi6\\le\\frac{2\\pi}3$．",
+          "sourceString": "因为$x\\in\\left[0,\\frac\\pi2\\right]$，所以$\\frac\\pi6\\le x+\\frac\\pi6\\le\\frac{2\\pi}3$．",
+          "sourceStringKind": "visual_transcription_with_latex_delimiters",
+          "evidenceIds": [
+            "ev:book-2:U10:extrema-two-methods-b8"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "令$t=x+\\frac\\pi6$，又因为$y=\\cos t$在区间$\\left[\\frac\\pi6,\\frac{2\\pi}3\\right]$上是严格减函数，所以",
+          "sourceString": "令$t=x+\\frac\\pi6$，又因为$y=\\cos t$在区间$\\left[\\frac\\pi6,\\frac{2\\pi}3\\right]$上是严格减函数，所以",
+          "sourceStringKind": "visual_transcription_with_latex_delimiters",
+          "evidenceIds": [
+            "ev:book-2:U10:extrema-two-methods-b9"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "当$x=0$时，$y$取到最大值$3$；",
+          "sourceString": "当$x=0$时，$y$取到最大值$3$；",
+          "sourceStringKind": "visual_transcription_with_latex_delimiters",
+          "evidenceIds": [
+            "ev:book-2:U10:extrema-two-methods-b10"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "当$x=\\frac\\pi2$时，$y$取到最小值$-\\sqrt3$．",
+          "sourceString": "当$x=\\frac\\pi2$时，$y$取到最小值$-\\sqrt3$．",
+          "sourceStringKind": "visual_transcription_with_latex_delimiters",
+          "evidenceIds": [
+            "ev:book-2:U10:extrema-two-methods-b11"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "说明 能善于观察、联想，是化为同名三角函数，转化为二次形式，还是转化为一个角的三角函数形式，需要仔细分析，整体判断．",
+          "sourceString": "说明 能善于观察、联想，是化为同名三角函数，转化为二次形式，还是转化为一个角的三角函数形式，需要仔细分析，整体判断．",
+          "sourceStringKind": "visual_transcription_with_latex_delimiters",
+          "evidenceIds": [
+            "ev:book-2:U10:extrema-two-methods-b12"
+          ]
+        }
+      ],
+      "matching": {
+        "status": "confirmed",
+        "reason": "按实际公式与解题过程匹配；不由章节顺序推关系。"
+      },
+      "evidence": [
+        {
+          "id": "ev:book-2:U10:extrema-two-methods-b0",
+          "sourceId": "U10",
+          "sourceSha256": "6714eeba60920c00accd5691c4fc3e3c6a35f08a2010d7b3a122fbd08d06d286",
+          "locator": {
+            "headingPath": [
+              "U10",
+              "化同名成二次形式与辅助角化一角求最值"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 506,
+            "paragraphIndexConvention": "1-based all .//w:p document order",
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 28,
+            "pdfPage": 28,
+            "printedPage": null,
+            "equationObjectId": null
+          },
+          "quote": "例2 求下列函数的最大值和最小值：",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": "assets/derived/source-branches-20261012/U10-WPS-page-19.png",
+            "sourceId": "U10",
+            "kind": "wps_native_same_original_page",
+            "previewPdfPage": 19,
+            "sha256": "048b0e6a861429e6eafdb768f5f5ba451b13239a1f92518c1c7cb43e7980ae85",
+            "bytes": 198594,
+            "nativeDisplayReviewId": "source-branch:trig-unify-name:20261012",
+            "qualityNote": "未改原件在本机 WPS 导出的 PDF 第 19 页；按题目与原文段落对应。新分页不同于旧转换件，不替换原来源定位。",
+            "requestedPath": "increments/u10-v1/evidence/U10-cjk/page-28.png",
+            "historicalResource": {
+              "url": null,
+              "sourceId": "U10",
+              "requestedPath": "increments/u10-v1/evidence/U10-cjk/page-28.png",
+              "kind": "missing_source_page",
+              "sha256": null,
+              "bytes": null
+            }
+          },
+          "originalUrl": "source-original/U10.docx",
+          "sourceTitle": "高一年级必修第二册第6单元单元设计",
+          "sourceStatus": "partially_reviewed",
+          "localVisualReview": {
+            "id": "source-branch:trig-unify-name:20261012",
+            "sourceFileUnchanged": true,
+            "nativePreviewRead": true,
+            "originalObjectSemanticsVerified": false
+          }
+        },
+        {
+          "id": "ev:book-2:U10:extrema-two-methods-b1",
+          "sourceId": "U10",
+          "sourceSha256": "6714eeba60920c00accd5691c4fc3e3c6a35f08a2010d7b3a122fbd08d06d286",
+          "locator": {
+            "headingPath": [
+              "U10",
+              "化同名成二次形式与辅助角化一角求最值"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 507,
+            "paragraphIndexConvention": "1-based all .//w:p document order",
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 28,
+            "pdfPage": 28,
+            "printedPage": null,
+            "equationObjectId": null
+          },
+          "quote": "（1）$y=-2\\sin^2x+2\\cos x+2$；",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": "assets/derived/source-branches-20261012/U10-WPS-page-19.png",
+            "sourceId": "U10",
+            "kind": "wps_native_same_original_page",
+            "previewPdfPage": 19,
+            "sha256": "048b0e6a861429e6eafdb768f5f5ba451b13239a1f92518c1c7cb43e7980ae85",
+            "bytes": 198594,
+            "nativeDisplayReviewId": "source-branch:trig-unify-name:20261012",
+            "qualityNote": "未改原件在本机 WPS 导出的 PDF 第 19 页；按题目与原文段落对应。新分页不同于旧转换件，不替换原来源定位。",
+            "requestedPath": "increments/u10-v1/evidence/U10-cjk/page-28.png",
+            "historicalResource": {
+              "url": null,
+              "sourceId": "U10",
+              "requestedPath": "increments/u10-v1/evidence/U10-cjk/page-28.png",
+              "kind": "missing_source_page",
+              "sha256": null,
+              "bytes": null
+            }
+          },
+          "originalUrl": "source-original/U10.docx",
+          "sourceTitle": "高一年级必修第二册第6单元单元设计",
+          "sourceStatus": "partially_reviewed",
+          "localVisualReview": {
+            "id": "source-branch:trig-unify-name:20261012",
+            "sourceFileUnchanged": true,
+            "nativePreviewRead": true,
+            "originalObjectSemanticsVerified": false
+          }
+        },
+        {
+          "id": "ev:book-2:U10:extrema-two-methods-b2",
+          "sourceId": "U10",
+          "sourceSha256": "6714eeba60920c00accd5691c4fc3e3c6a35f08a2010d7b3a122fbd08d06d286",
+          "locator": {
+            "headingPath": [
+              "U10",
+              "化同名成二次形式与辅助角化一角求最值"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 508,
+            "paragraphIndexConvention": "1-based all .//w:p document order",
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 28,
+            "pdfPage": 28,
+            "printedPage": null,
+            "equationObjectId": null
+          },
+          "quote": "（2）$y=3\\cos x-\\sqrt3\\sin x,\\ x\\in\\left[0,\\frac\\pi2\\right]$．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": "assets/derived/source-branches-20261012/U10-WPS-page-19.png",
+            "sourceId": "U10",
+            "kind": "wps_native_same_original_page",
+            "previewPdfPage": 19,
+            "sha256": "048b0e6a861429e6eafdb768f5f5ba451b13239a1f92518c1c7cb43e7980ae85",
+            "bytes": 198594,
+            "nativeDisplayReviewId": "source-branch:trig-unify-name:20261012",
+            "qualityNote": "未改原件在本机 WPS 导出的 PDF 第 19 页；按题目与原文段落对应。新分页不同于旧转换件，不替换原来源定位。",
+            "requestedPath": "increments/u10-v1/evidence/U10-cjk/page-28.png",
+            "historicalResource": {
+              "url": null,
+              "sourceId": "U10",
+              "requestedPath": "increments/u10-v1/evidence/U10-cjk/page-28.png",
+              "kind": "missing_source_page",
+              "sha256": null,
+              "bytes": null
+            }
+          },
+          "originalUrl": "source-original/U10.docx",
+          "sourceTitle": "高一年级必修第二册第6单元单元设计",
+          "sourceStatus": "partially_reviewed",
+          "localVisualReview": {
+            "id": "source-branch:trig-unify-name:20261012",
+            "sourceFileUnchanged": true,
+            "nativePreviewRead": true,
+            "originalObjectSemanticsVerified": false
+          }
+        },
+        {
+          "id": "ev:book-2:U10:extrema-two-methods-b3",
+          "sourceId": "U10",
+          "sourceSha256": "6714eeba60920c00accd5691c4fc3e3c6a35f08a2010d7b3a122fbd08d06d286",
+          "locator": {
+            "headingPath": [
+              "U10",
+              "化同名成二次形式与辅助角化一角求最值"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 509,
+            "paragraphIndexConvention": "1-based all .//w:p document order",
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 29,
+            "pdfPage": 29,
+            "printedPage": null,
+            "equationObjectId": null
+          },
+          "quote": "分析 （1）将$\\sin x$、$\\cos x$分别看成一个变量，注意$|\\sin x|\\le1$，$|\\cos x|\\le1$，然后转化为求关于该变量的函数的最大值和最小值问题．（2）形如$a\\sin x+b\\cos x\\ (ab\\ne0)$情形的式子，均可转化为$\\sqrt{a^2+b^2}\\sin(x+\\phi)$的形式．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": "assets/derived/source-branches-20261012/U10-WPS-page-19.png",
+            "sourceId": "U10",
+            "kind": "wps_native_same_original_page",
+            "previewPdfPage": 19,
+            "sha256": "048b0e6a861429e6eafdb768f5f5ba451b13239a1f92518c1c7cb43e7980ae85",
+            "bytes": 198594,
+            "nativeDisplayReviewId": "source-branch:trig-unify-name:20261012",
+            "qualityNote": "未改原件在本机 WPS 导出的 PDF 第 19 页；按题目与原文段落对应。新分页不同于旧转换件，不替换原来源定位。",
+            "requestedPath": "increments/u10-v1/evidence/U10-cjk/page-29.png",
+            "historicalResource": {
+              "url": null,
+              "sourceId": "U10",
+              "requestedPath": "increments/u10-v1/evidence/U10-cjk/page-29.png",
+              "kind": "missing_source_page",
+              "sha256": null,
+              "bytes": null
+            }
+          },
+          "originalUrl": "source-original/U10.docx",
+          "sourceTitle": "高一年级必修第二册第6单元单元设计",
+          "sourceStatus": "partially_reviewed",
+          "localVisualReview": {
+            "id": "source-branch:trig-unify-name:20261012",
+            "sourceFileUnchanged": true,
+            "nativePreviewRead": true,
+            "originalObjectSemanticsVerified": false
+          }
+        },
+        {
+          "id": "ev:book-2:U10:extrema-two-methods-b4",
+          "sourceId": "U10",
+          "sourceSha256": "6714eeba60920c00accd5691c4fc3e3c6a35f08a2010d7b3a122fbd08d06d286",
+          "locator": {
+            "headingPath": [
+              "U10",
+              "化同名成二次形式与辅助角化一角求最值"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 510,
+            "paragraphIndexConvention": "1-based all .//w:p document order",
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 29,
+            "pdfPage": 29,
+            "printedPage": null,
+            "equationObjectId": null
+          },
+          "quote": "\\begin{aligned}y&=-2\\sin^2x+2\\cos x+2=2\\cos^2x+2\\cos x\\\\&=2\\left(\\cos x+\\frac12\\right)^2-\\frac12.\\end{aligned}",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": "assets/derived/source-branches-20261012/U10-WPS-page-19.png",
+            "sourceId": "U10",
+            "kind": "wps_native_same_original_page",
+            "previewPdfPage": 19,
+            "sha256": "048b0e6a861429e6eafdb768f5f5ba451b13239a1f92518c1c7cb43e7980ae85",
+            "bytes": 198594,
+            "nativeDisplayReviewId": "source-branch:trig-unify-name:20261012",
+            "qualityNote": "未改原件在本机 WPS 导出的 PDF 第 19 页；按题目与原文段落对应。新分页不同于旧转换件，不替换原来源定位。",
+            "requestedPath": "increments/u10-v1/evidence/U10-cjk/page-29.png",
+            "historicalResource": {
+              "url": null,
+              "sourceId": "U10",
+              "requestedPath": "increments/u10-v1/evidence/U10-cjk/page-29.png",
+              "kind": "missing_source_page",
+              "sha256": null,
+              "bytes": null
+            }
+          },
+          "originalUrl": "source-original/U10.docx",
+          "sourceTitle": "高一年级必修第二册第6单元单元设计",
+          "sourceStatus": "partially_reviewed",
+          "localVisualReview": {
+            "id": "source-branch:trig-unify-name:20261012",
+            "sourceFileUnchanged": true,
+            "nativePreviewRead": true,
+            "originalObjectSemanticsVerified": false
+          }
+        },
+        {
+          "id": "ev:book-2:U10:extrema-two-methods-b5",
+          "sourceId": "U10",
+          "sourceSha256": "6714eeba60920c00accd5691c4fc3e3c6a35f08a2010d7b3a122fbd08d06d286",
+          "locator": {
+            "headingPath": [
+              "U10",
+              "化同名成二次形式与辅助角化一角求最值"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 511,
+            "paragraphIndexConvention": "1-based all .//w:p document order",
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 29,
+            "pdfPage": 29,
+            "printedPage": null,
+            "equationObjectId": null
+          },
+          "quote": "因为$\\cos x$的取值范围为$[-1,1]$，所以当$\\cos x=1$，即$x=2k\\pi,k\\in\\mathbf Z$时，$y$取到最大值$4$；",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": "assets/derived/source-branches-20261012/U10-WPS-page-19.png",
+            "sourceId": "U10",
+            "kind": "wps_native_same_original_page",
+            "previewPdfPage": 19,
+            "sha256": "048b0e6a861429e6eafdb768f5f5ba451b13239a1f92518c1c7cb43e7980ae85",
+            "bytes": 198594,
+            "nativeDisplayReviewId": "source-branch:trig-unify-name:20261012",
+            "qualityNote": "未改原件在本机 WPS 导出的 PDF 第 19 页；按题目与原文段落对应。新分页不同于旧转换件，不替换原来源定位。",
+            "requestedPath": "increments/u10-v1/evidence/U10-cjk/page-29.png",
+            "historicalResource": {
+              "url": null,
+              "sourceId": "U10",
+              "requestedPath": "increments/u10-v1/evidence/U10-cjk/page-29.png",
+              "kind": "missing_source_page",
+              "sha256": null,
+              "bytes": null
+            }
+          },
+          "originalUrl": "source-original/U10.docx",
+          "sourceTitle": "高一年级必修第二册第6单元单元设计",
+          "sourceStatus": "partially_reviewed",
+          "localVisualReview": {
+            "id": "source-branch:trig-unify-name:20261012",
+            "sourceFileUnchanged": true,
+            "nativePreviewRead": true,
+            "originalObjectSemanticsVerified": false
+          }
+        },
+        {
+          "id": "ev:book-2:U10:extrema-two-methods-b6",
+          "sourceId": "U10",
+          "sourceSha256": "6714eeba60920c00accd5691c4fc3e3c6a35f08a2010d7b3a122fbd08d06d286",
+          "locator": {
+            "headingPath": [
+              "U10",
+              "化同名成二次形式与辅助角化一角求最值"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 512,
+            "paragraphIndexConvention": "1-based all .//w:p document order",
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 29,
+            "pdfPage": 29,
+            "printedPage": null,
+            "equationObjectId": null
+          },
+          "quote": "当$\\cos x=-\\frac12$，即$x=2k\\pi\\pm\\frac{2\\pi}3,k\\in\\mathbf Z$时，$y$取到最小值$\\frac12$．",
+          "wordingChecked": true,
+          "mathChecked": false,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": "assets/derived/source-branches-20261012/U10-WPS-page-19.png",
+            "sourceId": "U10",
+            "kind": "wps_native_same_original_page",
+            "previewPdfPage": 19,
+            "sha256": "048b0e6a861429e6eafdb768f5f5ba451b13239a1f92518c1c7cb43e7980ae85",
+            "bytes": 198594,
+            "nativeDisplayReviewId": "source-branch:trig-unify-name:20261012",
+            "qualityNote": "未改原件在本机 WPS 导出的 PDF 第 19 页；按题目与原文段落对应。新分页不同于旧转换件，不替换原来源定位。",
+            "requestedPath": "increments/u10-v1/evidence/U10-cjk/page-29.png",
+            "historicalResource": {
+              "url": null,
+              "sourceId": "U10",
+              "requestedPath": "increments/u10-v1/evidence/U10-cjk/page-29.png",
+              "kind": "missing_source_page",
+              "sha256": null,
+              "bytes": null
+            }
+          },
+          "originalUrl": "source-original/U10.docx",
+          "sourceTitle": "高一年级必修第二册第6单元单元设计",
+          "sourceStatus": "partially_reviewed",
+          "localVisualReview": {
+            "id": "source-branch:trig-unify-name:20261012",
+            "sourceFileUnchanged": true,
+            "nativePreviewRead": true,
+            "originalObjectSemanticsVerified": false
+          }
+        },
+        {
+          "id": "ev:book-2:U10:extrema-two-methods-b7",
+          "sourceId": "U10",
+          "sourceSha256": "6714eeba60920c00accd5691c4fc3e3c6a35f08a2010d7b3a122fbd08d06d286",
+          "locator": {
+            "headingPath": [
+              "U10",
+              "化同名成二次形式与辅助角化一角求最值"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 513,
+            "paragraphIndexConvention": "1-based all .//w:p document order",
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 29,
+            "pdfPage": 29,
+            "printedPage": null,
+            "equationObjectId": null
+          },
+          "quote": "（2）$y=3\\cos x-\\sqrt3\\sin x=2\\sqrt3\\cos\\left(x+\\frac\\pi6\\right)$．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": "assets/derived/source-branches-20261012/U10-WPS-page-19.png",
+            "sourceId": "U10",
+            "kind": "wps_native_same_original_page",
+            "previewPdfPage": 19,
+            "sha256": "048b0e6a861429e6eafdb768f5f5ba451b13239a1f92518c1c7cb43e7980ae85",
+            "bytes": 198594,
+            "nativeDisplayReviewId": "source-branch:trig-unify-name:20261012",
+            "qualityNote": "未改原件在本机 WPS 导出的 PDF 第 19 页；按题目与原文段落对应。新分页不同于旧转换件，不替换原来源定位。",
+            "requestedPath": "increments/u10-v1/evidence/U10-cjk/page-29.png",
+            "historicalResource": {
+              "url": null,
+              "sourceId": "U10",
+              "requestedPath": "increments/u10-v1/evidence/U10-cjk/page-29.png",
+              "kind": "missing_source_page",
+              "sha256": null,
+              "bytes": null
+            }
+          },
+          "originalUrl": "source-original/U10.docx",
+          "sourceTitle": "高一年级必修第二册第6单元单元设计",
+          "sourceStatus": "partially_reviewed",
+          "localVisualReview": {
+            "id": "source-branch:trig-unify-name:20261012",
+            "sourceFileUnchanged": true,
+            "nativePreviewRead": true,
+            "originalObjectSemanticsVerified": false
+          }
+        },
+        {
+          "id": "ev:book-2:U10:extrema-two-methods-b8",
+          "sourceId": "U10",
+          "sourceSha256": "6714eeba60920c00accd5691c4fc3e3c6a35f08a2010d7b3a122fbd08d06d286",
+          "locator": {
+            "headingPath": [
+              "U10",
+              "化同名成二次形式与辅助角化一角求最值"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 514,
+            "paragraphIndexConvention": "1-based all .//w:p document order",
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 29,
+            "pdfPage": 29,
+            "printedPage": null,
+            "equationObjectId": null
+          },
+          "quote": "因为$x\\in\\left[0,\\frac\\pi2\\right]$，所以$\\frac\\pi6\\le x+\\frac\\pi6\\le\\frac{2\\pi}3$．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": "assets/derived/source-branches-20261012/U10-WPS-page-19.png",
+            "sourceId": "U10",
+            "kind": "wps_native_same_original_page",
+            "previewPdfPage": 19,
+            "sha256": "048b0e6a861429e6eafdb768f5f5ba451b13239a1f92518c1c7cb43e7980ae85",
+            "bytes": 198594,
+            "nativeDisplayReviewId": "source-branch:trig-unify-name:20261012",
+            "qualityNote": "未改原件在本机 WPS 导出的 PDF 第 19 页；按题目与原文段落对应。新分页不同于旧转换件，不替换原来源定位。",
+            "requestedPath": "increments/u10-v1/evidence/U10-cjk/page-29.png",
+            "historicalResource": {
+              "url": null,
+              "sourceId": "U10",
+              "requestedPath": "increments/u10-v1/evidence/U10-cjk/page-29.png",
+              "kind": "missing_source_page",
+              "sha256": null,
+              "bytes": null
+            }
+          },
+          "originalUrl": "source-original/U10.docx",
+          "sourceTitle": "高一年级必修第二册第6单元单元设计",
+          "sourceStatus": "partially_reviewed",
+          "localVisualReview": {
+            "id": "source-branch:trig-unify-name:20261012",
+            "sourceFileUnchanged": true,
+            "nativePreviewRead": true,
+            "originalObjectSemanticsVerified": false
+          }
+        },
+        {
+          "id": "ev:book-2:U10:extrema-two-methods-b9",
+          "sourceId": "U10",
+          "sourceSha256": "6714eeba60920c00accd5691c4fc3e3c6a35f08a2010d7b3a122fbd08d06d286",
+          "locator": {
+            "headingPath": [
+              "U10",
+              "化同名成二次形式与辅助角化一角求最值"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 515,
+            "paragraphIndexConvention": "1-based all .//w:p document order",
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 29,
+            "pdfPage": 29,
+            "printedPage": null,
+            "equationObjectId": null
+          },
+          "quote": "令$t=x+\\frac\\pi6$，又因为$y=\\cos t$在区间$\\left[\\frac\\pi6,\\frac{2\\pi}3\\right]$上是严格减函数，所以",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": "assets/derived/source-branches-20261012/U10-WPS-page-20.png",
+            "sourceId": "U10",
+            "kind": "wps_native_same_original_page",
+            "previewPdfPage": 20,
+            "sha256": "d70f819517e26d780b2e7635de1e05e7c87da4b773a58580b6d2b84a4f998e48",
+            "bytes": 166347,
+            "nativeDisplayReviewId": "source-branch:trig-unify-name:20261012",
+            "qualityNote": "未改原件在本机 WPS 导出的 PDF 第 20 页；按题目与原文段落对应。新分页不同于旧转换件，不替换原来源定位。",
+            "requestedPath": "increments/u10-v1/evidence/U10-cjk/page-29.png",
+            "historicalResource": {
+              "url": null,
+              "sourceId": "U10",
+              "requestedPath": "increments/u10-v1/evidence/U10-cjk/page-29.png",
+              "kind": "missing_source_page",
+              "sha256": null,
+              "bytes": null
+            }
+          },
+          "originalUrl": "source-original/U10.docx",
+          "sourceTitle": "高一年级必修第二册第6单元单元设计",
+          "sourceStatus": "partially_reviewed",
+          "localVisualReview": {
+            "id": "source-branch:trig-unify-name:20261012",
+            "sourceFileUnchanged": true,
+            "nativePreviewRead": true,
+            "originalObjectSemanticsVerified": false
+          }
+        },
+        {
+          "id": "ev:book-2:U10:extrema-two-methods-b10",
+          "sourceId": "U10",
+          "sourceSha256": "6714eeba60920c00accd5691c4fc3e3c6a35f08a2010d7b3a122fbd08d06d286",
+          "locator": {
+            "headingPath": [
+              "U10",
+              "化同名成二次形式与辅助角化一角求最值"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 516,
+            "paragraphIndexConvention": "1-based all .//w:p document order",
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 29,
+            "pdfPage": 29,
+            "printedPage": null,
+            "equationObjectId": null
+          },
+          "quote": "当$x=0$时，$y$取到最大值$3$；",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": "assets/derived/source-branches-20261012/U10-WPS-page-20.png",
+            "sourceId": "U10",
+            "kind": "wps_native_same_original_page",
+            "previewPdfPage": 20,
+            "sha256": "d70f819517e26d780b2e7635de1e05e7c87da4b773a58580b6d2b84a4f998e48",
+            "bytes": 166347,
+            "nativeDisplayReviewId": "source-branch:trig-unify-name:20261012",
+            "qualityNote": "未改原件在本机 WPS 导出的 PDF 第 20 页；按题目与原文段落对应。新分页不同于旧转换件，不替换原来源定位。",
+            "requestedPath": "increments/u10-v1/evidence/U10-cjk/page-29.png",
+            "historicalResource": {
+              "url": null,
+              "sourceId": "U10",
+              "requestedPath": "increments/u10-v1/evidence/U10-cjk/page-29.png",
+              "kind": "missing_source_page",
+              "sha256": null,
+              "bytes": null
+            }
+          },
+          "originalUrl": "source-original/U10.docx",
+          "sourceTitle": "高一年级必修第二册第6单元单元设计",
+          "sourceStatus": "partially_reviewed",
+          "localVisualReview": {
+            "id": "source-branch:trig-unify-name:20261012",
+            "sourceFileUnchanged": true,
+            "nativePreviewRead": true,
+            "originalObjectSemanticsVerified": false
+          }
+        },
+        {
+          "id": "ev:book-2:U10:extrema-two-methods-b11",
+          "sourceId": "U10",
+          "sourceSha256": "6714eeba60920c00accd5691c4fc3e3c6a35f08a2010d7b3a122fbd08d06d286",
+          "locator": {
+            "headingPath": [
+              "U10",
+              "化同名成二次形式与辅助角化一角求最值"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 517,
+            "paragraphIndexConvention": "1-based all .//w:p document order",
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 29,
+            "pdfPage": 29,
+            "printedPage": null,
+            "equationObjectId": null
+          },
+          "quote": "当$x=\\frac\\pi2$时，$y$取到最小值$-\\sqrt3$．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": "assets/derived/source-branches-20261012/U10-WPS-page-20.png",
+            "sourceId": "U10",
+            "kind": "wps_native_same_original_page",
+            "previewPdfPage": 20,
+            "sha256": "d70f819517e26d780b2e7635de1e05e7c87da4b773a58580b6d2b84a4f998e48",
+            "bytes": 166347,
+            "nativeDisplayReviewId": "source-branch:trig-unify-name:20261012",
+            "qualityNote": "未改原件在本机 WPS 导出的 PDF 第 20 页；按题目与原文段落对应。新分页不同于旧转换件，不替换原来源定位。",
+            "requestedPath": "increments/u10-v1/evidence/U10-cjk/page-29.png",
+            "historicalResource": {
+              "url": null,
+              "sourceId": "U10",
+              "requestedPath": "increments/u10-v1/evidence/U10-cjk/page-29.png",
+              "kind": "missing_source_page",
+              "sha256": null,
+              "bytes": null
+            }
+          },
+          "originalUrl": "source-original/U10.docx",
+          "sourceTitle": "高一年级必修第二册第6单元单元设计",
+          "sourceStatus": "partially_reviewed",
+          "localVisualReview": {
+            "id": "source-branch:trig-unify-name:20261012",
+            "sourceFileUnchanged": true,
+            "nativePreviewRead": true,
+            "originalObjectSemanticsVerified": false
+          }
+        },
+        {
+          "id": "ev:book-2:U10:extrema-two-methods-b12",
+          "sourceId": "U10",
+          "sourceSha256": "6714eeba60920c00accd5691c4fc3e3c6a35f08a2010d7b3a122fbd08d06d286",
+          "locator": {
+            "headingPath": [
+              "U10",
+              "化同名成二次形式与辅助角化一角求最值"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 526,
+            "paragraphIndexConvention": "1-based all .//w:p document order",
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 29,
+            "pdfPage": 29,
+            "printedPage": null,
+            "equationObjectId": null
+          },
+          "quote": "说明 能善于观察、联想，是化为同名三角函数，转化为二次形式，还是转化为一个角的三角函数形式，需要仔细分析，整体判断．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": "assets/derived/source-branches-20261012/U10-WPS-page-20.png",
+            "sourceId": "U10",
+            "kind": "wps_native_same_original_page",
+            "previewPdfPage": 20,
+            "sha256": "d70f819517e26d780b2e7635de1e05e7c87da4b773a58580b6d2b84a4f998e48",
+            "bytes": 166347,
+            "nativeDisplayReviewId": "source-branch:trig-unify-name:20261012",
+            "qualityNote": "未改原件在本机 WPS 导出的 PDF 第 20 页；按题目与原文段落对应。新分页不同于旧转换件，不替换原来源定位。",
+            "requestedPath": "increments/u10-v1/evidence/U10-cjk/page-29.png",
+            "historicalResource": {
+              "url": null,
+              "sourceId": "U10",
+              "requestedPath": "increments/u10-v1/evidence/U10-cjk/page-29.png",
+              "kind": "missing_source_page",
+              "sha256": null,
+              "bytes": null
+            }
+          },
+          "originalUrl": "source-original/U10.docx",
+          "sourceTitle": "高一年级必修第二册第6单元单元设计",
+          "sourceStatus": "partially_reviewed",
+          "localVisualReview": {
+            "id": "source-branch:trig-unify-name:20261012",
+            "sourceFileUnchanged": true,
+            "nativePreviewRead": true,
+            "originalObjectSemanticsVerified": false
+          }
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": [
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b1:m0",
+          "location": "blocks[1].value.inlineMath[0]",
+          "sourceString": "（1）$y=-2\\sin^2x+2\\cos x+2$；",
+          "latex": "y=-2\\sin^2x+2\\cos x+2",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b2:m0",
+          "location": "blocks[2].value.inlineMath[0]",
+          "sourceString": "（2）$y=3\\cos x-\\sqrt3\\sin x,\\ x\\in\\left[0,\\frac\\pi2\\right]$．",
+          "latex": "y=3\\cos x-\\sqrt3\\sin x,\\ x\\in\\left[0,\\frac\\pi2\\right]",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b3:m0",
+          "location": "blocks[3].value.inlineMath[0]",
+          "sourceString": "分析 （1）将$\\sin x$、$\\cos x$分别看成一个变量，注意$|\\sin x|\\le1$，$|\\cos x|\\le1$，然后转化为求关于该变量的函数的最大值和最小值问题．（2）形如$a\\sin x+b\\cos x\\ (ab\\ne0)$情形的式子，均可转化为$\\sqrt{a^2+b^2}\\sin(x+\\phi)$的形式．",
+          "latex": "\\sin x",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b3:m1",
+          "location": "blocks[3].value.inlineMath[1]",
+          "sourceString": "分析 （1）将$\\sin x$、$\\cos x$分别看成一个变量，注意$|\\sin x|\\le1$，$|\\cos x|\\le1$，然后转化为求关于该变量的函数的最大值和最小值问题．（2）形如$a\\sin x+b\\cos x\\ (ab\\ne0)$情形的式子，均可转化为$\\sqrt{a^2+b^2}\\sin(x+\\phi)$的形式．",
+          "latex": "\\cos x",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b3:m2",
+          "location": "blocks[3].value.inlineMath[2]",
+          "sourceString": "分析 （1）将$\\sin x$、$\\cos x$分别看成一个变量，注意$|\\sin x|\\le1$，$|\\cos x|\\le1$，然后转化为求关于该变量的函数的最大值和最小值问题．（2）形如$a\\sin x+b\\cos x\\ (ab\\ne0)$情形的式子，均可转化为$\\sqrt{a^2+b^2}\\sin(x+\\phi)$的形式．",
+          "latex": "|\\sin x|\\le1",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b3:m3",
+          "location": "blocks[3].value.inlineMath[3]",
+          "sourceString": "分析 （1）将$\\sin x$、$\\cos x$分别看成一个变量，注意$|\\sin x|\\le1$，$|\\cos x|\\le1$，然后转化为求关于该变量的函数的最大值和最小值问题．（2）形如$a\\sin x+b\\cos x\\ (ab\\ne0)$情形的式子，均可转化为$\\sqrt{a^2+b^2}\\sin(x+\\phi)$的形式．",
+          "latex": "|\\cos x|\\le1",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b3:m4",
+          "location": "blocks[3].value.inlineMath[4]",
+          "sourceString": "分析 （1）将$\\sin x$、$\\cos x$分别看成一个变量，注意$|\\sin x|\\le1$，$|\\cos x|\\le1$，然后转化为求关于该变量的函数的最大值和最小值问题．（2）形如$a\\sin x+b\\cos x\\ (ab\\ne0)$情形的式子，均可转化为$\\sqrt{a^2+b^2}\\sin(x+\\phi)$的形式．",
+          "latex": "a\\sin x+b\\cos x\\ (ab\\ne0)",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b3:m5",
+          "location": "blocks[3].value.inlineMath[5]",
+          "sourceString": "分析 （1）将$\\sin x$、$\\cos x$分别看成一个变量，注意$|\\sin x|\\le1$，$|\\cos x|\\le1$，然后转化为求关于该变量的函数的最大值和最小值问题．（2）形如$a\\sin x+b\\cos x\\ (ab\\ne0)$情形的式子，均可转化为$\\sqrt{a^2+b^2}\\sin(x+\\phi)$的形式．",
+          "latex": "\\sqrt{a^2+b^2}\\sin(x+\\phi)",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b4:m0",
+          "location": "blocks[4].value",
+          "sourceString": "\\begin{aligned}y&=-2\\sin^2x+2\\cos x+2=2\\cos^2x+2\\cos x\\\\&=2\\left(\\cos x+\\frac12\\right)^2-\\frac12.\\end{aligned}",
+          "latex": "\\begin{aligned}y&=-2\\sin^2x+2\\cos x+2=2\\cos^2x+2\\cos x\\\\&=2\\left(\\cos x+\\frac12\\right)^2-\\frac12.\\end{aligned}",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b5:m0",
+          "location": "blocks[5].value.inlineMath[0]",
+          "sourceString": "因为$\\cos x$的取值范围为$[-1,1]$，所以当$\\cos x=1$，即$x=2k\\pi,k\\in\\mathbf Z$时，$y$取到最大值$4$；",
+          "latex": "\\cos x",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b5:m1",
+          "location": "blocks[5].value.inlineMath[1]",
+          "sourceString": "因为$\\cos x$的取值范围为$[-1,1]$，所以当$\\cos x=1$，即$x=2k\\pi,k\\in\\mathbf Z$时，$y$取到最大值$4$；",
+          "latex": "[-1,1]",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b5:m2",
+          "location": "blocks[5].value.inlineMath[2]",
+          "sourceString": "因为$\\cos x$的取值范围为$[-1,1]$，所以当$\\cos x=1$，即$x=2k\\pi,k\\in\\mathbf Z$时，$y$取到最大值$4$；",
+          "latex": "\\cos x=1",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b5:m3",
+          "location": "blocks[5].value.inlineMath[3]",
+          "sourceString": "因为$\\cos x$的取值范围为$[-1,1]$，所以当$\\cos x=1$，即$x=2k\\pi,k\\in\\mathbf Z$时，$y$取到最大值$4$；",
+          "latex": "x=2k\\pi,k\\in\\mathbf Z",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b5:m4",
+          "location": "blocks[5].value.inlineMath[4]",
+          "sourceString": "因为$\\cos x$的取值范围为$[-1,1]$，所以当$\\cos x=1$，即$x=2k\\pi,k\\in\\mathbf Z$时，$y$取到最大值$4$；",
+          "latex": "y",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b5:m5",
+          "location": "blocks[5].value.inlineMath[5]",
+          "sourceString": "因为$\\cos x$的取值范围为$[-1,1]$，所以当$\\cos x=1$，即$x=2k\\pi,k\\in\\mathbf Z$时，$y$取到最大值$4$；",
+          "latex": "4",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b6:m0",
+          "location": "blocks[6].value.inlineMath[0]",
+          "sourceString": "当$\\cos x=-\\frac12$，即$x=2k\\pi\\pm\\frac{2\\pi}3,k\\in\\mathbf Z$时，$y$取到最小值$\\frac12$．",
+          "latex": "\\cos x=-\\frac12",
+          "status": "verified",
+          "decision": "native_page_and_minimum_condition_checked",
+          "correctionId": "correction:U10:example2-minimum:20261012"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b6:m1",
+          "location": "blocks[6].value.inlineMath[1]",
+          "sourceString": "当$\\cos x=-\\frac12$，即$x=2k\\pi\\pm\\frac{2\\pi}3,k\\in\\mathbf Z$时，$y$取到最小值$\\frac12$．",
+          "latex": "x=2k\\pi\\pm\\frac{2\\pi}3,k\\in\\mathbf Z",
+          "status": "verified",
+          "decision": "native_page_and_minimum_condition_checked",
+          "correctionId": "correction:U10:example2-minimum:20261012"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b6:m2",
+          "location": "blocks[6].value.inlineMath[2]",
+          "sourceString": "当$\\cos x=-\\frac12$，即$x=2k\\pi\\pm\\frac{2\\pi}3,k\\in\\mathbf Z$时，$y$取到最小值$\\frac12$．",
+          "latex": "y",
+          "status": "verified",
+          "decision": "native_page_and_minimum_condition_checked",
+          "correctionId": "correction:U10:example2-minimum:20261012"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b6:m3",
+          "location": "blocks[6].value.inlineMath[3]",
+          "sourceString": "当$\\cos x=-\\frac12$，即$x=2k\\pi\\pm\\frac{2\\pi}3,k\\in\\mathbf Z$时，$y$取到最小值$\\frac12$．",
+          "latex": "-\\frac12",
+          "status": "verified",
+          "decision": "correct_source_error_user_approved_with_derivation",
+          "correctionId": "correction:U10:example2-minimum:20261012"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b7:m0",
+          "location": "blocks[7].value.inlineMath[0]",
+          "sourceString": "（2）$y=3\\cos x-\\sqrt3\\sin x=2\\sqrt3\\cos\\left(x+\\frac\\pi6\\right)$．",
+          "latex": "y=3\\cos x-\\sqrt3\\sin x=2\\sqrt3\\cos\\left(x+\\frac\\pi6\\right)",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b8:m0",
+          "location": "blocks[8].value.inlineMath[0]",
+          "sourceString": "因为$x\\in\\left[0,\\frac\\pi2\\right]$，所以$\\frac\\pi6\\le x+\\frac\\pi6\\le\\frac{2\\pi}3$．",
+          "latex": "x\\in\\left[0,\\frac\\pi2\\right]",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b8:m1",
+          "location": "blocks[8].value.inlineMath[1]",
+          "sourceString": "因为$x\\in\\left[0,\\frac\\pi2\\right]$，所以$\\frac\\pi6\\le x+\\frac\\pi6\\le\\frac{2\\pi}3$．",
+          "latex": "\\frac\\pi6\\le x+\\frac\\pi6\\le\\frac{2\\pi}3",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b9:m0",
+          "location": "blocks[9].value.inlineMath[0]",
+          "sourceString": "令$t=x+\\frac\\pi6$，又因为$y=\\cos t$在区间$\\left[\\frac\\pi6,\\frac{2\\pi}3\\right]$上是严格减函数，所以",
+          "latex": "t=x+\\frac\\pi6",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b9:m1",
+          "location": "blocks[9].value.inlineMath[1]",
+          "sourceString": "令$t=x+\\frac\\pi6$，又因为$y=\\cos t$在区间$\\left[\\frac\\pi6,\\frac{2\\pi}3\\right]$上是严格减函数，所以",
+          "latex": "y=\\cos t",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b9:m2",
+          "location": "blocks[9].value.inlineMath[2]",
+          "sourceString": "令$t=x+\\frac\\pi6$，又因为$y=\\cos t$在区间$\\left[\\frac\\pi6,\\frac{2\\pi}3\\right]$上是严格减函数，所以",
+          "latex": "\\left[\\frac\\pi6,\\frac{2\\pi}3\\right]",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b10:m0",
+          "location": "blocks[10].value.inlineMath[0]",
+          "sourceString": "当$x=0$时，$y$取到最大值$3$；",
+          "latex": "x=0",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b10:m1",
+          "location": "blocks[10].value.inlineMath[1]",
+          "sourceString": "当$x=0$时，$y$取到最大值$3$；",
+          "latex": "y",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b10:m2",
+          "location": "blocks[10].value.inlineMath[2]",
+          "sourceString": "当$x=0$时，$y$取到最大值$3$；",
+          "latex": "3",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b11:m0",
+          "location": "blocks[11].value.inlineMath[0]",
+          "sourceString": "当$x=\\frac\\pi2$时，$y$取到最小值$-\\sqrt3$．",
+          "latex": "x=\\frac\\pi2",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b11:m1",
+          "location": "blocks[11].value.inlineMath[1]",
+          "sourceString": "当$x=\\frac\\pi2$时，$y$取到最小值$-\\sqrt3$．",
+          "latex": "y",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:U10:extrema-two-methods:b11:m2",
+          "location": "blocks[11].value.inlineMath[2]",
+          "sourceString": "当$x=\\frac\\pi2$时，$y$取到最小值$-\\sqrt3$．",
+          "latex": "-\\sqrt3",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        }
+      ],
+      "localSourceReview": {
+        "id": "source-branch:trig-unify-name:20261012",
+        "status": "source_error_corrected_with_history",
+        "wordingIdentityPreserved": false,
+        "sourceLocatorsPreserved": true,
+        "originalWordingRetained": true,
+        "correctionId": "correction:U10:example2-minimum:20261012",
+        "correctedFormulaIds": [
+          "formula:book-2:U10:extrema-two-methods:b6:m0",
+          "formula:book-2:U10:extrema-two-methods:b6:m1",
+          "formula:book-2:U10:extrema-two-methods:b6:m2",
+          "formula:book-2:U10:extrema-two-methods:b6:m3"
+        ],
+        "wholeSourceVerified": false
+      },
+      "sourceCorrections": [
+        {
+          "id": "correction:U10:example2-minimum:20261012",
+          "status": "applied",
+          "blockIndex": 6,
+          "sourceId": "U10",
+          "sourceSha256": "6714eeba60920c00accd5691c4fc3e3c6a35f08a2010d7b3a122fbd08d06d286",
+          "decision": "正文改为正确值，并保留原文与修订记录",
+          "decisionDate": "2026-10-12",
+          "appliedAt": "2026-10-12T05:28:24.087142+00:00",
+          "originalBlock": {
+            "role": "solution",
+            "type": "text",
+            "value": "当$\\cos x=-\\frac12$，即$x=2k\\pi\\pm\\frac{2\\pi}3,k\\in\\mathbf Z$时，$y$取到最小值$\\frac12$．",
+            "sourceString": "当$\\cos x=-\\frac12$，即$x=2k\\pi\\pm\\frac{2\\pi}3,k\\in\\mathbf Z$时，$y$取到最小值$\\frac12$．",
+            "sourceStringKind": "visual_transcription_with_latex_delimiters",
+            "evidenceIds": [
+              "ev:book-2:U10:extrema-two-methods-b6"
+            ]
+          },
+          "revisedValue": "当$\\cos x=-\\frac12$，即$x=2k\\pi\\pm\\frac{2\\pi}3,k\\in\\mathbf Z$时，$y$取到最小值$-\\frac12$．",
+          "originalFormulaRecords": [
+            {
+              "id": "formula:book-2:U10:extrema-two-methods:b6:m0",
+              "location": "blocks[6].value.inlineMath[0]",
+              "sourceString": "当$\\cos x=-\\frac12$，即$x=2k\\pi\\pm\\frac{2\\pi}3,k\\in\\mathbf Z$时，$y$取到最小值$\\frac12$．",
+              "latex": "\\cos x=-\\frac12",
+              "status": "unresolved",
+              "decision": "keep_visual_transcription_with_errors_flagged"
+            },
+            {
+              "id": "formula:book-2:U10:extrema-two-methods:b6:m1",
+              "location": "blocks[6].value.inlineMath[1]",
+              "sourceString": "当$\\cos x=-\\frac12$，即$x=2k\\pi\\pm\\frac{2\\pi}3,k\\in\\mathbf Z$时，$y$取到最小值$\\frac12$．",
+              "latex": "x=2k\\pi\\pm\\frac{2\\pi}3,k\\in\\mathbf Z",
+              "status": "unresolved",
+              "decision": "keep_visual_transcription_with_errors_flagged"
+            },
+            {
+              "id": "formula:book-2:U10:extrema-two-methods:b6:m2",
+              "location": "blocks[6].value.inlineMath[2]",
+              "sourceString": "当$\\cos x=-\\frac12$，即$x=2k\\pi\\pm\\frac{2\\pi}3,k\\in\\mathbf Z$时，$y$取到最小值$\\frac12$．",
+              "latex": "y",
+              "status": "unresolved",
+              "decision": "keep_visual_transcription_with_errors_flagged"
+            },
+            {
+              "id": "formula:book-2:U10:extrema-two-methods:b6:m3",
+              "location": "blocks[6].value.inlineMath[3]",
+              "sourceString": "当$\\cos x=-\\frac12$，即$x=2k\\pi\\pm\\frac{2\\pi}3,k\\in\\mathbf Z$时，$y$取到最小值$\\frac12$．",
+              "latex": "\\frac12",
+              "status": "unresolved",
+              "decision": "keep_visual_transcription_with_errors_flagged"
+            }
+          ],
+          "summary": "最小值已由原文的 $\\frac12$ 修正为 $-\\frac12$。",
+          "basis": "由同页配方式 $y=2\\left(\\cos x+\\frac12\\right)^2-\\frac12$，平方项非负；当 $\\cos x=-\\frac12$ 时，平方项取零，故最小值为 $-\\frac12$。代回原式得 $-2\\cdot\\frac34+2\\cdot\\left(-\\frac12\\right)+2=-\\frac12$。",
+          "evidenceIds": [
+            "ev:book-2:U10:extrema-two-methods-b6",
+            "ev:book-2:U10:extrema-two-methods-b4"
+          ],
+          "nativePreviewPdfPage": 19,
+          "sourceFileUnchanged": true,
+          "scope": "Only this body result is corrected; original source quotation, locator and Word file remain unchanged."
+        }
+      ]
+    },
+    {
+      "id": "lesson-content:book-2:L249:auxiliary-angle-special",
+      "nodeId": "method:auxiliary-angle",
+      "proposedNodeId": null,
+      "kind": "example",
+      "origin": "editorial_proposal",
+      "title": "辅助角公式的三个具体系数构造",
+      "scope": "L249 教案原题与原解有源整理；转换渲染页不是印刷页。短quote才是原句。",
+      "blocks": [
+        {
+          "role": "question",
+          "type": "text",
+          "value": "例4把下列各式化为$A\\sin(\\alpha+\\varphi)$且$A>0$：（1）$\\frac12\\sin\\alpha+\\frac{\\sqrt3}2\\cos\\alpha$；（2）$\\sin\\alpha-\\cos\\alpha$；（3）$3\\sin\\alpha+4\\cos\\alpha$。",
+          "sourceString": "例4把下列各式化为$A\\sin(\\alpha+\\varphi)$且$A>0$：（1）$\\frac12\\sin\\alpha+\\frac{\\sqrt3}2\\cos\\alpha$；（2）$\\sin\\alpha-\\cos\\alpha$；（3）$3\\sin\\alpha+4\\cos\\alpha$。",
+          "sourceStringKind": "source_supported_editorial_summary_not_verbatim",
+          "evidenceIds": [
+            "ev:book-2:L249:auxiliary-angle-special-b0"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "（1）$\\frac12\\sin\\alpha+\\frac{\\sqrt3}2\\cos\\alpha=\\sin\\alpha\\cos\\frac\\pi3+\\cos\\alpha\\sin\\frac\\pi3=\\sin(\\alpha+\\frac\\pi3)$。",
+          "sourceString": "（1）$\\frac12\\sin\\alpha+\\frac{\\sqrt3}2\\cos\\alpha=\\sin\\alpha\\cos\\frac\\pi3+\\cos\\alpha\\sin\\frac\\pi3=\\sin(\\alpha+\\frac\\pi3)$。",
+          "sourceStringKind": "source_supported_editorial_summary_not_verbatim",
+          "evidenceIds": [
+            "ev:book-2:L249:auxiliary-angle-special-b1"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "（2）$\\sin\\alpha-\\cos\\alpha=\\sqrt2(\\frac{\\sqrt2}2\\sin\\alpha-\\frac{\\sqrt2}2\\cos\\alpha)=\\sqrt2(\\sin\\alpha\\cos\\frac\\pi4-\\cos\\alpha\\sin\\frac\\pi4)=\\sqrt2\\sin(\\alpha-\\frac\\pi4)$。",
+          "sourceString": "（2）$\\sin\\alpha-\\cos\\alpha=\\sqrt2(\\frac{\\sqrt2}2\\sin\\alpha-\\frac{\\sqrt2}2\\cos\\alpha)=\\sqrt2(\\sin\\alpha\\cos\\frac\\pi4-\\cos\\alpha\\sin\\frac\\pi4)=\\sqrt2\\sin(\\alpha-\\frac\\pi4)$。",
+          "sourceStringKind": "source_supported_editorial_summary_not_verbatim",
+          "evidenceIds": [
+            "ev:book-2:L249:auxiliary-angle-special-b2"
+          ]
+        },
+        {
+          "role": "step",
+          "type": "text",
+          "value": "由$A\\cos\\varphi=1,A\\sin\\varphi=-1$平方相加得$A^2\\cos^2\\varphi+A^2\\sin^2\\varphi=2$，结合$A>0$得$A=\\sqrt2$，说明提取系数使余下系数平方和为1。",
+          "sourceString": "由$A\\cos\\varphi=1,A\\sin\\varphi=-1$平方相加得$A^2\\cos^2\\varphi+A^2\\sin^2\\varphi=2$，结合$A>0$得$A=\\sqrt2$，说明提取系数使余下系数平方和为1。",
+          "sourceStringKind": "source_supported_editorial_summary_not_verbatim",
+          "evidenceIds": [
+            "ev:book-2:L249:auxiliary-angle-special-b3"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "（3）$3\\sin\\alpha+4\\cos\\alpha=5(\\frac35\\sin\\alpha+\\frac45\\cos\\alpha)=5(\\sin\\alpha\\cos\\varphi+\\cos\\alpha\\sin\\varphi)=5\\sin(\\alpha+\\varphi)$，其中$\\cos\\varphi=\\frac35,\\sin\\varphi=\\frac45$。单位圆使$\\varphi\\in[0,2\\pi)$唯一确定。",
+          "sourceString": "（3）$3\\sin\\alpha+4\\cos\\alpha=5(\\frac35\\sin\\alpha+\\frac45\\cos\\alpha)=5(\\sin\\alpha\\cos\\varphi+\\cos\\alpha\\sin\\varphi)=5\\sin(\\alpha+\\varphi)$，其中$\\cos\\varphi=\\frac35,\\sin\\varphi=\\frac45$。单位圆使$\\varphi\\in[0,2\\pi)$唯一确定。",
+          "sourceStringKind": "source_supported_editorial_summary_not_verbatim",
+          "evidenceIds": [
+            "ev:book-2:L249:auxiliary-angle-special-b4"
+          ]
+        }
+      ],
+      "contentOrigin": "source_supported_editorial_summary",
+      "wordingStatus": "教案有源整理、非逐字",
+      "matching": {
+        "status": "confirmed",
+        "reason": "依据本课实际三角公式、条件与解题过程。"
+      },
+      "evidence": [
+        {
+          "id": "ev:book-2:L249:auxiliary-angle-special-b0",
+          "sourceId": "L249",
+          "sourceSha256": "7d588e2f3b694bf00ac807d072a8cd1122fa6345b2b08d615586a157d4b6c46b",
+          "locator": {
+            "headingPath": [
+              "L249",
+              "辅助角公式的三个具体系数构造"
+            ],
+            "part": "converted-docx/word/document.xml",
+            "conversionArtifact": "increments/l250-v1/work/L249-conversion/L249.docx",
+            "paragraphIndex": 68,
+            "paragraphIndexConvention": "1-based all .//w:p in conversion artifact; not original DOC XML",
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 7,
+            "pdfPage": 7,
+            "printedPage": null,
+            "equationObjectId": null,
+            "paragraphIndexEnd": 71
+          },
+          "quote": "把下列各式化为",
+          "transcriptionWordingStatus": "教案有源整理、非逐字；保留原数学过程，中文串联有整理",
+          "sourceSupportedTranscription": "例4把下列各式化为$A\\sin(\\alpha+\\varphi)$且$A>0$：（1）$\\frac12\\sin\\alpha+\\frac{\\sqrt3}2\\cos\\alpha$；（2）$\\sin\\alpha-\\cos\\alpha$；（3）$3\\sin\\alpha+4\\cos\\alpha$。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L249",
+            "requestedPath": "increments/l250-v1/evidence/L249-doc/page-07.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L249.doc",
+          "sourceTitle": "常用三角公式（3）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book-2:L249:auxiliary-angle-special-b1",
+          "sourceId": "L249",
+          "sourceSha256": "7d588e2f3b694bf00ac807d072a8cd1122fa6345b2b08d615586a157d4b6c46b",
+          "locator": {
+            "headingPath": [
+              "L249",
+              "辅助角公式的三个具体系数构造"
+            ],
+            "part": "converted-docx/word/document.xml",
+            "conversionArtifact": "increments/l250-v1/work/L249-conversion/L249.docx",
+            "paragraphIndex": 75,
+            "paragraphIndexConvention": "1-based all .//w:p in conversion artifact; not original DOC XML",
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 8,
+            "pdfPage": 8,
+            "printedPage": null,
+            "equationObjectId": null
+          },
+          "quote": "解",
+          "transcriptionWordingStatus": "教案有源整理、非逐字；保留原数学过程，中文串联有整理",
+          "sourceSupportedTranscription": "（1）$\\frac12\\sin\\alpha+\\frac{\\sqrt3}2\\cos\\alpha=\\sin\\alpha\\cos\\frac\\pi3+\\cos\\alpha\\sin\\frac\\pi3=\\sin(\\alpha+\\frac\\pi3)$。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L249",
+            "requestedPath": "increments/l250-v1/evidence/L249-doc/page-08.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L249.doc",
+          "sourceTitle": "常用三角公式（3）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book-2:L249:auxiliary-angle-special-b2",
+          "sourceId": "L249",
+          "sourceSha256": "7d588e2f3b694bf00ac807d072a8cd1122fa6345b2b08d615586a157d4b6c46b",
+          "locator": {
+            "headingPath": [
+              "L249",
+              "辅助角公式的三个具体系数构造"
+            ],
+            "part": "converted-docx/word/document.xml",
+            "conversionArtifact": "increments/l250-v1/work/L249-conversion/L249.docx",
+            "paragraphIndex": 82,
+            "paragraphIndexConvention": "1-based all .//w:p in conversion artifact; not original DOC XML",
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 9,
+            "pdfPage": 9,
+            "printedPage": null,
+            "equationObjectId": null,
+            "paragraphIndexEnd": 83
+          },
+          "quote": " （",
+          "transcriptionWordingStatus": "教案有源整理、非逐字；保留原数学过程，中文串联有整理",
+          "sourceSupportedTranscription": "（2）$\\sin\\alpha-\\cos\\alpha=\\sqrt2(\\frac{\\sqrt2}2\\sin\\alpha-\\frac{\\sqrt2}2\\cos\\alpha)=\\sqrt2(\\sin\\alpha\\cos\\frac\\pi4-\\cos\\alpha\\sin\\frac\\pi4)=\\sqrt2\\sin(\\alpha-\\frac\\pi4)$。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L249",
+            "requestedPath": "increments/l250-v1/evidence/L249-doc/page-09.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L249.doc",
+          "sourceTitle": "常用三角公式（3）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book-2:L249:auxiliary-angle-special-b3",
+          "sourceId": "L249",
+          "sourceSha256": "7d588e2f3b694bf00ac807d072a8cd1122fa6345b2b08d615586a157d4b6c46b",
+          "locator": {
+            "headingPath": [
+              "L249",
+              "辅助角公式的三个具体系数构造"
+            ],
+            "part": "converted-docx/word/document.xml",
+            "conversionArtifact": "increments/l250-v1/work/L249-conversion/L249.docx",
+            "paragraphIndex": 78,
+            "paragraphIndexConvention": "1-based all .//w:p in conversion artifact; not original DOC XML",
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 8,
+            "pdfPage": 8,
+            "printedPage": null,
+            "equationObjectId": null,
+            "paragraphIndexEnd": 80
+          },
+          "quote": "对于",
+          "transcriptionWordingStatus": "教案有源整理、非逐字；保留原数学过程，中文串联有整理",
+          "sourceSupportedTranscription": "由$A\\cos\\varphi=1,A\\sin\\varphi=-1$平方相加得$A^2\\cos^2\\varphi+A^2\\sin^2\\varphi=2$，结合$A>0$得$A=\\sqrt2$，说明提取系数使余下系数平方和为1。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L249",
+            "requestedPath": "increments/l250-v1/evidence/L249-doc/page-08.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L249.doc",
+          "sourceTitle": "常用三角公式（3）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book-2:L249:auxiliary-angle-special-b4",
+          "sourceId": "L249",
+          "sourceSha256": "7d588e2f3b694bf00ac807d072a8cd1122fa6345b2b08d615586a157d4b6c46b",
+          "locator": {
+            "headingPath": [
+              "L249",
+              "辅助角公式的三个具体系数构造"
+            ],
+            "part": "converted-docx/word/document.xml",
+            "conversionArtifact": "increments/l250-v1/work/L249-conversion/L249.docx",
+            "paragraphIndex": 88,
+            "paragraphIndexConvention": "1-based all .//w:p in conversion artifact; not original DOC XML",
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 10,
+            "pdfPage": 10,
+            "printedPage": null,
+            "equationObjectId": null,
+            "paragraphIndexEnd": 89
+          },
+          "quote": "解（",
+          "transcriptionWordingStatus": "教案有源整理、非逐字；保留原数学过程，中文串联有整理",
+          "sourceSupportedTranscription": "（3）$3\\sin\\alpha+4\\cos\\alpha=5(\\frac35\\sin\\alpha+\\frac45\\cos\\alpha)=5(\\sin\\alpha\\cos\\varphi+\\cos\\alpha\\sin\\varphi)=5\\sin(\\alpha+\\varphi)$，其中$\\cos\\varphi=\\frac35,\\sin\\varphi=\\frac45$。单位圆使$\\varphi\\in[0,2\\pi)$唯一确定。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L249",
+            "requestedPath": "increments/l250-v1/evidence/L249-doc/page-10.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L249.doc",
+          "sourceTitle": "常用三角公式（3）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": [
+        {
+          "id": "formula:book-2:L249:auxiliary-angle-special:b0:m0",
+          "location": "blocks[0].value.inlineMath[0]",
+          "sourceString": "例4把下列各式化为$A\\sin(\\alpha+\\varphi)$且$A>0$：（1）$\\frac12\\sin\\alpha+\\frac{\\sqrt3}2\\cos\\alpha$；（2）$\\sin\\alpha-\\cos\\alpha$；（3）$3\\sin\\alpha+4\\cos\\alpha$。",
+          "latex": "A\\sin(\\alpha+\\varphi)",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:L249:auxiliary-angle-special:b0:m1",
+          "location": "blocks[0].value.inlineMath[1]",
+          "sourceString": "例4把下列各式化为$A\\sin(\\alpha+\\varphi)$且$A>0$：（1）$\\frac12\\sin\\alpha+\\frac{\\sqrt3}2\\cos\\alpha$；（2）$\\sin\\alpha-\\cos\\alpha$；（3）$3\\sin\\alpha+4\\cos\\alpha$。",
+          "latex": "A>0",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:L249:auxiliary-angle-special:b0:m2",
+          "location": "blocks[0].value.inlineMath[2]",
+          "sourceString": "例4把下列各式化为$A\\sin(\\alpha+\\varphi)$且$A>0$：（1）$\\frac12\\sin\\alpha+\\frac{\\sqrt3}2\\cos\\alpha$；（2）$\\sin\\alpha-\\cos\\alpha$；（3）$3\\sin\\alpha+4\\cos\\alpha$。",
+          "latex": "\\frac12\\sin\\alpha+\\frac{\\sqrt3}2\\cos\\alpha",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:L249:auxiliary-angle-special:b0:m3",
+          "location": "blocks[0].value.inlineMath[3]",
+          "sourceString": "例4把下列各式化为$A\\sin(\\alpha+\\varphi)$且$A>0$：（1）$\\frac12\\sin\\alpha+\\frac{\\sqrt3}2\\cos\\alpha$；（2）$\\sin\\alpha-\\cos\\alpha$；（3）$3\\sin\\alpha+4\\cos\\alpha$。",
+          "latex": "\\sin\\alpha-\\cos\\alpha",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:L249:auxiliary-angle-special:b0:m4",
+          "location": "blocks[0].value.inlineMath[4]",
+          "sourceString": "例4把下列各式化为$A\\sin(\\alpha+\\varphi)$且$A>0$：（1）$\\frac12\\sin\\alpha+\\frac{\\sqrt3}2\\cos\\alpha$；（2）$\\sin\\alpha-\\cos\\alpha$；（3）$3\\sin\\alpha+4\\cos\\alpha$。",
+          "latex": "3\\sin\\alpha+4\\cos\\alpha",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:L249:auxiliary-angle-special:b1:m0",
+          "location": "blocks[1].value.inlineMath[0]",
+          "sourceString": "（1）$\\frac12\\sin\\alpha+\\frac{\\sqrt3}2\\cos\\alpha=\\sin\\alpha\\cos\\frac\\pi3+\\cos\\alpha\\sin\\frac\\pi3=\\sin(\\alpha+\\frac\\pi3)$。",
+          "latex": "\\frac12\\sin\\alpha+\\frac{\\sqrt3}2\\cos\\alpha=\\sin\\alpha\\cos\\frac\\pi3+\\cos\\alpha\\sin\\frac\\pi3=\\sin(\\alpha+\\frac\\pi3)",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:L249:auxiliary-angle-special:b2:m0",
+          "location": "blocks[2].value.inlineMath[0]",
+          "sourceString": "（2）$\\sin\\alpha-\\cos\\alpha=\\sqrt2(\\frac{\\sqrt2}2\\sin\\alpha-\\frac{\\sqrt2}2\\cos\\alpha)=\\sqrt2(\\sin\\alpha\\cos\\frac\\pi4-\\cos\\alpha\\sin\\frac\\pi4)=\\sqrt2\\sin(\\alpha-\\frac\\pi4)$。",
+          "latex": "\\sin\\alpha-\\cos\\alpha=\\sqrt2(\\frac{\\sqrt2}2\\sin\\alpha-\\frac{\\sqrt2}2\\cos\\alpha)=\\sqrt2(\\sin\\alpha\\cos\\frac\\pi4-\\cos\\alpha\\sin\\frac\\pi4)=\\sqrt2\\sin(\\alpha-\\frac\\pi4)",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:L249:auxiliary-angle-special:b3:m0",
+          "location": "blocks[3].value.inlineMath[0]",
+          "sourceString": "由$A\\cos\\varphi=1,A\\sin\\varphi=-1$平方相加得$A^2\\cos^2\\varphi+A^2\\sin^2\\varphi=2$，结合$A>0$得$A=\\sqrt2$，说明提取系数使余下系数平方和为1。",
+          "latex": "A\\cos\\varphi=1,A\\sin\\varphi=-1",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:L249:auxiliary-angle-special:b3:m1",
+          "location": "blocks[3].value.inlineMath[1]",
+          "sourceString": "由$A\\cos\\varphi=1,A\\sin\\varphi=-1$平方相加得$A^2\\cos^2\\varphi+A^2\\sin^2\\varphi=2$，结合$A>0$得$A=\\sqrt2$，说明提取系数使余下系数平方和为1。",
+          "latex": "A^2\\cos^2\\varphi+A^2\\sin^2\\varphi=2",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:L249:auxiliary-angle-special:b3:m2",
+          "location": "blocks[3].value.inlineMath[2]",
+          "sourceString": "由$A\\cos\\varphi=1,A\\sin\\varphi=-1$平方相加得$A^2\\cos^2\\varphi+A^2\\sin^2\\varphi=2$，结合$A>0$得$A=\\sqrt2$，说明提取系数使余下系数平方和为1。",
+          "latex": "A>0",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:L249:auxiliary-angle-special:b3:m3",
+          "location": "blocks[3].value.inlineMath[3]",
+          "sourceString": "由$A\\cos\\varphi=1,A\\sin\\varphi=-1$平方相加得$A^2\\cos^2\\varphi+A^2\\sin^2\\varphi=2$，结合$A>0$得$A=\\sqrt2$，说明提取系数使余下系数平方和为1。",
+          "latex": "A=\\sqrt2",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:L249:auxiliary-angle-special:b4:m0",
+          "location": "blocks[4].value.inlineMath[0]",
+          "sourceString": "（3）$3\\sin\\alpha+4\\cos\\alpha=5(\\frac35\\sin\\alpha+\\frac45\\cos\\alpha)=5(\\sin\\alpha\\cos\\varphi+\\cos\\alpha\\sin\\varphi)=5\\sin(\\alpha+\\varphi)$，其中$\\cos\\varphi=\\frac35,\\sin\\varphi=\\frac45$。单位圆使$\\varphi\\in[0,2\\pi)$唯一确定。",
+          "latex": "3\\sin\\alpha+4\\cos\\alpha=5(\\frac35\\sin\\alpha+\\frac45\\cos\\alpha)=5(\\sin\\alpha\\cos\\varphi+\\cos\\alpha\\sin\\varphi)=5\\sin(\\alpha+\\varphi)",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:L249:auxiliary-angle-special:b4:m1",
+          "location": "blocks[4].value.inlineMath[1]",
+          "sourceString": "（3）$3\\sin\\alpha+4\\cos\\alpha=5(\\frac35\\sin\\alpha+\\frac45\\cos\\alpha)=5(\\sin\\alpha\\cos\\varphi+\\cos\\alpha\\sin\\varphi)=5\\sin(\\alpha+\\varphi)$，其中$\\cos\\varphi=\\frac35,\\sin\\varphi=\\frac45$。单位圆使$\\varphi\\in[0,2\\pi)$唯一确定。",
+          "latex": "\\cos\\varphi=\\frac35,\\sin\\varphi=\\frac45",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:L249:auxiliary-angle-special:b4:m2",
+          "location": "blocks[4].value.inlineMath[2]",
+          "sourceString": "（3）$3\\sin\\alpha+4\\cos\\alpha=5(\\frac35\\sin\\alpha+\\frac45\\cos\\alpha)=5(\\sin\\alpha\\cos\\varphi+\\cos\\alpha\\sin\\varphi)=5\\sin(\\alpha+\\varphi)$，其中$\\cos\\varphi=\\frac35,\\sin\\varphi=\\frac45$。单位圆使$\\varphi\\in[0,2\\pi)$唯一确定。",
+          "latex": "\\varphi\\in[0,2\\pi)",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        }
+      ]
+    },
+    {
+      "id": "lesson-content:book-2:L249:auxiliary-angle-existence-range",
+      "nodeId": "method:auxiliary-angle",
+      "proposedNodeId": null,
+      "kind": "example",
+      "origin": "editorial_proposal",
+      "title": "由辅助角振幅判定存在角的参数范围",
+      "scope": "L249 教案原题与原解有源整理；转换渲染页不是印刷页。短quote才是原句。",
+      "blocks": [
+        {
+          "role": "question",
+          "type": "text",
+          "value": "补充1：若存在角$\\alpha$使$\\sqrt3\\sin\\alpha+\\cos\\alpha=4-m$，求实数m的范围。",
+          "sourceString": "补充1：若存在角$\\alpha$使$\\sqrt3\\sin\\alpha+\\cos\\alpha=4-m$，求实数m的范围。",
+          "sourceStringKind": "source_supported_editorial_summary_not_verbatim",
+          "evidenceIds": [
+            "ev:book-2:L249:auxiliary-angle-existence-range-b0"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "$\\sqrt3\\sin\\alpha+\\cos\\alpha=2(\\frac{\\sqrt3}2\\sin\\alpha+\\frac12\\cos\\alpha)=2\\sin(\\alpha+\\frac\\pi6)$，得到$\\sin(\\alpha+\\frac\\pi6)=\\frac{4-m}2$。",
+          "sourceString": "$\\sqrt3\\sin\\alpha+\\cos\\alpha=2(\\frac{\\sqrt3}2\\sin\\alpha+\\frac12\\cos\\alpha)=2\\sin(\\alpha+\\frac\\pi6)$，得到$\\sin(\\alpha+\\frac\\pi6)=\\frac{4-m}2$。",
+          "sourceStringKind": "source_supported_editorial_summary_not_verbatim",
+          "evidenceIds": [
+            "ev:book-2:L249:auxiliary-angle-existence-range-b1"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "由$-1\\le\\sin(\\alpha+\\frac\\pi6)\\le1$，得$-1\\le\\frac{4-m}2\\le1$，解得$2\\le m\\le6$，所以$m\\in[2,6]$。",
+          "sourceString": "由$-1\\le\\sin(\\alpha+\\frac\\pi6)\\le1$，得$-1\\le\\frac{4-m}2\\le1$，解得$2\\le m\\le6$，所以$m\\in[2,6]$。",
+          "sourceStringKind": "source_supported_editorial_summary_not_verbatim",
+          "evidenceIds": [
+            "ev:book-2:L249:auxiliary-angle-existence-range-b2"
+          ]
+        }
+      ],
+      "contentOrigin": "source_supported_editorial_summary",
+      "wordingStatus": "教案有源整理、非逐字",
+      "matching": {
+        "status": "confirmed",
+        "reason": "依据本课实际三角公式、条件与解题过程。"
+      },
+      "evidence": [
+        {
+          "id": "ev:book-2:L249:auxiliary-angle-existence-range-b0",
+          "sourceId": "L249",
+          "sourceSha256": "7d588e2f3b694bf00ac807d072a8cd1122fa6345b2b08d615586a157d4b6c46b",
+          "locator": {
+            "headingPath": [
+              "L249",
+              "由辅助角振幅判定存在角的参数范围"
+            ],
+            "part": "converted-docx/word/document.xml",
+            "conversionArtifact": "increments/l250-v1/work/L249-conversion/L249.docx",
+            "paragraphIndex": 129,
+            "paragraphIndexConvention": "1-based all .//w:p in conversion artifact; not original DOC XML",
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 14,
+            "pdfPage": 14,
+            "printedPage": null,
+            "equationObjectId": null
+          },
+          "quote": "的取值范围",
+          "transcriptionWordingStatus": "教案有源整理、非逐字；保留原数学过程，中文串联有整理",
+          "sourceSupportedTranscription": "补充1：若存在角$\\alpha$使$\\sqrt3\\sin\\alpha+\\cos\\alpha=4-m$，求实数m的范围。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L249",
+            "requestedPath": "increments/l250-v1/evidence/L249-doc/page-14.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L249.doc",
+          "sourceTitle": "常用三角公式（3）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book-2:L249:auxiliary-angle-existence-range-b1",
+          "sourceId": "L249",
+          "sourceSha256": "7d588e2f3b694bf00ac807d072a8cd1122fa6345b2b08d615586a157d4b6c46b",
+          "locator": {
+            "headingPath": [
+              "L249",
+              "由辅助角振幅判定存在角的参数范围"
+            ],
+            "part": "converted-docx/word/document.xml",
+            "conversionArtifact": "increments/l250-v1/work/L249-conversion/L249.docx",
+            "paragraphIndex": 149,
+            "paragraphIndexConvention": "1-based all .//w:p in conversion artifact; not original DOC XML",
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 15,
+            "pdfPage": 15,
+            "printedPage": null,
+            "equationObjectId": null
+          },
+          "quote": "．由",
+          "transcriptionWordingStatus": "教案有源整理、非逐字；保留原数学过程，中文串联有整理",
+          "sourceSupportedTranscription": "$\\sqrt3\\sin\\alpha+\\cos\\alpha=2(\\frac{\\sqrt3}2\\sin\\alpha+\\frac12\\cos\\alpha)=2\\sin(\\alpha+\\frac\\pi6)$，得到$\\sin(\\alpha+\\frac\\pi6)=\\frac{4-m}2$。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L249",
+            "requestedPath": "increments/l250-v1/evidence/L249-doc/page-15.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L249.doc",
+          "sourceTitle": "常用三角公式（3）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book-2:L249:auxiliary-angle-existence-range-b2",
+          "sourceId": "L249",
+          "sourceSha256": "7d588e2f3b694bf00ac807d072a8cd1122fa6345b2b08d615586a157d4b6c46b",
+          "locator": {
+            "headingPath": [
+              "L249",
+              "由辅助角振幅判定存在角的参数范围"
+            ],
+            "part": "converted-docx/word/document.xml",
+            "conversionArtifact": "increments/l250-v1/work/L249-conversion/L249.docx",
+            "paragraphIndex": 150,
+            "paragraphIndexConvention": "1-based all .//w:p in conversion artifact; not original DOC XML",
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 15,
+            "pdfPage": 15,
+            "printedPage": null,
+            "equationObjectId": null,
+            "paragraphIndexEnd": 151
+          },
+          "quote": "，所以",
+          "transcriptionWordingStatus": "教案有源整理、非逐字；保留原数学过程，中文串联有整理",
+          "sourceSupportedTranscription": "由$-1\\le\\sin(\\alpha+\\frac\\pi6)\\le1$，得$-1\\le\\frac{4-m}2\\le1$，解得$2\\le m\\le6$，所以$m\\in[2,6]$。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L249",
+            "requestedPath": "increments/l250-v1/evidence/L249-doc/page-15.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L249.doc",
+          "sourceTitle": "常用三角公式（3）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": [
+        {
+          "id": "formula:book-2:L249:auxiliary-angle-existence-range:b0:m0",
+          "location": "blocks[0].value.inlineMath[0]",
+          "sourceString": "补充1：若存在角$\\alpha$使$\\sqrt3\\sin\\alpha+\\cos\\alpha=4-m$，求实数m的范围。",
+          "latex": "\\alpha",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:L249:auxiliary-angle-existence-range:b0:m1",
+          "location": "blocks[0].value.inlineMath[1]",
+          "sourceString": "补充1：若存在角$\\alpha$使$\\sqrt3\\sin\\alpha+\\cos\\alpha=4-m$，求实数m的范围。",
+          "latex": "\\sqrt3\\sin\\alpha+\\cos\\alpha=4-m",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:L249:auxiliary-angle-existence-range:b1:m0",
+          "location": "blocks[1].value.inlineMath[0]",
+          "sourceString": "$\\sqrt3\\sin\\alpha+\\cos\\alpha=2(\\frac{\\sqrt3}2\\sin\\alpha+\\frac12\\cos\\alpha)=2\\sin(\\alpha+\\frac\\pi6)$，得到$\\sin(\\alpha+\\frac\\pi6)=\\frac{4-m}2$。",
+          "latex": "\\sqrt3\\sin\\alpha+\\cos\\alpha=2(\\frac{\\sqrt3}2\\sin\\alpha+\\frac12\\cos\\alpha)=2\\sin(\\alpha+\\frac\\pi6)",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:L249:auxiliary-angle-existence-range:b1:m1",
+          "location": "blocks[1].value.inlineMath[1]",
+          "sourceString": "$\\sqrt3\\sin\\alpha+\\cos\\alpha=2(\\frac{\\sqrt3}2\\sin\\alpha+\\frac12\\cos\\alpha)=2\\sin(\\alpha+\\frac\\pi6)$，得到$\\sin(\\alpha+\\frac\\pi6)=\\frac{4-m}2$。",
+          "latex": "\\sin(\\alpha+\\frac\\pi6)=\\frac{4-m}2",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:L249:auxiliary-angle-existence-range:b2:m0",
+          "location": "blocks[2].value.inlineMath[0]",
+          "sourceString": "由$-1\\le\\sin(\\alpha+\\frac\\pi6)\\le1$，得$-1\\le\\frac{4-m}2\\le1$，解得$2\\le m\\le6$，所以$m\\in[2,6]$。",
+          "latex": "-1\\le\\sin(\\alpha+\\frac\\pi6)\\le1",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:L249:auxiliary-angle-existence-range:b2:m1",
+          "location": "blocks[2].value.inlineMath[1]",
+          "sourceString": "由$-1\\le\\sin(\\alpha+\\frac\\pi6)\\le1$，得$-1\\le\\frac{4-m}2\\le1$，解得$2\\le m\\le6$，所以$m\\in[2,6]$。",
+          "latex": "-1\\le\\frac{4-m}2\\le1",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:L249:auxiliary-angle-existence-range:b2:m2",
+          "location": "blocks[2].value.inlineMath[2]",
+          "sourceString": "由$-1\\le\\sin(\\alpha+\\frac\\pi6)\\le1$，得$-1\\le\\frac{4-m}2\\le1$，解得$2\\le m\\le6$，所以$m\\in[2,6]$。",
+          "latex": "2\\le m\\le6",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        },
+        {
+          "id": "formula:book-2:L249:auxiliary-angle-existence-range:b2:m3",
+          "location": "blocks[2].value.inlineMath[3]",
+          "sourceString": "由$-1\\le\\sin(\\alpha+\\frac\\pi6)\\le1$，得$-1\\le\\frac{4-m}2\\le1$，解得$2\\le m\\le6$，所以$m\\in[2,6]$。",
+          "latex": "m\\in[2,6]",
+          "status": "verified",
+          "decision": "keep_visual_transcription"
+        }
+      ]
+    },
+    {
+      "id": "lesson-content:book-2:L101:homework4-auxiliary-angle",
+      "nodeId": "method:auxiliary-angle",
+      "proposedNodeId": null,
+      "kind": "method_application",
+      "origin": "editorial_proposal",
+      "title": "基础练习4三角式化为单一正弦后反求频率",
+      "scope": "仅限L101所给条件、题目与解法；编辑标题及串联说明不作原文。",
+      "blocks": [
+        {
+          "role": "question",
+          "type": "text",
+          "value": "已知$y=\\frac{\\sqrt3}{2}\\sin2kx+\\cos^2kx$，其中常数$k>0$，最小正周期为$\\pi$，求$k$。",
+          "sourceString": "已知$y=\\frac{\\sqrt3}{2}\\sin2kx+\\cos^2kx$，其中常数$k>0$，最小正周期为$\\pi$，求$k$。",
+          "sourceStringKind": "source_supported_editorial_summary_not_verbatim",
+          "evidenceIds": [
+            "ev:book-2:L101:homework4-auxiliary-angle-b0"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "源解将函数化为$y=\\frac{\\sqrt3}{2}\\sin2kx+\\cos^2kx=\\sin(2kx+\\frac\\pi6)+\\frac12\\ (k>0)$，于是$T=\\frac{2\\pi}{2k}=\\pi$，解得$k=1$。",
+          "sourceString": "源解将函数化为$y=\\frac{\\sqrt3}{2}\\sin2kx+\\cos^2kx=\\sin(2kx+\\frac\\pi6)+\\frac12\\ (k>0)$，于是$T=\\frac{2\\pi}{2k}=\\pi$，解得$k=1$。",
+          "sourceStringKind": "source_supported_editorial_summary_not_verbatim",
+          "evidenceIds": [
+            "ev:book-2:L101:homework4-auxiliary-angle-b1"
+          ]
+        }
+      ],
+      "contentOrigin": "source_supported_editorial_summary",
+      "wordingStatus": "教案有源整理非逐字",
+      "matching": {
+        "status": "confirmed",
+        "reason": "按实际数学任务和解题过程匹配；不存在独立方法节点时保留候选。"
+      },
+      "evidence": [
+        {
+          "id": "ev:book-2:L101:homework4-auxiliary-angle-b0",
+          "sourceId": "L101",
+          "sourceSha256": "a5473c913bb33baa46c8e21f65afa3fbbdacedc8c4dfe415621cd5d42d7c6e92",
+          "locator": {
+            "headingPath": [
+              "7.1正弦函数的图像与性质（2）",
+              "基础练习4三角式化为单一正弦后反求频率"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 98,
+            "paragraphIndexEnd": 98,
+            "paragraphIndexConvention": "1-based all .//w:p in original DOCX document order",
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 10,
+            "renderedPages": [
+              10
+            ],
+            "pdfPage": 10,
+            "printedPage": null,
+            "equationObjectId": null
+          },
+          "quote": ")的最小正周期为",
+          "transcriptionWordingStatus": "教案有源整理非逐字",
+          "sourceSupportedTranscription": "已知$y=\\frac{\\sqrt3}{2}\\sin2kx+\\cos^2kx$，其中常数$k>0$，最小正周期为$\\pi$，求$k$。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L101",
+            "requestedPath": "increments/l102-v1/work/l101-delegated/rendered/page-10.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L101.docx",
+          "sourceTitle": "7.1正弦函数的图像与性质（2）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book-2:L101:homework4-auxiliary-angle-b1",
+          "sourceId": "L101",
+          "sourceSha256": "a5473c913bb33baa46c8e21f65afa3fbbdacedc8c4dfe415621cd5d42d7c6e92",
+          "locator": {
+            "headingPath": [
+              "7.1正弦函数的图像与性质（2）",
+              "基础练习4三角式化为单一正弦后反求频率"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 117,
+            "paragraphIndexEnd": 118,
+            "paragraphIndexConvention": "1-based all .//w:p in original DOCX document order",
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 11,
+            "renderedPages": [
+              11
+            ],
+            "pdfPage": 11,
+            "printedPage": null,
+            "equationObjectId": null
+          },
+          "quote": "4．因为函数",
+          "transcriptionWordingStatus": "教案有源整理非逐字",
+          "sourceSupportedTranscription": "源解将函数化为$y=\\frac{\\sqrt3}{2}\\sin2kx+\\cos^2kx=\\sin(2kx+\\frac\\pi6)+\\frac12\\ (k>0)$，于是$T=\\frac{2\\pi}{2k}=\\pi$，解得$k=1$。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L101",
+            "requestedPath": "increments/l102-v1/work/l101-delegated/rendered/page-11.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L101.docx",
+          "sourceTitle": "7.1正弦函数的图像与性质（2）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": [
+        {
+          "id": "formula:book-2:L101:homework4-auxiliary-angle:b0:m0",
+          "location": "blocks[0].value.inlineMath[0]",
+          "sourceString": "已知$y=\\frac{\\sqrt3}{2}\\sin2kx+\\cos^2kx$，其中常数$k>0$，最小正周期为$\\pi$，求$k$。",
+          "latex": "y=\\frac{\\sqrt3}{2}\\sin2kx+\\cos^2kx",
+          "status": "verified",
+          "decision": "keep_source_supported_transcription"
+        },
+        {
+          "id": "formula:book-2:L101:homework4-auxiliary-angle:b0:m1",
+          "location": "blocks[0].value.inlineMath[1]",
+          "sourceString": "已知$y=\\frac{\\sqrt3}{2}\\sin2kx+\\cos^2kx$，其中常数$k>0$，最小正周期为$\\pi$，求$k$。",
+          "latex": "k>0",
+          "status": "verified",
+          "decision": "keep_source_supported_transcription"
+        },
+        {
+          "id": "formula:book-2:L101:homework4-auxiliary-angle:b0:m2",
+          "location": "blocks[0].value.inlineMath[2]",
+          "sourceString": "已知$y=\\frac{\\sqrt3}{2}\\sin2kx+\\cos^2kx$，其中常数$k>0$，最小正周期为$\\pi$，求$k$。",
+          "latex": "\\pi",
+          "status": "verified",
+          "decision": "keep_source_supported_transcription"
+        },
+        {
+          "id": "formula:book-2:L101:homework4-auxiliary-angle:b0:m3",
+          "location": "blocks[0].value.inlineMath[3]",
+          "sourceString": "已知$y=\\frac{\\sqrt3}{2}\\sin2kx+\\cos^2kx$，其中常数$k>0$，最小正周期为$\\pi$，求$k$。",
+          "latex": "k",
+          "status": "verified",
+          "decision": "keep_source_supported_transcription"
+        },
+        {
+          "id": "formula:book-2:L101:homework4-auxiliary-angle:b1:m0",
+          "location": "blocks[1].value.inlineMath[0]",
+          "sourceString": "源解将函数化为$y=\\frac{\\sqrt3}{2}\\sin2kx+\\cos^2kx=\\sin(2kx+\\frac\\pi6)+\\frac12\\ (k>0)$，于是$T=\\frac{2\\pi}{2k}=\\pi$，解得$k=1$。",
+          "latex": "y=\\frac{\\sqrt3}{2}\\sin2kx+\\cos^2kx=\\sin(2kx+\\frac\\pi6)+\\frac12\\ (k>0)",
+          "status": "verified",
+          "decision": "keep_source_supported_transcription"
+        },
+        {
+          "id": "formula:book-2:L101:homework4-auxiliary-angle:b1:m1",
+          "location": "blocks[1].value.inlineMath[1]",
+          "sourceString": "源解将函数化为$y=\\frac{\\sqrt3}{2}\\sin2kx+\\cos^2kx=\\sin(2kx+\\frac\\pi6)+\\frac12\\ (k>0)$，于是$T=\\frac{2\\pi}{2k}=\\pi$，解得$k=1$。",
+          "latex": "T=\\frac{2\\pi}{2k}=\\pi",
+          "status": "verified",
+          "decision": "keep_source_supported_transcription"
+        },
+        {
+          "id": "formula:book-2:L101:homework4-auxiliary-angle:b1:m2",
+          "location": "blocks[1].value.inlineMath[2]",
+          "sourceString": "源解将函数化为$y=\\frac{\\sqrt3}{2}\\sin2kx+\\cos^2kx=\\sin(2kx+\\frac\\pi6)+\\frac12\\ (k>0)$，于是$T=\\frac{2\\pi}{2k}=\\pi$，解得$k=1$。",
+          "latex": "k=1",
+          "status": "verified",
+          "decision": "keep_source_supported_transcription"
+        }
+      ]
+    },
+    {
+      "id": "lesson-content:review:L136:home5",
+      "nodeId": "method:auxiliary-angle",
+      "proposedNodeId": null,
+      "kind": "example",
+      "origin": "editorial_proposal",
+      "title": "半圆参数下实部条件与模范围",
+      "scope": "作业5，辅助角区间不能省略。",
+      "blocks": [
+        {
+          "role": "question",
+          "type": "text",
+          "value": "$z_1=1-i,z_2=\\cos\\theta+i\\sin\\theta$，$\\theta\\in[0,\\pi]$。（1）$\\bar z_1z_2$为实数求$\\theta$；（2）求$|3z_1+z_2|$范围。",
+          "evidenceIds": [
+            "ev:review:L136:home5:b0"
+          ],
+          "wordingStatus": "source_based_reconstruction"
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "$\\bar z_1z_2=(1+i)(\\cos\\theta+i\\sin\\theta)=(\\cos\\theta-\\sin\\theta)+(\\cos\\theta+\\sin\\theta)i$，为实数要求$\\cos\\theta+\\sin\\theta=0$；在指定区间得$\\theta=\\frac{3\\pi}4$。",
+          "evidenceIds": [
+            "ev:review:L136:home5:b1"
+          ],
+          "wordingStatus": "source_based_reconstruction"
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "$3z_1+z_2=(3+\\cos\\theta)+(\\sin\\theta-3)i$，所以模为$\\sqrt{(3+\\cos\\theta)^2+(\\sin\\theta-3)^2}=\\sqrt{19+6\\sqrt2\\cos(\\theta+\\frac\\pi4)}$。因$\\theta+\\frac\\pi4\\in[\\frac\\pi4,\\frac{5\\pi}4]$，余弦范围$[-1,\\frac{\\sqrt2}2]$，模范围$[3\\sqrt2-1,5]$。",
+          "evidenceIds": [
+            "ev:review:L136:home5:b2"
+          ],
+          "wordingStatus": "source_based_reconstruction"
+        }
+      ],
+      "contentOrigin": "source_based_reconstruction",
+      "wordingStatus": "source_based_reconstruction",
+      "titleWordingStatus": "editorial_normalized_title",
+      "matching": {
+        "status": "confirmed",
+        "reason": "按具体知识或既有独立方法用途复用节点；不凭标题或共用运算新建方法。"
+      },
+      "evidence": [
+        {
+          "id": "ev:review:L136:home5:b0",
+          "sourceId": "L136",
+          "sourceSha256": "6afa39665221bb82fb2068f8826dc22e2a689cb298d8b5482391f534e7f52321",
+          "locator": {
+            "headingPath": [
+              "专题九 复数",
+              "半圆参数下实部条件与模范围"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 94,
+            "supportingParagraphIndices": [
+              94,
+              95,
+              96
+            ],
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 8,
+            "supportingRenderedPages": [
+              8
+            ],
+            "printedPage": 8,
+            "equationObjectId": null
+          },
+          "quote": "z_1=1-i,z_2=\\cos\\theta+i\\sin\\theta",
+          "quoteRepresentation": "visual_math_transcription_only",
+          "quoteCompleteness": "短引或仅纯公式视觉转写；完整有源整理另列",
+          "transcriptionWordingStatus": "source_based_reconstruction",
+          "sourceSupportedTranscription": "$z_1=1-i,z_2=\\cos\\theta+i\\sin\\theta$，$\\theta\\in[0,\\pi]$。（1）$\\bar z_1z_2$为实数求$\\theta$；（2）求$|3z_1+z_2|$范围。",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "mathSourceAssets": [
+            {
+              "path": "increments/l136-v1/evidence/L136/objects/image74.wmf",
+              "sourcePart": "word/media/image74.wmf",
+              "sha256": "88d35198bb7de760f6df59c7198597c55662cb8a47396c291cf5631804ddf241"
+            },
+            {
+              "path": "increments/l136-v1/evidence/L136/objects/image75.wmf",
+              "sourcePart": "word/media/image75.wmf",
+              "sha256": "a312e902f763244915165092d257eea03a95906ef1ae4a25a918b6572db259ab"
+            },
+            {
+              "path": "increments/l136-v1/evidence/L136/objects/image76.wmf",
+              "sourcePart": "word/media/image76.wmf",
+              "sha256": "4e9954bb7ab1b87399e588abd4bf37035c614ead36f7c03832eeb4a2f5c14a4b"
+            },
+            {
+              "path": "increments/l136-v1/evidence/L136/objects/image77.wmf",
+              "sourcePart": "word/media/image77.wmf",
+              "sha256": "06cd63399589ea8ca86cfe2d1c982562cc041e9d90aedb59ff07e825fd38b45a"
+            },
+            {
+              "path": "increments/l136-v1/evidence/L136/objects/image78.wmf",
+              "sourcePart": "word/media/image78.wmf",
+              "sha256": "039eb684d32d38a80962bbf3541c8aafeee8f30dd69f4a9acda53560defcadaf"
+            },
+            {
+              "path": "increments/l136-v1/evidence/L136/objects/image79.wmf",
+              "sourcePart": "word/media/image79.wmf",
+              "sha256": "a5132b97fbe84019abb07c1cab25ede58ab844ee66e935d2919de3cdd07fbcaf"
+            }
+          ],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L136",
+            "requestedPath": "increments/l136-v1/evidence/L136/page-08.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L136.docx",
+          "sourceTitle": "专题九 复数-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:review:L136:home5:b1",
+          "sourceId": "L136",
+          "sourceSha256": "6afa39665221bb82fb2068f8826dc22e2a689cb298d8b5482391f534e7f52321",
+          "locator": {
+            "headingPath": [
+              "专题九 复数",
+              "半圆参数下实部条件与模范围"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 113,
+            "supportingParagraphIndices": [
+              113
+            ],
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 9,
+            "supportingRenderedPages": [
+              9
+            ],
+            "printedPage": 9,
+            "equationObjectId": null
+          },
+          "quote": "\\bar z_1z_2=(1+i)(\\cos\\theta+i\\sin\\theta)=(\\cos\\theta-\\sin\\theta)+(\\cos\\theta+\\sin\\theta)i",
+          "quoteRepresentation": "visual_math_transcription_only",
+          "quoteCompleteness": "短引或仅纯公式视觉转写；完整有源整理另列",
+          "transcriptionWordingStatus": "source_based_reconstruction",
+          "sourceSupportedTranscription": "$\\bar z_1z_2=(1+i)(\\cos\\theta+i\\sin\\theta)=(\\cos\\theta-\\sin\\theta)+(\\cos\\theta+\\sin\\theta)i$，为实数要求$\\cos\\theta+\\sin\\theta=0$；在指定区间得$\\theta=\\frac{3\\pi}4$。",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "mathSourceAssets": [
+            {
+              "path": "increments/l136-v1/evidence/L136/objects/image76.wmf",
+              "sourcePart": "word/media/image76.wmf",
+              "sha256": "4e9954bb7ab1b87399e588abd4bf37035c614ead36f7c03832eeb4a2f5c14a4b"
+            },
+            {
+              "path": "increments/l136-v1/evidence/L136/objects/image92.wmf",
+              "sourcePart": "word/media/image92.wmf",
+              "sha256": "d754e62fa27be59c6f96ab8f1152eaeb68752388cf1755f1327b6cc80d6ffc1d"
+            },
+            {
+              "path": "increments/l136-v1/evidence/L136/objects/image93.wmf",
+              "sourcePart": "word/media/image93.wmf",
+              "sha256": "053938cafbdadaec9fd0057ff6e7fc6644dab781f894bf1e87f99d0716f2c49f"
+            },
+            {
+              "path": "increments/l136-v1/evidence/L136/objects/image94.wmf",
+              "sourcePart": "word/media/image94.wmf",
+              "sha256": "78a08e56eec88c2c42dd529f4c56aced7b819f968c0c912abb577f4f1c4ff19d"
+            }
+          ],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L136",
+            "requestedPath": "increments/l136-v1/evidence/L136/page-09.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L136.docx",
+          "sourceTitle": "专题九 复数-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:review:L136:home5:b2",
+          "sourceId": "L136",
+          "sourceSha256": "6afa39665221bb82fb2068f8826dc22e2a689cb298d8b5482391f534e7f52321",
+          "locator": {
+            "headingPath": [
+              "专题九 复数",
+              "半圆参数下实部条件与模范围"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 114,
+            "supportingParagraphIndices": [
+              114,
+              115,
+              116
+            ],
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 9,
+            "supportingRenderedPages": [
+              9,
+              10
+            ],
+            "printedPage": 9,
+            "equationObjectId": null
+          },
+          "quote": "3z_1+z_2=(3+\\cos\\theta)+(\\sin\\theta-3)i",
+          "quoteRepresentation": "visual_math_transcription_only",
+          "quoteCompleteness": "短引或仅纯公式视觉转写；完整有源整理另列",
+          "transcriptionWordingStatus": "source_based_reconstruction",
+          "sourceSupportedTranscription": "$3z_1+z_2=(3+\\cos\\theta)+(\\sin\\theta-3)i$，所以模为$\\sqrt{(3+\\cos\\theta)^2+(\\sin\\theta-3)^2}=\\sqrt{19+6\\sqrt2\\cos(\\theta+\\frac\\pi4)}$。因$\\theta+\\frac\\pi4\\in[\\frac\\pi4,\\frac{5\\pi}4]$，余弦范围$[-1,\\frac{\\sqrt2}2]$，模范围$[3\\sqrt2-1,5]$。",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "mathSourceAssets": [
+            {
+              "path": "increments/l136-v1/evidence/L136/objects/image100.wmf",
+              "sourcePart": "word/media/image100.wmf",
+              "sha256": "3dc8f3c8b1e64b1a71c4586a8bb554fdf70b13ad517be47b6813e30e7bfcb4e8"
+            },
+            {
+              "path": "increments/l136-v1/evidence/L136/objects/image76.wmf",
+              "sourcePart": "word/media/image76.wmf",
+              "sha256": "4e9954bb7ab1b87399e588abd4bf37035c614ead36f7c03832eeb4a2f5c14a4b"
+            },
+            {
+              "path": "increments/l136-v1/evidence/L136/objects/image79.wmf",
+              "sourcePart": "word/media/image79.wmf",
+              "sha256": "a5132b97fbe84019abb07c1cab25ede58ab844ee66e935d2919de3cdd07fbcaf"
+            },
+            {
+              "path": "increments/l136-v1/evidence/L136/objects/image95.wmf",
+              "sourcePart": "word/media/image95.wmf",
+              "sha256": "a74da7f2bad5a5281216a5d18a221948f2eae834d02b5b9395db70bd4239b738"
+            },
+            {
+              "path": "increments/l136-v1/evidence/L136/objects/image96.wmf",
+              "sourcePart": "word/media/image96.wmf",
+              "sha256": "0e30bbe7928db2f276ff28dad496f3d051159f2fbe4c933a7f71d4d602446f78"
+            },
+            {
+              "path": "increments/l136-v1/evidence/L136/objects/image97.wmf",
+              "sourcePart": "word/media/image97.wmf",
+              "sha256": "db55e9e9343c49cf3c60e69f996732e181690c3950fa59339b866ccbb1cb193a"
+            },
+            {
+              "path": "increments/l136-v1/evidence/L136/objects/image98.wmf",
+              "sourcePart": "word/media/image98.wmf",
+              "sha256": "565ca8b92f294d7a5dbb6c06335a640515d1152705f5dbb7ee659d82b1cd631f"
+            },
+            {
+              "path": "increments/l136-v1/evidence/L136/objects/image99.wmf",
+              "sourcePart": "word/media/image99.wmf",
+              "sha256": "d8b2856a8e673fe5b43413228762e28198bcbdcbb8400df247f7a709d351229f"
+            }
+          ],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L136",
+            "requestedPath": "increments/l136-v1/evidence/L136/page-09.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L136.docx",
+          "sourceTitle": "专题九 复数-教学设计",
+          "sourceStatus": "partially_reviewed"
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": [
+        {
+          "id": "formula:review:L136:home5:b0:m0",
+          "location": "blocks[0].value.inlineMath[0]",
+          "sourceString": "$z_1=1-i,z_2=\\cos\\theta+i\\sin\\theta$，$\\theta\\in[0,\\pi]$。（1）$\\bar z_1z_2$为实数求$\\theta$；（2）求$|3z_1+z_2|$范围。",
+          "latex": "z_1=1-i,z_2=\\cos\\theta+i\\sin\\theta",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:review:L136:home5:b0:m1",
+          "location": "blocks[0].value.inlineMath[1]",
+          "sourceString": "$z_1=1-i,z_2=\\cos\\theta+i\\sin\\theta$，$\\theta\\in[0,\\pi]$。（1）$\\bar z_1z_2$为实数求$\\theta$；（2）求$|3z_1+z_2|$范围。",
+          "latex": "\\theta\\in[0,\\pi]",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:review:L136:home5:b0:m2",
+          "location": "blocks[0].value.inlineMath[2]",
+          "sourceString": "$z_1=1-i,z_2=\\cos\\theta+i\\sin\\theta$，$\\theta\\in[0,\\pi]$。（1）$\\bar z_1z_2$为实数求$\\theta$；（2）求$|3z_1+z_2|$范围。",
+          "latex": "\\bar z_1z_2",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:review:L136:home5:b0:m3",
+          "location": "blocks[0].value.inlineMath[3]",
+          "sourceString": "$z_1=1-i,z_2=\\cos\\theta+i\\sin\\theta$，$\\theta\\in[0,\\pi]$。（1）$\\bar z_1z_2$为实数求$\\theta$；（2）求$|3z_1+z_2|$范围。",
+          "latex": "\\theta",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:review:L136:home5:b0:m4",
+          "location": "blocks[0].value.inlineMath[4]",
+          "sourceString": "$z_1=1-i,z_2=\\cos\\theta+i\\sin\\theta$，$\\theta\\in[0,\\pi]$。（1）$\\bar z_1z_2$为实数求$\\theta$；（2）求$|3z_1+z_2|$范围。",
+          "latex": "|3z_1+z_2|",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:review:L136:home5:b1:m0",
+          "location": "blocks[1].value.inlineMath[0]",
+          "sourceString": "$\\bar z_1z_2=(1+i)(\\cos\\theta+i\\sin\\theta)=(\\cos\\theta-\\sin\\theta)+(\\cos\\theta+\\sin\\theta)i$，为实数要求$\\cos\\theta+\\sin\\theta=0$；在指定区间得$\\theta=\\frac{3\\pi}4$。",
+          "latex": "\\bar z_1z_2=(1+i)(\\cos\\theta+i\\sin\\theta)=(\\cos\\theta-\\sin\\theta)+(\\cos\\theta+\\sin\\theta)i",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:review:L136:home5:b1:m1",
+          "location": "blocks[1].value.inlineMath[1]",
+          "sourceString": "$\\bar z_1z_2=(1+i)(\\cos\\theta+i\\sin\\theta)=(\\cos\\theta-\\sin\\theta)+(\\cos\\theta+\\sin\\theta)i$，为实数要求$\\cos\\theta+\\sin\\theta=0$；在指定区间得$\\theta=\\frac{3\\pi}4$。",
+          "latex": "\\cos\\theta+\\sin\\theta=0",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:review:L136:home5:b1:m2",
+          "location": "blocks[1].value.inlineMath[2]",
+          "sourceString": "$\\bar z_1z_2=(1+i)(\\cos\\theta+i\\sin\\theta)=(\\cos\\theta-\\sin\\theta)+(\\cos\\theta+\\sin\\theta)i$，为实数要求$\\cos\\theta+\\sin\\theta=0$；在指定区间得$\\theta=\\frac{3\\pi}4$。",
+          "latex": "\\theta=\\frac{3\\pi}4",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:review:L136:home5:b2:m0",
+          "location": "blocks[2].value.inlineMath[0]",
+          "sourceString": "$3z_1+z_2=(3+\\cos\\theta)+(\\sin\\theta-3)i$，所以模为$\\sqrt{(3+\\cos\\theta)^2+(\\sin\\theta-3)^2}=\\sqrt{19+6\\sqrt2\\cos(\\theta+\\frac\\pi4)}$。因$\\theta+\\frac\\pi4\\in[\\frac\\pi4,\\frac{5\\pi}4]$，余弦范围$[-1,\\frac{\\sqrt2}2]$，模范围$[3\\sqrt2-1,5]$。",
+          "latex": "3z_1+z_2=(3+\\cos\\theta)+(\\sin\\theta-3)i",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:review:L136:home5:b2:m1",
+          "location": "blocks[2].value.inlineMath[1]",
+          "sourceString": "$3z_1+z_2=(3+\\cos\\theta)+(\\sin\\theta-3)i$，所以模为$\\sqrt{(3+\\cos\\theta)^2+(\\sin\\theta-3)^2}=\\sqrt{19+6\\sqrt2\\cos(\\theta+\\frac\\pi4)}$。因$\\theta+\\frac\\pi4\\in[\\frac\\pi4,\\frac{5\\pi}4]$，余弦范围$[-1,\\frac{\\sqrt2}2]$，模范围$[3\\sqrt2-1,5]$。",
+          "latex": "\\sqrt{(3+\\cos\\theta)^2+(\\sin\\theta-3)^2}=\\sqrt{19+6\\sqrt2\\cos(\\theta+\\frac\\pi4)}",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:review:L136:home5:b2:m2",
+          "location": "blocks[2].value.inlineMath[2]",
+          "sourceString": "$3z_1+z_2=(3+\\cos\\theta)+(\\sin\\theta-3)i$，所以模为$\\sqrt{(3+\\cos\\theta)^2+(\\sin\\theta-3)^2}=\\sqrt{19+6\\sqrt2\\cos(\\theta+\\frac\\pi4)}$。因$\\theta+\\frac\\pi4\\in[\\frac\\pi4,\\frac{5\\pi}4]$，余弦范围$[-1,\\frac{\\sqrt2}2]$，模范围$[3\\sqrt2-1,5]$。",
+          "latex": "\\theta+\\frac\\pi4\\in[\\frac\\pi4,\\frac{5\\pi}4]",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:review:L136:home5:b2:m3",
+          "location": "blocks[2].value.inlineMath[3]",
+          "sourceString": "$3z_1+z_2=(3+\\cos\\theta)+(\\sin\\theta-3)i$，所以模为$\\sqrt{(3+\\cos\\theta)^2+(\\sin\\theta-3)^2}=\\sqrt{19+6\\sqrt2\\cos(\\theta+\\frac\\pi4)}$。因$\\theta+\\frac\\pi4\\in[\\frac\\pi4,\\frac{5\\pi}4]$，余弦范围$[-1,\\frac{\\sqrt2}2]$，模范围$[3\\sqrt2-1,5]$。",
+          "latex": "[-1,\\frac{\\sqrt2}2]",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:review:L136:home5:b2:m4",
+          "location": "blocks[2].value.inlineMath[4]",
+          "sourceString": "$3z_1+z_2=(3+\\cos\\theta)+(\\sin\\theta-3)i$，所以模为$\\sqrt{(3+\\cos\\theta)^2+(\\sin\\theta-3)^2}=\\sqrt{19+6\\sqrt2\\cos(\\theta+\\frac\\pi4)}$。因$\\theta+\\frac\\pi4\\in[\\frac\\pi4,\\frac{5\\pi}4]$，余弦范围$[-1,\\frac{\\sqrt2}2]$，模范围$[3\\sqrt2-1,5]$。",
+          "latex": "[3\\sqrt2-1,5]",
+          "status": "verified",
+          "decision": "keep"
+        }
+      ]
+    }
+  ],
+  "requirements": {
+    "knowledgeRequirement": {
+      "value": null,
+      "originalWording": null,
+      "scope": "task",
+      "status": "unresolved",
+      "sourceId": null,
+      "sourceEdition": "2025-primary-pending",
+      "evidence": [],
+      "note": "教案目标不替代2025原标准逐点证据。"
+    },
+    "academicQualityLevel": {
+      "value": null,
+      "originalWording": null,
+      "scope": "task",
+      "status": "unresolved",
+      "sourceId": null,
+      "sourceEdition": "2025-primary-pending",
+      "evidence": [],
+      "note": "教案目标不替代2025原标准逐点证据。"
+    },
+    "competencyLevel": {
+      "value": null,
+      "originalWording": null,
+      "scope": "task",
+      "status": "unresolved",
+      "sourceId": null,
+      "sourceEdition": "2025-primary-pending",
+      "evidence": [],
+      "note": "教案目标不替代2025原标准逐点证据。"
+    },
+    "competencyLinks": {
+      "value": null,
+      "originalWording": null,
+      "scope": "task",
+      "status": "unresolved",
+      "sourceId": null,
+      "sourceEdition": "2025-primary-pending",
+      "evidence": [],
+      "note": "教案目标不替代2025原标准逐点证据。"
+    }
+  },
+  "methodCandidates": [
+    {
+      "id": "gap:method:trig-unify-name",
+      "kind": "method",
+      "name": "三角恒等变换中的化异名为同名",
+      "sourceWording": "化异名为同名",
+      "nameOrigin": "editorial_context_added_to_verbatim_method_wording",
+      "classification": "partial_existing_needs_source_branch",
+      "classificationMeaning": "旧平台部分覆盖，需补本源具体分支",
+      "status": "reviewed_candidate_no_production_node_approval",
+      "contentIds": [
+        "lesson-content:book-2:trig-identity-proofs",
+        "lesson-content:book-2:U10:extrema-two-methods",
+        "lesson-content:book-2:L248:sine-product-identity",
+        "lesson-content:book-2:L250:triple-cosine-derivation",
+        "lesson-content:book-2:L250:class-three-identities"
+      ],
+      "conditionsAndLimits": [
+        {
+          "text": "原题及两种证明完整保留；定义域、分母非零及约分条件属于编辑补充未决，不能写成原题已明确条件。",
+          "basis": "editorial_proposal_unresolved",
+          "contentId": "lesson-content:book-2:editorial-domain-notes"
+        }
+      ],
+      "reason": "切化弦及平方关系化同名的基本操作旧已有；U09商式两证与U10化为cos的二次最值为未展开的组合来源分支。化异名为同名比54更宽，不能直接判同义合并，也不应把全部化同名当新。",
+      "suggestedNodeId": "proposal:book-2:trig-unify-name",
+      "sourceIds": [
+        "U09",
+        "U10"
+      ],
+      "readingReview": {
+        "id": "source-branch:trig-unify-name:20261012",
+        "status": "source_pages_checked_error_corrected_conditions_editorial",
+        "nameNote": "化异名为同名的源具体分支",
+        "scope": "例2(1)令u=α+β，sin(u+α)−2cosu sinα=sin u cosα−cosu sinα=sin(u−α)=sinβ，对所有实α,β成立。 例2(2)原cot(α/2)、tan(α/2)分别要求sin(α/2),cos(α/2)非零，即α≠kπ。差cot(α/2)−tan(α/2)=2cosα/sinα还需cosα≠0；合并禁值α≠kπ/2。 在该原定义域上左边=cos²α sinα/(2cosα)=sin2α/4。另一路1/t−t=(1−t²)/t、tanα=2t/(1−t²)所有除数非零，亦合法。编辑定义域提示是数学推导，不是教案原句。 测高方案1令h=AB−PC>0、s=PA>0，h=s tanα=(s+PQ)tanβ，PQ>0且0<β<α<π/2，得h=PQ tanαtanβ/(tanα−tanβ)>0、s=PQ tanβ/(tanα−tanβ)>0。图上D,C,O对应Q,P,A的等高点，Q确在P背离A一侧。 方案2测站同高、PR>0，Q为PR中点，D为CE中点且CE=PR。h>0、αβγ为有效正仰角，中线恒等式4DO²=2CO²+2EO²−CE²，代入h cot角得h²(2cot²α−4cot²β+2cot²γ)=PR²。故根号内严格正且h取正根；这是原图模型之必要条件，不宣称任意三个满足它的角都能构成实地三角形。 扇形0<α<2π、R>0、C>0；S=(αR)(2R)/4≤C²/16，αR=2R即α=2、R=C/4，等号可达。第一问l=10π/3，弓形面积50π/3−25√3。 沿用冻结raw候选readingReview的retain_existing_parent_entries_no_new_graph_node_or_relation。化同角与化同名是kp:21431综合应用下的不同具名分支；不把它们整个合并为辅助角公式，也不将全部化同名当新节点。保留所有variants和U10/L248/L250跨源引用，外源已结结论只作为支持，不重审。",
+        "sourceQuotes": [
+          {
+            "sourceId": "U09",
+            "value": "小题（2）中，有多个三角名称，需要“化异名为同名”.",
+            "evidenceId": "ev:book-2:U09:trig-identity-proofs-b2"
+          },
+          {
+            "sourceId": "U10",
+            "value": "能善于观察、联想，是化为同名三角函数，转化为二次形式，还是转化为一个角的三角函数形式，需要仔细分析，整体判断．",
+            "evidenceId": "ev:book-2:U10:extrema-two-methods-b12"
+          }
+        ],
+        "readingNote": "结合原例条件使用化异名为同名的源具体分支，完整题目、推导步骤及定义域分别保留。",
+        "sourceIssue": "U10 例2的最小值已修正为 $-\\frac12$；例题中可查看原文、修订依据和原页。",
+        "conditionLinks": [
+          {
+            "contentId": "lesson-content:book-2:editorial-domain-notes",
+            "blockIndex": 0,
+            "label": "查看本例已核定义域与分母条件（编辑补充）"
+          }
+        ],
+        "verification": "WPS native pages visually read; original files SHA256 unchanged; no Word/MathType object audit or whole-source certification",
+        "structureDecision": "retain_existing_parent_entries_no_new_graph_node_or_relation",
+        "sourceIssueStatus": "corrected",
+        "reviewNote": "原候选身份、来源变体、旧跨源结论与条件链接保留；本轮只核所收具体范围。",
+        "verifiedContentIds": [
+          "lesson-content:book-2:trig-identity-proofs"
+        ]
+      },
+      "originalReadingReviewBeforeDOTR15": {
+        "id": "source-branch:trig-unify-name:20261012",
+        "status": "source_pages_checked_error_corrected_conditions_editorial",
+        "nameNote": "“化异名为同名”见 U09 教案；当前完整条目名是整理标题。",
+        "scope": "U09 例2的恒等证明，以及 U10 例2中化为同名函数或辅助角求最值的对照。",
+        "sourceQuotes": [
+          {
+            "sourceId": "U09",
+            "value": "小题（2）中，有多个三角名称，需要“化异名为同名”.",
+            "evidenceId": "ev:book-2:U09:trig-identity-proofs-b2"
+          },
+          {
+            "sourceId": "U10",
+            "value": "能善于观察、联想，是化为同名三角函数，转化为二次形式，还是转化为一个角的三角函数形式，需要仔细分析，整体判断．",
+            "evidenceId": "ev:book-2:U10:extrema-two-methods-b12"
+          }
+        ],
+        "readingNote": "两份教案通过具体例题说明选择方法，没有给出一套统一命名的通用步骤。下方保留完整题目与解答。",
+        "sourceIssue": "U10 例2的最小值已修正为 $-\\frac12$；例题中可查看原文、修订依据和原页。",
+        "conditionLinks": [
+          {
+            "contentId": "lesson-content:book-2:editorial-domain-notes",
+            "blockIndex": 0,
+            "label": "查看本例的定义域与分母条件（编辑补充，待确认）"
+          }
+        ],
+        "verification": "WPS native pages visually read; original files SHA256 unchanged; no Word/MathType object audit or whole-source certification",
+        "structureDecision": "retain_existing_parent_entries_no_new_graph_node_or_relation",
+        "sourceIssueStatus": "corrected",
+        "reviewNote": "本分支四份未改原件的相关页已对照。U10 数值错误按用户决定修正并留痕；定义域条件保持编辑补充身份，未认定为教案原句。"
+      },
+      "dotR15SourceReview": {
+        "round": "R15",
+        "itemId": "proposal:book-2:trig-unify-name",
+        "sourceReviewStatus": "verified_with_evidence",
+        "boundedReason": "例2(1)令u=α+β，sin(u+α)−2cosu sinα=sin u cosα−cosu sinα=sin(u−α)=sinβ，对所有实α,β成立。 例2(2)原cot(α/2)、tan(α/2)分别要求sin(α/2),cos(α/2)非零，即α≠kπ。差cot(α/2)−tan(α/2)=2cosα/sinα还需cosα≠0；合并禁值α≠kπ/2。 在该原定义域上左边=cos²α sinα/(2cosα)=sin2α/4。另一路1/t−t=(1−t²)/t、tanα=2t/(1−t²)所有除数非零，亦合法。编辑定义域提示是数学推导，不是教案原句。 测高方案1令h=AB−PC>0、s=PA>0，h=s tanα=(s+PQ)tanβ，PQ>0且0<β<α<π/2，得h=PQ tanαtanβ/(tanα−tanβ)>0、s=PQ tanβ/(tanα−tanβ)>0。图上D,C,O对应Q,P,A的等高点，Q确在P背离A一侧。 方案2测站同高、PR>0，Q为PR中点，D为CE中点且CE=PR。h>0、αβγ为有效正仰角，中线恒等式4DO²=2CO²+2EO²−CE²，代入h cot角得h²(2cot²α−4cot²β+2cot²γ)=PR²。故根号内严格正且h取正根；这是原图模型之必要条件，不宣称任意三个满足它的角都能构成实地三角形。 扇形0<α<2π、R>0、C>0；S=(αR)(2R)/4≤C²/16，αR=2R即α=2、R=C/4，等号可达。第一问l=10π/3，弓形面积50π/3−25√3。 沿用冻结raw候选readingReview的retain_existing_parent_entries_no_new_graph_node_or_relation。化同角与化同名是kp:21431综合应用下的不同具名分支；不把它们整个合并为辅助角公式，也不将全部化同名当新节点。保留所有variants和U10/L248/L250跨源引用，外源已结结论只作为支持，不重审。",
+        "deltaSha256": "9900604f66f0d92b9568aec09843d8b5cd3ebe1fa79894c9e4bafd72ffe639db",
+        "platformStatus": "verified_local_pending_controller_acceptance",
+        "onlineReleaseStatus": "not_released_R15"
+      }
+    },
+    {
+      "id": "gap:book-2:trig-formula-reverse",
+      "kind": "method",
+      "name": "和差三角公式逆用",
+      "sourceWording": null,
+      "nameOrigin": "source_explicit_name_with_scope_disambiguation",
+      "classification": "partial_existing_needs_source_branch",
+      "classificationMeaning": "旧平台部分覆盖，需补本源具体分支",
+      "status": "reviewed_candidate_no_production_node_approval",
+      "contentIds": [
+        "lesson-content:book-2:L247:reverse-cosine-formula",
+        "lesson-content:book-2:L248:one-substitution-reverse-tangent",
+        "lesson-content:book-2:L248:tangent-target-transform",
+        "lesson-content:book-2:L249:auxiliary-angle-special",
+        "lesson-content:book-2:L249:auxiliary-angle-general",
+        "lesson-content:book-2:L249:tangent-point-angle"
+      ],
+      "conditionsAndLimits": [
+        "先确认角对与乘积结构匹配，余弦和角对应减正弦积、差角对应加正弦积；保留原定义域。"
+      ],
+      "reason": "旧辅助角完整反用和角正弦公式，倍角逆用也已有；当前明确包含余弦和差积结构和正切分式逆认分支。建议沿现有逆用方法补子支，不能重复计算8、13或辅助角已有内容。",
+      "suggestedNodeId": "proposal:book-2:trig-formula-reverse",
+      "sourceIds": [
+        "L247"
+      ],
+      "originalReadingReviewBeforeDOTR14": null,
+      "readingReview": {
+        "nameNote": "识别和差公式结构并逆用",
+        "readingNote": "结合原例条件使用识别和差公式结构并逆用，完整题目、推导步骤及定义域分别保留。",
+        "scope": "原题完整程序与已有节点可有据复用；保留此具名应用、条件和来源，不把具体题目步骤另立正式ID。",
+        "verifiedContentIds": [
+          "lesson-content:book-2:L247:reverse-cosine-formula",
+          "lesson-content:book-2:L247:double-angle-by-repetition"
+        ],
+        "reviewNote": "原候选身份及来源变体保留。",
+        "sourceQuotes": []
+      },
+      "dotR14SourceReview": {
+        "round": "R14",
+        "itemId": "proposal:book-2:trig-formula-reverse",
+        "sourceReviewStatus": "verified_with_evidence",
+        "boundedReason": "原题完整程序与已有节点可有据复用；保留此具名应用、条件和来源，不把具体题目步骤另立正式ID。",
+        "deltaSha256": "daac8a84ca7e8f22447e2e22dc9987f3d8dbbde1924b113a65059088997d2c1b",
+        "platformStatus": "verified_local_pending_controller_acceptance",
+        "onlineReleaseStatus": "not_released_R14"
+      }
+    }
+  ],
+  "relationProposals": [
+    {
+      "id": "relation:book-2:U10:auxiliary-extrema",
+      "action": "add",
+      "existingEdgeId": null,
+      "sourceNodeId": "method:auxiliary-angle",
+      "targetNodeId": "kp:21119",
+      "relationType": "USES_KNOWLEDGE",
+      "scope": "例2(2)化成2√3 cos(x+π/6)，在对应整体角区间用单调性求最值。",
+      "basis": "source_explicit",
+      "reason": "按原活动或完整例题实际过程提出关联；不是按章节先后建立依赖。",
+      "status": "proposed",
+      "dotR5SourceReview": {
+        "round": "R5",
+        "itemId": "relation:book-2:U10:auxiliary-extrema",
+        "sourceReviewStatus": "verified_with_evidence_in_exact_scope",
+        "mathReviewStatus": null,
+        "boundedReason": "P508、513–517：3cosx−√3sinx=2√3cos(x+π/6)，x∈[0,π/2]使整体角∈[π/6,2π/3]，余弦严格减，最大3（x=0），最小−√3（x=π/2）。支持method:auxiliary-angle→kp:21119 USES_KNOWLEDGE；需同时保留限定区间。",
+        "deltaSha256": "747447ab452d9f3383bb7df42c78a65f2097a2c859f643b44cec35638a5f88d5",
+        "platformStatus": "verified_local_pending_controller_acceptance",
+        "onlineReleaseStatus": "not_released_R5"
+      }
+    },
+    {
+      "id": "relation:book-2:L107:auxiliary-angle",
+      "action": "add",
+      "existingEdgeId": null,
+      "sourceNodeId": "method:auxiliary-angle",
+      "targetNodeId": "kp:21116",
+      "relationType": "APPLIES_TO",
+      "scope": "完整题干、定义域和源解见内容块；数学公式与诊断页位置均已核。",
+      "basis": "source_explicit",
+      "reason": "由原解操作实际识别，不靠词语搜索。",
+      "status": "proposed",
+      "originalRelationBeforeDOTR11": {
+        "id": "relation:book-2:L107:auxiliary-angle",
+        "action": "add",
+        "existingEdgeId": null,
+        "sourceNodeId": "method:auxiliary-angle",
+        "targetNodeId": "kp:21116",
+        "relationType": "APPLIES_TO",
+        "scope": "完整题干、定义域和源解见内容块；数学公式与诊断页位置均已核。",
+        "basis": "source_explicit",
+        "reason": "由原解操作实际识别，不靠词语搜索。",
+        "status": "proposed"
+      },
+      "dotR11SourceReview": {
+        "round": "R11",
+        "itemId": "relation:book-2:L107:auxiliary-angle",
+        "sourceReviewStatus": "verified_with_evidence",
+        "boundedReason": "√3 sin(x/2)+cos(x/2)=2sin(x/2+π/6)，cos(π/6)=√3/2、sin(π/6)=1/2。五点相位0,π/2,π,3π/2,2π给x=−π/3,2π/3,5π/3,8π/3,11π/3及y=0,2,0,−2,0。A=2、ω=1/2、T=4π。",
+        "deltaSha256": "2362bb4e96fe0f58b20fe6fa27e1984ab6ecb2820182ac49503442bd81dfb5b1",
+        "platformStatus": "verified_local_pending_controller_acceptance",
+        "onlineReleaseStatus": "not_released_R11"
+      },
+      "formalGraphEdgeCreated": false,
+      "DOTSourceRecommendationStatus": "source_supported_recommendation_not_formal_promotion",
+      "strictPrerequisite": false
+    },
+    {
+      "id": "relation:book-2:L249:auxiliary-construct",
+      "action": "add",
+      "existingEdgeId": null,
+      "sourceNodeId": "method:auxiliary-angle",
+      "targetNodeId": "kp:21119",
+      "relationType": "APPLIES_TO",
+      "scope": "提取正幅值后，用单位圆同时满足cosφ=a/A、sinφ=b/A，再逆用和角公式；不能单独用tanφ定象限。",
+      "basis": "source_explicit",
+      "reason": "实际过程对应，已有独立辅助角方法和旋转候选补内容不重复提议。",
+      "status": "proposed",
+      "originalRelationBeforeDOTR21": {
+        "id": "relation:book-2:L249:auxiliary-construct",
+        "action": "add",
+        "existingEdgeId": null,
+        "sourceNodeId": "method:auxiliary-angle",
+        "targetNodeId": "kp:21119",
+        "relationType": "APPLIES_TO",
+        "scope": "原题完整条件与过程见内容；辅助角由cos与sin共同确定。",
+        "basis": "source_explicit",
+        "reason": "实际过程对应，已有独立辅助角方法和旋转候选补内容不重复提议。",
+        "status": "proposed"
+      },
+      "contentIds": [
+        "lesson-content:book-2:L249:auxiliary-angle-general"
+      ],
+      "activation": "evidence_supported_scoped_suggestion",
+      "DOTR21OriginalReceivedAfter": {
+        "sourceNodeId": "method:auxiliary-angle",
+        "targetNodeId": "kp:21119",
+        "relationType": "APPLIES_TO",
+        "contentIds": [
+          "lesson-content:book-2:L249:auxiliary-angle-general"
+        ],
+        "scope": "提取正幅值后，用单位圆同时满足cosφ=a/A、sinφ=b/A，再逆用和角公式；不能单独用tanφ定象限。",
+        "strictPrerequisite": false,
+        "activation": "evidence_supported_scoped_suggestion"
+      },
+      "DOTR21RelationMapping": {
+        "sourceNodeId": "method:auxiliary-angle",
+        "targetNodeId": "kp:21119",
+        "relationType": "APPLIES_TO",
+        "contentIds": [
+          "lesson-content:book-2:L249:auxiliary-angle-general"
+        ],
+        "scope": "提取正幅值后，用单位圆同时满足cosφ=a/A、sinφ=b/A，再逆用和角公式；不能单独用tanφ定象限。",
+        "strictPrerequisite": false,
+        "activation": "evidence_supported_scoped_suggestion"
+      },
+      "dotR21SourceReview": {
+        "round": "R21",
+        "originalWorkId": "relation:book-2:L249:auxiliary-construct",
+        "sourceReviewStatus": "verified_with_evidence",
+        "boundedReason": "L249原DOC及转DOCX Equation Native逐对象哈希匹配，P27–34去分母、P37–48非直角三角形、P50–98旋转与辅助角、P129–168补充题和解答。P159 image249原式β=α−3π/4漏整周项，作为源不严谨记录；三角函数最终值未受影响。 tan20+tan40=√3(1−tan20tan40)，故原式√3，分母非0；非直角三角形A,B,C均非π/2，tan(A+B)=−tanC有定义，清分母得三切和等三切积。求B题tanA tanC≠0，约分得tanB=√3，内角B=π/3。点(1,2)逆时针π/4变(−√2/2,3√2/2)。顺时针终边β只确定到α−3π/4+2kπ，k∈Z；α=π/6 mod2π，所以α+β=−5π/12 mod2π，cos=(√6−√2)/4。辅助角A=√(a²+b²)>0，cosφ=a/A,sinφ=b/A联合确定φ∈[0,2π)，不能仅凭tanφ；原题ab≠0沿用不擅自放宽。三个特例幅值1、√2、5。存在角题2sin(α+π/6)=4−m等价m∈[2,6]，端点可取。P(1−tanπ/12,1+tanπ/12)两坐标正，1=tanπ/4逆用公式得tanα=√3，加范围0<α<2π筛α=π/3。 各关系按具体题改窄scope，不沿用所有边共用“辅助角确定”泛话。去分母变形复用kp:21426命名应用；正余弦坐标旋转沿用本批group140的坐标法分支。常数1代换、公式逆用沿用batch025已核身份；不涉及积化和差/和差化积身份，不重复提问。",
+        "deltaSha256": "63f8a471e18c0d1382a16002500b9abc0fc2285c3648882e1af82871e55387ce",
+        "platformStatus": "local_integrated_pending_controller_acceptance",
+        "onlineReleaseStatus": "not_released_R21",
+        "sourceMathReauditedByPlatform": false
+      },
+      "resolvedSourceNodeId": "method:auxiliary-angle",
+      "resolvedTargetNodeId": "kp:21119",
+      "activeRelation": false,
+      "formalGraphEdgeCreated": false,
+      "strictPrerequisite": false
+    },
+    {
+      "id": "relation:book-2:L249:auxiliary-existence",
+      "action": "add",
+      "existingEdgeId": null,
+      "sourceNodeId": "method:auxiliary-angle",
+      "targetNodeId": "kp:21431",
+      "relationType": "APPLIES_TO",
+      "scope": "无角范围限制时用2sin(α+π/6)∈[−2,2]且两端可达，求存在角条件m∈[2,6]。",
+      "basis": "source_explicit",
+      "reason": "实际过程对应，已有独立辅助角方法和旋转候选补内容不重复提议。",
+      "status": "proposed",
+      "originalRelationBeforeDOTR21": {
+        "id": "relation:book-2:L249:auxiliary-existence",
+        "action": "add",
+        "existingEdgeId": null,
+        "sourceNodeId": "method:auxiliary-angle",
+        "targetNodeId": "kp:21431",
+        "relationType": "APPLIES_TO",
+        "scope": "原题完整条件与过程见内容；辅助角由cos与sin共同确定。",
+        "basis": "source_explicit",
+        "reason": "实际过程对应，已有独立辅助角方法和旋转候选补内容不重复提议。",
+        "status": "proposed"
+      },
+      "contentIds": [
+        "lesson-content:book-2:L249:auxiliary-angle-existence-range"
+      ],
+      "activation": "evidence_supported_scoped_suggestion",
+      "DOTR21OriginalReceivedAfter": {
+        "sourceNodeId": "method:auxiliary-angle",
+        "targetNodeId": "kp:21431",
+        "relationType": "APPLIES_TO",
+        "contentIds": [
+          "lesson-content:book-2:L249:auxiliary-angle-existence-range"
+        ],
+        "scope": "无角范围限制时用2sin(α+π/6)∈[−2,2]且两端可达，求存在角条件m∈[2,6]。",
+        "strictPrerequisite": false,
+        "activation": "evidence_supported_scoped_suggestion"
+      },
+      "DOTR21RelationMapping": {
+        "sourceNodeId": "method:auxiliary-angle",
+        "targetNodeId": "kp:21431",
+        "relationType": "APPLIES_TO",
+        "contentIds": [
+          "lesson-content:book-2:L249:auxiliary-angle-existence-range"
+        ],
+        "scope": "无角范围限制时用2sin(α+π/6)∈[−2,2]且两端可达，求存在角条件m∈[2,6]。",
+        "strictPrerequisite": false,
+        "activation": "evidence_supported_scoped_suggestion"
+      },
+      "dotR21SourceReview": {
+        "round": "R21",
+        "originalWorkId": "relation:book-2:L249:auxiliary-existence",
+        "sourceReviewStatus": "verified_with_evidence",
+        "boundedReason": "L249原DOC及转DOCX Equation Native逐对象哈希匹配，P27–34去分母、P37–48非直角三角形、P50–98旋转与辅助角、P129–168补充题和解答。P159 image249原式β=α−3π/4漏整周项，作为源不严谨记录；三角函数最终值未受影响。 tan20+tan40=√3(1−tan20tan40)，故原式√3，分母非0；非直角三角形A,B,C均非π/2，tan(A+B)=−tanC有定义，清分母得三切和等三切积。求B题tanA tanC≠0，约分得tanB=√3，内角B=π/3。点(1,2)逆时针π/4变(−√2/2,3√2/2)。顺时针终边β只确定到α−3π/4+2kπ，k∈Z；α=π/6 mod2π，所以α+β=−5π/12 mod2π，cos=(√6−√2)/4。辅助角A=√(a²+b²)>0，cosφ=a/A,sinφ=b/A联合确定φ∈[0,2π)，不能仅凭tanφ；原题ab≠0沿用不擅自放宽。三个特例幅值1、√2、5。存在角题2sin(α+π/6)=4−m等价m∈[2,6]，端点可取。P(1−tanπ/12,1+tanπ/12)两坐标正，1=tanπ/4逆用公式得tanα=√3，加范围0<α<2π筛α=π/3。 各关系按具体题改窄scope，不沿用所有边共用“辅助角确定”泛话。去分母变形复用kp:21426命名应用；正余弦坐标旋转沿用本批group140的坐标法分支。常数1代换、公式逆用沿用batch025已核身份；不涉及积化和差/和差化积身份，不重复提问。",
+        "deltaSha256": "63f8a471e18c0d1382a16002500b9abc0fc2285c3648882e1af82871e55387ce",
+        "platformStatus": "local_integrated_pending_controller_acceptance",
+        "onlineReleaseStatus": "not_released_R21",
+        "sourceMathReauditedByPlatform": false
+      },
+      "resolvedSourceNodeId": "method:auxiliary-angle",
+      "resolvedTargetNodeId": "kp:21431",
+      "activeRelation": false,
+      "formalGraphEdgeCreated": false,
+      "strictPrerequisite": false
+    },
+    {
+      "id": "relation:book-2:L102:auxiliary",
+      "action": "add",
+      "existingEdgeId": null,
+      "sourceNodeId": "method:auxiliary-angle",
+      "targetNodeId": "kp:21275",
+      "relationType": "APPLIES_TO",
+      "scope": "见原题全部定义域和换元后区间。",
+      "basis": "source_explicit",
+      "reason": "原实际完整操作。",
+      "status": "proposed",
+      "originalRelationBeforeDOTR15": {
+        "id": "relation:book-2:L102:auxiliary",
+        "action": "add",
+        "existingEdgeId": null,
+        "sourceNodeId": "method:auxiliary-angle",
+        "targetNodeId": "kp:21275",
+        "relationType": "APPLIES_TO",
+        "scope": "见原题全部定义域和换元后区间。",
+        "basis": "source_explicit",
+        "reason": "原实际完整操作。",
+        "status": "proposed"
+      },
+      "activation": "evidence_supported_suggestion",
+      "contentIds": [
+        "lesson-content:book-2:L102:auxiliary-angle-extrema"
+      ],
+      "DOTR15RelationMapping": {
+        "sourceNodeId": "method:auxiliary-angle",
+        "targetNodeId": "kp:21275",
+        "relationType": "APPLIES_TO",
+        "contentIds": [
+          "lesson-content:book-2:L102:auxiliary-angle-extrema"
+        ],
+        "scope": "见原题全部定义域和换元后区间。",
+        "activation": "evidence_supported_suggestion",
+        "strictPrerequisite": false
+      },
+      "resolvedSourceNodeId": "method:auxiliary-angle",
+      "resolvedTargetNodeId": "kp:21275",
+      "activeRelation": false,
+      "formalGraphEdgeCreated": false,
+      "strictPrerequisite": false,
+      "dotR15SourceReview": {
+        "round": "R15",
+        "itemId": "relation:book-2:L102:auxiliary",
+        "sourceReviewStatus": "verified_with_evidence",
+        "boundedReason": "−2sin(3x+π/3)范围[−2,2]，负系数使最大对应sin=−1：x=2kπ/3+7π/18；最小对应sin=1：x=2kπ/3+π/18。 sin x+√3 cos x=2sin(x+π/3)，最大2在x=2kπ+π/6，最小−2在x=2kπ+7π/6。 t=sin x∈[−1,1]，t²−t=(t−1/2)²−1/4；最大2在t=−1，最小−1/4在t=1/2，回代后者有π/6、5π/6两族。 sin²x+2√3 sin x cos x+3cos²x=2+√3sin2x+cos2x=2+2sin(2x+π/6)。最大4在x=kπ+π/6，最小0在x=kπ+2π/3。亦可写(sin x+√3cos x)²，结果一致。 五条关系分别对应原题实际整体换元、辅助角、配方、二倍角及受限换元；全实数换元与t∈[−1,1]两类条件不可混用，候选whole-substitution仍门控。",
+        "deltaSha256": "c89531e77a7098b70e6fea326b16e9c909f8536070aa5c9b662db3a9b17079ff",
+        "platformStatus": "verified_local_pending_controller_acceptance",
+        "onlineReleaseStatus": "not_released_R15"
+      }
+    },
+    {
+      "id": "relation:book-2:L101:auxiliary-applies-period",
+      "action": "add",
+      "existingEdgeId": null,
+      "sourceNodeId": "method:auxiliary-angle",
+      "targetNodeId": "kp:21274",
+      "relationType": "APPLIES_TO",
+      "scope": "基础练习4将混合三角式化成单一正弦后反求k。",
+      "basis": "source_explicit",
+      "reason": "依据题目及解题中实际使用，不从教学顺序推成先修。",
+      "status": "proposed",
+      "originalRelationBeforeDOTR15": {
+        "id": "relation:book-2:L101:auxiliary-applies-period",
+        "action": "add",
+        "existingEdgeId": null,
+        "sourceNodeId": "method:auxiliary-angle",
+        "targetNodeId": "kp:21274",
+        "relationType": "APPLIES_TO",
+        "scope": "基础练习4将混合三角式化成单一正弦后反求k。",
+        "basis": "source_explicit",
+        "reason": "依据题目及解题中实际使用，不从教学顺序推成先修。",
+        "status": "proposed"
+      },
+      "activation": "evidence_supported_suggestion",
+      "contentIds": [
+        "lesson-content:book-2:L101:homework4-auxiliary-angle"
+      ],
+      "DOTR15RelationMapping": {
+        "sourceNodeId": "method:auxiliary-angle",
+        "targetNodeId": "kp:21274",
+        "relationType": "APPLIES_TO",
+        "contentIds": [
+          "lesson-content:book-2:L101:homework4-auxiliary-angle"
+        ],
+        "scope": "基础练习4将混合三角式化成单一正弦后反求k。",
+        "activation": "evidence_supported_suggestion",
+        "strictPrerequisite": false
+      },
+      "resolvedSourceNodeId": "method:auxiliary-angle",
+      "resolvedTargetNodeId": "kp:21274",
+      "activeRelation": false,
+      "formalGraphEdgeCreated": false,
+      "strictPrerequisite": false,
+      "dotR15SourceReview": {
+        "round": "R15",
+        "itemId": "relation:book-2:L101:auxiliary-applies-period",
+        "sourceReviewStatus": "verified_with_evidence",
+        "boundedReason": "2021=12×168+5；每一12项块和为0（配对n与n+6），余5项为1/2+√3/2+1+√3/2+1/2=2+√3。 复合频率2ω给T=2π/|2ω|=π/|ω|=2，ω=±π/2。原P115首式2π/|ω|确漏2，冻结正文已经明确“源解原式”并解释错误，所以保持原文留痕latex，不把其标成数学正确通式。 √(2sin x−1)要求sin x≥1/2；一周期闭区间[π/6,5π/6]按2kπ延拓，端点根号为0可取。 √3/2 sin2kx+cos²kx=sin(2kx+π/6)+1/2；k>0保证T=π/k，所以k=1。 分周期块求和是kp:21209数列求和方法下的具名应用，关联kp:21273；不从自然数单向定义域推出全部负移周期，仅使用n→n+12的重复。",
+        "deltaSha256": "d673d23b676ad21bbb0de8a14f2315a9e4d48ffe39aa1292e68bc53b81f75af4",
+        "platformStatus": "verified_local_pending_controller_acceptance",
+        "onlineReleaseStatus": "not_released_R15"
+      }
+    },
+    {
+      "id": "relation:book-2:L103:auxiliary",
+      "action": "add",
+      "existingEdgeId": null,
+      "sourceNodeId": "method:auxiliary-angle",
+      "targetNodeId": "kp:21277",
+      "relationType": "APPLIES_TO",
+      "scope": "见完整题干、定义域、代换方向与整数参数条件。 y=2−sinx增减互换；3sin(x/3+π/4)增[6kπ−9π/4,6kπ+3π/4]、减[6kπ+3π/4,6kπ+15π/4]。2sinx−1零点2kπ+π/6或2kπ+5π/6。sin(x/2)+cos(x/2)=√2sin(x/2+π/4)，减区间[4kπ+π/2,4kπ+5π/2]。拓展y=2sin(2x+π/6)−1，x∈[0,7π/12]，u∈[π/6,4π/3]；增区间[0,π/6]，u=π/2可达最大1，u=4π/3给最小−√3−1，值域[−√3−1,1]。",
+      "basis": "source_explicit",
+      "reason": "源明确过程或概括程序。",
+      "status": "proposed",
+      "originalRelationBeforeDOTR21": {
+        "id": "relation:book-2:L103:auxiliary",
+        "action": "add",
+        "existingEdgeId": null,
+        "sourceNodeId": "method:auxiliary-angle",
+        "targetNodeId": "kp:21277",
+        "relationType": "APPLIES_TO",
+        "scope": "见完整题干、定义域、代换方向与整数参数条件。",
+        "basis": "source_explicit",
+        "reason": "源明确过程或概括程序。",
+        "status": "proposed"
+      },
+      "contentIds": [
+        "lesson-content:book-2:L103:homework-monotone-and-zeros"
+      ],
+      "activation": "evidence_supported_scoped_suggestion",
+      "DOTR21OriginalReceivedAfter": {
+        "sourceNodeId": "method:auxiliary-angle",
+        "targetNodeId": "kp:21277",
+        "relationType": "APPLIES_TO",
+        "contentIds": [
+          "lesson-content:book-2:L103:homework-monotone-and-zeros"
+        ],
+        "scope": "见完整题干、定义域、代换方向与整数参数条件。 y=2−sinx增减互换；3sin(x/3+π/4)增[6kπ−9π/4,6kπ+3π/4]、减[6kπ+3π/4,6kπ+15π/4]。2sinx−1零点2kπ+π/6或2kπ+5π/6。sin(x/2)+cos(x/2)=√2sin(x/2+π/4)，减区间[4kπ+π/2,4kπ+5π/2]。拓展y=2sin(2x+π/6)−1，x∈[0,7π/12]，u∈[π/6,4π/3]；增区间[0,π/6]，u=π/2可达最大1，u=4π/3给最小−√3−1，值域[−√3−1,1]。",
+        "strictPrerequisite": false,
+        "activation": "evidence_supported_scoped_suggestion"
+      },
+      "DOTR21RelationMapping": {
+        "sourceNodeId": "method:auxiliary-angle",
+        "targetNodeId": "kp:21277",
+        "relationType": "APPLIES_TO",
+        "contentIds": [
+          "lesson-content:book-2:L103:homework-monotone-and-zeros"
+        ],
+        "scope": "见完整题干、定义域、代换方向与整数参数条件。 y=2−sinx增减互换；3sin(x/3+π/4)增[6kπ−9π/4,6kπ+3π/4]、减[6kπ+3π/4,6kπ+15π/4]。2sinx−1零点2kπ+π/6或2kπ+5π/6。sin(x/2)+cos(x/2)=√2sin(x/2+π/4)，减区间[4kπ+π/2,4kπ+5π/2]。拓展y=2sin(2x+π/6)−1，x∈[0,7π/12]，u∈[π/6,4π/3]；增区间[0,π/6]，u=π/2可达最大1，u=4π/3给最小−√3−1，值域[−√3−1,1]。",
+        "strictPrerequisite": false,
+        "activation": "evidence_supported_scoped_suggestion"
+      },
+      "dotR21SourceReview": {
+        "round": "R21",
+        "originalWorkId": "relation:book-2:L103:auxiliary",
+        "sourceReviewStatus": "verified_with_evidence",
+        "boundedReason": "L103 P107等题干、P131–142答案；拓展2原题完整云页12–15；L107已核限域流程复用。 y=2−sinx增减互换；3sin(x/3+π/4)增[6kπ−9π/4,6kπ+3π/4]、减[6kπ+3π/4,6kπ+15π/4]。2sinx−1零点2kπ+π/6或2kπ+5π/6。sin(x/2)+cos(x/2)=√2sin(x/2+π/4)，减区间[4kπ+π/2,4kπ+5π/2]。拓展y=2sin(2x+π/6)−1，x∈[0,7π/12]，u∈[π/6,4π/3]；增区间[0,π/6]，u=π/2可达最大1，u=4π/3给最小−√3−1，值域[−√3−1,1]。 辅助角化简应用于单调性；限域求交和端点/内部极值共同决定值域，不能直接套[−3,1]全域值域。",
+        "deltaSha256": "a5a73f632363b8cc10ba65a118986a97965c38345168d6de5353b8417078b890",
+        "platformStatus": "local_integrated_pending_controller_acceptance",
+        "onlineReleaseStatus": "not_released_R21",
+        "sourceMathReauditedByPlatform": false
+      },
+      "resolvedSourceNodeId": "method:auxiliary-angle",
+      "resolvedTargetNodeId": "kp:21277",
+      "activeRelation": false,
+      "formalGraphEdgeCreated": false,
+      "strictPrerequisite": false
+    },
+    {
+      "id": "relation:review:L133:auxiliary-angle",
+      "action": "add",
+      "existingEdgeId": null,
+      "sourceNodeId": "method:auxiliary-angle",
+      "targetNodeId": "kp:21277",
+      "relationType": "APPLIES_TO",
+      "scope": "二倍角后合成单一正弦，再回解区间。",
+      "basis": "source_explicit",
+      "reason": "具体题解用途，不推为教学顺序或先修。",
+      "status": "proposed",
+      "originalRelationBeforeDOTR18": {
+        "id": "relation:review:L133:auxiliary-angle",
+        "action": "add",
+        "existingEdgeId": null,
+        "sourceNodeId": "method:auxiliary-angle",
+        "targetNodeId": "kp:21277",
+        "relationType": "APPLIES_TO",
+        "scope": "二倍角后合成单一正弦，再回解区间。",
+        "basis": "source_explicit",
+        "reason": "具体题解用途，不推为教学顺序或先修。",
+        "status": "proposed"
+      },
+      "contentIds": [
+        "lesson-content:review:L133:example1-monotone"
+      ],
+      "activation": "suggestion_only_pending_receiver_context_and_candidate_mapping",
+      "DOTR18RelationMapping": {
+        "sourceNodeId": "method:auxiliary-angle",
+        "targetNodeId": "kp:21277",
+        "relationType": "APPLIES_TO",
+        "contentIds": [
+          "lesson-content:review:L133:example1-monotone"
+        ],
+        "strictPrerequisite": false,
+        "activation": "suggestion_only_pending_receiver_context_and_candidate_mapping",
+        "verifiedApplication": "合成2sin(2x+π/3)，减区间[kπ+π/12,kπ+7π/12]；与(0,π)相交，增段须分开。偶性φ=5π/6后回代cos证明充分性；移轴x=1同理。图像A=2、ω=2，φ=−π/3满足首峰谷次序，另一相位−2π/3在首峰之前已有低谷排除。f在[−π/4,π/4]值域[−2,1]，仿射映射(a,b)=(1,2),(−1,1)；奇偶n同时给−4<m<4，端点可达故严格。",
+        "scope": "二倍角后合成单一正弦，再回解区间。"
+      },
+      "dotR18SourceReview": {
+        "round": "R18",
+        "originalWorkId": "relation:review:L133:auxiliary-angle",
+        "sourceReviewStatus": "verified_with_evidence",
+        "boundedReason": "合成2sin(2x+π/3)，减区间[kπ+π/12,kπ+7π/12]；与(0,π)相交，增段须分开。偶性φ=5π/6后回代cos证明充分性；移轴x=1同理。图像A=2、ω=2，φ=−π/3满足首峰谷次序，另一相位−2π/3在首峰之前已有低谷排除。f在[−π/4,π/4]值域[−2,1]，仿射映射(a,b)=(1,2),(−1,1)；奇偶n同时给−4<m<4，端点可达故严格。",
+        "deltaSha256": "c8bf5c418dabfd95d75b07f61c27d85d377794d3cbe9abe9e32bcfe1972f3b3e",
+        "platformStatus": "local_integrated_pending_controller_acceptance",
+        "onlineReleaseStatus": "not_released_R17",
+        "sourceMathReauditedByPlatform": false
+      },
+      "resolvedSourceNodeId": "method:auxiliary-angle",
+      "resolvedTargetNodeId": "kp:21277",
+      "activeRelation": false,
+      "formalGraphEdgeCreated": false,
+      "strictPrerequisite": false
+    },
+    {
+      "id": "relation:review:L134:auxiliary-model",
+      "action": "add",
+      "existingEdgeId": null,
+      "sourceNodeId": "method:auxiliary-angle",
+      "targetNodeId": "kp:21116",
+      "relationType": "APPLIES_TO",
+      "scope": "隔离区面积分母的余弦乘积合成单相位正弦后优化。",
+      "basis": "source_explicit",
+      "reason": "具体题解用途，不推为教学顺序或先修。",
+      "status": "proposed",
+      "originalRelationBeforeDOTR18": {
+        "id": "relation:review:L134:auxiliary-model",
+        "action": "add",
+        "existingEdgeId": null,
+        "sourceNodeId": "method:auxiliary-angle",
+        "targetNodeId": "kp:21116",
+        "relationType": "APPLIES_TO",
+        "scope": "隔离区面积分母的余弦乘积合成单相位正弦后优化。",
+        "basis": "source_explicit",
+        "reason": "具体题解用途，不推为教学顺序或先修。",
+        "status": "proposed"
+      },
+      "contentIds": [
+        "lesson-content:review:L134:example3-pool"
+      ],
+      "activation": "suggestion_only_pending_receiver_context_and_candidate_mapping",
+      "DOTR18RelationMapping": {
+        "sourceNodeId": "method:auxiliary-angle",
+        "targetNodeId": "kp:21116",
+        "relationType": "APPLIES_TO",
+        "contentIds": [
+          "lesson-content:review:L134:example3-pool"
+        ],
+        "strictPrerequisite": false,
+        "activation": "suggestion_only_pending_receiver_context_and_candidate_mapping",
+        "verifiedApplication": "例1面积与点积关系令B=π/3，余弦4=(a+c)²−3ac≥(a+c)²/4，最大a+c=4，a=c=2可达。例2合成2√3 sin(x+π/6)，截[0,π/2]左端√3、峰2√3、右端3；水平√10有两解且平均π/3；两解参数[3,2√3)，一解[√3,3)∪{2√3}。池题P,Q非端点给θ∈(π/12,π/4)，分母最大3/4，Smin=300在θ=π/6达。",
+        "scope": "隔离区面积分母的余弦乘积合成单相位正弦后优化。"
+      },
+      "dotR18SourceReview": {
+        "round": "R18",
+        "originalWorkId": "relation:review:L134:auxiliary-model",
+        "sourceReviewStatus": "verified_with_evidence",
+        "boundedReason": "例1面积与点积关系令B=π/3，余弦4=(a+c)²−3ac≥(a+c)²/4，最大a+c=4，a=c=2可达。例2合成2√3 sin(x+π/6)，截[0,π/2]左端√3、峰2√3、右端3；水平√10有两解且平均π/3；两解参数[3,2√3)，一解[√3,3)∪{2√3}。池题P,Q非端点给θ∈(π/12,π/4)，分母最大3/4，Smin=300在θ=π/6达。",
+        "deltaSha256": "8c55978956b529278fc25fd67709d01c8d4ea999e55cb54ccc99ac5bdecfd43c",
+        "platformStatus": "local_integrated_pending_controller_acceptance",
+        "onlineReleaseStatus": "not_released_R17",
+        "sourceMathReauditedByPlatform": false
+      },
+      "resolvedSourceNodeId": "method:auxiliary-angle",
+      "resolvedTargetNodeId": "kp:21116",
+      "activeRelation": false,
+      "formalGraphEdgeCreated": false,
+      "strictPrerequisite": false
+    },
+    {
+      "id": "relation:review:L136:auxiliary-modulus",
+      "action": "add",
+      "existingEdgeId": null,
+      "sourceNodeId": "method:auxiliary-angle",
+      "targetNodeId": "kp:21135",
+      "relationType": "APPLIES_TO",
+      "scope": "单位半圆限制辅助相位区间求模值域。",
+      "basis": "source_explicit",
+      "reason": "具体题解与方法用途有直接证据，不推为先修。",
+      "status": "proposed",
+      "originalRelationBeforeDOTR18": {
+        "id": "relation:review:L136:auxiliary-modulus",
+        "action": "add",
+        "existingEdgeId": null,
+        "sourceNodeId": "method:auxiliary-angle",
+        "targetNodeId": "kp:21135",
+        "relationType": "APPLIES_TO",
+        "scope": "单位半圆限制辅助相位区间求模值域。",
+        "basis": "source_explicit",
+        "reason": "具体题解与方法用途有直接证据，不推为先修。",
+        "status": "proposed"
+      },
+      "contentIds": [
+        "lesson-content:review:L136:home5"
+      ],
+      "activation": "suggestion_only_pending_receiver_context_and_candidate_mapping",
+      "DOTR18RelationMapping": {
+        "sourceNodeId": "method:auxiliary-angle",
+        "targetNodeId": "kp:21135",
+        "relationType": "APPLIES_TO",
+        "contentIds": [
+          "lesson-content:review:L136:home5"
+        ],
+        "strictPrerequisite": false,
+        "activation": "suggestion_only_pending_receiver_context_and_candidate_mapping",
+        "verifiedApplication": "共轭乘积虚部cosθ+sinθ=0，θ∈[0,π]仅3π/4；模平方19+6√2cos(θ+π/4)，相位[π/4,5π/4]余弦范围[−1,√2/2]，模[3√2−1,5]。限制半圆不能按整圆上下界。",
+        "scope": "单位半圆限制辅助相位区间求模值域。"
+      },
+      "dotR18SourceReview": {
+        "round": "R18",
+        "originalWorkId": "relation:review:L136:auxiliary-modulus",
+        "sourceReviewStatus": "verified_with_evidence",
+        "boundedReason": "共轭乘积虚部cosθ+sinθ=0，θ∈[0,π]仅3π/4；模平方19+6√2cos(θ+π/4)，相位[π/4,5π/4]余弦范围[−1,√2/2]，模[3√2−1,5]。限制半圆不能按整圆上下界。",
+        "deltaSha256": "f3ec3dbc62e5bd0c6d39091d94c166709c71e176d6f691afa649bc91e35444c9",
+        "platformStatus": "local_integrated_pending_controller_acceptance",
+        "onlineReleaseStatus": "not_released_R17",
+        "sourceMathReauditedByPlatform": false
+      },
+      "resolvedSourceNodeId": "method:auxiliary-angle",
+      "resolvedTargetNodeId": "kp:21135",
+      "activeRelation": false,
+      "formalGraphEdgeCreated": false,
+      "strictPrerequisite": false
+    },
+    {
+      "id": "relation:review:L156:auxiliary-uses-addition",
+      "action": "add",
+      "existingEdgeId": null,
+      "sourceNodeId": "method:auxiliary-angle",
+      "targetNodeId": "kp:21425",
+      "relationType": "USES_KNOWLEDGE",
+      "scope": "例3（1）方法二把同角正余弦和合成为移角正弦",
+      "basis": "source_explicit",
+      "reason": "具体原题的求解用途；不由顺序构造先修。",
+      "status": "proposed",
+      "originalRelationBeforeDOTR15": {
+        "id": "relation:review:L156:auxiliary-uses-addition",
+        "action": "add",
+        "existingEdgeId": null,
+        "sourceNodeId": "method:auxiliary-angle",
+        "targetNodeId": "kp:21425",
+        "relationType": "USES_KNOWLEDGE",
+        "scope": "例3（1）方法二把同角正余弦和合成为移角正弦",
+        "basis": "source_explicit",
+        "reason": "具体原题的求解用途；不由顺序构造先修。",
+        "status": "proposed"
+      },
+      "activation": "evidence_supported_suggestion",
+      "contentIds": [
+        "lesson-content:review:L156:example3-rotation"
+      ],
+      "DOTR15RelationMapping": {
+        "sourceNodeId": "method:auxiliary-angle",
+        "targetNodeId": "kp:21425",
+        "relationType": "USES_KNOWLEDGE",
+        "contentIds": [
+          "lesson-content:review:L156:example3-rotation"
+        ],
+        "scope": "例3（1）方法二把同角正余弦和合成为移角正弦",
+        "activation": "evidence_supported_suggestion",
+        "strictPrerequisite": false
+      },
+      "resolvedSourceNodeId": "method:auxiliary-angle",
+      "resolvedTargetNodeId": "kp:21425",
+      "activeRelation": false,
+      "formalGraphEdgeCreated": false,
+      "strictPrerequisite": false,
+      "dotR15SourceReview": {
+        "round": "R15",
+        "itemId": "relation:review:L156:auxiliary-uses-addition",
+        "sourceReviewStatus": "verified_with_evidence",
+        "boundedReason": "逆时针旋转α给B=(cos(π/4+α),sin(π/4+α))；f+g=√2cosα，两角和展开与辅助角逆用均成立。 f/g=2先要求g≠0；f=2g结合f²+g²=1得g²=1/5，fg=2/5。源两组sinα、cosα确相反而乘积相同。 cosα=−3sinα且sin²α+cos²α=1使两者均非零，故tanα=−1/3合法；(cos²−sin²)/(cos²+sin²)=(1−tan²)/(1+tan²)，分母均正。 辅助角方法只用于同角正余弦线性和；二问用同角关系及弦切互化，不泛化成辅助角步骤。",
+        "deltaSha256": "0fd17dec331945e15ab3eff5aa873ebb9c26abbae48739b00b4c5203dccdcc1e",
+        "platformStatus": "verified_local_pending_controller_acceptance",
+        "onlineReleaseStatus": "not_released_R15"
+      }
+    }
+  ],
+  "legacyFormulaRecords": []
+}

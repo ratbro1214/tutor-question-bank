@@ -1,0 +1,160 @@
+{
+  "HS-SET-CONCEPT": [
+    "集合初步",
+    "集合的含义",
+    "元素与集合的关系",
+    "元素的特征",
+    "有限集",
+    "无限集",
+    "空集",
+    "特殊集合的表示"
+  ],
+  "HS-SET-RELATION": [
+    "集合相等",
+    "子集",
+    "真子集",
+    "子集与真子集"
+  ],
+  "HS-SET-OPERATION": [
+    "集合的运算",
+    "交集",
+    "并集",
+    "全集",
+    "全集与补集",
+    "给定集合一个子集的补集",
+    "文氏图"
+  ],
+  "HS-LOGIC-CONDITION": [
+    "充分条件与必要条件",
+    "充分条件",
+    "必要条件",
+    "充要条件"
+  ],
+  "HS-INEQ-PROPERTY": [
+    "不等式的基本性质",
+    "不等式的常用性质"
+  ],
+  "HS-INEQ-BASIC": [
+    "常用不等式（平方和与积）"
+  ],
+  "HS-FUNC-CONCEPT": [
+    "函数的概念",
+    "函数的表示",
+    "函数的表示方法"
+  ],
+  "HS-FUNC-DOMAIN": [
+    "定义域"
+  ],
+  "HS-FUNC-RANGE": [
+    "值域"
+  ],
+  "HS-POWER-FUNCTION": [
+    "幂函数"
+  ],
+  "HS-EXP-FUNCTION": [
+    "指数函数"
+  ],
+  "HS-LOG-FUNCTION": [
+    "对数函数"
+  ],
+  "HS-TRIG-ANGLE": [
+    "角的概念推广",
+    "弧度制",
+    "弧长与扇形面积"
+  ],
+  "HS-TRIG-DEFINITION": [
+    "任意角的三角函数",
+    "正弦函数的定义",
+    "余弦函数的定义",
+    "正切函数的定义",
+    "余切函数的定义"
+  ],
+  "HS-TRIG-IDENTITY": [
+    "同角三角函数的基本关系式",
+    "同角三角函数基本关系式"
+  ],
+  "HS-TRIG-GRAPH": [
+    "正弦函数的图像与性质",
+    "余弦函数的图像与性质",
+    "正切函数的图像与性质"
+  ],
+  "HS-TRIG-SUM-DIFFERENCE": [
+    "两角和与差的正弦、余弦和正切",
+    "两角和与差的三角函数"
+  ],
+  "HS-TRIG-AUXILIARY-ANGLE": [
+    "辅助角公式化简",
+    "辅助角公式"
+  ],
+  "HS-VECTOR-CONCEPT": [
+    "平面向量",
+    "向量的概念",
+    "向量的加法",
+    "向量的减法",
+    "向量的数乘"
+  ],
+  "HS-VECTOR-DOT": [
+    "平面向量的数量积",
+    "向量的数量积"
+  ],
+  "HS-COMPLEX-CONCEPT": [
+    "复数的概念",
+    "复数的分类"
+  ],
+  "HS-COMPLEX-MODULUS-CONJUGATE": [
+    "复数的模",
+    "共轭复数"
+  ],
+  "HS-SOLID-LINE-PLANE-PARALLEL": [
+    "直线与平面平行"
+  ],
+  "HS-SOLID-PLANE-PARALLEL": [
+    "平面与平面平行"
+  ],
+  "HS-SOLID-LINE-PLANE-PERPENDICULAR": [
+    "直线与平面垂直"
+  ],
+  "HS-SOLID-PLANE-PERPENDICULAR": [
+    "平面与平面垂直"
+  ],
+  "HS-PROB-SAMPLE-EVENT": [
+    "样本空间",
+    "随机事件",
+    "事件的关系与运算"
+  ],
+  "HS-PROB-INDEPENDENCE": [
+    "独立事件"
+  ],
+  "HS-PROB-CONDITIONAL": [
+    "条件概率"
+  ],
+  "HS-STAT-CENTER": [
+    "平均数",
+    "中位数",
+    "众数"
+  ],
+  "HS-STAT-VARIANCE": [
+    "方差",
+    "标准差"
+  ],
+  "HS-STAT-REGRESSION": [
+    "线性回归方程"
+  ],
+  "HS-SEQ-CONCEPT": [
+    "数列的概念",
+    "数列的表示方法",
+    "递推公式"
+  ],
+  "HS-SEQ-ARITHMETIC": [
+    "等差数列的通项公式",
+    "等差数列的定义"
+  ],
+  "HS-SEQ-GEOMETRIC": [
+    "等比数列的通项公式",
+    "等比数列的定义"
+  ],
+  "HS-DERIVATIVE-CONCEPT": [
+    "导数的概念",
+    "导数的几何意义"
+  ]
+}

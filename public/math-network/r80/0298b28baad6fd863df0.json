@@ -1,0 +1,176 @@
+{
+  "nodeId": "method:addition-elimination",
+  "contents": [
+    {
+      "id": "lesson-content:book-1:L006:addition-elimination",
+      "nodeId": "method:addition-elimination",
+      "proposedNodeId": "proposal:book-1:addition-elimination",
+      "kind": "method_application",
+      "origin": "editorial_proposal",
+      "title": "加减消元法",
+      "scope": "加减消元法所列原题及原文条件",
+      "blocks": [
+        {
+          "role": "statement",
+          "type": "text",
+          "value": "通过将两个方程相加（或相减）消去一个未知数，将方程组转化为一元一次方程，这种解法叫做加减消元法．",
+          "evidenceIds": [
+            "ev:book-1:L006:addition-elimination:000"
+          ],
+          "textFidelity": "source_based_reconstruction"
+        }
+      ],
+      "matching": {
+        "status": "user_approved_method_identity",
+        "reason": "L006明确加减消元的定义；独立方法关联方程组与一元一次方程，复用同源消元例题。",
+        "historicalMatching": {
+          "status": "unresolved",
+          "reason": "教案明确命名；既有联立消元与韦达定理法不是该独立方法同义条目。"
+        },
+        "methodIdentity": "independent_METHOD",
+        "decisionId": "B06-D02"
+      },
+      "evidence": [
+        {
+          "id": "ev:book-1:L006:addition-elimination:000",
+          "sourceId": "L006",
+          "sourceSha256": "e685533fa145251b3c24821c389e2d3c850be4230802298a097a64d0899a418d",
+          "locator": {
+            "headingPath": [
+              "加减消元法"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": null,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 9,
+            "pdfPage": null,
+            "printedPage": null,
+            "equationObjectId": null,
+            "renderVariant": "cjk-process-font-substitution"
+          },
+          "quote": "（或相减）消去一个未知数，将方程组转化为一元一次方程，这种解法叫做加减消",
+          "sourceSupportedTranscription": "通过将两个方程相加（或相减）消去一个未知数，将方程组转化为一元一次方程，这种解法叫做加减消元法．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L006",
+            "requestedPath": "increments/batch02-v1/evidence-cjk/L006/page-9.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L006.docx",
+          "sourceTitle": "2.1等式与不等式的性质（1）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": [],
+      "sourceAssociation": {
+        "batch": "B08-user-decisions",
+        "status": "user_approved_identity_source_context_retained",
+        "primaryNodeId": "method:addition-elimination",
+        "associatedNodeIds": [
+          "kp:21037",
+          "kp:21038"
+        ],
+        "chapterIds": [
+          "course:/G254"
+        ],
+        "sourceId": "L006",
+        "nativeParagraphIndices": [
+          113,
+          114,
+          115,
+          117,
+          118
+        ],
+        "paragraphConvention": "zero-based .//w:p in unchanged word/document.xml",
+        "basis": "L006明确加减消元的定义；独立方法关联方程组与一元一次方程，复用同源消元例题。",
+        "historicalNodeId": null,
+        "candidateId": "proposal:book-1:addition-elimination",
+        "independentMethodIdentityApproved": true,
+        "wordingAndAllMathVerified": false,
+        "previewLimitation": "Chinese conversion preview unavailable; native XML/object identities retained",
+        "decisionId": "B06-D02",
+        "sourceProcedureBoundary": "source_definition_and_existing_same_source_example",
+        "basisBeforeB08": "教案明示将二元一次方程组相加或相减消去一未知数，转化为一元一次方程；复用已有同源消元例题。"
+      },
+      "historicalB06SourceAssociation": {
+        "batch": "B06-book1-foundations",
+        "status": "verified_context_mapping",
+        "primaryNodeId": "kp:21037",
+        "associatedNodeIds": [
+          "kp:21038"
+        ],
+        "chapterIds": [
+          "course:/G254"
+        ],
+        "sourceId": "L006",
+        "nativeParagraphIndices": [
+          113,
+          114,
+          115,
+          117,
+          118
+        ],
+        "paragraphConvention": "zero-based .//w:p in unchanged word/document.xml",
+        "basis": "教案明示将二元一次方程组相加或相减消去一未知数，转化为一元一次方程；复用已有同源消元例题。",
+        "historicalNodeId": null,
+        "candidateId": "proposal:book-1:addition-elimination",
+        "independentMethodIdentityApproved": false,
+        "wordingAndAllMathVerified": false,
+        "previewLimitation": "Chinese conversion preview unavailable; native XML/object identities retained"
+      },
+      "historicalMatchingBeforeB08": {
+        "status": "source_context_mapped",
+        "reason": "教案明示将二元一次方程组相加或相减消去一未知数，转化为一元一次方程；复用已有同源消元例题。",
+        "historicalMatching": {
+          "status": "unresolved",
+          "reason": "教案明确命名；既有联立消元与韦达定理法不是该独立方法同义条目。"
+        },
+        "methodIdentity": "proposed_identity_retained"
+      },
+      "contextLinks": [
+        {
+          "contentId": "lesson-content:book-1:L006:linear-system-elimination",
+          "label": "查看已有同源例题：二元一次方程组的消元与分类"
+        }
+      ]
+    }
+  ],
+  "requirements": {
+    "knowledgeRequirement": {
+      "value": null,
+      "status": "unresolved",
+      "scope": "node",
+      "evidence": []
+    },
+    "academicQualityLevel": {
+      "value": null,
+      "status": "unresolved",
+      "scope": "node",
+      "evidence": []
+    },
+    "competencyLevel": {
+      "value": null,
+      "status": "unresolved",
+      "scope": "node",
+      "evidence": []
+    },
+    "competencyLinks": {
+      "value": null,
+      "status": "unresolved",
+      "scope": "node",
+      "evidence": []
+    }
+  },
+  "methodCandidates": [],
+  "relationProposals": [],
+  "legacyFormulaRecords": []
+}

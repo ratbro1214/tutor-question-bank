@@ -1,0 +1,3354 @@
+{
+  "nodeId": "method:assignment",
+  "contents": [
+    {
+      "id": "lesson-content:book-1:L007:assignment-identity",
+      "nodeId": "method:assignment",
+      "proposedNodeId": "proposal:book-1:assignment",
+      "kind": "example",
+      "origin": "editorial_proposal",
+      "title": "赋值法处理恒等式",
+      "scope": "赋值法处理恒等式所列原题及原文条件",
+      "blocks": [
+        {
+          "role": "question",
+          "type": "text",
+          "value": "例2 求证：$a_1=a_2$，$b_1=b_2$，$c_1=c_2$是等式$a_1x^2+b_1x+c_1=a_2x^2+b_2x+c_2$恒成立的充要条件．",
+          "evidenceIds": [
+            "ev:book-1:L007:assignment-identity:000"
+          ],
+          "textFidelity": "source_based_reconstruction"
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "证明 先证充分性．若$a_1=a_2$，$b_1=b_2$，$c_1=c_2$，则等式$a_1x^2+b_1x+c_1=a_2x^2+b_2x+c_2$自然恒成立．",
+          "evidenceIds": [
+            "ev:book-1:L007:assignment-identity:001"
+          ],
+          "textFidelity": "source_based_reconstruction"
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "再证必要性．由于等式$a_1x^2+b_1x+c_1=a_2x^2+b_2x+c_2$恒成立，分别令$x=0,1,-1$，并代入上式，得$\\begin{cases}c_1=c_2,\\\\a_1+b_1+c_1=a_2+b_2+c_2,\\\\a_1-b_1+c_1=a_2-b_2+c_2,\\end{cases}$由此，得$a_1=a_2$，$b_1=b_2$，",
+          "evidenceIds": [
+            "ev:book-1:L007:assignment-identity:002"
+          ],
+          "textFidelity": "source_based_reconstruction"
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "$c_1=c_2$．此题得证．",
+          "evidenceIds": [
+            "ev:book-1:L007:assignment-identity:003"
+          ],
+          "textFidelity": "source_based_reconstruction"
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "赋值法处理恒等式是数学中的一般思想．恒等式在高中的数学学习中经常会出现．",
+          "evidenceIds": [
+            "ev:book-1:L007:assignment-identity:004"
+          ],
+          "textFidelity": "source_based_reconstruction"
+        }
+      ],
+      "matching": {
+        "status": "user_approved_method_identity",
+        "reason": "L007给出恒等式赋值步骤并用于韦达定理；独立方法复用原正文和例题，关联恒等式与韦达定理。",
+        "historicalMatching": {
+          "status": "unresolved",
+          "reason": "教案明确命名赋值法；baseline无独立同义方法，不能用待定系数法代替。"
+        },
+        "methodIdentity": "independent_METHOD",
+        "decisionId": "B06-D03"
+      },
+      "evidence": [
+        {
+          "id": "ev:book-1:L007:assignment-identity:000",
+          "sourceId": "L007",
+          "sourceSha256": "26472ac1978c12099a5ded0d0364712665569fe6d6a28148ec0b12c84c543601",
+          "locator": {
+            "headingPath": [
+              "赋值法处理恒等式"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": null,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 9,
+            "pdfPage": null,
+            "printedPage": null,
+            "equationObjectId": null,
+            "renderVariant": "cjk-process-font-substitution"
+          },
+          "quote": "a_1=a_2",
+          "sourceSupportedTranscription": "例2 求证：$a_1=a_2$，$b_1=b_2$，$c_1=c_2$是等式$a_1x^2+b_1x+c_1=a_2x^2+b_2x+c_2$恒成立的充要条件．",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": "assets/derived/B06-source-reconciliation/L007-WPS-page-06.png",
+            "kind": "wps_native_same_original_page",
+            "sha256": "7c748cc94d78963a36dc33b839018023197cb39b48833172db390a84f148494c",
+            "bytes": 287439,
+            "sourceId": "L007",
+            "previewPdfPage": 6,
+            "previewPdfPages": [
+              6
+            ],
+            "sourcePdfSha256": "22721039307099bd3a186bc44330c0aa3b6d829c824fbd1de4323b8d3af104d7"
+          },
+          "originalUrl": "source-original/L007.docx",
+          "sourceTitle": "2.1等式与不等式的性质（2）教学设计",
+          "sourceStatus": "partially_reviewed",
+          "receivedResourceOriginal": {
+            "url": null,
+            "sourceId": "L007",
+            "requestedPath": "increments/batch02-v1/evidence-cjk/L007/page-9.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          }
+        },
+        {
+          "id": "ev:book-1:L007:assignment-identity:001",
+          "sourceId": "L007",
+          "sourceSha256": "26472ac1978c12099a5ded0d0364712665569fe6d6a28148ec0b12c84c543601",
+          "locator": {
+            "headingPath": [
+              "赋值法处理恒等式"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": null,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 9,
+            "pdfPage": null,
+            "printedPage": null,
+            "equationObjectId": null,
+            "renderVariant": "cjk-process-font-substitution"
+          },
+          "quote": "a_1=a_2",
+          "sourceSupportedTranscription": "证明 先证充分性．若$a_1=a_2$，$b_1=b_2$，$c_1=c_2$，则等式$a_1x^2+b_1x+c_1=a_2x^2+b_2x+c_2$自然恒成立．",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": "assets/derived/B06-source-reconciliation/L007-WPS-page-06.png",
+            "kind": "wps_native_same_original_page",
+            "sha256": "7c748cc94d78963a36dc33b839018023197cb39b48833172db390a84f148494c",
+            "bytes": 287439,
+            "sourceId": "L007",
+            "previewPdfPage": 6,
+            "previewPdfPages": [
+              6
+            ],
+            "sourcePdfSha256": "22721039307099bd3a186bc44330c0aa3b6d829c824fbd1de4323b8d3af104d7"
+          },
+          "originalUrl": "source-original/L007.docx",
+          "sourceTitle": "2.1等式与不等式的性质（2）教学设计",
+          "sourceStatus": "partially_reviewed",
+          "receivedResourceOriginal": {
+            "url": null,
+            "sourceId": "L007",
+            "requestedPath": "increments/batch02-v1/evidence-cjk/L007/page-9.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          }
+        },
+        {
+          "id": "ev:book-1:L007:assignment-identity:002",
+          "sourceId": "L007",
+          "sourceSha256": "26472ac1978c12099a5ded0d0364712665569fe6d6a28148ec0b12c84c543601",
+          "locator": {
+            "headingPath": [
+              "赋值法处理恒等式"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": null,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 9,
+            "pdfPage": null,
+            "printedPage": null,
+            "equationObjectId": null,
+            "renderVariant": "cjk-process-font-substitution"
+          },
+          "quote": "a_1x^2+b_1x+c_1=a_2x^2+b_2x+c_2",
+          "sourceSupportedTranscription": "再证必要性．由于等式$a_1x^2+b_1x+c_1=a_2x^2+b_2x+c_2$恒成立，分别令$x=0,1,-1$，并代入上式，得$\\begin{cases}c_1=c_2,\\\\a_1+b_1+c_1=a_2+b_2+c_2,\\\\a_1-b_1+c_1=a_2-b_2+c_2,\\end{cases}$由此，得$a_1=a_2$，$b_1=b_2$，",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": "assets/derived/B06-source-reconciliation/L007-WPS-page-06.png",
+            "kind": "wps_native_same_original_page",
+            "sha256": "7c748cc94d78963a36dc33b839018023197cb39b48833172db390a84f148494c",
+            "bytes": 287439,
+            "sourceId": "L007",
+            "previewPdfPage": 6,
+            "previewPdfPages": [
+              6
+            ],
+            "sourcePdfSha256": "22721039307099bd3a186bc44330c0aa3b6d829c824fbd1de4323b8d3af104d7"
+          },
+          "originalUrl": "source-original/L007.docx",
+          "sourceTitle": "2.1等式与不等式的性质（2）教学设计",
+          "sourceStatus": "partially_reviewed",
+          "receivedResourceOriginal": {
+            "url": null,
+            "sourceId": "L007",
+            "requestedPath": "increments/batch02-v1/evidence-cjk/L007/page-9.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          }
+        },
+        {
+          "id": "ev:book-1:L007:assignment-identity:003",
+          "sourceId": "L007",
+          "sourceSha256": "26472ac1978c12099a5ded0d0364712665569fe6d6a28148ec0b12c84c543601",
+          "locator": {
+            "headingPath": [
+              "赋值法处理恒等式"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": null,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 10,
+            "pdfPage": null,
+            "printedPage": null,
+            "equationObjectId": null,
+            "renderVariant": "cjk-process-font-substitution"
+          },
+          "quote": "c_1=c_2",
+          "sourceSupportedTranscription": "$c_1=c_2$．此题得证．",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": "assets/derived/B06-source-reconciliation/L007-WPS-page-06.png",
+            "kind": "wps_native_same_original_page",
+            "sha256": "7c748cc94d78963a36dc33b839018023197cb39b48833172db390a84f148494c",
+            "bytes": 287439,
+            "sourceId": "L007",
+            "previewPdfPage": 6,
+            "previewPdfPages": [
+              6
+            ],
+            "sourcePdfSha256": "22721039307099bd3a186bc44330c0aa3b6d829c824fbd1de4323b8d3af104d7"
+          },
+          "originalUrl": "source-original/L007.docx",
+          "sourceTitle": "2.1等式与不等式的性质（2）教学设计",
+          "sourceStatus": "partially_reviewed",
+          "receivedResourceOriginal": {
+            "url": null,
+            "sourceId": "L007",
+            "requestedPath": "increments/batch02-v1/evidence-cjk/L007/page-10.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          }
+        },
+        {
+          "id": "ev:book-1:L007:assignment-identity:004",
+          "sourceId": "L007",
+          "sourceSha256": "26472ac1978c12099a5ded0d0364712665569fe6d6a28148ec0b12c84c543601",
+          "locator": {
+            "headingPath": [
+              "赋值法处理恒等式"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": null,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 10,
+            "pdfPage": null,
+            "printedPage": null,
+            "equationObjectId": null,
+            "renderVariant": "cjk-process-font-substitution"
+          },
+          "quote": "赋值法处理恒等式是数学中的一般思想",
+          "sourceSupportedTranscription": "赋值法处理恒等式是数学中的一般思想．恒等式在高中的数学学习中经常会出现．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": "assets/derived/B06-source-reconciliation/L007-WPS-page-06.png",
+            "kind": "wps_native_same_original_page",
+            "sha256": "7c748cc94d78963a36dc33b839018023197cb39b48833172db390a84f148494c",
+            "bytes": 287439,
+            "sourceId": "L007",
+            "previewPdfPage": 6,
+            "previewPdfPages": [
+              6
+            ],
+            "sourcePdfSha256": "22721039307099bd3a186bc44330c0aa3b6d829c824fbd1de4323b8d3af104d7"
+          },
+          "originalUrl": "source-original/L007.docx",
+          "sourceTitle": "2.1等式与不等式的性质（2）教学设计",
+          "sourceStatus": "partially_reviewed",
+          "receivedResourceOriginal": {
+            "url": null,
+            "sourceId": "L007",
+            "requestedPath": "increments/batch02-v1/evidence-cjk/L007/page-10.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          }
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": [
+        {
+          "id": "formula:book-1:0340",
+          "location": "blocks[0].value:inlineMath[0]",
+          "sourceString": "例2 求证：$a_1=a_2$，$b_1=b_2$，$c_1=c_2$是等式$a_1x^2+b_1x+c_1=a_2x^2+b_2x+c_2$恒成立的充要条件．",
+          "latex": "a_1=a_2",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book-1:0341",
+          "location": "blocks[0].value:inlineMath[1]",
+          "sourceString": "例2 求证：$a_1=a_2$，$b_1=b_2$，$c_1=c_2$是等式$a_1x^2+b_1x+c_1=a_2x^2+b_2x+c_2$恒成立的充要条件．",
+          "latex": "b_1=b_2",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book-1:0342",
+          "location": "blocks[0].value:inlineMath[2]",
+          "sourceString": "例2 求证：$a_1=a_2$，$b_1=b_2$，$c_1=c_2$是等式$a_1x^2+b_1x+c_1=a_2x^2+b_2x+c_2$恒成立的充要条件．",
+          "latex": "c_1=c_2",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book-1:0343",
+          "location": "blocks[0].value:inlineMath[3]",
+          "sourceString": "例2 求证：$a_1=a_2$，$b_1=b_2$，$c_1=c_2$是等式$a_1x^2+b_1x+c_1=a_2x^2+b_2x+c_2$恒成立的充要条件．",
+          "latex": "a_1x^2+b_1x+c_1=a_2x^2+b_2x+c_2",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book-1:0344",
+          "location": "blocks[1].value:inlineMath[0]",
+          "sourceString": "证明 先证充分性．若$a_1=a_2$，$b_1=b_2$，$c_1=c_2$，则等式$a_1x^2+b_1x+c_1=a_2x^2+b_2x+c_2$自然恒成立．",
+          "latex": "a_1=a_2",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book-1:0345",
+          "location": "blocks[1].value:inlineMath[1]",
+          "sourceString": "证明 先证充分性．若$a_1=a_2$，$b_1=b_2$，$c_1=c_2$，则等式$a_1x^2+b_1x+c_1=a_2x^2+b_2x+c_2$自然恒成立．",
+          "latex": "b_1=b_2",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book-1:0346",
+          "location": "blocks[1].value:inlineMath[2]",
+          "sourceString": "证明 先证充分性．若$a_1=a_2$，$b_1=b_2$，$c_1=c_2$，则等式$a_1x^2+b_1x+c_1=a_2x^2+b_2x+c_2$自然恒成立．",
+          "latex": "c_1=c_2",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book-1:0347",
+          "location": "blocks[1].value:inlineMath[3]",
+          "sourceString": "证明 先证充分性．若$a_1=a_2$，$b_1=b_2$，$c_1=c_2$，则等式$a_1x^2+b_1x+c_1=a_2x^2+b_2x+c_2$自然恒成立．",
+          "latex": "a_1x^2+b_1x+c_1=a_2x^2+b_2x+c_2",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book-1:0348",
+          "location": "blocks[2].value:inlineMath[0]",
+          "sourceString": "再证必要性．由于等式$a_1x^2+b_1x+c_1=a_2x^2+b_2x+c_2$恒成立，分别令$x=0,1,-1$，并代入上式，得$\\begin{cases}c_1=c_2,\\\\a_1+b_1+c_1=a_2+b_2+c_2,\\\\a_1-b_1+c_1=a_2-b_2+c_2,\\end{cases}$由此，得$a_1=a_2$，$b_1=b_2$，",
+          "latex": "a_1x^2+b_1x+c_1=a_2x^2+b_2x+c_2",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book-1:0349",
+          "location": "blocks[2].value:inlineMath[1]",
+          "sourceString": "再证必要性．由于等式$a_1x^2+b_1x+c_1=a_2x^2+b_2x+c_2$恒成立，分别令$x=0,1,-1$，并代入上式，得$\\begin{cases}c_1=c_2,\\\\a_1+b_1+c_1=a_2+b_2+c_2,\\\\a_1-b_1+c_1=a_2-b_2+c_2,\\end{cases}$由此，得$a_1=a_2$，$b_1=b_2$，",
+          "latex": "x=0,1,-1",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book-1:0350",
+          "location": "blocks[2].value:inlineMath[2]",
+          "sourceString": "再证必要性．由于等式$a_1x^2+b_1x+c_1=a_2x^2+b_2x+c_2$恒成立，分别令$x=0,1,-1$，并代入上式，得$\\begin{cases}c_1=c_2,\\\\a_1+b_1+c_1=a_2+b_2+c_2,\\\\a_1-b_1+c_1=a_2-b_2+c_2,\\end{cases}$由此，得$a_1=a_2$，$b_1=b_2$，",
+          "latex": "\\begin{cases}c_1=c_2,\\\\a_1+b_1+c_1=a_2+b_2+c_2,\\\\a_1-b_1+c_1=a_2-b_2+c_2,\\end{cases}",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book-1:0351",
+          "location": "blocks[2].value:inlineMath[3]",
+          "sourceString": "再证必要性．由于等式$a_1x^2+b_1x+c_1=a_2x^2+b_2x+c_2$恒成立，分别令$x=0,1,-1$，并代入上式，得$\\begin{cases}c_1=c_2,\\\\a_1+b_1+c_1=a_2+b_2+c_2,\\\\a_1-b_1+c_1=a_2-b_2+c_2,\\end{cases}$由此，得$a_1=a_2$，$b_1=b_2$，",
+          "latex": "a_1=a_2",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book-1:0352",
+          "location": "blocks[2].value:inlineMath[4]",
+          "sourceString": "再证必要性．由于等式$a_1x^2+b_1x+c_1=a_2x^2+b_2x+c_2$恒成立，分别令$x=0,1,-1$，并代入上式，得$\\begin{cases}c_1=c_2,\\\\a_1+b_1+c_1=a_2+b_2+c_2,\\\\a_1-b_1+c_1=a_2-b_2+c_2,\\end{cases}$由此，得$a_1=a_2$，$b_1=b_2$，",
+          "latex": "b_1=b_2",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book-1:0353",
+          "location": "blocks[3].value:inlineMath[0]",
+          "sourceString": "$c_1=c_2$．此题得证．",
+          "latex": "c_1=c_2",
+          "status": "verified"
+        }
+      ],
+      "sourceAssociation": {
+        "batch": "B08-user-decisions",
+        "status": "user_approved_identity_source_context_retained",
+        "primaryNodeId": "method:assignment",
+        "associatedNodeIds": [
+          "kp:21040",
+          "kp:21041"
+        ],
+        "chapterIds": [
+          "course:/G254"
+        ],
+        "sourceId": "L007",
+        "nativeParagraphIndices": [
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          96
+        ],
+        "paragraphConvention": "zero-based .//w:p in unchanged word/document.xml",
+        "basis": "L007给出恒等式赋值步骤并用于韦达定理；独立方法复用原正文和例题，关联恒等式与韦达定理。",
+        "historicalNodeId": null,
+        "candidateId": "proposal:book-1:assignment",
+        "independentMethodIdentityApproved": true,
+        "wordingAndAllMathVerified": false,
+        "previewLimitation": null,
+        "decisionId": "B06-D03",
+        "sourceProcedureBoundary": "source_identity_steps_and_existing_example_reused",
+        "basisBeforeB08": "例2以x=0,1,-1处理恒等式系数相等，随后用于证明韦达定理；保持赋值方法身份候选，复用已有恒等式赋值例题。"
+      },
+      "historicalB06SourceAssociation": {
+        "batch": "B06-book1-foundations",
+        "status": "verified_context_mapping",
+        "primaryNodeId": "kp:21040",
+        "associatedNodeIds": [
+          "kp:21041"
+        ],
+        "chapterIds": [
+          "course:/G254"
+        ],
+        "sourceId": "L007",
+        "nativeParagraphIndices": [
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          96
+        ],
+        "paragraphConvention": "zero-based .//w:p in unchanged word/document.xml",
+        "basis": "例2以x=0,1,-1处理恒等式系数相等，随后用于证明韦达定理；保持赋值方法身份候选，复用已有恒等式赋值例题。",
+        "historicalNodeId": null,
+        "candidateId": "proposal:book-1:assignment",
+        "independentMethodIdentityApproved": false,
+        "wordingAndAllMathVerified": false,
+        "previewLimitation": null
+      },
+      "historicalMatchingBeforeB08": {
+        "status": "source_context_mapped",
+        "reason": "例2以x=0,1,-1处理恒等式系数相等，随后用于证明韦达定理；保持赋值方法身份候选，复用已有恒等式赋值例题。",
+        "historicalMatching": {
+          "status": "unresolved",
+          "reason": "教案明确命名赋值法；baseline无独立同义方法，不能用待定系数法代替。"
+        },
+        "methodIdentity": "proposed_identity_retained"
+      },
+      "contextLinks": [
+        {
+          "contentId": "lesson-content:book-1:L007:assignment-short",
+          "label": "查看已有同源例题：恒等式赋值直接求系数组合"
+        }
+      ]
+    },
+    {
+      "id": "lesson-content:L210:home-parity",
+      "nodeId": "method:assignment",
+      "proposedNodeId": "proposal:book-1:assignment",
+      "kind": "method_application",
+      "origin": "editorial_proposal",
+      "title": "奇偶项分组：用x与−x的展开式相乘",
+      "scope": "奇数项是项序奇数，对应x偶次幂。 奇数项对应偶指数，偶数项对应奇指数；以−x代x改变奇指数项符号，A+B=(1+x)^n，A−B=(1−x)^n，乘法给(1−x²)^n。无需额外收敛条件。 据具体程序核归属，允许多知识点；不以课次顺序决定身份。",
+      "blocks": [
+        {
+          "role": "question",
+          "type": "text",
+          "value": "$(1+x)^n$的展开式奇数项和A、偶数项和B，证明$A^2-B^2=(1-x^2)^n$；n按本节正整数约定。",
+          "evidenceIds": [
+            "ev:book5:L210:home-parity:b0"
+          ],
+          "wordingStatus": "source_based_reconstruction"
+        },
+        {
+          "role": "step",
+          "type": "text",
+          "value": "$(1+x)^n=\\mathrm C_n^0+\\mathrm C_n^1x+\\mathrm C_n^2x^2+\\cdots+\\mathrm C_n^nx^n$，$A=\\mathrm C_n^0+\\mathrm C_n^2x^2+\\cdots$，$B=\\mathrm C_n^1x+\\mathrm C_n^3x^3+\\cdots$，于是$(1+x)^n=A+B$。",
+          "evidenceIds": [
+            "ev:book5:L210:home-parity:b1"
+          ],
+          "wordingStatus": "source_based_reconstruction"
+        },
+        {
+          "role": "step",
+          "type": "math",
+          "value": "(1-x)^n=\\mathrm C_n^0-\\mathrm C_n^1x+\\mathrm C_n^2x^2-\\mathrm C_n^3x^3+\\cdots+(-1)^n\\mathrm C_n^nx^n=A-B",
+          "evidenceIds": [
+            "ev:book5:L210:home-parity:b2"
+          ],
+          "wordingStatus": "source_based_reconstruction"
+        },
+        {
+          "role": "solution",
+          "type": "math",
+          "value": "A^2-B^2=(A+B)(A-B)=(1+x)^n(1-x)^n=[(1+x)(1-x)]^n=(1-x^2)^n",
+          "evidenceIds": [
+            "ev:book5:L210:home-parity:b3"
+          ],
+          "wordingStatus": "source_based_reconstruction"
+        }
+      ],
+      "contentOrigin": "source_based_reconstruction",
+      "wordingStatus": "source_based_reconstruction",
+      "titleWordingStatus": "editorial_normalized_title",
+      "matching": {
+        "status": "confirmed",
+        "reason": "按本题实际任务和现有节点语义匹配；不从共用运算推定先修。"
+      },
+      "evidence": [
+        {
+          "id": "ev:book5:L210:home-parity:b0",
+          "sourceId": "L210",
+          "sourceSha256": "1d3b3dd2f9975646efcf78f5940b2f5cd10a7cb44883b3318d93e3da7469575b",
+          "locator": {
+            "headingPath": [
+              "奇偶项分组：用x与−x的展开式相乘"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 129,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 13,
+            "printedPage": null,
+            "equationObjectId": null,
+            "printedPageNote": "无独立印刷页码；保PDF页。",
+            "supportingParagraphIndices": [
+              129
+            ],
+            "supportingRenderedPages": [
+              13,
+              14
+            ]
+          },
+          "quote": "设奇数项之和为",
+          "quoteRepresentation": "native_text_short_quote",
+          "quoteCompleteness": "原文字层中的短引；完整有源整理另列",
+          "transcriptionWordingStatus": "source_based_reconstruction",
+          "sourceSupportedTranscription": "$(1+x)^n$的展开式奇数项和A、偶数项和B，证明$A^2-B^2=(1-x^2)^n$；n按本节正整数约定。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "mathSourceAssets": [
+            {
+              "path": "increments/l210-v1/evidence/L210/objects/image180.wmf",
+              "sourcePart": "word/media/image180.wmf",
+              "sha256": "37ea4ffac1b66a41676ada07d76bf36836e793c30dfb7ee35ff19192fa15625e"
+            },
+            {
+              "path": "increments/l210-v1/evidence/L210/objects/image181.wmf",
+              "sourcePart": "word/media/image181.wmf",
+              "sha256": "0d48ef922179ac5bdcc6689aff8f53077a19b2b50d7ecf8e7612c86f09bc9008"
+            },
+            {
+              "path": "increments/l210-v1/evidence/L210/objects/image182.wmf",
+              "sourcePart": "word/media/image182.wmf",
+              "sha256": "5342c95c1821c7f9b2014dd3a03f935545b069bdb98949a158e25c0f9786f064"
+            },
+            {
+              "path": "increments/l210-v1/evidence/L210/objects/image183.wmf",
+              "sourcePart": "word/media/image183.wmf",
+              "sha256": "c3c76eb13cf607cdfb6fc372815903adac06b19273b82b068527d114ca4f738f"
+            }
+          ],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L210",
+            "requestedPath": "increments/l210-v1/evidence/L210/page-13.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L210.docx",
+          "sourceTitle": "6.5二项式定理（1）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book5:L210:home-parity:b1",
+          "sourceId": "L210",
+          "sourceSha256": "1d3b3dd2f9975646efcf78f5940b2f5cd10a7cb44883b3318d93e3da7469575b",
+          "locator": {
+            "headingPath": [
+              "奇偶项分组：用x与−x的展开式相乘"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 152,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 16,
+            "printedPage": null,
+            "equationObjectId": null,
+            "printedPageNote": "无独立印刷页码；保PDF页。",
+            "supportingParagraphIndices": [
+              152,
+              153
+            ]
+          },
+          "quote": "由二项式定理",
+          "quoteRepresentation": "native_text_short_quote",
+          "quoteCompleteness": "原文字层中的短引；完整有源整理另列",
+          "transcriptionWordingStatus": "source_based_reconstruction",
+          "sourceSupportedTranscription": "$(1+x)^n=\\mathrm C_n^0+\\mathrm C_n^1x+\\mathrm C_n^2x^2+\\cdots+\\mathrm C_n^nx^n$，$A=\\mathrm C_n^0+\\mathrm C_n^2x^2+\\cdots$，$B=\\mathrm C_n^1x+\\mathrm C_n^3x^3+\\cdots$，于是$(1+x)^n=A+B$。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "mathSourceAssets": [
+            {
+              "path": "increments/l210-v1/evidence/L210/objects/image235.wmf",
+              "sourcePart": "word/media/image235.wmf",
+              "sha256": "356c6c1a026210e745ef4c6938c1771d46a120b01f7de6995004f6a905ea1620"
+            },
+            {
+              "path": "increments/l210-v1/evidence/L210/objects/image236.wmf",
+              "sourcePart": "word/media/image236.wmf",
+              "sha256": "0b46ada27e9107b2f5c190aea29b217962935c697ac23c370542d2c488115f17"
+            },
+            {
+              "path": "increments/l210-v1/evidence/L210/objects/image237.wmf",
+              "sourcePart": "word/media/image237.wmf",
+              "sha256": "f9d13e8ea3473bb5b82fb3575aea803707b65e1ad274b2d042fefa6fbafa7ec8"
+            },
+            {
+              "path": "increments/l210-v1/evidence/L210/objects/image238.wmf",
+              "sourcePart": "word/media/image238.wmf",
+              "sha256": "de2551a81deaf2b0f6582df601d6e4d8bf532f58825a82aa74eccf3209a8428b"
+            }
+          ],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L210",
+            "requestedPath": "increments/l210-v1/evidence/L210/page-16.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L210.docx",
+          "sourceTitle": "6.5二项式定理（1）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book5:L210:home-parity:b2",
+          "sourceId": "L210",
+          "sourceSha256": "1d3b3dd2f9975646efcf78f5940b2f5cd10a7cb44883b3318d93e3da7469575b",
+          "locator": {
+            "headingPath": [
+              "奇偶项分组：用x与−x的展开式相乘"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 154,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 16,
+            "printedPage": null,
+            "equationObjectId": null,
+            "printedPageNote": "无独立印刷页码；保PDF页。",
+            "supportingParagraphIndices": [
+              154
+            ]
+          },
+          "quote": "又",
+          "quoteRepresentation": "native_text_short_quote",
+          "quoteCompleteness": "原文字层中的短引；完整有源整理另列",
+          "transcriptionWordingStatus": "source_based_reconstruction",
+          "sourceSupportedTranscription": "(1-x)^n=\\mathrm C_n^0-\\mathrm C_n^1x+\\mathrm C_n^2x^2-\\mathrm C_n^3x^3+\\cdots+(-1)^n\\mathrm C_n^nx^n=A-B",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "mathSourceAssets": [
+            {
+              "path": "increments/l210-v1/evidence/L210/objects/image239.wmf",
+              "sourcePart": "word/media/image239.wmf",
+              "sha256": "0b6aabe51258223432944bc692430419deb8078a579b9f9281f84a87fda4a583"
+            }
+          ],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L210",
+            "requestedPath": "increments/l210-v1/evidence/L210/page-16.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L210.docx",
+          "sourceTitle": "6.5二项式定理（1）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book5:L210:home-parity:b3",
+          "sourceId": "L210",
+          "sourceSha256": "1d3b3dd2f9975646efcf78f5940b2f5cd10a7cb44883b3318d93e3da7469575b",
+          "locator": {
+            "headingPath": [
+              "奇偶项分组：用x与−x的展开式相乘"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 155,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 16,
+            "printedPage": null,
+            "equationObjectId": null,
+            "printedPageNote": "无独立印刷页码；保PDF页。",
+            "supportingParagraphIndices": [
+              155
+            ]
+          },
+          "quote": "因此",
+          "quoteRepresentation": "native_text_short_quote",
+          "quoteCompleteness": "原文字层中的短引；完整有源整理另列",
+          "transcriptionWordingStatus": "source_based_reconstruction",
+          "sourceSupportedTranscription": "A^2-B^2=(A+B)(A-B)=(1+x)^n(1-x)^n=[(1+x)(1-x)]^n=(1-x^2)^n",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "mathSourceAssets": [
+            {
+              "path": "increments/l210-v1/evidence/L210/objects/image240.wmf",
+              "sourcePart": "word/media/image240.wmf",
+              "sha256": "9c1046561b71abe22ba80cc51b96a0b46cdcc588a927073408b679b2aa4a381e"
+            },
+            {
+              "path": "increments/l210-v1/evidence/L210/objects/image241.wmf",
+              "sourcePart": "word/media/image241.wmf",
+              "sha256": "b66bb52614907ad5b9d01fba83db24a3a5099fbe3c4e28581ee8a988fcd12922"
+            }
+          ],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L210",
+            "requestedPath": "increments/l210-v1/evidence/L210/page-16.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L210.docx",
+          "sourceTitle": "6.5二项式定理（1）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:DOT-R9:L210:78979e89cd3dcc65",
+          "sourceId": "L210",
+          "sourceSha256": "1d3b3dd2f9975646efcf78f5940b2f5cd10a7cb44883b3318d93e3da7469575b",
+          "sourceTitle": "6.5二项式定理（1）-教学设计",
+          "locator": {
+            "headingPath": [
+              "奇偶项分组：用x与−x的展开式相乘",
+              "DOT已交本条局部原页"
+            ],
+            "part": "L210-cloud-page-13.png",
+            "cloudRenderedPage": 13,
+            "pageNumberConvention": "DOT本次局部渲染页码，冻结旧定位另行保留"
+          },
+          "quote": "同字节复用本条已交原页；原文、源错、旧核验误判及编辑补足分别留痕，未重转或重审全源。",
+          "resource": {
+            "url": "r80/assets/e36eaf12a8dd1c1ca3366bb5.png",
+            "bytes": 91954,
+            "sha256": "e36eaf12a8dd1c1ca3366bb5b7a00592df9cc364e422e4b091a5d061342fd916",
+            "sourceId": "L210",
+            "kind": "same_original_dot_rendered_page"
+          },
+          "originalUrl": "source-original/L210.docx"
+        },
+        {
+          "id": "ev:DOT-R9:L210:94d538cf93eeacab",
+          "sourceId": "L210",
+          "sourceSha256": "1d3b3dd2f9975646efcf78f5940b2f5cd10a7cb44883b3318d93e3da7469575b",
+          "sourceTitle": "6.5二项式定理（1）-教学设计",
+          "locator": {
+            "headingPath": [
+              "奇偶项分组：用x与−x的展开式相乘",
+              "DOT已交本条局部原页"
+            ],
+            "part": "L210-cloud-page-15.png",
+            "cloudRenderedPage": 15,
+            "pageNumberConvention": "DOT本次局部渲染页码，冻结旧定位另行保留"
+          },
+          "quote": "同字节复用本条已交原页；原文、源错、旧核验误判及编辑补足分别留痕，未重转或重审全源。",
+          "resource": {
+            "url": "r80/assets/7c672a93ff7aa2c00938780c.png",
+            "bytes": 113273,
+            "sha256": "7c672a93ff7aa2c00938780c404660c0eefb3c3cef0fcbdc00e8158dda6b4425",
+            "sourceId": "L210",
+            "kind": "same_original_dot_rendered_page"
+          },
+          "originalUrl": "source-original/L210.docx"
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": [
+        {
+          "id": "formula:book5:L210:home-parity:b0:m0",
+          "location": "blocks[0].value.inlineMath[0]",
+          "sourceString": "$(1+x)^n$的展开式奇数项和A、偶数项和B，证明$A^2-B^2=(1-x^2)^n$；n按本节正整数约定。",
+          "latex": "(1+x)^n",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L210:home-parity:b0:m1",
+          "location": "blocks[0].value.inlineMath[1]",
+          "sourceString": "$(1+x)^n$的展开式奇数项和A、偶数项和B，证明$A^2-B^2=(1-x^2)^n$；n按本节正整数约定。",
+          "latex": "A^2-B^2=(1-x^2)^n",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L210:home-parity:b1:m0",
+          "location": "blocks[1].value.inlineMath[0]",
+          "sourceString": "$(1+x)^n=\\mathrm C_n^0+\\mathrm C_n^1x+\\mathrm C_n^2x^2+\\cdots+\\mathrm C_n^nx^n$，$A=\\mathrm C_n^0+\\mathrm C_n^2x^2+\\cdots$，$B=\\mathrm C_n^1x+\\mathrm C_n^3x^3+\\cdots$，于是$(1+x)^n=A+B$。",
+          "latex": "(1+x)^n=\\mathrm C_n^0+\\mathrm C_n^1x+\\mathrm C_n^2x^2+\\cdots+\\mathrm C_n^nx^n",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L210:home-parity:b1:m1",
+          "location": "blocks[1].value.inlineMath[1]",
+          "sourceString": "$(1+x)^n=\\mathrm C_n^0+\\mathrm C_n^1x+\\mathrm C_n^2x^2+\\cdots+\\mathrm C_n^nx^n$，$A=\\mathrm C_n^0+\\mathrm C_n^2x^2+\\cdots$，$B=\\mathrm C_n^1x+\\mathrm C_n^3x^3+\\cdots$，于是$(1+x)^n=A+B$。",
+          "latex": "A=\\mathrm C_n^0+\\mathrm C_n^2x^2+\\cdots",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L210:home-parity:b1:m2",
+          "location": "blocks[1].value.inlineMath[2]",
+          "sourceString": "$(1+x)^n=\\mathrm C_n^0+\\mathrm C_n^1x+\\mathrm C_n^2x^2+\\cdots+\\mathrm C_n^nx^n$，$A=\\mathrm C_n^0+\\mathrm C_n^2x^2+\\cdots$，$B=\\mathrm C_n^1x+\\mathrm C_n^3x^3+\\cdots$，于是$(1+x)^n=A+B$。",
+          "latex": "B=\\mathrm C_n^1x+\\mathrm C_n^3x^3+\\cdots",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L210:home-parity:b1:m3",
+          "location": "blocks[1].value.inlineMath[3]",
+          "sourceString": "$(1+x)^n=\\mathrm C_n^0+\\mathrm C_n^1x+\\mathrm C_n^2x^2+\\cdots+\\mathrm C_n^nx^n$，$A=\\mathrm C_n^0+\\mathrm C_n^2x^2+\\cdots$，$B=\\mathrm C_n^1x+\\mathrm C_n^3x^3+\\cdots$，于是$(1+x)^n=A+B$。",
+          "latex": "(1+x)^n=A+B",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L210:home-parity:b2:m0",
+          "location": "blocks[2].value",
+          "sourceString": "(1-x)^n=\\mathrm C_n^0-\\mathrm C_n^1x+\\mathrm C_n^2x^2-\\mathrm C_n^3x^3+\\cdots+(-1)^n\\mathrm C_n^nx^n=A-B",
+          "latex": "(1-x)^n=\\mathrm C_n^0-\\mathrm C_n^1x+\\mathrm C_n^2x^2-\\mathrm C_n^3x^3+\\cdots+(-1)^n\\mathrm C_n^nx^n=A-B",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L210:home-parity:b3:m0",
+          "location": "blocks[3].value",
+          "sourceString": "A^2-B^2=(A+B)(A-B)=(1+x)^n(1-x)^n=[(1+x)(1-x)]^n=(1-x^2)^n",
+          "latex": "A^2-B^2=(A+B)(A-B)=(1+x)^n(1-x)^n=[(1+x)(1-x)]^n=(1-x^2)^n",
+          "status": "verified",
+          "decision": "keep"
+        }
+      ],
+      "originalAttributionBeforeDOTR9": {
+        "nodeId": null,
+        "kind": "method_application",
+        "scope": "奇数项是项序奇数，对应x偶次幂。"
+      },
+      "DOTR9Attribution": {
+        "primaryAttributionId": "method:assignment",
+        "linkedExistingEntries": [
+          "method:assignment"
+        ],
+        "blockAttributions": [],
+        "role": "在多项式恒等式中以−x代x分离奇偶部分的应用；不是数值赋值求单个系数",
+        "candidatePromotion": false,
+        "bodyMoved": true,
+        "sourceReview": {
+          "round": "R9",
+          "itemId": "lesson-content:L210:home-parity",
+          "sourceReviewStatus": "verified_with_evidence_in_exact_scope",
+          "mathReviewStatus": null,
+          "boundedReason": "奇数项对应偶指数，偶数项对应奇指数；以−x代x改变奇指数项符号，A+B=(1+x)^n，A−B=(1−x)^n，乘法给(1−x²)^n。无需额外收敛条件。 据具体程序核归属，允许多知识点；不以课次顺序决定身份。",
+          "deltaSha256": "17826906fe9518e176eb4ba21318fe5741a1ddd73d01ba5d5af6d2cafe7c4360",
+          "platformStatus": "verified_local_pending_controller_acceptance",
+          "onlineReleaseStatus": "not_released_R9"
+        }
+      }
+    },
+    {
+      "id": "lesson-content:L211:assignment-parity",
+      "nodeId": "method:assignment",
+      "proposedNodeId": "proposal:book-1:assignment",
+      "kind": "method_application",
+      "origin": "editorial_proposal",
+      "title": "代入法得系数总和与奇偶上标和",
+      "scope": "正整数n；奇数项序对应偶数上标，不能混淆。 n≥1确保(1−1)^n=0，代a=b=1与a=1,b=−1得E+O=2^n、E−O=0，因此E=O=2^(n−1)。上标奇偶与项序奇偶相反，当前表达正确。身份method:assignment已验收复用。 据具体程序核归属，允许多知识点；不以课次顺序决定身份。",
+      "blocks": [
+        {
+          "role": "step",
+          "type": "text",
+          "value": "二项式定理中取$a=b=1$，得$\\mathrm C_n^0+\\mathrm C_n^1+\\cdots+\\mathrm C_n^n=2^n$。",
+          "evidenceIds": [
+            "ev:book5:L211:assignment-parity:b0"
+          ],
+          "wordingStatus": "source_based_reconstruction"
+        },
+        {
+          "role": "step",
+          "type": "text",
+          "value": "取$a=1,b=-1$，得$\\mathrm C_n^0-\\mathrm C_n^1+\\mathrm C_n^2-\\cdots+(-1)^n\\mathrm C_n^n=0$。",
+          "evidenceIds": [
+            "ev:book5:L211:assignment-parity:b1"
+          ],
+          "wordingStatus": "source_based_reconstruction"
+        },
+        {
+          "role": "step",
+          "type": "text",
+          "value": "把偶上标和记为整体E、奇上标和记为O，则$E+O=2^n$、$E-O=0$，联立相加或相减再除2。E/O为编辑简记，源用括号分组。",
+          "evidenceIds": [
+            "ev:book5:L211:assignment-parity:b2"
+          ],
+          "wordingStatus": "source_based_reconstruction"
+        },
+        {
+          "role": "solution",
+          "type": "math",
+          "value": "\\mathrm C_n^0+\\mathrm C_n^2+\\mathrm C_n^4+\\cdots=\\mathrm C_n^1+\\mathrm C_n^3+\\mathrm C_n^5+\\cdots=2^{n-1}",
+          "evidenceIds": [
+            "ev:book5:L211:assignment-parity:b3"
+          ],
+          "wordingStatus": "source_based_reconstruction"
+        },
+        {
+          "role": "condition",
+          "type": "text",
+          "value": "两组最后上标分别是不大于$n$的最大偶数、最大奇数；$n\\ge1$。",
+          "evidenceIds": [
+            "ev:book5:L211:assignment-parity:b4"
+          ],
+          "wordingStatus": "source_based_reconstruction"
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "源称“代入法”，说明适当赋值可得组合恒等式；复用赋值法同用途，不因名称差别新增。",
+          "evidenceIds": [
+            "ev:book5:L211:assignment-parity:b5"
+          ],
+          "wordingStatus": "source_based_reconstruction"
+        }
+      ],
+      "contentOrigin": "source_based_reconstruction",
+      "wordingStatus": "source_based_reconstruction",
+      "titleWordingStatus": "editorial_normalized_title",
+      "matching": {
+        "status": "confirmed",
+        "reason": "按本题实际任务和现有节点语义匹配；不从共用运算推定先修。"
+      },
+      "evidence": [
+        {
+          "id": "ev:book5:L211:assignment-parity:b0",
+          "sourceId": "L211",
+          "sourceSha256": "1d7f4c77c54f4348bd9cb35f3f3eb4e1c92579046f9c4db54fc2e2532cd7e00c",
+          "locator": {
+            "headingPath": [
+              "代入法得系数总和与奇偶上标和"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 27,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 3,
+            "printedPage": null,
+            "equationObjectId": null,
+            "printedPageNote": "无独立印刷页码；null不表示缺PDF页定位。",
+            "supportingParagraphIndices": [
+              27
+            ]
+          },
+          "quote": "令",
+          "quoteRepresentation": "native_text_short_quote",
+          "quoteCompleteness": "原文字层中的短引；完整有源整理另列",
+          "transcriptionWordingStatus": "source_based_reconstruction",
+          "sourceSupportedTranscription": "二项式定理中取$a=b=1$，得$\\mathrm C_n^0+\\mathrm C_n^1+\\cdots+\\mathrm C_n^n=2^n$。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "mathSourceAssets": [
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image10.wmf",
+              "sourcePart": "word/media/image10.wmf",
+              "sha256": "5cec68a3fb23e6f28f6b44dc1bbbdca41328119e5144d90c4fcbf55070982549"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image11.wmf",
+              "sourcePart": "word/media/image11.wmf",
+              "sha256": "2e9250a6c6313c712a49893102290b62b0db973dafffb0f76bd5967236432c1e"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image13.wmf",
+              "sourcePart": "word/media/image13.wmf",
+              "sha256": "e42f82c4e59632a3bcd79db7c94ab943081d51aabcbff08e52397e37cc855247"
+            }
+          ],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L211",
+            "requestedPath": "increments/l211-v2/evidence/L211/page-3.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L211.docx",
+          "sourceTitle": "6.5二项式定理（2）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book5:L211:assignment-parity:b1",
+          "sourceId": "L211",
+          "sourceSha256": "1d7f4c77c54f4348bd9cb35f3f3eb4e1c92579046f9c4db54fc2e2532cd7e00c",
+          "locator": {
+            "headingPath": [
+              "代入法得系数总和与奇偶上标和"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 28,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 3,
+            "printedPage": null,
+            "equationObjectId": null,
+            "printedPageNote": "无独立印刷页码；null不表示缺PDF页定位。",
+            "supportingParagraphIndices": [
+              28
+            ]
+          },
+          "quote": "令",
+          "quoteRepresentation": "native_text_short_quote",
+          "quoteCompleteness": "原文字层中的短引；完整有源整理另列",
+          "transcriptionWordingStatus": "source_based_reconstruction",
+          "sourceSupportedTranscription": "取$a=1,b=-1$，得$\\mathrm C_n^0-\\mathrm C_n^1+\\mathrm C_n^2-\\cdots+(-1)^n\\mathrm C_n^n=0$。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "mathSourceAssets": [
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image10.wmf",
+              "sourcePart": "word/media/image10.wmf",
+              "sha256": "5cec68a3fb23e6f28f6b44dc1bbbdca41328119e5144d90c4fcbf55070982549"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image12.wmf",
+              "sourcePart": "word/media/image12.wmf",
+              "sha256": "30b1a9cbf0e41f7e5c0903e065951187e8f715fc13bbc4b4847e6d8973f134d9"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image14.wmf",
+              "sourcePart": "word/media/image14.wmf",
+              "sha256": "4901e8819b3a293c9961fb33a88815e663dd5c388bd250c2479371a78a69e6fd"
+            }
+          ],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L211",
+            "requestedPath": "increments/l211-v2/evidence/L211/page-3.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L211.docx",
+          "sourceTitle": "6.5二项式定理（2）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book5:L211:assignment-parity:b2",
+          "sourceId": "L211",
+          "sourceSha256": "1d7f4c77c54f4348bd9cb35f3f3eb4e1c92579046f9c4db54fc2e2532cd7e00c",
+          "locator": {
+            "headingPath": [
+              "代入法得系数总和与奇偶上标和"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 30,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 3,
+            "printedPage": null,
+            "equationObjectId": null,
+            "printedPageNote": "无独立印刷页码；null不表示缺PDF页定位。",
+            "supportingParagraphIndices": [
+              30
+            ]
+          },
+          "quote": "分别看成两个整体",
+          "quoteRepresentation": "native_text_short_quote",
+          "quoteCompleteness": "原文字层中的短引；完整有源整理另列",
+          "transcriptionWordingStatus": "source_based_reconstruction",
+          "sourceSupportedTranscription": "把偶上标和记为整体E、奇上标和记为O，则$E+O=2^n$、$E-O=0$，联立相加或相减再除2。E/O为编辑简记，源用括号分组。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "mathSourceAssets": [
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image15.wmf",
+              "sourcePart": "word/media/image15.wmf",
+              "sha256": "dbe5058435e45988aa26157faa85c01e23c3461c0788daaad07a2b8ad6fdba22"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image16.wmf",
+              "sourcePart": "word/media/image16.wmf",
+              "sha256": "14e8473ee6969021892846879dd2d4185a8860d3ed5e1bf5f03195611e5ad8da"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image17.wmf",
+              "sourcePart": "word/media/image17.wmf",
+              "sha256": "26d0503a4162419a3fc11282969b911263bcc9ef7e307091da106fea324c6b35"
+            }
+          ],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L211",
+            "requestedPath": "increments/l211-v2/evidence/L211/page-3.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L211.docx",
+          "sourceTitle": "6.5二项式定理（2）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book5:L211:assignment-parity:b3",
+          "sourceId": "L211",
+          "sourceSha256": "1d7f4c77c54f4348bd9cb35f3f3eb4e1c92579046f9c4db54fc2e2532cd7e00c",
+          "locator": {
+            "headingPath": [
+              "代入法得系数总和与奇偶上标和"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 30,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 3,
+            "printedPage": null,
+            "equationObjectId": null,
+            "printedPageNote": "无独立印刷页码；null不表示缺PDF页定位。",
+            "supportingParagraphIndices": [
+              30
+            ]
+          },
+          "quote": "两式相加除以2",
+          "quoteRepresentation": "native_text_short_quote",
+          "quoteCompleteness": "原文字层中的短引；完整有源整理另列",
+          "transcriptionWordingStatus": "source_based_reconstruction",
+          "sourceSupportedTranscription": "\\mathrm C_n^0+\\mathrm C_n^2+\\mathrm C_n^4+\\cdots=\\mathrm C_n^1+\\mathrm C_n^3+\\mathrm C_n^5+\\cdots=2^{n-1}",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "mathSourceAssets": [
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image15.wmf",
+              "sourcePart": "word/media/image15.wmf",
+              "sha256": "dbe5058435e45988aa26157faa85c01e23c3461c0788daaad07a2b8ad6fdba22"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image16.wmf",
+              "sourcePart": "word/media/image16.wmf",
+              "sha256": "14e8473ee6969021892846879dd2d4185a8860d3ed5e1bf5f03195611e5ad8da"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image17.wmf",
+              "sourcePart": "word/media/image17.wmf",
+              "sha256": "26d0503a4162419a3fc11282969b911263bcc9ef7e307091da106fea324c6b35"
+            }
+          ],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L211",
+            "requestedPath": "increments/l211-v2/evidence/L211/page-3.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L211.docx",
+          "sourceTitle": "6.5二项式定理（2）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book5:L211:assignment-parity:b4",
+          "sourceId": "L211",
+          "sourceSha256": "1d7f4c77c54f4348bd9cb35f3f3eb4e1c92579046f9c4db54fc2e2532cd7e00c",
+          "locator": {
+            "headingPath": [
+              "代入法得系数总和与奇偶上标和"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 31,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 3,
+            "printedPage": null,
+            "equationObjectId": null,
+            "printedPageNote": "无独立印刷页码；null不表示缺PDF页定位。",
+            "supportingParagraphIndices": [
+              31
+            ]
+          },
+          "quote": "最大偶数和奇数",
+          "quoteRepresentation": "native_text_short_quote",
+          "quoteCompleteness": "原文字层中的短引；完整有源整理另列",
+          "transcriptionWordingStatus": "source_based_reconstruction",
+          "sourceSupportedTranscription": "两组最后上标分别是不大于$n$的最大偶数、最大奇数；$n\\ge1$。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "mathSourceAssets": [
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image18.wmf",
+              "sourcePart": "word/media/image18.wmf",
+              "sha256": "27122e9fb9af1bbed4ab817e63d2286f876832cae24b566a324e1bb4de472d52"
+            }
+          ],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L211",
+            "requestedPath": "increments/l211-v2/evidence/L211/page-3.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L211.docx",
+          "sourceTitle": "6.5二项式定理（2）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book5:L211:assignment-parity:b5",
+          "sourceId": "L211",
+          "sourceSha256": "1d7f4c77c54f4348bd9cb35f3f3eb4e1c92579046f9c4db54fc2e2532cd7e00c",
+          "locator": {
+            "headingPath": [
+              "代入法得系数总和与奇偶上标和"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 32,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 3,
+            "printedPage": null,
+            "equationObjectId": null,
+            "printedPageNote": "无独立印刷页码；null不表示缺PDF页定位。",
+            "supportingParagraphIndices": [
+              32
+            ]
+          },
+          "quote": "“代入法”是一种常用的方法",
+          "quoteRepresentation": "native_text_short_quote",
+          "quoteCompleteness": "原文字层中的短引；完整有源整理另列",
+          "transcriptionWordingStatus": "source_based_reconstruction",
+          "sourceSupportedTranscription": "源称“代入法”，说明适当赋值可得组合恒等式；复用赋值法同用途，不因名称差别新增。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "mathSourceAssets": [
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image19.wmf",
+              "sourcePart": "word/media/image19.wmf",
+              "sha256": "4ead98fee26eea96c40cf56e9dd1f2e2a1fd3e6e9dfa32b1fc8a595bfa7b844e"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image20.wmf",
+              "sourcePart": "word/media/image20.wmf",
+              "sha256": "ce5425b870eab0d2f22ba7f560d3865dc4d3090045e3c0d375af971a8183127f"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image19.wmf",
+              "sourcePart": "word/media/image19.wmf",
+              "sha256": "4ead98fee26eea96c40cf56e9dd1f2e2a1fd3e6e9dfa32b1fc8a595bfa7b844e"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image20.wmf",
+              "sourcePart": "word/media/image20.wmf",
+              "sha256": "ce5425b870eab0d2f22ba7f560d3865dc4d3090045e3c0d375af971a8183127f"
+            }
+          ],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L211",
+            "requestedPath": "increments/l211-v2/evidence/L211/page-3.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L211.docx",
+          "sourceTitle": "6.5二项式定理（2）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:DOT-R9:L211:aaba02c2ab04dc8e",
+          "sourceId": "L211",
+          "sourceSha256": "1d7f4c77c54f4348bd9cb35f3f3eb4e1c92579046f9c4db54fc2e2532cd7e00c",
+          "sourceTitle": "6.5二项式定理（2）-教学设计",
+          "locator": {
+            "headingPath": [
+              "代入法得系数总和与奇偶上标和",
+              "DOT已交本条局部原页"
+            ],
+            "part": "L211-cloud-page-02.png",
+            "cloudRenderedPage": 2,
+            "pageNumberConvention": "DOT本次局部渲染页码，冻结旧定位另行保留"
+          },
+          "quote": "同字节复用本条已交原页；原文、源错、旧核验误判及编辑补足分别留痕，未重转或重审全源。",
+          "resource": {
+            "url": "r80/assets/036855f0f39196618a0a749f.png",
+            "bytes": 104892,
+            "sha256": "036855f0f39196618a0a749f95a913c88d533a25e106a66ba30fd568b77295f2",
+            "sourceId": "L211",
+            "kind": "same_original_dot_rendered_page"
+          },
+          "originalUrl": "source-original/L211.docx"
+        },
+        {
+          "id": "ev:DOT-R9:L211:6d3af8126b55e678",
+          "sourceId": "L211",
+          "sourceSha256": "1d7f4c77c54f4348bd9cb35f3f3eb4e1c92579046f9c4db54fc2e2532cd7e00c",
+          "sourceTitle": "6.5二项式定理（2）-教学设计",
+          "locator": {
+            "headingPath": [
+              "代入法得系数总和与奇偶上标和",
+              "DOT已交本条局部原页"
+            ],
+            "part": "L211-cloud-page-03.png",
+            "cloudRenderedPage": 3,
+            "pageNumberConvention": "DOT本次局部渲染页码，冻结旧定位另行保留"
+          },
+          "quote": "同字节复用本条已交原页；原文、源错、旧核验误判及编辑补足分别留痕，未重转或重审全源。",
+          "resource": {
+            "url": "r80/assets/4633fae08d5e31787412dfc3.png",
+            "bytes": 128404,
+            "sha256": "4633fae08d5e31787412dfc3afda2b8facf2131d3a1277ad71e50e418d7988db",
+            "sourceId": "L211",
+            "kind": "same_original_dot_rendered_page"
+          },
+          "originalUrl": "source-original/L211.docx"
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": [
+        {
+          "id": "formula:book5:L211:assignment-parity:b0:m0",
+          "location": "blocks[0].value.inlineMath[0]",
+          "sourceString": "二项式定理中取$a=b=1$，得$\\mathrm C_n^0+\\mathrm C_n^1+\\cdots+\\mathrm C_n^n=2^n$。",
+          "latex": "a=b=1",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:assignment-parity:b0:m1",
+          "location": "blocks[0].value.inlineMath[1]",
+          "sourceString": "二项式定理中取$a=b=1$，得$\\mathrm C_n^0+\\mathrm C_n^1+\\cdots+\\mathrm C_n^n=2^n$。",
+          "latex": "\\mathrm C_n^0+\\mathrm C_n^1+\\cdots+\\mathrm C_n^n=2^n",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:assignment-parity:b1:m0",
+          "location": "blocks[1].value.inlineMath[0]",
+          "sourceString": "取$a=1,b=-1$，得$\\mathrm C_n^0-\\mathrm C_n^1+\\mathrm C_n^2-\\cdots+(-1)^n\\mathrm C_n^n=0$。",
+          "latex": "a=1,b=-1",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:assignment-parity:b1:m1",
+          "location": "blocks[1].value.inlineMath[1]",
+          "sourceString": "取$a=1,b=-1$，得$\\mathrm C_n^0-\\mathrm C_n^1+\\mathrm C_n^2-\\cdots+(-1)^n\\mathrm C_n^n=0$。",
+          "latex": "\\mathrm C_n^0-\\mathrm C_n^1+\\mathrm C_n^2-\\cdots+(-1)^n\\mathrm C_n^n=0",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:assignment-parity:b2:m0",
+          "location": "blocks[2].value.inlineMath[0]",
+          "sourceString": "把偶上标和记为整体E、奇上标和记为O，则$E+O=2^n$、$E-O=0$，联立相加或相减再除2。E/O为编辑简记，源用括号分组。",
+          "latex": "E+O=2^n",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:assignment-parity:b2:m1",
+          "location": "blocks[2].value.inlineMath[1]",
+          "sourceString": "把偶上标和记为整体E、奇上标和记为O，则$E+O=2^n$、$E-O=0$，联立相加或相减再除2。E/O为编辑简记，源用括号分组。",
+          "latex": "E-O=0",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:assignment-parity:b3:m0",
+          "location": "blocks[3].value",
+          "sourceString": "\\mathrm C_n^0+\\mathrm C_n^2+\\mathrm C_n^4+\\cdots=\\mathrm C_n^1+\\mathrm C_n^3+\\mathrm C_n^5+\\cdots=2^{n-1}",
+          "latex": "\\mathrm C_n^0+\\mathrm C_n^2+\\mathrm C_n^4+\\cdots=\\mathrm C_n^1+\\mathrm C_n^3+\\mathrm C_n^5+\\cdots=2^{n-1}",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:assignment-parity:b4:m0",
+          "location": "blocks[4].value.inlineMath[0]",
+          "sourceString": "两组最后上标分别是不大于$n$的最大偶数、最大奇数；$n\\ge1$。",
+          "latex": "n",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:assignment-parity:b4:m1",
+          "location": "blocks[4].value.inlineMath[1]",
+          "sourceString": "两组最后上标分别是不大于$n$的最大偶数、最大奇数；$n\\ge1$。",
+          "latex": "n\\ge1",
+          "status": "verified",
+          "decision": "keep"
+        }
+      ],
+      "originalAttributionBeforeDOTR9": {
+        "nodeId": null,
+        "kind": "method_application",
+        "scope": "正整数n；奇数项序对应偶数上标，不能混淆。"
+      },
+      "DOTR9Attribution": {
+        "primaryAttributionId": "method:assignment",
+        "linkedExistingEntries": [
+          "method:assignment"
+        ],
+        "blockAttributions": [],
+        "role": "有源的具体应用或思想语境",
+        "candidatePromotion": false,
+        "bodyMoved": true,
+        "sourceReview": {
+          "round": "R9",
+          "itemId": "lesson-content:L211:assignment-parity",
+          "sourceReviewStatus": "verified_with_evidence_in_exact_scope",
+          "mathReviewStatus": null,
+          "boundedReason": "n≥1确保(1−1)^n=0，代a=b=1与a=1,b=−1得E+O=2^n、E−O=0，因此E=O=2^(n−1)。上标奇偶与项序奇偶相反，当前表达正确。身份method:assignment已验收复用。 据具体程序核归属，允许多知识点；不以课次顺序决定身份。",
+          "deltaSha256": "5b9be5ab1da69d2d4e933c97efefdb689d642285144da83c2ca64f34edcbadda",
+          "platformStatus": "verified_local_pending_controller_acceptance",
+          "onlineReleaseStatus": "not_released_R9"
+        }
+      }
+    },
+    {
+      "id": "lesson-content:L211:class-assignment",
+      "nodeId": "method:assignment",
+      "proposedNodeId": "proposal:book-1:assignment",
+      "kind": "method_application",
+      "origin": "editorial_proposal",
+      "title": "课堂两题：标准基底和移位基底的系数和",
+      "scope": "不能一律机械令x=1，令基底等于1。 标准基底取x=1得0，移位基底取x=2得3^n，源第二题n≥2保留。 据具体程序核归属，允许多知识点；不以课次顺序决定身份。",
+      "blocks": [
+        {
+          "role": "question",
+          "type": "text",
+          "value": "$(1-x)^6=a_0+a_1x+\\cdots+a_6x^6$求总系数和；另$(x+1)^n=a_0+a_1(x-1)+\\cdots+a_n(x-1)^n$，n为不小于2的正整数，求总系数和。",
+          "evidenceIds": [
+            "ev:book5:L211:class-assignment:b0"
+          ],
+          "wordingStatus": "source_based_reconstruction"
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "第一题令$x=1$，得$a_0+\\cdots+a_6=(1-1)^6=0$；第二题令$x=2$使$x-1=1$，得$a_0+\\cdots+a_n=(2+1)^n=3^n$。",
+          "evidenceIds": [
+            "ev:book5:L211:class-assignment:b1"
+          ],
+          "wordingStatus": "source_based_reconstruction"
+        }
+      ],
+      "contentOrigin": "source_based_reconstruction",
+      "wordingStatus": "source_based_reconstruction",
+      "titleWordingStatus": "editorial_normalized_title",
+      "matching": {
+        "status": "confirmed",
+        "reason": "按本题实际任务和现有节点语义匹配；不从共用运算推定先修。"
+      },
+      "evidence": [
+        {
+          "id": "ev:book5:L211:class-assignment:b0",
+          "sourceId": "L211",
+          "sourceSha256": "1d7f4c77c54f4348bd9cb35f3f3eb4e1c92579046f9c4db54fc2e2532cd7e00c",
+          "locator": {
+            "headingPath": [
+              "课堂两题：标准基底和移位基底的系数和"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 99,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 12,
+            "printedPage": null,
+            "equationObjectId": null,
+            "printedPageNote": "无独立印刷页码；null不表示缺PDF页定位。",
+            "supportingParagraphIndices": [
+              99,
+              100,
+              101
+            ]
+          },
+          "quote": "求的值",
+          "quoteRepresentation": "native_text_short_quote",
+          "quoteCompleteness": "原文字层中的短引；完整有源整理另列",
+          "transcriptionWordingStatus": "source_based_reconstruction",
+          "sourceSupportedTranscription": "$(1-x)^6=a_0+a_1x+\\cdots+a_6x^6$求总系数和；另$(x+1)^n=a_0+a_1(x-1)+\\cdots+a_n(x-1)^n$，n为不小于2的正整数，求总系数和。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "mathSourceAssets": [
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image208.wmf",
+              "sourcePart": "word/media/image208.wmf",
+              "sha256": "4d0f0b86cf7a6e6c486083be582e3c4d7ea3172b2de37bd0ab3f4f43660d4078"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image209.wmf",
+              "sourcePart": "word/media/image209.wmf",
+              "sha256": "1db9a3f3d73ba6d9017f5ae6758221227a1852f16956ba2ad009d7e5c1dfbd8e"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image210.wmf",
+              "sourcePart": "word/media/image210.wmf",
+              "sha256": "101028fb1a5d10100f339fb019815a3f573c36a44cad7d860782c0322a7f2ed8"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image211.wmf",
+              "sourcePart": "word/media/image211.wmf",
+              "sha256": "ccb57bd44614ec2adea75693009a9a984d48088a1bc7dc9023ac2323fb1f72ba"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image212.wmf",
+              "sourcePart": "word/media/image212.wmf",
+              "sha256": "4c0f4a759476db8c6ac5e4dd75b0e45cab70deba0096a2f55e7d06b9fb0b7bb1"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image213.wmf",
+              "sourcePart": "word/media/image213.wmf",
+              "sha256": "e2eda5599f364ed079ae79110d2fcd672bb1a34a0123e55a276413f799d37f4b"
+            }
+          ],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L211",
+            "requestedPath": "increments/l211-v2/evidence/L211/page-12.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L211.docx",
+          "sourceTitle": "6.5二项式定理（2）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book5:L211:class-assignment:b1",
+          "sourceId": "L211",
+          "sourceSha256": "1d7f4c77c54f4348bd9cb35f3f3eb4e1c92579046f9c4db54fc2e2532cd7e00c",
+          "locator": {
+            "headingPath": [
+              "课堂两题：标准基底和移位基底的系数和"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 105,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 12,
+            "printedPage": null,
+            "equationObjectId": null,
+            "printedPageNote": "无独立印刷页码；null不表示缺PDF页定位。",
+            "supportingParagraphIndices": [
+              105,
+              106
+            ]
+          },
+          "quote": "令",
+          "quoteRepresentation": "native_text_short_quote",
+          "quoteCompleteness": "原文字层中的短引；完整有源整理另列",
+          "transcriptionWordingStatus": "source_based_reconstruction",
+          "sourceSupportedTranscription": "第一题令$x=1$，得$a_0+\\cdots+a_6=(1-1)^6=0$；第二题令$x=2$使$x-1=1$，得$a_0+\\cdots+a_n=(2+1)^n=3^n$。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "mathSourceAssets": [
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image216.wmf",
+              "sourcePart": "word/media/image216.wmf",
+              "sha256": "574c4c420659bdf63e066983fa96c0df31fa033d762edd90b57b6094393d6c80"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image217.wmf",
+              "sourcePart": "word/media/image217.wmf",
+              "sha256": "6894c22a6ea32387235085067dc7d4056c3264bdab13188081979c0cf753197f"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image218.wmf",
+              "sourcePart": "word/media/image218.wmf",
+              "sha256": "7a2893da3c6c52a9d398c5b8fbd272a18393b4d0bbbc1fb328a121939519d1b8"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image219.wmf",
+              "sourcePart": "word/media/image219.wmf",
+              "sha256": "2d9fd9fa87ef8fe4b900b2093d94cd4777b1d9545343f5412ab6e7007e38fa0a"
+            }
+          ],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L211",
+            "requestedPath": "increments/l211-v2/evidence/L211/page-12.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L211.docx",
+          "sourceTitle": "6.5二项式定理（2）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:DOT-R9:L211:48a1841b24cf809a",
+          "sourceId": "L211",
+          "sourceSha256": "1d7f4c77c54f4348bd9cb35f3f3eb4e1c92579046f9c4db54fc2e2532cd7e00c",
+          "sourceTitle": "6.5二项式定理（2）-教学设计",
+          "locator": {
+            "headingPath": [
+              "课堂两题：标准基底和移位基底的系数和",
+              "DOT已交本条局部原页"
+            ],
+            "part": "L211-cloud-page-11.png",
+            "cloudRenderedPage": 11,
+            "pageNumberConvention": "DOT本次局部渲染页码，冻结旧定位另行保留"
+          },
+          "quote": "同字节复用本条已交原页；原文、源错、旧核验误判及编辑补足分别留痕，未重转或重审全源。",
+          "resource": {
+            "url": "r80/assets/48ded4e801329cd66008a228.png",
+            "bytes": 103620,
+            "sha256": "48ded4e801329cd66008a2283328d28a62fdc11f336e14b26be99c0bcff12327",
+            "sourceId": "L211",
+            "kind": "same_original_dot_rendered_page"
+          },
+          "originalUrl": "source-original/L211.docx"
+        },
+        {
+          "id": "ev:DOT-R9:L211:1f541425b4a69bbb",
+          "sourceId": "L211",
+          "sourceSha256": "1d7f4c77c54f4348bd9cb35f3f3eb4e1c92579046f9c4db54fc2e2532cd7e00c",
+          "sourceTitle": "6.5二项式定理（2）-教学设计",
+          "locator": {
+            "headingPath": [
+              "课堂两题：标准基底和移位基底的系数和",
+              "DOT已交本条局部原页"
+            ],
+            "part": "L211-cloud-page-12.png",
+            "cloudRenderedPage": 12,
+            "pageNumberConvention": "DOT本次局部渲染页码，冻结旧定位另行保留"
+          },
+          "quote": "同字节复用本条已交原页；原文、源错、旧核验误判及编辑补足分别留痕，未重转或重审全源。",
+          "resource": {
+            "url": "r80/assets/774f1bde766dbc8fa6d588ae.png",
+            "bytes": 139902,
+            "sha256": "774f1bde766dbc8fa6d588aeec893fbb2cb40d0b9397613c6f55ac61f9e516af",
+            "sourceId": "L211",
+            "kind": "same_original_dot_rendered_page"
+          },
+          "originalUrl": "source-original/L211.docx"
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": [
+        {
+          "id": "formula:book5:L211:class-assignment:b0:m0",
+          "location": "blocks[0].value.inlineMath[0]",
+          "sourceString": "$(1-x)^6=a_0+a_1x+\\cdots+a_6x^6$求总系数和；另$(x+1)^n=a_0+a_1(x-1)+\\cdots+a_n(x-1)^n$，n为不小于2的正整数，求总系数和。",
+          "latex": "(1-x)^6=a_0+a_1x+\\cdots+a_6x^6",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:class-assignment:b0:m1",
+          "location": "blocks[0].value.inlineMath[1]",
+          "sourceString": "$(1-x)^6=a_0+a_1x+\\cdots+a_6x^6$求总系数和；另$(x+1)^n=a_0+a_1(x-1)+\\cdots+a_n(x-1)^n$，n为不小于2的正整数，求总系数和。",
+          "latex": "(x+1)^n=a_0+a_1(x-1)+\\cdots+a_n(x-1)^n",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:class-assignment:b1:m0",
+          "location": "blocks[1].value.inlineMath[0]",
+          "sourceString": "第一题令$x=1$，得$a_0+\\cdots+a_6=(1-1)^6=0$；第二题令$x=2$使$x-1=1$，得$a_0+\\cdots+a_n=(2+1)^n=3^n$。",
+          "latex": "x=1",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:class-assignment:b1:m1",
+          "location": "blocks[1].value.inlineMath[1]",
+          "sourceString": "第一题令$x=1$，得$a_0+\\cdots+a_6=(1-1)^6=0$；第二题令$x=2$使$x-1=1$，得$a_0+\\cdots+a_n=(2+1)^n=3^n$。",
+          "latex": "a_0+\\cdots+a_6=(1-1)^6=0",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:class-assignment:b1:m2",
+          "location": "blocks[1].value.inlineMath[2]",
+          "sourceString": "第一题令$x=1$，得$a_0+\\cdots+a_6=(1-1)^6=0$；第二题令$x=2$使$x-1=1$，得$a_0+\\cdots+a_n=(2+1)^n=3^n$。",
+          "latex": "x=2",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:class-assignment:b1:m3",
+          "location": "blocks[1].value.inlineMath[3]",
+          "sourceString": "第一题令$x=1$，得$a_0+\\cdots+a_6=(1-1)^6=0$；第二题令$x=2$使$x-1=1$，得$a_0+\\cdots+a_n=(2+1)^n=3^n$。",
+          "latex": "x-1=1",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:class-assignment:b1:m4",
+          "location": "blocks[1].value.inlineMath[4]",
+          "sourceString": "第一题令$x=1$，得$a_0+\\cdots+a_6=(1-1)^6=0$；第二题令$x=2$使$x-1=1$，得$a_0+\\cdots+a_n=(2+1)^n=3^n$。",
+          "latex": "a_0+\\cdots+a_n=(2+1)^n=3^n",
+          "status": "verified",
+          "decision": "keep"
+        }
+      ],
+      "originalAttributionBeforeDOTR9": {
+        "nodeId": null,
+        "kind": "method_application",
+        "scope": "不能一律机械令x=1，令基底等于1。"
+      },
+      "DOTR9Attribution": {
+        "primaryAttributionId": "method:assignment",
+        "linkedExistingEntries": [
+          "method:assignment"
+        ],
+        "blockAttributions": [],
+        "role": "有源的具体应用或思想语境",
+        "candidatePromotion": false,
+        "bodyMoved": true,
+        "sourceReview": {
+          "round": "R9",
+          "itemId": "lesson-content:L211:class-assignment",
+          "sourceReviewStatus": "verified_with_evidence_in_exact_scope",
+          "mathReviewStatus": null,
+          "boundedReason": "标准基底取x=1得0，移位基底取x=2得3^n，源第二题n≥2保留。 据具体程序核归属，允许多知识点；不以课次顺序决定身份。",
+          "deltaSha256": "7b7a25aaafac28581637935c3a47e4d4a994882ec6c827065759740a2ed6a1b0",
+          "platformStatus": "verified_local_pending_controller_acceptance",
+          "onlineReleaseStatus": "not_released_R9"
+        }
+      }
+    },
+    {
+      "id": "lesson-content:L211:shifted-coefficient-sums",
+      "nodeId": "method:assignment",
+      "proposedNodeId": "proposal:book-1:assignment",
+      "kind": "method_application",
+      "origin": "editorial_proposal",
+      "title": "例1：移位幂基底系数和，两种完整解",
+      "scope": "把x−1整体换元或直接令x−1等于±1。 y=x−1使1+2x=3+2y；y=1/−1或x=2/0分别给5^100与1，奇下标和差的一半(5^100−1)/2。两条完整路径均正确；换元有帮助但不是必需先修。 据具体程序核归属，允许多知识点；不以课次顺序决定身份。",
+      "blocks": [
+        {
+          "role": "question",
+          "type": "text",
+          "value": "对任意实数$x$，$(1+2x)^{100}=a_0+a_1(x-1)+a_2(x-1)^2+\\cdots+a_{100}(x-1)^{100}$。求$a_0+a_1+\\cdots+a_{100}$与$a_1+a_3+\\cdots+a_{99}$。",
+          "evidenceIds": [
+            "ev:book5:L211:shifted-coefficient-sums:b0"
+          ],
+          "wordingStatus": "source_based_reconstruction"
+        },
+        {
+          "role": "step",
+          "type": "text",
+          "value": "解法一令$y=x-1$，则$x=y+1$，$1+2x=3+2y$，所以$(3+2y)^{100}=a_0+a_1y+\\cdots+a_{100}y^{100}$。",
+          "evidenceIds": [
+            "ev:book5:L211:shifted-coefficient-sums:b1"
+          ],
+          "wordingStatus": "source_based_reconstruction"
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "取$y=1$得总和$5^{100}$；取$y=-1$得$a_0-a_1+a_2-\\cdots-a_{99}+a_{100}=1$。两式相减除2得奇下标和$\\frac{5^{100}-1}{2}$。",
+          "evidenceIds": [
+            "ev:book5:L211:shifted-coefficient-sums:b2"
+          ],
+          "wordingStatus": "source_based_reconstruction"
+        },
+        {
+          "role": "step",
+          "type": "text",
+          "value": "解法二直接在原恒等式令$x-1=1$即$x=2$，总和为$5^{100}$；令$x-1=-1$即$x=0$，交错和为1。联立同得$\\frac{5^{100}-1}{2}$。",
+          "evidenceIds": [
+            "ev:book5:L211:shifted-coefficient-sums:b3"
+          ],
+          "wordingStatus": "source_based_reconstruction"
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "源小结明确赋值代入法求全部或部分项系数和；换元不是必需，但使移位基底更直观。",
+          "evidenceIds": [
+            "ev:book5:L211:shifted-coefficient-sums:b4"
+          ],
+          "wordingStatus": "source_based_reconstruction"
+        }
+      ],
+      "contentOrigin": "source_based_reconstruction",
+      "wordingStatus": "source_based_reconstruction",
+      "titleWordingStatus": "editorial_normalized_title",
+      "matching": {
+        "status": "confirmed",
+        "reason": "按本题实际任务和现有节点语义匹配；不从共用运算推定先修。"
+      },
+      "evidence": [
+        {
+          "id": "ev:book5:L211:shifted-coefficient-sums:b0",
+          "sourceId": "L211",
+          "sourceSha256": "1d7f4c77c54f4348bd9cb35f3f3eb4e1c92579046f9c4db54fc2e2532cd7e00c",
+          "locator": {
+            "headingPath": [
+              "例1：移位幂基底系数和，两种完整解"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 33,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 4,
+            "printedPage": null,
+            "equationObjectId": null,
+            "printedPageNote": "无独立印刷页码；null不表示缺PDF页定位。",
+            "supportingParagraphIndices": [
+              33,
+              34,
+              35,
+              36
+            ]
+          },
+          "quote": "任意给定的实数",
+          "quoteRepresentation": "native_text_short_quote",
+          "quoteCompleteness": "原文字层中的短引；完整有源整理另列",
+          "transcriptionWordingStatus": "source_based_reconstruction",
+          "sourceSupportedTranscription": "对任意实数$x$，$(1+2x)^{100}=a_0+a_1(x-1)+a_2(x-1)^2+\\cdots+a_{100}(x-1)^{100}$。求$a_0+a_1+\\cdots+a_{100}$与$a_1+a_3+\\cdots+a_{99}$。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "mathSourceAssets": [
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image21.wmf",
+              "sourcePart": "word/media/image21.wmf",
+              "sha256": "9ead4512232cf80ffddc7c02607aad58586363be9ea6c95fb3833269bece5e82"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image22.wmf",
+              "sourcePart": "word/media/image22.wmf",
+              "sha256": "165954d81b6d3596cc60e1af1dedb0dcef2b8ce2fe2ba40c54b51d65b86920a9"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image23.wmf",
+              "sourcePart": "word/media/image23.wmf",
+              "sha256": "663afb8f8590ac3ec557fd337c15646b108afbab7608421ff8756f06d3b28777"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image24.wmf",
+              "sourcePart": "word/media/image24.wmf",
+              "sha256": "a6e871bc5e6b33db769141f63a22b5f88172dc5f28ffe096f85e168c999bdc8d"
+            }
+          ],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L211",
+            "requestedPath": "increments/l211-v2/evidence/L211/page-4.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L211.docx",
+          "sourceTitle": "6.5二项式定理（2）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book5:L211:shifted-coefficient-sums:b1",
+          "sourceId": "L211",
+          "sourceSha256": "1d7f4c77c54f4348bd9cb35f3f3eb4e1c92579046f9c4db54fc2e2532cd7e00c",
+          "locator": {
+            "headingPath": [
+              "例1：移位幂基底系数和，两种完整解"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 38,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 4,
+            "printedPage": null,
+            "equationObjectId": null,
+            "printedPageNote": "无独立印刷页码；null不表示缺PDF页定位。",
+            "supportingParagraphIndices": [
+              37,
+              38,
+              39
+            ]
+          },
+          "quote": "令",
+          "quoteRepresentation": "native_text_short_quote",
+          "quoteCompleteness": "原文字层中的短引；完整有源整理另列",
+          "transcriptionWordingStatus": "source_based_reconstruction",
+          "sourceSupportedTranscription": "解法一令$y=x-1$，则$x=y+1$，$1+2x=3+2y$，所以$(3+2y)^{100}=a_0+a_1y+\\cdots+a_{100}y^{100}$。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "mathSourceAssets": [
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image31.wmf",
+              "sourcePart": "word/media/image31.wmf",
+              "sha256": "6161dbca21f7f62d3959ec5170587108fa38bf1b414f3b4b6dda581ab3deba7f"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image32.wmf",
+              "sourcePart": "word/media/image32.wmf",
+              "sha256": "11c63d0af0a77a075f233f8e91c077fe051a6879f442ef785feccda4920f8009"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image33.wmf",
+              "sourcePart": "word/media/image33.wmf",
+              "sha256": "5377c7793442665639740fbd01802b09f14f7453136c71a12133c09c2bf2d1e7"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image34.wmf",
+              "sourcePart": "word/media/image34.wmf",
+              "sha256": "4d2296f7b54971446bde289a9f4c4797547637061b69cd0089b52128f6ec8f8a"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image35.wmf",
+              "sourcePart": "word/media/image35.wmf",
+              "sha256": "cf2064d3dd5badc5c08f5b73c3e3e30779e23b28141f38c8effdfb0efc8ecd97"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image25.wmf",
+              "sourcePart": "word/media/image25.wmf",
+              "sha256": "f40b4413a2b43c5789e17f6ec07ef15c46670492f3742efbe663f94d511f76b1"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image26.wmf",
+              "sourcePart": "word/media/image26.wmf",
+              "sha256": "4b4a3c3d97e7f5ad156deb1125684832867453fcb51fcad9555e8885fcfc33ff"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image27.wmf",
+              "sourcePart": "word/media/image27.wmf",
+              "sha256": "9692e60cc5e5634eccfc9a88a11e34a2ae5c13b90cc6e7cf08d391ef800b0f79"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image28.wmf",
+              "sourcePart": "word/media/image28.wmf",
+              "sha256": "cb2eb5975bb44b733568b104b6930048474f8cec4ae2997b93047b43b7df8e21"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image29.wmf",
+              "sourcePart": "word/media/image29.wmf",
+              "sha256": "bec64f364e7a74169d739d9edcf8b44c23f95ddee6ba498d080c3c31f7e1c593"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image30.wmf",
+              "sourcePart": "word/media/image30.wmf",
+              "sha256": "9d44be749e6ab583b2ea7f1dd9742ff5cdd32fcbaf2c55d10c3a2101a94d3e5f"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image36.wmf",
+              "sourcePart": "word/media/image36.wmf",
+              "sha256": "6964262bb62579de7c7014350d9dd7abad5637b36debfbb1833330555940cf0b"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image37.wmf",
+              "sourcePart": "word/media/image37.wmf",
+              "sha256": "cd31bd39d47ba921c4235221a27d585efbb06084f444916fcb6e27d8762f9644"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image38.wmf",
+              "sourcePart": "word/media/image38.wmf",
+              "sha256": "2b535f3f4502d36e3ff7286c316743a3e79c4ecba8ad86aaa707d80238e165f4"
+            }
+          ],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L211",
+            "requestedPath": "increments/l211-v2/evidence/L211/page-4.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L211.docx",
+          "sourceTitle": "6.5二项式定理（2）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book5:L211:shifted-coefficient-sums:b2",
+          "sourceId": "L211",
+          "sourceSha256": "1d7f4c77c54f4348bd9cb35f3f3eb4e1c92579046f9c4db54fc2e2532cd7e00c",
+          "locator": {
+            "headingPath": [
+              "例1：移位幂基底系数和，两种完整解"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 42,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 5,
+            "printedPage": null,
+            "equationObjectId": null,
+            "printedPageNote": "无独立印刷页码；null不表示缺PDF页定位。",
+            "supportingParagraphIndices": [
+              40,
+              41,
+              42,
+              43
+            ]
+          },
+          "quote": "令",
+          "quoteRepresentation": "native_text_short_quote",
+          "quoteCompleteness": "原文字层中的短引；完整有源整理另列",
+          "transcriptionWordingStatus": "source_based_reconstruction",
+          "sourceSupportedTranscription": "取$y=1$得总和$5^{100}$；取$y=-1$得$a_0-a_1+a_2-\\cdots-a_{99}+a_{100}=1$。两式相减除2得奇下标和$\\frac{5^{100}-1}{2}$。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "mathSourceAssets": [
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image40.wmf",
+              "sourcePart": "word/media/image40.wmf",
+              "sha256": "4889a8ec2f53dc70e413001d00b7fcb925b1a686e1126e35510676c99167e388"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image41.wmf",
+              "sourcePart": "word/media/image41.wmf",
+              "sha256": "6ae625816be5cf76c8aefea0f7819d84dc9495dd4799c7766b05b37c7d93fe43"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image39.wmf",
+              "sourcePart": "word/media/image39.wmf",
+              "sha256": "ed1c8c4d1dead4b566de1f6a3f6c64c439f340168a793729205c84278a283461"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image38.wmf",
+              "sourcePart": "word/media/image38.wmf",
+              "sha256": "2b535f3f4502d36e3ff7286c316743a3e79c4ecba8ad86aaa707d80238e165f4"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image42.wmf",
+              "sourcePart": "word/media/image42.wmf",
+              "sha256": "83f72d5ffa508232ce02667c779f73f034de10cc5a1146f4ab346147eefa1dd4"
+            }
+          ],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L211",
+            "requestedPath": "increments/l211-v2/evidence/L211/page-5.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L211.docx",
+          "sourceTitle": "6.5二项式定理（2）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book5:L211:shifted-coefficient-sums:b3",
+          "sourceId": "L211",
+          "sourceSha256": "1d7f4c77c54f4348bd9cb35f3f3eb4e1c92579046f9c4db54fc2e2532cd7e00c",
+          "locator": {
+            "headingPath": [
+              "例1：移位幂基底系数和，两种完整解"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 45,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 5,
+            "printedPage": null,
+            "equationObjectId": null,
+            "printedPageNote": "无独立印刷页码；null不表示缺PDF页定位。",
+            "supportingParagraphIndices": [
+              44,
+              45,
+              46,
+              47
+            ]
+          },
+          "quote": "令",
+          "quoteRepresentation": "native_text_short_quote",
+          "quoteCompleteness": "原文字层中的短引；完整有源整理另列",
+          "transcriptionWordingStatus": "source_based_reconstruction",
+          "sourceSupportedTranscription": "解法二直接在原恒等式令$x-1=1$即$x=2$，总和为$5^{100}$；令$x-1=-1$即$x=0$，交错和为1。联立同得$\\frac{5^{100}-1}{2}$。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "mathSourceAssets": [
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image43.wmf",
+              "sourcePart": "word/media/image43.wmf",
+              "sha256": "c4fae1da53f41f61cd8a8af91f97e19dcd8e748c9502cfe166fe6944978c2bf8"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image44.wmf",
+              "sourcePart": "word/media/image44.wmf",
+              "sha256": "c1d8b99db10d89d241bfc1251217ff74fbaa5e6ce90ac5b9660a5abf7b062e30"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image45.wmf",
+              "sourcePart": "word/media/image45.wmf",
+              "sha256": "cf0c2865d6f7c2ae40c03da65e45a83061abfd66447ee6c8552efc81847215e0"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image46.wmf",
+              "sourcePart": "word/media/image46.wmf",
+              "sha256": "cd37f908ec5afe97e67641b8a4d8783aa1fedd7b19b98f31c51cfbddf7dd4620"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image47.wmf",
+              "sourcePart": "word/media/image47.wmf",
+              "sha256": "a9701f87507de6f5bd441c894e25d4447ea1525597d58bee7b9892385022abc0"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image48.wmf",
+              "sourcePart": "word/media/image48.wmf",
+              "sha256": "0432f517f44b24734a1cae2f55be389f00305b76c65253641811144353d7343e"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image49.wmf",
+              "sourcePart": "word/media/image49.wmf",
+              "sha256": "73dcbb10f56141f22c7457b786a08d2d5befb73ba8ddcd721978b0a2746e01b2"
+            },
+            {
+              "path": "increments/l211-v2/evidence/L211/objects/image50.wmf",
+              "sourcePart": "word/media/image50.wmf",
+              "sha256": "0238843999533233d7eb106187ed8df8ec85bdcd0723f3c1f0c82c9dd0da224f"
+            }
+          ],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L211",
+            "requestedPath": "increments/l211-v2/evidence/L211/page-5.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L211.docx",
+          "sourceTitle": "6.5二项式定理（2）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book5:L211:shifted-coefficient-sums:b4",
+          "sourceId": "L211",
+          "sourceSha256": "1d7f4c77c54f4348bd9cb35f3f3eb4e1c92579046f9c4db54fc2e2532cd7e00c",
+          "locator": {
+            "headingPath": [
+              "例1：移位幂基底系数和，两种完整解"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 48,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 5,
+            "printedPage": null,
+            "equationObjectId": null,
+            "printedPageNote": "无独立印刷页码；null不表示缺PDF页定位。",
+            "supportingParagraphIndices": [
+              48
+            ]
+          },
+          "quote": "全部（或部分）项的系数之和",
+          "quoteRepresentation": "native_text_short_quote",
+          "quoteCompleteness": "原文字层中的短引；完整有源整理另列",
+          "transcriptionWordingStatus": "source_based_reconstruction",
+          "sourceSupportedTranscription": "源小结明确赋值代入法求全部或部分项系数和；换元不是必需，但使移位基底更直观。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "mathSourceAssets": [],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L211",
+            "requestedPath": "increments/l211-v2/evidence/L211/page-5.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L211.docx",
+          "sourceTitle": "6.5二项式定理（2）-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:DOT-R9:L211:9302b3449b8f4ec7",
+          "sourceId": "L211",
+          "sourceSha256": "1d7f4c77c54f4348bd9cb35f3f3eb4e1c92579046f9c4db54fc2e2532cd7e00c",
+          "sourceTitle": "6.5二项式定理（2）-教学设计",
+          "locator": {
+            "headingPath": [
+              "例1：移位幂基底系数和，两种完整解",
+              "DOT已交本条局部原页"
+            ],
+            "part": "L211-cloud-page-03.png",
+            "cloudRenderedPage": 3,
+            "pageNumberConvention": "DOT本次局部渲染页码，冻结旧定位另行保留"
+          },
+          "quote": "同字节复用本条已交原页；原文、源错、旧核验误判及编辑补足分别留痕，未重转或重审全源。",
+          "resource": {
+            "url": "r80/assets/4633fae08d5e31787412dfc3.png",
+            "bytes": 128404,
+            "sha256": "4633fae08d5e31787412dfc3afda2b8facf2131d3a1277ad71e50e418d7988db",
+            "sourceId": "L211",
+            "kind": "same_original_dot_rendered_page"
+          },
+          "originalUrl": "source-original/L211.docx"
+        },
+        {
+          "id": "ev:DOT-R9:L211:931e29a72c2169bc",
+          "sourceId": "L211",
+          "sourceSha256": "1d7f4c77c54f4348bd9cb35f3f3eb4e1c92579046f9c4db54fc2e2532cd7e00c",
+          "sourceTitle": "6.5二项式定理（2）-教学设计",
+          "locator": {
+            "headingPath": [
+              "例1：移位幂基底系数和，两种完整解",
+              "DOT已交本条局部原页"
+            ],
+            "part": "L211-cloud-page-04.png",
+            "cloudRenderedPage": 4,
+            "pageNumberConvention": "DOT本次局部渲染页码，冻结旧定位另行保留"
+          },
+          "quote": "同字节复用本条已交原页；原文、源错、旧核验误判及编辑补足分别留痕，未重转或重审全源。",
+          "resource": {
+            "url": "r80/assets/06fdb7c691d1cb90bf1284f1.png",
+            "bytes": 97344,
+            "sha256": "06fdb7c691d1cb90bf1284f139604b658c017ed28dea13d02ac95b0089e6cc88",
+            "sourceId": "L211",
+            "kind": "same_original_dot_rendered_page"
+          },
+          "originalUrl": "source-original/L211.docx"
+        },
+        {
+          "id": "ev:DOT-R9:L211:108418502a80151c",
+          "sourceId": "L211",
+          "sourceSha256": "1d7f4c77c54f4348bd9cb35f3f3eb4e1c92579046f9c4db54fc2e2532cd7e00c",
+          "sourceTitle": "6.5二项式定理（2）-教学设计",
+          "locator": {
+            "headingPath": [
+              "例1：移位幂基底系数和，两种完整解",
+              "DOT已交本条局部原页"
+            ],
+            "part": "L211-cloud-page-05.png",
+            "cloudRenderedPage": 5,
+            "pageNumberConvention": "DOT本次局部渲染页码，冻结旧定位另行保留"
+          },
+          "quote": "同字节复用本条已交原页；原文、源错、旧核验误判及编辑补足分别留痕，未重转或重审全源。",
+          "resource": {
+            "url": "r80/assets/a866ee8b81f09c609a87ef71.png",
+            "bytes": 110797,
+            "sha256": "a866ee8b81f09c609a87ef7116515aa4d9eefbab8a66e1ac8316a154a5d8cfec",
+            "sourceId": "L211",
+            "kind": "same_original_dot_rendered_page"
+          },
+          "originalUrl": "source-original/L211.docx"
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": [
+        {
+          "id": "formula:book5:L211:shifted-coefficient-sums:b0:m0",
+          "location": "blocks[0].value.inlineMath[0]",
+          "sourceString": "对任意实数$x$，$(1+2x)^{100}=a_0+a_1(x-1)+a_2(x-1)^2+\\cdots+a_{100}(x-1)^{100}$。求$a_0+a_1+\\cdots+a_{100}$与$a_1+a_3+\\cdots+a_{99}$。",
+          "latex": "x",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:shifted-coefficient-sums:b0:m1",
+          "location": "blocks[0].value.inlineMath[1]",
+          "sourceString": "对任意实数$x$，$(1+2x)^{100}=a_0+a_1(x-1)+a_2(x-1)^2+\\cdots+a_{100}(x-1)^{100}$。求$a_0+a_1+\\cdots+a_{100}$与$a_1+a_3+\\cdots+a_{99}$。",
+          "latex": "(1+2x)^{100}=a_0+a_1(x-1)+a_2(x-1)^2+\\cdots+a_{100}(x-1)^{100}",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:shifted-coefficient-sums:b0:m2",
+          "location": "blocks[0].value.inlineMath[2]",
+          "sourceString": "对任意实数$x$，$(1+2x)^{100}=a_0+a_1(x-1)+a_2(x-1)^2+\\cdots+a_{100}(x-1)^{100}$。求$a_0+a_1+\\cdots+a_{100}$与$a_1+a_3+\\cdots+a_{99}$。",
+          "latex": "a_0+a_1+\\cdots+a_{100}",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:shifted-coefficient-sums:b0:m3",
+          "location": "blocks[0].value.inlineMath[3]",
+          "sourceString": "对任意实数$x$，$(1+2x)^{100}=a_0+a_1(x-1)+a_2(x-1)^2+\\cdots+a_{100}(x-1)^{100}$。求$a_0+a_1+\\cdots+a_{100}$与$a_1+a_3+\\cdots+a_{99}$。",
+          "latex": "a_1+a_3+\\cdots+a_{99}",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:shifted-coefficient-sums:b1:m0",
+          "location": "blocks[1].value.inlineMath[0]",
+          "sourceString": "解法一令$y=x-1$，则$x=y+1$，$1+2x=3+2y$，所以$(3+2y)^{100}=a_0+a_1y+\\cdots+a_{100}y^{100}$。",
+          "latex": "y=x-1",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:shifted-coefficient-sums:b1:m1",
+          "location": "blocks[1].value.inlineMath[1]",
+          "sourceString": "解法一令$y=x-1$，则$x=y+1$，$1+2x=3+2y$，所以$(3+2y)^{100}=a_0+a_1y+\\cdots+a_{100}y^{100}$。",
+          "latex": "x=y+1",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:shifted-coefficient-sums:b1:m2",
+          "location": "blocks[1].value.inlineMath[2]",
+          "sourceString": "解法一令$y=x-1$，则$x=y+1$，$1+2x=3+2y$，所以$(3+2y)^{100}=a_0+a_1y+\\cdots+a_{100}y^{100}$。",
+          "latex": "1+2x=3+2y",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:shifted-coefficient-sums:b1:m3",
+          "location": "blocks[1].value.inlineMath[3]",
+          "sourceString": "解法一令$y=x-1$，则$x=y+1$，$1+2x=3+2y$，所以$(3+2y)^{100}=a_0+a_1y+\\cdots+a_{100}y^{100}$。",
+          "latex": "(3+2y)^{100}=a_0+a_1y+\\cdots+a_{100}y^{100}",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:shifted-coefficient-sums:b2:m0",
+          "location": "blocks[2].value.inlineMath[0]",
+          "sourceString": "取$y=1$得总和$5^{100}$；取$y=-1$得$a_0-a_1+a_2-\\cdots-a_{99}+a_{100}=1$。两式相减除2得奇下标和$\\frac{5^{100}-1}{2}$。",
+          "latex": "y=1",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:shifted-coefficient-sums:b2:m1",
+          "location": "blocks[2].value.inlineMath[1]",
+          "sourceString": "取$y=1$得总和$5^{100}$；取$y=-1$得$a_0-a_1+a_2-\\cdots-a_{99}+a_{100}=1$。两式相减除2得奇下标和$\\frac{5^{100}-1}{2}$。",
+          "latex": "5^{100}",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:shifted-coefficient-sums:b2:m2",
+          "location": "blocks[2].value.inlineMath[2]",
+          "sourceString": "取$y=1$得总和$5^{100}$；取$y=-1$得$a_0-a_1+a_2-\\cdots-a_{99}+a_{100}=1$。两式相减除2得奇下标和$\\frac{5^{100}-1}{2}$。",
+          "latex": "y=-1",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:shifted-coefficient-sums:b2:m3",
+          "location": "blocks[2].value.inlineMath[3]",
+          "sourceString": "取$y=1$得总和$5^{100}$；取$y=-1$得$a_0-a_1+a_2-\\cdots-a_{99}+a_{100}=1$。两式相减除2得奇下标和$\\frac{5^{100}-1}{2}$。",
+          "latex": "a_0-a_1+a_2-\\cdots-a_{99}+a_{100}=1",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:shifted-coefficient-sums:b2:m4",
+          "location": "blocks[2].value.inlineMath[4]",
+          "sourceString": "取$y=1$得总和$5^{100}$；取$y=-1$得$a_0-a_1+a_2-\\cdots-a_{99}+a_{100}=1$。两式相减除2得奇下标和$\\frac{5^{100}-1}{2}$。",
+          "latex": "\\frac{5^{100}-1}{2}",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:shifted-coefficient-sums:b3:m0",
+          "location": "blocks[3].value.inlineMath[0]",
+          "sourceString": "解法二直接在原恒等式令$x-1=1$即$x=2$，总和为$5^{100}$；令$x-1=-1$即$x=0$，交错和为1。联立同得$\\frac{5^{100}-1}{2}$。",
+          "latex": "x-1=1",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:shifted-coefficient-sums:b3:m1",
+          "location": "blocks[3].value.inlineMath[1]",
+          "sourceString": "解法二直接在原恒等式令$x-1=1$即$x=2$，总和为$5^{100}$；令$x-1=-1$即$x=0$，交错和为1。联立同得$\\frac{5^{100}-1}{2}$。",
+          "latex": "x=2",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:shifted-coefficient-sums:b3:m2",
+          "location": "blocks[3].value.inlineMath[2]",
+          "sourceString": "解法二直接在原恒等式令$x-1=1$即$x=2$，总和为$5^{100}$；令$x-1=-1$即$x=0$，交错和为1。联立同得$\\frac{5^{100}-1}{2}$。",
+          "latex": "5^{100}",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:shifted-coefficient-sums:b3:m3",
+          "location": "blocks[3].value.inlineMath[3]",
+          "sourceString": "解法二直接在原恒等式令$x-1=1$即$x=2$，总和为$5^{100}$；令$x-1=-1$即$x=0$，交错和为1。联立同得$\\frac{5^{100}-1}{2}$。",
+          "latex": "x-1=-1",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:shifted-coefficient-sums:b3:m4",
+          "location": "blocks[3].value.inlineMath[4]",
+          "sourceString": "解法二直接在原恒等式令$x-1=1$即$x=2$，总和为$5^{100}$；令$x-1=-1$即$x=0$，交错和为1。联立同得$\\frac{5^{100}-1}{2}$。",
+          "latex": "x=0",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:L211:shifted-coefficient-sums:b3:m5",
+          "location": "blocks[3].value.inlineMath[5]",
+          "sourceString": "解法二直接在原恒等式令$x-1=1$即$x=2$，总和为$5^{100}$；令$x-1=-1$即$x=0$，交错和为1。联立同得$\\frac{5^{100}-1}{2}$。",
+          "latex": "\\frac{5^{100}-1}{2}",
+          "status": "verified",
+          "decision": "keep"
+        }
+      ],
+      "originalAttributionBeforeDOTR9": {
+        "nodeId": null,
+        "kind": "method_application",
+        "scope": "把x−1整体换元或直接令x−1等于±1。"
+      },
+      "DOTR9Attribution": {
+        "primaryAttributionId": "method:assignment",
+        "linkedExistingEntries": [
+          "method:assignment"
+        ],
+        "blockAttributions": [],
+        "role": "有源的具体应用或思想语境",
+        "candidatePromotion": false,
+        "bodyMoved": true,
+        "sourceReview": {
+          "round": "R9",
+          "itemId": "lesson-content:L211:shifted-coefficient-sums",
+          "sourceReviewStatus": "verified_with_evidence_in_exact_scope",
+          "mathReviewStatus": null,
+          "boundedReason": "y=x−1使1+2x=3+2y；y=1/−1或x=2/0分别给5^100与1，奇下标和差的一半(5^100−1)/2。两条完整路径均正确；换元有帮助但不是必需先修。 据具体程序核归属，允许多知识点；不以课次顺序决定身份。",
+          "deltaSha256": "7b7a25aaafac28581637935c3a47e4d4a994882ec6c827065759740a2ed6a1b0",
+          "platformStatus": "verified_local_pending_controller_acceptance",
+          "onlineReleaseStatus": "not_released_R9"
+        }
+      }
+    },
+    {
+      "id": "lesson-content:U17:assignment-constant",
+      "nodeId": "method:assignment",
+      "proposedNodeId": "proposal:book-1:assignment",
+      "kind": "example",
+      "origin": "editorial_proposal",
+      "title": "系数和赋值后求乘积常数项",
+      "scope": "先令x=1求参数，再配对两种幂次得到常数项；源中间式40x已订正为40，原式与勘误证据保留。",
+      "blocks": [
+        {
+          "role": "question",
+          "type": "text",
+          "value": "$\\left(x+\\frac ax\\right)\\left(2x-\\frac1x\\right)^5$展开式各项系数和为2，求常数项。【编辑明确定义域】x为非零实数，a为实参数。",
+          "evidenceIds": [
+            "ev:book5:U17:assignment-constant:b0"
+          ],
+          "wordingStatus": "source_based_reconstruction"
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "令$x=1$，得$(1+a)(2-1)^5=1+a=2$，故$a=1$。常数项由$x$乘第二因子中的$x^{-1}$项与$x^{-1}$乘其中的$x$项两部分构成。",
+          "evidenceIds": [
+            "ev:book5:U17:assignment-constant:b1"
+          ],
+          "wordingStatus": "source_based_reconstruction"
+        },
+        {
+          "role": "solution",
+          "type": "math",
+          "value": "T_{r+1}=C_5^r(2x)^{5-r}(-x^{-1})^r=(-1)^r2^{5-r}C_5^r x^{5-2r}",
+          "evidenceIds": [
+            "ev:book5:U17:assignment-constant:b2"
+          ],
+          "wordingStatus": "source_based_reconstruction"
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "含$x^{-1}$的项为$(-1)^3 2^2C_5^3x^{-1}=-40x^{-1}$；含$x$的项为$(-1)^2 2^3C_5^2x=80x$。",
+          "evidenceIds": [
+            "ev:book5:U17:assignment-constant:b3"
+          ],
+          "wordingStatus": "source_based_reconstruction"
+        },
+        {
+          "role": "solution",
+          "type": "math",
+          "value": "x\\cdot(-40x^{-1})+\\frac1x\\cdot80x=40",
+          "evidenceIds": [
+            "ev:book5:U17:assignment-constant:b4"
+          ],
+          "wordingStatus": "source_based_reconstruction",
+          "sourceConflictRetained": true
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "【编辑订正】原WMF中间等式末端写40x，但两项分别为−40和80，故末端改为40；源下一句的最终常数项40正确。原题、原式与原对象保留为可读取勘误证据。",
+          "evidenceIds": [
+            "ev:book5:U17:assignment-constant:b5"
+          ],
+          "wordingStatus": "source_based_reconstruction"
+        }
+      ],
+      "contentOrigin": "source_based_reconstruction",
+      "wordingStatus": "source_based_reconstruction",
+      "titleWordingStatus": "editorial_normalized_title",
+      "matching": {
+        "status": "confirmed",
+        "reason": "按本题实际任务和现有节点语义匹配；不从共用运算推定先修。"
+      },
+      "evidence": [
+        {
+          "id": "ev:book5:U17:assignment-constant:b0",
+          "sourceId": "U17",
+          "sourceSha256": "ff41e1297a5bfbce8879a537e793d14df0d9b3e2d2a149c9a1bc1443a9869b9f",
+          "locator": {
+            "headingPath": [
+              "系数和赋值后求乘积常数项"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 539,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 33,
+            "printedPage": null,
+            "equationObjectId": null,
+            "printedPageNote": "源无可见印刷页码；null不代表缺PDF页定位。"
+          },
+          "quote": "展开式中各项系数的和为2",
+          "quoteRepresentation": "native_text_short_quote",
+          "quoteCompleteness": "原文字层中的短引；完整有源整理另列",
+          "transcriptionWordingStatus": "source_based_reconstruction",
+          "sourceSupportedTranscription": "$\\left(x+\\frac ax\\right)\\left(2x-\\frac1x\\right)^5$展开式各项系数和为2，求常数项。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "mathSourceAssets": [
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image169.wmf",
+              "sourcePart": "word/media/image169.wmf",
+              "sha256": "243e0db99efca8ec8fff7b1bfea050196a554230fba6e651adcef0904ac4cf73"
+            }
+          ],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "U17",
+            "requestedPath": "increments/u17-v1/evidence/U17/page-33.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/U17.docx",
+          "sourceTitle": "第18单元 教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book5:U17:assignment-constant:b1",
+          "sourceId": "U17",
+          "sourceSha256": "ff41e1297a5bfbce8879a537e793d14df0d9b3e2d2a149c9a1bc1443a9869b9f",
+          "locator": {
+            "headingPath": [
+              "系数和赋值后求乘积常数项"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 544,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 34,
+            "printedPage": null,
+            "equationObjectId": null,
+            "printedPageNote": "源无可见印刷页码；null不代表缺PDF页定位。"
+          },
+          "quote": "其常数项由两部分构成",
+          "quoteRepresentation": "native_text_short_quote",
+          "quoteCompleteness": "原文字层中的短引；完整有源整理另列",
+          "transcriptionWordingStatus": "source_based_reconstruction",
+          "sourceSupportedTranscription": "令$x=1$，得$(1+a)(2-1)^5=1+a=2$，故$a=1$。常数项由$x$乘第二因子中的$x^{-1}$项与$x^{-1}$乘其中的$x$项两部分构成。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "mathSourceAssets": [
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image169.wmf",
+              "sourcePart": "word/media/image169.wmf",
+              "sha256": "243e0db99efca8ec8fff7b1bfea050196a554230fba6e651adcef0904ac4cf73"
+            },
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image180.wmf",
+              "sourcePart": "word/media/image180.wmf",
+              "sha256": "7c0f28908b1be54b6738796f488e9f3ac77555a80ba437b848b1fa4ca1f7ced6"
+            },
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image181.wmf",
+              "sourcePart": "word/media/image181.wmf",
+              "sha256": "4c6147c2e9b7f0d0eb8dd8c7ae0416ff82df931e75fd5c3985f3a337930acfe7"
+            },
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image182.wmf",
+              "sourcePart": "word/media/image182.wmf",
+              "sha256": "c4a15d80e34e62db69a991317f0f71edc322e9b5094da33babf4b80ffe6b2dfb"
+            },
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image183.wmf",
+              "sourcePart": "word/media/image183.wmf",
+              "sha256": "7f093bb19f44a305f8fcef5e7db76cb27a2bcf8e2a5d59db82b8effc70b29a3b"
+            },
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image184.wmf",
+              "sourcePart": "word/media/image184.wmf",
+              "sha256": "2f0347505fd7d9286915fb241bcbd63772da046f42a9cc60d042273b58a9fbae"
+            },
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image185.wmf",
+              "sourcePart": "word/media/image185.wmf",
+              "sha256": "b1bd3b4e0985e4dc3cfd58a0b3eaa7baa7266dfa73472cb4813eef00497151c4"
+            },
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image186.wmf",
+              "sourcePart": "word/media/image186.wmf",
+              "sha256": "2abe619eaa7d9022615d380d85fbbf199ed95481bdf038708747958a4afc5cd6"
+            },
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image186.wmf",
+              "sourcePart": "word/media/image186.wmf",
+              "sha256": "2abe619eaa7d9022615d380d85fbbf199ed95481bdf038708747958a4afc5cd6"
+            },
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image185.wmf",
+              "sourcePart": "word/media/image185.wmf",
+              "sha256": "b1bd3b4e0985e4dc3cfd58a0b3eaa7baa7266dfa73472cb4813eef00497151c4"
+            },
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image187.wmf",
+              "sourcePart": "word/media/image187.wmf",
+              "sha256": "37aeb3767924a1d5cf25f45d3475a105273e8c87d250b1750a242cb82db046f6"
+            }
+          ],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "U17",
+            "requestedPath": "increments/u17-v1/evidence/U17/page-34.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/U17.docx",
+          "sourceTitle": "第18单元 教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book5:U17:assignment-constant:b2",
+          "sourceId": "U17",
+          "sourceSha256": "ff41e1297a5bfbce8879a537e793d14df0d9b3e2d2a149c9a1bc1443a9869b9f",
+          "locator": {
+            "headingPath": [
+              "系数和赋值后求乘积常数项"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 545,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 34,
+            "printedPage": null,
+            "equationObjectId": null,
+            "printedPageNote": "源无可见印刷页码；null不代表缺PDF页定位。"
+          },
+          "quote": "T_{r+1}=C_5^r(2x)^{5-r}(-x^{-1})^r=(-1)^r2^{5-r}C_5^r x^{5-2r}",
+          "quoteRepresentation": "visual_math_transcription_only",
+          "quoteCompleteness": "仅数学可视转写，不声称为中文逐字原文",
+          "transcriptionWordingStatus": "source_based_reconstruction",
+          "sourceSupportedTranscription": "T_{r+1}=C_5^r(2x)^{5-r}(-x^{-1})^r=(-1)^r2^{5-r}C_5^r x^{5-2r}",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "mathSourceAssets": [
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image185.wmf",
+              "sourcePart": "word/media/image185.wmf",
+              "sha256": "b1bd3b4e0985e4dc3cfd58a0b3eaa7baa7266dfa73472cb4813eef00497151c4"
+            },
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image188.wmf",
+              "sourcePart": "word/media/image188.wmf",
+              "sha256": "73392e3428febdc89ed208de17392aa8cbc3766152dcba26dd9e06a19d4b4c1b"
+            },
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image186.wmf",
+              "sourcePart": "word/media/image186.wmf",
+              "sha256": "2abe619eaa7d9022615d380d85fbbf199ed95481bdf038708747958a4afc5cd6"
+            },
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image189.wmf",
+              "sourcePart": "word/media/image189.wmf",
+              "sha256": "55f556812e656aa05f73e59a17c90c8981d2c666ace38d0d76d844e3f8a1da87"
+            },
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image190.wmf",
+              "sourcePart": "word/media/image190.wmf",
+              "sha256": "f69f1fd06eb1380cd87894325f745a57eaccb6e86db8387d5070e7ba3fa68e83"
+            },
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image191.wmf",
+              "sourcePart": "word/media/image191.wmf",
+              "sha256": "3e00df4ec3cfbffe42be30d76d8a6aa4bd6f34d617b6e8d858163f45e826ab41"
+            }
+          ],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "U17",
+            "requestedPath": "increments/u17-v1/evidence/U17/page-34.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/U17.docx",
+          "sourceTitle": "第18单元 教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book5:U17:assignment-constant:b3",
+          "sourceId": "U17",
+          "sourceSha256": "ff41e1297a5bfbce8879a537e793d14df0d9b3e2d2a149c9a1bc1443a9869b9f",
+          "locator": {
+            "headingPath": [
+              "系数和赋值后求乘积常数项"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 545,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 34,
+            "printedPage": null,
+            "equationObjectId": null,
+            "printedPageNote": "源无可见印刷页码；null不代表缺PDF页定位。"
+          },
+          "quote": "故其展开式中含的项为",
+          "quoteRepresentation": "native_text_short_quote",
+          "quoteCompleteness": "原文字层中的短引；完整有源整理另列",
+          "transcriptionWordingStatus": "source_based_reconstruction",
+          "sourceSupportedTranscription": "含$x^{-1}$的项为$(-1)^3 2^2C_5^3x^{-1}=-40x^{-1}$；含$x$的项为$(-1)^2 2^3C_5^2x=80x$。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "mathSourceAssets": [
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image185.wmf",
+              "sourcePart": "word/media/image185.wmf",
+              "sha256": "b1bd3b4e0985e4dc3cfd58a0b3eaa7baa7266dfa73472cb4813eef00497151c4"
+            },
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image188.wmf",
+              "sourcePart": "word/media/image188.wmf",
+              "sha256": "73392e3428febdc89ed208de17392aa8cbc3766152dcba26dd9e06a19d4b4c1b"
+            },
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image186.wmf",
+              "sourcePart": "word/media/image186.wmf",
+              "sha256": "2abe619eaa7d9022615d380d85fbbf199ed95481bdf038708747958a4afc5cd6"
+            },
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image189.wmf",
+              "sourcePart": "word/media/image189.wmf",
+              "sha256": "55f556812e656aa05f73e59a17c90c8981d2c666ace38d0d76d844e3f8a1da87"
+            },
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image190.wmf",
+              "sourcePart": "word/media/image190.wmf",
+              "sha256": "f69f1fd06eb1380cd87894325f745a57eaccb6e86db8387d5070e7ba3fa68e83"
+            },
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image191.wmf",
+              "sourcePart": "word/media/image191.wmf",
+              "sha256": "3e00df4ec3cfbffe42be30d76d8a6aa4bd6f34d617b6e8d858163f45e826ab41"
+            }
+          ],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "U17",
+            "requestedPath": "increments/u17-v1/evidence/U17/page-34.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/U17.docx",
+          "sourceTitle": "第18单元 教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book5:U17:assignment-constant:b4",
+          "sourceId": "U17",
+          "sourceSha256": "ff41e1297a5bfbce8879a537e793d14df0d9b3e2d2a149c9a1bc1443a9869b9f",
+          "locator": {
+            "headingPath": [
+              "系数和赋值后求乘积常数项"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 546,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 34,
+            "printedPage": null,
+            "equationObjectId": null,
+            "printedPageNote": "源无可见印刷页码；null不代表缺PDF页定位。"
+          },
+          "quote": "x\\cdot(-40x^{-1})+\\frac1x\\cdot80x=40x",
+          "quoteRepresentation": "visual_math_transcription_only",
+          "quoteCompleteness": "仅数学可视转写，不声称为中文逐字原文",
+          "transcriptionWordingStatus": "source_based_reconstruction",
+          "sourceSupportedTranscription": "x\\cdot(-40x^{-1})+\\frac1x\\cdot80x=40x",
+          "wordingChecked": false,
+          "mathChecked": false,
+          "mathSourceAsset": null,
+          "mathSourceAssets": [
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image183.wmf",
+              "sourcePart": "word/media/image183.wmf",
+              "sha256": "7f093bb19f44a305f8fcef5e7db76cb27a2bcf8e2a5d59db82b8effc70b29a3b"
+            },
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image192.wmf",
+              "sourcePart": "word/media/image192.wmf",
+              "sha256": "0513f6555cf8b929220df2df88479e515e0267c17d7bf16fa43a8383fcb1d1c5"
+            },
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image193.wmf",
+              "sourcePart": "word/media/image193.wmf",
+              "sha256": "6ce0cf53037c32da669266931e91bfb3bed37d1bd8e5bd2d824ac146e5c16b45"
+            }
+          ],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "U17",
+            "requestedPath": "increments/u17-v1/evidence/U17/page-34.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/U17.docx",
+          "sourceTitle": "第18单元 教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book5:U17:assignment-constant:b5",
+          "sourceId": "U17",
+          "sourceSha256": "ff41e1297a5bfbce8879a537e793d14df0d9b3e2d2a149c9a1bc1443a9869b9f",
+          "locator": {
+            "headingPath": [
+              "系数和赋值后求乘积常数项"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 546,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 34,
+            "printedPage": null,
+            "equationObjectId": null,
+            "printedPageNote": "源无可见印刷页码；null不代表缺PDF页定位。"
+          },
+          "quote": "因此所求的原式展开式的常数项为",
+          "quoteRepresentation": "native_text_short_quote",
+          "quoteCompleteness": "原文字层中的短引；完整有源整理另列",
+          "transcriptionWordingStatus": "source_based_reconstruction",
+          "sourceSupportedTranscription": "源紧接着给出最终常数项40；但前一原WMF中间等式末端写40x，原对象数字与字母均已核，不能当正确等式发布。编辑建议仅将末端40x改为40。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "mathSourceAssets": [
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image183.wmf",
+              "sourcePart": "word/media/image183.wmf",
+              "sha256": "7f093bb19f44a305f8fcef5e7db76cb27a2bcf8e2a5d59db82b8effc70b29a3b"
+            },
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image192.wmf",
+              "sourcePart": "word/media/image192.wmf",
+              "sha256": "0513f6555cf8b929220df2df88479e515e0267c17d7bf16fa43a8383fcb1d1c5"
+            },
+            {
+              "path": "increments/u17-v1/evidence/U17/objects/image193.wmf",
+              "sourcePart": "word/media/image193.wmf",
+              "sha256": "6ce0cf53037c32da669266931e91bfb3bed37d1bd8e5bd2d824ac146e5c16b45"
+            }
+          ],
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "U17",
+            "requestedPath": "increments/u17-v1/evidence/U17/page-34.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/U17.docx",
+          "sourceTitle": "第18单元 教学设计",
+          "sourceStatus": "partially_reviewed"
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": [
+        {
+          "id": "formula:book5:U17:assignment-constant:b0:m0",
+          "location": "blocks[0].value.inlineMath[0]",
+          "sourceString": "$\\left(x+\\frac ax\\right)\\left(2x-\\frac1x\\right)^5$展开式各项系数和为2，求常数项。【编辑明确定义域】x为非零实数，a为实参数。",
+          "latex": "\\left(x+\\frac ax\\right)\\left(2x-\\frac1x\\right)^5",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:U17:assignment-constant:b1:m0",
+          "location": "blocks[1].value.inlineMath[0]",
+          "sourceString": "令$x=1$，得$(1+a)(2-1)^5=1+a=2$，故$a=1$。常数项由$x$乘第二因子中的$x^{-1}$项与$x^{-1}$乘其中的$x$项两部分构成。",
+          "latex": "x=1",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:U17:assignment-constant:b1:m1",
+          "location": "blocks[1].value.inlineMath[1]",
+          "sourceString": "令$x=1$，得$(1+a)(2-1)^5=1+a=2$，故$a=1$。常数项由$x$乘第二因子中的$x^{-1}$项与$x^{-1}$乘其中的$x$项两部分构成。",
+          "latex": "(1+a)(2-1)^5=1+a=2",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:U17:assignment-constant:b1:m2",
+          "location": "blocks[1].value.inlineMath[2]",
+          "sourceString": "令$x=1$，得$(1+a)(2-1)^5=1+a=2$，故$a=1$。常数项由$x$乘第二因子中的$x^{-1}$项与$x^{-1}$乘其中的$x$项两部分构成。",
+          "latex": "a=1",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:U17:assignment-constant:b1:m3",
+          "location": "blocks[1].value.inlineMath[3]",
+          "sourceString": "令$x=1$，得$(1+a)(2-1)^5=1+a=2$，故$a=1$。常数项由$x$乘第二因子中的$x^{-1}$项与$x^{-1}$乘其中的$x$项两部分构成。",
+          "latex": "x",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:U17:assignment-constant:b1:m4",
+          "location": "blocks[1].value.inlineMath[4]",
+          "sourceString": "令$x=1$，得$(1+a)(2-1)^5=1+a=2$，故$a=1$。常数项由$x$乘第二因子中的$x^{-1}$项与$x^{-1}$乘其中的$x$项两部分构成。",
+          "latex": "x^{-1}",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:U17:assignment-constant:b1:m5",
+          "location": "blocks[1].value.inlineMath[5]",
+          "sourceString": "令$x=1$，得$(1+a)(2-1)^5=1+a=2$，故$a=1$。常数项由$x$乘第二因子中的$x^{-1}$项与$x^{-1}$乘其中的$x$项两部分构成。",
+          "latex": "x^{-1}",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:U17:assignment-constant:b1:m6",
+          "location": "blocks[1].value.inlineMath[6]",
+          "sourceString": "令$x=1$，得$(1+a)(2-1)^5=1+a=2$，故$a=1$。常数项由$x$乘第二因子中的$x^{-1}$项与$x^{-1}$乘其中的$x$项两部分构成。",
+          "latex": "x",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:U17:assignment-constant:b2:m0",
+          "location": "blocks[2].value",
+          "sourceString": "T_{r+1}=C_5^r(2x)^{5-r}(-x^{-1})^r=(-1)^r2^{5-r}C_5^r x^{5-2r}",
+          "latex": "T_{r+1}=C_5^r(2x)^{5-r}(-x^{-1})^r=(-1)^r2^{5-r}C_5^r x^{5-2r}",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:U17:assignment-constant:b3:m0",
+          "location": "blocks[3].value.inlineMath[0]",
+          "sourceString": "含$x^{-1}$的项为$(-1)^3 2^2C_5^3x^{-1}=-40x^{-1}$；含$x$的项为$(-1)^2 2^3C_5^2x=80x$。",
+          "latex": "x^{-1}",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:U17:assignment-constant:b3:m1",
+          "location": "blocks[3].value.inlineMath[1]",
+          "sourceString": "含$x^{-1}$的项为$(-1)^3 2^2C_5^3x^{-1}=-40x^{-1}$；含$x$的项为$(-1)^2 2^3C_5^2x=80x$。",
+          "latex": "(-1)^3 2^2C_5^3x^{-1}=-40x^{-1}",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:U17:assignment-constant:b3:m2",
+          "location": "blocks[3].value.inlineMath[2]",
+          "sourceString": "含$x^{-1}$的项为$(-1)^3 2^2C_5^3x^{-1}=-40x^{-1}$；含$x$的项为$(-1)^2 2^3C_5^2x=80x$。",
+          "latex": "x",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:U17:assignment-constant:b3:m3",
+          "location": "blocks[3].value.inlineMath[3]",
+          "sourceString": "含$x^{-1}$的项为$(-1)^3 2^2C_5^3x^{-1}=-40x^{-1}$；含$x$的项为$(-1)^2 2^3C_5^2x=80x$。",
+          "latex": "(-1)^2 2^3C_5^2x=80x",
+          "status": "verified",
+          "decision": "keep"
+        },
+        {
+          "id": "formula:book5:U17:assignment-constant:b4:m0",
+          "location": "blocks[4].value",
+          "sourceString": "x\\cdot(-40x^{-1})+\\frac1x\\cdot80x=40",
+          "latex": "x\\cdot(-40x^{-1})+\\frac1x\\cdot80x=40",
+          "status": "verified",
+          "decision": "keep_source_conflict",
+          "originalBeforeDOTR13": {
+            "id": "formula:book5:U17:assignment-constant:b4:m0",
+            "location": "blocks[4].value",
+            "sourceString": "x\\cdot(-40x^{-1})+\\frac1x\\cdot80x=40x",
+            "latex": "x\\cdot(-40x^{-1})+\\frac1x\\cdot80x=40x",
+            "status": "unresolved",
+            "decision": "keep_source_conflict"
+          },
+          "DOTR13Verification": {
+            "itemId": "formula:book5:U17:assignment-constant:b4:m0",
+            "sourceReviewStatus": "verified_with_evidence_in_exact_scope",
+            "reviewColumns": {
+              "source": "本组完整题目/条件/解答由同摘要原DOCX、精确段及原生对象核实；必要跨源只复用列明支持。",
+              "mathematics": "独立推导和精确计算完成；源错误、源条件缺口、编辑补证与历史误判分别记录。",
+              "ownDisplay": "所列主源及教材PNG已实际打开；U18个别云渲染文字叠行以原生XML交叉读。建议正文未在真实平台渲染；此包JSON是可读证据，不是平台显示验收。",
+              "platformAcceptance": "not_performed",
+              "onlineRelease": "not_performed"
+            },
+            "boundedReason": "原字段blocks[4].value，原公式x\\cdot(-40x^{-1})+\\frac1x\\cdot80x=40x。x≠0；代x=1求系数和，1+a=2给a=1；第二因子的x^(−1)项为−40x^(−1)，x项80x，匹配两种指数和0的乘积得−40+80=40。原image192末端确写40x，源下一句写40；修正文末40x→40而保留原对象与错误记录。",
+            "deltaSha256": "d966fae2cbeefe281f276f3d2c02a89728eff8e660290bb9aed01d09590678bd",
+            "localDisplayVerifiedWidths": [
+              1440,
+              390
+            ],
+            "wholeSourceReviewedByPlatform": false,
+            "onlineStatus": "not_released_R13"
+          }
+        }
+      ],
+      "originalBeforeDOTR13": {
+        "blocks": [
+          {
+            "role": "question",
+            "type": "text",
+            "value": "$\\left(x+\\frac ax\\right)\\left(2x-\\frac1x\\right)^5$展开式各项系数和为2，求常数项。",
+            "evidenceIds": [
+              "ev:book5:U17:assignment-constant:b0"
+            ],
+            "wordingStatus": "source_based_reconstruction"
+          },
+          {
+            "role": "solution",
+            "type": "text",
+            "value": "令$x=1$，得$(1+a)(2-1)^5=1+a=2$，故$a=1$。常数项由$x$乘第二因子中的$x^{-1}$项与$x^{-1}$乘其中的$x$项两部分构成。",
+            "evidenceIds": [
+              "ev:book5:U17:assignment-constant:b1"
+            ],
+            "wordingStatus": "source_based_reconstruction"
+          },
+          {
+            "role": "solution",
+            "type": "math",
+            "value": "T_{r+1}=C_5^r(2x)^{5-r}(-x^{-1})^r=(-1)^r2^{5-r}C_5^r x^{5-2r}",
+            "evidenceIds": [
+              "ev:book5:U17:assignment-constant:b2"
+            ],
+            "wordingStatus": "source_based_reconstruction"
+          },
+          {
+            "role": "solution",
+            "type": "text",
+            "value": "含$x^{-1}$的项为$(-1)^3 2^2C_5^3x^{-1}=-40x^{-1}$；含$x$的项为$(-1)^2 2^3C_5^2x=80x$。",
+            "evidenceIds": [
+              "ev:book5:U17:assignment-constant:b3"
+            ],
+            "wordingStatus": "source_based_reconstruction"
+          },
+          {
+            "role": "solution",
+            "type": "math",
+            "value": "x\\cdot(-40x^{-1})+\\frac1x\\cdot80x=40x",
+            "evidenceIds": [
+              "ev:book5:U17:assignment-constant:b4"
+            ],
+            "wordingStatus": "source_based_reconstruction",
+            "sourceConflictRetained": true
+          },
+          {
+            "role": "solution",
+            "type": "text",
+            "value": "源紧接着给出最终常数项40；但前一原WMF中间等式末端写40x，原对象数字与字母均已核，不能当正确等式发布。编辑建议仅将末端40x改为40。",
+            "evidenceIds": [
+              "ev:book5:U17:assignment-constant:b5"
+            ],
+            "wordingStatus": "source_based_reconstruction"
+          }
+        ],
+        "formulaRecords": [
+          {
+            "id": "formula:book5:U17:assignment-constant:b0:m0",
+            "location": "blocks[0].value.inlineMath[0]",
+            "sourceString": "$\\left(x+\\frac ax\\right)\\left(2x-\\frac1x\\right)^5$展开式各项系数和为2，求常数项。",
+            "latex": "\\left(x+\\frac ax\\right)\\left(2x-\\frac1x\\right)^5",
+            "status": "verified",
+            "decision": "keep"
+          },
+          {
+            "id": "formula:book5:U17:assignment-constant:b1:m0",
+            "location": "blocks[1].value.inlineMath[0]",
+            "sourceString": "令$x=1$，得$(1+a)(2-1)^5=1+a=2$，故$a=1$。常数项由$x$乘第二因子中的$x^{-1}$项与$x^{-1}$乘其中的$x$项两部分构成。",
+            "latex": "x=1",
+            "status": "verified",
+            "decision": "keep"
+          },
+          {
+            "id": "formula:book5:U17:assignment-constant:b1:m1",
+            "location": "blocks[1].value.inlineMath[1]",
+            "sourceString": "令$x=1$，得$(1+a)(2-1)^5=1+a=2$，故$a=1$。常数项由$x$乘第二因子中的$x^{-1}$项与$x^{-1}$乘其中的$x$项两部分构成。",
+            "latex": "(1+a)(2-1)^5=1+a=2",
+            "status": "verified",
+            "decision": "keep"
+          },
+          {
+            "id": "formula:book5:U17:assignment-constant:b1:m2",
+            "location": "blocks[1].value.inlineMath[2]",
+            "sourceString": "令$x=1$，得$(1+a)(2-1)^5=1+a=2$，故$a=1$。常数项由$x$乘第二因子中的$x^{-1}$项与$x^{-1}$乘其中的$x$项两部分构成。",
+            "latex": "a=1",
+            "status": "verified",
+            "decision": "keep"
+          },
+          {
+            "id": "formula:book5:U17:assignment-constant:b1:m3",
+            "location": "blocks[1].value.inlineMath[3]",
+            "sourceString": "令$x=1$，得$(1+a)(2-1)^5=1+a=2$，故$a=1$。常数项由$x$乘第二因子中的$x^{-1}$项与$x^{-1}$乘其中的$x$项两部分构成。",
+            "latex": "x",
+            "status": "verified",
+            "decision": "keep"
+          },
+          {
+            "id": "formula:book5:U17:assignment-constant:b1:m4",
+            "location": "blocks[1].value.inlineMath[4]",
+            "sourceString": "令$x=1$，得$(1+a)(2-1)^5=1+a=2$，故$a=1$。常数项由$x$乘第二因子中的$x^{-1}$项与$x^{-1}$乘其中的$x$项两部分构成。",
+            "latex": "x^{-1}",
+            "status": "verified",
+            "decision": "keep"
+          },
+          {
+            "id": "formula:book5:U17:assignment-constant:b1:m5",
+            "location": "blocks[1].value.inlineMath[5]",
+            "sourceString": "令$x=1$，得$(1+a)(2-1)^5=1+a=2$，故$a=1$。常数项由$x$乘第二因子中的$x^{-1}$项与$x^{-1}$乘其中的$x$项两部分构成。",
+            "latex": "x^{-1}",
+            "status": "verified",
+            "decision": "keep"
+          },
+          {
+            "id": "formula:book5:U17:assignment-constant:b1:m6",
+            "location": "blocks[1].value.inlineMath[6]",
+            "sourceString": "令$x=1$，得$(1+a)(2-1)^5=1+a=2$，故$a=1$。常数项由$x$乘第二因子中的$x^{-1}$项与$x^{-1}$乘其中的$x$项两部分构成。",
+            "latex": "x",
+            "status": "verified",
+            "decision": "keep"
+          },
+          {
+            "id": "formula:book5:U17:assignment-constant:b2:m0",
+            "location": "blocks[2].value",
+            "sourceString": "T_{r+1}=C_5^r(2x)^{5-r}(-x^{-1})^r=(-1)^r2^{5-r}C_5^r x^{5-2r}",
+            "latex": "T_{r+1}=C_5^r(2x)^{5-r}(-x^{-1})^r=(-1)^r2^{5-r}C_5^r x^{5-2r}",
+            "status": "verified",
+            "decision": "keep"
+          },
+          {
+            "id": "formula:book5:U17:assignment-constant:b3:m0",
+            "location": "blocks[3].value.inlineMath[0]",
+            "sourceString": "含$x^{-1}$的项为$(-1)^3 2^2C_5^3x^{-1}=-40x^{-1}$；含$x$的项为$(-1)^2 2^3C_5^2x=80x$。",
+            "latex": "x^{-1}",
+            "status": "verified",
+            "decision": "keep"
+          },
+          {
+            "id": "formula:book5:U17:assignment-constant:b3:m1",
+            "location": "blocks[3].value.inlineMath[1]",
+            "sourceString": "含$x^{-1}$的项为$(-1)^3 2^2C_5^3x^{-1}=-40x^{-1}$；含$x$的项为$(-1)^2 2^3C_5^2x=80x$。",
+            "latex": "(-1)^3 2^2C_5^3x^{-1}=-40x^{-1}",
+            "status": "verified",
+            "decision": "keep"
+          },
+          {
+            "id": "formula:book5:U17:assignment-constant:b3:m2",
+            "location": "blocks[3].value.inlineMath[2]",
+            "sourceString": "含$x^{-1}$的项为$(-1)^3 2^2C_5^3x^{-1}=-40x^{-1}$；含$x$的项为$(-1)^2 2^3C_5^2x=80x$。",
+            "latex": "x",
+            "status": "verified",
+            "decision": "keep"
+          },
+          {
+            "id": "formula:book5:U17:assignment-constant:b3:m3",
+            "location": "blocks[3].value.inlineMath[3]",
+            "sourceString": "含$x^{-1}$的项为$(-1)^3 2^2C_5^3x^{-1}=-40x^{-1}$；含$x$的项为$(-1)^2 2^3C_5^2x=80x$。",
+            "latex": "(-1)^2 2^3C_5^2x=80x",
+            "status": "verified",
+            "decision": "keep"
+          },
+          {
+            "id": "formula:book5:U17:assignment-constant:b4:m0",
+            "location": "blocks[4].value",
+            "sourceString": "x\\cdot(-40x^{-1})+\\frac1x\\cdot80x=40x",
+            "latex": "x\\cdot(-40x^{-1})+\\frac1x\\cdot80x=40x",
+            "status": "unresolved",
+            "decision": "keep_source_conflict"
+          }
+        ],
+        "title": "系数和赋值后求乘积常数项",
+        "scope": "先令x=1求参数，再配对两种幂次得到常数项；源中间式40x另挂未决。",
+        "origin": "editorial_proposal",
+        "wordingStatus": "source_based_reconstruction"
+      },
+      "originalAttributionBeforeDOTR13": {
+        "nodeId": null,
+        "scope": "先令x=1求参数，再配对两种幂次得到常数项；源中间式40x已订正为40，原式与勘误证据保留。"
+      },
+      "DOTR13Attribution": {
+        "receivedAfter": {
+          "suggestedAttributionId": "method:assignment",
+          "candidatePromotion": false,
+          "role": "来源支持的具体程序、应用或思想语境"
+        },
+        "resolvedAttributionId": "method:assignment",
+        "linkedExistingEntries": [
+          "method:assignment"
+        ],
+        "bodyMoved": true,
+        "sourceReview": {
+          "round": "R13",
+          "itemId": "lesson-content:U17:assignment-constant",
+          "sourceReviewStatus": "verified_with_evidence_in_exact_scope",
+          "boundedReason": "x≠0；代x=1求系数和，1+a=2给a=1；第二因子的x^(−1)项为−40x^(−1)，x项80x，匹配两种指数和0的乘积得−40+80=40。原image192末端确写40x，源下一句写40；修正文末40x→40而保留原对象与错误记录。",
+          "deltaSha256": "d966fae2cbeefe281f276f3d2c02a89728eff8e660290bb9aed01d09590678bd",
+          "platformStatus": "verified_local_pending_controller_acceptance",
+          "onlineReleaseStatus": "not_released_R13"
+        }
+      }
+    }
+  ],
+  "requirements": {
+    "knowledgeRequirement": {
+      "value": null,
+      "status": "unresolved",
+      "scope": "node",
+      "evidence": []
+    },
+    "academicQualityLevel": {
+      "value": null,
+      "status": "unresolved",
+      "scope": "node",
+      "evidence": []
+    },
+    "competencyLevel": {
+      "value": null,
+      "status": "unresolved",
+      "scope": "node",
+      "evidence": []
+    },
+    "competencyLinks": {
+      "value": null,
+      "status": "unresolved",
+      "scope": "node",
+      "evidence": []
+    }
+  },
+  "methodCandidates": [],
+  "relationProposals": [],
+  "legacyFormulaRecords": []
+}

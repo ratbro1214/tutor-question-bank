@@ -1,0 +1,2193 @@
+{
+  "nodeId": "kp:21351",
+  "contents": [
+    {
+      "id": "lesson-content:book3:L086:teaching-context",
+      "nodeId": "kp:21351",
+      "proposedNodeId": null,
+      "kind": "context",
+      "origin": "editorial_proposal",
+      "title": "统计活动教学背景、目标及导入",
+      "scope": "L086教案具体任务；原题、条件、数据、原解答与图表位置完整保留。教案体质标准及建议属2023教学材料历史情境，不作为当前医学结论。",
+      "blocks": [
+        {
+          "role": "context",
+          "type": "text",
+          "value": "第10课时",
+          "evidenceIds": [
+            "ev:book3:L086:p1"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "13.6统计活动",
+          "evidenceIds": [
+            "ev:book3:L086:p2"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "【教学内容分析】",
+          "evidenceIds": [
+            "ev:book3:L086:p3"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "本节课是上教版普通高中教科书数学必修第三册第13章第六节统计活动．本节课在学习了获取数据的基本途径及相关概念，抽样、统计图表、用样本估计总体等统计的基本知识和基本技能之后，在此通过统计活动的方式进行知识总结和综合应用;另一方面在积累基本活动方法的同时，让学生应用所学的统计基础知识和基本技能去发现问题分析问题和解决实际问题，在体会统计与现实生活密切联系的同时，培养学生的理性思维，明确统计活动的几个主要步骤，在活动中认识到统计发挥的作用，针对不同的问题选择合适的统计方法，在这一系列过程中发展学生的统计观念，提高数据分析和处理的数学素养.",
+          "evidenceIds": [
+            "ev:book3:L086:p4"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "本节课通过一个具体的统计活动（高一年级学生的体质健康报告），完整了解统计活动的五个环节，引导学生全程参与收集数据、整理分析数据，发展学生数据分析素养.",
+          "evidenceIds": [
+            "ev:book3:L086:p5"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "【教学目标设置】",
+          "evidenceIds": [
+            "ev:book3:L086:p6"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "了解统计活动的基本步骤，结合具体问题，经历完整的统计过程，在不断积累统计活动经验的同时，加深理解统计的思想与方法，发展数据分析素养．",
+          "evidenceIds": [
+            "ev:book3:L086:p7"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "【教学重点及学习难点】",
+          "evidenceIds": [
+            "ev:book3:L086:p8"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "教学重点：了解统计活动的基本步骤．",
+          "evidenceIds": [
+            "ev:book3:L086:p9"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "学习难点：对收集的数据进行整理与分析.",
+          "evidenceIds": [
+            "ev:book3:L086:p10"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "【教学过程设计】",
+          "evidenceIds": [
+            "ev:book3:L086:p11"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "（环节一）创设情境 引入课题",
+          "evidenceIds": [
+            "ev:book3:L086:p12"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "学生身体综合素质如何，不仅是每位学生、家长关心的，也是社会和政府所关注的问题．今天的学习围绕完成一份“高一年级学生的体质健康报告”展开，让我们一起感受统计活动的主要过程．",
+          "evidenceIds": [
+            "ev:book3:L086:p13"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "[设计意图]通过具体实际情境的创设，为接下来开展的统计活动作好铺垫，引导学生从生活实际中发现问题，感受数学的应用价值.",
+          "evidenceIds": [
+            "ev:book3:L086:p14"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "（环节二）应用理解  讨论交流",
+          "evidenceIds": [
+            "ev:book3:L086:p15"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "首先，我们了解一下这个案例的背景．",
+          "evidenceIds": [
+            "ev:book3:L086:p16"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "《国家学生体质健康标准》是评价学生综合素质的重要依据．体质健康测试的每一项测试内容都反映了学生身体健康素质的一个或多个要素，所以体质健康测试有助于学生了解自身健康状况，促进学生积极地参加体育锻炼，增强学生的体质和提高健康水平．",
+          "evidenceIds": [
+            "ev:book3:L086:p17"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "下面，我们学习统计活动的主要过程：",
+          "evidenceIds": [
+            "ev:book3:L086:p18"
+          ]
+        }
+      ],
+      "wordingStatus": "source_based_reconstruction",
+      "titleWordingStatus": "editorial_title",
+      "matching": {
+        "status": "confirmed",
+        "reason": "复用现有知识或方法实体；原句及补写符号区分，不冒充教材定义。"
+      },
+      "evidence": [
+        {
+          "id": "ev:book3:L086:p1",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 1,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 1,
+            "printedPage": 1,
+            "pdfPage": 1,
+            "equationObjectId": null
+          },
+          "quote": "第10课时",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-01.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p2",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 1,
+            "printedPage": 1,
+            "pdfPage": 1,
+            "equationObjectId": null
+          },
+          "quote": "13.6统计活动",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-01.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p3",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 3,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 1,
+            "printedPage": 1,
+            "pdfPage": 1,
+            "equationObjectId": null
+          },
+          "quote": "【教学内容分析】",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-01.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p4",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 4,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 1,
+            "printedPage": 1,
+            "pdfPage": 1,
+            "equationObjectId": null
+          },
+          "quote": "本节课是上教版普通高中教科书数学必修第三册第1",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-01.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p5",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 5,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 1,
+            "printedPage": 1,
+            "pdfPage": 1,
+            "equationObjectId": null
+          },
+          "quote": "本节课通过一个具体的统计活动（高一年级学生的体",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-01.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p6",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 6,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 1,
+            "printedPage": 1,
+            "pdfPage": 1,
+            "equationObjectId": null
+          },
+          "quote": "【教学目标设置】",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-01.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p7",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 7,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 1,
+            "printedPage": 1,
+            "pdfPage": 1,
+            "equationObjectId": null
+          },
+          "quote": "了解统计活动的基本步骤，结合具体问题，经历完整",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-01.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p8",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 8,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 1,
+            "printedPage": 1,
+            "pdfPage": 1,
+            "equationObjectId": null
+          },
+          "quote": "【教学重点及学习难点】",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-01.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p9",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 9,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 1,
+            "printedPage": 1,
+            "pdfPage": 1,
+            "equationObjectId": null
+          },
+          "quote": "教学重点：了解统计活动的基本步骤．",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-01.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p10",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 10,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 1,
+            "printedPage": 1,
+            "pdfPage": 1,
+            "equationObjectId": null
+          },
+          "quote": "学习难点：对收集的数据进行整理与分析.",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-01.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p11",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 11,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 1,
+            "printedPage": 1,
+            "pdfPage": 1,
+            "equationObjectId": null
+          },
+          "quote": "【教学过程设计】",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-01.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p12",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 12,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 2,
+            "printedPage": 2,
+            "pdfPage": 2,
+            "equationObjectId": null
+          },
+          "quote": "（环节一）创设情境 引入课题",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-02.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p13",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 13,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 2,
+            "printedPage": 2,
+            "pdfPage": 2,
+            "equationObjectId": null
+          },
+          "quote": "学生身体综合素质如何，不仅是每位学生、家长关心",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-02.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p14",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 14,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 2,
+            "printedPage": 2,
+            "pdfPage": 2,
+            "equationObjectId": null
+          },
+          "quote": "[设计意图]通过具体实际情境的创设，为接下来开",
+          "wordingStatus": "source_based_reconstruction",
+          "diagnosticNote": "原XML原字数值按字定位、Noto CJK文字及DejaVu Sans Mono数字小幅重排后实际补读；非未改动的Word原页。主渲染隐藏P14尾句、P21跨页片段和表10男字；表格数值局部放大清晰，未把缩略图显示损失误报为源数值缺失。",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-02.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p15",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 15,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 2,
+            "printedPage": 2,
+            "pdfPage": 2,
+            "equationObjectId": null
+          },
+          "quote": "（环节二）应用理解  讨论交流",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-02.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p16",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 16,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 2,
+            "printedPage": 2,
+            "pdfPage": 2,
+            "equationObjectId": null
+          },
+          "quote": "首先，我们了解一下这个案例的背景．",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-02.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p17",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 17,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 2,
+            "printedPage": 2,
+            "pdfPage": 2,
+            "equationObjectId": null
+          },
+          "quote": "《国家学生体质健康标准》是评价学生综合素质的重",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-02.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p18",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 18,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 2,
+            "printedPage": 2,
+            "pdfPage": 2,
+            "equationObjectId": null
+          },
+          "quote": "下面，我们学习统计活动的主要过程：",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-02.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": []
+    },
+    {
+      "id": "lesson-content:book3:L086:initial-conclusion",
+      "nodeId": "kp:21351",
+      "proposedNodeId": null,
+      "kind": "context",
+      "origin": "editorial_proposal",
+      "title": "体质健康报告结论与样本推断随机性",
+      "scope": "统计调查五环节形成初步结论；原情境结论是样本推断，核本批全过程用途，不将源所有健康项目数值标作全面核实。",
+      "blocks": [
+        {
+          "role": "context",
+          "type": "text",
+          "value": "5.初步结论",
+          "evidenceIds": [
+            "ev:book3:L086:p2004"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "依据上述数据，讨论学校高一年级学生的体质健康达标情况，指出存在的问题并提出改进的建议．",
+          "evidenceIds": [
+            "ev:book3:L086:p2005"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "生 从表格中的数据可以估计该校高一年级中，优秀率为1.6%，良好率为34.4%，达标率为92.2%.优秀率比较低，达标率较高.从男女生测试结果看，校内男生的优秀率明显高于女生，不及格人数也高于女生.结合体质健康的各项指标，相对而言，学生的身体形态、柔韧性等情况较弱.另外，样本学生中不及格的学生都是男生，这与抽样的随机性有一定的关系.",
+          "evidenceIds": [
+            "ev:book3:L086:p2006"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "生 建议加强体育锻炼，养成良好的体育锻炼习惯，培养自觉进行体育锻炼的优良品质.",
+          "evidenceIds": [
+            "ev:book3:L086:p2007"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "同学们对“高一年级学生的体质健康报告”做了全面的分析，从中我们了解到，对于一个具体的统计问题，总体的分布、集中趋势、离散程度以及百分位数等在理论上都是确定的，但往往又是未知的，需要我们通过样本去估计。而样本具有随机性，样本的分布、集中趋势、离散程度以及百分位数等都有随机性。所以，由样本推断总体时，其统计结果不是确定的.",
+          "evidenceIds": [
+            "ev:book3:L086:p2008"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "[设计意图]通过一个统计活动的全过程，完整呈现统计过程中确定调查方案、确定调查对象、收集数据、数据整理与分析、初步结论等五个环节，明确统计活动的开展流程，理解数据分析的含义，发展数据分析素养.",
+          "evidenceIds": [
+            "ev:book3:L086:p2009"
+          ]
+        }
+      ],
+      "wordingStatus": "source_based_reconstruction",
+      "titleWordingStatus": "editorial_title",
+      "matching": {
+        "status": "confirmed",
+        "reason": "复用现有知识或方法实体；原句及补写符号区分，不冒充教材定义。"
+      },
+      "evidence": [
+        {
+          "id": "ev:book3:L086:p2004",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2004,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 23,
+            "printedPage": 23,
+            "pdfPage": 23,
+            "equationObjectId": null
+          },
+          "quote": "5.初步结论",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-23.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p2005",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2005,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 23,
+            "printedPage": 23,
+            "pdfPage": 23,
+            "equationObjectId": null
+          },
+          "quote": "依据上述数据，讨论学校高一年级学生的体质健康达",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-23.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p2006",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2006,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 23,
+            "printedPage": 23,
+            "pdfPage": 23,
+            "equationObjectId": null
+          },
+          "quote": "生 从表格中的数据可以估计该校高一年级中，优秀",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-23.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p2007",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2007,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 23,
+            "printedPage": 23,
+            "pdfPage": 23,
+            "equationObjectId": null
+          },
+          "quote": "生 建议加强体育锻炼，养成良好的体育锻炼习惯，",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-23.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p2008",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2008,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 23,
+            "printedPage": 23,
+            "pdfPage": 23,
+            "equationObjectId": null,
+            "renderedPageEnd": 24
+          },
+          "quote": "同学们对“高一年级学生的体质健康报告”做了全面",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-23.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p2009",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2009,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 24,
+            "printedPage": 24,
+            "pdfPage": 24,
+            "equationObjectId": null
+          },
+          "quote": "[设计意图]通过一个统计活动的全过程，完整呈现",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-24.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": [],
+      "sourceUsageReviewB12": {
+        "batch": "B12",
+        "status": "frozen_context_checked_with_declared_limits",
+        "wholeSourceVerified": false,
+        "nativeChineseWholePageVerified": false,
+        "sourceIssueIds": []
+      }
+    },
+    {
+      "id": "lesson-content:book3:L086:lesson-summary",
+      "nodeId": "kp:21351",
+      "proposedNodeId": null,
+      "kind": "context",
+      "origin": "editorial_proposal",
+      "title": "统计活动知识、思想方法和素养小结",
+      "scope": "L086教案具体任务；原题、条件、数据、原解答与图表位置完整保留。教案体质标准及建议属2023教学材料历史情境，不作为当前医学结论。",
+      "blocks": [
+        {
+          "role": "context",
+          "type": "text",
+          "value": "（环节四）课堂小结 布置作业",
+          "evidenceIds": [
+            "ev:book3:L086:p2147"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "课堂小结",
+          "evidenceIds": [
+            "ev:book3:L086:p2148"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "本节课，我们完成一份“高一年级学生的体质健康报告”，经历了完整的统计活动过程．在分析学生的体质健康数据中，进一步增强了用样本估计总体的统计意识，加深理解了统计思想与方法，发展了数据分析素养．",
+          "evidenceIds": [
+            "ev:book3:L086:p2149"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "知识：统计活动的过程．",
+          "evidenceIds": [
+            "ev:book3:L086:p2150"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "思想方法：数形结合，推理．",
+          "evidenceIds": [
+            "ev:book3:L086:p2151"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "核心素养：数据分析．",
+          "evidenceIds": [
+            "ev:book3:L086:p2152"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "课后作业",
+          "evidenceIds": [
+            "ev:book3:L086:p2154"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "[基础练习]",
+          "evidenceIds": [
+            "ev:book3:L086:p2155"
+          ]
+        }
+      ],
+      "wordingStatus": "source_based_reconstruction",
+      "titleWordingStatus": "editorial_title",
+      "matching": {
+        "status": "confirmed",
+        "reason": "复用现有知识或方法实体；原句及补写符号区分，不冒充教材定义。"
+      },
+      "evidence": [
+        {
+          "id": "ev:book3:L086:p2147",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2147,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 26,
+            "printedPage": 26,
+            "pdfPage": 26,
+            "equationObjectId": null
+          },
+          "quote": "（环节四）课堂小结 布置作业",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-26.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p2148",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2148,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 26,
+            "printedPage": 26,
+            "pdfPage": 26,
+            "equationObjectId": null
+          },
+          "quote": "课堂小结",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-26.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p2149",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2149,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 27,
+            "printedPage": 27,
+            "pdfPage": 27,
+            "equationObjectId": null
+          },
+          "quote": "本节课，我们完成一份“高一年级学生的体质健康报",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-27.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p2150",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2150,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 27,
+            "printedPage": 27,
+            "pdfPage": 27,
+            "equationObjectId": null
+          },
+          "quote": "知识：统计活动的过程．",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-27.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p2151",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2151,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 27,
+            "printedPage": 27,
+            "pdfPage": 27,
+            "equationObjectId": null
+          },
+          "quote": "思想方法：数形结合，推理．",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-27.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p2152",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2152,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 27,
+            "printedPage": 27,
+            "pdfPage": 27,
+            "equationObjectId": null
+          },
+          "quote": "核心素养：数据分析．",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-27.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p2154",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2154,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 27,
+            "printedPage": 27,
+            "pdfPage": 27,
+            "equationObjectId": null
+          },
+          "quote": "课后作业",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-27.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p2155",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2155,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 27,
+            "printedPage": 27,
+            "pdfPage": 27,
+            "equationObjectId": null
+          },
+          "quote": "[基础练习]",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-27.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": []
+    },
+    {
+      "id": "lesson-content:book3:L086:home-statistics",
+      "nodeId": "kp:21351",
+      "proposedNodeId": null,
+      "kind": "contrast",
+      "origin": "editorial_proposal",
+      "title": "基础练习1 统计活动辨析及原答案",
+      "scope": "L086教案具体任务；原题、条件、数据、原解答与图表位置完整保留。教案体质标准及建议属2023教学材料历史情境，不作为当前医学结论。",
+      "blocks": [
+        {
+          "role": "question",
+          "type": "text",
+          "value": "1. 你认为下面哪些活动属于统计活动？",
+          "evidenceIds": [
+            "ev:book3:L086:p2156"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "（1）某测量队要测量一块三角形土地的面积，先分别测得三条边长，然后利用海伦公式求土地的面积；",
+          "evidenceIds": [
+            "ev:book3:L086:p2157"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "（2）研究人员通过测量儿童及其父母的身高，来预测儿童长大成人后的身",
+          "evidenceIds": [
+            "ev:book3:L086:p2158"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "高；",
+          "evidenceIds": [
+            "ev:book3:L086:p2159"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "（3）研究人员通过调查上海市某校高一年级新生的平均身高，来推断上海市青少年的平均身高．",
+          "evidenceIds": [
+            "ev:book3:L086:p2160"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "1. （1）不是. （2）是.（3）是.",
+          "evidenceIds": [
+            "ev:book3:L086:p2221"
+          ]
+        }
+      ],
+      "wordingStatus": "source_based_reconstruction",
+      "titleWordingStatus": "editorial_title",
+      "matching": {
+        "status": "confirmed",
+        "reason": "复用现有知识或方法实体；原句及补写符号区分，不冒充教材定义。"
+      },
+      "evidence": [
+        {
+          "id": "ev:book3:L086:p2156",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2156,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 27,
+            "printedPage": 27,
+            "pdfPage": 27,
+            "equationObjectId": null
+          },
+          "quote": "1. 你认为下面哪些活动属于统计活动？",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-27.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p2157",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2157,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 27,
+            "printedPage": 27,
+            "pdfPage": 27,
+            "equationObjectId": null
+          },
+          "quote": "（1）某测量队要测量一块三角形土地的面积，先分",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-27.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p2158",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2158,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 27,
+            "printedPage": 27,
+            "pdfPage": 27,
+            "equationObjectId": null
+          },
+          "quote": "（2）研究人员通过测量儿童及其父母的身高，来预",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-27.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p2159",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2159,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 27,
+            "printedPage": 27,
+            "pdfPage": 27,
+            "equationObjectId": null
+          },
+          "quote": "高；",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-27.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p2160",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2160,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 27,
+            "printedPage": 27,
+            "pdfPage": 27,
+            "equationObjectId": null
+          },
+          "quote": "（3）研究人员通过调查上海市某校高一年级新生的",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-27.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p2221",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2221,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 30,
+            "printedPage": 30,
+            "pdfPage": 30,
+            "equationObjectId": null
+          },
+          "quote": "1. （1）不是. （2）是.（3）是.",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-30.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": []
+    },
+    {
+      "id": "lesson-content:book3:L086:closing",
+      "nodeId": "kp:21351",
+      "proposedNodeId": null,
+      "kind": "context",
+      "origin": "editorial_proposal",
+      "title": "结束语、统计思想与参考答案标题",
+      "scope": "L086教案具体任务；原题、条件、数据、原解答与图表位置完整保留。教案体质标准及建议属2023教学材料历史情境，不作为当前医学结论。",
+      "blocks": [
+        {
+          "role": "context",
+          "type": "text",
+          "value": "[设计意图]对本节课所涉及的知识和思想方法进行小结，布置本节课的课后作业，能力拓展题供学有余力的学生选做.",
+          "evidenceIds": [
+            "ev:book3:L086:p2213"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "（环节五）结束语",
+          "evidenceIds": [
+            "ev:book3:L086:p2214"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "统计具有特有的思想，包括随机思想，估计思想，检验思想等.传统数学研究的是确定性问题，因此对结果的判断原则只能是“对”或者“错”，而统计学是通过数据推断数据产生的背景，因此统计学对结果的判断原则一般是 “好”与“坏”.正如统计学教授李金昌所说：统计学既是一门科学，也是一门艺术.",
+          "evidenceIds": [
+            "ev:book3:L086:p2215"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "[设计意图]融入学科德育，升华本节课的育人价值．",
+          "evidenceIds": [
+            "ev:book3:L086:p2216"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "课后作业参考答案：",
+          "evidenceIds": [
+            "ev:book3:L086:p2218"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "[基础练习]",
+          "evidenceIds": [
+            "ev:book3:L086:p2220"
+          ]
+        }
+      ],
+      "wordingStatus": "source_based_reconstruction",
+      "titleWordingStatus": "editorial_title",
+      "matching": {
+        "status": "confirmed",
+        "reason": "复用现有知识或方法实体；原句及补写符号区分，不冒充教材定义。"
+      },
+      "evidence": [
+        {
+          "id": "ev:book3:L086:p2213",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2213,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 30,
+            "printedPage": 30,
+            "pdfPage": 30,
+            "equationObjectId": null
+          },
+          "quote": "[设计意图]对本节课所涉及的知识和思想方法进行",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-30.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p2214",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2214,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 30,
+            "printedPage": 30,
+            "pdfPage": 30,
+            "equationObjectId": null
+          },
+          "quote": "（环节五）结束语",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-30.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p2215",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2215,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 30,
+            "printedPage": 30,
+            "pdfPage": 30,
+            "equationObjectId": null
+          },
+          "quote": "统计具有特有的思想，包括随机思想，估计思想，检",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-30.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p2216",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2216,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 30,
+            "printedPage": 30,
+            "pdfPage": 30,
+            "equationObjectId": null
+          },
+          "quote": "[设计意图]融入学科德育，升华本节课的育人价值",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-30.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p2218",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2218,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 30,
+            "printedPage": 30,
+            "pdfPage": 30,
+            "equationObjectId": null
+          },
+          "quote": "课后作业参考答案：",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-30.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L086:p2220",
+          "sourceId": "L086",
+          "sourceSha256": "4c4cf2ab80b50a3433607fd9479f1b05179c4352905153db67db3c21ddd91266",
+          "locator": {
+            "headingPath": [
+              "13.6统计活动"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 2220,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 30,
+            "printedPage": 30,
+            "pdfPage": 30,
+            "equationObjectId": null
+          },
+          "quote": "[基础练习]",
+          "wordingStatus": "source_based_reconstruction",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L086",
+            "requestedPath": "increments/u05-u08-l041-l080-l084-v2/work/L086-isolated/evidence/L086/page-30.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L086.docx",
+          "sourceTitle": "13.6-统计活动-教学设计",
+          "sourceStatus": "partially_reviewed"
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": []
+    }
+  ],
+  "requirements": {
+    "knowledgeRequirement": {
+      "sourceId": "S2025-PDF",
+      "sourceEdition": "2017年版2025年修订",
+      "scope": "topic",
+      "value": "能够根据实际问题的需求，选择恰当的抽样方法获取样本数据，并从中提取需要的数字特征推断总体。能够正确运用数据分析的方法解决简单的实际问题。",
+      "originalWording": "能够根据实际问题的需求，选择恰当的抽样方法获取样本数据，并从中提取需要的数字特征推断总体。能够正确运用数据分析的方法解决简单的实际问题。",
+      "status": "inherited_topic",
+      "evidence": [
+        {
+          "id": "ev:book3:L086:S2025:36:4ade6f",
+          "sourceId": "S2025-PDF",
+          "sourceSha256": "fc9258bb37ed2e052a4b1be608865a5481f770ae7e28ce536e835d2354353f86",
+          "locator": {
+            "part": "PDF",
+            "pdfPage": 36,
+            "renderedPage": 36,
+            "printedPage": 33,
+            "paragraphIndex": null,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "equationObjectId": null,
+            "headingPath": []
+          },
+          "quote": "能够根据实际问题的需求，选择恰当的抽样方法获取样",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": "r80/assets/30c7a14945b1f199cd8f7093.png",
+            "bytes": 331438,
+            "sha256": "30c7a14945b1f199cd8f70930c7867250cfe3e882153c33669c306fda8382090",
+            "sourceId": "S2025-PDF",
+            "kind": "new_local_original_pdf_page_preview",
+            "localOrigin": "/Users/yichen.zhang/vibe coding/codex/projects/数学教育平台/knowledge-network/review/official-lessons-return/2025-primary/r80-isolated-integration-20261011-025222/assets/derived/S2025-PDF-page-36.png",
+            "expectedHashMatched": true,
+            "requestedPath": "increments/u05-u08-l041-l086-final-v2-repaired/work/L086-isolated/evidence/S2025/pdf-036.png",
+            "sourceSha256": "fc9258bb37ed2e052a4b1be608865a5481f770ae7e28ce536e835d2354353f86"
+          },
+          "originalPdfUrl": "source-original/S2025-PDF.pdf",
+          "originalUrl": "source-original/S2025-PDF.pdf",
+          "sourceTitle": "S2025-PDF",
+          "sourceStatus": "original_source_identity_preserved"
+        }
+      ],
+      "applicableTask": "L086中对应抽样、图表、数字特征和统计推断任务；不扩大成每一教案答案正确性的背书。"
+    },
+    "academicQualityLevel": {
+      "sourceId": "S2025-PDF",
+      "sourceEdition": "2017年版2025年修订",
+      "scope": "topic",
+      "value": null,
+      "originalWording": null,
+      "status": "unresolved",
+      "evidence": [],
+      "reason": "没有本节点及该具体任务的直接质量水平赋级依据。"
+    },
+    "competencyLevel": {
+      "sourceId": "S2025-PDF",
+      "sourceEdition": "2017年版2025年修订",
+      "scope": "topic",
+      "value": null,
+      "originalWording": null,
+      "status": "unresolved",
+      "evidence": [],
+      "reason": "素养关联不等于素养水平。"
+    },
+    "competencyLinks": {
+      "sourceId": "S2025-PDF",
+      "sourceEdition": "2017年版2025年修订",
+      "scope": "topic",
+      "value": [
+        "competency:data",
+        "competency:modeling",
+        "competency:reasoning",
+        "competency:computation"
+      ],
+      "originalWording": "重点提升数据分析、数学建模、逻辑推理和数学运算素养。",
+      "status": "inherited_topic",
+      "evidence": [
+        {
+          "id": "ev:book3:L086:S2025:36:ab958e",
+          "sourceId": "S2025-PDF",
+          "sourceSha256": "fc9258bb37ed2e052a4b1be608865a5481f770ae7e28ce536e835d2354353f86",
+          "locator": {
+            "part": "PDF",
+            "pdfPage": 36,
+            "renderedPage": 36,
+            "printedPage": 33,
+            "paragraphIndex": null,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "equationObjectId": null,
+            "headingPath": []
+          },
+          "quote": "重点提升数据分析、数学建模、逻辑推理和数学运算素",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": "r80/assets/30c7a14945b1f199cd8f7093.png",
+            "bytes": 331438,
+            "sha256": "30c7a14945b1f199cd8f70930c7867250cfe3e882153c33669c306fda8382090",
+            "sourceId": "S2025-PDF",
+            "kind": "new_local_original_pdf_page_preview",
+            "localOrigin": "/Users/yichen.zhang/vibe coding/codex/projects/数学教育平台/knowledge-network/review/official-lessons-return/2025-primary/r80-isolated-integration-20261011-025222/assets/derived/S2025-PDF-page-36.png",
+            "expectedHashMatched": true,
+            "requestedPath": "increments/u05-u08-l041-l086-final-v2-repaired/work/L086-isolated/evidence/S2025/pdf-036.png",
+            "sourceSha256": "fc9258bb37ed2e052a4b1be608865a5481f770ae7e28ce536e835d2354353f86"
+          },
+          "originalPdfUrl": "source-original/S2025-PDF.pdf",
+          "originalUrl": "source-original/S2025-PDF.pdf",
+          "sourceTitle": "S2025-PDF",
+          "sourceStatus": "original_source_identity_preserved"
+        }
+      ]
+    }
+  },
+  "methodCandidates": [],
+  "relationProposals": [
+    {
+      "id": "relation:book3:L086:initial-conclusion",
+      "action": "add",
+      "existingEdgeId": null,
+      "sourceNodeId": "method:statistical-modeling",
+      "targetNodeId": "kp:21351",
+      "relationType": "APPLIES_TO",
+      "scope": "体质健康报告按五环节形成初步结论",
+      "basis": "source_explicit",
+      "reason": "有本课具体任务中的实际使用证据；不由章节顺序或共同运算推出先修。",
+      "status": "proposed"
+    }
+  ],
+  "legacyFormulaRecords": []
+}

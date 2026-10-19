@@ -1,0 +1,7578 @@
+{
+  "version": 1,
+  "note": "按同名或明确的分类包含关系导航，不表示知识等价，不修改审核状态。",
+  "mappings": [
+    {
+      "sourceId": "topic:K001",
+      "sourceName": "集合的含义、元素与集合、常用数集、空集与全集",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K002",
+      "sourceName": "子集、集合相等、并集、交集、补集",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K003",
+      "sourceName": "命题、推出关系、充分条件、必要条件、充要条件",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K004",
+      "sourceName": "命题否定、反证法入门",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K005",
+      "sourceName": "等式、不等式性质与等价变形",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K006",
+      "sourceName": "一元二次方程、韦达定理与解集表示",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K007",
+      "sourceName": "一元二次不等式及含参数不等式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K008",
+      "sourceName": "基本不等式及其应用",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K009",
+      "sourceName": "实数指数幂、幂的运算性质",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K010",
+      "sourceName": "对数概念、对数恒等式、换底公式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K011",
+      "sourceName": "指数/对数实际背景",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K012",
+      "sourceName": "幂函数图像与性质",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K013",
+      "sourceName": "指数函数图像、性质与应用",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K014",
+      "sourceName": "对数函数图像、性质与应用",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K015",
+      "sourceName": "函数概念、定义域、值域、对应关系",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K016",
+      "sourceName": "单调性、奇偶性、最值、周期性初步",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K017",
+      "sourceName": "函数应用、反函数",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K018",
+      "sourceName": "任意角、弧度制、三角比",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K019",
+      "sourceName": "同角三角关系、诱导公式、和差倍半公式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K020",
+      "sourceName": "正弦定理、余弦定理与解三角形",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K021",
+      "sourceName": "正弦、余弦、正切函数图像与性质",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K022",
+      "sourceName": "函数 y=Asin(ωx+φ) 的图像变换",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K023",
+      "sourceName": "三角函数综合应用",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K024",
+      "sourceName": "向量概念、线性运算、共线向量",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-VECTOR-TRIANGLE",
+          "name": "平面向量与解三角形",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K025",
+      "sourceName": "数量积、夹角、投影",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-VECTOR-TRIANGLE",
+          "name": "平面向量与解三角形",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K026",
+      "sourceName": "向量坐标表示与应用",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-VECTOR-TRIANGLE",
+          "name": "平面向量与解三角形",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K027",
+      "sourceName": "复数概念、代数形式和四则运算",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COMPLEX",
+          "name": "复数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K028",
+      "sourceName": "复平面、模、共轭复数",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COMPLEX",
+          "name": "复数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K029",
+      "sourceName": "复数三角形式与实系数二次方程",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COMPLEX",
+          "name": "复数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K030",
+      "sourceName": "平面基本性质、空间点线面关系",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K031",
+      "sourceName": "直线与直线、直线与平面、平面与平面位置关系",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K032",
+      "sourceName": "异面直线距离与空间角",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K033",
+      "sourceName": "柱、锥、台、多面体、旋转体结构特征",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K034",
+      "sourceName": "表面积、体积、球",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K035",
+      "sourceName": "空间几何体应用",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K036",
+      "sourceName": "随机现象、样本空间、事件关系",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-PROBABILITY",
+          "name": "概率",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K037",
+      "sourceName": "古典概率、频率与概率",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-PROBABILITY",
+          "name": "概率",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K038",
+      "sourceName": "随机事件独立性",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-PROBABILITY",
+          "name": "概率",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K039",
+      "sourceName": "总体、样本、数据获取与抽样方法",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K040",
+      "sourceName": "统计图表与数据描述",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K041",
+      "sourceName": "统计估计与统计活动",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K042",
+      "sourceName": "倾斜角、斜率、直线方程",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K043",
+      "sourceName": "两条直线位置关系、点到直线距离",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K044",
+      "sourceName": "圆、椭圆、双曲线、抛物线定义与标准方程",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K045",
+      "sourceName": "圆锥曲线几何性质",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K046",
+      "sourceName": "曲线与方程、轨迹问题",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K047",
+      "sourceName": "空间向量运算、基本定理、坐标表示",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SPACE-VECTOR",
+          "name": "空间向量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K048",
+      "sourceName": "空间向量解决立体几何",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SPACE-VECTOR",
+          "name": "空间向量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K049",
+      "sourceName": "数列概念、递推关系",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SEQUENCE",
+          "name": "数列",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K050",
+      "sourceName": "等差数列、等比数列及求和",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SEQUENCE",
+          "name": "数列",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K051",
+      "sourceName": "数学归纳法、迭代序列",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SEQUENCE",
+          "name": "数列",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K052",
+      "sourceName": "导数概念、几何意义、瞬时变化率",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-DERIVATIVE",
+          "name": "导数及其应用",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K053",
+      "sourceName": "导数运算",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-DERIVATIVE",
+          "name": "导数及其应用",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K054",
+      "sourceName": "单调性、极值、最值与实际优化",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-DERIVATIVE",
+          "name": "导数及其应用",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K055",
+      "sourceName": "分类加法、分步乘法原理",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K056",
+      "sourceName": "排列、组合、二项式定理",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K057",
+      "sourceName": "计数原理在古典概率中的应用",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K058",
+      "sourceName": "条件概率、全概率、贝叶斯公式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K059",
+      "sourceName": "随机变量、分布列、期望、方差",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K060",
+      "sourceName": "二项分布、超几何分布、正态分布初步",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K061",
+      "sourceName": "相关关系、散点图、相关系数",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K062",
+      "sourceName": "一元线性回归模型",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "topic:K063",
+      "sourceName": "2×2列联表与独立性检验思想",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21001",
+      "sourceName": "集合初步",
+      "knowledgeCodes": [
+        {
+          "code": "HS-SET-CONCEPT",
+          "name": "集合的概念与表示",
+          "chapterCode": "HS-SETS-LOGIC",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21002",
+      "sourceName": "集合的含义",
+      "knowledgeCodes": [
+        {
+          "code": "HS-SET-CONCEPT",
+          "name": "集合的概念与表示",
+          "chapterCode": "HS-SETS-LOGIC",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21003",
+      "sourceName": "元素与集合的关系",
+      "knowledgeCodes": [
+        {
+          "code": "HS-SET-CONCEPT",
+          "name": "集合的概念与表示",
+          "chapterCode": "HS-SETS-LOGIC",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [
+        {
+          "id": "kg:senior-math-core-v1:SETS.SET.E1",
+          "name": "元素与集合的关系",
+          "basis": "exact_name"
+        }
+      ],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21004",
+      "sourceName": "元素的特征",
+      "knowledgeCodes": [
+        {
+          "code": "HS-SET-CONCEPT",
+          "name": "集合的概念与表示",
+          "chapterCode": "HS-SETS-LOGIC",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21005",
+      "sourceName": "有限集、无限集",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21006",
+      "sourceName": "特殊集合的表示",
+      "knowledgeCodes": [
+        {
+          "code": "HS-SET-CONCEPT",
+          "name": "集合的概念与表示",
+          "chapterCode": "HS-SETS-LOGIC",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21007",
+      "sourceName": "空集",
+      "knowledgeCodes": [
+        {
+          "code": "HS-SET-CONCEPT",
+          "name": "集合的概念与表示",
+          "chapterCode": "HS-SETS-LOGIC",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21008",
+      "sourceName": "集合相等",
+      "knowledgeCodes": [
+        {
+          "code": "HS-SET-RELATION",
+          "name": "集合的基本关系",
+          "chapterCode": "HS-SETS-LOGIC",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21012",
+      "sourceName": "区间、开区间、闭区间",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21013",
+      "sourceName": "子集",
+      "knowledgeCodes": [
+        {
+          "code": "HS-SET-RELATION",
+          "name": "集合的基本关系",
+          "chapterCode": "HS-SETS-LOGIC",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21014",
+      "sourceName": "真子集",
+      "knowledgeCodes": [
+        {
+          "code": "HS-SET-RELATION",
+          "name": "集合的基本关系",
+          "chapterCode": "HS-SETS-LOGIC",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21015",
+      "sourceName": "集合的运算",
+      "knowledgeCodes": [
+        {
+          "code": "HS-SET-OPERATION",
+          "name": "集合的基本运算",
+          "chapterCode": "HS-SETS-LOGIC",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21016",
+      "sourceName": "交集",
+      "knowledgeCodes": [
+        {
+          "code": "HS-SET-OPERATION",
+          "name": "集合的基本运算",
+          "chapterCode": "HS-SETS-LOGIC",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21017",
+      "sourceName": "并集",
+      "knowledgeCodes": [
+        {
+          "code": "HS-SET-OPERATION",
+          "name": "集合的基本运算",
+          "chapterCode": "HS-SETS-LOGIC",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21018",
+      "sourceName": "全集",
+      "knowledgeCodes": [
+        {
+          "code": "HS-SET-OPERATION",
+          "name": "集合的基本运算",
+          "chapterCode": "HS-SETS-LOGIC",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21019",
+      "sourceName": "给定集合一个子集的补集",
+      "knowledgeCodes": [
+        {
+          "code": "HS-SET-OPERATION",
+          "name": "集合的基本运算",
+          "chapterCode": "HS-SETS-LOGIC",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21020",
+      "sourceName": "文氏图",
+      "knowledgeCodes": [
+        {
+          "code": "HS-SET-OPERATION",
+          "name": "集合的基本运算",
+          "chapterCode": "HS-SETS-LOGIC",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21021",
+      "sourceName": "集合语言与思想",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21022",
+      "sourceName": "常用逻辑用语",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21023",
+      "sourceName": "命题",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21024",
+      "sourceName": "真命题",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21025",
+      "sourceName": "假命题",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21026",
+      "sourceName": "形如“若α，则β”命题的集合语言描述",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21027",
+      "sourceName": "推出关系",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21028",
+      "sourceName": "充分条件与必要条件",
+      "knowledgeCodes": [
+        {
+          "code": "HS-LOGIC-CONDITION",
+          "name": "充分条件、必要条件与充要条件",
+          "chapterCode": "HS-SETS-LOGIC",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21029",
+      "sourceName": "充要条件",
+      "knowledgeCodes": [
+        {
+          "code": "HS-LOGIC-CONDITION",
+          "name": "充分条件、必要条件与充要条件",
+          "chapterCode": "HS-SETS-LOGIC",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21030",
+      "sourceName": "常见陈述句的否定形式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21250",
+      "sourceName": "全集与补集",
+      "knowledgeCodes": [
+        {
+          "code": "HS-SET-OPERATION",
+          "name": "集合的基本运算",
+          "chapterCode": "HS-SETS-LOGIC",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21053",
+      "sourceName": "不等式和不等式组的解集",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21037",
+      "sourceName": "方程和方程组的解集",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21032",
+      "sourceName": "等式的概念",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21033",
+      "sourceName": "等式的基本性质",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21034",
+      "sourceName": "等式的传递性",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21035",
+      "sourceName": "等式的加法性质",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21036",
+      "sourceName": "等式的乘法性质",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21038",
+      "sourceName": "一元一次方程的解集",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21039",
+      "sourceName": "一元二次方程的解集",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21040",
+      "sourceName": "恒等式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21041",
+      "sourceName": "一元二次方程根与系数的关系（韦达定理）",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21042",
+      "sourceName": "不等式的概念",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21043",
+      "sourceName": "两个实数大小的比较",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21047",
+      "sourceName": "不等式的基本性质",
+      "knowledgeCodes": [
+        {
+          "code": "HS-INEQ-PROPERTY",
+          "name": "不等式的性质",
+          "chapterCode": "HS-INEQUALITY",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21048",
+      "sourceName": "不等式的传递性",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21049",
+      "sourceName": "不等式的加法性质",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21050",
+      "sourceName": "不等式的乘法性质",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21051",
+      "sourceName": "不等式的常用性质",
+      "knowledgeCodes": [
+        {
+          "code": "HS-INEQ-PROPERTY",
+          "name": "不等式的性质",
+          "chapterCode": "HS-INEQUALITY",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21052",
+      "sourceName": "常用不等式（平方和与积）",
+      "knowledgeCodes": [
+        {
+          "code": "HS-INEQ-BASIC",
+          "name": "基本不等式",
+          "chapterCode": "HS-INEQUALITY",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21055",
+      "sourceName": "一元二次不等式",
+      "knowledgeCodes": [
+        {
+          "code": "HS-INEQ-QUADRATIC",
+          "name": "一元二次不等式",
+          "chapterCode": "HS-INEQUALITY",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [
+        {
+          "id": "kg:senior-math-core-v1:INEQ.QUADRATIC",
+          "name": "一元二次不等式",
+          "basis": "exact_name"
+        }
+      ],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21056",
+      "sourceName": "一元二次不等式的定义",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21060",
+      "sourceName": "基本不等式",
+      "knowledgeCodes": [
+        {
+          "code": "HS-INEQ-BASIC",
+          "name": "基本不等式",
+          "chapterCode": "HS-INEQUALITY",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21061",
+      "sourceName": "平均值的概念",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21062",
+      "sourceName": "算术平均值的概念",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21063",
+      "sourceName": "几何平均值的概念",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21064",
+      "sourceName": "平均值不等式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21065",
+      "sourceName": "常用不等式（和平方与积）",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21066",
+      "sourceName": "三角不等式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21435",
+      "sourceName": "三个二次的关系",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-INEQUALITY",
+          "name": "等式与不等式",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21067",
+      "sourceName": "幂",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21068",
+      "sourceName": "整数指数幂",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21069",
+      "sourceName": "有理数指数幂",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21070",
+      "sourceName": "幂的运算法则",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21071",
+      "sourceName": "实数指数幂",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21072",
+      "sourceName": "对数的概念",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21073",
+      "sourceName": "对数的性质",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21074",
+      "sourceName": "常用对数与自然对数",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21075",
+      "sourceName": "对数运算法则",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21076",
+      "sourceName": "换底公式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21251",
+      "sourceName": "根式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21252",
+      "sourceName": "对数恒等式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21077",
+      "sourceName": "幂函数",
+      "knowledgeCodes": [
+        {
+          "code": "HS-POWER-FUNCTION",
+          "name": "幂函数的图象与性质",
+          "chapterCode": "HS-ELEMENTARY-FUNCTION",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21079",
+      "sourceName": "指数函数的概念",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21082",
+      "sourceName": "对数函数的概念",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21078",
+      "sourceName": "幂函数的图象与性质",
+      "knowledgeCodes": [
+        {
+          "code": "HS-POWER-FUNCTION",
+          "name": "幂函数的图象与性质",
+          "chapterCode": "HS-ELEMENTARY-FUNCTION",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21080",
+      "sourceName": "指数函数的图象与性质",
+      "knowledgeCodes": [
+        {
+          "code": "HS-EXP-FUNCTION",
+          "name": "指数函数的图象与性质",
+          "chapterCode": "HS-ELEMENTARY-FUNCTION",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21083",
+      "sourceName": "对数函数的图象与性质",
+      "knowledgeCodes": [
+        {
+          "code": "HS-LOG-FUNCTION",
+          "name": "对数函数的图象与性质",
+          "chapterCode": "HS-ELEMENTARY-FUNCTION",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21253",
+      "sourceName": "函数图象的平移",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21254",
+      "sourceName": "对数的基本不等式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21085",
+      "sourceName": "函数的概念",
+      "knowledgeCodes": [
+        {
+          "code": "HS-FUNC-CONCEPT",
+          "name": "函数的概念与表示",
+          "chapterCode": "HS-FUNCTION",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21086",
+      "sourceName": "定义域、值域",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21088",
+      "sourceName": "单调性",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21089",
+      "sourceName": "奇偶性",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21090",
+      "sourceName": "最大值与最小值",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21091",
+      "sourceName": "周期性",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21092",
+      "sourceName": "函数的图象变换",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21093",
+      "sourceName": "函数零点",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21094",
+      "sourceName": "函数与方程",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21095",
+      "sourceName": "函数模型的应用",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21096",
+      "sourceName": "反函数",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21255",
+      "sourceName": "函数的定义",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21256",
+      "sourceName": "相同函数",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21257",
+      "sourceName": "函数的对应关系",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21258",
+      "sourceName": "奇函数",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21259",
+      "sourceName": "偶函数",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21260",
+      "sourceName": "严格增函数",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21261",
+      "sourceName": "严格减函数",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21262",
+      "sourceName": "函数的单调区间",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21263",
+      "sourceName": "连续函数的零点存在定理",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21265",
+      "sourceName": "互为反函数的两函数图像的关系",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21420",
+      "sourceName": "分段表示函数",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21421",
+      "sourceName": "函数的图象",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21213",
+      "sourceName": "变化率",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-DERIVATIVE",
+          "name": "导数及其应用",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21210",
+      "sourceName": "数列与函数的关系",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SEQUENCE",
+          "name": "数列",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21097",
+      "sourceName": "角的概念推广",
+      "knowledgeCodes": [
+        {
+          "code": "HS-TRIG-ANGLE",
+          "name": "任意角与弧度制",
+          "chapterCode": "HS-TRIG-FUNCTION",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21098",
+      "sourceName": "弧度制",
+      "knowledgeCodes": [
+        {
+          "code": "HS-TRIG-ANGLE",
+          "name": "任意角与弧度制",
+          "chapterCode": "HS-TRIG-FUNCTION",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21099",
+      "sourceName": "弧长与扇形面积",
+      "knowledgeCodes": [
+        {
+          "code": "HS-TRIG-ANGLE",
+          "name": "任意角与弧度制",
+          "chapterCode": "HS-TRIG-FUNCTION",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [
+        {
+          "id": "kg:senior-math-core-v1:TRIG.ANGLE.E2",
+          "name": "弧长与扇形面积",
+          "basis": "exact_name"
+        }
+      ],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21100",
+      "sourceName": "任意角的三角函数",
+      "knowledgeCodes": [
+        {
+          "code": "HS-TRIG-DEFINITION",
+          "name": "任意角的三角函数",
+          "chapterCode": "HS-TRIG-FUNCTION",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [
+        {
+          "id": "kg:senior-math-core-v1:TRIG.DEFINITION",
+          "name": "任意角的三角函数",
+          "basis": "exact_name"
+        }
+      ],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21101",
+      "sourceName": "正弦函数的定义",
+      "knowledgeCodes": [
+        {
+          "code": "HS-TRIG-DEFINITION",
+          "name": "任意角的三角函数",
+          "chapterCode": "HS-TRIG-FUNCTION",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21102",
+      "sourceName": "余弦函数的定义",
+      "knowledgeCodes": [
+        {
+          "code": "HS-TRIG-DEFINITION",
+          "name": "任意角的三角函数",
+          "chapterCode": "HS-TRIG-FUNCTION",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21103",
+      "sourceName": "正切函数的定义",
+      "knowledgeCodes": [
+        {
+          "code": "HS-TRIG-DEFINITION",
+          "name": "任意角的三角函数",
+          "chapterCode": "HS-TRIG-FUNCTION",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21104",
+      "sourceName": "余切函数的定义",
+      "knowledgeCodes": [
+        {
+          "code": "HS-TRIG-DEFINITION",
+          "name": "任意角的三角函数",
+          "chapterCode": "HS-TRIG-FUNCTION",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21105",
+      "sourceName": "同角三角函数的基本关系式",
+      "knowledgeCodes": [
+        {
+          "code": "HS-TRIG-IDENTITY",
+          "name": "同角三角函数基本关系",
+          "chapterCode": "HS-TRIG-FUNCTION",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21106",
+      "sourceName": "诱导公式",
+      "knowledgeCodes": [
+        {
+          "code": "HS-TRIG-INDUCTION",
+          "name": "诱导公式",
+          "chapterCode": "HS-TRIG-FUNCTION",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [
+        {
+          "id": "kg:senior-math-core-v1:TRIG.IDENTITY.E1",
+          "name": "诱导公式",
+          "basis": "exact_name"
+        }
+      ],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21107",
+      "sourceName": "正弦定理",
+      "knowledgeCodes": [
+        {
+          "code": "HS-TRIANGLE-SINE-LAW",
+          "name": "正弦定理",
+          "chapterCode": "HS-VECTOR-TRIANGLE",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [
+        {
+          "id": "kg:senior-math-core-v1:TRIG.SINE-LAW",
+          "name": "正弦定理",
+          "basis": "exact_name"
+        }
+      ],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21108",
+      "sourceName": "余弦定理",
+      "knowledgeCodes": [
+        {
+          "code": "HS-TRIANGLE-COSINE-LAW",
+          "name": "余弦定理",
+          "chapterCode": "HS-VECTOR-TRIANGLE",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21117",
+      "sourceName": "加法定理",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21118",
+      "sourceName": "二倍角公式",
+      "knowledgeCodes": [
+        {
+          "code": "HS-TRIG-DOUBLE",
+          "name": "二倍角公式",
+          "chapterCode": "HS-TRIG-FUNCTION",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21119",
+      "sourceName": "辅助角公式",
+      "knowledgeCodes": [
+        {
+          "code": "HS-TRIG-AUXILIARY-ANGLE",
+          "name": "辅助角公式与化一公式",
+          "chapterCode": "HS-TRIG-FUNCTION",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21266",
+      "sourceName": "正角与负角",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21267",
+      "sourceName": "终边重合的角",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21268",
+      "sourceName": "象限角",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21270",
+      "sourceName": "各象限角三角函数的符号",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21272",
+      "sourceName": "三角形面积公式",
+      "knowledgeCodes": [
+        {
+          "code": "HS-TRIANGLE-AREA",
+          "name": "三角形面积公式",
+          "chapterCode": "HS-VECTOR-TRIANGLE",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21423",
+      "sourceName": "两角差的余弦公式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21424",
+      "sourceName": "两角和的余弦公式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21425",
+      "sourceName": "两角和与差的正弦公式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21426",
+      "sourceName": "两角和与差的正切公式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21427",
+      "sourceName": "二倍角的正弦公式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21428",
+      "sourceName": "二倍角的余弦公式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21429",
+      "sourceName": "二倍角的正切公式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21430",
+      "sourceName": "半角公式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21110",
+      "sourceName": "正弦函数的图象",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21112",
+      "sourceName": "余弦函数的图象",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21114",
+      "sourceName": "正切函数的图象与性质",
+      "knowledgeCodes": [
+        {
+          "code": "HS-TRIG-GRAPH",
+          "name": "三角函数图象与性质",
+          "chapterCode": "HS-TRIG-FUNCTION",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21111",
+      "sourceName": "正弦函数的性质",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21113",
+      "sourceName": "余弦函数的性质",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21115",
+      "sourceName": "y=Asin(ωx+φ)的图象",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21273",
+      "sourceName": "函数周期性的定义",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21274",
+      "sourceName": "最小正周期",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21275",
+      "sourceName": "正弦函数的最值与值域",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21276",
+      "sourceName": "正弦函数的奇偶性",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21277",
+      "sourceName": "正弦函数的单调性",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21278",
+      "sourceName": "余弦函数的最值与值域",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21279",
+      "sourceName": "余弦函数的奇偶性",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21280",
+      "sourceName": "余弦函数的单调性",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21281",
+      "sourceName": "正切函数的值域",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21282",
+      "sourceName": "正切函数的奇偶性",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21283",
+      "sourceName": "正切函数的单调性",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21120",
+      "sourceName": "向量的概念",
+      "knowledgeCodes": [
+        {
+          "code": "HS-VECTOR-CONCEPT",
+          "name": "平面向量的概念与线性运算",
+          "chapterCode": "HS-VECTOR-TRIANGLE",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-VECTOR-TRIANGLE",
+          "name": "平面向量与解三角形",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21121",
+      "sourceName": "向量的相等与共线",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-VECTOR-TRIANGLE",
+          "name": "平面向量与解三角形",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21122",
+      "sourceName": "向量的加减法",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-VECTOR-TRIANGLE",
+          "name": "平面向量与解三角形",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21123",
+      "sourceName": "向量的数乘",
+      "knowledgeCodes": [
+        {
+          "code": "HS-VECTOR-CONCEPT",
+          "name": "平面向量的概念与线性运算",
+          "chapterCode": "HS-VECTOR-TRIANGLE",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-VECTOR-TRIANGLE",
+          "name": "平面向量与解三角形",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21124",
+      "sourceName": "向量的坐标表示",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-VECTOR-TRIANGLE",
+          "name": "平面向量与解三角形",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21125",
+      "sourceName": "向量的模",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-VECTOR-TRIANGLE",
+          "name": "平面向量与解三角形",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21126",
+      "sourceName": "向量的数量积",
+      "knowledgeCodes": [
+        {
+          "code": "HS-VECTOR-DOT",
+          "name": "平面向量数量积",
+          "chapterCode": "HS-VECTOR-TRIANGLE",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-VECTOR-TRIANGLE",
+          "name": "平面向量与解三角形",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21284",
+      "sourceName": "零向量",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-VECTOR-TRIANGLE",
+          "name": "平面向量与解三角形",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21285",
+      "sourceName": "单位向量",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-VECTOR-TRIANGLE",
+          "name": "平面向量与解三角形",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21286",
+      "sourceName": "负向量",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-VECTOR-TRIANGLE",
+          "name": "平面向量与解三角形",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21287",
+      "sourceName": "向量加法的平行四边形法则",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-VECTOR-TRIANGLE",
+          "name": "平面向量与解三角形",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21288",
+      "sourceName": "向量加法的三角形法则",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-VECTOR-TRIANGLE",
+          "name": "平面向量与解三角形",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21289",
+      "sourceName": "向量加法的运算律",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-VECTOR-TRIANGLE",
+          "name": "平面向量与解三角形",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21290",
+      "sourceName": "向量平行的充要条件",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-VECTOR-TRIANGLE",
+          "name": "平面向量与解三角形",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21291",
+      "sourceName": "向量的线性组合",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-VECTOR-TRIANGLE",
+          "name": "平面向量与解三角形",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21292",
+      "sourceName": "数量投影",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-VECTOR-TRIANGLE",
+          "name": "平面向量与解三角形",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21293",
+      "sourceName": "向量的夹角",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-VECTOR-TRIANGLE",
+          "name": "平面向量与解三角形",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21294",
+      "sourceName": "平面向量基本定理",
+      "knowledgeCodes": [],
+      "catalogNodes": [
+        {
+          "id": "kg:senior-math-core-v1:VECTOR.BASIS",
+          "name": "平面向量基本定理",
+          "basis": "exact_name"
+        }
+      ],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-VECTOR-TRIANGLE",
+          "name": "平面向量与解三角形",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21295",
+      "sourceName": "平面向量的正交分解",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-VECTOR-TRIANGLE",
+          "name": "平面向量与解三角形",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21297",
+      "sourceName": "向量垂直的坐标表示",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-VECTOR-TRIANGLE",
+          "name": "平面向量与解三角形",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21298",
+      "sourceName": "线段的定比分点公式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-VECTOR-TRIANGLE",
+          "name": "平面向量与解三角形",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21194",
+      "sourceName": "空间向量的概念",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SPACE-VECTOR",
+          "name": "空间向量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21129",
+      "sourceName": "复数的概念",
+      "knowledgeCodes": [
+        {
+          "code": "HS-COMPLEX-CONCEPT",
+          "name": "复数的概念与分类",
+          "chapterCode": "HS-COMPLEX",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COMPLEX",
+          "name": "复数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21130",
+      "sourceName": "虚数单位",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COMPLEX",
+          "name": "复数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21131",
+      "sourceName": "复数的实部与虚部",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COMPLEX",
+          "name": "复数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21132",
+      "sourceName": "复数的相等",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COMPLEX",
+          "name": "复数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21133",
+      "sourceName": "复数的代数运算",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COMPLEX",
+          "name": "复数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21134",
+      "sourceName": "复数的几何意义",
+      "knowledgeCodes": [
+        {
+          "code": "HS-COMPLEX-GEOMETRY",
+          "name": "复数的几何意义",
+          "chapterCode": "HS-COMPLEX",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COMPLEX",
+          "name": "复数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21135",
+      "sourceName": "复数的模",
+      "knowledgeCodes": [
+        {
+          "code": "HS-COMPLEX-MODULUS-CONJUGATE",
+          "name": "复数的模与共轭复数",
+          "chapterCode": "HS-COMPLEX",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COMPLEX",
+          "name": "复数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21136",
+      "sourceName": "共轭复数",
+      "knowledgeCodes": [
+        {
+          "code": "HS-COMPLEX-MODULUS-CONJUGATE",
+          "name": "复数的模与共轭复数",
+          "chapterCode": "HS-COMPLEX",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COMPLEX",
+          "name": "复数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21299",
+      "sourceName": "复数的分类",
+      "knowledgeCodes": [
+        {
+          "code": "HS-COMPLEX-CONCEPT",
+          "name": "复数的概念与分类",
+          "chapterCode": "HS-COMPLEX",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COMPLEX",
+          "name": "复数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21300",
+      "sourceName": "复平面",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COMPLEX",
+          "name": "复数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21301",
+      "sourceName": "复数的向量表示",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COMPLEX",
+          "name": "复数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21302",
+      "sourceName": "复平面上两点间的距离公式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COMPLEX",
+          "name": "复数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21303",
+      "sourceName": "复数的三角形式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COMPLEX",
+          "name": "复数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21432",
+      "sourceName": "实数的平方根",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COMPLEX",
+          "name": "复数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21137",
+      "sourceName": "空间点、线、面的关系",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21138",
+      "sourceName": "平面的基本性质",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21139",
+      "sourceName": "空间两直线的位置关系",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21141",
+      "sourceName": "直线与平面的位置关系",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21142",
+      "sourceName": "平面与平面的位置关系",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21144",
+      "sourceName": "二面角",
+      "knowledgeCodes": [
+        {
+          "code": "HS-SOLID-DIHEDRAL-ANGLE",
+          "name": "二面角",
+          "chapterCode": "HS-SOLID-GEOMETRY",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21145",
+      "sourceName": "线面平行与垂直",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21146",
+      "sourceName": "面面平行与垂直",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21305",
+      "sourceName": "平面的基本公理",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21307",
+      "sourceName": "异面直线的定义",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21308",
+      "sourceName": "异面直线判定定理",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21309",
+      "sourceName": "直线与平面平行的判定定理",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21310",
+      "sourceName": "直线与平面平行的性质定理",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21311",
+      "sourceName": "直线与平面垂直的判定定理",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21312",
+      "sourceName": "直线与平面垂直的性质定理",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21313",
+      "sourceName": "三垂线定理",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21314",
+      "sourceName": "两平面平行的判定定理",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21315",
+      "sourceName": "两平面平行的性质定理",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21316",
+      "sourceName": "两平行平面间的距离",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21317",
+      "sourceName": "两平面垂直的判定定理",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21318",
+      "sourceName": "两平面垂直的性质定理",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21319",
+      "sourceName": "异面直线的公垂线",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21320",
+      "sourceName": "两条异面直线的距离",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21140",
+      "sourceName": "异面直线所成角",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21143",
+      "sourceName": "直线与平面所成角",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21147",
+      "sourceName": "棱柱",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21148",
+      "sourceName": "棱锥",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21149",
+      "sourceName": "棱台",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21150",
+      "sourceName": "旋转体",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21151",
+      "sourceName": "球",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21152",
+      "sourceName": "圆柱、圆锥、圆台",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21153",
+      "sourceName": "几何体的表面积",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21154",
+      "sourceName": "几何体的体积",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21155",
+      "sourceName": "三视图",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21156",
+      "sourceName": "直观图",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21321",
+      "sourceName": "多面体的概念",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21322",
+      "sourceName": "棱柱的结构特征",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21323",
+      "sourceName": "圆柱的结构特征",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21324",
+      "sourceName": "祖暅原理",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21325",
+      "sourceName": "正棱锥的结构特征",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21326",
+      "sourceName": "圆锥的性质",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21327",
+      "sourceName": "圆台的概念",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21328",
+      "sourceName": "正多面体",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21329",
+      "sourceName": "欧拉定理",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21330",
+      "sourceName": "旋转面",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21331",
+      "sourceName": "球的截面",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21157",
+      "sourceName": "随机事件",
+      "knowledgeCodes": [
+        {
+          "code": "HS-PROB-SAMPLE-EVENT",
+          "name": "样本空间与随机事件",
+          "chapterCode": "HS-PROBABILITY",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-PROBABILITY",
+          "name": "概率",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21158",
+      "sourceName": "事件的概率",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-PROBABILITY",
+          "name": "概率",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21159",
+      "sourceName": "古典概型",
+      "knowledgeCodes": [
+        {
+          "code": "HS-PROB-CLASSICAL",
+          "name": "古典概型",
+          "chapterCode": "HS-PROBABILITY",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-PROBABILITY",
+          "name": "概率",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21160",
+      "sourceName": "频率与概率",
+      "knowledgeCodes": [
+        {
+          "code": "HS-PROB-FREQUENCY",
+          "name": "频率与概率",
+          "chapterCode": "HS-PROBABILITY",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-PROBABILITY",
+          "name": "概率",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21161",
+      "sourceName": "互斥事件与对立事件",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-PROBABILITY",
+          "name": "概率",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21162",
+      "sourceName": "加法公式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-PROBABILITY",
+          "name": "概率",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21163",
+      "sourceName": "独立事件",
+      "knowledgeCodes": [
+        {
+          "code": "HS-PROB-INDEPENDENCE",
+          "name": "事件的独立性",
+          "chapterCode": "HS-PROBABILITY",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-PROBABILITY",
+          "name": "概率",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21332",
+      "sourceName": "确定性现象",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-PROBABILITY",
+          "name": "概率",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21333",
+      "sourceName": "随机试验",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-PROBABILITY",
+          "name": "概率",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21334",
+      "sourceName": "样本点",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-PROBABILITY",
+          "name": "概率",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21335",
+      "sourceName": "必然事件",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-PROBABILITY",
+          "name": "概率",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21336",
+      "sourceName": "不可能事件",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-PROBABILITY",
+          "name": "概率",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21337",
+      "sourceName": "等可能性",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-PROBABILITY",
+          "name": "概率",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21338",
+      "sourceName": "事件的关系",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-PROBABILITY",
+          "name": "概率",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21339",
+      "sourceName": "事件的运算",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-PROBABILITY",
+          "name": "概率",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21340",
+      "sourceName": "互斥事件的概率可加性",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-PROBABILITY",
+          "name": "概率",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21341",
+      "sourceName": "伯努利大数定律",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-PROBABILITY",
+          "name": "概率",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21234",
+      "sourceName": "条件概率",
+      "knowledgeCodes": [
+        {
+          "code": "HS-PROB-CONDITIONAL",
+          "name": "条件概率与全概率公式",
+          "chapterCode": "HS-PROBABILITY",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [
+        {
+          "id": "kg:senior-math-core-v1:PROB.CONDITIONAL.E1",
+          "name": "条件概率",
+          "basis": "exact_name"
+        }
+      ],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21237",
+      "sourceName": "随机变量",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21165",
+      "sourceName": "伯努利试验",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-PROBABILITY",
+          "name": "概率",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21164",
+      "sourceName": "乘法公式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-PROBABILITY",
+          "name": "概率",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21167",
+      "sourceName": "总体与样本",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21170",
+      "sourceName": "频率分布直方图",
+      "knowledgeCodes": [],
+      "catalogNodes": [
+        {
+          "id": "kg:senior-math-core-v1:PROB.SUMMARY.E1",
+          "name": "频率分布直方图",
+          "basis": "exact_name"
+        }
+      ],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21171",
+      "sourceName": "茎叶图",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21172",
+      "sourceName": "平均数、中位数、众数",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21173",
+      "sourceName": "方差与标准差",
+      "knowledgeCodes": [
+        {
+          "code": "HS-STAT-VARIANCE",
+          "name": "方差与标准差",
+          "chapterCode": "HS-STATISTICS",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21243",
+      "sourceName": "散点图",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21342",
+      "sourceName": "个体",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21343",
+      "sourceName": "观测数据和实验数据",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21344",
+      "sourceName": "数据的获取途径",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21346",
+      "sourceName": "频率分布折线图",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21347",
+      "sourceName": "数字特征",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21348",
+      "sourceName": "样本平均值",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21349",
+      "sourceName": "样本标准差",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21350",
+      "sourceName": "百分位数",
+      "knowledgeCodes": [
+        {
+          "code": "HS-STAT-PERCENTILE",
+          "name": "百分位数",
+          "chapterCode": "HS-STATISTICS",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21351",
+      "sourceName": "统计活动",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21248",
+      "sourceName": "2×2列联表",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21245",
+      "sourceName": "线性相关关系",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21244",
+      "sourceName": "相关系数",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21415",
+      "sourceName": "成对数据",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21176",
+      "sourceName": "直线的倾斜角与斜率",
+      "knowledgeCodes": [
+        {
+          "code": "HS-ANALYTIC-SLOPE-INCLINATION",
+          "name": "直线的倾斜角与斜率",
+          "chapterCode": "HS-ANALYTIC-GEOMETRY",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21177",
+      "sourceName": "直线的方程",
+      "knowledgeCodes": [
+        {
+          "code": "HS-ANALYTIC-LINE",
+          "name": "直线的方程",
+          "chapterCode": "HS-ANALYTIC-GEOMETRY",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [
+        {
+          "id": "kg:senior-math-core-v1:ANALYTIC.LINE",
+          "name": "直线的方程",
+          "basis": "exact_name"
+        }
+      ],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21178",
+      "sourceName": "直线的斜截式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21179",
+      "sourceName": "直线的一般式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21180",
+      "sourceName": "两直线的位置关系",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21181",
+      "sourceName": "两直线的交点",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21182",
+      "sourceName": "点到直线的距离",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21183",
+      "sourceName": "两平行直线间的距离",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21352",
+      "sourceName": "斜率的坐标公式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21353",
+      "sourceName": "直线的点斜式方程",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21354",
+      "sourceName": "直线的两点式方程",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21355",
+      "sourceName": "直线的法向量",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21356",
+      "sourceName": "直线的点法式方程",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21357",
+      "sourceName": "两直线的夹角公式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21184",
+      "sourceName": "圆的方程",
+      "knowledgeCodes": [
+        {
+          "code": "HS-ANALYTIC-CIRCLE",
+          "name": "圆的方程",
+          "chapterCode": "HS-ANALYTIC-GEOMETRY",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [
+        {
+          "id": "kg:senior-math-core-v1:ANALYTIC.CIRCLE",
+          "name": "圆的方程",
+          "basis": "exact_name"
+        }
+      ],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21185",
+      "sourceName": "圆的标准方程",
+      "knowledgeCodes": [],
+      "catalogNodes": [
+        {
+          "id": "kg:senior-math-core-v1:ANALYTIC.CIRCLE.E1",
+          "name": "圆的标准方程",
+          "basis": "exact_name"
+        }
+      ],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21186",
+      "sourceName": "圆的一般方程",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21187",
+      "sourceName": "椭圆的定义与方程",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21188",
+      "sourceName": "椭圆的几何性质",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21189",
+      "sourceName": "双曲线的定义与方程",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21190",
+      "sourceName": "双曲线的几何性质",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21191",
+      "sourceName": "抛物线的定义与方程",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21192",
+      "sourceName": "抛物线的几何性质",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21193",
+      "sourceName": "直线与圆锥曲线的位置关系",
+      "knowledgeCodes": [
+        {
+          "code": "HS-ANALYTIC-CONIC-INTERSECTION",
+          "name": "直线与圆锥曲线的位置关系",
+          "chapterCode": "HS-ANALYTIC-GEOMETRY",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21358",
+      "sourceName": "曲线方程的定义",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21359",
+      "sourceName": "圆的一般方程的判别式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21360",
+      "sourceName": "直线与圆的位置关系",
+      "knowledgeCodes": [
+        {
+          "code": "HS-ANALYTIC-LINE-CIRCLE",
+          "name": "直线与圆的位置关系",
+          "chapterCode": "HS-ANALYTIC-GEOMETRY",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [
+        {
+          "id": "kg:senior-math-core-v1:ANALYTIC.CIRCLE.E2",
+          "name": "直线与圆的位置关系",
+          "basis": "exact_name"
+        }
+      ],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21361",
+      "sourceName": "圆的切线方程",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21362",
+      "sourceName": "圆与圆的位置关系",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21363",
+      "sourceName": "椭圆的焦点与焦距",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21364",
+      "sourceName": "椭圆的对称性",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21365",
+      "sourceName": "椭圆的顶点",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21366",
+      "sourceName": "椭圆的离心率",
+      "knowledgeCodes": [],
+      "catalogNodes": [
+        {
+          "id": "kg:senior-math-core-v1:ANALYTIC.ELLIPSE.E2",
+          "name": "椭圆的离心率",
+          "basis": "exact_name"
+        }
+      ],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21367",
+      "sourceName": "双曲线的渐近线",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21368",
+      "sourceName": "直线与双曲线的公共点问题",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21369",
+      "sourceName": "抛物线的焦点与准线",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21370",
+      "sourceName": "曲线的参数方程",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21371",
+      "sourceName": "极坐标系",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21372",
+      "sourceName": "极坐标方程",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21195",
+      "sourceName": "空间向量的运算",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SPACE-VECTOR",
+          "name": "空间向量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21196",
+      "sourceName": "空间向量的坐标",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SPACE-VECTOR",
+          "name": "空间向量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21197",
+      "sourceName": "空间向量的数量积",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SPACE-VECTOR",
+          "name": "空间向量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21374",
+      "sourceName": "空间向量共面",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SPACE-VECTOR",
+          "name": "空间向量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21375",
+      "sourceName": "空间向量数量积的运算律",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SPACE-VECTOR",
+          "name": "空间向量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21376",
+      "sourceName": "向量共面的充要条件",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SPACE-VECTOR",
+          "name": "空间向量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21377",
+      "sourceName": "空间向量基本定理",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SPACE-VECTOR",
+          "name": "空间向量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21378",
+      "sourceName": "空间直角坐标系",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SPACE-VECTOR",
+          "name": "空间向量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21379",
+      "sourceName": "坐标表示的空间向量线性运算公式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SPACE-VECTOR",
+          "name": "空间向量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21380",
+      "sourceName": "坐标表示的空间向量数量积公式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SPACE-VECTOR",
+          "name": "空间向量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21381",
+      "sourceName": "两条直线平行的充要条件（向量）",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SPACE-VECTOR",
+          "name": "空间向量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21382",
+      "sourceName": "点到平面的距离",
+      "knowledgeCodes": [],
+      "catalogNodes": [
+        {
+          "id": "kg:senior-math-core-v1:SOLID.DISTANCE.E1",
+          "name": "点到平面的距离",
+          "basis": "exact_name"
+        }
+      ],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        },
+        {
+          "code": "HS-SPACE-VECTOR",
+          "name": "空间向量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21383",
+      "sourceName": "两平面所成锐二面角的公式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SPACE-VECTOR",
+          "name": "空间向量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21200",
+      "sourceName": "数列的概念",
+      "knowledgeCodes": [
+        {
+          "code": "HS-SEQ-CONCEPT",
+          "name": "数列的概念与表示",
+          "chapterCode": "HS-SEQUENCE",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SEQUENCE",
+          "name": "数列",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21201",
+      "sourceName": "通项公式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SEQUENCE",
+          "name": "数列",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21202",
+      "sourceName": "递推公式",
+      "knowledgeCodes": [
+        {
+          "code": "HS-SEQ-CONCEPT",
+          "name": "数列的概念与表示",
+          "chapterCode": "HS-SEQUENCE",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SEQUENCE",
+          "name": "数列",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21203",
+      "sourceName": "等差数列",
+      "knowledgeCodes": [
+        {
+          "code": "HS-SEQ-ARITHMETIC",
+          "name": "等差数列",
+          "chapterCode": "HS-SEQUENCE",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [
+        {
+          "id": "kg:senior-math-core-v1:SEQ.ARITHMETIC",
+          "name": "等差数列",
+          "basis": "exact_name"
+        }
+      ],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SEQUENCE",
+          "name": "数列",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21204",
+      "sourceName": "等差数列的通项公式",
+      "knowledgeCodes": [
+        {
+          "code": "HS-SEQ-ARITHMETIC",
+          "name": "等差数列",
+          "chapterCode": "HS-SEQUENCE",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SEQUENCE",
+          "name": "数列",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21205",
+      "sourceName": "等差数列的前n项和",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SEQUENCE",
+          "name": "数列",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21206",
+      "sourceName": "等比数列",
+      "knowledgeCodes": [
+        {
+          "code": "HS-SEQ-GEOMETRIC",
+          "name": "等比数列",
+          "chapterCode": "HS-SEQUENCE",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [
+        {
+          "id": "kg:senior-math-core-v1:SEQ.GEOMETRIC",
+          "name": "等比数列",
+          "basis": "exact_name"
+        }
+      ],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SEQUENCE",
+          "name": "数列",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21207",
+      "sourceName": "等比数列的通项公式",
+      "knowledgeCodes": [
+        {
+          "code": "HS-SEQ-GEOMETRIC",
+          "name": "等比数列",
+          "chapterCode": "HS-SEQUENCE",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SEQUENCE",
+          "name": "数列",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21208",
+      "sourceName": "等比数列的前n项和",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SEQUENCE",
+          "name": "数列",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21384",
+      "sourceName": "等差中项",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SEQUENCE",
+          "name": "数列",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21385",
+      "sourceName": "等差数列的递推公式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SEQUENCE",
+          "name": "数列",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21386",
+      "sourceName": "等差数列的性质",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SEQUENCE",
+          "name": "数列",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21387",
+      "sourceName": "等比中项",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SEQUENCE",
+          "name": "数列",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21388",
+      "sourceName": "等比数列的递推公式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SEQUENCE",
+          "name": "数列",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21389",
+      "sourceName": "等比数列的性质",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SEQUENCE",
+          "name": "数列",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21390",
+      "sourceName": "无穷等比数列求和",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SEQUENCE",
+          "name": "数列",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21391",
+      "sourceName": "有穷数列",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SEQUENCE",
+          "name": "数列",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21392",
+      "sourceName": "无穷数列",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SEQUENCE",
+          "name": "数列",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21393",
+      "sourceName": "数列的单调性",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SEQUENCE",
+          "name": "数列",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21394",
+      "sourceName": "常数列",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SEQUENCE",
+          "name": "数列",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21241",
+      "sourceName": "二项分布",
+      "knowledgeCodes": [
+        {
+          "code": "HS-RANDOM-BINOMIAL-DISTRIBUTION",
+          "name": "二项分布",
+          "chapterCode": "HS-COUNTING-RANDOM",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21397",
+      "sourceName": "平均变化率",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-DERIVATIVE",
+          "name": "导数及其应用",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21214",
+      "sourceName": "导数的概念",
+      "knowledgeCodes": [
+        {
+          "code": "HS-DERIVATIVE-CONCEPT",
+          "name": "导数的概念与几何意义",
+          "chapterCode": "HS-DERIVATIVE",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-DERIVATIVE",
+          "name": "导数及其应用",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21215",
+      "sourceName": "导函数",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-DERIVATIVE",
+          "name": "导数及其应用",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21222",
+      "sourceName": "导数的几何意义—切线方程",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-DERIVATIVE",
+          "name": "导数及其应用",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21219",
+      "sourceName": "导数与函数单调性",
+      "knowledgeCodes": [],
+      "catalogNodes": [
+        {
+          "id": "kg:senior-math-core-v1:DERIV.MONOTONE",
+          "name": "导数与函数单调性",
+          "basis": "exact_name"
+        }
+      ],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-DERIVATIVE",
+          "name": "导数及其应用",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21216",
+      "sourceName": "基本初等函数的导数",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-DERIVATIVE",
+          "name": "导数及其应用",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21217",
+      "sourceName": "导数的运算法则",
+      "knowledgeCodes": [],
+      "catalogNodes": [
+        {
+          "id": "kg:senior-math-core-v1:DERIV.RULE",
+          "name": "导数的运算法则",
+          "basis": "exact_name"
+        }
+      ],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-DERIVATIVE",
+          "name": "导数及其应用",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21218",
+      "sourceName": "复合函数的导数",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-DERIVATIVE",
+          "name": "导数及其应用",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21401",
+      "sourceName": "复合函数的概念",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-DERIVATIVE",
+          "name": "导数及其应用",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21220",
+      "sourceName": "导数与函数极值",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-DERIVATIVE",
+          "name": "导数及其应用",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21221",
+      "sourceName": "导数与函数最值",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-DERIVATIVE",
+          "name": "导数及其应用",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21399",
+      "sourceName": "曲线的割线",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-DERIVATIVE",
+          "name": "导数及其应用",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21400",
+      "sourceName": "函数的驻点",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-DERIVATIVE",
+          "name": "导数及其应用",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21224",
+      "sourceName": "乘法原理",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21225",
+      "sourceName": "加法原理",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21226",
+      "sourceName": "排列的概念",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21403",
+      "sourceName": "树形图",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21227",
+      "sourceName": "排列数公式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21228",
+      "sourceName": "组合的概念",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21404",
+      "sourceName": "全排列",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21406",
+      "sourceName": "组合与排列的区别",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21229",
+      "sourceName": "组合数公式",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21231",
+      "sourceName": "二项式定理",
+      "knowledgeCodes": [
+        {
+          "code": "HS-COUNTING-BINOMIAL",
+          "name": "二项式定理",
+          "chapterCode": "HS-COUNTING-RANDOM",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [
+        {
+          "id": "kg:senior-math-core-v1:PROB.BINOMIAL",
+          "name": "二项式定理",
+          "basis": "exact_name"
+        }
+      ],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21232",
+      "sourceName": "二项式展开的性质",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21407",
+      "sourceName": "杨辉三角",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21236",
+      "sourceName": "贝叶斯公式",
+      "knowledgeCodes": [
+        {
+          "code": "HS-PROB-BAYES",
+          "name": "贝叶斯公式",
+          "chapterCode": "HS-PROBABILITY",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21235",
+      "sourceName": "全概率公式",
+      "knowledgeCodes": [
+        {
+          "code": "HS-PROB-TOTAL",
+          "name": "全概率公式",
+          "chapterCode": "HS-PROBABILITY",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21409",
+      "sourceName": "先验概率",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21239",
+      "sourceName": "期望",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21240",
+      "sourceName": "方差（随机变量）",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21242",
+      "sourceName": "正态分布",
+      "knowledgeCodes": [
+        {
+          "code": "HS-RANDOM-NORMAL",
+          "name": "正态分布",
+          "chapterCode": "HS-COUNTING-RANDOM",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [
+        {
+          "id": "kg:senior-math-core-v1:PROB.DISTRIBUTION.E2",
+          "name": "正态分布",
+          "basis": "exact_name"
+        }
+      ],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21238",
+      "sourceName": "离散随机变量的分布列",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21411",
+      "sourceName": "伯努利分布",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21412",
+      "sourceName": "超几何分布",
+      "knowledgeCodes": [
+        {
+          "code": "HS-RANDOM-HYPERGEOMETRIC",
+          "name": "超几何分布",
+          "chapterCode": "HS-COUNTING-RANDOM",
+          "basis": "exact_name"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21413",
+      "sourceName": "标准正态分布",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21246",
+      "sourceName": "线性回归方程",
+      "knowledgeCodes": [
+        {
+          "code": "HS-STAT-REGRESSION",
+          "name": "一元线性回归",
+          "chapterCode": "HS-STATISTICS",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21417",
+      "sourceName": "一元线性回归的相关概念",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21419",
+      "sourceName": "卡方统计量",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21398",
+      "sourceName": "瞬时变化率",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-DERIVATIVE",
+          "name": "导数及其应用",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21405",
+      "sourceName": "阶乘",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21408",
+      "sourceName": "二项展开式中的指定项",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21410",
+      "sourceName": "后验概率",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21414",
+      "sourceName": "正态分布的3σ原则",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COUNTING-RANDOM",
+          "name": "计数原理与随机变量",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:21416",
+      "sourceName": "相关分析",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21005:1",
+      "sourceName": "有限集",
+      "knowledgeCodes": [
+        {
+          "code": "HS-SET-CONCEPT",
+          "name": "集合的概念与表示",
+          "chapterCode": "HS-SETS-LOGIC",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21005:2",
+      "sourceName": "无限集",
+      "knowledgeCodes": [
+        {
+          "code": "HS-SET-CONCEPT",
+          "name": "集合的概念与表示",
+          "chapterCode": "HS-SETS-LOGIC",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21012:1",
+      "sourceName": "区间",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21012:2",
+      "sourceName": "开区间",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21012:3",
+      "sourceName": "闭区间",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21028:1",
+      "sourceName": "充分条件",
+      "knowledgeCodes": [
+        {
+          "code": "HS-LOGIC-CONDITION",
+          "name": "充分条件、必要条件与充要条件",
+          "chapterCode": "HS-SETS-LOGIC",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21028:2",
+      "sourceName": "必要条件",
+      "knowledgeCodes": [
+        {
+          "code": "HS-LOGIC-CONDITION",
+          "name": "充分条件、必要条件与充要条件",
+          "chapterCode": "HS-SETS-LOGIC",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SETS-LOGIC",
+          "name": "集合与常用逻辑用语",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21074:1",
+      "sourceName": "常用对数",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21074:2",
+      "sourceName": "自然对数",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ELEMENTARY-FUNCTION",
+          "name": "幂、指数与对数函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21086:1",
+      "sourceName": "定义域",
+      "knowledgeCodes": [
+        {
+          "code": "HS-FUNC-DOMAIN",
+          "name": "函数的定义域",
+          "chapterCode": "HS-FUNCTION",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21086:2",
+      "sourceName": "值域",
+      "knowledgeCodes": [
+        {
+          "code": "HS-FUNC-RANGE",
+          "name": "函数的值域",
+          "chapterCode": "HS-FUNCTION",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21090:1",
+      "sourceName": "最大值",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21090:2",
+      "sourceName": "最小值",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-FUNCTION",
+          "name": "函数概念与性质",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21121:1",
+      "sourceName": "相等向量",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-VECTOR-TRIANGLE",
+          "name": "平面向量与解三角形",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21121:2",
+      "sourceName": "共线向量",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-VECTOR-TRIANGLE",
+          "name": "平面向量与解三角形",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21131:1",
+      "sourceName": "复数的实部",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COMPLEX",
+          "name": "复数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21131:2",
+      "sourceName": "复数的虚部",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-COMPLEX",
+          "name": "复数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21152:1",
+      "sourceName": "圆柱",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21152:2",
+      "sourceName": "圆锥",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21152:3",
+      "sourceName": "圆台",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21161:1",
+      "sourceName": "互斥事件",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-PROBABILITY",
+          "name": "概率",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21161:2",
+      "sourceName": "对立事件",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-PROBABILITY",
+          "name": "概率",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21167:1",
+      "sourceName": "总体",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21167:2",
+      "sourceName": "样本",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21169:1",
+      "sourceName": "系统抽样",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21169:2",
+      "sourceName": "分层抽样",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21172:1",
+      "sourceName": "平均数",
+      "knowledgeCodes": [
+        {
+          "code": "HS-STAT-CENTER",
+          "name": "平均数、中位数与众数",
+          "chapterCode": "HS-STATISTICS",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21172:2",
+      "sourceName": "中位数",
+      "knowledgeCodes": [
+        {
+          "code": "HS-STAT-CENTER",
+          "name": "平均数、中位数与众数",
+          "chapterCode": "HS-STATISTICS",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21172:3",
+      "sourceName": "众数",
+      "knowledgeCodes": [
+        {
+          "code": "HS-STAT-CENTER",
+          "name": "平均数、中位数与众数",
+          "chapterCode": "HS-STATISTICS",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21173:1",
+      "sourceName": "方差",
+      "knowledgeCodes": [
+        {
+          "code": "HS-STAT-VARIANCE",
+          "name": "方差与标准差",
+          "chapterCode": "HS-STATISTICS",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21173:2",
+      "sourceName": "标准差",
+      "knowledgeCodes": [
+        {
+          "code": "HS-STAT-VARIANCE",
+          "name": "方差与标准差",
+          "chapterCode": "HS-STATISTICS",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-STATISTICS",
+          "name": "统计",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21176:1",
+      "sourceName": "直线的倾斜角",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "atom:21176:2",
+      "sourceName": "直线的斜率",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-ANALYTIC-GEOMETRY",
+          "name": "平面解析几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "local:sample-space",
+      "sourceName": "样本空间",
+      "knowledgeCodes": [
+        {
+          "code": "HS-PROB-SAMPLE-EVENT",
+          "name": "样本空间与随机事件",
+          "chapterCode": "HS-PROBABILITY",
+          "basis": "curated_component"
+        }
+      ],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-PROBABILITY",
+          "name": "概率",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "local:parallel-line-plane-distance",
+      "sourceName": "直线到与它平行的平面的距离",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:equal-angle-theorem",
+      "sourceName": "等角定理及其推论",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-SOLID-GEOMETRY",
+          "name": "立体几何",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    },
+    {
+      "sourceId": "kp:trig-product-sum-identities",
+      "sourceName": "积化和差与和差化积",
+      "knowledgeCodes": [],
+      "catalogNodes": [],
+      "ambiguousCatalogIds": [],
+      "chapters": [
+        {
+          "code": "HS-TRIG-FUNCTION",
+          "name": "三角函数",
+          "basis": "chapter_navigation_only"
+        }
+      ]
+    }
+  ]
+}

@@ -56,7 +56,7 @@ export function nodeColor(n: StarNode) {
 }
 export function nodeSize(n: StarNode) { return (n.level === 1 ? 70 : n.level === 2 ? 36 : 20) + Math.min(22, Math.sqrt(Math.max(0, n.question_count)) * 3); }
 
-/** Radial initial positions feed G6; each expanded chapter gets its own constellation. */
+/** Keep the overview radial; give chapter descendants separate rows and depth columns. */
 export function starPositions(snapshot: StarSnapshot, chapterId = '') {
   const tree = hierarchy(snapshot), result = new Map<string, [number, number]>();
   const roots = snapshot.nodes.filter(n => n.level === 1);
@@ -68,10 +68,20 @@ export function starPositions(snapshot: StarSnapshot, chapterId = '') {
     children.forEach((child, i) => layoutBranch(child, angle - spread / 2 + spread * (i + 0.5) / children.length, radius + 165, spread / Math.max(1, children.length)));
   };
   if (chapterId && tree.byId.has(chapterId)) {
-    result.set(chapterId, [0, 0]);
-    roots.forEach(n => result.set(n.id, [0, -125]));
-    const concepts = tree.children.get(chapterId) ?? [];
-    concepts.forEach((id, i) => layoutBranch(id, -Math.PI / 2 + (i + 0.5) * Math.PI * 2 / concepts.length, 255, Math.PI * 1.7 / concepts.length));
+    let row = 0;
+    const visiting = new Set<string>();
+    const place = (id: string, depth: number): number => {
+      if (visiting.has(id)) return row * 92;
+      visiting.add(id);
+      const children = (tree.children.get(id) ?? []).filter(child => !visiting.has(child));
+      const ys = children.map(child => place(child, depth + 1));
+      const y = ys.length ? (ys[0] + ys[ys.length - 1]) / 2 : row++ * 92;
+      result.set(id, [depth * 240, y]);
+      return y;
+    };
+    const centerY = place(chapterId, 0);
+    for (const [id, [x, y]] of result) result.set(id, [x, y - centerY]);
+    roots.forEach(n => result.set(n.id, [-240, 0]));
   } else {
     chapters.forEach((n, i) => layoutBranch(n.id, -Math.PI / 2 + i * Math.PI * 2 / Math.max(1, chapters.length), 235, Math.PI * 1.6 / Math.max(1, chapters.length)));
   }

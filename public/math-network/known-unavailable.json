@@ -1,0 +1,19 @@
+{
+  "originals": [
+    "source-original/L030.docx",
+    "source-original/L051.docx",
+    "source-original/L056.docx",
+    "source-original/L069.docx",
+    "source-original/L052.docx",
+    "source-original/L197.docx",
+    "source-original/L235.docx"
+  ],
+  "metadataImages": [
+    "textbook-evidence/必修第一册-目录-007.png",
+    "textbook-evidence/必修第三册-目录-006.png",
+    "textbook-evidence/必修第二册-目录-007.png",
+    "textbook-evidence/选择性必修一-目录-006.png",
+    "textbook-evidence/选择性必修一-目录-007.png"
+  ],
+  "reason": "远站以 HTTP 200 返回网站首页；未取得真实资源。目录证据图仅出现在来源元数据中，当前页面不展示这些图。"
+}

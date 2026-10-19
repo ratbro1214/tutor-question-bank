@@ -1,12 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
-import { ArrowUpRight, ChevronRight, Check, CircleDot, Layers3 } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, BookOpen, ChevronRight, Check, CircleDot, Layers3 } from 'lucide-react';
+import { RelatedMethods } from './RelatedMethods';
+import { KnowledgeLesson } from './KnowledgeLesson';
 import { hierarchy, levelLabels, relationLabels, type StarNode, type StarSnapshot } from '@/lib/knowledge_graph/star-map';
 
-type Props = { node: StarNode | undefined; snapshot: StarSnapshot; canReviewSeed: boolean; busy: boolean; onSelect: (id: string) => void; onApprove: (node: StarNode, parentId?: string) => Promise<void> };
-export function NodeDetail({ node, snapshot, canReviewSeed, busy, onSelect, onApprove }: Props) {
+type Props = { node: StarNode | undefined; snapshot: StarSnapshot; canReviewSeed: boolean; busy: boolean; methodsOpen: boolean; approvedOnly: boolean; onMethodsOpen: (open: boolean) => void; onSelect: (id: string) => void; onApprove: (node: StarNode, parentId?: string) => Promise<void> };
+export function NodeDetail({ node, snapshot, canReviewSeed, busy, methodsOpen, approvedOnly, onMethodsOpen, onSelect, onApprove }: Props) {
   const [confirmed, setConfirmed] = useState(false), [parentChoice, setParentChoice] = useState('');
   const tree = hierarchy(snapshot);
   if (!node) return <aside className="rounded-2xl border border-slate-200 bg-white p-6"><CircleDot className="mb-4 text-indigo-500" /><h2 className="font-semibold text-slate-900">探索一个知识点</h2><p className="mt-3 text-sm leading-7 text-slate-500">点击星图节点，查看知识内容、相关考点、典型题型与题库关联。</p></aside>;
@@ -19,16 +20,21 @@ export function NodeDetail({ node, snapshot, canReviewSeed, busy, onSelect, onAp
   const canApprove = node.source !== 'seed' || canReviewSeed;
   const parentReady = node.level === 1 || parent?.knowledge_review_status === 'approved';
   const list = (items: StarNode[]) => <div className="space-y-1">{items.map(n => <button key={n.id} type="button" onClick={() => onSelect(n.id)} className="flex w-full items-center justify-between gap-2 rounded-lg px-2 py-2.5 text-left text-sm leading-5 text-slate-600 hover:bg-indigo-50 hover:text-indigo-700"><span>{n.name}</span><ChevronRight size={13} className="shrink-0" /></button>)}</div>;
+  if (methodsOpen) return <aside className="overflow-hidden rounded-2xl border border-indigo-200 bg-white lg:max-h-[690px] lg:overflow-y-auto" aria-label="知识关联方法面板">
+    <header className="sticky top-0 z-10 border-b border-slate-100 bg-white p-5"><button type="button" onClick={() => onMethodsOpen(false)} className="mb-4 flex items-center gap-2 text-xs text-indigo-600"><ArrowLeft size={14} />返回知识详情</button><p className="text-[10px] font-medium tracking-widest text-slate-400">知识 → 方法 → 应用</p><h2 className="mt-2 text-lg font-semibold text-slate-950">{node.name}</h2><p className="mt-2 text-xs leading-6 text-slate-500">在星图中查看方法，切回详情可继续探索。</p></header>
+    <RelatedMethods node={node} snapshot={snapshot} approvedOnly={approvedOnly} onReadKnowledge={() => onMethodsOpen(false)} />
+  </aside>;
   return <aside className="overflow-hidden rounded-2xl border border-slate-200 bg-white lg:max-h-[690px] lg:overflow-y-auto" aria-label="知识节点详情">
     <div className="border-b border-slate-100 p-5">
       <div className="flex items-center justify-between gap-2 text-[11px]"><span className="font-medium tracking-wide text-indigo-600">{levelLabels[node.level]}</span><span className={`rounded-full px-2 py-1 ${node.knowledge_review_status === 'approved' ? 'bg-emerald-50 text-emerald-700' : 'bg-amber-50 text-amber-800'}`}>{node.knowledge_review_status === 'approved' ? '已审核' : '待审核'}</span></div>
       <h2 className="mt-4 text-xl font-semibold tracking-tight text-slate-900">{node.name}</h2><p className="mt-2 text-xs text-slate-500">所属章节 · {chapter?.name ?? (node.level === 1 ? '全部章节' : '尚未归属')}</p>
       <p className="mt-5 text-sm leading-7 text-slate-600">{node.description}</p>
-      <div className="mt-5 grid grid-cols-2 gap-3"><div className="rounded-xl bg-slate-50 p-3"><p className="text-[11px] text-slate-500">本节点关联题目</p><p className="mt-1 text-2xl font-semibold text-slate-900">{node.question_count}<span className="ml-1 text-xs font-normal text-slate-500">题</span></p></div><div className="rounded-xl bg-slate-50 p-3"><p className="text-[11px] text-slate-500">高考重要程度</p><p className="mt-2 text-sm font-medium text-slate-700">{node.importance === 'high' ? '重点' : node.importance === 'medium' ? '重要' : node.importance === 'low' ? '一般' : '待评定'}</p></div></div>
+      <div className="mt-4 flex flex-wrap gap-2 text-[11px] text-slate-500"><span className="rounded-lg bg-slate-50 px-3 py-2">已审核关联题目 <span className="font-semibold text-slate-800">{node.question_count}</span> 题</span><span className="rounded-lg bg-slate-50 px-3 py-2">重要程度 · {node.importance === 'high' ? '重点' : node.importance === 'medium' ? '重要' : node.importance === 'low' ? '一般' : '待评定'}</span></div>
       <p className="mt-3 text-[10px] leading-5 text-slate-400">题数仅统计你有权限查看、当前版本已审核的直接关联。考频：{node.exam_frequency === 'high' ? '高' : node.exam_frequency === 'medium' ? '中' : node.exam_frequency === 'low' ? '低' : '暂无统计'}。</p>
     </div>
     <div className="space-y-5 p-5">
-      <Link className="block rounded-lg border border-indigo-100 p-3 text-sm text-indigo-700" href={'/math-methods?code='+encodeURIComponent(node.code)}>查找关联策略、边界与替代方法 →</Link>
+      <KnowledgeLesson key={node.code} code={node.code} />
+      <button type="button" onClick={() => onMethodsOpen(true)} className="group flex w-full items-center gap-3 rounded-xl border border-indigo-100 bg-indigo-50/50 p-4 text-left hover:border-indigo-300 hover:bg-indigo-50"><BookOpen size={18} className="shrink-0 text-indigo-600" /><span className="min-w-0 flex-1"><span className="block text-sm font-medium text-indigo-800">查看关联方法</span><span className="mt-1 block text-[11px] leading-5 text-slate-500">适用条件、解题步骤与边界 · 在此查看</span></span><ChevronRight size={16} className="shrink-0 text-indigo-400" /></button>
       {path.length > 1 && <div><h3 className="mb-2 text-xs font-semibold text-slate-500">知识路径</h3><div className="flex flex-wrap items-center gap-1 text-xs leading-6">{path.slice(0, -1).map(n => <button key={n.id} type="button" onClick={() => onSelect(n.id)} className="text-indigo-600 hover:underline">{n.name} /</button>)}<span className="text-slate-500">{node.name}</span></div></div>}
       {!!children.length && node.level !== 3 && <section><h3 className="mb-2 flex items-center gap-2 text-sm font-semibold"><Layers3 size={15} className="text-indigo-500" />下一层知识 <span className="text-xs font-normal text-slate-400">{children.length}</span></h3>{list(children)}</section>}
       {node.level === 3 && <section><h3 className="mb-2 text-sm font-semibold">相关考点</h3>{examPoints.length ? list(examPoints) : <p className="text-xs text-slate-500">暂无考点记录</p>}</section>}

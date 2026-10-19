@@ -1,0 +1,4911 @@
+{
+  "nodeId": "kp:21306",
+  "contents": [
+    {
+      "id": "lesson-content:book3:L044:oblique-rule",
+      "nodeId": "kp:21306",
+      "proposedNodeId": null,
+      "kind": "method_application",
+      "origin": "editorial_proposal",
+      "title": "斜二测画法水平图形规则",
+      "scope": "L044相应具体问题或教学活动；此范围说明为编辑文字",
+      "blocks": [
+        {
+          "role": "question",
+          "type": "text",
+          "value": "[问题1]在初中，用斜二测画法画一个水平放置的矩形$ABCD$的直观图有哪些规定？",
+          "evidenceIds": [
+            "ev:book3:L044:para24:oblique-rule:0"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "生 矩形$ABCD$它的直观图$A'B'C'D'$是一个平行四边形，$A'B'=AB$，$A'D'=\\frac12 AD$且$\\angle B'A'D'=45^\\circ$．",
+          "evidenceIds": [
+            "ev:book3:L044:para25:oblique-rule:1"
+          ]
+        },
+        {
+          "role": "question",
+          "type": "text",
+          "value": "[问题2]用斜二测画法画水平放置的图形的直观图的步骤是什么？",
+          "evidenceIds": [
+            "ev:book3:L044:para27:oblique-rule:2"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "用斜二测画法画水平放置图形的直观图的步骤是：",
+          "evidenceIds": [
+            "ev:book3:L044:para28:oblique-rule:3"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "（1）在已知图形中取两条互相垂直的直线作为$x$轴和$y$轴，两轴相交于点$O$．画直观图时，把它们画成对应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "evidenceIds": [
+            "ev:book3:L044:para29:oblique-rule:4"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "（2）已知图形中，所在直线平行或重合$x$轴或$y$轴的线段，画直观图时分别画成所在直线平行或重合$x'$轴或$y'$轴的线段．所在直线平行或重合$x$轴的线段，在直观图中保持原长度不变，所在直线平行或重合$y$轴的线段，在直观图中长度为原来的一半．",
+          "evidenceIds": [
+            "ev:book3:L044:para30:oblique-rule:5"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "（3）画好图后，要擦去辅助线．",
+          "evidenceIds": [
+            "ev:book3:L044:para31:oblique-rule:6"
+          ]
+        },
+        {
+          "role": "condition",
+          "type": "text",
+          "value": "轴的选择说明（编辑）：原矩形例图把$AB$方向选作$x$方向、$AD$方向选作$y$方向，因此$A'B'=AB$、$A'D'=\\frac12 AD$。保持或减半只适用于与所选坐标轴平行或重合的线段，不能推成任意线段的长度都保持或减半。原$45^\\circ$规则和完整步骤不重新建设。",
+          "origin": "editorial_scoped_proof_condition_or_source_correction",
+          "evidenceIds": [
+            "ev:book3:L044:para24:oblique-rule:0"
+          ]
+        }
+      ],
+      "contentOrigin": "source_supported_editorial_summary",
+      "wordingStatus": "教案有源整理与数学转写，非逐字引用",
+      "matching": {
+        "status": "confirmed",
+        "reason": "该具体任务与既有节点对应"
+      },
+      "evidence": [
+        {
+          "id": "ev:book3:L044:para24:oblique-rule:0",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "斜二测画法水平图形规则"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 24,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 4,
+            "printedPage": 4,
+            "pdfPage": 4,
+            "equationObjectId": null
+          },
+          "quote": "[问题1]在初中，用斜二测画法画一个水平放置的矩形的直观图有哪些规定？",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "[问题1]在初中，用斜二测画法画一个水平放置的矩形$ABCD$的直观图有哪些规定？",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-4.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para25:oblique-rule:1",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "斜二测画法水平图形规则"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 25,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 4,
+            "printedPage": 4,
+            "pdfPage": 4,
+            "equationObjectId": null
+          },
+          "quote": "生 矩形它的直观图是一个平行四边形，，且．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "生 矩形$ABCD$它的直观图$A'B'C'D'$是一个平行四边形，$A'B'=AB$，$A'D'=\\frac12 AD$且$\\angle B'A'D'=45^\\circ$．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-4.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para27:oblique-rule:2",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "斜二测画法水平图形规则"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 27,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 4,
+            "printedPage": 4,
+            "pdfPage": 4,
+            "equationObjectId": null
+          },
+          "quote": "[问题2]用斜二测画法画水平放置的图形的直观图的步骤是什么？",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-4.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para28:oblique-rule:3",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "斜二测画法水平图形规则"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 28,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 4,
+            "printedPage": 4,
+            "pdfPage": 4,
+            "equationObjectId": null
+          },
+          "quote": "用斜二测画法画水平放置图形的直观图的步骤是：",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-4.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para29:oblique-rule:4",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "斜二测画法水平图形规则"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 29,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 4,
+            "printedPage": 4,
+            "pdfPage": 4,
+            "equationObjectId": null
+          },
+          "quote": "（1）在已知图形中取两条互相垂直的直线作为轴和轴，两轴相交于点．画直观图时，把它们画成对应的轴和轴，两轴相交于点，且使．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "（1）在已知图形中取两条互相垂直的直线作为$x$轴和$y$轴，两轴相交于点$O$．画直观图时，把它们画成对应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-4.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para30:oblique-rule:5",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "斜二测画法水平图形规则"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 30,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 4,
+            "printedPage": 4,
+            "pdfPage": 4,
+            "equationObjectId": null,
+            "renderedPageEnd": 5,
+            "printedPageEnd": 5,
+            "pdfPageEnd": 5
+          },
+          "quote": "（2）已知图形中，所在直线平行或重合轴或轴的线段，画直观图时分别画成所在直线平行或重合轴或轴的线段．所在直线平行或重合轴的线段，在直观图中保持原长度不变，所在直线平行或重合轴的线段，在直观图中长度为原来的一半．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "（2）已知图形中，所在直线平行或重合$x$轴或$y$轴的线段，画直观图时分别画成所在直线平行或重合$x'$轴或$y'$轴的线段．所在直线平行或重合$x$轴的线段，在直观图中保持原长度不变，所在直线平行或重合$y$轴的线段，在直观图中长度为原来的一半．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-4.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para31:oblique-rule:6",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "斜二测画法水平图形规则"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 31,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 5,
+            "printedPage": 5,
+            "pdfPage": 5,
+            "equationObjectId": null
+          },
+          "quote": "（3）画好图后，要擦去辅助线．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-5.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:B13:L044:image10",
+          "sourceId": "L044",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "originalUrl": "source-original/L044.docx",
+          "locator": {
+            "part": "word/media/image10.png",
+            "paragraphIndex": 26,
+            "paragraphIndexConvention": "1-based all .//w:p"
+          },
+          "quote": "原教案矩形与斜二测直观图。",
+          "resource": {
+            "url": "r80/assets/da19fd4a24325c072270f152.png",
+            "bytes": 8190,
+            "sha256": "da19fd4a24325c072270f152d3fd73379c330a1e1fb83d00604651514796d5d0",
+            "kind": "original_native_image",
+            "sourceId": "L044"
+          },
+          "wordingStatus": "original_native_object_reference",
+          "mathChecked": true,
+          "wholeSourceReviewed": false
+        },
+        {
+          "id": "ev:B13:L044:image18",
+          "sourceId": "L044",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "originalUrl": "source-original/L044.docx",
+          "locator": {
+            "part": "word/media/image18.png",
+            "paragraphIndex": 32,
+            "paragraphIndexConvention": "1-based all .//w:p"
+          },
+          "quote": "原教案坐标轴与斜二测步骤图。",
+          "resource": {
+            "url": "r80/assets/627f0bf63f24506f5bd76e66.png",
+            "bytes": 18659,
+            "sha256": "627f0bf63f24506f5bd76e66827b9c996520dea4e49df366fd134770ef1df436",
+            "kind": "original_native_image",
+            "sourceId": "L044"
+          },
+          "wordingStatus": "original_native_object_reference",
+          "mathChecked": true,
+          "wholeSourceReviewed": false
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": [
+        {
+          "id": "formula:book3:L044:001",
+          "location": "blocks[0].value.inlineMath[0]",
+          "sourceString": "[问题1]在初中，用斜二测画法画一个水平放置的矩形$ABCD$的直观图有哪些规定？",
+          "latex": "ABCD",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:002",
+          "location": "blocks[1].value.inlineMath[0]",
+          "sourceString": "生 矩形$ABCD$它的直观图$A'B'C'D'$是一个平行四边形，$A'B'=AB$，$A'D'=\\frac12 AD$且$\\angle B'A'D'=45^\\circ$．",
+          "latex": "ABCD",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:003",
+          "location": "blocks[1].value.inlineMath[1]",
+          "sourceString": "生 矩形$ABCD$它的直观图$A'B'C'D'$是一个平行四边形，$A'B'=AB$，$A'D'=\\frac12 AD$且$\\angle B'A'D'=45^\\circ$．",
+          "latex": "A'B'C'D'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:004",
+          "location": "blocks[1].value.inlineMath[2]",
+          "sourceString": "生 矩形$ABCD$它的直观图$A'B'C'D'$是一个平行四边形，$A'B'=AB$，$A'D'=\\frac12 AD$且$\\angle B'A'D'=45^\\circ$．",
+          "latex": "A'B'=AB",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:005",
+          "location": "blocks[1].value.inlineMath[3]",
+          "sourceString": "生 矩形$ABCD$它的直观图$A'B'C'D'$是一个平行四边形，$A'B'=AB$，$A'D'=\\frac12 AD$且$\\angle B'A'D'=45^\\circ$．",
+          "latex": "A'D'=\\frac12 AD",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:006",
+          "location": "blocks[1].value.inlineMath[4]",
+          "sourceString": "生 矩形$ABCD$它的直观图$A'B'C'D'$是一个平行四边形，$A'B'=AB$，$A'D'=\\frac12 AD$且$\\angle B'A'D'=45^\\circ$．",
+          "latex": "\\angle B'A'D'=45^\\circ",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:007",
+          "location": "blocks[4].value.inlineMath[0]",
+          "sourceString": "（1）在已知图形中取两条互相垂直的直线作为$x$轴和$y$轴，两轴相交于点$O$．画直观图时，把它们画成对应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "x",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:008",
+          "location": "blocks[4].value.inlineMath[1]",
+          "sourceString": "（1）在已知图形中取两条互相垂直的直线作为$x$轴和$y$轴，两轴相交于点$O$．画直观图时，把它们画成对应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "y",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:009",
+          "location": "blocks[4].value.inlineMath[2]",
+          "sourceString": "（1）在已知图形中取两条互相垂直的直线作为$x$轴和$y$轴，两轴相交于点$O$．画直观图时，把它们画成对应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "O",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:010",
+          "location": "blocks[4].value.inlineMath[3]",
+          "sourceString": "（1）在已知图形中取两条互相垂直的直线作为$x$轴和$y$轴，两轴相交于点$O$．画直观图时，把它们画成对应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "x'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:011",
+          "location": "blocks[4].value.inlineMath[4]",
+          "sourceString": "（1）在已知图形中取两条互相垂直的直线作为$x$轴和$y$轴，两轴相交于点$O$．画直观图时，把它们画成对应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "y'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:012",
+          "location": "blocks[4].value.inlineMath[5]",
+          "sourceString": "（1）在已知图形中取两条互相垂直的直线作为$x$轴和$y$轴，两轴相交于点$O$．画直观图时，把它们画成对应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "O'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:013",
+          "location": "blocks[4].value.inlineMath[6]",
+          "sourceString": "（1）在已知图形中取两条互相垂直的直线作为$x$轴和$y$轴，两轴相交于点$O$．画直观图时，把它们画成对应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "\\angle x'O'y'=45^\\circ",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:014",
+          "location": "blocks[5].value.inlineMath[0]",
+          "sourceString": "（2）已知图形中，所在直线平行或重合$x$轴或$y$轴的线段，画直观图时分别画成所在直线平行或重合$x'$轴或$y'$轴的线段．所在直线平行或重合$x$轴的线段，在直观图中保持原长度不变，所在直线平行或重合$y$轴的线段，在直观图中长度为原来的一半．",
+          "latex": "x",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:015",
+          "location": "blocks[5].value.inlineMath[1]",
+          "sourceString": "（2）已知图形中，所在直线平行或重合$x$轴或$y$轴的线段，画直观图时分别画成所在直线平行或重合$x'$轴或$y'$轴的线段．所在直线平行或重合$x$轴的线段，在直观图中保持原长度不变，所在直线平行或重合$y$轴的线段，在直观图中长度为原来的一半．",
+          "latex": "y",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:016",
+          "location": "blocks[5].value.inlineMath[2]",
+          "sourceString": "（2）已知图形中，所在直线平行或重合$x$轴或$y$轴的线段，画直观图时分别画成所在直线平行或重合$x'$轴或$y'$轴的线段．所在直线平行或重合$x$轴的线段，在直观图中保持原长度不变，所在直线平行或重合$y$轴的线段，在直观图中长度为原来的一半．",
+          "latex": "x'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:017",
+          "location": "blocks[5].value.inlineMath[3]",
+          "sourceString": "（2）已知图形中，所在直线平行或重合$x$轴或$y$轴的线段，画直观图时分别画成所在直线平行或重合$x'$轴或$y'$轴的线段．所在直线平行或重合$x$轴的线段，在直观图中保持原长度不变，所在直线平行或重合$y$轴的线段，在直观图中长度为原来的一半．",
+          "latex": "y'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:018",
+          "location": "blocks[5].value.inlineMath[4]",
+          "sourceString": "（2）已知图形中，所在直线平行或重合$x$轴或$y$轴的线段，画直观图时分别画成所在直线平行或重合$x'$轴或$y'$轴的线段．所在直线平行或重合$x$轴的线段，在直观图中保持原长度不变，所在直线平行或重合$y$轴的线段，在直观图中长度为原来的一半．",
+          "latex": "x",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:019",
+          "location": "blocks[5].value.inlineMath[5]",
+          "sourceString": "（2）已知图形中，所在直线平行或重合$x$轴或$y$轴的线段，画直观图时分别画成所在直线平行或重合$x'$轴或$y'$轴的线段．所在直线平行或重合$x$轴的线段，在直观图中保持原长度不变，所在直线平行或重合$y$轴的线段，在直观图中长度为原来的一半．",
+          "latex": "y",
+          "status": "verified"
+        },
+        {
+          "id": "formula:B13:lesson-content:book3:L044:oblique-rule:b7:m0",
+          "location": "blocks[7].value.inlineMath[0]",
+          "latex": "AB",
+          "sourceString": "轴的选择说明（编辑）：原矩形例图把$AB$方向选作$x$方向、$AD$方向选作$y$方向，因此$A'B'=AB$、$A'D'=\\frac12 AD$。保持或减半只适用于与所选坐标轴平行或重合的线段，不能推成任意线段的长度都保持或减半。原$45^\\circ$规则和完整步骤不重新建设。",
+          "status": "verified",
+          "origin": "editorial_scoped_proof_condition_or_source_correction",
+          "historicalQueueClosure": false
+        },
+        {
+          "id": "formula:B13:lesson-content:book3:L044:oblique-rule:b7:m1",
+          "location": "blocks[7].value.inlineMath[1]",
+          "latex": "x",
+          "sourceString": "轴的选择说明（编辑）：原矩形例图把$AB$方向选作$x$方向、$AD$方向选作$y$方向，因此$A'B'=AB$、$A'D'=\\frac12 AD$。保持或减半只适用于与所选坐标轴平行或重合的线段，不能推成任意线段的长度都保持或减半。原$45^\\circ$规则和完整步骤不重新建设。",
+          "status": "verified",
+          "origin": "editorial_scoped_proof_condition_or_source_correction",
+          "historicalQueueClosure": false
+        },
+        {
+          "id": "formula:B13:lesson-content:book3:L044:oblique-rule:b7:m2",
+          "location": "blocks[7].value.inlineMath[2]",
+          "latex": "AD",
+          "sourceString": "轴的选择说明（编辑）：原矩形例图把$AB$方向选作$x$方向、$AD$方向选作$y$方向，因此$A'B'=AB$、$A'D'=\\frac12 AD$。保持或减半只适用于与所选坐标轴平行或重合的线段，不能推成任意线段的长度都保持或减半。原$45^\\circ$规则和完整步骤不重新建设。",
+          "status": "verified",
+          "origin": "editorial_scoped_proof_condition_or_source_correction",
+          "historicalQueueClosure": false
+        },
+        {
+          "id": "formula:B13:lesson-content:book3:L044:oblique-rule:b7:m3",
+          "location": "blocks[7].value.inlineMath[3]",
+          "latex": "y",
+          "sourceString": "轴的选择说明（编辑）：原矩形例图把$AB$方向选作$x$方向、$AD$方向选作$y$方向，因此$A'B'=AB$、$A'D'=\\frac12 AD$。保持或减半只适用于与所选坐标轴平行或重合的线段，不能推成任意线段的长度都保持或减半。原$45^\\circ$规则和完整步骤不重新建设。",
+          "status": "verified",
+          "origin": "editorial_scoped_proof_condition_or_source_correction",
+          "historicalQueueClosure": false
+        },
+        {
+          "id": "formula:B13:lesson-content:book3:L044:oblique-rule:b7:m4",
+          "location": "blocks[7].value.inlineMath[4]",
+          "latex": "A'B'=AB",
+          "sourceString": "轴的选择说明（编辑）：原矩形例图把$AB$方向选作$x$方向、$AD$方向选作$y$方向，因此$A'B'=AB$、$A'D'=\\frac12 AD$。保持或减半只适用于与所选坐标轴平行或重合的线段，不能推成任意线段的长度都保持或减半。原$45^\\circ$规则和完整步骤不重新建设。",
+          "status": "verified",
+          "origin": "editorial_scoped_proof_condition_or_source_correction",
+          "historicalQueueClosure": false
+        },
+        {
+          "id": "formula:B13:lesson-content:book3:L044:oblique-rule:b7:m5",
+          "location": "blocks[7].value.inlineMath[5]",
+          "latex": "A'D'=\\frac12 AD",
+          "sourceString": "轴的选择说明（编辑）：原矩形例图把$AB$方向选作$x$方向、$AD$方向选作$y$方向，因此$A'B'=AB$、$A'D'=\\frac12 AD$。保持或减半只适用于与所选坐标轴平行或重合的线段，不能推成任意线段的长度都保持或减半。原$45^\\circ$规则和完整步骤不重新建设。",
+          "status": "verified",
+          "origin": "editorial_scoped_proof_condition_or_source_correction",
+          "historicalQueueClosure": false
+        },
+        {
+          "id": "formula:B13:lesson-content:book3:L044:oblique-rule:b7:m6",
+          "location": "blocks[7].value.inlineMath[6]",
+          "latex": "45^\\circ",
+          "sourceString": "轴的选择说明（编辑）：原矩形例图把$AB$方向选作$x$方向、$AD$方向选作$y$方向，因此$A'B'=AB$、$A'D'=\\frac12 AD$。保持或减半只适用于与所选坐标轴平行或重合的线段，不能推成任意线段的长度都保持或减半。原$45^\\circ$规则和完整步骤不重新建设。",
+          "status": "verified",
+          "origin": "editorial_scoped_proof_condition_or_source_correction",
+          "historicalQueueClosure": false
+        }
+      ],
+      "sourceFigures": [
+        {
+          "resource": {
+            "url": "r80/assets/da19fd4a24325c072270f152.png",
+            "bytes": 8190,
+            "sha256": "da19fd4a24325c072270f152d3fd73379c330a1e1fb83d00604651514796d5d0",
+            "kind": "original_native_image",
+            "sourceId": "L044"
+          },
+          "evidenceId": "ev:B13:L044:image10",
+          "caption": "原教案矩形与斜二测直观图。",
+          "originalObjectSemanticsVerified": true,
+          "afterBlockIndex": 1,
+          "id": "B13:L044:image10"
+        },
+        {
+          "resource": {
+            "url": "r80/assets/627f0bf63f24506f5bd76e66.png",
+            "bytes": 18659,
+            "sha256": "627f0bf63f24506f5bd76e66827b9c996520dea4e49df366fd134770ef1df436",
+            "kind": "original_native_image",
+            "sourceId": "L044"
+          },
+          "evidenceId": "ev:B13:L044:image18",
+          "caption": "原教案坐标轴与斜二测步骤图。",
+          "originalObjectSemanticsVerified": true,
+          "afterBlockIndex": 6,
+          "id": "B13:L044:image18"
+        }
+      ],
+      "sourceUsageReviewB13": {
+        "batch": "B13",
+        "status": "frozen_source_context_and_required_proof_or_figure_conditions_checked",
+        "wholeSourceVerified": false,
+        "nativeChineseWholePageVerified": false,
+        "methodIdentityDecisionPending": null
+      }
+    },
+    {
+      "id": "lesson-content:book3:L044:triangle-two-axes",
+      "nodeId": "kp:21306",
+      "proposedNodeId": null,
+      "kind": "example",
+      "origin": "editorial_proposal",
+      "title": "例1 等腰直角三角形的两种取轴法",
+      "scope": "L044相应具体问题或教学活动；此范围说明为编辑文字",
+      "blocks": [
+        {
+          "role": "question",
+          "type": "text",
+          "value": "例1 用斜二测画法画水平放置的直角边为2cm的等腰直角三角形的直观图．",
+          "evidenceIds": [
+            "ev:book3:L044:para37:triangle-two-axes:0"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "（1）取直角边$AB$所在直线为$x$轴，直角边$AC$所在直线为$y$轴，两轴相交于点$O$．画直观图时，画出相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "evidenceIds": [
+            "ev:book3:L044:para40:triangle-two-axes:1"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "（2）线段$AB$在$x$轴上，则在$x'$轴上取$A'B'=AB=2\\mathrm{cm}$，且$A'$与$O'$重合；线段$AC$在$y$轴上，则在$y'$轴上取$A'C'=\\frac12 AC=1\\mathrm{cm}$．",
+          "evidenceIds": [
+            "ev:book3:L044:para41:triangle-two-axes:2"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "（3）顺次连接$C'A'$、$A'B'$、$B'C'$，擦去辅助线，所得三角形$C'A'B'$就是水平放置的等腰直角三角形$ABC$的直观图．",
+          "evidenceIds": [
+            "ev:book3:L044:para42:triangle-two-axes:3"
+          ]
+        },
+        {
+          "role": "question",
+          "type": "text",
+          "value": "[问题3]除了以$AB$所在直线为$x$轴，$AC$所在直线为$y$轴，还有其他取$x$轴、$y$轴的方法吗？",
+          "evidenceIds": [
+            "ev:book3:L044:para43:triangle-two-axes:4"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "生 根据等腰三角形三线合一的性质，可以取$BC$所在直线为$x$轴，$BC$的中垂线为$y$轴，两轴相交于点$O$．",
+          "evidenceIds": [
+            "ev:book3:L044:para44:triangle-two-axes:5"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "我们可以利用图形的对称性等性质来取互相垂直的直线作为$x$轴和$y$轴．请同学们按斜二测画法画水平放置图形的直观图的步骤来完成第二种画法．",
+          "evidenceIds": [
+            "ev:book3:L044:para45:triangle-two-axes:6"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "生（1）取$BC$所在直线为$x$轴，$BC$的中垂线为$y$轴，两轴相交于点$O$．画直观图时，画出相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "evidenceIds": [
+            "ev:book3:L044:para46:triangle-two-axes:7"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "（2）在$x'$轴上取$B'C'=BC=2\\sqrt2\\mathrm{cm}$且以$O'$为$B'C'$中点，在$y'$轴上取$A'O'=\\frac12 AO=\\frac{\\sqrt2}{2}\\mathrm{cm}$．",
+          "evidenceIds": [
+            "ev:book3:L044:para47:triangle-two-axes:8"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "（3）顺次连接$A'B'$、$B'C'$、$C'A'$，擦去辅助线，所得的三角形$A'B'C'$就是水平放置的等腰直角三角形$ABC$的直观图．",
+          "evidenceIds": [
+            "ev:book3:L044:para48:triangle-two-axes:9"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "[总结]根据平面图形的性质寻找互相垂直的两条直线作为$x$轴、$y$轴方便我们作图且同一个平面图形的斜二测画法可能并不唯一．",
+          "evidenceIds": [
+            "ev:book3:L044:para51:triangle-two-axes:10"
+          ]
+        }
+      ],
+      "contentOrigin": "source_supported_editorial_summary",
+      "wordingStatus": "教案有源整理与数学转写，非逐字引用",
+      "matching": {
+        "status": "confirmed",
+        "reason": "该具体任务与既有节点对应"
+      },
+      "evidence": [
+        {
+          "id": "ev:book3:L044:para37:triangle-two-axes:0",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例1 等腰直角三角形的两种取轴法"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 37,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 5,
+            "printedPage": 5,
+            "pdfPage": 5,
+            "equationObjectId": null
+          },
+          "quote": "例1 用斜二测画法画水平放置的直角边为2cm的等腰直角三角形的直观图．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-5.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para40:triangle-two-axes:1",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例1 等腰直角三角形的两种取轴法"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 40,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 5,
+            "printedPage": 5,
+            "pdfPage": 5,
+            "equationObjectId": null,
+            "renderedPageEnd": 6,
+            "printedPageEnd": 6,
+            "pdfPageEnd": 6
+          },
+          "quote": "（1）取直角边所在直线为轴，直角边所在直线为轴，两轴相交于点．画直观图时，画出相应的轴和轴，两轴相交于点，且使．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "（1）取直角边$AB$所在直线为$x$轴，直角边$AC$所在直线为$y$轴，两轴相交于点$O$．画直观图时，画出相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-5.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para41:triangle-two-axes:2",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例1 等腰直角三角形的两种取轴法"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 41,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 6,
+            "printedPage": 6,
+            "pdfPage": 6,
+            "equationObjectId": null
+          },
+          "quote": "（2）线段在轴上，则在轴上取，且与重合；线段在轴上，则在轴上取．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "（2）线段$AB$在$x$轴上，则在$x'$轴上取$A'B'=AB=2\\mathrm{cm}$，且$A'$与$O'$重合；线段$AC$在$y$轴上，则在$y'$轴上取$A'C'=\\frac12 AC=1\\mathrm{cm}$．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-6.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para42:triangle-two-axes:3",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例1 等腰直角三角形的两种取轴法"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 42,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 6,
+            "printedPage": 6,
+            "pdfPage": 6,
+            "equationObjectId": null
+          },
+          "quote": "（3）顺次连接，擦去辅助线，所得三角形就是水平放置的等腰直角三角形的直观图．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "（3）顺次连接$C'A'$、$A'B'$、$B'C'$，擦去辅助线，所得三角形$C'A'B'$就是水平放置的等腰直角三角形$ABC$的直观图．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-6.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para43:triangle-two-axes:4",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例1 等腰直角三角形的两种取轴法"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 43,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 6,
+            "printedPage": 6,
+            "pdfPage": 6,
+            "equationObjectId": null
+          },
+          "quote": "[问题3] 除了以所在直线为轴，所在直线为轴，还有其他取轴、轴的方法吗？",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "[问题3]除了以$AB$所在直线为$x$轴，$AC$所在直线为$y$轴，还有其他取$x$轴、$y$轴的方法吗？",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-6.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para44:triangle-two-axes:5",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例1 等腰直角三角形的两种取轴法"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 44,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 6,
+            "printedPage": 6,
+            "pdfPage": 6,
+            "equationObjectId": null
+          },
+          "quote": "生 根据等腰三角形三线合一的性质，可以取所在直线为轴，的中垂线为轴，两轴相交于点．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "生 根据等腰三角形三线合一的性质，可以取$BC$所在直线为$x$轴，$BC$的中垂线为$y$轴，两轴相交于点$O$．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-6.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para45:triangle-two-axes:6",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例1 等腰直角三角形的两种取轴法"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 45,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 6,
+            "printedPage": 6,
+            "pdfPage": 6,
+            "equationObjectId": null
+          },
+          "quote": "我们可以利用图形的对称性等性质来取互相垂直的直线作为轴和轴．请同学们按斜二测画法画水平放置图形的直观图的步骤来完成第二种画法．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "我们可以利用图形的对称性等性质来取互相垂直的直线作为$x$轴和$y$轴．请同学们按斜二测画法画水平放置图形的直观图的步骤来完成第二种画法．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-6.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para46:triangle-two-axes:7",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例1 等腰直角三角形的两种取轴法"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 46,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 6,
+            "printedPage": 6,
+            "pdfPage": 6,
+            "equationObjectId": null
+          },
+          "quote": "生 （1）取所在直线为轴，的中垂线为轴，两轴相交于点．画直观图时，画出相应的轴和轴，两轴相交于点，且使．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "生（1）取$BC$所在直线为$x$轴，$BC$的中垂线为$y$轴，两轴相交于点$O$．画直观图时，画出相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-6.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para47:triangle-two-axes:8",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例1 等腰直角三角形的两种取轴法"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 47,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 6,
+            "printedPage": 6,
+            "pdfPage": 6,
+            "equationObjectId": null
+          },
+          "quote": "（2）在轴上取且以为中点，在轴上取．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "（2）在$x'$轴上取$B'C'=BC=2\\sqrt2\\mathrm{cm}$且以$O'$为$B'C'$中点，在$y'$轴上取$A'O'=\\frac12 AO=\\frac{\\sqrt2}{2}\\mathrm{cm}$．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-6.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para48:triangle-two-axes:9",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例1 等腰直角三角形的两种取轴法"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 48,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 7,
+            "printedPage": 7,
+            "pdfPage": 7,
+            "equationObjectId": null
+          },
+          "quote": "（3）顺次连接，擦去辅助线，所得的三角形就是水平放置的等腰直角三角形的直观图．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "（3）顺次连接$A'B'$、$B'C'$、$C'A'$，擦去辅助线，所得的三角形$A'B'C'$就是水平放置的等腰直角三角形$ABC$的直观图．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-7.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para51:triangle-two-axes:10",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例1 等腰直角三角形的两种取轴法"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 51,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 7,
+            "printedPage": 7,
+            "pdfPage": 7,
+            "equationObjectId": null
+          },
+          "quote": "[总结]根据平面图形的性质寻找互相垂直的两条直线作为轴、轴方便我们作图且同一个平面图形的斜二测画法可能并不唯一．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "[总结]根据平面图形的性质寻找互相垂直的两条直线作为$x$轴、$y$轴方便我们作图且同一个平面图形的斜二测画法可能并不唯一．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-7.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": [
+        {
+          "id": "formula:book3:L044:020",
+          "location": "blocks[1].value.inlineMath[0]",
+          "sourceString": "（1）取直角边$AB$所在直线为$x$轴，直角边$AC$所在直线为$y$轴，两轴相交于点$O$．画直观图时，画出相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "AB",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:021",
+          "location": "blocks[1].value.inlineMath[1]",
+          "sourceString": "（1）取直角边$AB$所在直线为$x$轴，直角边$AC$所在直线为$y$轴，两轴相交于点$O$．画直观图时，画出相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "x",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:022",
+          "location": "blocks[1].value.inlineMath[2]",
+          "sourceString": "（1）取直角边$AB$所在直线为$x$轴，直角边$AC$所在直线为$y$轴，两轴相交于点$O$．画直观图时，画出相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "AC",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:023",
+          "location": "blocks[1].value.inlineMath[3]",
+          "sourceString": "（1）取直角边$AB$所在直线为$x$轴，直角边$AC$所在直线为$y$轴，两轴相交于点$O$．画直观图时，画出相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "y",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:024",
+          "location": "blocks[1].value.inlineMath[4]",
+          "sourceString": "（1）取直角边$AB$所在直线为$x$轴，直角边$AC$所在直线为$y$轴，两轴相交于点$O$．画直观图时，画出相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "O",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:025",
+          "location": "blocks[1].value.inlineMath[5]",
+          "sourceString": "（1）取直角边$AB$所在直线为$x$轴，直角边$AC$所在直线为$y$轴，两轴相交于点$O$．画直观图时，画出相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "x'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:026",
+          "location": "blocks[1].value.inlineMath[6]",
+          "sourceString": "（1）取直角边$AB$所在直线为$x$轴，直角边$AC$所在直线为$y$轴，两轴相交于点$O$．画直观图时，画出相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "y'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:027",
+          "location": "blocks[1].value.inlineMath[7]",
+          "sourceString": "（1）取直角边$AB$所在直线为$x$轴，直角边$AC$所在直线为$y$轴，两轴相交于点$O$．画直观图时，画出相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "O'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:028",
+          "location": "blocks[1].value.inlineMath[8]",
+          "sourceString": "（1）取直角边$AB$所在直线为$x$轴，直角边$AC$所在直线为$y$轴，两轴相交于点$O$．画直观图时，画出相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "\\angle x'O'y'=45^\\circ",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:029",
+          "location": "blocks[2].value.inlineMath[0]",
+          "sourceString": "（2）线段$AB$在$x$轴上，则在$x'$轴上取$A'B'=AB=2\\mathrm{cm}$，且$A'$与$O'$重合；线段$AC$在$y$轴上，则在$y'$轴上取$A'C'=\\frac12 AC=1\\mathrm{cm}$．",
+          "latex": "AB",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:030",
+          "location": "blocks[2].value.inlineMath[1]",
+          "sourceString": "（2）线段$AB$在$x$轴上，则在$x'$轴上取$A'B'=AB=2\\mathrm{cm}$，且$A'$与$O'$重合；线段$AC$在$y$轴上，则在$y'$轴上取$A'C'=\\frac12 AC=1\\mathrm{cm}$．",
+          "latex": "x",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:031",
+          "location": "blocks[2].value.inlineMath[2]",
+          "sourceString": "（2）线段$AB$在$x$轴上，则在$x'$轴上取$A'B'=AB=2\\mathrm{cm}$，且$A'$与$O'$重合；线段$AC$在$y$轴上，则在$y'$轴上取$A'C'=\\frac12 AC=1\\mathrm{cm}$．",
+          "latex": "x'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:032",
+          "location": "blocks[2].value.inlineMath[3]",
+          "sourceString": "（2）线段$AB$在$x$轴上，则在$x'$轴上取$A'B'=AB=2\\mathrm{cm}$，且$A'$与$O'$重合；线段$AC$在$y$轴上，则在$y'$轴上取$A'C'=\\frac12 AC=1\\mathrm{cm}$．",
+          "latex": "A'B'=AB=2\\mathrm{cm}",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:033",
+          "location": "blocks[2].value.inlineMath[4]",
+          "sourceString": "（2）线段$AB$在$x$轴上，则在$x'$轴上取$A'B'=AB=2\\mathrm{cm}$，且$A'$与$O'$重合；线段$AC$在$y$轴上，则在$y'$轴上取$A'C'=\\frac12 AC=1\\mathrm{cm}$．",
+          "latex": "A'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:034",
+          "location": "blocks[2].value.inlineMath[5]",
+          "sourceString": "（2）线段$AB$在$x$轴上，则在$x'$轴上取$A'B'=AB=2\\mathrm{cm}$，且$A'$与$O'$重合；线段$AC$在$y$轴上，则在$y'$轴上取$A'C'=\\frac12 AC=1\\mathrm{cm}$．",
+          "latex": "O'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:035",
+          "location": "blocks[2].value.inlineMath[6]",
+          "sourceString": "（2）线段$AB$在$x$轴上，则在$x'$轴上取$A'B'=AB=2\\mathrm{cm}$，且$A'$与$O'$重合；线段$AC$在$y$轴上，则在$y'$轴上取$A'C'=\\frac12 AC=1\\mathrm{cm}$．",
+          "latex": "AC",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:036",
+          "location": "blocks[2].value.inlineMath[7]",
+          "sourceString": "（2）线段$AB$在$x$轴上，则在$x'$轴上取$A'B'=AB=2\\mathrm{cm}$，且$A'$与$O'$重合；线段$AC$在$y$轴上，则在$y'$轴上取$A'C'=\\frac12 AC=1\\mathrm{cm}$．",
+          "latex": "y",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:037",
+          "location": "blocks[2].value.inlineMath[8]",
+          "sourceString": "（2）线段$AB$在$x$轴上，则在$x'$轴上取$A'B'=AB=2\\mathrm{cm}$，且$A'$与$O'$重合；线段$AC$在$y$轴上，则在$y'$轴上取$A'C'=\\frac12 AC=1\\mathrm{cm}$．",
+          "latex": "y'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:038",
+          "location": "blocks[2].value.inlineMath[9]",
+          "sourceString": "（2）线段$AB$在$x$轴上，则在$x'$轴上取$A'B'=AB=2\\mathrm{cm}$，且$A'$与$O'$重合；线段$AC$在$y$轴上，则在$y'$轴上取$A'C'=\\frac12 AC=1\\mathrm{cm}$．",
+          "latex": "A'C'=\\frac12 AC=1\\mathrm{cm}",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:039",
+          "location": "blocks[3].value.inlineMath[0]",
+          "sourceString": "（3）顺次连接$C'A'$、$A'B'$、$B'C'$，擦去辅助线，所得三角形$C'A'B'$就是水平放置的等腰直角三角形$ABC$的直观图．",
+          "latex": "C'A'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:040",
+          "location": "blocks[3].value.inlineMath[1]",
+          "sourceString": "（3）顺次连接$C'A'$、$A'B'$、$B'C'$，擦去辅助线，所得三角形$C'A'B'$就是水平放置的等腰直角三角形$ABC$的直观图．",
+          "latex": "A'B'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:041",
+          "location": "blocks[3].value.inlineMath[2]",
+          "sourceString": "（3）顺次连接$C'A'$、$A'B'$、$B'C'$，擦去辅助线，所得三角形$C'A'B'$就是水平放置的等腰直角三角形$ABC$的直观图．",
+          "latex": "B'C'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:042",
+          "location": "blocks[3].value.inlineMath[3]",
+          "sourceString": "（3）顺次连接$C'A'$、$A'B'$、$B'C'$，擦去辅助线，所得三角形$C'A'B'$就是水平放置的等腰直角三角形$ABC$的直观图．",
+          "latex": "C'A'B'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:043",
+          "location": "blocks[3].value.inlineMath[4]",
+          "sourceString": "（3）顺次连接$C'A'$、$A'B'$、$B'C'$，擦去辅助线，所得三角形$C'A'B'$就是水平放置的等腰直角三角形$ABC$的直观图．",
+          "latex": "ABC",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:044",
+          "location": "blocks[4].value.inlineMath[0]",
+          "sourceString": "[问题3]除了以$AB$所在直线为$x$轴，$AC$所在直线为$y$轴，还有其他取$x$轴、$y$轴的方法吗？",
+          "latex": "AB",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:045",
+          "location": "blocks[4].value.inlineMath[1]",
+          "sourceString": "[问题3]除了以$AB$所在直线为$x$轴，$AC$所在直线为$y$轴，还有其他取$x$轴、$y$轴的方法吗？",
+          "latex": "x",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:046",
+          "location": "blocks[4].value.inlineMath[2]",
+          "sourceString": "[问题3]除了以$AB$所在直线为$x$轴，$AC$所在直线为$y$轴，还有其他取$x$轴、$y$轴的方法吗？",
+          "latex": "AC",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:047",
+          "location": "blocks[4].value.inlineMath[3]",
+          "sourceString": "[问题3]除了以$AB$所在直线为$x$轴，$AC$所在直线为$y$轴，还有其他取$x$轴、$y$轴的方法吗？",
+          "latex": "y",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:048",
+          "location": "blocks[4].value.inlineMath[4]",
+          "sourceString": "[问题3]除了以$AB$所在直线为$x$轴，$AC$所在直线为$y$轴，还有其他取$x$轴、$y$轴的方法吗？",
+          "latex": "x",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:049",
+          "location": "blocks[4].value.inlineMath[5]",
+          "sourceString": "[问题3]除了以$AB$所在直线为$x$轴，$AC$所在直线为$y$轴，还有其他取$x$轴、$y$轴的方法吗？",
+          "latex": "y",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:050",
+          "location": "blocks[5].value.inlineMath[0]",
+          "sourceString": "生 根据等腰三角形三线合一的性质，可以取$BC$所在直线为$x$轴，$BC$的中垂线为$y$轴，两轴相交于点$O$．",
+          "latex": "BC",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:051",
+          "location": "blocks[5].value.inlineMath[1]",
+          "sourceString": "生 根据等腰三角形三线合一的性质，可以取$BC$所在直线为$x$轴，$BC$的中垂线为$y$轴，两轴相交于点$O$．",
+          "latex": "x",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:052",
+          "location": "blocks[5].value.inlineMath[2]",
+          "sourceString": "生 根据等腰三角形三线合一的性质，可以取$BC$所在直线为$x$轴，$BC$的中垂线为$y$轴，两轴相交于点$O$．",
+          "latex": "BC",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:053",
+          "location": "blocks[5].value.inlineMath[3]",
+          "sourceString": "生 根据等腰三角形三线合一的性质，可以取$BC$所在直线为$x$轴，$BC$的中垂线为$y$轴，两轴相交于点$O$．",
+          "latex": "y",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:054",
+          "location": "blocks[5].value.inlineMath[4]",
+          "sourceString": "生 根据等腰三角形三线合一的性质，可以取$BC$所在直线为$x$轴，$BC$的中垂线为$y$轴，两轴相交于点$O$．",
+          "latex": "O",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:055",
+          "location": "blocks[6].value.inlineMath[0]",
+          "sourceString": "我们可以利用图形的对称性等性质来取互相垂直的直线作为$x$轴和$y$轴．请同学们按斜二测画法画水平放置图形的直观图的步骤来完成第二种画法．",
+          "latex": "x",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:056",
+          "location": "blocks[6].value.inlineMath[1]",
+          "sourceString": "我们可以利用图形的对称性等性质来取互相垂直的直线作为$x$轴和$y$轴．请同学们按斜二测画法画水平放置图形的直观图的步骤来完成第二种画法．",
+          "latex": "y",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:057",
+          "location": "blocks[7].value.inlineMath[0]",
+          "sourceString": "生（1）取$BC$所在直线为$x$轴，$BC$的中垂线为$y$轴，两轴相交于点$O$．画直观图时，画出相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "BC",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:058",
+          "location": "blocks[7].value.inlineMath[1]",
+          "sourceString": "生（1）取$BC$所在直线为$x$轴，$BC$的中垂线为$y$轴，两轴相交于点$O$．画直观图时，画出相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "x",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:059",
+          "location": "blocks[7].value.inlineMath[2]",
+          "sourceString": "生（1）取$BC$所在直线为$x$轴，$BC$的中垂线为$y$轴，两轴相交于点$O$．画直观图时，画出相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "BC",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:060",
+          "location": "blocks[7].value.inlineMath[3]",
+          "sourceString": "生（1）取$BC$所在直线为$x$轴，$BC$的中垂线为$y$轴，两轴相交于点$O$．画直观图时，画出相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "y",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:061",
+          "location": "blocks[7].value.inlineMath[4]",
+          "sourceString": "生（1）取$BC$所在直线为$x$轴，$BC$的中垂线为$y$轴，两轴相交于点$O$．画直观图时，画出相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "O",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:062",
+          "location": "blocks[7].value.inlineMath[5]",
+          "sourceString": "生（1）取$BC$所在直线为$x$轴，$BC$的中垂线为$y$轴，两轴相交于点$O$．画直观图时，画出相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "x'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:063",
+          "location": "blocks[7].value.inlineMath[6]",
+          "sourceString": "生（1）取$BC$所在直线为$x$轴，$BC$的中垂线为$y$轴，两轴相交于点$O$．画直观图时，画出相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "y'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:064",
+          "location": "blocks[7].value.inlineMath[7]",
+          "sourceString": "生（1）取$BC$所在直线为$x$轴，$BC$的中垂线为$y$轴，两轴相交于点$O$．画直观图时，画出相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "O'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:065",
+          "location": "blocks[7].value.inlineMath[8]",
+          "sourceString": "生（1）取$BC$所在直线为$x$轴，$BC$的中垂线为$y$轴，两轴相交于点$O$．画直观图时，画出相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "\\angle x'O'y'=45^\\circ",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:066",
+          "location": "blocks[8].value.inlineMath[0]",
+          "sourceString": "（2）在$x'$轴上取$B'C'=BC=2\\sqrt2\\mathrm{cm}$且以$O'$为$B'C'$中点，在$y'$轴上取$A'O'=\\frac12 AO=\\frac{\\sqrt2}{2}\\mathrm{cm}$．",
+          "latex": "x'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:067",
+          "location": "blocks[8].value.inlineMath[1]",
+          "sourceString": "（2）在$x'$轴上取$B'C'=BC=2\\sqrt2\\mathrm{cm}$且以$O'$为$B'C'$中点，在$y'$轴上取$A'O'=\\frac12 AO=\\frac{\\sqrt2}{2}\\mathrm{cm}$．",
+          "latex": "B'C'=BC=2\\sqrt2\\mathrm{cm}",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:068",
+          "location": "blocks[8].value.inlineMath[2]",
+          "sourceString": "（2）在$x'$轴上取$B'C'=BC=2\\sqrt2\\mathrm{cm}$且以$O'$为$B'C'$中点，在$y'$轴上取$A'O'=\\frac12 AO=\\frac{\\sqrt2}{2}\\mathrm{cm}$．",
+          "latex": "O'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:069",
+          "location": "blocks[8].value.inlineMath[3]",
+          "sourceString": "（2）在$x'$轴上取$B'C'=BC=2\\sqrt2\\mathrm{cm}$且以$O'$为$B'C'$中点，在$y'$轴上取$A'O'=\\frac12 AO=\\frac{\\sqrt2}{2}\\mathrm{cm}$．",
+          "latex": "B'C'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:070",
+          "location": "blocks[8].value.inlineMath[4]",
+          "sourceString": "（2）在$x'$轴上取$B'C'=BC=2\\sqrt2\\mathrm{cm}$且以$O'$为$B'C'$中点，在$y'$轴上取$A'O'=\\frac12 AO=\\frac{\\sqrt2}{2}\\mathrm{cm}$．",
+          "latex": "y'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:071",
+          "location": "blocks[8].value.inlineMath[5]",
+          "sourceString": "（2）在$x'$轴上取$B'C'=BC=2\\sqrt2\\mathrm{cm}$且以$O'$为$B'C'$中点，在$y'$轴上取$A'O'=\\frac12 AO=\\frac{\\sqrt2}{2}\\mathrm{cm}$．",
+          "latex": "A'O'=\\frac12 AO=\\frac{\\sqrt2}{2}\\mathrm{cm}",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:072",
+          "location": "blocks[9].value.inlineMath[0]",
+          "sourceString": "（3）顺次连接$A'B'$、$B'C'$、$C'A'$，擦去辅助线，所得的三角形$A'B'C'$就是水平放置的等腰直角三角形$ABC$的直观图．",
+          "latex": "A'B'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:073",
+          "location": "blocks[9].value.inlineMath[1]",
+          "sourceString": "（3）顺次连接$A'B'$、$B'C'$、$C'A'$，擦去辅助线，所得的三角形$A'B'C'$就是水平放置的等腰直角三角形$ABC$的直观图．",
+          "latex": "B'C'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:074",
+          "location": "blocks[9].value.inlineMath[2]",
+          "sourceString": "（3）顺次连接$A'B'$、$B'C'$、$C'A'$，擦去辅助线，所得的三角形$A'B'C'$就是水平放置的等腰直角三角形$ABC$的直观图．",
+          "latex": "C'A'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:075",
+          "location": "blocks[9].value.inlineMath[3]",
+          "sourceString": "（3）顺次连接$A'B'$、$B'C'$、$C'A'$，擦去辅助线，所得的三角形$A'B'C'$就是水平放置的等腰直角三角形$ABC$的直观图．",
+          "latex": "A'B'C'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:076",
+          "location": "blocks[9].value.inlineMath[4]",
+          "sourceString": "（3）顺次连接$A'B'$、$B'C'$、$C'A'$，擦去辅助线，所得的三角形$A'B'C'$就是水平放置的等腰直角三角形$ABC$的直观图．",
+          "latex": "ABC",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:077",
+          "location": "blocks[10].value.inlineMath[0]",
+          "sourceString": "[总结]根据平面图形的性质寻找互相垂直的两条直线作为$x$轴、$y$轴方便我们作图且同一个平面图形的斜二测画法可能并不唯一．",
+          "latex": "x",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:078",
+          "location": "blocks[10].value.inlineMath[1]",
+          "sourceString": "[总结]根据平面图形的性质寻找互相垂直的两条直线作为$x$轴、$y$轴方便我们作图且同一个平面图形的斜二测画法可能并不唯一．",
+          "latex": "y",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "id": "lesson-content:book3:L044:regular-hexagon",
+      "nodeId": "kp:21306",
+      "proposedNodeId": null,
+      "kind": "example",
+      "origin": "editorial_proposal",
+      "title": "例2 水平正六边形的完整画法",
+      "scope": "L044相应具体问题或教学活动；此范围说明为编辑文字",
+      "blocks": [
+        {
+          "role": "question",
+          "type": "text",
+          "value": "例2 用斜二测画法画一个水平放置的正六边形的直观图．",
+          "evidenceIds": [
+            "ev:book3:L044:para53:regular-hexagon:0"
+          ]
+        },
+        {
+          "role": "question",
+          "type": "text",
+          "value": "[问题4]用斜二测画法画一个水平放置的正六边形的直观图时，如何取两条互相垂直的直线作为$x$轴和$y$轴？",
+          "evidenceIds": [
+            "ev:book3:L044:para54:regular-hexagon:1"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "生 正六边形的各个边之间都不垂直，但是我发现对角线$FB$与$BC$边互相垂直，可以以$BC$所在直线为$x$轴，$FB$所在直线为$y$轴．我还发现对角线$FB$与对角线$AD$互相垂直，对角线$EC$与对角线$AD$互相垂直且正六边形是轴对称图形，可以以$AD$所在直线为$x$轴，线段$AD$的中垂线为$y$轴．",
+          "evidenceIds": [
+            "ev:book3:L044:para56:regular-hexagon:2"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "请同学们根据正六边形的性质，建立合适的坐标系，尝试用斜二测画法画水平放置的正六边形的直观图．",
+          "evidenceIds": [
+            "ev:book3:L044:para57:regular-hexagon:3"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "画法（1）如图，在已知正六边形$ABCDEF$中，取$AD$所在直线为$x$轴，取线段$AD$的中垂线$MN$为$y$轴，两轴相交于点$O$．画相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "evidenceIds": [
+            "ev:book3:L044:para58:regular-hexagon:4"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "（2）在$x'$轴上取$A'D'=AD$且$O'$为$A'D'$的中点，在$y'$轴上取$M'N'$，使$M'O'=N'O'=\\frac12 MO$．过$M'$画$E'F'$平行于$x'$轴，使$E'F'=EF$且$M'$为$E'F'$的中点；类似地，再过$N'$画$B'C'$平行于$x'$轴，使$B'C'=BC$且$N'$为$B'C'$的中点．",
+          "evidenceIds": [
+            "ev:book3:L044:para59:regular-hexagon:5"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "（3）顺次连接$A'$、$B'$、$C'$、$D'$、$E'$、$F'$、$A'$，擦去辅助线，所得到的六边形$A'B'C'D'E'F'$就是水平放置的正六边形$ABCDEF$的直观图．",
+          "evidenceIds": [
+            "ev:book3:L044:para60:regular-hexagon:6"
+          ]
+        }
+      ],
+      "contentOrigin": "source_supported_editorial_summary",
+      "wordingStatus": "教案有源整理与数学转写，非逐字引用",
+      "matching": {
+        "status": "confirmed",
+        "reason": "该具体任务与既有节点对应"
+      },
+      "evidence": [
+        {
+          "id": "ev:book3:L044:para53:regular-hexagon:0",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例2 水平正六边形的完整画法"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 53,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 7,
+            "printedPage": 7,
+            "pdfPage": 7,
+            "equationObjectId": null
+          },
+          "quote": "例2 用斜二测画法画一个水平放置的正六边形的直观图．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-7.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para54:regular-hexagon:1",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例2 水平正六边形的完整画法"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 54,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 7,
+            "printedPage": 7,
+            "pdfPage": 7,
+            "equationObjectId": null
+          },
+          "quote": "[问题4] 用斜二测画法画一个水平放置的正六边形的直观图时，如何取两条互相垂直的直线作为轴和轴？",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "[问题4]用斜二测画法画一个水平放置的正六边形的直观图时，如何取两条互相垂直的直线作为$x$轴和$y$轴？",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-7.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para56:regular-hexagon:2",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例2 水平正六边形的完整画法"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 56,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 7,
+            "printedPage": 7,
+            "pdfPage": 7,
+            "equationObjectId": null,
+            "renderedPageEnd": 8,
+            "printedPageEnd": 8,
+            "pdfPageEnd": 8
+          },
+          "quote": "生 正六边形的各个边之间都不垂直，但是我发现对角线与边互相垂直，可以以所在直线为轴，所在直线为轴．我还发现对角线与对角线互相垂直，对角线与对角线互相垂直且正六边形是轴对称图形，可以以所在直线为轴，线段的中垂线为轴．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "生 正六边形的各个边之间都不垂直，但是我发现对角线$FB$与$BC$边互相垂直，可以以$BC$所在直线为$x$轴，$FB$所在直线为$y$轴．我还发现对角线$FB$与对角线$AD$互相垂直，对角线$EC$与对角线$AD$互相垂直且正六边形是轴对称图形，可以以$AD$所在直线为$x$轴，线段$AD$的中垂线为$y$轴．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-7.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para57:regular-hexagon:3",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例2 水平正六边形的完整画法"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 57,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 8,
+            "printedPage": 8,
+            "pdfPage": 8,
+            "equationObjectId": null
+          },
+          "quote": "请同学们根据正六边形的性质，建立合适的坐标系，尝试用斜二测画法画水平放置的正六边形的直观图．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-8.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para58:regular-hexagon:4",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例2 水平正六边形的完整画法"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 58,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 8,
+            "printedPage": 8,
+            "pdfPage": 8,
+            "equationObjectId": null
+          },
+          "quote": "画法（1）如图，在已知正六边形中，取所在直线为轴，取线段的中垂线为轴，两轴相交于点．画相应的轴和轴，两轴相交于点，且使．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "画法（1）如图，在已知正六边形$ABCDEF$中，取$AD$所在直线为$x$轴，取线段$AD$的中垂线$MN$为$y$轴，两轴相交于点$O$．画相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-8.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para59:regular-hexagon:5",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例2 水平正六边形的完整画法"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 59,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 8,
+            "printedPage": 8,
+            "pdfPage": 8,
+            "equationObjectId": null
+          },
+          "quote": "（2）在轴上取且为的中点，在轴上取，使．过画平行于轴，使且为的中点；类似地，再过画平行于轴，使且为的中点．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "（2）在$x'$轴上取$A'D'=AD$且$O'$为$A'D'$的中点，在$y'$轴上取$M'N'$，使$M'O'=N'O'=\\frac12 MO$．过$M'$画$E'F'$平行于$x'$轴，使$E'F'=EF$且$M'$为$E'F'$的中点；类似地，再过$N'$画$B'C'$平行于$x'$轴，使$B'C'=BC$且$N'$为$B'C'$的中点．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-8.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para60:regular-hexagon:6",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例2 水平正六边形的完整画法"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 60,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 8,
+            "printedPage": 8,
+            "pdfPage": 8,
+            "equationObjectId": null
+          },
+          "quote": "（3）顺次连接，擦去辅助线，所得到的六边形就是水平放置的正六边形的直观图．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "（3）顺次连接$A'$、$B'$、$C'$、$D'$、$E'$、$F'$、$A'$，擦去辅助线，所得到的六边形$A'B'C'D'E'F'$就是水平放置的正六边形$ABCDEF$的直观图．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-8.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": [
+        {
+          "id": "formula:book3:L044:079",
+          "location": "blocks[1].value.inlineMath[0]",
+          "sourceString": "[问题4]用斜二测画法画一个水平放置的正六边形的直观图时，如何取两条互相垂直的直线作为$x$轴和$y$轴？",
+          "latex": "x",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:080",
+          "location": "blocks[1].value.inlineMath[1]",
+          "sourceString": "[问题4]用斜二测画法画一个水平放置的正六边形的直观图时，如何取两条互相垂直的直线作为$x$轴和$y$轴？",
+          "latex": "y",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:081",
+          "location": "blocks[2].value.inlineMath[0]",
+          "sourceString": "生 正六边形的各个边之间都不垂直，但是我发现对角线$FB$与$BC$边互相垂直，可以以$BC$所在直线为$x$轴，$FB$所在直线为$y$轴．我还发现对角线$FB$与对角线$AD$互相垂直，对角线$EC$与对角线$AD$互相垂直且正六边形是轴对称图形，可以以$AD$所在直线为$x$轴，线段$AD$的中垂线为$y$轴．",
+          "latex": "FB",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:082",
+          "location": "blocks[2].value.inlineMath[1]",
+          "sourceString": "生 正六边形的各个边之间都不垂直，但是我发现对角线$FB$与$BC$边互相垂直，可以以$BC$所在直线为$x$轴，$FB$所在直线为$y$轴．我还发现对角线$FB$与对角线$AD$互相垂直，对角线$EC$与对角线$AD$互相垂直且正六边形是轴对称图形，可以以$AD$所在直线为$x$轴，线段$AD$的中垂线为$y$轴．",
+          "latex": "BC",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:083",
+          "location": "blocks[2].value.inlineMath[2]",
+          "sourceString": "生 正六边形的各个边之间都不垂直，但是我发现对角线$FB$与$BC$边互相垂直，可以以$BC$所在直线为$x$轴，$FB$所在直线为$y$轴．我还发现对角线$FB$与对角线$AD$互相垂直，对角线$EC$与对角线$AD$互相垂直且正六边形是轴对称图形，可以以$AD$所在直线为$x$轴，线段$AD$的中垂线为$y$轴．",
+          "latex": "BC",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:084",
+          "location": "blocks[2].value.inlineMath[3]",
+          "sourceString": "生 正六边形的各个边之间都不垂直，但是我发现对角线$FB$与$BC$边互相垂直，可以以$BC$所在直线为$x$轴，$FB$所在直线为$y$轴．我还发现对角线$FB$与对角线$AD$互相垂直，对角线$EC$与对角线$AD$互相垂直且正六边形是轴对称图形，可以以$AD$所在直线为$x$轴，线段$AD$的中垂线为$y$轴．",
+          "latex": "x",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:085",
+          "location": "blocks[2].value.inlineMath[4]",
+          "sourceString": "生 正六边形的各个边之间都不垂直，但是我发现对角线$FB$与$BC$边互相垂直，可以以$BC$所在直线为$x$轴，$FB$所在直线为$y$轴．我还发现对角线$FB$与对角线$AD$互相垂直，对角线$EC$与对角线$AD$互相垂直且正六边形是轴对称图形，可以以$AD$所在直线为$x$轴，线段$AD$的中垂线为$y$轴．",
+          "latex": "FB",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:086",
+          "location": "blocks[2].value.inlineMath[5]",
+          "sourceString": "生 正六边形的各个边之间都不垂直，但是我发现对角线$FB$与$BC$边互相垂直，可以以$BC$所在直线为$x$轴，$FB$所在直线为$y$轴．我还发现对角线$FB$与对角线$AD$互相垂直，对角线$EC$与对角线$AD$互相垂直且正六边形是轴对称图形，可以以$AD$所在直线为$x$轴，线段$AD$的中垂线为$y$轴．",
+          "latex": "y",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:087",
+          "location": "blocks[2].value.inlineMath[6]",
+          "sourceString": "生 正六边形的各个边之间都不垂直，但是我发现对角线$FB$与$BC$边互相垂直，可以以$BC$所在直线为$x$轴，$FB$所在直线为$y$轴．我还发现对角线$FB$与对角线$AD$互相垂直，对角线$EC$与对角线$AD$互相垂直且正六边形是轴对称图形，可以以$AD$所在直线为$x$轴，线段$AD$的中垂线为$y$轴．",
+          "latex": "FB",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:088",
+          "location": "blocks[2].value.inlineMath[7]",
+          "sourceString": "生 正六边形的各个边之间都不垂直，但是我发现对角线$FB$与$BC$边互相垂直，可以以$BC$所在直线为$x$轴，$FB$所在直线为$y$轴．我还发现对角线$FB$与对角线$AD$互相垂直，对角线$EC$与对角线$AD$互相垂直且正六边形是轴对称图形，可以以$AD$所在直线为$x$轴，线段$AD$的中垂线为$y$轴．",
+          "latex": "AD",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:089",
+          "location": "blocks[2].value.inlineMath[8]",
+          "sourceString": "生 正六边形的各个边之间都不垂直，但是我发现对角线$FB$与$BC$边互相垂直，可以以$BC$所在直线为$x$轴，$FB$所在直线为$y$轴．我还发现对角线$FB$与对角线$AD$互相垂直，对角线$EC$与对角线$AD$互相垂直且正六边形是轴对称图形，可以以$AD$所在直线为$x$轴，线段$AD$的中垂线为$y$轴．",
+          "latex": "EC",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:090",
+          "location": "blocks[2].value.inlineMath[9]",
+          "sourceString": "生 正六边形的各个边之间都不垂直，但是我发现对角线$FB$与$BC$边互相垂直，可以以$BC$所在直线为$x$轴，$FB$所在直线为$y$轴．我还发现对角线$FB$与对角线$AD$互相垂直，对角线$EC$与对角线$AD$互相垂直且正六边形是轴对称图形，可以以$AD$所在直线为$x$轴，线段$AD$的中垂线为$y$轴．",
+          "latex": "AD",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:091",
+          "location": "blocks[2].value.inlineMath[10]",
+          "sourceString": "生 正六边形的各个边之间都不垂直，但是我发现对角线$FB$与$BC$边互相垂直，可以以$BC$所在直线为$x$轴，$FB$所在直线为$y$轴．我还发现对角线$FB$与对角线$AD$互相垂直，对角线$EC$与对角线$AD$互相垂直且正六边形是轴对称图形，可以以$AD$所在直线为$x$轴，线段$AD$的中垂线为$y$轴．",
+          "latex": "AD",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:092",
+          "location": "blocks[2].value.inlineMath[11]",
+          "sourceString": "生 正六边形的各个边之间都不垂直，但是我发现对角线$FB$与$BC$边互相垂直，可以以$BC$所在直线为$x$轴，$FB$所在直线为$y$轴．我还发现对角线$FB$与对角线$AD$互相垂直，对角线$EC$与对角线$AD$互相垂直且正六边形是轴对称图形，可以以$AD$所在直线为$x$轴，线段$AD$的中垂线为$y$轴．",
+          "latex": "x",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:093",
+          "location": "blocks[2].value.inlineMath[12]",
+          "sourceString": "生 正六边形的各个边之间都不垂直，但是我发现对角线$FB$与$BC$边互相垂直，可以以$BC$所在直线为$x$轴，$FB$所在直线为$y$轴．我还发现对角线$FB$与对角线$AD$互相垂直，对角线$EC$与对角线$AD$互相垂直且正六边形是轴对称图形，可以以$AD$所在直线为$x$轴，线段$AD$的中垂线为$y$轴．",
+          "latex": "AD",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:094",
+          "location": "blocks[2].value.inlineMath[13]",
+          "sourceString": "生 正六边形的各个边之间都不垂直，但是我发现对角线$FB$与$BC$边互相垂直，可以以$BC$所在直线为$x$轴，$FB$所在直线为$y$轴．我还发现对角线$FB$与对角线$AD$互相垂直，对角线$EC$与对角线$AD$互相垂直且正六边形是轴对称图形，可以以$AD$所在直线为$x$轴，线段$AD$的中垂线为$y$轴．",
+          "latex": "y",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:095",
+          "location": "blocks[4].value.inlineMath[0]",
+          "sourceString": "画法（1）如图，在已知正六边形$ABCDEF$中，取$AD$所在直线为$x$轴，取线段$AD$的中垂线$MN$为$y$轴，两轴相交于点$O$．画相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "ABCDEF",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:096",
+          "location": "blocks[4].value.inlineMath[1]",
+          "sourceString": "画法（1）如图，在已知正六边形$ABCDEF$中，取$AD$所在直线为$x$轴，取线段$AD$的中垂线$MN$为$y$轴，两轴相交于点$O$．画相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "AD",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:097",
+          "location": "blocks[4].value.inlineMath[2]",
+          "sourceString": "画法（1）如图，在已知正六边形$ABCDEF$中，取$AD$所在直线为$x$轴，取线段$AD$的中垂线$MN$为$y$轴，两轴相交于点$O$．画相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "x",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:098",
+          "location": "blocks[4].value.inlineMath[3]",
+          "sourceString": "画法（1）如图，在已知正六边形$ABCDEF$中，取$AD$所在直线为$x$轴，取线段$AD$的中垂线$MN$为$y$轴，两轴相交于点$O$．画相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "AD",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:099",
+          "location": "blocks[4].value.inlineMath[4]",
+          "sourceString": "画法（1）如图，在已知正六边形$ABCDEF$中，取$AD$所在直线为$x$轴，取线段$AD$的中垂线$MN$为$y$轴，两轴相交于点$O$．画相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "MN",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:100",
+          "location": "blocks[4].value.inlineMath[5]",
+          "sourceString": "画法（1）如图，在已知正六边形$ABCDEF$中，取$AD$所在直线为$x$轴，取线段$AD$的中垂线$MN$为$y$轴，两轴相交于点$O$．画相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "y",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:101",
+          "location": "blocks[4].value.inlineMath[6]",
+          "sourceString": "画法（1）如图，在已知正六边形$ABCDEF$中，取$AD$所在直线为$x$轴，取线段$AD$的中垂线$MN$为$y$轴，两轴相交于点$O$．画相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "O",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:102",
+          "location": "blocks[4].value.inlineMath[7]",
+          "sourceString": "画法（1）如图，在已知正六边形$ABCDEF$中，取$AD$所在直线为$x$轴，取线段$AD$的中垂线$MN$为$y$轴，两轴相交于点$O$．画相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "x'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:103",
+          "location": "blocks[4].value.inlineMath[8]",
+          "sourceString": "画法（1）如图，在已知正六边形$ABCDEF$中，取$AD$所在直线为$x$轴，取线段$AD$的中垂线$MN$为$y$轴，两轴相交于点$O$．画相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "y'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:104",
+          "location": "blocks[4].value.inlineMath[9]",
+          "sourceString": "画法（1）如图，在已知正六边形$ABCDEF$中，取$AD$所在直线为$x$轴，取线段$AD$的中垂线$MN$为$y$轴，两轴相交于点$O$．画相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "O'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:105",
+          "location": "blocks[4].value.inlineMath[10]",
+          "sourceString": "画法（1）如图，在已知正六边形$ABCDEF$中，取$AD$所在直线为$x$轴，取线段$AD$的中垂线$MN$为$y$轴，两轴相交于点$O$．画相应的$x'$轴和$y'$轴，两轴相交于点$O'$，且使$\\angle x'O'y'=45^\\circ$．",
+          "latex": "\\angle x'O'y'=45^\\circ",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:106",
+          "location": "blocks[5].value.inlineMath[0]",
+          "sourceString": "（2）在$x'$轴上取$A'D'=AD$且$O'$为$A'D'$的中点，在$y'$轴上取$M'N'$，使$M'O'=N'O'=\\frac12 MO$．过$M'$画$E'F'$平行于$x'$轴，使$E'F'=EF$且$M'$为$E'F'$的中点；类似地，再过$N'$画$B'C'$平行于$x'$轴，使$B'C'=BC$且$N'$为$B'C'$的中点．",
+          "latex": "x'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:107",
+          "location": "blocks[5].value.inlineMath[1]",
+          "sourceString": "（2）在$x'$轴上取$A'D'=AD$且$O'$为$A'D'$的中点，在$y'$轴上取$M'N'$，使$M'O'=N'O'=\\frac12 MO$．过$M'$画$E'F'$平行于$x'$轴，使$E'F'=EF$且$M'$为$E'F'$的中点；类似地，再过$N'$画$B'C'$平行于$x'$轴，使$B'C'=BC$且$N'$为$B'C'$的中点．",
+          "latex": "A'D'=AD",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:108",
+          "location": "blocks[5].value.inlineMath[2]",
+          "sourceString": "（2）在$x'$轴上取$A'D'=AD$且$O'$为$A'D'$的中点，在$y'$轴上取$M'N'$，使$M'O'=N'O'=\\frac12 MO$．过$M'$画$E'F'$平行于$x'$轴，使$E'F'=EF$且$M'$为$E'F'$的中点；类似地，再过$N'$画$B'C'$平行于$x'$轴，使$B'C'=BC$且$N'$为$B'C'$的中点．",
+          "latex": "O'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:109",
+          "location": "blocks[5].value.inlineMath[3]",
+          "sourceString": "（2）在$x'$轴上取$A'D'=AD$且$O'$为$A'D'$的中点，在$y'$轴上取$M'N'$，使$M'O'=N'O'=\\frac12 MO$．过$M'$画$E'F'$平行于$x'$轴，使$E'F'=EF$且$M'$为$E'F'$的中点；类似地，再过$N'$画$B'C'$平行于$x'$轴，使$B'C'=BC$且$N'$为$B'C'$的中点．",
+          "latex": "A'D'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:110",
+          "location": "blocks[5].value.inlineMath[4]",
+          "sourceString": "（2）在$x'$轴上取$A'D'=AD$且$O'$为$A'D'$的中点，在$y'$轴上取$M'N'$，使$M'O'=N'O'=\\frac12 MO$．过$M'$画$E'F'$平行于$x'$轴，使$E'F'=EF$且$M'$为$E'F'$的中点；类似地，再过$N'$画$B'C'$平行于$x'$轴，使$B'C'=BC$且$N'$为$B'C'$的中点．",
+          "latex": "y'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:111",
+          "location": "blocks[5].value.inlineMath[5]",
+          "sourceString": "（2）在$x'$轴上取$A'D'=AD$且$O'$为$A'D'$的中点，在$y'$轴上取$M'N'$，使$M'O'=N'O'=\\frac12 MO$．过$M'$画$E'F'$平行于$x'$轴，使$E'F'=EF$且$M'$为$E'F'$的中点；类似地，再过$N'$画$B'C'$平行于$x'$轴，使$B'C'=BC$且$N'$为$B'C'$的中点．",
+          "latex": "M'N'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:112",
+          "location": "blocks[5].value.inlineMath[6]",
+          "sourceString": "（2）在$x'$轴上取$A'D'=AD$且$O'$为$A'D'$的中点，在$y'$轴上取$M'N'$，使$M'O'=N'O'=\\frac12 MO$．过$M'$画$E'F'$平行于$x'$轴，使$E'F'=EF$且$M'$为$E'F'$的中点；类似地，再过$N'$画$B'C'$平行于$x'$轴，使$B'C'=BC$且$N'$为$B'C'$的中点．",
+          "latex": "M'O'=N'O'=\\frac12 MO",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:113",
+          "location": "blocks[5].value.inlineMath[7]",
+          "sourceString": "（2）在$x'$轴上取$A'D'=AD$且$O'$为$A'D'$的中点，在$y'$轴上取$M'N'$，使$M'O'=N'O'=\\frac12 MO$．过$M'$画$E'F'$平行于$x'$轴，使$E'F'=EF$且$M'$为$E'F'$的中点；类似地，再过$N'$画$B'C'$平行于$x'$轴，使$B'C'=BC$且$N'$为$B'C'$的中点．",
+          "latex": "M'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:114",
+          "location": "blocks[5].value.inlineMath[8]",
+          "sourceString": "（2）在$x'$轴上取$A'D'=AD$且$O'$为$A'D'$的中点，在$y'$轴上取$M'N'$，使$M'O'=N'O'=\\frac12 MO$．过$M'$画$E'F'$平行于$x'$轴，使$E'F'=EF$且$M'$为$E'F'$的中点；类似地，再过$N'$画$B'C'$平行于$x'$轴，使$B'C'=BC$且$N'$为$B'C'$的中点．",
+          "latex": "E'F'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:115",
+          "location": "blocks[5].value.inlineMath[9]",
+          "sourceString": "（2）在$x'$轴上取$A'D'=AD$且$O'$为$A'D'$的中点，在$y'$轴上取$M'N'$，使$M'O'=N'O'=\\frac12 MO$．过$M'$画$E'F'$平行于$x'$轴，使$E'F'=EF$且$M'$为$E'F'$的中点；类似地，再过$N'$画$B'C'$平行于$x'$轴，使$B'C'=BC$且$N'$为$B'C'$的中点．",
+          "latex": "x'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:116",
+          "location": "blocks[5].value.inlineMath[10]",
+          "sourceString": "（2）在$x'$轴上取$A'D'=AD$且$O'$为$A'D'$的中点，在$y'$轴上取$M'N'$，使$M'O'=N'O'=\\frac12 MO$．过$M'$画$E'F'$平行于$x'$轴，使$E'F'=EF$且$M'$为$E'F'$的中点；类似地，再过$N'$画$B'C'$平行于$x'$轴，使$B'C'=BC$且$N'$为$B'C'$的中点．",
+          "latex": "E'F'=EF",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:117",
+          "location": "blocks[5].value.inlineMath[11]",
+          "sourceString": "（2）在$x'$轴上取$A'D'=AD$且$O'$为$A'D'$的中点，在$y'$轴上取$M'N'$，使$M'O'=N'O'=\\frac12 MO$．过$M'$画$E'F'$平行于$x'$轴，使$E'F'=EF$且$M'$为$E'F'$的中点；类似地，再过$N'$画$B'C'$平行于$x'$轴，使$B'C'=BC$且$N'$为$B'C'$的中点．",
+          "latex": "M'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:118",
+          "location": "blocks[5].value.inlineMath[12]",
+          "sourceString": "（2）在$x'$轴上取$A'D'=AD$且$O'$为$A'D'$的中点，在$y'$轴上取$M'N'$，使$M'O'=N'O'=\\frac12 MO$．过$M'$画$E'F'$平行于$x'$轴，使$E'F'=EF$且$M'$为$E'F'$的中点；类似地，再过$N'$画$B'C'$平行于$x'$轴，使$B'C'=BC$且$N'$为$B'C'$的中点．",
+          "latex": "E'F'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:119",
+          "location": "blocks[5].value.inlineMath[13]",
+          "sourceString": "（2）在$x'$轴上取$A'D'=AD$且$O'$为$A'D'$的中点，在$y'$轴上取$M'N'$，使$M'O'=N'O'=\\frac12 MO$．过$M'$画$E'F'$平行于$x'$轴，使$E'F'=EF$且$M'$为$E'F'$的中点；类似地，再过$N'$画$B'C'$平行于$x'$轴，使$B'C'=BC$且$N'$为$B'C'$的中点．",
+          "latex": "N'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:120",
+          "location": "blocks[5].value.inlineMath[14]",
+          "sourceString": "（2）在$x'$轴上取$A'D'=AD$且$O'$为$A'D'$的中点，在$y'$轴上取$M'N'$，使$M'O'=N'O'=\\frac12 MO$．过$M'$画$E'F'$平行于$x'$轴，使$E'F'=EF$且$M'$为$E'F'$的中点；类似地，再过$N'$画$B'C'$平行于$x'$轴，使$B'C'=BC$且$N'$为$B'C'$的中点．",
+          "latex": "B'C'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:121",
+          "location": "blocks[5].value.inlineMath[15]",
+          "sourceString": "（2）在$x'$轴上取$A'D'=AD$且$O'$为$A'D'$的中点，在$y'$轴上取$M'N'$，使$M'O'=N'O'=\\frac12 MO$．过$M'$画$E'F'$平行于$x'$轴，使$E'F'=EF$且$M'$为$E'F'$的中点；类似地，再过$N'$画$B'C'$平行于$x'$轴，使$B'C'=BC$且$N'$为$B'C'$的中点．",
+          "latex": "x'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:122",
+          "location": "blocks[5].value.inlineMath[16]",
+          "sourceString": "（2）在$x'$轴上取$A'D'=AD$且$O'$为$A'D'$的中点，在$y'$轴上取$M'N'$，使$M'O'=N'O'=\\frac12 MO$．过$M'$画$E'F'$平行于$x'$轴，使$E'F'=EF$且$M'$为$E'F'$的中点；类似地，再过$N'$画$B'C'$平行于$x'$轴，使$B'C'=BC$且$N'$为$B'C'$的中点．",
+          "latex": "B'C'=BC",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:123",
+          "location": "blocks[5].value.inlineMath[17]",
+          "sourceString": "（2）在$x'$轴上取$A'D'=AD$且$O'$为$A'D'$的中点，在$y'$轴上取$M'N'$，使$M'O'=N'O'=\\frac12 MO$．过$M'$画$E'F'$平行于$x'$轴，使$E'F'=EF$且$M'$为$E'F'$的中点；类似地，再过$N'$画$B'C'$平行于$x'$轴，使$B'C'=BC$且$N'$为$B'C'$的中点．",
+          "latex": "N'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:124",
+          "location": "blocks[5].value.inlineMath[18]",
+          "sourceString": "（2）在$x'$轴上取$A'D'=AD$且$O'$为$A'D'$的中点，在$y'$轴上取$M'N'$，使$M'O'=N'O'=\\frac12 MO$．过$M'$画$E'F'$平行于$x'$轴，使$E'F'=EF$且$M'$为$E'F'$的中点；类似地，再过$N'$画$B'C'$平行于$x'$轴，使$B'C'=BC$且$N'$为$B'C'$的中点．",
+          "latex": "B'C'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:125",
+          "location": "blocks[6].value.inlineMath[0]",
+          "sourceString": "（3）顺次连接$A'$、$B'$、$C'$、$D'$、$E'$、$F'$、$A'$，擦去辅助线，所得到的六边形$A'B'C'D'E'F'$就是水平放置的正六边形$ABCDEF$的直观图．",
+          "latex": "A'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:126",
+          "location": "blocks[6].value.inlineMath[1]",
+          "sourceString": "（3）顺次连接$A'$、$B'$、$C'$、$D'$、$E'$、$F'$、$A'$，擦去辅助线，所得到的六边形$A'B'C'D'E'F'$就是水平放置的正六边形$ABCDEF$的直观图．",
+          "latex": "B'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:127",
+          "location": "blocks[6].value.inlineMath[2]",
+          "sourceString": "（3）顺次连接$A'$、$B'$、$C'$、$D'$、$E'$、$F'$、$A'$，擦去辅助线，所得到的六边形$A'B'C'D'E'F'$就是水平放置的正六边形$ABCDEF$的直观图．",
+          "latex": "C'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:128",
+          "location": "blocks[6].value.inlineMath[3]",
+          "sourceString": "（3）顺次连接$A'$、$B'$、$C'$、$D'$、$E'$、$F'$、$A'$，擦去辅助线，所得到的六边形$A'B'C'D'E'F'$就是水平放置的正六边形$ABCDEF$的直观图．",
+          "latex": "D'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:129",
+          "location": "blocks[6].value.inlineMath[4]",
+          "sourceString": "（3）顺次连接$A'$、$B'$、$C'$、$D'$、$E'$、$F'$、$A'$，擦去辅助线，所得到的六边形$A'B'C'D'E'F'$就是水平放置的正六边形$ABCDEF$的直观图．",
+          "latex": "E'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:130",
+          "location": "blocks[6].value.inlineMath[5]",
+          "sourceString": "（3）顺次连接$A'$、$B'$、$C'$、$D'$、$E'$、$F'$、$A'$，擦去辅助线，所得到的六边形$A'B'C'D'E'F'$就是水平放置的正六边形$ABCDEF$的直观图．",
+          "latex": "F'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:131",
+          "location": "blocks[6].value.inlineMath[6]",
+          "sourceString": "（3）顺次连接$A'$、$B'$、$C'$、$D'$、$E'$、$F'$、$A'$，擦去辅助线，所得到的六边形$A'B'C'D'E'F'$就是水平放置的正六边形$ABCDEF$的直观图．",
+          "latex": "A'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:132",
+          "location": "blocks[6].value.inlineMath[7]",
+          "sourceString": "（3）顺次连接$A'$、$B'$、$C'$、$D'$、$E'$、$F'$、$A'$，擦去辅助线，所得到的六边形$A'B'C'D'E'F'$就是水平放置的正六边形$ABCDEF$的直观图．",
+          "latex": "A'B'C'D'E'F'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:133",
+          "location": "blocks[6].value.inlineMath[8]",
+          "sourceString": "（3）顺次连接$A'$、$B'$、$C'$、$D'$、$E'$、$F'$、$A'$，擦去辅助线，所得到的六边形$A'B'C'D'E'F'$就是水平放置的正六边形$ABCDEF$的直观图．",
+          "latex": "ABCDEF",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "id": "lesson-content:book3:L044:vertex-coordinates",
+      "nodeId": "kp:21306",
+      "proposedNodeId": null,
+      "kind": "method_application",
+      "origin": "editorial_proposal",
+      "title": "选互相垂直的轴并用顶点坐标定位",
+      "scope": "L044相应具体问题或教学活动；此范围说明为编辑文字",
+      "blocks": [
+        {
+          "role": "question",
+          "type": "text",
+          "value": "[问题5]用斜二测画法画水平放置的多边形的直观图的关键是什么？",
+          "evidenceIds": [
+            "ev:book3:L044:para63:vertex-coordinates:0"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "先找互相垂直的直线建立直角坐标系,然后确定多边形每一个顶点的坐标,即确定多边形顶点的位置.（依次连接这些顶点就可以画出多边形）",
+          "evidenceIds": [
+            "ev:book3:L044:para64:vertex-coordinates:1"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "如何确定多边形顶点的位置？在放置原多边形的平面直角坐标系中,由点的坐标的概念可知,对于原多边形的每一个顶点,相应地都有一条所在直线与$x$轴平行(重合)的线段和一条所在直线与$y$轴平行(重合)的线段,利用这两条所在直线分别与坐标轴平行(重合)的线段,根据斜二测画法画水平放置的平面图形的直观图的方法,我们便可以确定直观图中相应顶点的位置.",
+          "evidenceIds": [
+            "ev:book3:L044:para65:vertex-coordinates:2"
+          ]
+        }
+      ],
+      "contentOrigin": "source_supported_editorial_summary",
+      "wordingStatus": "教案有源整理与数学转写，非逐字引用",
+      "matching": {
+        "status": "confirmed",
+        "reason": "该具体任务与既有节点对应"
+      },
+      "evidence": [
+        {
+          "id": "ev:book3:L044:para63:vertex-coordinates:0",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "选互相垂直的轴并用顶点坐标定位"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 63,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 9,
+            "printedPage": 9,
+            "pdfPage": 9,
+            "equationObjectId": null
+          },
+          "quote": "[问题5]用斜二测画法画水平放置的多边形的直观图的关键是什么？",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-9.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para64:vertex-coordinates:1",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "选互相垂直的轴并用顶点坐标定位"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 64,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 9,
+            "printedPage": 9,
+            "pdfPage": 9,
+            "equationObjectId": null
+          },
+          "quote": "先找互相垂直的直线建立直角坐标系,然后确定多边形每一个顶点的坐标,即确定多边形顶点的位置.（依次连接这些顶点就可以画出多边形）",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-9.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para65:vertex-coordinates:2",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "选互相垂直的轴并用顶点坐标定位"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 65,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 9,
+            "printedPage": 9,
+            "pdfPage": 9,
+            "equationObjectId": null
+          },
+          "quote": "如何确定多边形顶点的位置？在放置原多边形的平面直角坐标系中,由点的坐标的概念可知,对于原多边形的每一个顶点,相应地都有一条所在直线与轴平行(重合)的线段和一条所在直线与轴平行(重合)的线段,利用这两条所在直线分别与坐标轴平行(重合)的线段,根据斜二测画法画水平放置的平面图形的直观图的方法,我们便可以确定直观图中相应顶点的位置.",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "如何确定多边形顶点的位置？在放置原多边形的平面直角坐标系中,由点的坐标的概念可知,对于原多边形的每一个顶点,相应地都有一条所在直线与$x$轴平行(重合)的线段和一条所在直线与$y$轴平行(重合)的线段,利用这两条所在直线分别与坐标轴平行(重合)的线段,根据斜二测画法画水平放置的平面图形的直观图的方法,我们便可以确定直观图中相应顶点的位置.",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-9.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": [
+        {
+          "id": "formula:book3:L044:134",
+          "location": "blocks[2].value.inlineMath[0]",
+          "sourceString": "如何确定多边形顶点的位置？在放置原多边形的平面直角坐标系中,由点的坐标的概念可知,对于原多边形的每一个顶点,相应地都有一条所在直线与$x$轴平行(重合)的线段和一条所在直线与$y$轴平行(重合)的线段,利用这两条所在直线分别与坐标轴平行(重合)的线段,根据斜二测画法画水平放置的平面图形的直观图的方法,我们便可以确定直观图中相应顶点的位置.",
+          "latex": "x",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:135",
+          "location": "blocks[2].value.inlineMath[1]",
+          "sourceString": "如何确定多边形顶点的位置？在放置原多边形的平面直角坐标系中,由点的坐标的概念可知,对于原多边形的每一个顶点,相应地都有一条所在直线与$x$轴平行(重合)的线段和一条所在直线与$y$轴平行(重合)的线段,利用这两条所在直线分别与坐标轴平行(重合)的线段,根据斜二测画法画水平放置的平面图形的直观图的方法,我们便可以确定直观图中相应顶点的位置.",
+          "latex": "y",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "id": "lesson-content:book3:L044:cuboid",
+      "nodeId": "kp:21306",
+      "proposedNodeId": null,
+      "kind": "example",
+      "origin": "editorial_proposal",
+      "title": "例3 长宽高4、3、2的长方体",
+      "scope": "L044相应具体问题或教学活动；此范围说明为编辑文字",
+      "blocks": [
+        {
+          "role": "question",
+          "type": "text",
+          "value": "例3 用斜二测画法画长、宽、高分别为4、3、2的长方体的直观图．",
+          "evidenceIds": [
+            "ev:book3:L044:para66:cuboid:0"
+          ]
+        },
+        {
+          "role": "question",
+          "type": "text",
+          "value": "[问题6]在初中，用斜二测画法画长方体的直观图的步骤是什么？",
+          "evidenceIds": [
+            "ev:book3:L044:para67:cuboid:1"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "生 （1）画水平放置的底面．（2）过四个顶点画四条垂线段．（3）顺次联结上底面的四个顶点．（4）将被遮住的线段改用虚线表示．",
+          "evidenceIds": [
+            "ev:book3:L044:para68:cuboid:2"
+          ]
+        },
+        {
+          "role": "question",
+          "type": "text",
+          "value": "是的，你的回答非常正确．现在让你画长方体的直观图，你还会选择先画水平放置的底面吗？为什么？",
+          "evidenceIds": [
+            "ev:book3:L044:para69:cuboid:3"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "生 会．因为通过之前有关斜二测画法的学习，我能确定底面四个顶点的位置，绘制出水平放置的图形．",
+          "evidenceIds": [
+            "ev:book3:L044:para70:cuboid:4"
+          ]
+        },
+        {
+          "role": "question",
+          "type": "text",
+          "value": "为什么第2步画垂线？四条垂线的长度与原长方体的高相等吗？四条垂线的作用是什么？",
+          "evidenceIds": [
+            "ev:book3:L044:para71:cuboid:5"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "生 因为这四条棱与水平面垂直．垂线段的长度与原长方体的高相等．四条垂线段可以确定上底面四个顶点的位置．",
+          "evidenceIds": [
+            "ev:book3:L044:para72:cuboid:6"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "请同学们用斜二测画法画长、宽、高分别为4、3、2的长方体的直观图，边绘制直观图边理解用斜二测画法画空间图形的方法．",
+          "evidenceIds": [
+            "ev:book3:L044:para73:cuboid:7"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "画法（1）画底面：画平行四边形$OABC$，使得$OA=4$，$OC=\\frac32$，$\\angle AOC=45^\\circ$．",
+          "evidenceIds": [
+            "ev:book3:L044:para74:cuboid:8"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "（2）画侧棱：过$O$、$A$、$B$、$C$各点分别作$OA$和$BC$的垂线，在这些垂线上分别截取长为2的线段$OO'$、$AA'$、$BB'$、$CC'$．",
+          "evidenceIds": [
+            "ev:book3:L044:para75:cuboid:9"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "（3）成图：顺次连接$O'$、$A'$、$B'$、$C'$，将被遮挡的部分改为虚线，得长方体的直观图．",
+          "evidenceIds": [
+            "ev:book3:L044:para76:cuboid:10"
+          ]
+        }
+      ],
+      "contentOrigin": "source_supported_editorial_summary",
+      "wordingStatus": "教案有源整理与数学转写，非逐字引用",
+      "matching": {
+        "status": "confirmed",
+        "reason": "该具体任务与既有节点对应"
+      },
+      "evidence": [
+        {
+          "id": "ev:book3:L044:para66:cuboid:0",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例3 长宽高4、3、2的长方体"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 66,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 9,
+            "printedPage": 9,
+            "pdfPage": 9,
+            "equationObjectId": null
+          },
+          "quote": "例3 用斜二测画法画长、宽、高分别为4、3、2的长方体的直观图．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-9.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para67:cuboid:1",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例3 长宽高4、3、2的长方体"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 67,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 9,
+            "printedPage": 9,
+            "pdfPage": 9,
+            "equationObjectId": null
+          },
+          "quote": "[问题6]在初中，用斜二测画法画长方体的直观图的步骤是什么？",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-9.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para68:cuboid:2",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例3 长宽高4、3、2的长方体"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 68,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 9,
+            "printedPage": 9,
+            "pdfPage": 9,
+            "equationObjectId": null
+          },
+          "quote": "生 （1）画水平放置的底面．（2）过四个顶点画四条垂线段．（3）顺次联结上底面的四个顶点．（4）将被遮住的线段改用虚线表示．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-9.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para69:cuboid:3",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例3 长宽高4、3、2的长方体"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 69,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 9,
+            "printedPage": 9,
+            "pdfPage": 9,
+            "equationObjectId": null
+          },
+          "quote": "是的，你的回答非常正确．现在让你画长方体的直观图，你还会选择先画水平放置的底面吗？为什么？",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-9.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para70:cuboid:4",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例3 长宽高4、3、2的长方体"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 70,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 9,
+            "printedPage": 9,
+            "pdfPage": 9,
+            "equationObjectId": null
+          },
+          "quote": "生 会．因为通过之前有关斜二测画法的学习，我能确定底面四个顶点的位置，绘制出水平放置的图形．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-9.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para71:cuboid:5",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例3 长宽高4、3、2的长方体"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 71,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 9,
+            "printedPage": 9,
+            "pdfPage": 9,
+            "equationObjectId": null,
+            "renderedPageEnd": 10,
+            "printedPageEnd": 10,
+            "pdfPageEnd": 10
+          },
+          "quote": "为什么第2步画垂线？四条垂线的长度与原长方体的高相等吗？四条垂线的作用是什么？",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-9.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para72:cuboid:6",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例3 长宽高4、3、2的长方体"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 72,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 10,
+            "printedPage": 10,
+            "pdfPage": 10,
+            "equationObjectId": null
+          },
+          "quote": "生 因为这四条棱与水平面垂直．垂线段的长度与原长方体的高相等．四条垂线段可以确定上底面四个顶点的位置．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-10.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para73:cuboid:7",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例3 长宽高4、3、2的长方体"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 73,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 10,
+            "printedPage": 10,
+            "pdfPage": 10,
+            "equationObjectId": null
+          },
+          "quote": "请同学们用斜二测画法画长、宽、高分别为4、3、2的长方体的直观图，边绘制直观图边理解用斜二测画法画空间图形的方法．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-10.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para74:cuboid:8",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例3 长宽高4、3、2的长方体"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 74,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 10,
+            "printedPage": 10,
+            "pdfPage": 10,
+            "equationObjectId": null
+          },
+          "quote": "画法（1）画底面：画，使得，，．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "画法（1）画底面：画平行四边形$OABC$，使得$OA=4$，$OC=\\frac32$，$\\angle AOC=45^\\circ$．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-10.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para75:cuboid:9",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例3 长宽高4、3、2的长方体"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 75,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 10,
+            "printedPage": 10,
+            "pdfPage": 10,
+            "equationObjectId": null
+          },
+          "quote": "（2）画侧棱：过各点分别作和的垂线，在这些垂线上分别截取长为2的线段．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "（2）画侧棱：过$O$、$A$、$B$、$C$各点分别作$OA$和$BC$的垂线，在这些垂线上分别截取长为2的线段$OO'$、$AA'$、$BB'$、$CC'$．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-10.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para76:cuboid:10",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "例3 长宽高4、3、2的长方体"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 76,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 10,
+            "printedPage": 10,
+            "pdfPage": 10,
+            "equationObjectId": null
+          },
+          "quote": "（3）成图：顺次连接，将被遮挡的部分改为虚线，得长方体的直观图．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "（3）成图：顺次连接$O'$、$A'$、$B'$、$C'$，将被遮挡的部分改为虚线，得长方体的直观图．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-10.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": [
+        {
+          "id": "formula:book3:L044:136",
+          "location": "blocks[8].value.inlineMath[0]",
+          "sourceString": "画法（1）画底面：画平行四边形$OABC$，使得$OA=4$，$OC=\\frac32$，$\\angle AOC=45^\\circ$．",
+          "latex": "OABC",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:137",
+          "location": "blocks[8].value.inlineMath[1]",
+          "sourceString": "画法（1）画底面：画平行四边形$OABC$，使得$OA=4$，$OC=\\frac32$，$\\angle AOC=45^\\circ$．",
+          "latex": "OA=4",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:138",
+          "location": "blocks[8].value.inlineMath[2]",
+          "sourceString": "画法（1）画底面：画平行四边形$OABC$，使得$OA=4$，$OC=\\frac32$，$\\angle AOC=45^\\circ$．",
+          "latex": "OC=\\frac32",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:139",
+          "location": "blocks[8].value.inlineMath[3]",
+          "sourceString": "画法（1）画底面：画平行四边形$OABC$，使得$OA=4$，$OC=\\frac32$，$\\angle AOC=45^\\circ$．",
+          "latex": "\\angle AOC=45^\\circ",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:140",
+          "location": "blocks[9].value.inlineMath[0]",
+          "sourceString": "（2）画侧棱：过$O$、$A$、$B$、$C$各点分别作$OA$和$BC$的垂线，在这些垂线上分别截取长为2的线段$OO'$、$AA'$、$BB'$、$CC'$．",
+          "latex": "O",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:141",
+          "location": "blocks[9].value.inlineMath[1]",
+          "sourceString": "（2）画侧棱：过$O$、$A$、$B$、$C$各点分别作$OA$和$BC$的垂线，在这些垂线上分别截取长为2的线段$OO'$、$AA'$、$BB'$、$CC'$．",
+          "latex": "A",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:142",
+          "location": "blocks[9].value.inlineMath[2]",
+          "sourceString": "（2）画侧棱：过$O$、$A$、$B$、$C$各点分别作$OA$和$BC$的垂线，在这些垂线上分别截取长为2的线段$OO'$、$AA'$、$BB'$、$CC'$．",
+          "latex": "B",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:143",
+          "location": "blocks[9].value.inlineMath[3]",
+          "sourceString": "（2）画侧棱：过$O$、$A$、$B$、$C$各点分别作$OA$和$BC$的垂线，在这些垂线上分别截取长为2的线段$OO'$、$AA'$、$BB'$、$CC'$．",
+          "latex": "C",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:144",
+          "location": "blocks[9].value.inlineMath[4]",
+          "sourceString": "（2）画侧棱：过$O$、$A$、$B$、$C$各点分别作$OA$和$BC$的垂线，在这些垂线上分别截取长为2的线段$OO'$、$AA'$、$BB'$、$CC'$．",
+          "latex": "OA",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:145",
+          "location": "blocks[9].value.inlineMath[5]",
+          "sourceString": "（2）画侧棱：过$O$、$A$、$B$、$C$各点分别作$OA$和$BC$的垂线，在这些垂线上分别截取长为2的线段$OO'$、$AA'$、$BB'$、$CC'$．",
+          "latex": "BC",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:146",
+          "location": "blocks[9].value.inlineMath[6]",
+          "sourceString": "（2）画侧棱：过$O$、$A$、$B$、$C$各点分别作$OA$和$BC$的垂线，在这些垂线上分别截取长为2的线段$OO'$、$AA'$、$BB'$、$CC'$．",
+          "latex": "OO'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:147",
+          "location": "blocks[9].value.inlineMath[7]",
+          "sourceString": "（2）画侧棱：过$O$、$A$、$B$、$C$各点分别作$OA$和$BC$的垂线，在这些垂线上分别截取长为2的线段$OO'$、$AA'$、$BB'$、$CC'$．",
+          "latex": "AA'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:148",
+          "location": "blocks[9].value.inlineMath[8]",
+          "sourceString": "（2）画侧棱：过$O$、$A$、$B$、$C$各点分别作$OA$和$BC$的垂线，在这些垂线上分别截取长为2的线段$OO'$、$AA'$、$BB'$、$CC'$．",
+          "latex": "BB'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:149",
+          "location": "blocks[9].value.inlineMath[9]",
+          "sourceString": "（2）画侧棱：过$O$、$A$、$B$、$C$各点分别作$OA$和$BC$的垂线，在这些垂线上分别截取长为2的线段$OO'$、$AA'$、$BB'$、$CC'$．",
+          "latex": "CC'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:150",
+          "location": "blocks[10].value.inlineMath[0]",
+          "sourceString": "（3）成图：顺次连接$O'$、$A'$、$B'$、$C'$，将被遮挡的部分改为虚线，得长方体的直观图．",
+          "latex": "O'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:151",
+          "location": "blocks[10].value.inlineMath[1]",
+          "sourceString": "（3）成图：顺次连接$O'$、$A'$、$B'$、$C'$，将被遮挡的部分改为虚线，得长方体的直观图．",
+          "latex": "A'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:152",
+          "location": "blocks[10].value.inlineMath[2]",
+          "sourceString": "（3）成图：顺次连接$O'$、$A'$、$B'$、$C'$，将被遮挡的部分改为虚线，得长方体的直观图．",
+          "latex": "B'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:153",
+          "location": "blocks[10].value.inlineMath[3]",
+          "sourceString": "（3）成图：顺次连接$O'$、$A'$、$B'$、$C'$，将被遮挡的部分改为虚线，得长方体的直观图．",
+          "latex": "C'",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "id": "lesson-content:book3:L044:space-steps",
+      "nodeId": "kp:21306",
+      "proposedNodeId": null,
+      "kind": "method_application",
+      "origin": "editorial_proposal",
+      "title": "空间图形斜二测画法六步",
+      "scope": "L044相应具体问题或教学活动；此范围说明为编辑文字",
+      "blocks": [
+        {
+          "role": "context",
+          "type": "text",
+          "value": "（1）将空间图形中确定水平放置的一个多边形的面以适当的方式放置在平面直角坐标系$xOy$中；",
+          "evidenceIds": [
+            "ev:book3:L044:para80:space-steps:0"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "（2）作两条夹角$45^\\circ$的有向直线并分别记作$x'$轴和$y'$轴,将其作为直角坐标系$xOy$水平放置时的直观图；",
+          "evidenceIds": [
+            "ev:book3:L044:para81:space-steps:1"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "（3）利用点的坐标所包含的平行关系,长度大小来确定水平放置的多边形的直观图的顶点位置.原多边形中线段所在直线与$x$轴平行或重合的,在直观图中线段所在直线与$x'$轴平行或重合并线段长度保持不变;原多边形中线段所在直线与$y$轴平行或重合的,在直观图中线段所在直线与$y'$轴平行或重合并线段长度为原来的一半；",
+          "evidenceIds": [
+            "ev:book3:L044:para82:space-steps:2"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "（4）原空间图形中铅垂方向的线段在直观图中画成与原线段长度相等的铅垂线段；",
+          "evidenceIds": [
+            "ev:book3:L044:para83:space-steps:3"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "（5）依照原空间图形连接直观图中的顶点；",
+          "evidenceIds": [
+            "ev:book3:L044:para84:space-steps:4"
+          ]
+        },
+        {
+          "role": "context",
+          "type": "text",
+          "value": "（6）擦去辅助线,并将被遮挡的部分改为虚线．",
+          "evidenceIds": [
+            "ev:book3:L044:para85:space-steps:5"
+          ]
+        }
+      ],
+      "contentOrigin": "source_supported_editorial_summary",
+      "wordingStatus": "教案有源整理与数学转写，非逐字引用",
+      "matching": {
+        "status": "confirmed",
+        "reason": "该具体任务与既有节点对应"
+      },
+      "evidence": [
+        {
+          "id": "ev:book3:L044:para80:space-steps:0",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "空间图形斜二测画法六步"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 80,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 11,
+            "printedPage": 11,
+            "pdfPage": 11,
+            "equationObjectId": null
+          },
+          "quote": "（1）将空间图形中确定水平放置的一个多边形的面以适当的方式放置在平面直角坐标系中；",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "（1）将空间图形中确定水平放置的一个多边形的面以适当的方式放置在平面直角坐标系$xOy$中；",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-11.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para81:space-steps:1",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "空间图形斜二测画法六步"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 81,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 11,
+            "printedPage": 11,
+            "pdfPage": 11,
+            "equationObjectId": null
+          },
+          "quote": "（2）作两条夹角的有向直线并分别记作轴和轴,将其作为直角坐标系水平放置时的直观图；",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "（2）作两条夹角$45^\\circ$的有向直线并分别记作$x'$轴和$y'$轴,将其作为直角坐标系$xOy$水平放置时的直观图；",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-11.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para82:space-steps:2",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "空间图形斜二测画法六步"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 82,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 11,
+            "printedPage": 11,
+            "pdfPage": 11,
+            "equationObjectId": null
+          },
+          "quote": "（3）利用点的坐标所包含的平行关系,长度大小来确定水平放置的多边形的直观图的顶点位置.原多边形中线段所在直线与轴平行或重合的,在直观图中线段所在直线与轴平行或重合并线段长度保持不变;原多边形中线段所在直线与轴平行或重合的,在直观图中线段所在直线与轴平行或重合并线段长度为原来的一半；",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "（3）利用点的坐标所包含的平行关系,长度大小来确定水平放置的多边形的直观图的顶点位置.原多边形中线段所在直线与$x$轴平行或重合的,在直观图中线段所在直线与$x'$轴平行或重合并线段长度保持不变;原多边形中线段所在直线与$y$轴平行或重合的,在直观图中线段所在直线与$y'$轴平行或重合并线段长度为原来的一半；",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-11.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para83:space-steps:3",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "空间图形斜二测画法六步"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 83,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 11,
+            "printedPage": 11,
+            "pdfPage": 11,
+            "equationObjectId": null
+          },
+          "quote": "（4）原空间图形中铅垂方向的线段在直观图中画成与原线段长度相等的铅垂线段；",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-11.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para84:space-steps:4",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "空间图形斜二测画法六步"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 84,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 11,
+            "printedPage": 11,
+            "pdfPage": 11,
+            "equationObjectId": null
+          },
+          "quote": "（5）依照原空间图形连接直观图中的顶点；",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-11.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para85:space-steps:5",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "空间图形斜二测画法六步"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 85,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 11,
+            "printedPage": 11,
+            "pdfPage": 11,
+            "equationObjectId": null
+          },
+          "quote": "（6）擦去辅助线,并将被遮挡的部分改为虚线．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-11.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": [
+        {
+          "id": "formula:book3:L044:154",
+          "location": "blocks[0].value.inlineMath[0]",
+          "sourceString": "（1）将空间图形中确定水平放置的一个多边形的面以适当的方式放置在平面直角坐标系$xOy$中；",
+          "latex": "xOy",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:155",
+          "location": "blocks[1].value.inlineMath[0]",
+          "sourceString": "（2）作两条夹角$45^\\circ$的有向直线并分别记作$x'$轴和$y'$轴,将其作为直角坐标系$xOy$水平放置时的直观图；",
+          "latex": "45^\\circ",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:156",
+          "location": "blocks[1].value.inlineMath[1]",
+          "sourceString": "（2）作两条夹角$45^\\circ$的有向直线并分别记作$x'$轴和$y'$轴,将其作为直角坐标系$xOy$水平放置时的直观图；",
+          "latex": "x'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:157",
+          "location": "blocks[1].value.inlineMath[2]",
+          "sourceString": "（2）作两条夹角$45^\\circ$的有向直线并分别记作$x'$轴和$y'$轴,将其作为直角坐标系$xOy$水平放置时的直观图；",
+          "latex": "y'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:158",
+          "location": "blocks[1].value.inlineMath[3]",
+          "sourceString": "（2）作两条夹角$45^\\circ$的有向直线并分别记作$x'$轴和$y'$轴,将其作为直角坐标系$xOy$水平放置时的直观图；",
+          "latex": "xOy",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:159",
+          "location": "blocks[2].value.inlineMath[0]",
+          "sourceString": "（3）利用点的坐标所包含的平行关系,长度大小来确定水平放置的多边形的直观图的顶点位置.原多边形中线段所在直线与$x$轴平行或重合的,在直观图中线段所在直线与$x'$轴平行或重合并线段长度保持不变;原多边形中线段所在直线与$y$轴平行或重合的,在直观图中线段所在直线与$y'$轴平行或重合并线段长度为原来的一半；",
+          "latex": "x",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:160",
+          "location": "blocks[2].value.inlineMath[1]",
+          "sourceString": "（3）利用点的坐标所包含的平行关系,长度大小来确定水平放置的多边形的直观图的顶点位置.原多边形中线段所在直线与$x$轴平行或重合的,在直观图中线段所在直线与$x'$轴平行或重合并线段长度保持不变;原多边形中线段所在直线与$y$轴平行或重合的,在直观图中线段所在直线与$y'$轴平行或重合并线段长度为原来的一半；",
+          "latex": "x'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:161",
+          "location": "blocks[2].value.inlineMath[2]",
+          "sourceString": "（3）利用点的坐标所包含的平行关系,长度大小来确定水平放置的多边形的直观图的顶点位置.原多边形中线段所在直线与$x$轴平行或重合的,在直观图中线段所在直线与$x'$轴平行或重合并线段长度保持不变;原多边形中线段所在直线与$y$轴平行或重合的,在直观图中线段所在直线与$y'$轴平行或重合并线段长度为原来的一半；",
+          "latex": "y",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:162",
+          "location": "blocks[2].value.inlineMath[3]",
+          "sourceString": "（3）利用点的坐标所包含的平行关系,长度大小来确定水平放置的多边形的直观图的顶点位置.原多边形中线段所在直线与$x$轴平行或重合的,在直观图中线段所在直线与$x'$轴平行或重合并线段长度保持不变;原多边形中线段所在直线与$y$轴平行或重合的,在直观图中线段所在直线与$y'$轴平行或重合并线段长度为原来的一半；",
+          "latex": "y'",
+          "status": "verified"
+        }
+      ],
+      "sourceUsageReviewB13": {
+        "batch": "B13",
+        "status": "frozen_source_context_and_required_proof_or_figure_conditions_checked",
+        "wholeSourceVerified": false,
+        "nativeChineseWholePageVerified": false,
+        "methodIdentityDecisionPending": null
+      }
+    },
+    {
+      "id": "lesson-content:book3:L044:classroom-drawings",
+      "nodeId": "kp:21306",
+      "proposedNodeId": null,
+      "kind": "example",
+      "origin": "editorial_proposal",
+      "title": "课堂练习 正三角形和直角梯形作图",
+      "scope": "L044相应具体问题或教学活动；此范围说明为编辑文字",
+      "blocks": [
+        {
+          "role": "question",
+          "type": "text",
+          "value": "1．在水平放置的平面上有一个边长为$3\\mathrm{cm}$的正三角形，请画出其直观图．",
+          "evidenceIds": [
+            "ev:book3:L044:para89:classroom-drawings:0"
+          ]
+        },
+        {
+          "role": "question",
+          "type": "text",
+          "value": "2．画出如图水平放置的直角梯形$OABC$的直观图．",
+          "evidenceIds": [
+            "ev:book3:L044:para90:classroom-drawings:1"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "1.",
+          "evidenceIds": [
+            "ev:book3:L044:para99:classroom-drawings:2"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "2.",
+          "evidenceIds": [
+            "ev:book3:L044:para106:classroom-drawings:3"
+          ]
+        }
+      ],
+      "contentOrigin": "source_supported_editorial_summary",
+      "wordingStatus": "教案有源整理与数学转写，非逐字引用",
+      "matching": {
+        "status": "confirmed",
+        "reason": "该具体任务与既有节点对应"
+      },
+      "evidence": [
+        {
+          "id": "ev:book3:L044:para89:classroom-drawings:0",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "课堂练习 正三角形和直角梯形作图"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 89,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 12,
+            "printedPage": 12,
+            "pdfPage": 12,
+            "equationObjectId": null
+          },
+          "quote": "1. 在水平放置的平面上有一个边长为的正三角形，请画出其直观图．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "1．在水平放置的平面上有一个边长为$3\\mathrm{cm}$的正三角形，请画出其直观图．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-12.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para90:classroom-drawings:1",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "课堂练习 正三角形和直角梯形作图"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 90,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 12,
+            "printedPage": 12,
+            "pdfPage": 12,
+            "equationObjectId": null
+          },
+          "quote": "2. 画出如图水平放置的直角梯形的直观图．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "2．画出如图水平放置的直角梯形$OABC$的直观图．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-12.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para99:classroom-drawings:2",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "课堂练习 正三角形和直角梯形作图"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 99,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 12,
+            "printedPage": 12,
+            "pdfPage": 12,
+            "equationObjectId": null
+          },
+          "quote": "1.",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-12.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para106:classroom-drawings:3",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "课堂练习 正三角形和直角梯形作图"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 106,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 13,
+            "printedPage": 13,
+            "pdfPage": 13,
+            "equationObjectId": null
+          },
+          "quote": "2.",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-13.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": [
+        {
+          "id": "formula:book3:L044:163",
+          "location": "blocks[0].value.inlineMath[0]",
+          "sourceString": "1．在水平放置的平面上有一个边长为$3\\mathrm{cm}$的正三角形，请画出其直观图．",
+          "latex": "3\\mathrm{cm}",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:164",
+          "location": "blocks[1].value.inlineMath[0]",
+          "sourceString": "2．画出如图水平放置的直角梯形$OABC$的直观图．",
+          "latex": "OABC",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "id": "lesson-content:book3:L044:homework-five-drawings",
+      "nodeId": "kp:21306",
+      "proposedNodeId": null,
+      "kind": "example",
+      "origin": "editorial_proposal",
+      "title": "基础练习1–5 正方体、正方形、矩形、菱形、梯形作图",
+      "scope": "L044相应具体问题或教学活动；此范围说明为编辑文字",
+      "blocks": [
+        {
+          "role": "question",
+          "type": "text",
+          "value": "1. 画出棱长为3cm的正方体的直观图.",
+          "evidenceIds": [
+            "ev:book3:L044:para119:homework-five-drawings:0"
+          ]
+        },
+        {
+          "role": "question",
+          "type": "text",
+          "value": "2. 画水平放置的边长为2cm的正方形的直观图．",
+          "evidenceIds": [
+            "ev:book3:L044:para120:homework-five-drawings:1"
+          ]
+        },
+        {
+          "role": "question",
+          "type": "text",
+          "value": "3. 画长、宽分别为4cm、2cm的矩形直观图（用两种不同的方式水平放置矩形）．",
+          "evidenceIds": [
+            "ev:book3:L044:para121:homework-five-drawings:2"
+          ]
+        },
+        {
+          "role": "question",
+          "type": "text",
+          "value": "4．画水平放置的边长为3cm且有一个角为$60^\\circ$的菱形的直观图．",
+          "evidenceIds": [
+            "ev:book3:L044:para122:homework-five-drawings:3"
+          ]
+        },
+        {
+          "role": "question",
+          "type": "text",
+          "value": "5. 有一个上底长为4cm，下底长为12cm，高为3cm的等腰梯形，将此梯形水平放置，画出该水平放置的梯形的直观图．",
+          "evidenceIds": [
+            "ev:book3:L044:para123:homework-five-drawings:4"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "1.",
+          "evidenceIds": [
+            "ev:book3:L044:para137:homework-five-drawings:5"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "2.",
+          "evidenceIds": [
+            "ev:book3:L044:para139:homework-five-drawings:6"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "（画法不唯一）",
+          "evidenceIds": [
+            "ev:book3:L044:para141:homework-five-drawings:7"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "3.",
+          "evidenceIds": [
+            "ev:book3:L044:para142:homework-five-drawings:8"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "（画法不唯一）",
+          "evidenceIds": [
+            "ev:book3:L044:para149:homework-five-drawings:9"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "4.",
+          "evidenceIds": [
+            "ev:book3:L044:para150:homework-five-drawings:10"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "（画法不唯一）",
+          "evidenceIds": [
+            "ev:book3:L044:para152:homework-five-drawings:11"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "5.",
+          "evidenceIds": [
+            "ev:book3:L044:para153:homework-five-drawings:12"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "（画法不唯一）",
+          "evidenceIds": [
+            "ev:book3:L044:para155:homework-five-drawings:13"
+          ]
+        }
+      ],
+      "contentOrigin": "source_supported_editorial_summary",
+      "wordingStatus": "教案有源整理与数学转写，非逐字引用",
+      "matching": {
+        "status": "confirmed",
+        "reason": "该具体任务与既有节点对应"
+      },
+      "evidence": [
+        {
+          "id": "ev:book3:L044:para119:homework-five-drawings:0",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "基础练习1–5 正方体、正方形、矩形、菱形、梯形作图"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 119,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 14,
+            "printedPage": 14,
+            "pdfPage": 14,
+            "equationObjectId": null
+          },
+          "quote": "1. 画出棱长为3cm的正方体的直观图.",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-14.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para120:homework-five-drawings:1",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "基础练习1–5 正方体、正方形、矩形、菱形、梯形作图"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 120,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 14,
+            "printedPage": 14,
+            "pdfPage": 14,
+            "equationObjectId": null
+          },
+          "quote": "2. 画水平放置的边长为2cm的正方形的直观图．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-14.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para121:homework-five-drawings:2",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "基础练习1–5 正方体、正方形、矩形、菱形、梯形作图"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 121,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 14,
+            "printedPage": 14,
+            "pdfPage": 14,
+            "equationObjectId": null
+          },
+          "quote": "3. 画长、宽分别为4cm、2cm的矩形直观图（用两种不同的方式水平放置矩形）．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-14.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para122:homework-five-drawings:3",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "基础练习1–5 正方体、正方形、矩形、菱形、梯形作图"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 122,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 14,
+            "printedPage": 14,
+            "pdfPage": 14,
+            "equationObjectId": null
+          },
+          "quote": "4. 画水平放置的边长为3cm且有一个角为的菱形的直观图．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "4．画水平放置的边长为3cm且有一个角为$60^\\circ$的菱形的直观图．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-14.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para123:homework-five-drawings:4",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "基础练习1–5 正方体、正方形、矩形、菱形、梯形作图"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 123,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 14,
+            "printedPage": 14,
+            "pdfPage": 14,
+            "equationObjectId": null
+          },
+          "quote": "5. 有一个上底长为4cm，下底长为12cm，高为3cm的等腰梯形，将此梯形水平放置，画出该水平放置的梯形的直观图．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-14.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para137:homework-five-drawings:5",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "基础练习1–5 正方体、正方形、矩形、菱形、梯形作图"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 137,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 16,
+            "printedPage": 16,
+            "pdfPage": 16,
+            "equationObjectId": null
+          },
+          "quote": "1.",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-16.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para139:homework-five-drawings:6",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "基础练习1–5 正方体、正方形、矩形、菱形、梯形作图"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 139,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 16,
+            "printedPage": 16,
+            "pdfPage": 16,
+            "equationObjectId": null
+          },
+          "quote": "2.",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-16.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para141:homework-five-drawings:7",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "基础练习1–5 正方体、正方形、矩形、菱形、梯形作图"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 141,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 16,
+            "printedPage": 16,
+            "pdfPage": 16,
+            "equationObjectId": null
+          },
+          "quote": "（画法不唯一）",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-16.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para142:homework-five-drawings:8",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "基础练习1–5 正方体、正方形、矩形、菱形、梯形作图"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 142,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 16,
+            "printedPage": 16,
+            "pdfPage": 16,
+            "equationObjectId": null
+          },
+          "quote": "3.",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-16.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para149:homework-five-drawings:9",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "基础练习1–5 正方体、正方形、矩形、菱形、梯形作图"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 149,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 16,
+            "printedPage": 16,
+            "pdfPage": 16,
+            "equationObjectId": null
+          },
+          "quote": "（画法不唯一）",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-16.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para150:homework-five-drawings:10",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "基础练习1–5 正方体、正方形、矩形、菱形、梯形作图"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 150,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 17,
+            "printedPage": 17,
+            "pdfPage": 17,
+            "equationObjectId": null
+          },
+          "quote": "4.",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-17.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para152:homework-five-drawings:11",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "基础练习1–5 正方体、正方形、矩形、菱形、梯形作图"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 152,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 17,
+            "printedPage": 17,
+            "pdfPage": 17,
+            "equationObjectId": null
+          },
+          "quote": "（画法不唯一）",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-17.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para153:homework-five-drawings:12",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "基础练习1–5 正方体、正方形、矩形、菱形、梯形作图"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 153,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 17,
+            "printedPage": 17,
+            "pdfPage": 17,
+            "equationObjectId": null
+          },
+          "quote": "5.",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-17.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para155:homework-five-drawings:13",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "基础练习1–5 正方体、正方形、矩形、菱形、梯形作图"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 155,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 17,
+            "printedPage": 17,
+            "pdfPage": 17,
+            "equationObjectId": null
+          },
+          "quote": "（画法不唯一）",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接。",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-17.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": [
+        {
+          "id": "formula:book3:L044:165",
+          "location": "blocks[3].value.inlineMath[0]",
+          "sourceString": "4．画水平放置的边长为3cm且有一个角为$60^\\circ$的菱形的直观图．",
+          "latex": "60^\\circ",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "id": "lesson-content:book3:L044:inverse-length-area",
+      "nodeId": "kp:21306",
+      "proposedNodeId": null,
+      "kind": "example",
+      "origin": "editorial_proposal",
+      "title": "选做 由直观图求原长及面积比",
+      "scope": "L044相应具体问题或教学活动；此范围说明为编辑文字",
+      "blocks": [
+        {
+          "role": "question",
+          "type": "text",
+          "value": "1．如图，若平行四边形$A'B'C'D'$是用斜二测画法画出的水平放置的平面图形$ABCD$的直观图．已知$A'B'=4\\mathrm{cm}$，$\\angle D'A'B'=45^\\circ$，平行四边形$A'B'C'D'$的面积为$8\\mathrm{cm}^2$，则原平面图形$ABCD$中$AD$的长度为__________．",
+          "evidenceIds": [
+            "ev:book3:L044:para126:inverse-length-area:0"
+          ]
+        },
+        {
+          "role": "question",
+          "type": "text",
+          "value": "2．设$\\triangle ABC$是水平放置的等边三角形．以其底边$BC$所在直线为$x$轴，底边$BC$上的高所在直线为$y$轴，建立平面直角坐标系，并用斜二测画法画出它的直观图，则原三角形的面积与其直观图的面积之比为________．",
+          "evidenceIds": [
+            "ev:book3:L044:para128:inverse-length-area:1"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "1．$4\\sqrt2\\mathrm{cm}$．",
+          "evidenceIds": [
+            "ev:book3:L044:para158:inverse-length-area:2"
+          ]
+        },
+        {
+          "role": "solution",
+          "type": "text",
+          "value": "2．$2\\sqrt2$．",
+          "evidenceIds": [
+            "ev:book3:L044:para159:inverse-length-area:3"
+          ]
+        }
+      ],
+      "contentOrigin": "source_supported_editorial_summary",
+      "wordingStatus": "教案有源整理与数学转写，非逐字引用",
+      "matching": {
+        "status": "confirmed",
+        "reason": "该具体任务与既有节点对应"
+      },
+      "evidence": [
+        {
+          "id": "ev:book3:L044:para126:inverse-length-area:0",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "选做 由直观图求原长及面积比"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 126,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 14,
+            "printedPage": 14,
+            "pdfPage": 14,
+            "equationObjectId": null
+          },
+          "quote": "1．如图，若平行四边形是用斜二测画法画出的水平放置的平面图形的直观图．已知，，平行四边形的面积为，则原平面图形中的长度为__________．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "1．如图，若平行四边形$A'B'C'D'$是用斜二测画法画出的水平放置的平面图形$ABCD$的直观图．已知$A'B'=4\\mathrm{cm}$，$\\angle D'A'B'=45^\\circ$，平行四边形$A'B'C'D'$的面积为$8\\mathrm{cm}^2$，则原平面图形$ABCD$中$AD$的长度为__________．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-14.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para128:inverse-length-area:1",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "选做 由直观图求原长及面积比"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 128,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 14,
+            "printedPage": 14,
+            "pdfPage": 14,
+            "equationObjectId": null,
+            "renderedPageEnd": 15,
+            "printedPageEnd": 15,
+            "pdfPageEnd": 15
+          },
+          "quote": "2．设△是水平放置的等边三角形．以其底边所在直线为轴，底边上的高所在直线为轴，建立平面直角坐标系，并用斜二测画法画出它的直观图，则原三角形的面积与其直观图的面积之比为________．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "2．设$\\triangle ABC$是水平放置的等边三角形．以其底边$BC$所在直线为$x$轴，底边$BC$上的高所在直线为$y$轴，建立平面直角坐标系，并用斜二测画法画出它的直观图，则原三角形的面积与其直观图的面积之比为________．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-14.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para158:inverse-length-area:2",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "选做 由直观图求原长及面积比"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 158,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 17,
+            "printedPage": 17,
+            "pdfPage": 17,
+            "equationObjectId": null
+          },
+          "quote": "1．.",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "1．$4\\sqrt2\\mathrm{cm}$．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-17.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        },
+        {
+          "id": "ev:book3:L044:para159:inverse-length-area:3",
+          "sourceId": "L044",
+          "sourceSha256": "1e3de3ff0f2bbaf0747d4868ebb3588cac9c2b633534a14734d08a72cc24ada5",
+          "locator": {
+            "headingPath": [
+              "选做 由直观图求原长及面积比"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": 159,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 17,
+            "printedPage": 17,
+            "pdfPage": 17,
+            "equationObjectId": null
+          },
+          "quote": "2．．",
+          "quoteRepresentation": "native_xml_text_verbatim",
+          "quoteCompleteness": "原XML文字层逐字拼接；嵌入公式不在文字层中，完整式子见mathTranscription、sourceSupportedTranscription及原页图。",
+          "transcriptionWordingStatus": "source_supported_not_certified_verbatim",
+          "sourceSupportedTranscription": "2．$2\\sqrt2$．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": null,
+            "sourceId": "L044",
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/L044/page-17.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          },
+          "originalUrl": "source-original/L044.docx",
+          "sourceTitle": "10.1平面及其基本性质(4)-教学设计",
+          "sourceStatus": "partially_reviewed"
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": [
+        {
+          "id": "formula:book3:L044:166",
+          "location": "blocks[0].value.inlineMath[0]",
+          "sourceString": "1．如图，若平行四边形$A'B'C'D'$是用斜二测画法画出的水平放置的平面图形$ABCD$的直观图．已知$A'B'=4\\mathrm{cm}$，$\\angle D'A'B'=45^\\circ$，平行四边形$A'B'C'D'$的面积为$8\\mathrm{cm}^2$，则原平面图形$ABCD$中$AD$的长度为__________．",
+          "latex": "A'B'C'D'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:167",
+          "location": "blocks[0].value.inlineMath[1]",
+          "sourceString": "1．如图，若平行四边形$A'B'C'D'$是用斜二测画法画出的水平放置的平面图形$ABCD$的直观图．已知$A'B'=4\\mathrm{cm}$，$\\angle D'A'B'=45^\\circ$，平行四边形$A'B'C'D'$的面积为$8\\mathrm{cm}^2$，则原平面图形$ABCD$中$AD$的长度为__________．",
+          "latex": "ABCD",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:168",
+          "location": "blocks[0].value.inlineMath[2]",
+          "sourceString": "1．如图，若平行四边形$A'B'C'D'$是用斜二测画法画出的水平放置的平面图形$ABCD$的直观图．已知$A'B'=4\\mathrm{cm}$，$\\angle D'A'B'=45^\\circ$，平行四边形$A'B'C'D'$的面积为$8\\mathrm{cm}^2$，则原平面图形$ABCD$中$AD$的长度为__________．",
+          "latex": "A'B'=4\\mathrm{cm}",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:169",
+          "location": "blocks[0].value.inlineMath[3]",
+          "sourceString": "1．如图，若平行四边形$A'B'C'D'$是用斜二测画法画出的水平放置的平面图形$ABCD$的直观图．已知$A'B'=4\\mathrm{cm}$，$\\angle D'A'B'=45^\\circ$，平行四边形$A'B'C'D'$的面积为$8\\mathrm{cm}^2$，则原平面图形$ABCD$中$AD$的长度为__________．",
+          "latex": "\\angle D'A'B'=45^\\circ",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:170",
+          "location": "blocks[0].value.inlineMath[4]",
+          "sourceString": "1．如图，若平行四边形$A'B'C'D'$是用斜二测画法画出的水平放置的平面图形$ABCD$的直观图．已知$A'B'=4\\mathrm{cm}$，$\\angle D'A'B'=45^\\circ$，平行四边形$A'B'C'D'$的面积为$8\\mathrm{cm}^2$，则原平面图形$ABCD$中$AD$的长度为__________．",
+          "latex": "A'B'C'D'",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:171",
+          "location": "blocks[0].value.inlineMath[5]",
+          "sourceString": "1．如图，若平行四边形$A'B'C'D'$是用斜二测画法画出的水平放置的平面图形$ABCD$的直观图．已知$A'B'=4\\mathrm{cm}$，$\\angle D'A'B'=45^\\circ$，平行四边形$A'B'C'D'$的面积为$8\\mathrm{cm}^2$，则原平面图形$ABCD$中$AD$的长度为__________．",
+          "latex": "8\\mathrm{cm}^2",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:172",
+          "location": "blocks[0].value.inlineMath[6]",
+          "sourceString": "1．如图，若平行四边形$A'B'C'D'$是用斜二测画法画出的水平放置的平面图形$ABCD$的直观图．已知$A'B'=4\\mathrm{cm}$，$\\angle D'A'B'=45^\\circ$，平行四边形$A'B'C'D'$的面积为$8\\mathrm{cm}^2$，则原平面图形$ABCD$中$AD$的长度为__________．",
+          "latex": "ABCD",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:173",
+          "location": "blocks[0].value.inlineMath[7]",
+          "sourceString": "1．如图，若平行四边形$A'B'C'D'$是用斜二测画法画出的水平放置的平面图形$ABCD$的直观图．已知$A'B'=4\\mathrm{cm}$，$\\angle D'A'B'=45^\\circ$，平行四边形$A'B'C'D'$的面积为$8\\mathrm{cm}^2$，则原平面图形$ABCD$中$AD$的长度为__________．",
+          "latex": "AD",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:174",
+          "location": "blocks[1].value.inlineMath[0]",
+          "sourceString": "2．设$\\triangle ABC$是水平放置的等边三角形．以其底边$BC$所在直线为$x$轴，底边$BC$上的高所在直线为$y$轴，建立平面直角坐标系，并用斜二测画法画出它的直观图，则原三角形的面积与其直观图的面积之比为________．",
+          "latex": "\\triangle ABC",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:175",
+          "location": "blocks[1].value.inlineMath[1]",
+          "sourceString": "2．设$\\triangle ABC$是水平放置的等边三角形．以其底边$BC$所在直线为$x$轴，底边$BC$上的高所在直线为$y$轴，建立平面直角坐标系，并用斜二测画法画出它的直观图，则原三角形的面积与其直观图的面积之比为________．",
+          "latex": "BC",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:176",
+          "location": "blocks[1].value.inlineMath[2]",
+          "sourceString": "2．设$\\triangle ABC$是水平放置的等边三角形．以其底边$BC$所在直线为$x$轴，底边$BC$上的高所在直线为$y$轴，建立平面直角坐标系，并用斜二测画法画出它的直观图，则原三角形的面积与其直观图的面积之比为________．",
+          "latex": "x",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:177",
+          "location": "blocks[1].value.inlineMath[3]",
+          "sourceString": "2．设$\\triangle ABC$是水平放置的等边三角形．以其底边$BC$所在直线为$x$轴，底边$BC$上的高所在直线为$y$轴，建立平面直角坐标系，并用斜二测画法画出它的直观图，则原三角形的面积与其直观图的面积之比为________．",
+          "latex": "BC",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:178",
+          "location": "blocks[1].value.inlineMath[4]",
+          "sourceString": "2．设$\\triangle ABC$是水平放置的等边三角形．以其底边$BC$所在直线为$x$轴，底边$BC$上的高所在直线为$y$轴，建立平面直角坐标系，并用斜二测画法画出它的直观图，则原三角形的面积与其直观图的面积之比为________．",
+          "latex": "y",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:179",
+          "location": "blocks[2].value.inlineMath[0]",
+          "sourceString": "1．$4\\sqrt2\\mathrm{cm}$．",
+          "latex": "4\\sqrt2\\mathrm{cm}",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book3:L044:180",
+          "location": "blocks[3].value.inlineMath[0]",
+          "sourceString": "2．$2\\sqrt2$．",
+          "latex": "2\\sqrt2",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "id": "lesson-content:book3:L044:textbook-oblique-purpose",
+      "nodeId": "kp:21306",
+      "proposedNodeId": null,
+      "kind": "context",
+      "origin": "textbook_verbatim",
+      "title": "教材斜二测画法用途说明",
+      "scope": "教材原文；非新增形式定义",
+      "blocks": [
+        {
+          "role": "context",
+          "type": "text",
+          "value": "为了把空间图形画得既富有立体感，又能表达出图形各主要部分的位置关系和度量关系，我们通常采用斜二测画法画空间图形的直观图．",
+          "evidenceIds": [
+            "ev:book3:TB-B3:oblique-purpose:p15:0"
+          ]
+        }
+      ],
+      "matching": {
+        "status": "confirmed",
+        "reason": "斜二测画法用途"
+      },
+      "evidence": [
+        {
+          "id": "ev:book3:TB-B3:oblique-purpose:p15:0",
+          "sourceId": "TB-B3",
+          "sourceSha256": "8189ce39242e71071798ed308c9cd7a30b49d9be3c13c08a50bf01556a49e9da",
+          "locator": {
+            "headingPath": [
+              "10.1 平面及其基本性质",
+              "空间图形的平面直观图的画法"
+            ],
+            "part": "PDF",
+            "paragraphIndex": null,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 15,
+            "printedPage": 8,
+            "pdfPage": 15,
+            "equationObjectId": null
+          },
+          "quote": "为了把空间图形画得既富有立体感，又能表达出图形各主要部分的位置关系和度量关系，我们通常采用斜二测画法画空间图形的直观图．",
+          "wordingChecked": true,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": "r80/assets/3093b34044acf3e5fbdfae46.png",
+            "bytes": 254497,
+            "sha256": "3093b34044acf3e5fbdfae463cf04511fac2a5aee39ef4fe6c0a4a3f4bb8d1a2",
+            "sourceId": "TB-B3",
+            "kind": "same_original_textbook_pdf_page",
+            "localOrigin": "/Users/yichen.zhang/vibe coding/codex/projects/数学教育平台/knowledge-network/review/textbook-content/page-evidence/b3-ch10-draft/TB-B3-pdf-015.png",
+            "expectedHashMatched": null,
+            "requestedPath": "increments/u05-u08-l041-l046-v4/evidence/TB-B3/pdf-015.png"
+          },
+          "sourceTitle": "必修第三册",
+          "sourceStatus": "original_source_identity_preserved"
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": []
+    }
+  ],
+  "requirements": {
+    "knowledgeRequirement": {
+      "value": null,
+      "originalWording": null,
+      "scope": "node",
+      "status": "unresolved",
+      "sourceId": null,
+      "sourceEdition": null,
+      "evidence": []
+    },
+    "academicQualityLevel": {
+      "value": null,
+      "originalWording": null,
+      "scope": "node",
+      "status": "unresolved",
+      "sourceId": null,
+      "sourceEdition": null,
+      "evidence": []
+    },
+    "competencyLevel": {
+      "value": null,
+      "originalWording": null,
+      "scope": "node",
+      "status": "unresolved",
+      "sourceId": null,
+      "sourceEdition": null,
+      "evidence": []
+    },
+    "competencyLinks": {
+      "value": null,
+      "originalWording": null,
+      "scope": "node",
+      "status": "unresolved",
+      "sourceId": null,
+      "sourceEdition": null,
+      "evidence": []
+    }
+  },
+  "methodCandidates": [
+    {
+      "id": "method-gap:book3:perspective-drawing",
+      "kind": "method",
+      "name": "透视画法",
+      "sourceWording": "透视画法",
+      "nameOrigin": "source_verbatim",
+      "classification": "uncertain",
+      "classificationMeaning": "来源过程或对应关系待核",
+      "status": "reviewed_candidate_no_production_node_approval",
+      "contentIds": [
+        "lesson-content:book3:L044:drawing-context"
+      ],
+      "conditionsAndLimits": [
+        "教案只在直观图类别引入中提及，透视配示意图；无详细步骤或定量例题。"
+      ],
+      "reason": "旧完整的是斜二测，确不等同透视；但L044所引源也没有视点、投影面、消失点或逐步作法，不能把有名无过程候选计为已确认可补的完整方法。",
+      "suggestedNodeId": "proposed:book3:perspective-drawing",
+      "sourceIds": [
+        "L044"
+      ]
+    },
+    {
+      "id": "method-gap:book3:axonometric-drawing",
+      "kind": "method",
+      "name": "轴测图画法",
+      "sourceWording": null,
+      "nameOrigin": "editorial_proposal",
+      "classification": "presentation_only",
+      "classificationMeaning": "思想、方法族或标签呈现诉求，非新增具体算法",
+      "status": "reviewed_candidate_no_production_node_approval",
+      "contentIds": [
+        "lesson-content:book3:L044:drawing-context"
+      ],
+      "conditionsAndLimits": [
+        "教案只在直观图类别引入中提及，透视配示意图；无详细步骤或定量例题。"
+      ],
+      "reason": "旧已有斜二测独立方法及完整六边形、长方体作图；L044只把它归于轴测图，没有另给新轴测体系程序，适宜分类入口。",
+      "suggestedNodeId": "proposed:book3:axonometric-drawing",
+      "sourceIds": [
+        "L044"
+      ]
+    },
+    {
+      "id": "method-gap:book3:auxiliary-cuboid-distance",
+      "kind": "method",
+      "name": "补成长方体用体对角线求距离",
+      "sourceWording": null,
+      "nameOrigin": "editorial_proposal",
+      "classification": "genuine_missing_procedure",
+      "classificationMeaning": "已审旧范围未见本源具体过程、证明或已解例的内容缺口候选",
+      "status": "reviewed_candidate_no_production_node_approval",
+      "contentIds": [
+        "lesson-content:book3:L060:auxiliary-cuboid-distance"
+      ],
+      "conditionsAndLimits": [
+        "三棱锥三条侧棱两两垂直；底面内点向三个侧面作垂线，三垂线两两垂直，目标点到锥顶连线是辅助长方体对角线，三边为点到三个侧面的距离。"
+      ],
+      "reason": "旧点面距离有综合垂线链与法向量投影，旧长方体画法也有；没有把三个面距作为长方体棱长补形求点到顶点距离的完整程序。",
+      "suggestedNodeId": "proposed:book3:auxiliary-cuboid-distance",
+      "sourceIds": [
+        "L060"
+      ],
+      "originalReadingReviewBeforeDOTR6": null,
+      "readingReview": {
+        "nameNote": "具名应用：三正交面距离构造长方体",
+        "readingNote": "L060 P132/P152完整例：三条侧棱两两正交，三个侧面构成正交三面角；以P为原点、侧棱为轴时M三坐标绝对值为2、3、6，PM=7。原解为补长方体、用体对角线，属于辅助图形及勾股的具体应用。保留具名可检索应用与原题，不因例题名称新建独立METHOD；不错误归为源中并未使用的空间向量计算或斜二测画法。",
+        "scope": "仅DOT所列 L060 的必要来源与用途；不顺带关闭其它内容或公式。",
+        "reviewNote": "已有知识与完整方法直接复用，候选身份不晋升；非owned状态保留。",
+        "sourceQuotes": [],
+        "verifiedContentIds": [
+          "lesson-content:book3:L060:auxiliary-cuboid-distance"
+        ]
+      },
+      "dotR6SourceReview": {
+        "round": "R6",
+        "itemId": "proposed:book3:auxiliary-cuboid-distance",
+        "sourceReviewStatus": "verified_with_evidence",
+        "mathReviewStatus": null,
+        "boundedReason": "L060 P132/P152完整例：三条侧棱两两正交，三个侧面构成正交三面角；以P为原点、侧棱为轴时M三坐标绝对值为2、3、6，PM=7。原解为补长方体、用体对角线，属于辅助图形及勾股的具体应用。保留具名可检索应用与原题，不因例题名称新建独立METHOD；不错误归为源中并未使用的空间向量计算或斜二测画法。",
+        "deltaSha256": "b285839dfe9ae2292ec7dc7f16988f15b3cdbd9a2819e9896aac4748426d3b9c",
+        "platformStatus": "verified_local_pending_controller_acceptance",
+        "onlineReleaseStatus": "not_released_R6"
+      }
+    }
+  ],
+  "relationProposals": [],
+  "legacyFormulaRecords": []
+}

@@ -1,8 +1,8 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Network, Search, RefreshCw, RotateCcw, CircleDot, Layers3 } from 'lucide-react';
+import { ArrowLeft, Network, Search, RefreshCw, RotateCcw, CircleDot, Layers3, Maximize2, Minimize2, ChevronRight } from 'lucide-react';
 import { Graph } from './Graph';
 import { NodeDetail } from './NodeDetail';
 import { hierarchy, levelLabels, visibleGraph, type StarNode, type StarSnapshot } from '@/lib/knowledge_graph/star-map';
@@ -13,6 +13,24 @@ export function KnowledgeGraph() {
   const [snapshot, setSnapshot] = useState<StarSnapshot>(empty), [view, setView] = useState<'review' | 'approved'>('review');
   const [selected, setSelected] = useState(''), [chapter, setChapter] = useState(''), [expanded, setExpanded] = useState<Set<string>>(new Set());
   const [query, setQuery] = useState(''), [crossLinks, setCrossLinks] = useState(true), [resetKey, setResetKey] = useState(0);
+  const [immersive, setImmersive] = useState(false);
+  const [methodsOpen, setMethodsOpen] = useState(false);
+  const workspace = useRef<HTMLElement>(null);
+  useEffect(() => {
+    if (!immersive) return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const escape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setImmersive(false);
+      if (event.key !== 'Tab') return;
+      const controls = Array.from(workspace.current?.querySelectorAll<HTMLElement>('button:not(:disabled), a[href], input:not(:disabled), select:not(:disabled), [tabindex="0"]') ?? []).filter(el => el.getClientRects().length);
+      const first = controls[0], last = controls[controls.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+    };
+    window.addEventListener('keydown', escape);
+    return () => { document.body.style.overflow = previous; window.removeEventListener('keydown', escape); };
+  }, [immersive]);
   const [loading, setLoading] = useState(true), [error, setError] = useState(''), [notice, setNotice] = useState(''), [refresh, setRefresh] = useState(0), [busy, setBusy] = useState(false), [curator, setCurator] = useState(false);
   useEffect(() => {
     const controller = new AbortController();
@@ -40,12 +58,13 @@ export function KnowledgeGraph() {
   const chapters = snapshot.nodes.filter(n => n.level === 2);
   const choose = useCallback((id: string) => {
     const n = tree.byId.get(id); if (!n) return;
-    setSelected(id); setQuery('');
+    setSelected(id); setQuery(''); setMethodsOpen(false);
     const path = tree.path(id), owner = path.find(p => tree.byId.get(p)?.level === 2);
     setChapter(owner ?? '');
-    setExpanded(old => new Set([...old, ...path]));
+    // Explore one branch at a time so earlier selections do not crowd the canvas.
+    setExpanded(new Set(path));
   }, [tree]);
-  const reset = () => { const root = snapshot.nodes.find(n => n.level === 1); setChapter(''); setSelected(root?.id ?? ''); setQuery(''); setExpanded(new Set(root ? [root.id] : [])); setResetKey(n => n + 1); };
+  const reset = () => { const root = snapshot.nodes.find(n => n.level === 1); setChapter(''); setSelected(root?.id ?? ''); setQuery(''); setMethodsOpen(false); setExpanded(new Set(root ? [root.id] : [])); setResetKey(n => n + 1); };
   async function approve(node: StarNode, parentId?: string) {
     setBusy(true); setError(''); setNotice('');
     try {
@@ -58,7 +77,7 @@ export function KnowledgeGraph() {
   const chosen = tree.byId.get(selected);
   return <div className="space-y-6">
     <header className="flex flex-wrap items-start justify-between gap-4"><div><div className="mb-3 flex items-center gap-2 text-xs font-medium text-indigo-600"><Network size={15} />MATHEMATICS KNOWLEDGE GRAPH</div><h1 className="text-3xl font-semibold tracking-tight text-slate-950">数学知识星图</h1><p className="mt-3 text-sm leading-6 text-slate-500">从一个知识点出发，看见数学知识之间的联系。</p></div><Link href="/knowledge-graph" className="flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-xs text-slate-600 hover:bg-slate-50"><ArrowLeft size={14} />知识与解题方法</Link></header>
-    <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">{[{ label: '知识节点', value: snapshot.nodes.length, note: '五层知识体系' }, { label: '数学章节', value: chapters.length, note: '高中数学核心内容' }, { label: '知识关系', value: snapshot.edges.length, note: '归属 · 前置 · 相关 · 进阶' }, { label: '已审核节点', value: snapshot.nodes.filter(n => n.knowledge_review_status === 'approved').length, note: '教师核验后进入正式图谱' }].map(item => <div key={item.label} className="rounded-xl border border-slate-200/80 bg-white px-4 py-4"><p className="text-xs text-slate-500">{item.label}</p><p className="mt-2 text-2xl font-semibold tracking-tight text-slate-900">{loading ? '—' : item.value}</p><p className="mt-1 text-[10px] leading-5 text-slate-400">{item.note}</p></div>)}</div>
+    <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">{[{ label: '知识节点', value: snapshot.nodes.length, note: '五层知识体系' }, { label: '数学章节', value: chapters.length, note: '高中数学核心内容' }, { label: '知识关系', value: snapshot.edges.length, note: '归属 · 前置 · 相关 · 进阶' }, { label: '已审核节点', value: snapshot.nodes.filter(n => n.knowledge_review_status === 'approved').length, note: '教师核验后进入正式图谱' }].map(item => <div key={item.label} title={item.note} className="flex items-center justify-between gap-3 rounded-xl border border-slate-200/80 bg-white px-4 py-3"><p className="text-xs text-slate-500">{item.label}</p><p className="text-2xl font-semibold tracking-tight text-slate-900">{loading ? '—' : item.value}</p></div>)}</div>
     <section className="space-y-3" aria-label="图谱筛选">
       <div className="flex flex-wrap items-center gap-3"><div className="flex rounded-lg bg-slate-100 p-1">{[{ id: 'review', text: '审核预览' }, { id: 'approved', text: '正式图谱' }].map(m => <button key={m.id} type="button" aria-pressed={view === m.id} onClick={() => changeView(m.id as typeof view)} className={`rounded-md px-4 py-2 text-xs font-medium ${view === m.id ? 'bg-white text-indigo-700 shadow-sm' : 'text-slate-500 hover:text-slate-800'}`}>{m.text}</button>)}</div>
         <div className="relative min-w-[220px] flex-1"><Search size={16} className="absolute left-3 top-3 text-slate-400" /><input value={query} onChange={e => setQuery(e.target.value)} aria-label="搜索知识点、考点或题型" placeholder="搜索知识点、考点或题型…" className="h-10 w-full rounded-lg border border-slate-200 bg-white pl-9 pr-3 text-sm outline-none focus:border-indigo-400" />
@@ -69,13 +88,19 @@ export function KnowledgeGraph() {
     </section>
     {view === 'review' && <p className="rounded-lg border border-amber-100 bg-amber-50/70 px-4 py-3 text-xs leading-6 text-amber-900">审核预览包含尚未确认的知识内容。未经审核的节点与题目关联不会计入正式图谱；重要程度与考频尚未评定时保持空缺。</p>}
     {error && <div role="alert" className="rounded-xl bg-red-50 p-4 text-sm text-red-700">{error}<button type="button" onClick={reload} className="ml-4 underline">重试</button></div>}{notice && <p role="status" className="text-sm text-emerald-700">{notice}</p>}
-    {!loading && !error && snapshot.nodes.length === 0 ? <div className="rounded-2xl border border-dashed border-slate-300 bg-white p-16 text-center"><Layers3 className="mx-auto mb-4 text-indigo-400" /><h2 className="font-semibold">{view === 'approved' ? '正式图谱等待审核' : '知识库尚未初始化'}</h2><p className="mt-3 text-sm text-slate-500">{view === 'approved' ? '切换到审核预览，先查看知识体系，再逐项确认。' : '完成知识库初始化后，这里会展示高中数学知识体系。'}</p>{view === 'approved' && <button type="button" onClick={() => changeView('review')} className="mt-5 rounded-lg bg-indigo-600 px-5 py-2.5 text-sm text-white">查看审核预览</button>}</div> : <div className="grid items-start gap-5 xl:grid-cols-[minmax(0,1fr)_300px]">
-      <div className="min-w-0 space-y-3">{loading ? <div role="status" className="grid h-[620px] place-items-center rounded-2xl bg-[#0b1427] text-sm text-slate-300">正在加载知识库…</div> : <Graph graph={visible} selected={selected} chapter={chapter} resetKey={resetKey} onSelect={choose} />}
+    {!loading && !error && snapshot.nodes.length === 0 ? <div className="rounded-2xl border border-dashed border-slate-300 bg-white p-16 text-center"><Layers3 className="mx-auto mb-4 text-indigo-400" /><h2 className="font-semibold">{view === 'approved' ? '正式图谱等待审核' : '知识库尚未初始化'}</h2><p className="mt-3 text-sm text-slate-500">{view === 'approved' ? '切换到审核预览，先查看知识体系，再逐项确认。' : '完成知识库初始化后，这里会展示高中数学知识体系。'}</p>{view === 'approved' && <button type="button" onClick={() => changeView('review')} className="mt-5 rounded-lg bg-indigo-600 px-5 py-2.5 text-sm text-white">查看审核预览</button>}</div> : <section ref={workspace} role={immersive ? 'dialog' : 'region'} aria-modal={immersive || undefined} data-immersive={immersive} aria-label="知识星图探索工作区" className={immersive ? 'fixed inset-0 z-50 flex flex-col gap-3 overflow-y-auto bg-slate-50 p-3 sm:p-5' : 'space-y-3'}>
+      <div className="flex shrink-0 flex-wrap items-center justify-between gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3">
+        <nav aria-label="当前知识路径" className="flex min-w-0 flex-wrap items-center gap-1 text-xs"><button type="button" onClick={reset} className="rounded-md px-2 py-1.5 text-slate-500 hover:bg-indigo-50 hover:text-indigo-700">学科总览</button>{chosen && tree.path(chosen.id).filter(id => tree.byId.get(id)?.level !== 1).map(id => <span key={id} className="flex items-center gap-1"><ChevronRight size={12} className="text-slate-300" /><button type="button" aria-current={id === chosen.id ? 'location' : undefined} onClick={() => choose(id)} className={`rounded-md px-2 py-1.5 hover:bg-indigo-50 ${id === chosen.id ? 'font-medium text-indigo-700' : 'text-slate-500'}`}>{tree.byId.get(id)?.name}</button></span>)}</nav>
+        <button type="button" aria-pressed={immersive} onClick={() => setImmersive(value => !value)} className="flex shrink-0 items-center gap-2 rounded-lg bg-indigo-50 px-3 py-2 text-xs font-medium text-indigo-700 hover:bg-indigo-100">{immersive ? <Minimize2 size={14} /> : <Maximize2 size={14} />}{immersive ? '退出大屏 · Esc' : '大屏探索'}</button>
+      </div>
+      <div className={`grid min-h-0 gap-4 ${methodsOpen ? 'xl:grid-cols-[minmax(0,1fr)_460px]' : 'xl:grid-cols-[minmax(0,1fr)_380px]'} ${immersive ? 'flex-1 xl:overflow-hidden' : 'items-start'}`}>
+      <div className={`min-w-0 ${immersive ? 'flex min-h-[450px] flex-col gap-3 [&>.atlas-surface]:flex-1' : 'space-y-3'}`}>{loading ? <div role="status" className="grid h-[620px] place-items-center rounded-2xl bg-[#0b1427] text-sm text-slate-300">正在加载知识库…</div> : <Graph graph={visible} selected={selected} chapter={chapter} resetKey={resetKey} onSelect={choose} />}
         <div className="flex flex-wrap items-center gap-x-5 gap-y-2 px-1 text-[11px] text-slate-500"><span className="flex items-center gap-1.5"><CircleDot size={12} className="text-blue-500" />基础 / 未评级</span><span className="flex items-center gap-1.5"><CircleDot size={12} className="text-amber-500" />重点考点</span><span className="flex items-center gap-1.5"><CircleDot size={12} className="text-rose-500" />高频难点</span><label className="ml-auto flex items-center gap-2"><input type="checkbox" checked={crossLinks} onChange={e => setCrossLinks(e.target.checked)} />跨知识关系</label></div>
         <p className="text-[10px] text-slate-400">节点大小随已审核关联题数变化。紫色虚线表示前置知识，绿色箭头表示进阶方向，点线表示相关知识。</p>
         {chosen && (tree.children.get(chosen.id)?.length ?? 0) > 0 && <button type="button" onClick={() => setExpanded(old => { const next = new Set(old); if (next.has(chosen.id)) next.delete(chosen.id); else next.add(chosen.id); return next; })} className="text-xs text-indigo-600 hover:underline">{expanded.has(chosen.id) ? '收起' : '展开'}「{chosen.name}」的下一层</button>}
       </div>
-      <NodeDetail key={chosen?.id + ':' + chosen?.updated_at} node={chosen} snapshot={snapshot} canReviewSeed={curator} busy={busy} onSelect={choose} onApprove={approve} />
-    </div>}
+      <div className={immersive ? 'min-h-0 xl:overflow-y-auto [&>aside]:!max-h-none [&>aside]:!overflow-visible' : ''}><NodeDetail key={chosen?.id + ':' + chosen?.updated_at} node={chosen} snapshot={snapshot} canReviewSeed={curator} busy={busy} methodsOpen={methodsOpen} approvedOnly={view === 'approved'} onMethodsOpen={setMethodsOpen} onSelect={choose} onApprove={approve} /></div>
+      </div>
+    </section>}
   </div>;
 }

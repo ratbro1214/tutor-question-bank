@@ -40,3 +40,24 @@ test('unknown ratings stay neutral and question counts scale within bounds', () 
   assert.ok(nodeSize({ ...node, question_count: 100 }) > nodeSize(node));
   assert.ok(nodeSize({ ...node, question_count: 1e9 }) <= 42);
 });
+
+test('expanded chapters keep separate depth columns and non-overlapping sibling rows', () => {
+  for (const chapter of snapshot.nodes.filter(n => n.level === 2)) {
+    const graph = visibleGraph(snapshot, new Set(snapshot.nodes.map(n => n.id)), chapter.id);
+    const positions = starPositions(graph, chapter.id);
+    for (const node of graph.nodes.filter(n => n.level >= 2)) {
+      const [x, y] = positions.get(node.id)!;
+      assert.equal(x, (node.level - 2) * 240);
+      assert.ok(Number.isFinite(y));
+      const children = tree.children.get(node.id) ?? [];
+      const ys = children.map(id => positions.get(id)![1]);
+      for (let i = 1; i < ys.length; i++) assert.ok(ys[i] - ys[i - 1] >= 92);
+    }
+    const columns = new Map<number, number[]>();
+    for (const [x, y] of positions.values()) columns.set(x, [...(columns.get(x) ?? []), y]);
+    for (const ys of columns.values()) {
+      ys.sort((a, b) => a - b);
+      for (let i = 1; i < ys.length; i++) assert.ok(ys[i] - ys[i - 1] >= 92);
+    }
+  }
+});

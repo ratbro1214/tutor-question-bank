@@ -1,0 +1,297 @@
+{
+  "nodeId": "method:counterexample",
+  "contents": [
+    {
+      "id": "lesson-content:book-1:L003:counterexample-method",
+      "nodeId": "method:counterexample",
+      "proposedNodeId": "proposal:book-1:counterexample",
+      "kind": "method_application",
+      "origin": "editorial_proposal",
+      "title": "举反例",
+      "scope": "举反例所列原题及原文条件",
+      "blocks": [
+        {
+          "role": "condition",
+          "type": "text",
+          "value": "命题“若$\\alpha$，则$\\beta$”是假命题，是指存在符合条件$\\alpha$的对象，它不满足结论$\\beta$．",
+          "evidenceIds": [
+            "ev:book-1:L003:counterexample-method:000"
+          ],
+          "textFidelity": "source_based_reconstruction"
+        },
+        {
+          "role": "step",
+          "type": "text",
+          "value": "所以，要确定这类命题是假命题，举一个“满足条件$\\alpha$而不满足结论$\\beta$的例子就可以了，这种方法在数学上称为举反例．",
+          "evidenceIds": [
+            "ev:book-1:L003:counterexample-method:001"
+          ],
+          "textFidelity": "source_based_reconstruction"
+        }
+      ],
+      "matching": {
+        "status": "user_approved_method_identity",
+        "reason": "L003明确举反例用于判定条件命题为假；独立方法保留假命题和条件命题的关联，不与反证法合并。",
+        "historicalMatching": {
+          "status": "unresolved",
+          "reason": "全baseline节点与59个METHOD中没有独立举反例节点；候选与假命题、反证法对照，是否新增由后续整合决定。"
+        },
+        "methodIdentity": "independent_METHOD",
+        "decisionId": "B06-D01"
+      },
+      "evidence": [
+        {
+          "id": "ev:book-1:L003:counterexample-method:000",
+          "sourceId": "L003",
+          "sourceSha256": "12c0839f84838960a432cd796b4603f6577a8c69b14fef3fc042a401af9ebca0",
+          "locator": {
+            "headingPath": [
+              "举反例"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": null,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 4,
+            "pdfPage": null,
+            "printedPage": null,
+            "equationObjectId": null,
+            "renderVariant": "cjk-process-font-substitution"
+          },
+          "quote": "\\alpha",
+          "sourceSupportedTranscription": "命题“若$\\alpha$，则$\\beta$”是假命题，是指存在符合条件$\\alpha$的对象，它不满足结论$\\beta$．",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": "assets/derived/B06-source-reconciliation/L003-WPS-page-03.png",
+            "kind": "wps_native_same_original_page",
+            "sha256": "ac096c9c6f89f44d60c716431eac01d9a2d0d53b7538b4c067d1806960e63d54",
+            "bytes": 389575,
+            "sourceId": "L003",
+            "previewPdfPage": 3,
+            "previewPdfPages": [
+              3
+            ],
+            "sourcePdfSha256": "cbef8cfc1aa595cbd193dbe3654d7862120039cd895cc63fb86034a49af1bf66"
+          },
+          "originalUrl": "source-original/L003.docx",
+          "sourceTitle": "1.2常用逻辑用语（1）教学设计",
+          "sourceStatus": "partially_reviewed",
+          "receivedResourceOriginal": {
+            "url": null,
+            "sourceId": "L003",
+            "requestedPath": "increments/batch01-v1/evidence-cjk/L003/page-4.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          }
+        },
+        {
+          "id": "ev:book-1:L003:counterexample-method:001",
+          "sourceId": "L003",
+          "sourceSha256": "12c0839f84838960a432cd796b4603f6577a8c69b14fef3fc042a401af9ebca0",
+          "locator": {
+            "headingPath": [
+              "举反例"
+            ],
+            "part": "word/document.xml",
+            "paragraphIndex": null,
+            "tableIndex": null,
+            "rowIndex": null,
+            "cellIndex": null,
+            "renderedPage": 4,
+            "pdfPage": null,
+            "printedPage": null,
+            "equationObjectId": null,
+            "renderVariant": "cjk-process-font-substitution"
+          },
+          "quote": "\\alpha",
+          "sourceSupportedTranscription": "所以，要确定这类命题是假命题，举一个“满足条件$\\alpha$而不满足结论$\\beta$的例子就可以了，这种方法在数学上称为举反例．",
+          "wordingChecked": false,
+          "mathChecked": true,
+          "mathSourceAsset": null,
+          "rawMetadataRetainedInOriginalJson": true,
+          "resource": {
+            "url": "assets/derived/B06-source-reconciliation/L003-WPS-page-03.png",
+            "kind": "wps_native_same_original_page",
+            "sha256": "ac096c9c6f89f44d60c716431eac01d9a2d0d53b7538b4c067d1806960e63d54",
+            "bytes": 389575,
+            "sourceId": "L003",
+            "previewPdfPage": 3,
+            "previewPdfPages": [
+              3
+            ],
+            "sourcePdfSha256": "cbef8cfc1aa595cbd193dbe3654d7862120039cd895cc63fb86034a49af1bf66"
+          },
+          "originalUrl": "source-original/L003.docx",
+          "sourceTitle": "1.2常用逻辑用语（1）教学设计",
+          "sourceStatus": "partially_reviewed",
+          "receivedResourceOriginal": {
+            "url": null,
+            "sourceId": "L003",
+            "requestedPath": "increments/batch01-v1/evidence-cjk/L003/page-4.png",
+            "kind": "missing_source_page",
+            "sha256": null,
+            "bytes": null
+          }
+        }
+      ],
+      "bodyAssets": {},
+      "formulaRecords": [
+        {
+          "id": "formula:book-1:0081",
+          "location": "blocks[0].value:inlineMath[0]",
+          "sourceString": "命题“若$\\alpha$，则$\\beta$”是假命题，是指存在符合条件$\\alpha$的对象，它不满足结论$\\beta$．",
+          "latex": "\\alpha",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book-1:0082",
+          "location": "blocks[0].value:inlineMath[1]",
+          "sourceString": "命题“若$\\alpha$，则$\\beta$”是假命题，是指存在符合条件$\\alpha$的对象，它不满足结论$\\beta$．",
+          "latex": "\\beta",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book-1:0083",
+          "location": "blocks[0].value:inlineMath[2]",
+          "sourceString": "命题“若$\\alpha$，则$\\beta$”是假命题，是指存在符合条件$\\alpha$的对象，它不满足结论$\\beta$．",
+          "latex": "\\alpha",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book-1:0084",
+          "location": "blocks[0].value:inlineMath[3]",
+          "sourceString": "命题“若$\\alpha$，则$\\beta$”是假命题，是指存在符合条件$\\alpha$的对象，它不满足结论$\\beta$．",
+          "latex": "\\beta",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book-1:0085",
+          "location": "blocks[1].value:inlineMath[0]",
+          "sourceString": "所以，要确定这类命题是假命题，举一个“满足条件$\\alpha$而不满足结论$\\beta$的例子就可以了，这种方法在数学上称为举反例．",
+          "latex": "\\alpha",
+          "status": "verified"
+        },
+        {
+          "id": "formula:book-1:0086",
+          "location": "blocks[1].value:inlineMath[1]",
+          "sourceString": "所以，要确定这类命题是假命题，举一个“满足条件$\\alpha$而不满足结论$\\beta$的例子就可以了，这种方法在数学上称为举反例．",
+          "latex": "\\beta",
+          "status": "verified"
+        }
+      ],
+      "sourceAssociation": {
+        "batch": "B08-user-decisions",
+        "status": "user_approved_identity_source_context_retained",
+        "primaryNodeId": "method:counterexample",
+        "associatedNodeIds": [
+          "kp:21025",
+          "kp:21026"
+        ],
+        "chapterIds": [
+          "course:/G249"
+        ],
+        "sourceId": "L003",
+        "nativeParagraphIndices": [
+          52
+        ],
+        "paragraphConvention": "zero-based .//w:p in unchanged word/document.xml",
+        "basis": "L003明确举反例用于判定条件命题为假；独立方法保留假命题和条件命题的关联，不与反证法合并。",
+        "historicalNodeId": null,
+        "candidateId": "proposal:book-1:counterexample",
+        "independentMethodIdentityApproved": true,
+        "wordingAndAllMathVerified": false,
+        "previewLimitation": null,
+        "decisionId": "B06-D01",
+        "sourceProcedureBoundary": "source_definition_and_rule_reused",
+        "basisBeforeB08": "判断条件命题为假：存在满足条件但不满足结论的对象。此为方法应用归属，不与反证法合并。"
+      },
+      "sourceTranscriptions": [
+        {
+          "id": "B06-L003-native-wording-0",
+          "status": "verified",
+          "blockIndex": 0,
+          "value": "命题“若$\\alpha$，则$\\beta$”是假命题，是指存在满足条件$\\alpha$的对象，它不满足结论$\\beta$．",
+          "evidenceIds": [
+            "ev:book-1:L003:counterexample-method:000"
+          ],
+          "basis": "unchanged native XML paragraph52 and WPS PDF page3; received blocks retained"
+        },
+        {
+          "id": "B06-L003-native-wording-1",
+          "status": "verified",
+          "blockIndex": 1,
+          "value": "所以，要确定这类命题是假命题，举一个满足条件$\\alpha$而不满足结论$\\beta$的例子就可以了，这种方法在数学上称为举反例．",
+          "evidenceIds": [
+            "ev:book-1:L003:counterexample-method:001"
+          ],
+          "basis": "unchanged native XML paragraph52 and WPS PDF page3; received blocks retained"
+        }
+      ],
+      "historicalB06SourceAssociation": {
+        "batch": "B06-book1-foundations",
+        "status": "verified_context_mapping",
+        "primaryNodeId": "kp:21025",
+        "associatedNodeIds": [
+          "kp:21026"
+        ],
+        "chapterIds": [
+          "course:/G249"
+        ],
+        "sourceId": "L003",
+        "nativeParagraphIndices": [
+          52
+        ],
+        "paragraphConvention": "zero-based .//w:p in unchanged word/document.xml",
+        "basis": "判断条件命题为假：存在满足条件但不满足结论的对象。此为方法应用归属，不与反证法合并。",
+        "historicalNodeId": null,
+        "candidateId": "proposal:book-1:counterexample",
+        "independentMethodIdentityApproved": false,
+        "wordingAndAllMathVerified": false,
+        "previewLimitation": null
+      },
+      "historicalMatchingBeforeB08": {
+        "status": "source_context_mapped",
+        "reason": "判断条件命题为假：存在满足条件但不满足结论的对象。此为方法应用归属，不与反证法合并。",
+        "historicalMatching": {
+          "status": "unresolved",
+          "reason": "全baseline节点与59个METHOD中没有独立举反例节点；候选与假命题、反证法对照，是否新增由后续整合决定。"
+        },
+        "methodIdentity": "proposed_identity_retained"
+      }
+    }
+  ],
+  "requirements": {
+    "knowledgeRequirement": {
+      "value": null,
+      "status": "unresolved",
+      "scope": "node",
+      "evidence": []
+    },
+    "academicQualityLevel": {
+      "value": null,
+      "status": "unresolved",
+      "scope": "node",
+      "evidence": []
+    },
+    "competencyLevel": {
+      "value": null,
+      "status": "unresolved",
+      "scope": "node",
+      "evidence": []
+    },
+    "competencyLinks": {
+      "value": null,
+      "status": "unresolved",
+      "scope": "node",
+      "evidence": []
+    }
+  },
+  "methodCandidates": [],
+  "relationProposals": [],
+  "legacyFormulaRecords": []
+}

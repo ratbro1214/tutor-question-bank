@@ -11,6 +11,8 @@ const navigation = [
  { href: "/math-library", label: "数学题库", group: "教学内容", icon: LibraryBig, matches: (p: string) => p === "/math-library" || p.startsWith("/math-library/") || p === "/questions" || p.startsWith("/questions/") },
  { href: "/gaokao", label: "十年高考真题", group: "教学内容", icon: Files, matches: (p: string) => p === "/gaokao" || p.startsWith("/gaokao/") },
  { href: "/knowledge-graph/star-map", label: "数学知识星图", group: "教学内容", icon: LibraryBig, matches: (p: string) => p.startsWith("/knowledge-graph") },
+ { href: "/knowledge-network", label: "数学知识网络", group: "教学内容", icon: LibraryBig, matches: (p: string) => p.startsWith("/knowledge-network") },
+ { href: "/knowledge-images", label: "知识图片", group: "教学内容", icon: Files, matches: (p: string) => p.startsWith("/knowledge-images") },
  { href: "/math-methods", label: "解题方法库", group: "教学内容", icon: BookOpenCheck, matches: (p: string) => p.startsWith("/math-methods") },
  { href: "/lesson-plans", label: "AI 智能备课", group: "教学内容", icon: BookOpenCheck, matches: (p: string) => p.startsWith("/lesson-plans") },
  { href: "/upload", label: "题目录入", group: "教学内容", icon: FilePlus2, matches: (p: string) => p === "/upload" },

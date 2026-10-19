@@ -1,0 +1,49 @@
+/* The five curriculum columns remain; thoughts span knowledge and methods. */
+.hierarchy-board{grid-template-rows:auto minmax(0,1fr)}
+.hierarchy-column{grid-row:1 / 3}
+.hierarchy-column[data-layer="0"]{grid-column:1}
+.hierarchy-column[data-layer="1"]{grid-column:2}
+.hierarchy-column[data-layer="2"]{grid-column:3}
+.hierarchy-column[data-layer="3"]{grid-column:4;grid-row:2}
+.hierarchy-column[data-layer="4"]{grid-column:5;grid-row:2}
+.hierarchy-thought-band{grid-column:4 / 6;grid-row:1;position:relative;z-index:2;padding:12px 0 7px;min-width:0;border-bottom:1px solid #e5d8c6;color:#65482c}
+.hierarchy-thought-band[hidden]{display:none}
+.thought-band-heading{display:flex;gap:9px;align-items:center;font-size:11px;margin-bottom:7px;flex-wrap:wrap}
+.thought-band-heading b{font-size:14px;color:#6d4c2b}.thought-band-heading span{color:#7d7467}
+.thought-band-heading button{margin-left:auto;background:none;border:0;color:#6d4c2b;cursor:pointer;font:inherit;text-decoration:underline;text-underline-offset:3px;min-height:30px}
+.thought-band-choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
+.thought-band-choices button{font:inherit;text-align:left;min-height:44px;border:1px solid #e3dbcf;border-radius:7px;background:#fbfaf6;color:#6d6459;padding:6px 8px;cursor:pointer}
+.thought-band-choices b{font-size:12px;font-weight:500;display:block}.thought-band-choices small{display:block;font-size:10px;color:#8d8172;margin-top:2px}
+.thought-band-choices .has-links{border-color:#cbb590;background:#fffdf7;color:#67451f}
+.thought-band-choices [aria-pressed="true"]{background:#77532e;border-color:#77532e;color:#fff}
+.thought-band-choices [aria-pressed="true"] small{color:#f8eddb}
+.thought-band-note{font-size:10px;line-height:1.5;color:#807667;margin:6px 0 0;min-height:15px}
+.hierarchy-column .hierarchy-node.subdued{opacity:.42}
+.thought-reader{max-width:1000px;margin:0 auto;padding:16px 0;color:#173b68}
+.thought-reader h1{font-size:clamp(25px,3vw,36px);line-height:1.5;margin:12px 0}
+.thought-reader h2{font-size:18px;margin:0 0 10px}.thought-reader h2 small{font-size:13px;font-weight:400;color:#708298}
+.thought-lead{font-size:17px;line-height:1.9;max-width:780px}.thought-reader p{line-height:1.85}
+.thought-usage-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:22px 0}
+.thought-usage-grid section{padding:18px;border-radius:10px;border:1px solid #dfd6c8;background:#fffdf8}
+.thought-usage-grid p{margin:0}.thought-boundary{color:#6d665e;font-size:14px;padding-left:14px;border-left:3px solid #c4ad8d}
+.thought-reader-section{margin:28px 0;padding-top:18px;border-top:1px solid #dbe3e9}
+.thought-reader-section>p{font-size:14px;color:#61758a;margin:8px 0 15px}
+.thought-reader-section summary{font-size:16px;cursor:pointer;line-height:1.7;padding:8px 0;color:#274d70}
+.thought-link-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.thought-link-grid button{font:inherit;text-align:left;color:#173b68;background:#fff;border:1px solid #c8d7e3;border-radius:9px;padding:13px 15px;cursor:pointer;min-height:64px}
+.thought-link-grid button b{font-size:15px;font-weight:500;display:block;line-height:1.6}
+.thought-link-grid button small{font-size:12px;line-height:1.75;color:#61758a;display:block;margin-top:4px}
+.thought-reader li{margin:12px 0;line-height:1.7;font-size:14px}.thought-reader a{color:#376793}
+.thought-reader [data-node-type="THOUGHT"]{background:#f2e8da;color:#77532e}
+.thought-reader .reader-actions button{font:inherit;min-height:42px;padding:8px 12px;border:1px solid #b6cad9;border-radius:8px;color:#173b68;background:#fff;cursor:pointer}
+button:focus-visible{outline:2px solid #496e91;outline-offset:3px}
+@media(max-width:700px){
+ .hierarchy-thought-band{max-width:calc(100vw - 72px)}
+ .thought-band-heading{gap:5px}.thought-band-heading button{margin-left:0}
+ .thought-band-choices b{font-size:11px}.thought-band-choices button{padding:6px}
+ .thought-band-note{font-size:10px}
+ .thought-usage-grid,.thought-link-grid{grid-template-columns:1fr}
+ .thought-reader{padding:10px 0}.thought-lead{font-size:16px}
+}
+
+.thought-index-entry{font:inherit;min-height:36px;padding:7px 11px;color:#6d4c2b;background:#fffdf8;border:1px solid #d4c4aa;border-radius:8px;cursor:pointer;white-space:nowrap}
