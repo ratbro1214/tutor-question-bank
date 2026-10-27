@@ -17,6 +17,7 @@ const navigation = [
  { href: "/lesson-plans", label: "AI 智能备课", group: "教学内容", icon: BookOpenCheck, matches: (p: string) => p.startsWith("/lesson-plans") },
  { href: "/upload", label: "题目录入", group: "教学内容", icon: FilePlus2, matches: (p: string) => p === "/upload" },
  { href: "/papers", label: "套卷复习", group: "教学内容", icon: Files, matches: (p: string) => p.startsWith("/papers") },
+ { href: "/topic-lab", label: "数学专题研习", group: "洞察", icon: BookOpenCheck, matches: (p: string) => p === "/topic-lab" },
  { href: "/evaluation", label: "教学评测", group: "洞察", icon: FlaskConical, matches: (p: string) => p === "/evaluation" },
 ];
 export function AppShell({ children }: { children: React.ReactNode }) {

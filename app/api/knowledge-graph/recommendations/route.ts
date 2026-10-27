@@ -4,9 +4,10 @@ import { graphStore, graphBody, graphResponse, graphFailure } from '@/lib/knowle
 import { GraphError } from '@/lib/knowledge-graph-store';
 import { configuredExplanationProvider } from '@/lib/ai-provider';
 import { recommendWithFallback, retrieveMethods } from '@/lib/method-recommendation';
+import { conditionInputSchema } from '@/lib/method-condition-verification';
 
 const base = z.object({ canonicalId: z.string().min(1).max(160), revisionId: z.string().min(1).max(160), reviewId: z.string().min(1).max(160) });
-const inputSchema = z.discriminatedUnion('action', [base.extend({ action: z.literal('analyze') }).strict(), base.extend({ action: z.literal('confirm'), methodId: z.string().min(1).max(160), methodRevision: z.number().int().positive(), operationId: z.string().uuid(), relationId: z.string().uuid() }).strict()]);
+const inputSchema = z.discriminatedUnion('action', [base.extend({ action: z.literal('analyze'), verification: conditionInputSchema.optional() }).strict(), base.extend({ action: z.literal('confirm'), methodId: z.string().min(1).max(160), methodRevision: z.number().int().positive(), operationId: z.string().uuid(), relationId: z.string().uuid() }).strict()]);
 export async function POST(request: Request) { try {
   const store = await graphStore(request, true), input = inputSchema.parse(await graphBody(request));
   const q = await store.question(input.canonicalId, input.revisionId);
@@ -19,7 +20,7 @@ export async function POST(request: Request) { try {
   const methods = retrieveMethods(String(q.original_text), await store.methods(true, String(q.scope_id)));
   if (!methods.length) return graphResponse({ result: null, methods: [], message: '当前题库暂无已审核且有效的方法。请先加入并审核方法卡。' });
   let response;
-  try { response = await recommendWithFallback(String(q.original_text), methods, configuredExplanationProvider(env as unknown as Record<string, unknown>), request.signal); }
+  try { response = await recommendWithFallback(String(q.original_text), methods, configuredExplanationProvider(env as unknown as Record<string, unknown>), request.signal, input.verification); }
   catch (error) { throw new GraphError(error instanceof Error ? error.message : '方法分析失败，请重试。', 502); }
   await store.question(input.canonicalId, input.revisionId);
   await store.evidence(input.canonicalId, input.revisionId, input.reviewId);

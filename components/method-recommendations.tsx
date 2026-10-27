@@ -3,22 +3,30 @@ import { useRef, useState, useEffect } from 'react';
 import { MathText } from './math-text';
 import { SolutionPicker, graphButton, graphRequest } from './knowledge-methods';
 import { recommendationLabels, type MethodRecommendation } from '@/lib/method-recommendation';
+import { MethodConditionForm, MethodConditionResult } from './method-condition-form';
+import type { ConditionInput, ConditionVerification } from '@/lib/method-condition-verification';
 
 type Selection = { canonicalId: string; revisionId: string; reviewId: string };
-type Response = { result: MethodRecommendation | null; methods: { id: string; name: string }[]; message: string; engine?: 'ai'|'rules' };
+type Response = { result: MethodRecommendation | null; methods: { id: string; name: string }[]; message: string; engine?: 'ai'|'rules'; verification?: ConditionVerification };
 export function MethodRecommendations() {
   const [open,setOpen] = useState(false), [selection,setSelection] = useState<Selection | null>(null), [data,setData] = useState<Response | null>(null), [busy,setBusy] = useState(false), [error,setError] = useState(''), [saved,setSaved] = useState<string[]>([]);
   const controller = useRef<AbortController | null>(null);
+  const [verification, setVerification] = useState<ConditionInput | undefined>();
+  const [verificationInvalid, setVerificationInvalid] = useState(false);
   useEffect(() => () => controller.current?.abort(), []);
   async function analyze(selected: Selection) {
     controller.current?.abort(); const c = new AbortController(); controller.current = c;
     setSelection(selected); setData(null); setSaved([]); setError(''); setBusy(true);
-    try { const d = await graphRequest<Response>('/recommendations', { action: 'analyze', ...selected }, 'POST', c.signal); if (!c.signal.aborted) setData(d); }
+    try { const d = await graphRequest<Response>('/recommendations', { action: 'analyze', ...selected, verification }, 'POST', c.signal); if (!c.signal.aborted) setData(d); }
     catch(e) { if (!c.signal.aborted) setError((e as Error).message); } finally { if (!c.signal.aborted) setBusy(false); }
   }
   return <section className="space-y-4 rounded-2xl border bg-white p-5"><button className={graphButton} aria-expanded={open} onClick={() => setOpen(v => !v)}>题目智能推荐与一题多解对比 {open ? '收起' : '展开'}</button>{open && <>
     <p className="text-sm text-slate-500">选择题目与已审核解析，从该题库已审核方法中检索候选。分析结果待教师核对；确认前请检查条件和具体解法是否吻合。</p>
-    <SolutionPicker onChoose={(q,reviewId) => void analyze({ canonicalId:q.id, revisionId:q.current_revision_id, reviewId })} />
+    <MethodConditionForm onChange={(input, invalid) => { controller.current?.abort(); setBusy(false); setData(null); setSaved([]); setVerification(input); setVerificationInvalid(invalid); }} />
+    {verificationInvalid && <p className="text-sm text-amber-800">请补齐标准式核验输入，或选择暂不使用。</p>}
+    <SolutionPicker onChoose={(q,reviewId) => { const selected = { canonicalId:q.id, revisionId:q.current_revision_id, reviewId }; setSelection(selected); if (!verificationInvalid) void analyze(selected); }} />
+    {selection && <button className={graphButton} disabled={busy || verificationInvalid} onClick={() => void analyze(selection)}>按当前条件重新分析所选题目</button>}
+    {data?.verification && <MethodConditionResult result={data.verification} />}
     {busy && <p role="status">正在核验候选方法…</p>}{error && <p role="alert" className="text-red-700">{error}</p>}{data?.message && <p role="status">{data.message}</p>}
     {data?.result && <><div className="rounded-xl bg-slate-50 p-4"><h3 className="font-semibold">题目特征（{data.engine==='rules'?'规则召回':'AI 分析'}，待核对）</h3><p>知识点：{data.result.features.knowledge.join('、') || '待判断'}</p>{(['structure','constraints','goal'] as const).map(k => <MathText key={k}>{{ structure:'结构：',constraints:'约束：',goal:'目标：' }[k]+data.result!.features[k]}</MathText>)}</div>
     {!data.result.items.length && <p>未找到能够确认的候选方法，待人工判断。</p>}

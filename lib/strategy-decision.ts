@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import type { GraphMethod } from './knowledge-graph';
 import { hasUnreadableQuestionText } from './question-text-quality';
+import { conditionInputSchema, verifyMethodConditions } from './method-condition-verification';
 
 const unknown = 'unknown';
 export const decisionFactsSchema = z.object({
@@ -19,8 +20,20 @@ export type DecisionFacts = z.infer<typeof decisionFactsSchema>;
 export type StrategyDecision = ReturnType<typeof decideStrategies>;
 
 /** No model calls or symbolic claims: the stem supplies recall cues; teachers supply verified facts. */
-export function decideStrategies(question: string, methods: GraphMethod[], rawFacts: unknown = {}) {
+export function decideStrategies(question: string, methods: GraphMethod[], rawFacts: unknown = {}, verificationInput?: unknown) {
+  const verification = verifyMethodConditions(question, verificationInput);
   const facts = decisionFactsSchema.parse(rawFacts), text = question.normalize('NFKC');
+  const standard = verificationInput === undefined ? undefined : conditionInputSchema.parse(verificationInput);
+  const conflicts: string[] = [];
+  if (standard?.kind === 'parameter-quadratic' && verification.status === 'verified') {
+    if (facts.quantifier !== 'unknown' && facts.quantifier !== standard.quantifier) conflicts.push('教师量词选项与标准式不一致。');
+    if (facts.bound !== 'unknown' && facts.bound !== standard.direction) conflicts.push('教师参数方向选项与标准式不一致。');
+    if (!verification.parameter?.included && ((facts.objective === 'maximum' && standard.direction === 'upper') || (facts.objective === 'minimum' && standard.direction === 'lower'))) conflicts.push('参数边界不包含在可行集中，只有上确界或下确界，没有所选的最大或最小参数。');
+  }
+  if (verification.equality) {
+    if ((facts.equality === 'reachable' && !verification.equality.inDomain) || (facts.equality === 'unreachable' && verification.equality.inDomain)) conflicts.push('录入区间的等号可达性与教师选项冲突，需核对原题与标准式。');
+    if (facts.positive === 'no') conflicts.push('正区间标准式与“并非正项”的教师选项冲突。');
+  }
   const parameter = /含参|参数|恒成立|任意|对所有|存在|最佳常数|实根|零点/.test(text);
   const inequality = /不等式|最[大小]值|正数|正实数|[xyab]\s*>\s*0|\\(?:frac|dfrac)|倒数/.test(text);
   const trace: string[] = [], checks = new Set<string>(), risks: string[] = [];
@@ -95,7 +108,8 @@ export function decideStrategies(question: string, methods: GraphMethod[], rawFa
     .sort((a,b) => choices.get(b.content.strategy!.key)!.score - choices.get(a.content.strategy!.key)!.score || a.id.localeCompare(b.id))
     .slice(0,8).map(m => {
       const s = m.content.strategy!, c = choices.get(s.key)!;
-      const eligible = c.eligible && m.status === 'approved';
+      // A template calculation never proves the transcription or the whole method applicable.
+      const eligible = c.eligible && m.status === 'approved' && !conflicts.length && !(verificationInput !== undefined && verification.status !== 'verified');
       const verdict = eligible && !preferred ? 'preferred' : eligible ? 'alternative' : 'conditional';
       if (verdict === 'preferred') preferred = true;
       return { id: m.id, revision: m.revision, name: m.content.name, key: s.key, status: m.status, verdict,
@@ -103,6 +117,7 @@ export function decideStrategies(question: string, methods: GraphMethod[], rawFa
         whySimpler: s.whySimpler, prerequisites: s.knowledgeCodes, links: s.links, transfer: m.content.variants,
         standardSolution: s.standardSolution, teacherNotes: s.teacherNotes };
     });
-  return { engine: 'rules-v2' as const, reviewRequired: true as const, facts, trace, checks: [...checks], risks, items,
+  risks.push(...conflicts.map(c => c + ' 已降级为待核验路径。'));
+  return { engine: 'rules-v2' as const, reviewRequired: true as const, facts, verification, trace, checks: [...checks], risks, items,
     notice: '关键词只用于召回。结构判断来自教师填写，规则未做符号计算或生成本题证明；候选卡和未确认条件不会变成已验证关联。' };
 }

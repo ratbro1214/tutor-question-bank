@@ -13,6 +13,7 @@
     "test": "tsx --test tests/*.test.ts",
     "benchmark:analysis": "node scripts/benchmark-analysis.mjs",
     "evaluate:teaching": "tsx scripts/evaluate-teaching.ts",
+    "evaluate:methods": "tsx scripts/evaluate-methods.ts",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate"
   },
